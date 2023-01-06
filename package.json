@@ -1,0 +1,33 @@
+{
+  "name": "jotai-devtools",
+  "version": "0.1.0",
+  "description": "A powerful toolkit to enhance your development experience with Jotai",
+  "author": {
+    "name": "Arjun Vegda",
+    "url": "https://arjunvegda.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jotai-labs/jotai-devtools.git"
+  },
+  "keywords": [
+    "jotai",
+    "devtools",
+    "debugger",
+    "react",
+    "state",
+    "management",
+    "redux devtools"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jotai-labs/jotai-devtools/issues"
+  },
+  "homepage": "https://github.com/jotai-labs/jotai-devtools",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
