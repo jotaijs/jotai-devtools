@@ -40,11 +40,12 @@
     "test:ci": "yarn run test:coverage --maxWorkers=1",
     "commitlint": "commitlint",
     "lint-staged": "lint-staged",
-    "bundle": "microbundle build -f modern,umd --compress --globals react=React --tsconfig tsconfig.build.json",
+    "bundle": "microbundle build -f modern,umd --compress --globals react=React --tsconfig tsconfig.build.json --generateTypes true",
     "compile": "run-s compile:index compile:utils",
     "precompile": "rimraf ./dist",
     "compile:index": "yarn run bundle",
-    "compile:utils": "yarn run bundle src/utils/index.ts -o dist/utils/index.js --external jotai-devtools"
+    "compile:utils": "yarn run bundle src/utils/index.ts -o dist/utils/index.js --external jotai-devtools",
+    "postcompile:utils": "cp -r dist/src/utils/. dist/utils"
   },
   "repository": {
     "type": "git",
