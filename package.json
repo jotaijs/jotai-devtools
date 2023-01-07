@@ -6,6 +6,27 @@
     "name": "Arjun Vegda",
     "url": "https://arjunvegda.com"
   },
+  "sideEffects": false,
+  "source": "./src/index.ts",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.modern.mjs",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "module": "./dist/index.modern.mjs",
+      "import": "./dist/index.modern.mjs",
+      "umd": "./dist/index.umd.js"
+    },
+    "./utils": {
+      "types": "./dist/src/utils/index.d.ts",
+      "module": "./dist/utils/index.modern.mjs",
+      "import": "./dist/utils/index.modern.mjs",
+      "umd": "./dist/utils/index.umd.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist",
     "package.json"
@@ -16,9 +37,14 @@
     "test": "jest",
     "test:watch": "yarn run test --watch",
     "test:coverage": "yarn run test --coverage",
+    "test:ci": "yarn run test:coverage --maxWorkers=1",
     "commitlint": "commitlint",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "bundle": "microbundle build -f modern,umd --compress --globals react=React --tsconfig tsconfig.build.json",
+    "compile": "run-s compile:index compile:utils",
+    "precompile": "rimraf ./dist",
+    "compile:index": "yarn run bundle",
+    "compile:utils": "yarn run bundle src/utils/index.ts -o dist/utils/index.js --external jotai-devtools"
   },
   "repository": {
     "type": "git",
@@ -68,14 +94,17 @@
     "jest-watch-typeahead": "^2.2.1",
     "jotai": "^1.12.1",
     "lint-staged": "^13.1.0",
+    "microbundle": "^0.15.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "redux": "^4.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "jotai": ">=1.8.6 <2",
+    "jotai": ">=1.5.0 <2.x",
     "react": ">=16.8"
   },
   "dependencies": {

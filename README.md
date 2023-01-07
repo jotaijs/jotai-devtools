@@ -1,10 +1,52 @@
 # jotai-devtools
 
-# ✨ Coming soon! ✨ 
+## Prerequisites
 
-## UI Preview
+- Jotai version between `>=1.5.0` and `<2`;
 
-<img width="734" alt="image" src="https://user-images.githubusercontent.com/14841132/210925064-e428b907-d4ea-43c4-851d-736eed957b41.png">
+_Please note that this version only supports V1 API of Jotai. Support for V2 +
+UI based devtools is
+[coming soon](https://twitter.com/dai_shi/status/1611717249471246338])!_
 
-<img width="734" alt="image" src="https://user-images.githubusercontent.com/14841132/210925116-4c1dba2f-7ed3-4793-a490-76b8f6135520.png">
+## Setup
 
+```sh
+# npm
+npm install jotai-devtools --save-dev
+
+# yarn
+yarn add --dev jotai-devtools
+```
+
+### APIs
+
+Detailed documentation -
+[https://jotai.org/docs/api/devtools](https://jotai.org/docs/api/devtools)
+
+```tsx
+import {
+  useAtomsSnapshot,
+  useGotoAtomsSnapshot,
+  useAtomsDebugValue,
+  // Redux devtool hooks
+  useAtomDevtools,
+  useAtomsDevtools,
+} from 'jotai-devtools';
+```
+
+### Migration guide from `jotai/devtools` to `jotai-devtools`
+
+1. Install this package
+   - `yarn add --dev jotai-devtools`
+2. Update imports from `jotai/devtools` to `jotai-devtools`
+   ```diff
+   import {
+    useAtomsSnapshot,
+    useGotoAtomsSnapshot,
+    useAtomsDebugValue,
+    // Redux devtool integration hooks
+    useAtomDevtools,
+    useAtomsDevtools,
+   - } from 'jotai/devtools';
+   + } from 'jotai-devtools';
+   ```

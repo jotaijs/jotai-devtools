@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES6",
+    "jsx": "react",
+    "module": "es2015",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./types/*"],
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "jotai-devtools": ["./src"],
+      "jotai-devtools/utils": ["./src/utils"]
+    }
+  },
+  "include": ["src/**/*", "types"],
+  "exclude": ["node_modules", "dist"]
+}
