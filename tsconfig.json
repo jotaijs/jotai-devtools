@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "esnext",
-    "jsx": "react-jsx",
+    "target": "ES6",
+    "jsx": "react",
+    "module": "es2015",
+    "downlevelIteration": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./types/*"],
+    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "jotai-devtools": ["./src/index.ts"],
-      "jotai-devtools/*": ["./src/*.ts"]
+      "jotai-devtools/utils": ["./src/utils"]
     }
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": ["src/**/*", "__tests__/**/*", "types"],
   "exclude": ["node_modules", "dist"]
 }

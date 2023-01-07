@@ -4,7 +4,28 @@ const config: Config.InitialOptions = {
   rootDir: '.',
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(t|j)sx?$': '@swc/jest',
+    '^.+\\.(t|j)sx?$': [
+      '@swc/jest',
+      {
+        sourceMaps: true,
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+            tsx: true,
+          },
+          transform: {
+            react: {
+              runtime: 'automatic',
+            },
+          },
+          baseUrl: '.',
+          paths: {
+            'jotai-devtools': ['./src/index.ts'],
+            'jotai-devtools/utils': ['./src/utils'],
+          },
+        },
+      },
+    ],
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
