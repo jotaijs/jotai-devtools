@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ES6",
+    "target": "ESNext",
     "jsx": "react",
     "module": "es2015",
     "downlevelIteration": true,
@@ -20,5 +20,5 @@
     }
   },
   "include": ["src/**/*", "types"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "tsup.config.ts"]
 }
