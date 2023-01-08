@@ -8,22 +8,32 @@
   },
   "sideEffects": false,
   "source": "./src/index.ts",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs.js",
-      "default": "./dist/index.esm.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.esm.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs.js"
+      }
     },
     "./utils": {
-      "types": "./dist/utils.d.ts",
-      "require": "./dist/utils.cjs.js",
-      "default": "./dist/utils.esm.js"
+      "import": {
+        "types": "./dist/utils.d.ts",
+        "default": "./dist/utils.esm.js"
+      },
+      "require": {
+        "types": "./dist/utils.d.ts",
+        "default": "./dist/utils.cjs.js"
+      }
     },
     "./package.json": "./package.json"
   },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
   "files": [
     "dist",
     "package.json"
