@@ -6,6 +6,42 @@
     "name": "Arjun Vegda",
     "url": "https://arjunvegda.com"
   },
+  "sideEffects": false,
+  "source": "./src/index.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.esm.mjs"
+      },
+      "module": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.esm.js"
+      },
+      "default": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs.js"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.mts",
+        "default": "./dist/*.esm.mjs"
+      },
+      "module": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.esm.js"
+      },
+      "default": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.cjs.js"
+      }
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
   "files": [
     "dist",
     "package.json"
@@ -16,9 +52,11 @@
     "test": "jest",
     "test:watch": "yarn run test --watch",
     "test:coverage": "yarn run test --coverage",
+    "test:ci": "yarn run test:coverage --maxWorkers=1",
     "commitlint": "commitlint",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "compile": "tsup",
+    "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\";"
   },
   "repository": {
     "type": "git",
@@ -53,6 +91,7 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
+    "esbuild-plugin-replace": "^1.3.0",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -72,10 +111,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "redux": "^4.2.0",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.5",
+    "tsup": "^6.5.0",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "jotai": ">=1.8.6 <2",
+    "jotai": ">=1.8.6 <2.x",
     "react": ">=16.8"
   },
   "dependencies": {
