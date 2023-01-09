@@ -35,10 +35,7 @@ jobs:
         run: yarn run test
 
   release-please:
-    permissions:
-      contents: write # to create release commit (google-github-actions/release-please-action)
-      pull-requests: write # to create release PR (google-github-actions/release-please-action)
-
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
