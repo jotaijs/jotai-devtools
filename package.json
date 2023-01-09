@@ -121,7 +121,6 @@
     "react": ">=16.8"
   },
   "dependencies": {
-    "@redux-devtools/extension": "^3.2.3",
-    "vite": "^4.0.4"
+    "@redux-devtools/extension": "^3.2.3"
   }
 }
