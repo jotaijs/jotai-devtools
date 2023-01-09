@@ -1,5 +1,5 @@
-export * from './useAtomsSnapshot';
-export * from './useGotoAtomsSnapshot';
-export * from './useAtomsDebugValue';
-export * from './useAtomDevtools';
-export * from './useAtomsDevtools';
+export { useAtomsSnapshot } from './useAtomsSnapshot';
+export { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
+export { useAtomsDebugValue } from './useAtomsDebugValue';
+export { useAtomDevtools } from './useAtomDevtools';
+export { useAtomsDevtools } from './useAtomsDevtools';

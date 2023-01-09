@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Jotai version between `>=1.5.0` and `<2`;
+- Jotai version between `>=1.8.6` and `<2`;
 
 _Please note that this version only supports V1 API of Jotai. Support for V2 +
 UI based devtools is
@@ -12,10 +12,10 @@ UI based devtools is
 
 ```sh
 # npm
-npm install jotai-devtools --save-dev
+npm install jotai-devtools --save
 
 # yarn
-yarn add --dev jotai-devtools
+yarn add jotai-devtools
 ```
 
 ### APIs
@@ -37,7 +37,7 @@ import {
 ### Migration guide from `jotai/devtools` to `jotai-devtools`
 
 1. Install this package
-   - `yarn add --dev jotai-devtools`
+   - `yarn add jotai-devtools`
 2. Update imports from `jotai/devtools` to `jotai-devtools`
    ```diff
    import {
