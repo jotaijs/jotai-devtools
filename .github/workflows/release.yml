@@ -49,7 +49,6 @@ jobs:
           release-type: node
           package-name: jotai-devtools
           prerelease: true # Marks the release as pre-release. Does NOT affect SEMVER, use release-as for that
-          release-as: 0.0.1-alpha
 
       - uses: actions/checkout@v3
       - name: Tag major and minor versions
