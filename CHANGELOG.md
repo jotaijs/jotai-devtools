@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.0.1-alpha.0...v0.1.0) (2023-01-10)
+
+
+### Miscellaneous Chores
+
+* release 0.1.0 ([28ce7d1](https://github.com/jotai-labs/jotai-devtools/commit/28ce7d1b83af442298147668a45751f1f4b058ea))
+
 ## [0.0.1-alpha.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.0.1-alpha...v0.0.1-alpha.0) (2023-01-10)
 
 
