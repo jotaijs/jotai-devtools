@@ -1,44 +1,18 @@
 import { useEffect, useRef } from 'react';
-import { useAtom } from 'jotai';
-import type { Atom, WritableAtom } from 'jotai';
-import type { SetAtom } from 'jotai/core/atom';
+import { useAtom } from 'jotai/react';
+import type { Atom, WritableAtom } from 'jotai/vanilla';
 import { Message } from './types';
-
-type Scope = NonNullable<Parameters<typeof useAtom>[1]>;
 
 type DevtoolOptions = {
   name?: string;
-  scope?: Scope;
   enabled?: boolean;
 };
 
-export function useAtomDevtools<Value, Result extends void | Promise<void>>(
-  anAtom: WritableAtom<Value, Value, Result> | Atom<Value>,
+export function useAtomDevtools<Value, Result>(
+  anAtom: WritableAtom<Value, [Value], Result> | Atom<Value>,
   options?: DevtoolOptions,
-): void;
-
-/*
- * @deprecated Please use object options (DevtoolsOptions)
- */
-export function useAtomDevtools<Value, Result extends void | Promise<void>>(
-  anAtom: WritableAtom<Value, Value, Result> | Atom<Value>,
-  name?: string,
-  scope?: Scope,
-): void;
-
-export function useAtomDevtools<Value, Result extends void | Promise<void>>(
-  anAtom: WritableAtom<Value, Value, Result> | Atom<Value>,
-  options?: DevtoolOptions | string,
-  deprecatedScope?: Scope,
 ): void {
-  if (typeof options === 'string' || typeof deprecatedScope !== 'undefined') {
-    console.warn('DEPRECATED [useAtomDevtools] use DevtoolOptions');
-    options = {
-      name: options,
-      scope: deprecatedScope,
-    } as DevtoolOptions; // we intentionally lie the type a little bit here
-  }
-  const { enabled, name, scope } = options || {};
+  const { enabled, name } = options || {};
 
   let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
 
@@ -54,7 +28,7 @@ export function useAtomDevtools<Value, Result extends void | Promise<void>>(
     }
   }
 
-  const [value, setValue] = useAtom(anAtom, scope);
+  const [value, setValue] = useAtom(anAtom);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
@@ -74,7 +48,7 @@ export function useAtomDevtools<Value, Result extends void | Promise<void>>(
     }
     const setValueIfWritable = (value: Value) => {
       if (typeof setValue === 'function') {
-        (setValue as SetAtom<Value, void>)(value);
+        (setValue as (value: Value) => void)(value);
         return;
       }
       console.warn(
