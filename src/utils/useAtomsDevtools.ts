@@ -1,19 +1,7 @@
 import { useEffect, useRef } from 'react';
-import type { Atom } from 'jotai';
-import { Message } from './types';
+import { AnyAtom, AnyAtomValue, AtomsSnapshot, Message } from './types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
-
-type Scope = NonNullable<Parameters<typeof useAtomsSnapshot>[0]>;
-
-type AnyAtomValue = unknown;
-type AnyAtom = Atom<AnyAtomValue>;
-type AtomsValues = Map<AnyAtom, AnyAtomValue>; // immutable
-type AtomsDependents = Map<AnyAtom, Set<AnyAtom>>; // immutable
-type AtomsSnapshot = Readonly<{
-  values: AtomsValues;
-  dependents: AtomsDependents;
-}>;
 
 const atomToPrintable = (atom: AnyAtom) =>
   atom.debugLabel ? `${atom}:${atom.debugLabel}` : `${atom}`;
@@ -34,26 +22,14 @@ const getDevtoolsState = (atomsSnapshot: AtomsSnapshot) => {
 };
 
 type DevtoolsOptions = {
-  scope?: Scope;
   enabled?: boolean;
 };
 
-export function useAtomsDevtools(name: string, options?: DevtoolsOptions): void;
-
-/*
- * @deprecated Please use object options (DevtoolsOptions)
- */
-export function useAtomsDevtools(name: string, scope?: Scope): void;
-
 export function useAtomsDevtools(
   name: string,
-  options?: DevtoolsOptions | Scope,
-) {
-  if (typeof options !== 'undefined' && typeof options !== 'object') {
-    console.warn('DEPRECATED [useAtomsDevtools] use DevtoolsOptions');
-    options = { scope: options };
-  }
-  const { enabled, scope } = options || {};
+  options?: DevtoolsOptions,
+): void {
+  const { enabled } = options || {};
 
   let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
 
@@ -70,8 +46,8 @@ export function useAtomsDevtools(
   }
 
   // This an exception, we don't usually use utils in themselves!
-  const atomsSnapshot = useAtomsSnapshot(scope);
-  const goToSnapshot = useGotoAtomsSnapshot(scope);
+  const atomsSnapshot = useAtomsSnapshot();
+  const goToSnapshot = useGotoAtomsSnapshot();
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);

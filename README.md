@@ -2,11 +2,20 @@
 
 ## Prerequisites
 
-- Jotai version between `>=1.8.6` and `<2`;
+- Jotai version `>=1.11.0`
+- React version `>=17.0.0`
 
-_Please note that this version only supports V1 API of Jotai. Support for V2 +
-UI based devtools is
-[coming soon](https://twitter.com/dai_shi/status/1611717249471246338])!_
+### V1 to V2 Jotai migration guide
+
+_Please note that this version does *NOT* work with the V1 API of Jotai_.
+
+Find the official migration guide on
+[jotai.org](https://jotai.org/docs/guides/migrating-to-v2-api)
+
+### V1 to V2 `jotai-devtools` migration guide
+
+Find documentation for V1 `jotai-devtools`
+[here](https://github.com/jotai-labs/jotai-devtools/tree/v0.1.0)
 
 ## Setup
 
@@ -34,11 +43,19 @@ import {
 } from 'jotai-devtools';
 ```
 
-### Migration guide from `jotai/devtools` to `jotai-devtools`
+### Migration guide from `jotai/react/devtools` to `jotai-devtools`
 
 1. Install this package
-   - `yarn add jotai-devtools`
-2. Update imports from `jotai/devtools` to `jotai-devtools`
+
+   ```sh
+   # npm
+   npm install jotai-devtools --save
+
+   # yarn
+   yarn add jotai-devtools
+   ```
+
+2. Update imports from `jotai/react/devtools` to `jotai-devtools`
    ```diff
    import {
     useAtomsSnapshot,
@@ -47,6 +64,8 @@ import {
     // Redux devtool integration hooks
     useAtomDevtools,
     useAtomsDevtools,
-   - } from 'jotai/devtools';
+   - } from 'jotai/react/devtools';
    + } from 'jotai-devtools';
    ```
+   ✨ UI based devtools is
+   [coming soon](https://twitter.com/dai_shi/status/1611717249471246338])!

@@ -1,22 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
-import { SECRET_INTERNAL_getScopeContext as getScopeContext } from 'jotai';
-import type { Atom } from 'jotai';
-import {
-  DEV_GET_ATOM_STATE,
-  DEV_GET_MOUNTED,
-  DEV_GET_MOUNTED_ATOMS,
-  DEV_SUBSCRIBE_STATE,
-} from '../constants';
-
-type Scope = NonNullable<Parameters<typeof getScopeContext>[0]>;
-type AnyAtomValue = unknown;
-type AnyAtom = Atom<AnyAtomValue>;
-type AtomsValues = Map<AnyAtom, AnyAtomValue>; // immutable
-type AtomsDependents = Map<AnyAtom, Set<AnyAtom>>; // immutable
-type AtomsSnapshot = Readonly<{
-  values: AtomsValues;
-  dependents: AtomsDependents;
-}>;
+import { useEffect, useState } from 'react';
+import { useStore } from 'jotai/react';
+import type {
+  AtomsDependents,
+  AtomsSnapshot,
+  AtomsValues,
+  Options,
+} from './types';
 
 const isEqualAtomsValues = (left: AtomsValues, right: AtomsValues) =>
   left.size === right.size &&
@@ -36,10 +25,8 @@ const isEqualAtomsDependents = (
     );
   });
 
-export function useAtomsSnapshot(scope?: Scope): AtomsSnapshot {
-  const ScopeContext = getScopeContext(scope);
-  const scopeContainer = useContext(ScopeContext);
-  const store = scopeContainer.s;
+export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
+  const store = useStore(options);
 
   const [atomsSnapshot, setAtomsSnapshot] = useState<AtomsSnapshot>(() => ({
     values: new Map(),
@@ -47,40 +34,24 @@ export function useAtomsSnapshot(scope?: Scope): AtomsSnapshot {
   }));
 
   useEffect(() => {
-    if (!store[DEV_SUBSCRIBE_STATE]) return;
+    if (!store.dev_subscribe_state) return;
 
     let prevValues: AtomsValues = new Map();
     let prevDependents: AtomsDependents = new Map();
-    const invalidatedAtoms = new Set<AnyAtom>();
     const callback = () => {
       const values: AtomsValues = new Map();
       const dependents: AtomsDependents = new Map();
-      let hasNewInvalidatedAtoms = false;
-      for (const atom of store[DEV_GET_MOUNTED_ATOMS]() || []) {
-        const atomState = store[DEV_GET_ATOM_STATE](atom);
+      for (const atom of store.dev_get_mounted_atoms() || []) {
+        const atomState = store.dev_get_atom_state(atom);
         if (atomState) {
-          if (!atomState.y) {
-            if ('p' in atomState) {
-              // ignore entirely if we have invalidated promise atoms
-              return;
-            }
-            if (!invalidatedAtoms.has(atom)) {
-              invalidatedAtoms.add(atom);
-              hasNewInvalidatedAtoms = true;
-            }
-          }
           if ('v' in atomState) {
             values.set(atom, atomState.v);
           }
         }
-        const mounted = store[DEV_GET_MOUNTED](atom);
+        const mounted = store.dev_get_mounted(atom);
         if (mounted) {
           dependents.set(atom, mounted.t);
         }
-      }
-      if (hasNewInvalidatedAtoms) {
-        // ignore entirely if we have new invalidated atoms
-        return;
       }
       if (
         isEqualAtomsValues(prevValues, values) &&
@@ -91,10 +62,9 @@ export function useAtomsSnapshot(scope?: Scope): AtomsSnapshot {
       }
       prevValues = values;
       prevDependents = dependents;
-      invalidatedAtoms.clear();
       setAtomsSnapshot({ values, dependents });
     };
-    const unsubscribe = store[DEV_SUBSCRIBE_STATE](callback);
+    const unsubscribe = store.dev_subscribe_state(callback);
     callback();
     return unsubscribe;
   }, [store]);

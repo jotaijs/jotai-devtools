@@ -1,15 +1,11 @@
-import { useContext, useDebugValue, useEffect, useState } from 'react';
-import { SECRET_INTERNAL_getScopeContext as getScopeContext } from 'jotai';
-import type { Atom } from 'jotai/core/atom';
-import type { AtomState, Store } from 'jotai/core/store';
-import {
-  DEV_GET_ATOM_STATE,
-  DEV_GET_MOUNTED,
-  DEV_GET_MOUNTED_ATOMS,
-  DEV_SUBSCRIBE_STATE,
-} from '../constants';
+import { useDebugValue, useEffect, useState } from 'react';
+import { useStore } from 'jotai/react';
+import type { Atom } from 'jotai/vanilla';
 
-type Scope = NonNullable<Parameters<typeof getScopeContext>[0]>;
+type Store = ReturnType<typeof useStore>;
+type AtomState = NonNullable<
+  ReturnType<NonNullable<Store['dev_get_atom_state']>>
+>;
 
 const atomToPrintable = (atom: Atom<unknown>) =>
   atom.debugLabel || atom.toString();
@@ -17,18 +13,17 @@ const atomToPrintable = (atom: Atom<unknown>) =>
 const stateToPrintable = ([store, atoms]: [Store, Atom<unknown>[]]) =>
   Object.fromEntries(
     atoms.flatMap((atom) => {
-      const mounted = store[DEV_GET_MOUNTED]?.(atom);
+      const mounted = store.dev_get_mounted?.(atom);
       if (!mounted) {
         return [];
       }
       const dependents = mounted.t;
-      const atomState = store[DEV_GET_ATOM_STATE]?.(atom) || ({} as AtomState);
+      const atomState = store.dev_get_atom_state?.(atom) || ({} as AtomState);
       return [
         [
           atomToPrintable(atom),
           {
             ...('e' in atomState && { error: atomState.e }),
-            ...('p' in atomState && { promise: atomState.p }),
             ...('v' in atomState && { value: atomState.v }),
             dependents: Array.from(dependents).map(atomToPrintable),
           },
@@ -37,8 +32,7 @@ const stateToPrintable = ([store, atoms]: [Store, Atom<unknown>[]]) =>
     }),
   );
 
-type Options = {
-  scope?: Scope;
+type Options = Parameters<typeof useStore>[0] & {
   enabled?: boolean;
 };
 
@@ -46,17 +40,16 @@ type Options = {
 // so atoms aren't garbage collected by the WeakMap of mounted atoms
 export const useAtomsDebugValue = (options?: Options) => {
   const enabled = options?.enabled ?? __DEV__;
-  const ScopeContext = getScopeContext(options?.scope);
-  const { s: store } = useContext(ScopeContext);
+  const store = useStore(options);
   const [atoms, setAtoms] = useState<Atom<unknown>[]>([]);
   useEffect(() => {
     if (!enabled) {
       return;
     }
     const callback = () => {
-      setAtoms(Array.from(store[DEV_GET_MOUNTED_ATOMS]?.() || []));
+      setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
     };
-    const unsubscribe = store[DEV_SUBSCRIBE_STATE]?.(callback);
+    const unsubscribe = store.dev_subscribe_state?.(callback);
     callback();
     return unsubscribe;
   }, [enabled, store]);
