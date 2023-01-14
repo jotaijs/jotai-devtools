@@ -5,12 +5,17 @@
 - Jotai version `>=1.11.0`
 - React version `>=17.0.0`
 
-### V1 to V2 migration guide
+### V1 to V2 Jotai migration guide
 
 _Please note that this version does *NOT* work with the V1 API of Jotai_.
 
 Find the official migration guide on
 [jotai.org](https://jotai.org/docs/guides/migrating-to-v2-api)
+
+### V1 to V2 `jotai-devtools` migration guide
+
+Find documentation for V1 `jotai-devtools`
+[here](https://github.com/jotai-labs/jotai-devtools/tree/v0.1.0)
 
 ## Setup
 
