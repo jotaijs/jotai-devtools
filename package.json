@@ -57,7 +57,7 @@
     "lint-staged": "lint-staged",
     "precompile": "rimraf dist",
     "compile": "rollup -c rollup.config.ts --configPlugin typescript",
-    "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\"; &> /dev/null shx sed -i \"s/ from '(\\..*)';$/ from '\\$1.mjs';/\" 'dist/**/*.d.mts'; shx sed -i \"s/^declare module '(\\..*)'/declare module '\\$1.mjs'/\" 'dist/**/*.d.mts' &> /dev/null"
+    "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\"; > /dev/null shx sed -i \"s/ from '(\\..*)';$/ from '\\$1.mjs';/\" 'dist/**/*.d.mts'; shx sed -i \"s/^declare module '(\\..*)'/declare module '\\$1.mjs'/\" 'dist/**/*.d.mts' > /dev/null"
   },
   "repository": {
     "type": "git",
