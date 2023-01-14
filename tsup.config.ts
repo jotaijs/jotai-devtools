@@ -32,11 +32,6 @@ const baseConfig: Options = {
   esbuildPlugins: defaultEsBuildPlugins,
 };
 
-const esmConfig: Options = {
-  ...baseConfig,
-  format: ['esm'],
-};
-
 const cjsConfig: Options = {
   ...baseConfig,
   format: ['cjs'],
@@ -61,4 +56,4 @@ const mjsConfig: Options = {
   esbuildPlugins: mjsEsBuildPlugins,
 };
 
-export default defineConfig([esmConfig, cjsConfig, mjsConfig]);
+export default defineConfig([cjsConfig, mjsConfig]);
