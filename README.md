@@ -9,7 +9,7 @@
 
 _Please note that this version does *NOT* work with the V1 API of Jotai_.
 
-Find the official migration guide is available on
+Find the official migration guide on
 [jotai.org](https://jotai.org/docs/guides/migrating-to-v2-api)
 
 ## Setup
