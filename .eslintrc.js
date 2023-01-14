@@ -49,6 +49,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'jest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
+    '@typescript-eslint/no-var-requires': 'off',
     'import/order': [
       'error',
       {
