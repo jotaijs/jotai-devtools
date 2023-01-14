@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0-Alpha.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.1.0...v0.2.0-Alpha.0) (2023-01-14)
+
+
+### Features
+
+* add support for Jotai V2 API ([#14](https://github.com/jotai-labs/jotai-devtools/issues/14)) ([53e12d8](https://github.com/jotai-labs/jotai-devtools/commit/53e12d840ed5964f302c471354aa58a0016a85cd))
+
+
+### Miscellaneous Chores
+
+* release 0.2.0-Alpha.0 ([3a6e8a9](https://github.com/jotai-labs/jotai-devtools/commit/3a6e8a9b910b0f980a946c5d4cb390b23443ecf9))
+
 ## [0.1.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.0.1-alpha.0...v0.1.0) (2023-01-10)
 
 
