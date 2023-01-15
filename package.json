@@ -50,7 +50,8 @@
     "commitlint": "commitlint",
     "lint-staged": "lint-staged",
     "compile": "tsup",
-    "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\";"
+    "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\";",
+    "release": "release-it --dry-run"
   },
   "repository": {
     "type": "git",
@@ -72,6 +73,10 @@
   "homepage": "https://github.com/jotai-labs/jotai-devtools",
   "engines": {
     "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",
@@ -105,6 +110,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "redux": "^4.2.0",
+    "release-it": "^15.6.0",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.5",
     "tsup": "^6.5.0",
