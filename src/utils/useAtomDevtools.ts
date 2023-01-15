@@ -3,7 +3,7 @@ import { useAtom } from 'jotai/react';
 import type { Atom, WritableAtom } from 'jotai/vanilla';
 import { Message } from './types';
 
-type DevtoolOptions = {
+type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;
   enabled?: boolean;
 };
@@ -28,7 +28,7 @@ export function useAtomDevtools<Value, Result>(
     }
   }
 
-  const [value, setValue] = useAtom(anAtom);
+  const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);

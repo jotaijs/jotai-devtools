@@ -1,5 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { AnyAtom, AnyAtomValue, AtomsSnapshot, Message } from './types';
+import {
+  AnyAtom,
+  AnyAtomValue,
+  AtomsSnapshot,
+  Message,
+  Options,
+} from './types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
@@ -21,7 +27,7 @@ const getDevtoolsState = (atomsSnapshot: AtomsSnapshot) => {
   };
 };
 
-type DevtoolsOptions = {
+type DevtoolsOptions = Options & {
   enabled?: boolean;
 };
 
@@ -46,8 +52,8 @@ export function useAtomsDevtools(
   }
 
   // This an exception, we don't usually use utils in themselves!
-  const atomsSnapshot = useAtomsSnapshot();
-  const goToSnapshot = useGotoAtomsSnapshot();
+  const atomsSnapshot = useAtomsSnapshot(options);
+  const goToSnapshot = useGotoAtomsSnapshot(options);
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
