@@ -276,3 +276,5 @@ out
 build
 dist
 dist/**
+
+.npmrc
