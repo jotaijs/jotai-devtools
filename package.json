@@ -51,7 +51,7 @@
     "lint-staged": "lint-staged",
     "compile": "tsup",
     "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\";",
-    "prerelease": "yarn run compile",
+    "prerelease": "yarn install --immutable && yarn run lint && yarn run test && yarn run compile",
     "release": "release-it --dry-run"
   },
   "repository": {
@@ -78,12 +78,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": "angular",
-      "infile": "CHANGELOG.md"
-    }
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",
