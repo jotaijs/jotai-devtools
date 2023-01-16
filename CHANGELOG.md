@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1-Alpha.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-Alpha.0...v0.2.1-Alpha.0) (2023-01-16)
+
+
+### Bug Fixes
+
+* **utils:** pass options through base hooks ([#17](https://github.com/jotai-labs/jotai-devtools/issues/17)) ([d129ea6](https://github.com/jotai-labs/jotai-devtools/commit/d129ea693ae5a5f649081195ad7940aa0e0218be))
+* **utils:** types for /utils entry point ([#18](https://github.com/jotai-labs/jotai-devtools/issues/18)) ([743d984](https://github.com/jotai-labs/jotai-devtools/commit/743d984bcb78e8c6eeaecd2e9f15f3cba3215c45))
+
 ## [0.2.0-Alpha.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.1.0...v0.2.0-Alpha.0) (2023-01-14)
 
 
