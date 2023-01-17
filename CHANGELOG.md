@@ -1,3 +1,11 @@
+# [0.2.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.0...v0.2.0-next.1) (2023-01-17)
+
+### Bug Fixes
+
+- order of typescript types
+  ([#21](https://github.com/jotai-labs/jotai-devtools/issues/21))
+  ([f2bd855](https://github.com/jotai-labs/jotai-devtools/commit/f2bd85562c4db09caab071f8f7a6db177aae2487))
+
 # [0.2.0-next.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2...v0.2.0-next.0) (2023-01-16)
 
 ### Bug Fixes
