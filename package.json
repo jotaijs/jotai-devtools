@@ -8,7 +8,6 @@
   },
   "sideEffects": false,
   "source": "./src/index.ts",
-  "main": "./dist/index.cjs.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -31,11 +30,12 @@
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*.d.ts"
+        "./dist/*"
       ]
     }
   },
-  "types": "./dist/index.d.ts",
+  "types": "index",
+  "main": "./dist/index.cjs.js",
   "files": [
     "dist",
     "package.json"
