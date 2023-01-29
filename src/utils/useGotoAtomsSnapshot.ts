@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useStore } from 'jotai/react';
-import type { AtomsSnapshot, Options } from './types';
+import type { AtomsSnapshot, Options } from '../types';
 
 export function useGotoAtomsSnapshot(options?: Options) {
   const store = useStore(options);

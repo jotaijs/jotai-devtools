@@ -9,6 +9,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
+    'plugin:storybook/recommended',
   ],
   plugins: [
     '@typescript-eslint',
@@ -37,22 +38,40 @@ module.exports = {
     'prefer-const': 'error',
     curly: ['warn', 'multi-line', 'consistent'],
     'no-console': 'off',
-    'import/no-unresolved': ['error', { commonjs: true, amd: true }],
+    'import/no-unresolved': [
+      'error',
+      {
+        commonjs: true,
+        amd: true,
+      },
+    ],
     'import/export': 'error',
     '@typescript-eslint/no-duplicate-imports': ['error'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
     ],
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'jest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
+    'jest/consistent-test-it': [
+      'error',
+      {
+        fn: 'it',
+        withinDescribe: 'it',
+      },
+    ],
     'import/order': [
       'error',
       {
-        alphabetize: { order: 'asc', caseInsensitive: true },
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
         groups: [
           'builtin',
           'external',

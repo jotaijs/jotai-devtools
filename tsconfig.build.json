@@ -2,7 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "ESNext",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "es2015",
     "downlevelIteration": true,
     "esModuleInterop": true,
@@ -13,7 +13,6 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "exactOptionalPropertyTypes": true,
     "baseUrl": ".",
     "paths": {
       "jotai-devtools": ["./src"],

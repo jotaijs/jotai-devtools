@@ -5,7 +5,7 @@ import type {
   AtomsSnapshot,
   AtomsValues,
   Options,
-} from './types';
+} from '../types';
 
 const isEqualAtomsValues = (left: AtomsValues, right: AtomsValues) =>
   left.size === right.size &&
