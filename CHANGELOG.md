@@ -1,3 +1,5 @@
+# [0.2.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.1...v0.2.0) (2023-02-01)
+
 # [0.2.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.0...v0.2.0-next.1) (2023-01-17)
 
 ### Bug Fixes
