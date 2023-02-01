@@ -5,18 +5,6 @@
 - Jotai version `>=1.11.0`
 - React version `>=17.0.0`
 
-### V1 to V2 Jotai migration guide
-
-_Please note that this version does *NOT* work with the V1 API of Jotai_.
-
-Find the official migration guide on
-[jotai.org](https://jotai.org/docs/guides/migrating-to-v2-api)
-
-### V1 to V2 `jotai-devtools` migration guide
-
-Find documentation for V1 `jotai-devtools`
-[here](https://github.com/jotai-labs/jotai-devtools/tree/v0.1.0)
-
 ## Setup
 
 ```sh
@@ -27,9 +15,9 @@ npm install jotai-devtools --save
 yarn add jotai-devtools
 ```
 
-### APIs
+## API
 
-Detailed documentation -
+Detailed documentation is available on
 [https://jotai.org/docs/api/devtools](https://jotai.org/docs/api/devtools)
 
 ```tsx
@@ -43,7 +31,14 @@ import {
 } from 'jotai-devtools';
 ```
 
-### Migration guide from `jotai/react/devtools` to `jotai-devtools`
+## Migration guides
+
+### Migrate Jotai to V2
+
+Find the official migration guide on
+[jotai.org](https://jotai.org/docs/guides/migrating-to-v2-api)
+
+### Migrate `jotai/react/devtools` to `jotai-devtools`
 
 1. Install this package
 
@@ -67,5 +62,8 @@ import {
    - } from 'jotai/react/devtools';
    + } from 'jotai-devtools';
    ```
-   ✨ UI based devtools is
-   [coming soon](https://twitter.com/dai_shi/status/1611717249471246338])!
+
+### Other announcements
+
+✨ UI based devtools is
+[coming soon](https://twitter.com/dai_shi/status/1611717249471246338)!
