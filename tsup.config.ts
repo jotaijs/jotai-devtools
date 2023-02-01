@@ -23,7 +23,7 @@ const baseConfig: Options = {
   // Clean output directory before each build
   clean: true,
   minify: true,
-  splitting: false,
+  splitting: true,
   tsconfig: './tsconfig.build.json',
   dts: true,
   external: ['jotai', 'React'],
