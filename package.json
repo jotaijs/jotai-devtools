@@ -53,7 +53,9 @@
     "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\";",
     "prerelease": "yarn install --immutable && yarn run lint && yarn run test && yarn run compile",
     "release": "release-it",
-    "release:next": "yarn run release --preRelease=next"
+    "release:next": "yarn run release --preRelease=next",
+    "release:minor": "yarn run release minor",
+    "release:patch": "yarn run release patch"
   },
   "repository": {
     "type": "git",
