@@ -3,6 +3,7 @@ import { ActionIcon, Sx } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from 'src/types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
+import { useThemeMode } from '../hooks/useThemeMode';
 import {
   devtoolsJotaiStoreOptions,
   useDevtoolsJotaiStoreOptions,
@@ -28,8 +29,7 @@ const ShellTriggerButton = () => {
   return (
     <ActionIcon
       variant="filled"
-      // TODO make this themable
-      color="dark"
+      color={useThemeMode('dark', 'gray.3')}
       onClick={() => setIsShellOpen(true)}
       sx={shellTriggerButtonStyles}
     >
@@ -42,8 +42,6 @@ export type ExtensionProps = {
   // false by default
   isInitialOpen?: boolean;
   store?: Store;
-  // TODO Allow user to pass theme
-  // theme?: 'dark' | 'light';
 };
 
 export const Extension = ({

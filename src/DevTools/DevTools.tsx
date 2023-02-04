@@ -81,7 +81,6 @@ export const DevTools = ({
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
       >
-        {/* FIXME remove `withGlobalStyles` - this changes themes outside of this component and may impact userland */}
         <MantineProvider withNormalizeCSS theme={theme_}>
           <InternalDevToolsContext.Provider value={internalJotaiStore}>
             <Extension store={store} isInitialOpen={isInitialOpen} />
