@@ -45,6 +45,7 @@ export const Shell = ({ store }: ShellProps) => {
       h={height}
       mah={shellStyleDefaults.maxHeight}
       ref={shellRef}
+      className="jotai-devtools-shell"
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />

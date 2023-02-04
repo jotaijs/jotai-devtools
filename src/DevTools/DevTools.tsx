@@ -25,6 +25,15 @@ import {
 const theme: MantineThemeOverride = {
   primaryColor: 'dark',
   activeStyles: { transform: 'scale(1)' },
+  globalStyles: (theme) => ({
+    '.jotai-devtools-shell': {
+      color:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[0]
+          : theme.colors.dark[9],
+      lineHeight: theme.lineHeight,
+    },
+  }),
   fontFamily:
     'Inter, JetBrains Mono, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
   fontFamilyMonospace:
@@ -73,7 +82,7 @@ export const DevTools = ({
         toggleColorScheme={toggleColorScheme}
       >
         {/* FIXME remove `withGlobalStyles` - this changes themes outside of this component and may impact userland */}
-        <MantineProvider withGlobalStyles withNormalizeCSS theme={theme_}>
+        <MantineProvider withNormalizeCSS theme={theme_}>
           <InternalDevToolsContext.Provider value={internalJotaiStore}>
             <Extension store={store} isInitialOpen={isInitialOpen} />
           </InternalDevToolsContext.Provider>

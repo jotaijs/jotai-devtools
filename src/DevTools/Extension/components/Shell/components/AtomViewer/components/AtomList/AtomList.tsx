@@ -39,7 +39,7 @@ const SearchAtoms = memo(() => {
   return (
     <TextInput
       label="Search"
-      placeholder="atom"
+      placeholder="atom debug label"
       pt={5}
       pb={10}
       sx={textStyles}
