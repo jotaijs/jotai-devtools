@@ -49,7 +49,7 @@ export type DevToolsProps = ExtensionProps & {
   options?: DevToolsOptions;
 };
 
-export const DevTools = ({
+const DevTools_ = ({
   store,
   isInitialOpen,
   theme: userColorScheme = 'light',
@@ -89,4 +89,12 @@ export const DevTools = ({
       </ColorSchemeProvider>
     </StrictMode>
   );
+};
+
+export const DevTools = (props: DevToolsProps): JSX.Element => {
+  if (__DEV__) {
+    return <DevTools_ {...props} />;
+  }
+
+  return <></>;
 };
