@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import { Box, Code, Text, Title } from '@mantine/core';
 import { unlabeledAtomLabel } from '../../../../../../../../../constants';
-import { AtomValueType } from '../../../../../../../../../utils/getTypeOfAtomValue';
-import { parseDebugLabel } from '../../../../../../../../../utils/parseDebugLabel';
+import { AtomValueType } from '../../../../../../../../../utils/get-type-of-atom-value';
+import { parseDebugLabel } from '../../../../../../../../../utils/parse-debug-label';
 
 type AtomDetailItemProps = {
   label: string;

@@ -3,8 +3,8 @@ import { Box, Text } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';
 import { useUserStore } from '../../../../../../../../../hooks/useUserStore';
-import { AtomValueType } from '../../../../../../../../../utils/getTypeOfAtomValue';
-import { deepParseAtomValue } from '../../../../../../../../../utils/parseAtomValue';
+import { AtomValueType } from '../../../../../../../../../utils/get-type-of-atom-value';
+import { deepParseAtomValue } from '../../../../../../../../../utils/parse-atom-value';
 import {
   MemoizedValueRenderer,
   getPrismLanguageType,

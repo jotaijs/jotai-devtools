@@ -120,5 +120,4 @@ Find the official migration guide on
 
 ### Other announcements
 
-✨ UI based devtools is
-[coming soon](https://twitter.com/dai_shi/status/1611717249471246338)!
+✨ [First announcement](https://twitter.com/dai_shi/status/1611717249471246338)

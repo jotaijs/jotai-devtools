@@ -1,5 +1,5 @@
 import type { AnyAtom, AnyAtomValue, Store } from 'src/types';
-import { getTypeOfAtomValue } from './getTypeOfAtomValue';
+import { getTypeOfAtomValue } from './get-type-of-atom-value';
 
 const deepParseArrayAtom = (
   atomValue: AnyAtomValue[],

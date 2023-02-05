@@ -3,7 +3,7 @@ import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';
 import { useDevToolsOptionsValue } from '../../../../../../../../atoms/devtools-options';
 import { useUserStoreOptions } from '../../../../../../../../hooks/useUserStore';
-import { getTypeOfAtomValue } from '../../../../../../../../utils/getTypeOfAtomValue';
+import { getTypeOfAtomValue } from '../../../../../../../../utils/get-type-of-atom-value';
 import { AtomDependentsList } from './components/AtomDependentsList';
 import { AtomMetaDetails } from './components/AtomMetaDetails';
 import { AtomParseDeepNestedValue } from './components/AtomParseDeepNestedValue';

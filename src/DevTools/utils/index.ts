@@ -1,4 +1,3 @@
-export * from './getAtomByKey';
-export * from './getTypeOfAtomValue';
-export * from './parseAtomValue';
-export * from './parseDebugLabel';
+export * from './get-type-of-atom-value';
+export * from './parse-atom-value';
+export * from './parse-debug-label';

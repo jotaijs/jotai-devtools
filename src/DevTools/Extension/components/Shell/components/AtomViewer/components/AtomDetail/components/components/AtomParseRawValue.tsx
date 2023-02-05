@@ -1,6 +1,6 @@
 import { Box, Text } from '@mantine/core';
 import { AnyAtomValue } from 'src/types';
-import { AtomValueType } from '../../../../../../../../../utils/getTypeOfAtomValue';
+import { AtomValueType } from '../../../../../../../../../utils/get-type-of-atom-value';
 import {
   MemoizedValueRenderer,
   getPrismLanguageType,

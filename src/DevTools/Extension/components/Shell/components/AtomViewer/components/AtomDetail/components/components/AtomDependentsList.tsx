@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Box, Code, List, Text } from '@mantine/core';
 import { AnyAtom } from 'src/types';
 import { useAtomsSnapshots } from '../../../../../../../../../hooks/useAtomsSnapshots';
-import { parseDebugLabel } from '../../../../../../../../../utils/parseDebugLabel';
+import { parseDebugLabel } from '../../../../../../../../../utils/parse-debug-label';
 
 type AtomDependentsListProps = {
   atom: AnyAtom;

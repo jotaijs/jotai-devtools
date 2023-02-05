@@ -2,7 +2,7 @@ import { memo, useCallback, useMemo } from 'react';
 import { NavLink, Sx, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons';
 import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
-import { parseDebugLabel } from '../../../../../../../../utils/parseDebugLabel';
+import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
 
 type AtomListItemProps = {
   label?: string;
