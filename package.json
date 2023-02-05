@@ -56,8 +56,8 @@
     "release:next": "yarn run release --preRelease=next",
     "release:minor": "yarn run release minor",
     "release:patch": "yarn run release patch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -86,17 +86,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@commitlint/cli": "^17.4.0",
     "@commitlint/config-conventional": "^17.4.0",
     "@release-it/conventional-changelog": "^5.1.1",
-    "@storybook/addon-actions": "^6.5.15",
-    "@storybook/addon-essentials": "^6.5.15",
-    "@storybook/addon-interactions": "^6.5.15",
-    "@storybook/addon-links": "^6.5.15",
-    "@storybook/builder-webpack4": "^6.5.15",
-    "@storybook/manager-webpack4": "^6.5.15",
-    "@storybook/react": "^6.5.15",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/addon-actions": "^7.0.0-beta.43",
+    "@storybook/addon-essentials": "^7.0.0-beta.43",
+    "@storybook/addon-interactions": "^7.0.0-beta.43",
+    "@storybook/addon-links": "^7.0.0-beta.43",
+    "@storybook/react": "^7.0.0-beta.43",
+    "@storybook/react-webpack5": "^7.0.0-beta.43",
+    "@storybook/testing-library": "^0.0.14-next.1",
     "@swc/core": "^1.3.25",
     "@swc/jest": "^0.2.24",
     "@testing-library/react": "^13.4.0",
@@ -131,8 +133,10 @@
     "release-it": "^15.6.0",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.5",
+    "storybook": "^7.0.0-beta.43",
     "tsup": "^6.5.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0"
   },
   "peerDependencies": {
     "jotai": ">=1.11.0",
