@@ -1,4 +1,4 @@
-# jotai-devtools
+# Jotai DevTools
 
 ## Prerequisites
 
@@ -15,7 +15,62 @@ npm install jotai-devtools --save
 yarn add jotai-devtools
 ```
 
-## API
+## UI DevTool
+
+### Provider-less
+
+```tsx
+import { createStore } from 'jotai';
+import { DevTools } from 'jotai-devtools';
+
+const App = () => {
+  return (
+    <>
+      <DevTools />
+      {/* your app */}
+    </>
+  );
+};
+```
+
+### With Provider
+
+```tsx
+import { createStore } from 'jotai';
+import { DevTools } from 'jotai-devtools';
+
+const customStore = createStore();
+
+const App = () => {
+  return (
+    <Provider store={customStore}>
+      <DevTools store={customStore} />
+      {/* your app */}
+    </Provider>
+  );
+};
+```
+
+### Available props
+
+```ts
+type DevToolsProps = {
+  // defaults to false
+  isInitialOpen?: boolean;
+  // pass a custom store
+  store?: Store;
+  // Defaults to light
+  theme?: 'dark' | 'light';
+  options?: {
+    // Parsing strategy for AtomViewer. Defaults to `raw`
+    // `raw` - parses the top level atom value but does not parse the values of atoms within atoms
+    // `deep-nested` - Parses values of atoms within atoms. Linear performance curve. Bigger the object, the slower the performance
+    atomValueParser?: 'raw' | 'deep-nested';
+  };
+};
+```
+
+## Hooks
 
 Detailed documentation is available on
 [https://jotai.org/docs/api/devtools](https://jotai.org/docs/api/devtools)
