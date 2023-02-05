@@ -24,12 +24,16 @@ const config: StorybookConfig = {
       },
     },
   },
+  core: {
+    disableTelemetry: true, // 👈 Disables telemetry
+    enableCrashReports: false, // 👈 Appends the crash reports to the telemetry events
+  },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
-    config.plugins.push(
+    config?.plugins?.push(
       new webpack.DefinePlugin({
         __DEV__: configType === 'DEVELOPMENT',
       }),
