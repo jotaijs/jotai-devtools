@@ -9,14 +9,14 @@ const javaScriptLanguageTypes = ['object', 'array', 'null'];
 
 export const getPrismLanguageType = (
   atomValue: AnyAtomValue,
-): PrismProps['language'] | 'text' => {
+): PrismProps['language'] => {
   const type = getTypeOfAtomValue(atomValue);
 
   if (javaScriptLanguageTypes.includes(type)) {
     return 'javascript';
   }
 
-  return 'text';
+  return 'git';
 };
 
 type MemoizedValueRendererProps = {
@@ -26,10 +26,6 @@ type MemoizedValueRendererProps = {
 
 export const MemoizedValueRenderer = memo(
   ({ prismLanguageType, value }: MemoizedValueRendererProps): JSX.Element => {
-    if (prismLanguageType === 'text') {
-      return <Code block>{value}</Code>;
-    }
-
     return (
       <Prism language={prismLanguageType} mb={10} noCopy>
         {value}

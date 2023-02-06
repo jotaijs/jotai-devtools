@@ -53,7 +53,11 @@ export const Shell = ({ store }: ShellProps) => {
       <Tabs.Panel
         value={TabKeys.AtomViewer}
         h="100%"
-        sx={{ overflow: 'hidden' }}
+        sx={{
+          overflow: 'hidden',
+          // Hide the overlap of this div's bg
+          borderBottomLeftRadius: '7px',
+        }}
       >
         <AtomViewer />
       </Tabs.Panel>

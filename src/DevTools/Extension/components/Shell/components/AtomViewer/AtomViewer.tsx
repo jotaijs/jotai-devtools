@@ -7,10 +7,8 @@ import { AtomList } from './components/AtomList';
 
 const panelStyles = { overflow: 'auto' };
 const atomListWrapperStyles: Sx = (theme) => ({
-  // Hide the overlap of this div's bg
-  borderBottomLeftRadius: '0.5rem',
   background:
-    theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[2],
+    theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[2],
 });
 
 export const AtomViewer = memo(() => {

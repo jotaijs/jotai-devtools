@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { Box, Code, Text, Title } from '@mantine/core';
-import { unlabeledAtomLabel } from '../../../../../../../../../constants';
 import { AtomValueType } from '../../../../../../../../../utils/get-type-of-atom-value';
 import { parseDebugLabel } from '../../../../../../../../../utils/parse-debug-label';
 
@@ -26,10 +25,7 @@ type AtomMetaDetailsProps = {
 };
 
 export const AtomMetaDetails = memo(
-  ({
-    debugLabel = unlabeledAtomLabel,
-    atomValueType,
-  }: AtomMetaDetailsProps): JSX.Element => {
+  ({ debugLabel, atomValueType }: AtomMetaDetailsProps): JSX.Element => {
     return (
       <Box>
         <Title size="h3" mb={10}>

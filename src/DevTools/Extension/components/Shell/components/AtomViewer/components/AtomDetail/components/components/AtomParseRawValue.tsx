@@ -28,9 +28,9 @@ export const AtomParseRawValueValue = ({
       ) : (
         <MemoizedValueRenderer
           value={
-            prismLanguageType === 'text'
-              ? String(atomValue)
-              : JSON.stringify(atomValue, null, 2)
+            prismLanguageType === 'javascript'
+              ? JSON.stringify(atomValue, null, 2)
+              : String(atomValue)
           }
           prismLanguageType={prismLanguageType}
         />

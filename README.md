@@ -1,26 +1,59 @@
 # Jotai DevTools
 
+## Features
+
+- Debug 🐞 raw or deeply nested (atoms-in-atoms) atom values with ease
+- Out-of-the-box 🔌 support for async/suspendible atoms
+- Built-in Dark mode 🌗 support
+- ✅ Supports custom `store`
+- ✅ Works with provider-less mode
+
+## Preview
+
+<p>
+    <a href="https://www.npmjs.com/package/jotai-devtools">
+      <img alt="Jotai DevTools Screenshot" src="./docs/internal/demo-screenshot.png" width="750"/>
+  </a>
+</p>
+
 ## Prerequisites
 
-- Jotai version `>=1.11.0`
+- Jotai version `>=1.11.0` (highly recommended to use `2.x.x`)
 - React version `>=17.0.0`
 
 ## Setup
 
 ```sh
-# npm
-npm install jotai-devtools --save
-
 # yarn
 yarn add jotai-devtools
+
+# npm
+npm install jotai-devtools --save
 ```
 
-## UI DevTool
+## UI DevTools
+
+### Babel plugin setup - (Optional but highly recommended)
+
+Use Jotai babel plugins for optimal experience. Full guide is available on
+[jotai.org](https://jotai.org/docs/tools/babel)
+
+Eg.
+
+```json
+{
+  "plugins": [
+    // Enables hot reload for atoms
+    "jotai/babel/plugin-react-refresh",
+    // Automatically adds debug labels to the atoms
+    "jotai/babel/plugin-debug-label"
+  ]
+}
+```
 
 ### Provider-less
 
 ```tsx
-import { createStore } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 
 const App = () => {

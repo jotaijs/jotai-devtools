@@ -117,8 +117,6 @@ const Filtered = (props: FilteredType) => {
 };
 
 const TodoList = () => {
-  // Use `useSetAtom` to avoid re-render
-  // const [, setTodos] = useAtom(todosAtom)
   const setTodos = useSetAtom(todosAtom, demoStoreOptions);
   const remove: RemoveFn = (todo) =>
     setTodos((prev) => prev.filter((item) => item !== todo));
@@ -134,7 +132,7 @@ const TodoList = () => {
   return (
     <form onSubmit={add}>
       <Filter />
-      <TextInput placeholder="Type your todo" name="inputTitle" />
+      <TextInput placeholder="Type your todo" name="inputTitle" mt="sm" />
       <List listStyleType="none">
         <Filtered remove={remove} />
       </List>

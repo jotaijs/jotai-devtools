@@ -13,7 +13,7 @@ export const shellStyles: Sx = (theme) => ({
   borderWidth: 1,
   borderStyle: 'solid',
   // Changing this may cause overlaps of bg in nested divs
-  borderRadius: '0.5rem',
+  borderRadius: '8px',
   background: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
   display: 'flex',
   flexDirection: 'column',

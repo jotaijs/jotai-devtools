@@ -48,9 +48,9 @@ const ParseAndDisplayAtomValue = memo(
     return (
       <MemoizedValueRenderer
         value={
-          prismLanguageType === 'text'
-            ? String(nextValue)
-            : JSON.stringify(nextValue, null, 2)
+          prismLanguageType === 'javascript'
+            ? JSON.stringify(nextValue, null, 2)
+            : String(nextValue)
         }
         prismLanguageType={prismLanguageType}
       />

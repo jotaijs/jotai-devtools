@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { forwardRef, useEffect } from 'react';
 import { ActionIcon, Sx } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from 'src/types';
@@ -23,7 +23,7 @@ const shellTriggerButtonStyles: Sx = () => ({
   },
 });
 
-const ShellTriggerButton = () => {
+const ShellTriggerButton = forwardRef<HTMLButtonElement>((_, ref) => {
   const setIsShellOpen = useSetAtom(isShellOpenAtom, devtoolsJotaiStoreOptions);
 
   return (
@@ -32,11 +32,13 @@ const ShellTriggerButton = () => {
       color={useThemeMode('dark', 'gray.3')}
       onClick={() => setIsShellOpen(true)}
       sx={shellTriggerButtonStyles}
+      ref={ref}
+      title="Open Jotai Devtools"
     >
       <img src={logo} alt="Jotai Mascot" />
     </ActionIcon>
   );
-};
+});
 
 export type ExtensionProps = {
   // false by default
