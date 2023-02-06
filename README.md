@@ -40,7 +40,7 @@ Use Jotai babel plugins for optimal experience. Full guide is available on
 
 Eg.
 
-```json
+```ts
 {
   "plugins": [
     // Enables hot reload for atoms

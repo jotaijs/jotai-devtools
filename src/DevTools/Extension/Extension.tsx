@@ -8,7 +8,7 @@ import {
   devtoolsJotaiStoreOptions,
   useDevtoolsJotaiStoreOptions,
 } from '../internal-jotai-store';
-import logo from './assets/jotai-mascot.png';
+import { logo } from './assets/logo';
 import { Shell } from './components/Shell';
 
 const shellTriggerButtonStyles: Sx = () => ({
