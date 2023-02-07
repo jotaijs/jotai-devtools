@@ -25,15 +25,6 @@ import {
 const theme: MantineThemeOverride = {
   primaryColor: 'dark',
   activeStyles: { transform: 'scale(1)' },
-  globalStyles: (theme) => ({
-    '.jotai-devtools-shell': {
-      color:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[0]
-          : theme.colors.dark[9],
-      lineHeight: theme.lineHeight,
-    },
-  }),
   fontFamily:
     'Inter, JetBrains Mono, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
   fontFamilyMonospace:
@@ -42,6 +33,19 @@ const theme: MantineThemeOverride = {
     fontFamily:
       'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
   },
+  globalStyles: (theme) => ({
+    '.jotai-devtools-shell': {
+      '*, *::before, *::after': {
+        boxSizing: 'border-box',
+      },
+      ...theme.fn.fontStyles(),
+      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+      lineHeight: theme.lineHeight,
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale',
+      fontSize: theme.fontSizes.md,
+    },
+  }),
 };
 
 export type DevToolsProps = ExtensionProps & {

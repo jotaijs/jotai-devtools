@@ -57,6 +57,7 @@ export const Shell = ({ store }: ShellProps) => {
           overflow: 'hidden',
           // Hide the overlap of this div's bg
           borderBottomLeftRadius: '7px',
+          borderBottomRightRadius: '7px',
         }}
       >
         <AtomViewer />
