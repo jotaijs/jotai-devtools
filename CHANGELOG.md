@@ -1,3 +1,10 @@
+# [0.3.0-next.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0...v0.3.0-next.0) (2023-02-07)
+
+### Features
+
+- **ui-devtools:** initial commit
+  ([7c38133](https://github.com/jotai-labs/jotai-devtools/commit/7c38133a360c0c97db6406becdc1bf939e1001e7))
+
 # [0.2.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.1...v0.2.0) (2023-02-01)
 
 # [0.2.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.0...v0.2.0-next.1) (2023-01-17)
