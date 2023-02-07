@@ -7,6 +7,7 @@
 - Built-in Dark mode 🌗 support
 - ✅ Supports custom `store`
 - ✅ Works with provider-less mode
+- ✅ Works with Next.js
 
 ## Preview
 
@@ -49,6 +50,22 @@ Eg.
     "jotai/babel/plugin-debug-label"
   ]
 }
+```
+
+### Next JS setup
+
+Enable `transpilePackages` for CSS to be imported correctly.
+
+```ts
+// next.config.ts
+
+const nextConfig = {
+  // Learn more here - https://nextjs.org/docs/advanced-features/compiler#module-transpilation
+  // Required for font css to be imported correctly 👇
+  transpilePackages: ['jotai-devtools'],
+};
+
+module.exports = nextConfig;
 ```
 
 ### Provider-less
