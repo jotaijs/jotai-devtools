@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { Code } from '@mantine/core';
 import { Prism, PrismProps } from '@mantine/prism';
 import { AnyAtomValue } from 'src/types';
 import { getTypeOfAtomValue } from '../../../../../../../../../utils';
