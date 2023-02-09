@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from 'react';
+import * as React from 'react';
 import { ActionIcon, Sx } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from 'src/types';
@@ -23,7 +23,7 @@ const shellTriggerButtonStyles: Sx = () => ({
   },
 });
 
-const ShellTriggerButton = forwardRef<HTMLButtonElement>((_, ref) => {
+const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
   const setIsShellOpen = useSetAtom(isShellOpenAtom, devtoolsJotaiStoreOptions);
 
   return (
@@ -55,7 +55,7 @@ export const Extension = ({
     useDevtoolsJotaiStoreOptions(),
   );
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Avoid setting the initial value if the value is found in the local storage
     if (typeof isShellOpen !== 'boolean') {
       setIsShellOpen(isInitialOpen);

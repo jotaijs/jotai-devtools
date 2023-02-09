@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useState } from 'react';
+import * as React from 'react';
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -53,17 +53,18 @@ const DevTools_ = ({
   theme: userColorScheme = 'light',
   options,
 }: DevToolsProps): JSX.Element => {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(userColorScheme);
+  const [colorScheme, setColorScheme] =
+    React.useState<ColorScheme>(userColorScheme);
   const setDevToolsOptions = useSetDevToolsOptions();
 
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
-  useEffect(() => {
+  React.useEffect(() => {
     setColorScheme(userColorScheme);
   }, [userColorScheme]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Should we consider caching these options in the future instead of allowing users to change these?
     setDevToolsOptions(options);
   }, [setDevToolsOptions, options]);
@@ -74,7 +75,7 @@ const DevTools_ = ({
   };
 
   return (
-    <StrictMode>
+    <React.StrictMode>
       <ColorSchemeProvider
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
@@ -85,7 +86,7 @@ const DevTools_ = ({
           </InternalDevToolsContext.Provider>
         </MantineProvider>
       </ColorSchemeProvider>
-    </StrictMode>
+    </React.StrictMode>
   );
 };
 

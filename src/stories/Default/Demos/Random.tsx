@@ -36,8 +36,8 @@ export const Random = () => {
   // We're not displaying these values on the UI
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const nestedObject = useAtomValue(nestedObjectAtom, demoStoreOptions);
-  const text = useAtomValue(textAtom, demoStoreOptions);
-  const bigint = useAtomValue(bigintAtom, demoStoreOptions);
+  const _text = useAtomValue(textAtom, demoStoreOptions);
+  const _bigint = useAtomValue(bigintAtom, demoStoreOptions);
   // const circular = useAtomValue(circularAtom, demoStoreOptions);
   // console.log(circular);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -26,11 +26,9 @@ module.exports = {
     es6: true,
   },
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 2018,
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
   rules: {
     eqeqeq: 'error',
@@ -92,8 +90,9 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['builtin'],
       },
     ],
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
+    // Disable it until we start supporting `react-jsx` again.
+    // 'react/jsx-uses-react': 'off',
+    // 'react/react-in-jsx-scope': 'off',
     'sort-imports': [
       'error',
       {

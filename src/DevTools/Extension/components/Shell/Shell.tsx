@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Tabs } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { Store } from 'src/types';

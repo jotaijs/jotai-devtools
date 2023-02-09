@@ -26,7 +26,7 @@ const baseConfig: Options = {
   splitting: true,
   tsconfig: './tsconfig.build.json',
   dts: true,
-  external: ['jotai', 'React'],
+  external: ['jotai', 'react', 'react-dom'],
   platform: 'node',
   outExtension: defaultOutExtension,
   esbuildPlugins: defaultEsBuildPlugins,
