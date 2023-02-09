@@ -26,7 +26,7 @@ type MemoizedValueRendererProps = {
 export const MemoizedValueRenderer = memo(
   ({ prismLanguageType, value }: MemoizedValueRendererProps): JSX.Element => {
     return (
-      <Prism language={prismLanguageType} mb={10} noCopy>
+      <Prism language={prismLanguageType} mb={10} copyLabel="Copy value">
         {value}
       </Prism>
     );
