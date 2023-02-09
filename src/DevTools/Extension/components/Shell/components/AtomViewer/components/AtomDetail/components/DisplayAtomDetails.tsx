@@ -4,10 +4,10 @@ import { AnyAtom } from 'src/types';
 import { useDevToolsOptionsValue } from '../../../../../../../../atoms/devtools-options';
 import { useUserStoreOptions } from '../../../../../../../../hooks/useUserStore';
 import { getTypeOfAtomValue } from '../../../../../../../../utils/get-type-of-atom-value';
-import { AtomDependentsList } from './components/AtomDependentsList';
-import { AtomMetaDetails } from './components/AtomMetaDetails';
-import { AtomParseDeepNestedValue } from './components/AtomParseDeepNestedValue';
-import { AtomParseRawValueValue } from './components/AtomParseRawValue';
+import { AtomDependentsList } from './AtomDependentsList';
+import { AtomMetaDetails } from './AtomMetaDetails';
+import { AtomParseDeepNestedValue } from './AtomParseDeepNestedValue';
+import { AtomParseRawValueValue } from './AtomParseRawValue';
 
 type DisplayAtomDetailsProps = {
   atom: AnyAtom;

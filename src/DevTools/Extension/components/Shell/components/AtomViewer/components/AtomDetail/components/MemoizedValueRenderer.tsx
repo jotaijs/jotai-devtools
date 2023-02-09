@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Prism, PrismProps } from '@mantine/prism';
 import { AnyAtomValue } from 'src/types';
-import { getTypeOfAtomValue } from '../../../../../../../../../utils';
+import { getTypeOfAtomValue } from '../../../../../../../../utils';
 
 // List of types to render in JavaScript syntax
 const javaScriptLanguageTypes = ['object', 'array', 'null'];
