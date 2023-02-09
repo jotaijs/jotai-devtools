@@ -15,7 +15,7 @@ export const getPrismLanguageType = (
     return 'javascript';
   }
 
-  return 'git';
+  return 'markdown';
 };
 
 type MemoizedValueRendererProps = {

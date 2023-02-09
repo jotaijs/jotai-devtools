@@ -1,6 +1,9 @@
 import { Box, Text } from '@mantine/core';
 import { AnyAtomValue } from 'src/types';
-import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
+import {
+  AtomValueType,
+  stringifyAtomValue,
+} from '../../../../../../../../utils/';
 import {
   MemoizedValueRenderer,
   getPrismLanguageType,
@@ -27,11 +30,7 @@ export const AtomParseRawValueValue = ({
         <Text>No Preview available</Text>
       ) : (
         <MemoizedValueRenderer
-          value={
-            prismLanguageType === 'javascript'
-              ? JSON.stringify(atomValue, null, 2)
-              : String(atomValue)
-          }
+          value={stringifyAtomValue(atomValue)}
           prismLanguageType={prismLanguageType}
         />
       )}

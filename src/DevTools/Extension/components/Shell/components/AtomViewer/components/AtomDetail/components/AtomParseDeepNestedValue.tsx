@@ -3,8 +3,11 @@ import { Box, Text } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';
 import { useUserStore } from '../../../../../../../../hooks/useUserStore';
-import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
-import { deepParseAtomValue } from '../../../../../../../../utils/parse-atom-value';
+import {
+  AtomValueType,
+  deepParseAtomValue,
+  stringifyAtomValue,
+} from '../../../../../../../../utils';
 import {
   MemoizedValueRenderer,
   getPrismLanguageType,
@@ -47,11 +50,7 @@ const ParseAndDisplayAtomValue = memo(
 
     return (
       <MemoizedValueRenderer
-        value={
-          prismLanguageType === 'javascript'
-            ? JSON.stringify(nextValue, null, 2)
-            : String(nextValue)
-        }
+        value={stringifyAtomValue(nextValue)}
         prismLanguageType={prismLanguageType}
       />
     );

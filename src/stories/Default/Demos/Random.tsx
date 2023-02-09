@@ -7,6 +7,13 @@ import { demoStoreOptions } from './demo-store';
 const countAtom = atom(1);
 countAtom.debugLabel = 'countAtom';
 
+const textAtom = atom('hello');
+textAtom.debugLabel = 'textAtom';
+
+// Try out a really long big int - 2n ** 999n
+const bigintAtom = atom(BigInt(Number.MAX_SAFE_INTEGER));
+bigintAtom.debugLabel = 'bigintAtom';
+
 const nestedObjectAtom = atom((get) => {
   return {
     nestedObject: {
@@ -29,6 +36,8 @@ export const Random = () => {
   // We're not displaying these values on the UI
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const nestedObject = useAtomValue(nestedObjectAtom, demoStoreOptions);
+  const text = useAtomValue(textAtom, demoStoreOptions);
+  const bigint = useAtomValue(bigintAtom, demoStoreOptions);
   // const circular = useAtomValue(circularAtom, demoStoreOptions);
   // console.log(circular);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

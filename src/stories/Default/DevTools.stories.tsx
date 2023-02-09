@@ -49,21 +49,3 @@ export const Default: Story = {
     },
   },
 };
-
-// const Template: StoryFn<typeof DevTools> = (args) => {
-//   const { atomValueParser, ...rest } = args;
-//   return <DemoApp {...args} />;
-// };
-
-// export const Default = Template.bind({});
-
-// Default.args = {
-// isInitialOpen: true,
-// options: {
-//   atomValueParser: 'raw',
-// },
-// };
-
-// Default.parameters = {
-//   controls: { hideNoControlsWarning: true },
-// };
