@@ -6,7 +6,7 @@
     "name": "Arjun Vegda",
     "url": "https://arjunvegda.com"
   },
-  "sideEffects": false,
+  "sideEffects": true,
   "source": "./src/index.ts",
   "exports": {
     "./package.json": "./package.json",
