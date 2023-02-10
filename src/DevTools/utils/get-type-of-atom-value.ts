@@ -3,11 +3,10 @@ import { AnyAtom, AnyAtomValue, WithInitialValue } from 'src/types';
 
 const isValueAtom = (value: AnyAtomValue): value is AnyAtom => {
   return (
-    typeof (value as AnyAtom).read === 'function' ||
+    typeof (value as Partial<AnyAtom>)?.read === 'function' ||
     typeof (value as WritableAtom<any, any, any>)?.write === 'function' ||
-    !!(value as WithInitialValue).init ||
-    !!(value as AnyAtom).debugLabel ||
-    (value as AnyAtom).toString().includes('atom')
+    !!(value as WithInitialValue)?.init ||
+    !!(value as Partial<AnyAtom>)?.debugLabel
   );
 };
 

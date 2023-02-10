@@ -1,3 +1,4 @@
+import React from 'react';
 import { Stack } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';

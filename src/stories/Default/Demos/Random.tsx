@@ -14,6 +14,9 @@ textAtom.debugLabel = 'textAtom';
 const bigintAtom = atom(BigInt(Number.MAX_SAFE_INTEGER));
 bigintAtom.debugLabel = 'bigintAtom';
 
+const atomReturnsUndefined = atom(undefined);
+atomReturnsUndefined.debugLabel = 'atomReturnsUndefined';
+
 const nestedObjectAtom = atom((get) => {
   return {
     nestedObject: {
@@ -28,8 +31,6 @@ nestedObjectAtom.debugLabel = 'nestedObjectAtom';
 
 const atomsInAtomsCountAtom = atom(atom(atom((get) => get(countAtom))));
 atomsInAtomsCountAtom.debugLabel = 'atomsInAtomsCountAtom';
-// const circularAtom = atom({ foo: atom({ bar: atom(1) }) });
-// circularAtom.debugLabel = 'circularAtom';
 
 export const Random = () => {
   const [count, setCount] = useAtom(countAtom, demoStoreOptions);
@@ -38,6 +39,10 @@ export const Random = () => {
   const nestedObject = useAtomValue(nestedObjectAtom, demoStoreOptions);
   const _text = useAtomValue(textAtom, demoStoreOptions);
   const _bigint = useAtomValue(bigintAtom, demoStoreOptions);
+  const _atomReturnsUndefined = useAtomValue(
+    atomReturnsUndefined,
+    demoStoreOptions,
+  );
   // const circular = useAtomValue(circularAtom, demoStoreOptions);
   // console.log(circular);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

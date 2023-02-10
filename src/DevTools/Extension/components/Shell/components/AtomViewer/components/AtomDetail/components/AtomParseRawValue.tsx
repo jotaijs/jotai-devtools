@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Text } from '@mantine/core';
 import { AnyAtomValue } from 'src/types';
 import {
