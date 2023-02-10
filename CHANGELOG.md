@@ -1,3 +1,17 @@
+# [0.3.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.0...v0.3.0-next.1) (2023-02-10)
+
+### Bug Fixes
+
+- handle atom containing undefined values
+  ([c086a75](https://github.com/jotai-labs/jotai-devtools/commit/c086a75ed92066c78a3d42f5b3e5b924576bbee5))
+- inject react shim to the build
+  ([a20a235](https://github.com/jotai-labs/jotai-devtools/commit/a20a2355b08193fc4f8cde6dec85602ead7229df))
+
+### Features
+
+- make raw and parse value copyable
+  ([5348337](https://github.com/jotai-labs/jotai-devtools/commit/5348337530177f8db80e53d0d35e339cd78ad84c))
+
 # [0.3.0-next.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0...v0.3.0-next.0) (2023-02-07)
 
 ### Features
