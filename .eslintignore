@@ -3,3 +3,4 @@ node_modules
 build
 .eslintrc.js
 coverage
+react-shim.js

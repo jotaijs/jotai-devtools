@@ -30,6 +30,9 @@ const baseConfig: Options = {
   platform: 'node',
   outExtension: defaultOutExtension,
   esbuildPlugins: defaultEsBuildPlugins,
+  // TSUP does not appear to be respecting tsconfig's jsx property
+  // See - https://github.com/egoist/tsup/issues/792
+  inject: ['./react-shim.js'],
 };
 
 const cjsConfig: Options = {
