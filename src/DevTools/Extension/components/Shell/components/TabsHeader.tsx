@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Tabs } from '@mantine/core';
 import { IconLayoutList } from '@tabler/icons';
-import { TabKeys } from '../../../../../../constants';
+import { TabKeys } from '../../../../constants';
 
 export const TabsHeader = React.memo(() => {
   return (

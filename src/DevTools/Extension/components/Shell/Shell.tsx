@@ -7,8 +7,10 @@ import { useSetCustomStore } from '../../../atoms/user-custom-store';
 import { TabKeys, shellStyleDefaults } from '../../../constants';
 import { useDevtoolsJotaiStoreOptions } from '../../../internal-jotai-store';
 import { AtomViewer } from './components/AtomViewer';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { Header } from './components/Header';
 import { ShellResizeBar } from './components/ShellResizeBar';
+import { TabsHeader } from './components/TabsHeader';
 import { shellStyles } from './styles';
 
 type ShellProps = {
@@ -52,19 +54,21 @@ export const Shell = ({ store }: ShellProps) => {
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />
-
-      <Tabs.Panel
-        value={TabKeys.AtomViewer}
-        h="100%"
-        sx={{
-          overflow: 'hidden',
-          // Hide the overlap of this div's bg
-          borderBottomLeftRadius: '7px',
-          borderBottomRightRadius: '7px',
-        }}
-      >
-        <AtomViewer />
-      </Tabs.Panel>
+      <ErrorBoundary>
+        <TabsHeader />
+        <Tabs.Panel
+          value={TabKeys.AtomViewer}
+          h="100%"
+          sx={{
+            overflow: 'hidden',
+            // Hide the overlap of this div's bg
+            borderBottomLeftRadius: '7px',
+            borderBottomRightRadius: '7px',
+          }}
+        >
+          <AtomViewer />
+        </Tabs.Panel>
+      </ErrorBoundary>
     </Tabs>
   );
 };

@@ -102,64 +102,64 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-r8r-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-r8r-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-r8r-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-r8r-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-r8r-tab-atom-viewer"
@@ -616,64 +616,64 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-r1h-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-r1h-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-r1h-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-r1h-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-r1h-tab-atom-viewer"
@@ -1146,64 +1146,64 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-r23-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-r23-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-r23-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-r23-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-r23-tab-atom-viewer"
@@ -1660,64 +1660,64 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-r15-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-r15-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-r15-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-r15-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-r15-tab-atom-viewer"
@@ -1969,64 +1969,64 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-rp-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-rp-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-rp-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-rp-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-rp-tab-atom-viewer"
@@ -2293,64 +2293,64 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-rd-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-rd-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-rd-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-rd-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-rd-tab-atom-viewer"
@@ -2676,64 +2676,64 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           </button>
         </div>
       </div>
-      <div
-        aria-orientation="horizontal"
-        class="mantine-Tabs-tabsList mantine-o8x4z2"
-        role="tablist"
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="mantine-Tabs-tabsList mantine-o8x4z2"
+      role="tablist"
+    >
+      <button
+        aria-controls="mantine-r1-panel-atom-viewer"
+        aria-selected="true"
+        class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
+        data-active="true"
+        id="mantine-r1-tab-atom-viewer"
+        role="tab"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-controls="mantine-r1-panel-atom-viewer"
-          aria-selected="true"
-          class="mantine-UnstyledButton-root mantine-Tabs-tab mantine-1dmajq3"
-          data-active="true"
-          id="mantine-r1-tab-atom-viewer"
-          role="tab"
-          tabindex="0"
-          type="button"
+        <div
+          class="mantine-14swocp mantine-Tabs-tabIcon"
         >
-          <div
-            class="mantine-14swocp mantine-Tabs-tabIcon"
+          <svg
+            class="icon icon-tabler icon-tabler-layout-list"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon icon-tabler icon-tabler-layout-list"
+            <path
+              d="M0 0h24v24H0z"
               fill="none"
-              height="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="4"
-              />
-              <rect
-                height="6"
-                rx="2"
-                width="16"
-                x="4"
-                y="14"
-              />
-            </svg>
-          </div>
-          <div
-            class="mantine-1s8spa1 mantine-Tabs-tabLabel"
-          >
-            Atom Viewer
-          </div>
-        </button>
-      </div>
+              stroke="none"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <rect
+              height="6"
+              rx="2"
+              width="16"
+              x="4"
+              y="14"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+        >
+          Atom Viewer
+        </div>
+      </button>
     </div>
     <div
       aria-labelledby="mantine-r1-tab-atom-viewer"

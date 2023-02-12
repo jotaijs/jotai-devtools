@@ -1,10 +1,9 @@
-import { memo } from 'react';
+import * as React from 'react';
 import { ActionIcon, Badge, Box, Flex, Group, Sx, Title } from '@mantine/core';
 import { IconMinus } from '@tabler/icons';
 import { useSetAtom } from 'jotai/react';
 import { isShellOpenAtom } from '../../../../../atoms/is-shell-open-atom';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../internal-jotai-store';
-import { TabsHeader } from './components/TabsHeader';
 import { ThemeToggle } from './components/ThemeToggle';
 
 const headerStyles: Sx = {
@@ -16,7 +15,7 @@ const headerStyles: Sx = {
 
 const logoStyles: Sx = { userSelect: 'none' };
 
-export const Header = memo(() => {
+export const Header = React.memo(() => {
   const setIsShellOpen = useSetAtom(
     isShellOpenAtom,
     useDevtoolsJotaiStoreOptions(),
@@ -51,7 +50,6 @@ export const Header = memo(() => {
           </ActionIcon>
         </Flex>
       </Flex>
-      <TabsHeader />
     </Box>
   );
 });

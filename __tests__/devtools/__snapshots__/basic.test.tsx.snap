@@ -1,0 +1,509 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present  1`] = `
+<div>
+  <div
+    class="mantine-Tabs-root jotai-devtools-shell mantine-xbm20l"
+    data-testid="jotai-devtools-shell"
+  >
+    <div
+      class="mantine-1gf2wvo"
+      data-testid="shell-resize-bar"
+    />
+    <div
+      class="mantine-1yk50fa"
+    >
+      <div
+        class="mantine-4f8xjx"
+      >
+        <div
+          class="mantine-Group-root mantine-1pxhwx0"
+        >
+          <h1
+            class="mantine-Text-root mantine-Title-root mantine-dfp0rc"
+          >
+            👻 Jōtai DevTools
+          </h1>
+          <div
+            class="mantine-Badge-root mantine-1wifcre"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              Alpha
+            </span>
+          </div>
+        </div>
+        <div
+          class="mantine-xg7kom"
+        >
+          <button
+            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-1o23hru"
+            title="Toggle color scheme"
+            type="button"
+          >
+            <svg
+              class="icon icon-tabler icon-tabler-moon-stars"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <path
+                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+              />
+              <path
+                d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+              />
+              <path
+                d="M19 11h2m-1 -1v2"
+              />
+            </svg>
+          </button>
+          <button
+            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-t0lmpu"
+            title="Minimize panel"
+            type="button"
+          >
+            <svg
+              class="icon icon-tabler icon-tabler-minus"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mantine-jsu0ax"
+      data-testid="jotai-devtools-error-boundary"
+      role="alert"
+    >
+      <div
+        class="mantine-iqssko"
+      >
+        <div
+          class="mantine-Text-root mantine-1gfx3yr"
+        >
+          <div
+            class="mantine-Text-root mantine-1ejuzh1"
+          >
+            <svg
+              class="icon icon-tabler icon-tabler-alert-circle"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="8"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="16"
+                y2="16"
+              />
+            </svg>
+          </div>
+          Uh-oh, something went wrong.
+        </div>
+        <div
+          class="mantine-Text-root mantine-1ngacsz"
+        >
+          If you believe this to be a bug, please file an issue on
+           
+          <a
+            class="mantine-Text-root mantine-Anchor-root mantine-o6qwyk"
+            href="https://github.com/jotaijs/jotai-devtools/issues"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Jotai DevTool's GitHub repo
+          </a>
+           
+          with a minimal reproduction and the following error
+        </div>
+        <div
+          class="mantine-Prism-root mantine-12sbrde"
+          translate="no"
+        >
+          <button
+            aria-label="Copy code"
+            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-Prism-copy mantine-r1ykzi"
+            type="button"
+          >
+            <svg
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M5 2V1H10V2H5ZM4.75 0C4.33579 0 4 0.335786 4 0.75V1H3.5C2.67157 1 2 1.67157 2 2.5V12.5C2 13.3284 2.67157 14 3.5 14H11.5C12.3284 14 13 13.3284 13 12.5V2.5C13 1.67157 12.3284 1 11.5 1H11V0.75C11 0.335786 10.6642 0 10.25 0H4.75ZM11 2V2.25C11 2.66421 10.6642 3 10.25 3H4.75C4.33579 3 4 2.66421 4 2.25V2H3.5C3.22386 2 3 2.22386 3 2.5V12.5C3 12.7761 3.22386 13 3.5 13H11.5C11.7761 13 12 12.7761 12 12.5V2.5C12 2.22386 11.7761 2 11.5 2H11Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div
+            class="mantine-ScrollArea-root mantine-Prism-scrollArea mantine-1j1ni8n"
+            dir="ltr"
+            style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
+          >
+            <style>
+              [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
+            </style>
+            <div
+              class="mantine-xlwgkm mantine-ScrollArea-viewport"
+              data-radix-scroll-area-viewport=""
+              style="overflow-x: scroll; overflow-y: scroll;"
+            >
+              <div
+                style="min-width: 100%; display: table;"
+              >
+                <pre
+                  class="mantine-1r2c9o1 mantine-Prism-code prism-code language-javascript"
+                  dir="ltr"
+                  style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
+                >
+                  <div
+                    class="mantine-1e8ljqt mantine-Prism-line token-line"
+                  >
+                    <div
+                      class="mantine-26ugy1 mantine-Prism-lineContent"
+                    >
+                      <span
+                        class="token maybe-class-name"
+                      >
+                        Test
+                      </span>
+                      <span
+                        class="token plain"
+                      >
+                         
+                      </span>
+                      <span
+                        class="token known-class-name class-name"
+                        style="color: rgb(201, 42, 42);"
+                      >
+                        Error
+                      </span>
+                    </div>
+                  </div>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button>
+    trigger error
+  </button>
+</div>
+`;
+
+exports[`DevTools - basic Error boundary should display an error boundary with stack  1`] = `
+<div>
+  <div
+    class="mantine-Tabs-root jotai-devtools-shell mantine-xbm20l"
+    data-testid="jotai-devtools-shell"
+  >
+    <div
+      class="mantine-1gf2wvo"
+      data-testid="shell-resize-bar"
+    />
+    <div
+      class="mantine-1yk50fa"
+    >
+      <div
+        class="mantine-4f8xjx"
+      >
+        <div
+          class="mantine-Group-root mantine-1pxhwx0"
+        >
+          <h1
+            class="mantine-Text-root mantine-Title-root mantine-dfp0rc"
+          >
+            👻 Jōtai DevTools
+          </h1>
+          <div
+            class="mantine-Badge-root mantine-1wifcre"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              Alpha
+            </span>
+          </div>
+        </div>
+        <div
+          class="mantine-xg7kom"
+        >
+          <button
+            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-1o23hru"
+            title="Toggle color scheme"
+            type="button"
+          >
+            <svg
+              class="icon icon-tabler icon-tabler-moon-stars"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <path
+                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+              />
+              <path
+                d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+              />
+              <path
+                d="M19 11h2m-1 -1v2"
+              />
+            </svg>
+          </button>
+          <button
+            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-t0lmpu"
+            title="Minimize panel"
+            type="button"
+          >
+            <svg
+              class="icon icon-tabler icon-tabler-minus"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mantine-jsu0ax"
+      data-testid="jotai-devtools-error-boundary"
+      role="alert"
+    >
+      <div
+        class="mantine-iqssko"
+      >
+        <div
+          class="mantine-Text-root mantine-1gfx3yr"
+        >
+          <div
+            class="mantine-Text-root mantine-1ejuzh1"
+          >
+            <svg
+              class="icon icon-tabler icon-tabler-alert-circle"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="8"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="16"
+                y2="16"
+              />
+            </svg>
+          </div>
+          Uh-oh, something went wrong.
+        </div>
+        <div
+          class="mantine-Text-root mantine-1ngacsz"
+        >
+          If you believe this to be a bug, please file an issue on
+           
+          <a
+            class="mantine-Text-root mantine-Anchor-root mantine-o6qwyk"
+            href="https://github.com/jotaijs/jotai-devtools/issues"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Jotai DevTool's GitHub repo
+          </a>
+           
+          with a minimal reproduction and the following error
+        </div>
+        <div
+          class="mantine-Prism-root mantine-12sbrde"
+          translate="no"
+        >
+          <button
+            aria-label="Copy code"
+            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-Prism-copy mantine-r1ykzi"
+            type="button"
+          >
+            <svg
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M5 2V1H10V2H5ZM4.75 0C4.33579 0 4 0.335786 4 0.75V1H3.5C2.67157 1 2 1.67157 2 2.5V12.5C2 13.3284 2.67157 14 3.5 14H11.5C12.3284 14 13 13.3284 13 12.5V2.5C13 1.67157 12.3284 1 11.5 1H11V0.75C11 0.335786 10.6642 0 10.25 0H4.75ZM11 2V2.25C11 2.66421 10.6642 3 10.25 3H4.75C4.33579 3 4 2.66421 4 2.25V2H3.5C3.22386 2 3 2.22386 3 2.5V12.5C3 12.7761 3.22386 13 3.5 13H11.5C11.7761 13 12 12.7761 12 12.5V2.5C12 2.22386 11.7761 2 11.5 2H11Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div
+            class="mantine-ScrollArea-root mantine-Prism-scrollArea mantine-1j1ni8n"
+            dir="ltr"
+            style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
+          >
+            <style>
+              [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
+            </style>
+            <div
+              class="mantine-xlwgkm mantine-ScrollArea-viewport"
+              data-radix-scroll-area-viewport=""
+              style="overflow-x: scroll; overflow-y: scroll;"
+            >
+              <div
+                style="min-width: 100%; display: table;"
+              >
+                <pre
+                  class="mantine-1r2c9o1 mantine-Prism-code prism-code language-javascript"
+                  dir="ltr"
+                  style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
+                >
+                  <div
+                    class="mantine-1e8ljqt mantine-Prism-line token-line"
+                  >
+                    <div
+                      class="mantine-26ugy1 mantine-Prism-lineContent"
+                    >
+                      <span
+                        class="token plain"
+                      >
+                        some
+                      </span>
+                      <span
+                        class="token operator"
+                        style="color: rgb(201, 42, 42);"
+                      >
+                        -
+                      </span>
+                      <span
+                        class="token plain"
+                      >
+                        stack
+                      </span>
+                    </div>
+                  </div>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button>
+    trigger error
+  </button>
+</div>
+`;

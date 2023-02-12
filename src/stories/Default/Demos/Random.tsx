@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, Code, Title } from '@mantine/core';
+import { Box, Button, Code, Divider, Title } from '@mantine/core';
 import { useAtom, useAtomValue } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
 import { demoStoreOptions } from './demo-store';
@@ -38,8 +38,28 @@ nestedObjectAtom.debugLabel = 'nestedObjectAtom';
 const atomsInAtomsCountAtom = atom(atom(atom((get) => get(countAtom))));
 atomsInAtomsCountAtom.debugLabel = 'atomsInAtomsCountAtom';
 
+const baseErrorAtom = atom(0);
+const triggerErrorAtom = atom(
+  (get) => {
+    const val = get(baseErrorAtom);
+    if (val >= 1) {
+      const randomFn = function () {};
+      randomFn.toString = () => {
+        throw new Error('Random error');
+      };
+      return randomFn;
+    }
+
+    return val;
+  },
+  (get, set) => {
+    return set(baseErrorAtom, (prev) => prev + 1);
+  },
+);
+triggerErrorAtom.debugLabel = 'triggerErrorAtom';
 export const Random = () => {
   const [count, setCount] = useAtom(countAtom, demoStoreOptions);
+  const [, setError] = useAtom(triggerErrorAtom, demoStoreOptions);
   // We're not displaying these values on the UI
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useAtomValue(nestedObjectAtom, demoStoreOptions);
@@ -71,6 +91,17 @@ export const Random = () => {
         color="dark"
       >
         Add 1
+      </Button>
+      <Divider size="sm" my="lg" />
+      <Button
+        display="block"
+        mt={5}
+        onClick={setError}
+        size="xs"
+        uppercase
+        color="red.8"
+      >
+        Trigger error 💥
       </Button>
     </Box>
   );

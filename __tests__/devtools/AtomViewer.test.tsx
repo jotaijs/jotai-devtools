@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react';
-import exp from 'constants';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { atom, createStore, useAtomValue } from 'jotai';
+import { atom, useAtomValue } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { AnyAtom } from 'src/types';
 import { customRender } from '../custom-render';

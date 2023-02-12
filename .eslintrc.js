@@ -35,7 +35,7 @@ module.exports = {
     'no-var': 'error',
     'prefer-const': 'error',
     curly: ['warn', 'multi-line', 'consistent'],
-    'no-console': 'off',
+    'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
     'import/no-unresolved': [
       'error',
       {

@@ -1,7 +1,10 @@
 import * as React from 'react';
-import { Prism, PrismProps } from '@mantine/prism';
 import { AnyAtomValue } from 'src/types';
 import { getTypeOfAtomValue } from '../../../../../../../../utils';
+import {
+  CodeSyntaxHighlighter,
+  CodeSyntaxHighlighterProps,
+} from '../../../../CodeSyntaxHighlighter';
 
 // List of types to render in JavaScript syntax
 const javaScriptLanguageTypes = [
@@ -15,7 +18,7 @@ const javaScriptLanguageTypes = [
 
 export const getPrismLanguageType = (
   atomValue: AnyAtomValue,
-): PrismProps['language'] => {
+): CodeSyntaxHighlighterProps['language'] => {
   const type = getTypeOfAtomValue(atomValue);
 
   if (javaScriptLanguageTypes.includes(type)) {
@@ -33,14 +36,14 @@ type MemoizedValueRendererProps = {
 export const MemoizedValueRenderer = React.memo(
   ({ prismLanguageType, value }: MemoizedValueRendererProps): JSX.Element => {
     return (
-      <Prism
+      <CodeSyntaxHighlighter
         language={prismLanguageType}
         mb={10}
         copyLabel="Copy value"
         data-testid="atom-parsed-value"
       >
         {value}
-      </Prism>
+      </CodeSyntaxHighlighter>
     );
   },
 );

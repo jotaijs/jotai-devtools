@@ -1,5 +1,7 @@
-import React, { act, fireEvent, screen, waitFor } from '@testing-library/react';
+import React, { useMemo } from 'react';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { atom, useAtom, useAtomValue } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { customRender } from '../custom-render';
 
@@ -49,6 +51,107 @@ describe('DevTools - basic', () => {
 
     expect(document.body).toHaveStyle({
       paddingBottom: '200px',
+    });
+  });
+
+  describe('Error boundary', () => {
+    const ogConsoleError = console.error;
+
+    beforeEach(() => {
+      console.error = jest.fn();
+    });
+
+    afterEach(() => {
+      console.error = ogConsoleError;
+      jest.resetAllMocks();
+      jest.restoreAllMocks();
+    });
+
+    const ComponentThatThrows = () => {
+      const baseErrorAtom = useMemo(() => atom(0), []);
+
+      const triggerErrorAtom = useMemo(
+        () =>
+          atom(
+            (get) => {
+              const val = get(baseErrorAtom);
+              if (val >= 1) {
+                const randomFn = function () {};
+                randomFn.toString = () => {
+                  throw new Error('Test Error');
+                };
+                return randomFn;
+              }
+
+              return val;
+            },
+            (get, set) => set(baseErrorAtom, (prev) => prev + 1),
+          ),
+        [baseErrorAtom],
+      );
+
+      triggerErrorAtom.debugLabel = 'triggerErrorAtom';
+
+      const [, triggerError] = useAtom(triggerErrorAtom);
+      return (
+        <>
+          <DevTools isInitialOpen={true} />
+          <button onClick={triggerError}>trigger error</button>
+        </>
+      );
+    };
+
+    it('should display an error boundary with stack ', async () => {
+      const ogErrorSpy = jest.spyOn(global, 'Error');
+      ogErrorSpy.mockImplementation((message) => {
+        return {
+          name: 'Error',
+          message,
+          stack: 'some-stack',
+        } as Error;
+      });
+      const { container } = customRender(<ComponentThatThrows />);
+
+      await act(async () => {
+        await userEvent.click(screen.getByText('triggerErrorAtom'));
+        await userEvent.click(screen.getByText('trigger error'));
+      });
+
+      expect(
+        screen.getByTestId('jotai-devtools-error-boundary'),
+      ).toBeInTheDocument();
+
+      expect(
+        screen.getByTestId('jotai-devtools-error-boundary'),
+      ).toHaveTextContent('some-stack');
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should display an error boundary with message if stack is not present ', async () => {
+      const ogErrorSpy = jest.spyOn(global, 'Error');
+      ogErrorSpy.mockImplementation((message) => {
+        return {
+          name: 'Error',
+          message,
+        } as Error;
+      });
+      const { container } = customRender(<ComponentThatThrows />);
+
+      await act(async () => {
+        await userEvent.click(screen.getByText('triggerErrorAtom'));
+        await userEvent.click(screen.getByText('trigger error'));
+      });
+
+      expect(
+        screen.getByTestId('jotai-devtools-error-boundary'),
+      ).toBeInTheDocument();
+
+      expect(
+        screen.getByTestId('jotai-devtools-error-boundary'),
+      ).toHaveTextContent('Test Error');
+
+      expect(container).toMatchSnapshot();
     });
   });
 });

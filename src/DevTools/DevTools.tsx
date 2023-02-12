@@ -12,8 +12,8 @@ import {
   useSetDevToolsOptions,
 } from './atoms/devtools-options';
 import { Extension, ExtensionProps } from './Extension';
-import { InternalDevToolsContext } from './internal-jotai-store';
 import './fonts';
+import { InternalDevToolsContext } from './internal-jotai-store';
 
 const theme: MantineThemeOverride = {
   primaryColor: 'dark',
