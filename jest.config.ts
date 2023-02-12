@@ -37,14 +37,24 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^jotai-devtools$': '<rootDir>/src/index.ts',
     '^jotai-devtools/(.*)$': '<rootDir>/src/$1.ts',
+    '\\.(css|less|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
   },
   modulePathIgnorePatterns: ['dist'],
   globals: {
     __DEV__: true,
   },
   coverageReporters: ['json', 'html', 'text', 'text-summary'],
-  collectCoverageFrom: ['src/**/*.{js,ts,tsx}', '__tests__/**/*.{js,ts,tsx}'],
+  collectCoverageFrom: [
+    'src/**/*.{js,ts,tsx}',
+    '!src/**/*.stories.{js,ts,tsx}',
+    '!src/stories/**',
+    '__tests__/**/*.{js,ts,tsx}',
+  ],
   coverageDirectory: './coverage/',
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    '<rootDir>/__tests__/setup.ts',
+  ],
 };
 
 export default config;

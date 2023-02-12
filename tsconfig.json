@@ -5,7 +5,9 @@
     "./jest.config.ts",
     "__tests__/**/*",
     "types",
-    "tsup.config.ts"
+    "tsup.config.ts",
+    "jest",
+    "@testing-library/jest-dom"
   ],
   "exclude": ["node_modules", "dist"]
 }

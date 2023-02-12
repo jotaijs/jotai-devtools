@@ -4,3 +4,4 @@ build
 .eslintrc.js
 coverage
 react-shim.js
+__mocks__/styleMock.js
