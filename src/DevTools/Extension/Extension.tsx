@@ -34,6 +34,7 @@ const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
       sx={shellTriggerButtonStyles}
       ref={ref}
       title="Open Jotai Devtools"
+      className="jotai-devtools-trigger-button"
     >
       <img src={logo} alt="Jotai Mascot" />
     </ActionIcon>
