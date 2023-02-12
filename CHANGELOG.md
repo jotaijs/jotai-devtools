@@ -1,3 +1,10 @@
+# [0.3.0-next.2](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.1...v0.3.0-next.2) (2023-02-12)
+
+### Features
+
+- add error boundary
+  ([5667a05](https://github.com/jotai-labs/jotai-devtools/commit/5667a059da325ee8d0452e5d097d4eb14ab97c5e))
+
 # [0.3.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.0...v0.3.0-next.1) (2023-02-10)
 
 ### Bug Fixes
