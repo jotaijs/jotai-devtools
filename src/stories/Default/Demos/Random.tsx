@@ -1,11 +1,11 @@
-import { useCallback } from 'react';
+import * as React from 'react';
 import { Box, Button, Code, Title } from '@mantine/core';
 import { useAtom, useAtomValue } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
 import { demoStoreOptions } from './demo-store';
 
 const countAtom = atom(1);
-countAtom.debugLabel = 'countAtom';
+countAtom.debugLabel = 'randomCountAtom';
 
 const textAtom = atom('hello');
 textAtom.debugLabel = 'textAtom';
@@ -16,6 +16,12 @@ bigintAtom.debugLabel = 'bigintAtom';
 
 const atomReturnsUndefined = atom(undefined);
 atomReturnsUndefined.debugLabel = 'atomReturnsUndefined';
+
+const atomWithSomeSymbol = atom(Symbol('hello'));
+atomWithSomeSymbol.debugLabel = 'atomWithSomeSymbol';
+
+const atomWithFunction = atom(() => () => 'hello');
+atomWithFunction.debugLabel = 'atomWithFunction';
 
 const nestedObjectAtom = atom((get) => {
   return {
@@ -36,15 +42,13 @@ export const Random = () => {
   const [count, setCount] = useAtom(countAtom, demoStoreOptions);
   // We're not displaying these values on the UI
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const nestedObject = useAtomValue(nestedObjectAtom, demoStoreOptions);
-  const _text = useAtomValue(textAtom, demoStoreOptions);
-  const _bigint = useAtomValue(bigintAtom, demoStoreOptions);
-  const _atomReturnsUndefined = useAtomValue(
-    atomReturnsUndefined,
-    demoStoreOptions,
-  );
-  // const circular = useAtomValue(circularAtom, demoStoreOptions);
-  // console.log(circular);
+  useAtomValue(nestedObjectAtom, demoStoreOptions);
+  useAtomValue(textAtom, demoStoreOptions);
+  useAtomValue(bigintAtom, demoStoreOptions);
+  useAtomValue(atomReturnsUndefined, demoStoreOptions);
+  useAtomValue(atomWithSomeSymbol, demoStoreOptions);
+  useAtomValue(atomWithFunction, demoStoreOptions);
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const atomsInAtomsCount = useAtomValue(
     atomsInAtomsCountAtom,
@@ -61,7 +65,7 @@ export const Random = () => {
       <Button
         display="block"
         mt={5}
-        onClick={useCallback(() => setCount((c) => c + 1), [setCount])}
+        onClick={React.useCallback(() => setCount((c) => c + 1), [setCount])}
         size="xs"
         uppercase
         color="dark"

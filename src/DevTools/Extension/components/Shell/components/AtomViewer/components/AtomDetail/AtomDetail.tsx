@@ -1,8 +1,8 @@
-import { Suspense, memo } from 'react';
+import * as React from 'react';
 import { Box, LoaderProps, LoadingOverlay, Sx, Text } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { useThemeMode } from '../../../../../../../hooks/useThemeMode';
-import { devtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
+import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
 import { selectedAtomAtom } from '../../atoms';
 import { DisplayAtomDetails } from './components/DisplayAtomDetails';
 
@@ -12,10 +12,10 @@ const messageBoxWrapperStyles: Sx = {
   transform: 'translateY(-50%)',
 };
 
-export const AtomDetail = memo((): JSX.Element => {
+export const AtomDetail = React.memo((): JSX.Element => {
   const selectedAtomData = useAtomValue(
     selectedAtomAtom,
-    devtoolsJotaiStoreOptions,
+    useDevtoolsJotaiStoreOptions(),
   );
 
   const loaderProps: LoaderProps = {
@@ -33,7 +33,7 @@ export const AtomDetail = memo((): JSX.Element => {
   }
 
   return (
-    <Suspense
+    <React.Suspense
       fallback={
         <LoadingOverlay
           visible={true}
@@ -43,7 +43,7 @@ export const AtomDetail = memo((): JSX.Element => {
       }
     >
       <DisplayAtomDetails atom={selectedAtomData.atom} />
-    </Suspense>
+    </React.Suspense>
   );
 });
 

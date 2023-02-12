@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import * as React from 'react';
 import { Flex, Sx } from '@mantine/core';
 import { Panel, PanelGroup } from 'react-resizable-panels';
 import { PanelResizeHandle } from '../PanelResizeHandle';
@@ -11,7 +11,7 @@ const atomListWrapperStyles: Sx = (theme) => ({
     theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[2],
 });
 
-export const AtomViewer = memo(() => {
+export const AtomViewer = React.memo(() => {
   return (
     <PanelGroup direction="horizontal">
       <Panel defaultSize={50} minSize={30} style={panelStyles}>

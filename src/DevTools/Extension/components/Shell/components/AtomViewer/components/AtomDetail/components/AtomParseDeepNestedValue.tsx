@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react';
+import * as React from 'react';
 import { Box, Text } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';
@@ -23,13 +23,14 @@ const useAtomValueSubscribe = (atom: AnyAtom) => {
   // Should we support nested async atoms?
   const atomValue = useAtomValue(atom, { store });
 
-  const [nextValue, setNextValue] = useState(() =>
-    deepParseAtomValue(atomValue, store),
-  );
+  // Using an object to hold a value allows us to store values like functions
+  const [nextValue, setNextValue] = React.useState(() => ({
+    value: deepParseAtomValue(atomValue, store),
+  }));
 
-  useEffect(() => {
+  React.useEffect(() => {
     const cb = () => {
-      setNextValue(deepParseAtomValue(atomValue, store));
+      setNextValue({ value: deepParseAtomValue(atomValue, store) });
     };
 
     // Perhaps there is a more efficient way to subscribe more granularly to atom updates?
@@ -39,11 +40,11 @@ const useAtomValueSubscribe = (atom: AnyAtom) => {
     return unsubscribe;
   }, [store, setNextValue, atomValue]);
 
-  return nextValue;
+  return nextValue.value;
 };
 
 // This component assumes that user has picked the "deep-nested" parser
-const ParseAndDisplayAtomValue = memo(
+const ParseAndDisplayAtomValue = React.memo(
   ({ atom }: ParseAndDisplayAtomValueProps): JSX.Element => {
     const nextValue = useAtomValueSubscribe(atom);
     const prismLanguageType = getPrismLanguageType(nextValue);

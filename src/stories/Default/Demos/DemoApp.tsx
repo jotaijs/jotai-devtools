@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import * as React from 'react';
 import { Grid, MantineProvider, Text, Title } from '@mantine/core';
 import { DevTools, DevToolsProps } from '../../../DevTools';
 import { Async } from './Async';
@@ -20,7 +20,7 @@ export const DemoApp = (props: DevToolsProps) => {
       >
         <DevTools store={demoStore} {...props} />
         <div className="App">
-          <Suspense
+          <React.Suspense
             fallback={
               <Text className="loading-suspense">
                 Your suspense loading component...
@@ -46,7 +46,7 @@ export const DemoApp = (props: DevToolsProps) => {
                 <Async />
               </Grid.Col>
             </Grid>
-          </Suspense>
+          </React.Suspense>
         </div>
       </MantineProvider>
     </DemoJotaiStoreContext.Provider>

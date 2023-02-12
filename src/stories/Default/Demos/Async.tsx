@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Button, Text, Title } from '@mantine/core';
 import { useAtom } from 'jotai/react';
 import { atom } from 'jotai/vanilla';

@@ -5,7 +5,7 @@ import { Store } from 'src/types';
 import { shellStylesAtom } from '../../../atoms/shell-styles';
 import { useSetCustomStore } from '../../../atoms/user-custom-store';
 import { TabKeys, shellStyleDefaults } from '../../../constants';
-import { devtoolsJotaiStoreOptions } from '../../../internal-jotai-store';
+import { useDevtoolsJotaiStoreOptions } from '../../../internal-jotai-store';
 import { AtomViewer } from './components/AtomViewer';
 import { Header } from './components/Header';
 import { ShellResizeBar } from './components/ShellResizeBar';
@@ -17,13 +17,15 @@ type ShellProps = {
 
 export const Shell = ({ store }: ShellProps) => {
   const setUserStore = useSetCustomStore();
-
   useEffect(() => {
     setUserStore(store);
   }, [setUserStore, store]);
 
   const shellRef = useRef<HTMLDivElement>(null);
-  const { height } = useAtomValue(shellStylesAtom, devtoolsJotaiStoreOptions);
+  const { height } = useAtomValue(
+    shellStylesAtom,
+    useDevtoolsJotaiStoreOptions(),
+  );
 
   useEffect(() => {
     // Allocating more height at the end of the content allows users to scroll down fully
@@ -46,6 +48,7 @@ export const Shell = ({ store }: ShellProps) => {
       mah={shellStyleDefaults.maxHeight}
       ref={shellRef}
       className="jotai-devtools-shell"
+      data-testid="jotai-devtools-shell"
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />

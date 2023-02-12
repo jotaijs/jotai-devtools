@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import * as React from 'react';
 import { Box, Code, List, Text } from '@mantine/core';
 import { AnyAtom } from 'src/types';
 import { useAtomsSnapshots } from '../../../../../../../../hooks/useAtomsSnapshots';
@@ -13,18 +13,20 @@ export const AtomDependentsList = ({
 }: AtomDependentsListProps): JSX.Element => {
   const { dependents } = useAtomsSnapshots();
 
-  const depsForAtom = useMemo(() => {
+  const depsForAtom = React.useMemo(() => {
     const arr = Array.from(dependents.get(atom) || []);
     return arr.filter((a) => a.toString() !== atom.toString());
   }, [dependents, atom]);
 
-  const listOfDependents = useMemo(
+  const listOfDependents = React.useMemo(
     () =>
       depsForAtom.map((value, i) => {
-        const key = `${i}-${value.toString()}-dependents-list`;
+        const parsedDebugLabel = parseDebugLabel(value?.debugLabel);
         return (
-          <List.Item key={key}>
-            <Code>{parseDebugLabel(value?.debugLabel)}</Code>
+          <List.Item key={`${i}-${value.toString()}-dependents-list`}>
+            <Code data-testid={`dependents-list-item-${parsedDebugLabel}-${i}`}>
+              {parsedDebugLabel}
+            </Code>
           </List.Item>
         );
       }),

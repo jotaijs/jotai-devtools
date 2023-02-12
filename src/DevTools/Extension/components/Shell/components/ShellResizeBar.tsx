@@ -1,18 +1,31 @@
-import { MouseEventHandler, RefObject } from 'react';
-import { Box } from '@mantine/core';
+import * as React from 'react';
+import { Box, Sx } from '@mantine/core';
 import { useSetAtom } from 'jotai/react';
 import { shellStylesAtom } from '../../../../atoms/shell-styles';
 import { shellStyleDefaults } from '../../../../constants';
-import { devtoolsJotaiStoreOptions } from '../../../../internal-jotai-store';
+import { useDevtoolsJotaiStoreOptions } from '../../../../internal-jotai-store';
 
 type ShellResizeBarProps = {
   // element: HTMLDivElement | null;
-  shellRef?: RefObject<HTMLDivElement> | null;
+  shellRef?: React.RefObject<HTMLDivElement> | null;
 };
 
+const shellResizeBarStyles: Sx = {
+  width: '100%',
+  height: 5,
+  cursor: 'row-resize',
+  zIndex: 2,
+  position: 'absolute',
+  // offset it by 2px as user might try to lift it from the edge
+  top: -2,
+};
 export const ShellResizeBar = ({ shellRef }: ShellResizeBarProps) => {
-  const setShellStyle = useSetAtom(shellStylesAtom, devtoolsJotaiStoreOptions);
-  const handleMouseDown: MouseEventHandler<HTMLDivElement> = (
+  const setShellStyle = useSetAtom(
+    shellStylesAtom,
+    useDevtoolsJotaiStoreOptions(),
+  );
+
+  const handleMouseDown: React.MouseEventHandler<HTMLDivElement> = (
     mouseDownEvent,
   ) => {
     const startY = mouseDownEvent.clientY;
@@ -40,16 +53,9 @@ export const ShellResizeBar = ({ shellRef }: ShellResizeBarProps) => {
 
   return (
     <Box
-      sx={{
-        width: '100%',
-        height: 5,
-        cursor: 'row-resize',
-        zIndex: 2,
-        position: 'absolute',
-        // offset it by 2px as user might try to lift it from the edge
-        top: -2,
-      }}
+      sx={shellResizeBarStyles}
       onMouseDown={handleMouseDown}
+      data-testid="shell-resize-bar"
     />
   );
 };

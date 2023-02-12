@@ -4,10 +4,7 @@ import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from 'src/types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
 import { useThemeMode } from '../hooks/useThemeMode';
-import {
-  devtoolsJotaiStoreOptions,
-  useDevtoolsJotaiStoreOptions,
-} from '../internal-jotai-store';
+import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 import { logo } from './assets/logo';
 import { Shell } from './components/Shell';
 
@@ -24,7 +21,10 @@ const shellTriggerButtonStyles: Sx = () => ({
 });
 
 const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
-  const setIsShellOpen = useSetAtom(isShellOpenAtom, devtoolsJotaiStoreOptions);
+  const setIsShellOpen = useSetAtom(
+    isShellOpenAtom,
+    useDevtoolsJotaiStoreOptions(),
+  );
 
   return (
     <ActionIcon
@@ -64,10 +64,5 @@ export const Extension = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return (
-    <>
-      {!isShellOpen && <ShellTriggerButton />}
-      {isShellOpen ? <Shell store={store} /> : null}
-    </>
-  );
+  return <>{isShellOpen ? <Shell store={store} /> : <ShellTriggerButton />}</>;
 };

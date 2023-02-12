@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import * as React from 'react';
 import { Box, Button, Code, Title } from '@mantine/core';
 import { useAtom } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
@@ -20,7 +20,7 @@ export const Counter = () => {
       <Button
         display="block"
         mt={5}
-        onClick={useCallback(() => setCount((c) => c + 1), [setCount])}
+        onClick={React.useCallback(() => setCount((c) => c + 1), [setCount])}
         size="xs"
         uppercase
         color="dark"

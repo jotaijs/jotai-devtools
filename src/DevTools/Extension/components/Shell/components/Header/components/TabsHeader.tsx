@@ -1,9 +1,9 @@
-import { memo } from 'react';
+import * as React from 'react';
 import { Tabs } from '@mantine/core';
 import { IconLayoutList } from '@tabler/icons';
 import { TabKeys } from '../../../../../../constants';
 
-export const TabsHeader = memo(() => {
+export const TabsHeader = React.memo(() => {
   return (
     <Tabs.List>
       <Tabs.Tab value={TabKeys.AtomViewer} icon={<IconLayoutList size={14} />}>

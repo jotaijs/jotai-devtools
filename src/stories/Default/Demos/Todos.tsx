@@ -1,4 +1,4 @@
-import { FormEvent, useEffect } from 'react';
+import * as React from 'react';
 import {
   ActionIcon,
   Box,
@@ -49,7 +49,7 @@ type TodoItemProps = {
 
 const TodoItem = ({ atom, remove }: TodoItemProps) => {
   const [item, setItem] = useAtom(atom, demoStoreOptions);
-  useEffect(() => {
+  React.useEffect(() => {
     // atom.debugLabel = 'Todo Item - ' + item.title;
   }, [atom]);
   const toggleCompleted = () =>
@@ -120,7 +120,7 @@ const TodoList = () => {
   const setTodos = useSetAtom(todosAtom, demoStoreOptions);
   const remove: RemoveFn = (todo) =>
     setTodos((prev) => prev.filter((item) => item !== todo));
-  const add = (e: FormEvent<HTMLFormElement>) => {
+  const add = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const title = e.currentTarget.inputTitle.value;
     e.currentTarget.inputTitle.value = '';

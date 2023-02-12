@@ -1,3 +1,4 @@
+import React from 'react';
 import { atom, useAtom } from 'jotai';
 
 const countAtom = atom(0);

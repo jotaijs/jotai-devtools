@@ -1,11 +1,4 @@
-import {
-  ChangeEventHandler,
-  memo,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-} from 'react';
+import * as React from 'react';
 import { Box, Group, Sx, Text, TextInput } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons';
 import { useAtom, useAtomValue } from 'jotai/react';
@@ -23,13 +16,15 @@ const textStyles: Sx = {
   top: 0,
 };
 
-const SearchAtoms = memo(() => {
+const SearchAtoms = React.memo(() => {
   const [userInput, setUserInput] = useAtom(
     searchInputAtom,
     useDevtoolsJotaiStoreOptions(),
   );
 
-  const handleOnChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+  const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (
+    event,
+  ) => {
     const {
       target: { value },
     } = event;
@@ -63,13 +58,13 @@ export const AtomList = () => {
     useDevtoolsJotaiStoreOptions(),
   );
 
-  const valuesRef = useRef(values);
+  const valuesRef = React.useRef(values);
 
-  useEffect(() => {
+  React.useEffect(() => {
     valuesRef.current = values;
   }, [values]);
 
-  const handleOnClick = useCallback(
+  const handleOnClick = React.useCallback(
     (pos: number) => {
       if (!valuesRef.current[pos]) {
         // This should almost never occur
@@ -91,7 +86,7 @@ export const AtomList = () => {
     [setSelectedAtomAtom],
   );
 
-  const atomItems = useMemo(
+  const atomItems = React.useMemo(
     () =>
       values.map(([atom], i) => {
         return (
@@ -117,7 +112,7 @@ export const AtomList = () => {
       {noResultsFound && (
         <Group mt={20} position="center">
           <IconAlertCircle size={16} />
-          <Text fz="sm" ml={0}>
+          <Text fz="sm" ml={0} data-testid="atom-list-no-atoms-found-message">
             No Atoms found!
           </Text>
         </Group>

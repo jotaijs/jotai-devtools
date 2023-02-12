@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Sx } from '@mantine/core';
 import { PanelResizeHandle as ReactPanelResizeHandle } from 'react-resizable-panels';
 import { useThemeMode } from '../../../../hooks/useThemeMode';

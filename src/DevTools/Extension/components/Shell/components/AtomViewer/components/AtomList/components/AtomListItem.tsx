@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo } from 'react';
+import * as React from 'react';
 import { NavLink, Sx, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons';
 import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
@@ -17,11 +17,11 @@ const navLinkStyles: Sx = {
   borderRadius: 5,
 };
 
-export const AtomListItem = memo(
+export const AtomListItem = React.memo(
   ({ label, onClick, pos, isActive }: AtomListItemProps) => {
     return (
       <NavLink
-        label={useMemo(
+        label={React.useMemo(
           () => (
             <Text ff="JetBrains Mono">{parseDebugLabel(label)}</Text>
           ),
@@ -31,8 +31,8 @@ export const AtomListItem = memo(
         sx={navLinkStyles}
         active={isActive}
         color={useThemeMode('dark', 'gray')}
-        onClick={useCallback(() => onClick(pos), [onClick, pos])}
-        rightSection={useMemo(
+        onClick={React.useCallback(() => onClick(pos), [onClick, pos])}
+        rightSection={React.useMemo(
           () => (
             <IconChevronRight size={12} stroke={1.5} />
           ),

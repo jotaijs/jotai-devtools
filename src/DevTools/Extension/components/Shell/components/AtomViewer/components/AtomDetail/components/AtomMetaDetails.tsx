@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import * as React from 'react';
 import { Box, Code, Text, Title } from '@mantine/core';
 import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
 import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
@@ -11,10 +11,16 @@ type AtomDetailItemProps = {
 const DisplayAtomDetailsItem = ({ label, value }: AtomDetailItemProps) => {
   return (
     <Box mb={10}>
-      <Text tt="uppercase" fz={10} fw="bold" color="gray">
+      <Text
+        tt="uppercase"
+        fz={10}
+        fw="bold"
+        color="gray"
+        data-testid={`display-detail-item-label-${label}`}
+      >
         {label}
       </Text>
-      <Code>{value}</Code>
+      <Code data-testid={`display-detail-item-value-${value}`}>{value}</Code>
     </Box>
   );
 };
@@ -24,7 +30,7 @@ type AtomMetaDetailsProps = {
   atomValueType: AtomValueType;
 };
 
-export const AtomMetaDetails = memo(
+export const AtomMetaDetails = React.memo(
   ({ debugLabel, atomValueType }: AtomMetaDetailsProps): JSX.Element => {
     return (
       <Box>

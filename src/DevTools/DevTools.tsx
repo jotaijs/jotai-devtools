@@ -5,15 +5,14 @@ import {
   MantineProvider,
   MantineThemeOverride,
 } from '@mantine/core';
+import { createStore } from 'jotai/vanilla';
+import { Store } from 'src/types';
 import {
   DevToolsOptions,
   useSetDevToolsOptions,
 } from './atoms/devtools-options';
 import { Extension, ExtensionProps } from './Extension';
-import {
-  InternalDevToolsContext,
-  internalJotaiStore,
-} from './internal-jotai-store';
+import { InternalDevToolsContext } from './internal-jotai-store';
 import './fonts';
 
 const theme: MantineThemeOverride = {
@@ -47,7 +46,7 @@ export type DevToolsProps = ExtensionProps & {
   options?: DevToolsOptions;
 };
 
-const DevTools_ = ({
+const DevToolsMain = ({
   store,
   isInitialOpen,
   theme: userColorScheme = 'light',
@@ -81,18 +80,34 @@ const DevTools_ = ({
         toggleColorScheme={toggleColorScheme}
       >
         <MantineProvider withNormalizeCSS theme={theme_}>
-          <InternalDevToolsContext.Provider value={internalJotaiStore}>
-            <Extension store={store} isInitialOpen={isInitialOpen} />
-          </InternalDevToolsContext.Provider>
+          <Extension store={store} isInitialOpen={isInitialOpen} />
         </MantineProvider>
       </ColorSchemeProvider>
     </React.StrictMode>
   );
 };
 
+const DevToolsProvider = ({ children }: React.PropsWithChildren) => {
+  const internalStoreRef = React.useRef<Store>();
+
+  if (!internalStoreRef.current) {
+    internalStoreRef.current = createStore();
+  }
+
+  return (
+    <InternalDevToolsContext.Provider value={internalStoreRef.current}>
+      {children}
+    </InternalDevToolsContext.Provider>
+  );
+};
+
 export const DevTools = (props: DevToolsProps): JSX.Element => {
   if (__DEV__) {
-    return <DevTools_ {...props} />;
+    return (
+      <DevToolsProvider>
+        <DevToolsMain {...props} />
+      </DevToolsProvider>
+    );
   }
 
   return <></>;
