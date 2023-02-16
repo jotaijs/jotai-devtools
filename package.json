@@ -136,6 +136,7 @@
     "release-it": "^15.6.0",
     "resize-observer-polyfill": "^1.5.1",
     "rimraf": "^3.0.2",
+    "rxjs": "^7.8.0",
     "shelljs": "^0.8.5",
     "storybook": "^7.0.0-beta.43",
     "tsup": "^6.5.0",
