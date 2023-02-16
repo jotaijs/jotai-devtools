@@ -1,10 +1,9 @@
+import { useStore } from 'jotai/react';
 import type { Atom, createStore } from 'jotai/vanilla';
 
 export type Store = ReturnType<typeof createStore>;
 
-export type Options = {
-  store?: Store;
-};
+export type Options = Parameters<typeof useStore>[0];
 
 export type AnyAtomValue = unknown;
 export type AnyAtom = Atom<AnyAtomValue>;
