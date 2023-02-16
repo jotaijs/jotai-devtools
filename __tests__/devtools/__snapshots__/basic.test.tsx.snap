@@ -1,44 +1,724 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present  1`] = `
+.emotion-1 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 20px);
+  border-color: #dee2e6;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 99999;
+  margin: 10px;
+  height: 370px;
+  max-height: 90%;
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 5px;
+  cursor: row-resize;
+  z-index: 2;
+  position: absolute;
+  top: -2px;
+}
+
+.emotion-3 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.emotion-4 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-right: 10px;
+}
+
+.emotion-6>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-9 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-9:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-11 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-size: 9px;
+  height: 16px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0 6.666666666666667px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: auto;
+  text-transform: uppercase;
+  border-radius: 32px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  cursor: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: rgba(255, 244, 230, 1);
+  color: #fd7e14;
+  border: 1px solid transparent;
+}
+
+.emotion-11:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-11:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-17 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: #25262b;
+  color: #fff;
+  position: relative;
+  height: 28px;
+  min-height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 4px;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-17:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-17:hover {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: none) {
+  .emotion-17:active {
+    background-color: #1A1B1E;
+  }
+}
+
+.emotion-17:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-17:disabled,
+.emotion-17[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-17:disabled:active,
+.emotion-17[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-17[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-17[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
+.emotion-20 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #868e96;
+  position: relative;
+  height: 28px;
+  min-height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.emotion-20:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-20:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-20:hover {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+@media (hover: none) {
+  .emotion-20:active {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+.emotion-20:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-20:disabled,
+.emotion-20[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-20:disabled:active,
+.emotion-20[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-20[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-20[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 8px;
+  cursor: not-allowed;
+}
+
+.emotion-21 {
+  height: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.emotion-22 {
+  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.emotion-24 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #e03131;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.emotion-24:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-24:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-26 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.emotion-26:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-26:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #e03131;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.emotion-28:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-28:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-31 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #e03131;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-31:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-31:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-31:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+@media (hover: none) {
+  .emotion-31:active {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+.emotion-33 {
+  position: relative;
+}
+
+.emotion-37 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #868e96;
+  position: relative;
+  height: 28px;
+  min-height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 4px;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: unset;
+  z-index: 2;
+}
+
+.emotion-37:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-37:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-37:hover {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+@media (hover: none) {
+  .emotion-37:active {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+.emotion-37:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-37:disabled,
+.emotion-37[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-37:disabled:active,
+.emotion-37[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-37[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-37[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
+.emotion-37,
+.emotion-37:hover {
+  background-color: #f8f9fa;
+}
+
+.emotion-40 {
+  overflow: hidden;
+}
+
+.emotion-41 {
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-43 {
+  box-sizing: border-box;
+  position: relative;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  line-height: 1.7;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 12px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.emotion-45 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.emotion-47 {
+  width: 100%;
+}
+
 <div>
   <div
-    class="mantine-Tabs-root jotai-devtools-shell mantine-xbm20l"
+    class="emotion-0 jotai-devtools-shell emotion-1"
     data-testid="jotai-devtools-shell"
   >
     <div
-      class="mantine-1gf2wvo"
+      class="emotion-2"
       data-testid="shell-resize-bar"
     />
     <div
-      class="mantine-1yk50fa"
+      class="emotion-3"
     >
       <div
-        class="mantine-4f8xjx"
+        class="emotion-4"
       >
         <div
-          class="mantine-Group-root mantine-1pxhwx0"
+          class="emotion-5 emotion-6"
         >
           <h1
-            class="mantine-Text-root mantine-Title-root mantine-dfp0rc"
+            class="emotion-7 emotion-8 emotion-9"
           >
             👻 Jōtai DevTools
           </h1>
           <div
-            class="mantine-Badge-root mantine-1wifcre"
+            class="emotion-10 emotion-11"
           >
             <span
-              class="mantine-h9iq4m mantine-Badge-inner"
+              class="emotion-12 emotion-13"
             >
               Alpha
             </span>
           </div>
         </div>
         <div
-          class="mantine-xg7kom"
+          class="emotion-14"
         >
           <button
-            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-1o23hru"
+            class="emotion-15 emotion-16 emotion-17"
             title="Toggle color scheme"
             type="button"
           >
@@ -71,7 +751,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             </svg>
           </button>
           <button
-            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-t0lmpu"
+            class="emotion-15 emotion-16 emotion-20"
             title="Minimize panel"
             type="button"
           >
@@ -104,18 +784,18 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
       </div>
     </div>
     <div
-      class="mantine-jsu0ax"
+      class="emotion-21"
       data-testid="jotai-devtools-error-boundary"
       role="alert"
     >
       <div
-        class="mantine-iqssko"
+        class="emotion-22"
       >
         <div
-          class="mantine-Text-root mantine-1gfx3yr"
+          class="emotion-7 emotion-24"
         >
           <div
-            class="mantine-Text-root mantine-1ejuzh1"
+            class="emotion-7 emotion-26"
           >
             <svg
               class="icon icon-tabler icon-tabler-alert-circle"
@@ -156,12 +836,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           Uh-oh, something went wrong.
         </div>
         <div
-          class="mantine-Text-root mantine-1ngacsz"
+          class="emotion-7 emotion-28"
         >
           If you believe this to be a bug, please file an issue on
            
           <a
-            class="mantine-Text-root mantine-Anchor-root mantine-o6qwyk"
+            class="emotion-7 emotion-30 emotion-31"
             href="https://github.com/jotaijs/jotai-devtools/issues"
             rel="noreferrer noopener"
             target="_blank"
@@ -172,12 +852,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           with a minimal reproduction and the following error
         </div>
         <div
-          class="mantine-Prism-root mantine-12sbrde"
+          class="emotion-32 emotion-33"
           translate="no"
         >
           <button
             aria-label="Copy code"
-            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-Prism-copy mantine-r1ykzi"
+            class="emotion-15 emotion-16 emotion-36 emotion-37"
             type="button"
           >
             <svg
@@ -196,7 +876,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             </svg>
           </button>
           <div
-            class="mantine-ScrollArea-root mantine-Prism-scrollArea mantine-1j1ni8n"
+            class="emotion-38 emotion-39 emotion-40"
             dir="ltr"
             style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
           >
@@ -204,7 +884,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
             </style>
             <div
-              class="mantine-xlwgkm mantine-ScrollArea-viewport"
+              class="emotion-41 emotion-42"
               data-radix-scroll-area-viewport=""
               style="overflow-x: scroll; overflow-y: scroll;"
             >
@@ -212,15 +892,15 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
                 style="min-width: 100%; display: table;"
               >
                 <pre
-                  class="mantine-1r2c9o1 mantine-Prism-code prism-code language-javascript"
+                  class="emotion-43 emotion-44 prism-code language-javascript"
                   dir="ltr"
                   style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                 >
                   <div
-                    class="mantine-1e8ljqt mantine-Prism-line token-line"
+                    class="emotion-45 emotion-46 token-line"
                   >
                     <div
-                      class="mantine-26ugy1 mantine-Prism-lineContent"
+                      class="emotion-47 emotion-46Content"
                     >
                       <span
                         class="token maybe-class-name"
@@ -255,44 +935,724 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 `;
 
 exports[`DevTools - basic Error boundary should display an error boundary with stack  1`] = `
+.emotion-1 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 20px);
+  border-color: #dee2e6;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 99999;
+  margin: 10px;
+  height: 370px;
+  max-height: 90%;
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 5px;
+  cursor: row-resize;
+  z-index: 2;
+  position: absolute;
+  top: -2px;
+}
+
+.emotion-3 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.emotion-4 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-right: 10px;
+}
+
+.emotion-6>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-9 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-9:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-11 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-size: 9px;
+  height: 16px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0 6.666666666666667px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: auto;
+  text-transform: uppercase;
+  border-radius: 32px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  cursor: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: rgba(255, 244, 230, 1);
+  color: #fd7e14;
+  border: 1px solid transparent;
+}
+
+.emotion-11:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-11:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-17 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: #25262b;
+  color: #fff;
+  position: relative;
+  height: 28px;
+  min-height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 4px;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-17:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-17:hover {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: none) {
+  .emotion-17:active {
+    background-color: #1A1B1E;
+  }
+}
+
+.emotion-17:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-17:disabled,
+.emotion-17[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-17:disabled:active,
+.emotion-17[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-17[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-17[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
+.emotion-20 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #868e96;
+  position: relative;
+  height: 28px;
+  min-height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.emotion-20:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-20:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-20:hover {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+@media (hover: none) {
+  .emotion-20:active {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+.emotion-20:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-20:disabled,
+.emotion-20[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-20:disabled:active,
+.emotion-20[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-20[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-20[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 8px;
+  cursor: not-allowed;
+}
+
+.emotion-21 {
+  height: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.emotion-22 {
+  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.emotion-24 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #e03131;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.emotion-24:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-24:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-26 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.emotion-26:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-26:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #e03131;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.emotion-28:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-28:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-31 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #e03131;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-31:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-31:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-31:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+@media (hover: none) {
+  .emotion-31:active {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+.emotion-33 {
+  position: relative;
+}
+
+.emotion-37 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #868e96;
+  position: relative;
+  height: 28px;
+  min-height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 4px;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: unset;
+  z-index: 2;
+}
+
+.emotion-37:focus {
+  outline-offset: 2px;
+  outline: 2px solid #2C2E33;
+}
+
+.emotion-37:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-37:hover {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+@media (hover: none) {
+  .emotion-37:active {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+.emotion-37:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-37:disabled,
+.emotion-37[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-37:disabled:active,
+.emotion-37[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-37[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-37[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
+.emotion-37,
+.emotion-37:hover {
+  background-color: #f8f9fa;
+}
+
+.emotion-40 {
+  overflow: hidden;
+}
+
+.emotion-41 {
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-43 {
+  box-sizing: border-box;
+  position: relative;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  line-height: 1.7;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 12px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.emotion-45 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.emotion-47 {
+  width: 100%;
+}
+
 <div>
   <div
-    class="mantine-Tabs-root jotai-devtools-shell mantine-xbm20l"
+    class="emotion-0 jotai-devtools-shell emotion-1"
     data-testid="jotai-devtools-shell"
   >
     <div
-      class="mantine-1gf2wvo"
+      class="emotion-2"
       data-testid="shell-resize-bar"
     />
     <div
-      class="mantine-1yk50fa"
+      class="emotion-3"
     >
       <div
-        class="mantine-4f8xjx"
+        class="emotion-4"
       >
         <div
-          class="mantine-Group-root mantine-1pxhwx0"
+          class="emotion-5 emotion-6"
         >
           <h1
-            class="mantine-Text-root mantine-Title-root mantine-dfp0rc"
+            class="emotion-7 emotion-8 emotion-9"
           >
             👻 Jōtai DevTools
           </h1>
           <div
-            class="mantine-Badge-root mantine-1wifcre"
+            class="emotion-10 emotion-11"
           >
             <span
-              class="mantine-h9iq4m mantine-Badge-inner"
+              class="emotion-12 emotion-13"
             >
               Alpha
             </span>
           </div>
         </div>
         <div
-          class="mantine-xg7kom"
+          class="emotion-14"
         >
           <button
-            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-1o23hru"
+            class="emotion-15 emotion-16 emotion-17"
             title="Toggle color scheme"
             type="button"
           >
@@ -325,7 +1685,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             </svg>
           </button>
           <button
-            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-t0lmpu"
+            class="emotion-15 emotion-16 emotion-20"
             title="Minimize panel"
             type="button"
           >
@@ -358,18 +1718,18 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
       </div>
     </div>
     <div
-      class="mantine-jsu0ax"
+      class="emotion-21"
       data-testid="jotai-devtools-error-boundary"
       role="alert"
     >
       <div
-        class="mantine-iqssko"
+        class="emotion-22"
       >
         <div
-          class="mantine-Text-root mantine-1gfx3yr"
+          class="emotion-7 emotion-24"
         >
           <div
-            class="mantine-Text-root mantine-1ejuzh1"
+            class="emotion-7 emotion-26"
           >
             <svg
               class="icon icon-tabler icon-tabler-alert-circle"
@@ -410,12 +1770,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           Uh-oh, something went wrong.
         </div>
         <div
-          class="mantine-Text-root mantine-1ngacsz"
+          class="emotion-7 emotion-28"
         >
           If you believe this to be a bug, please file an issue on
            
           <a
-            class="mantine-Text-root mantine-Anchor-root mantine-o6qwyk"
+            class="emotion-7 emotion-30 emotion-31"
             href="https://github.com/jotaijs/jotai-devtools/issues"
             rel="noreferrer noopener"
             target="_blank"
@@ -426,12 +1786,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           with a minimal reproduction and the following error
         </div>
         <div
-          class="mantine-Prism-root mantine-12sbrde"
+          class="emotion-32 emotion-33"
           translate="no"
         >
           <button
             aria-label="Copy code"
-            class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-Prism-copy mantine-r1ykzi"
+            class="emotion-15 emotion-16 emotion-36 emotion-37"
             type="button"
           >
             <svg
@@ -450,7 +1810,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             </svg>
           </button>
           <div
-            class="mantine-ScrollArea-root mantine-Prism-scrollArea mantine-1j1ni8n"
+            class="emotion-38 emotion-39 emotion-40"
             dir="ltr"
             style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
           >
@@ -458,7 +1818,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
             </style>
             <div
-              class="mantine-xlwgkm mantine-ScrollArea-viewport"
+              class="emotion-41 emotion-42"
               data-radix-scroll-area-viewport=""
               style="overflow-x: scroll; overflow-y: scroll;"
             >
@@ -466,15 +1826,15 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
                 style="min-width: 100%; display: table;"
               >
                 <pre
-                  class="mantine-1r2c9o1 mantine-Prism-code prism-code language-javascript"
+                  class="emotion-43 emotion-44 prism-code language-javascript"
                   dir="ltr"
                   style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                 >
                   <div
-                    class="mantine-1e8ljqt mantine-Prism-line token-line"
+                    class="emotion-45 emotion-46 token-line"
                   >
                     <div
-                      class="mantine-26ugy1 mantine-Prism-lineContent"
+                      class="emotion-47 emotion-46Content"
                     >
                       <span
                         class="token plain"
