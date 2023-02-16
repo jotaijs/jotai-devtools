@@ -48,7 +48,7 @@ export type DevToolsProps = ExtensionProps & {
 
 const DevToolsMain = ({
   store,
-  isInitialOpen,
+  isInitialOpen = false,
   theme: userColorScheme = 'light',
   options,
 }: DevToolsProps): JSX.Element => {

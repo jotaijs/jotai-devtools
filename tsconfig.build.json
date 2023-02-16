@@ -12,6 +12,7 @@
     "typeRoots": ["./node_modules/@types", "./types/*"],
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
+    "exactOptionalPropertyTypes": true,
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {

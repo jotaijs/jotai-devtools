@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { ActionIcon, Sx } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
-import { Store } from 'src/types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
 import { useThemeMode } from '../hooks/useThemeMode';
 import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 import { logo } from './assets/logo';
-import { Shell } from './components/Shell';
+import { Shell, ShellProps } from './components/Shell';
 
 const shellTriggerButtonStyles: Sx = () => ({
   position: 'fixed',
@@ -41,10 +40,9 @@ const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
   );
 });
 
-export type ExtensionProps = {
+export type ExtensionProps = ShellProps & {
   // false by default
   isInitialOpen?: boolean;
-  store?: Store;
 };
 
 export const Extension = ({

@@ -13,8 +13,8 @@ import { ShellResizeBar } from './components/ShellResizeBar';
 import { TabsHeader } from './components/TabsHeader';
 import { shellStyles } from './styles';
 
-type ShellProps = {
-  store?: Store;
+export type ShellProps = {
+  store?: Store | undefined;
 };
 
 export const Shell = ({ store }: ShellProps) => {
