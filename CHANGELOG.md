@@ -1,3 +1,17 @@
+# [0.3.0-next.3](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.2...v0.3.0-next.3) (2023-02-17)
+
+### Bug Fixes
+
+- infer options type from Jotai
+  ([8ddad63](https://github.com/jotai-labs/jotai-devtools/commit/8ddad63821ce825b8871a14e7a6cc37eb2c93622))
+- use exactOptionalPropertyTypes
+  ([6c9cbdf](https://github.com/jotai-labs/jotai-devtools/commit/6c9cbdffa020e9f15e1e0198d18eefae0b2e4f28))
+
+### Features
+
+- add custom style nonce + remove global normalized styles
+  ([10d3c4a](https://github.com/jotai-labs/jotai-devtools/commit/10d3c4a93494bd27fc16d1607cc42ea3f2e00ae4))
+
 # [0.3.0-next.2](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.1...v0.3.0-next.2) (2023-02-12)
 
 ### Features
