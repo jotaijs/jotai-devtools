@@ -8,6 +8,7 @@
 - ✅ Supports custom `store`
 - ✅ Works with provider-less mode
 - ✅ Works with Next.js
+- ✅ Supports custom `nonce` for CSP
 
 ## Preview
 
@@ -111,6 +112,8 @@ type DevToolsProps = {
   store?: Store;
   // Defaults to light
   theme?: 'dark' | 'light';
+  // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
+  nonce?: string;
   options?: {
     // Parsing strategy for AtomViewer. Defaults to `raw`
     // `raw` - parses the top level atom value but does not parse the values of atoms within atoms

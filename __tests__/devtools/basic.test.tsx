@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { atom, useAtom, useAtomValue } from 'jotai';
+import { atom, useAtom } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { customRender } from '../custom-render';
 
@@ -101,7 +101,7 @@ describe('DevTools - basic', () => {
       );
     };
 
-    it('should display an error boundary with stack ', async () => {
+    it('should display an error boundary with stack', async () => {
       const ogErrorSpy = jest.spyOn(global, 'Error');
       ogErrorSpy.mockImplementation((message) => {
         return {
@@ -128,7 +128,7 @@ describe('DevTools - basic', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should display an error boundary with message if stack is not present ', async () => {
+    it('should display an error boundary with message if stack is not present', async () => {
       const ogErrorSpy = jest.spyOn(global, 'Error');
       ogErrorSpy.mockImplementation((message) => {
         return {

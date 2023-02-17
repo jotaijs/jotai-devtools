@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { EmotionCache } from '@emotion/react';
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -14,6 +15,7 @@ import {
 import { Extension, ExtensionProps } from './Extension';
 import './fonts';
 import { InternalDevToolsContext } from './internal-jotai-store';
+import { createMemoizedEmotionCache } from './utils';
 
 const theme: MantineThemeOverride = {
   primaryColor: 'dark',
@@ -43,6 +45,7 @@ const theme: MantineThemeOverride = {
 
 export type DevToolsProps = ExtensionProps & {
   theme?: 'dark' | 'light';
+  nonce?: string;
   options?: DevToolsOptions;
 };
 
@@ -50,6 +53,7 @@ const DevToolsMain = ({
   store,
   isInitialOpen = false,
   theme: userColorScheme = 'light',
+  nonce,
   options,
 }: DevToolsProps): JSX.Element => {
   const [colorScheme, setColorScheme] =
@@ -58,6 +62,12 @@ const DevToolsMain = ({
 
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
+  const jotaiDevtoolsEmotionCache = React.useRef<EmotionCache>();
+
+  if (!jotaiDevtoolsEmotionCache.current) {
+    jotaiDevtoolsEmotionCache.current = createMemoizedEmotionCache(nonce)();
+  }
 
   React.useEffect(() => {
     setColorScheme(userColorScheme);
@@ -79,7 +89,10 @@ const DevToolsMain = ({
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
       >
-        <MantineProvider withNormalizeCSS theme={theme_}>
+        <MantineProvider
+          theme={theme_}
+          emotionCache={jotaiDevtoolsEmotionCache.current}
+        >
           <Extension store={store} isInitialOpen={isInitialOpen} />
         </MantineProvider>
       </ColorSchemeProvider>

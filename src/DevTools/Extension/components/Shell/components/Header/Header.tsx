@@ -28,12 +28,7 @@ export const Header = React.memo(() => {
           <Title size="h4" sx={logoStyles}>
             👻&nbsp;Jōtai DevTools
           </Title>
-          <Badge
-            // variant="transparent"
-            // gradient={{ from: 'yellow', to: 'orange' }}
-            color="orange"
-            size="xs"
-          >
+          <Badge color="orange" size="xs">
             Alpha
           </Badge>
         </Group>

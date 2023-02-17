@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present  1`] = `
+exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present 1`] = `
 .emotion-1 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  color: #000;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
+  box-sizing: border-box;
+}
+
+.emotion-2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -27,7 +42,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   max-height: 90%;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 100%;
   height: 5px;
   cursor: row-resize;
@@ -36,7 +51,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   top: -2px;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -44,7 +59,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   padding: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -59,7 +74,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   justify-content: space-between;
 }
 
-.emotion-6 {
+.emotion-7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -84,7 +99,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   margin-right: 10px;
 }
 
-.emotion-6>* {
+.emotion-7>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -92,7 +107,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   flex-grow: 0;
 }
 
-.emotion-9 {
+.emotion-10 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -111,16 +126,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   user-select: none;
 }
 
-.emotion-9:focus {
+.emotion-10:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-9:focus:not(:focus-visible) {
+.emotion-10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
@@ -155,22 +170,22 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   border: 1px solid transparent;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-11:focus:not(:focus-visible) {
+.emotion-12:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,7 +196,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   align-items: center;
 }
 
-.emotion-17 {
+.emotion-18 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -223,36 +238,36 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   justify-content: center;
 }
 
-.emotion-17:focus {
+.emotion-18:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-17:focus:not(:focus-visible) {
+.emotion-18:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-17:hover {
+  .emotion-18:hover {
     background-color: #1A1B1E;
   }
 }
 
 @media (hover: none) {
-  .emotion-17:active {
+  .emotion-18:active {
     background-color: #1A1B1E;
   }
 }
 
-.emotion-17:active {
+.emotion-18:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-17:disabled,
-.emotion-17[data-disabled] {
+.emotion-18:disabled,
+.emotion-18[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -261,19 +276,19 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   pointer-events: none;
 }
 
-.emotion-17:disabled:active,
-.emotion-17[data-disabled]:active {
+.emotion-18:disabled:active,
+.emotion-18[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-17[data-loading] {
+.emotion-18[data-loading] {
   pointer-events: none;
 }
 
-.emotion-17[data-loading]::before {
+.emotion-18[data-loading]::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -285,7 +300,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   cursor: not-allowed;
 }
 
-.emotion-20 {
+.emotion-21 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -328,36 +343,36 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   margin-left: 10px;
 }
 
-.emotion-20:focus {
+.emotion-21:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-20:focus:not(:focus-visible) {
+.emotion-21:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-20:hover {
+  .emotion-21:hover {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
 @media (hover: none) {
-  .emotion-20:active {
+  .emotion-21:active {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
-.emotion-20:active {
+.emotion-21:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-20:disabled,
-.emotion-20[data-disabled] {
+.emotion-21:disabled,
+.emotion-21[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -366,19 +381,19 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   pointer-events: none;
 }
 
-.emotion-20:disabled:active,
-.emotion-20[data-disabled]:active {
+.emotion-21:disabled:active,
+.emotion-21[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-20[data-loading] {
+.emotion-21[data-loading] {
   pointer-events: none;
 }
 
-.emotion-20[data-loading]::before {
+.emotion-21[data-loading]::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -390,7 +405,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   cursor: not-allowed;
 }
 
-.emotion-21 {
+.emotion-22 {
   height: 90%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -407,13 +422,13 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   overflow: scroll;
 }
 
-.emotion-22 {
+.emotion-23 {
   width: 100%;
   max-width: 80%;
   max-height: 80%;
 }
 
-.emotion-24 {
+.emotion-25 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -433,16 +448,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   font-weight: 500;
 }
 
-.emotion-24:focus {
+.emotion-25:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-24:focus:not(:focus-visible) {
+.emotion-25:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-26 {
+.emotion-27 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -461,16 +476,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   margin-right: 5px;
 }
 
-.emotion-26:focus {
+.emotion-27:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-26:focus:not(:focus-visible) {
+.emotion-27:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-28 {
+.emotion-29 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -481,16 +496,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   margin-bottom: 12px;
 }
 
-.emotion-28:focus {
+.emotion-29:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-28:focus:not(:focus-visible) {
+.emotion-29:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-31 {
+.emotion-32 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -506,34 +521,34 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   text-decoration: underline;
 }
 
-.emotion-31:focus {
+.emotion-32:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-31:focus:not(:focus-visible) {
+.emotion-32:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-31:hover {
+  .emotion-32:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
 @media (hover: none) {
-  .emotion-31:active {
+  .emotion-32:active {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
-.emotion-33 {
+.emotion-34 {
   position: relative;
 }
 
-.emotion-37 {
+.emotion-38 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -580,36 +595,36 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   z-index: 2;
 }
 
-.emotion-37:focus {
+.emotion-38:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-37:focus:not(:focus-visible) {
+.emotion-38:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-37:hover {
+  .emotion-38:hover {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
 @media (hover: none) {
-  .emotion-37:active {
+  .emotion-38:active {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
-.emotion-37:active {
+.emotion-38:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-37:disabled,
-.emotion-37[data-disabled] {
+.emotion-38:disabled,
+.emotion-38[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -618,19 +633,19 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   pointer-events: none;
 }
 
-.emotion-37:disabled:active,
-.emotion-37[data-disabled]:active {
+.emotion-38:disabled:active,
+.emotion-38[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-37[data-loading] {
+.emotion-38[data-loading] {
   pointer-events: none;
 }
 
-.emotion-37[data-loading]::before {
+.emotion-38[data-loading]::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -642,21 +657,21 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   cursor: not-allowed;
 }
 
-.emotion-37,
-.emotion-37:hover {
+.emotion-38,
+.emotion-38:hover {
   background-color: #f8f9fa;
 }
 
-.emotion-40 {
+.emotion-41 {
   overflow: hidden;
 }
 
-.emotion-41 {
+.emotion-42 {
   width: 100%;
   height: 100%;
 }
 
-.emotion-43 {
+.emotion-44 {
   box-sizing: border-box;
   position: relative;
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
@@ -668,7 +683,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   margin-bottom: 0;
 }
 
-.emotion-45 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -677,48 +692,48 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   padding: 0 16px;
 }
 
-.emotion-47 {
+.emotion-48 {
   width: 100%;
 }
 
 <div>
   <div
-    class="emotion-0 jotai-devtools-shell emotion-1"
-    data-testid="jotai-devtools-shell"
+    class="emotion-0 emotion-1 emotion-2"
+    data-testid="emotion-1"
   >
     <div
-      class="emotion-2"
+      class="emotion-3"
       data-testid="shell-resize-bar"
     />
     <div
-      class="emotion-3"
+      class="emotion-4"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7"
         >
           <h1
-            class="emotion-7 emotion-8 emotion-9"
+            class="emotion-8 emotion-9 emotion-10"
           >
             👻 Jōtai DevTools
           </h1>
           <div
-            class="emotion-10 emotion-11"
+            class="emotion-11 emotion-12"
           >
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               Alpha
             </span>
           </div>
         </div>
         <div
-          class="emotion-14"
+          class="emotion-15"
         >
           <button
-            class="emotion-15 emotion-16 emotion-17"
+            class="emotion-16 emotion-17 emotion-18"
             title="Toggle color scheme"
             type="button"
           >
@@ -751,7 +766,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             </svg>
           </button>
           <button
-            class="emotion-15 emotion-16 emotion-20"
+            class="emotion-16 emotion-17 emotion-21"
             title="Minimize panel"
             type="button"
           >
@@ -784,18 +799,18 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
       </div>
     </div>
     <div
-      class="emotion-21"
+      class="emotion-22"
       data-testid="jotai-devtools-error-boundary"
       role="alert"
     >
       <div
-        class="emotion-22"
+        class="emotion-23"
       >
         <div
-          class="emotion-7 emotion-24"
+          class="emotion-8 emotion-25"
         >
           <div
-            class="emotion-7 emotion-26"
+            class="emotion-8 emotion-27"
           >
             <svg
               class="icon icon-tabler icon-tabler-alert-circle"
@@ -836,12 +851,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           Uh-oh, something went wrong.
         </div>
         <div
-          class="emotion-7 emotion-28"
+          class="emotion-8 emotion-29"
         >
           If you believe this to be a bug, please file an issue on
            
           <a
-            class="emotion-7 emotion-30 emotion-31"
+            class="emotion-8 emotion-31 emotion-32"
             href="https://github.com/jotaijs/jotai-devtools/issues"
             rel="noreferrer noopener"
             target="_blank"
@@ -852,12 +867,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           with a minimal reproduction and the following error
         </div>
         <div
-          class="emotion-32 emotion-33"
+          class="emotion-33 emotion-34"
           translate="no"
         >
           <button
             aria-label="Copy code"
-            class="emotion-15 emotion-16 emotion-36 emotion-37"
+            class="emotion-16 emotion-17 emotion-37 emotion-38"
             type="button"
           >
             <svg
@@ -876,7 +891,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             </svg>
           </button>
           <div
-            class="emotion-38 emotion-39 emotion-40"
+            class="emotion-39 emotion-40 emotion-41"
             dir="ltr"
             style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
           >
@@ -884,7 +899,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
             </style>
             <div
-              class="emotion-41 emotion-42"
+              class="emotion-42 emotion-43"
               data-radix-scroll-area-viewport=""
               style="overflow-x: scroll; overflow-y: scroll;"
             >
@@ -892,15 +907,15 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
                 style="min-width: 100%; display: table;"
               >
                 <pre
-                  class="emotion-43 emotion-44 prism-code language-javascript"
+                  class="emotion-44 emotion-45 prism-code language-javascript"
                   dir="ltr"
                   style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                 >
                   <div
-                    class="emotion-45 emotion-46 token-line"
+                    class="emotion-46 emotion-47 token-line"
                   >
                     <div
-                      class="emotion-47 emotion-46Content"
+                      class="emotion-48 emotion-47Content"
                     >
                       <span
                         class="token maybe-class-name"
@@ -934,8 +949,23 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 </div>
 `;
 
-exports[`DevTools - basic Error boundary should display an error boundary with stack  1`] = `
+exports[`DevTools - basic Error boundary should display an error boundary with stack 1`] = `
 .emotion-1 {
+  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  color: #000;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
+  box-sizing: border-box;
+}
+
+.emotion-2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -961,7 +991,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   max-height: 90%;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 100%;
   height: 5px;
   cursor: row-resize;
@@ -970,7 +1000,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   top: -2px;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -978,7 +1008,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   padding: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -993,7 +1023,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   justify-content: space-between;
 }
 
-.emotion-6 {
+.emotion-7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1018,7 +1048,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   margin-right: 10px;
 }
 
-.emotion-6>* {
+.emotion-7>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -1026,7 +1056,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   flex-grow: 0;
 }
 
-.emotion-9 {
+.emotion-10 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1045,16 +1075,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   user-select: none;
 }
 
-.emotion-9:focus {
+.emotion-10:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-9:focus:not(:focus-visible) {
+.emotion-10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
@@ -1089,22 +1119,22 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   border: 1px solid transparent;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-11:focus:not(:focus-visible) {
+.emotion-12:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1115,7 +1145,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   align-items: center;
 }
 
-.emotion-17 {
+.emotion-18 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -1157,36 +1187,36 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   justify-content: center;
 }
 
-.emotion-17:focus {
+.emotion-18:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-17:focus:not(:focus-visible) {
+.emotion-18:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-17:hover {
+  .emotion-18:hover {
     background-color: #1A1B1E;
   }
 }
 
 @media (hover: none) {
-  .emotion-17:active {
+  .emotion-18:active {
     background-color: #1A1B1E;
   }
 }
 
-.emotion-17:active {
+.emotion-18:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-17:disabled,
-.emotion-17[data-disabled] {
+.emotion-18:disabled,
+.emotion-18[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -1195,19 +1225,19 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   pointer-events: none;
 }
 
-.emotion-17:disabled:active,
-.emotion-17[data-disabled]:active {
+.emotion-18:disabled:active,
+.emotion-18[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-17[data-loading] {
+.emotion-18[data-loading] {
   pointer-events: none;
 }
 
-.emotion-17[data-loading]::before {
+.emotion-18[data-loading]::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -1219,7 +1249,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   cursor: not-allowed;
 }
 
-.emotion-20 {
+.emotion-21 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -1262,36 +1292,36 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   margin-left: 10px;
 }
 
-.emotion-20:focus {
+.emotion-21:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-20:focus:not(:focus-visible) {
+.emotion-21:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-20:hover {
+  .emotion-21:hover {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
 @media (hover: none) {
-  .emotion-20:active {
+  .emotion-21:active {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
-.emotion-20:active {
+.emotion-21:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-20:disabled,
-.emotion-20[data-disabled] {
+.emotion-21:disabled,
+.emotion-21[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -1300,19 +1330,19 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   pointer-events: none;
 }
 
-.emotion-20:disabled:active,
-.emotion-20[data-disabled]:active {
+.emotion-21:disabled:active,
+.emotion-21[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-20[data-loading] {
+.emotion-21[data-loading] {
   pointer-events: none;
 }
 
-.emotion-20[data-loading]::before {
+.emotion-21[data-loading]::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -1324,7 +1354,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   cursor: not-allowed;
 }
 
-.emotion-21 {
+.emotion-22 {
   height: 90%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1341,13 +1371,13 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   overflow: scroll;
 }
 
-.emotion-22 {
+.emotion-23 {
   width: 100%;
   max-width: 80%;
   max-height: 80%;
 }
 
-.emotion-24 {
+.emotion-25 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -1367,16 +1397,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   font-weight: 500;
 }
 
-.emotion-24:focus {
+.emotion-25:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-24:focus:not(:focus-visible) {
+.emotion-25:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-26 {
+.emotion-27 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1395,16 +1425,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   margin-right: 5px;
 }
 
-.emotion-26:focus {
+.emotion-27:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-26:focus:not(:focus-visible) {
+.emotion-27:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-28 {
+.emotion-29 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -1415,16 +1445,16 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   margin-bottom: 12px;
 }
 
-.emotion-28:focus {
+.emotion-29:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-28:focus:not(:focus-visible) {
+.emotion-29:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-31 {
+.emotion-32 {
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -1440,34 +1470,34 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   text-decoration: underline;
 }
 
-.emotion-31:focus {
+.emotion-32:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-31:focus:not(:focus-visible) {
+.emotion-32:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-31:hover {
+  .emotion-32:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
 @media (hover: none) {
-  .emotion-31:active {
+  .emotion-32:active {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
-.emotion-33 {
+.emotion-34 {
   position: relative;
 }
 
-.emotion-37 {
+.emotion-38 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -1514,36 +1544,36 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   z-index: 2;
 }
 
-.emotion-37:focus {
+.emotion-38:focus {
   outline-offset: 2px;
   outline: 2px solid #2C2E33;
 }
 
-.emotion-37:focus:not(:focus-visible) {
+.emotion-38:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-37:hover {
+  .emotion-38:hover {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
 @media (hover: none) {
-  .emotion-37:active {
+  .emotion-38:active {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
-.emotion-37:active {
+.emotion-38:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-37:disabled,
-.emotion-37[data-disabled] {
+.emotion-38:disabled,
+.emotion-38[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -1552,19 +1582,19 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   pointer-events: none;
 }
 
-.emotion-37:disabled:active,
-.emotion-37[data-disabled]:active {
+.emotion-38:disabled:active,
+.emotion-38[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-37[data-loading] {
+.emotion-38[data-loading] {
   pointer-events: none;
 }
 
-.emotion-37[data-loading]::before {
+.emotion-38[data-loading]::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -1576,21 +1606,21 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   cursor: not-allowed;
 }
 
-.emotion-37,
-.emotion-37:hover {
+.emotion-38,
+.emotion-38:hover {
   background-color: #f8f9fa;
 }
 
-.emotion-40 {
+.emotion-41 {
   overflow: hidden;
 }
 
-.emotion-41 {
+.emotion-42 {
   width: 100%;
   height: 100%;
 }
 
-.emotion-43 {
+.emotion-44 {
   box-sizing: border-box;
   position: relative;
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
@@ -1602,7 +1632,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   margin-bottom: 0;
 }
 
-.emotion-45 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1611,48 +1641,48 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   padding: 0 16px;
 }
 
-.emotion-47 {
+.emotion-48 {
   width: 100%;
 }
 
 <div>
   <div
-    class="emotion-0 jotai-devtools-shell emotion-1"
-    data-testid="jotai-devtools-shell"
+    class="emotion-0 emotion-1 emotion-2"
+    data-testid="emotion-1"
   >
     <div
-      class="emotion-2"
+      class="emotion-3"
       data-testid="shell-resize-bar"
     />
     <div
-      class="emotion-3"
+      class="emotion-4"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7"
         >
           <h1
-            class="emotion-7 emotion-8 emotion-9"
+            class="emotion-8 emotion-9 emotion-10"
           >
             👻 Jōtai DevTools
           </h1>
           <div
-            class="emotion-10 emotion-11"
+            class="emotion-11 emotion-12"
           >
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               Alpha
             </span>
           </div>
         </div>
         <div
-          class="emotion-14"
+          class="emotion-15"
         >
           <button
-            class="emotion-15 emotion-16 emotion-17"
+            class="emotion-16 emotion-17 emotion-18"
             title="Toggle color scheme"
             type="button"
           >
@@ -1685,7 +1715,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             </svg>
           </button>
           <button
-            class="emotion-15 emotion-16 emotion-20"
+            class="emotion-16 emotion-17 emotion-21"
             title="Minimize panel"
             type="button"
           >
@@ -1718,18 +1748,18 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
       </div>
     </div>
     <div
-      class="emotion-21"
+      class="emotion-22"
       data-testid="jotai-devtools-error-boundary"
       role="alert"
     >
       <div
-        class="emotion-22"
+        class="emotion-23"
       >
         <div
-          class="emotion-7 emotion-24"
+          class="emotion-8 emotion-25"
         >
           <div
-            class="emotion-7 emotion-26"
+            class="emotion-8 emotion-27"
           >
             <svg
               class="icon icon-tabler icon-tabler-alert-circle"
@@ -1770,12 +1800,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           Uh-oh, something went wrong.
         </div>
         <div
-          class="emotion-7 emotion-28"
+          class="emotion-8 emotion-29"
         >
           If you believe this to be a bug, please file an issue on
            
           <a
-            class="emotion-7 emotion-30 emotion-31"
+            class="emotion-8 emotion-31 emotion-32"
             href="https://github.com/jotaijs/jotai-devtools/issues"
             rel="noreferrer noopener"
             target="_blank"
@@ -1786,12 +1816,12 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           with a minimal reproduction and the following error
         </div>
         <div
-          class="emotion-32 emotion-33"
+          class="emotion-33 emotion-34"
           translate="no"
         >
           <button
             aria-label="Copy code"
-            class="emotion-15 emotion-16 emotion-36 emotion-37"
+            class="emotion-16 emotion-17 emotion-37 emotion-38"
             type="button"
           >
             <svg
@@ -1810,7 +1840,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             </svg>
           </button>
           <div
-            class="emotion-38 emotion-39 emotion-40"
+            class="emotion-39 emotion-40 emotion-41"
             dir="ltr"
             style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
           >
@@ -1818,7 +1848,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
             </style>
             <div
-              class="emotion-41 emotion-42"
+              class="emotion-42 emotion-43"
               data-radix-scroll-area-viewport=""
               style="overflow-x: scroll; overflow-y: scroll;"
             >
@@ -1826,15 +1856,15 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
                 style="min-width: 100%; display: table;"
               >
                 <pre
-                  class="emotion-43 emotion-44 prism-code language-javascript"
+                  class="emotion-44 emotion-45 prism-code language-javascript"
                   dir="ltr"
                   style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                 >
                   <div
-                    class="emotion-45 emotion-46 token-line"
+                    class="emotion-46 emotion-47 token-line"
                   >
                     <div
-                      class="emotion-47 emotion-46Content"
+                      class="emotion-48 emotion-47Content"
                     >
                       <span
                         class="token plain"
