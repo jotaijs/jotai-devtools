@@ -12,10 +12,10 @@ type AtomListItemProps = {
   isActive: boolean;
 };
 
-const navLinkStyles: Sx = {
-  fontFamily: 'JetBrains Mono',
+const navLinkStyles: Sx = (theme) => ({
+  fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
   borderRadius: 5,
-};
+});
 
 export const AtomListItem = React.memo(
   ({ label, onClick, pos, isActive }: AtomListItemProps) => {

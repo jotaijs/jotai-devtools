@@ -13,15 +13,20 @@ import {
   useSetDevToolsOptions,
 } from './atoms/devtools-options';
 import { Extension, ExtensionProps } from './Extension';
-import './fonts';
 import { InternalDevToolsContext } from './internal-jotai-store';
 import { createMemoizedEmotionCache } from './utils';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-600.css';
+import '@fontsource/jetbrains-mono/latin-700.css';
 
 const theme: MantineThemeOverride = {
   primaryColor: 'dark',
   activeStyles: { transform: 'scale(1)' },
-  fontFamily:
-    'Inter, JetBrains Mono, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
+  fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
   fontFamilyMonospace:
     'JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
   headings: {
