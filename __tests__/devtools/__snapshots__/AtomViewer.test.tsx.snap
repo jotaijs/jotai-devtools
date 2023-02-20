@@ -2,7 +2,7 @@
 
 exports[`DevTools - AtomViewer Atom details Deep nested values should display atom details with deeply parsed value when an atom is selected 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -108,7 +108,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -137,7 +137,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -198,7 +198,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -302,7 +302,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -426,7 +426,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -567,7 +567,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -591,7 +591,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -703,7 +703,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 .emotion-49 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -732,7 +732,6 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: JetBrains Mono;
   border-radius: 5px;
 }
 
@@ -788,7 +787,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-54 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -807,14 +806,14 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
   line-height: 1.55;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: JetBrains Mono;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .emotion-56:focus {
@@ -827,7 +826,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-59 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: 12px;
@@ -949,7 +948,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-91 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -974,7 +973,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-93 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -999,7 +998,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-96 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: inherit;
@@ -1031,7 +1030,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-106 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -1058,7 +1057,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 .emotion-112 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -1205,7 +1204,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-126 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -1227,7 +1226,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 }
 
 .emotion-128 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -1761,7 +1760,7 @@ exports[`DevTools - AtomViewer Atom details Deep nested values should display at
 
 exports[`DevTools - AtomViewer Atom details Raw value should display atom details when an atom is selected 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -1867,7 +1866,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -1896,7 +1895,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -1957,7 +1956,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -2061,7 +2060,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -2185,7 +2184,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -2326,7 +2325,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -2350,7 +2349,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -2462,7 +2461,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 .emotion-49 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -2491,7 +2490,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: JetBrains Mono;
   border-radius: 5px;
 }
 
@@ -2547,7 +2545,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-54 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -2566,14 +2564,14 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
   line-height: 1.55;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: JetBrains Mono;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .emotion-56:focus {
@@ -2586,7 +2584,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-59 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: 12px;
@@ -2708,7 +2706,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-91 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -2733,7 +2731,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-93 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -2758,7 +2756,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-96 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: inherit;
@@ -2790,7 +2788,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-106 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -2817,7 +2815,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 .emotion-112 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -2964,7 +2962,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-126 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -2986,7 +2984,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 }
 
 .emotion-128 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   font-size: 16px;
   line-height: 1.55;
@@ -3547,7 +3545,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
 exports[`DevTools - AtomViewer Atom details Raw value should display the dependents of the atom correctly 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -3653,7 +3651,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -3682,7 +3680,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -3743,7 +3741,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -3847,7 +3845,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -3971,7 +3969,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -4112,7 +4110,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -4136,7 +4134,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -4248,7 +4246,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 .emotion-49 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -4277,7 +4275,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: JetBrains Mono;
   border-radius: 5px;
 }
 
@@ -4333,7 +4330,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-54 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -4352,14 +4349,14 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
   line-height: 1.55;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: JetBrains Mono;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .emotion-56:focus {
@@ -4372,7 +4369,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-59 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: 12px;
@@ -4494,7 +4491,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-91 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -4519,7 +4516,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-93 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -4544,7 +4541,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-96 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: inherit;
@@ -4576,7 +4573,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-106 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -4603,7 +4600,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 .emotion-112 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -4750,7 +4747,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-126 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -4772,7 +4769,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 }
 
 .emotion-128 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -5306,7 +5303,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
 exports[`DevTools - AtomViewer List of atoms Search should display an error if no atoms are found 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -5412,7 +5409,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -5441,7 +5438,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -5502,7 +5499,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -5606,7 +5603,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -5730,7 +5727,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -5871,7 +5868,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -5895,7 +5892,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -6039,7 +6036,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 }
 
 .emotion-50 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -6118,7 +6115,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -6448,7 +6445,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 
 exports[`DevTools - AtomViewer List of atoms Search should search for atoms correctly 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -6554,7 +6551,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -6583,7 +6580,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -6644,7 +6641,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -6748,7 +6745,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -6872,7 +6869,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -7013,7 +7010,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -7037,7 +7034,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -7149,7 +7146,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
 .emotion-49 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -7178,7 +7175,6 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: JetBrains Mono;
   border-radius: 5px;
 }
 
@@ -7234,7 +7230,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-54 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -7253,14 +7249,14 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
   line-height: 1.55;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: JetBrains Mono;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .emotion-56:focus {
@@ -7273,7 +7269,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-59 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: 12px;
@@ -7384,7 +7380,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 }
 
 .emotion-70 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -7729,7 +7725,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
 exports[`DevTools - AtomViewer List of atoms should render atom viewer with correct atoms without provider 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -7835,7 +7831,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -7864,7 +7860,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -7925,7 +7921,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -8029,7 +8025,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -8153,7 +8149,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -8294,7 +8290,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -8318,7 +8314,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -8430,7 +8426,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
 .emotion-49 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -8459,7 +8455,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: JetBrains Mono;
   border-radius: 5px;
 }
 
@@ -8515,7 +8510,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-54 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: 14px;
@@ -8534,14 +8529,14 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
   line-height: 1.55;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: JetBrains Mono;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .emotion-56:focus {
@@ -8554,7 +8549,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-59 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
   font-size: 12px;
@@ -8665,7 +8660,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 }
 
 .emotion-88 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -9069,7 +9064,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
 exports[`DevTools - AtomViewer List of atoms should render atom viewer without any errors if there are no atoms 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -9175,7 +9170,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -9204,7 +9199,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -9265,7 +9260,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -9369,7 +9364,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -9493,7 +9488,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 
 .emotion-26 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -9634,7 +9629,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 }
 
 .emotion-36 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   position: -webkit-sticky;
   position: sticky;
@@ -9658,7 +9653,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 }
 
 .emotion-45 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 36px;
   -webkit-tap-highlight-color: transparent;
   line-height: 34px;
@@ -9802,7 +9797,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 }
 
 .emotion-50 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -9881,7 +9876,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 }
 
 .emotion-56 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;

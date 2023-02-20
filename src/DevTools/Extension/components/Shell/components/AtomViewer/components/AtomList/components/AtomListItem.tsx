@@ -12,8 +12,11 @@ type AtomListItemProps = {
   isActive: boolean;
 };
 
-const navLinkStyles: Sx = (theme) => ({
+const monoSpaceFonts: Sx = (theme) => ({
   fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
+});
+
+const navLinkStyles: Sx = () => ({
   borderRadius: 5,
 });
 
@@ -23,7 +26,7 @@ export const AtomListItem = React.memo(
       <NavLink
         label={React.useMemo(
           () => (
-            <Text ff="JetBrains Mono">{parseDebugLabel(label)}</Text>
+            <Text sx={monoSpaceFonts}>{parseDebugLabel(label)}</Text>
           ),
           [label],
         )}

@@ -2,7 +2,7 @@
 
 exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -108,7 +108,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -137,7 +137,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -198,7 +198,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -302,7 +302,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -429,7 +429,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 }
 
 .emotion-25 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
   font-size: 16px;
@@ -458,7 +458,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 }
 
 .emotion-27 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -486,7 +486,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 }
 
 .emotion-29 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
   font-size: 14px;
@@ -506,7 +506,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 }
 
 .emotion-32 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
   font-size: inherit;
@@ -550,7 +550,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 
 .emotion-38 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -951,7 +951,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 
 exports[`DevTools - basic Error boundary should display an error boundary with stack 1`] = `
 .emotion-1 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   color: #000;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -1057,7 +1057,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 }
 
 .emotion-10 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -1086,7 +1086,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 
 .emotion-12 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 9px;
   height: 16px;
   line-height: 14px;
@@ -1147,7 +1147,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 
 .emotion-18 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -1251,7 +1251,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 
 .emotion-21 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -1378,7 +1378,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 }
 
 .emotion-25 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
   font-size: 16px;
@@ -1407,7 +1407,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 }
 
 .emotion-27 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
   font-size: inherit;
@@ -1435,7 +1435,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 }
 
 .emotion-29 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
   font-size: 14px;
@@ -1455,7 +1455,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 }
 
 .emotion-32 {
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
   font-size: inherit;
@@ -1499,7 +1499,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 
 .emotion-38 {
   -webkit-tap-highlight-color: transparent;
-  font-family: Inter,JetBrains Mono,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
   border: 0;
   padding: 0;
