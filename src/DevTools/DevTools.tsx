@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { EmotionCache } from '@emotion/react';
+import { EmotionCache, Global } from '@emotion/react';
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -13,15 +13,9 @@ import {
   useSetDevToolsOptions,
 } from './atoms/devtools-options';
 import { Extension, ExtensionProps } from './Extension';
+import { fontCss } from './fonts';
 import { InternalDevToolsContext } from './internal-jotai-store';
 import { createMemoizedEmotionCache } from './utils';
-import '@fontsource/inter/latin-400.css';
-import '@fontsource/inter/latin-500.css';
-import '@fontsource/inter/latin-600.css';
-import '@fontsource/inter/latin-700.css';
-import '@fontsource/jetbrains-mono/latin-400.css';
-import '@fontsource/jetbrains-mono/latin-600.css';
-import '@fontsource/jetbrains-mono/latin-700.css';
 
 const theme: MantineThemeOverride = {
   primaryColor: 'dark',
@@ -98,6 +92,7 @@ const DevToolsMain = ({
           theme={theme_}
           emotionCache={jotaiDevtoolsEmotionCache.current}
         >
+          <Global styles={fontCss} />
           <Extension store={store} isInitialOpen={isInitialOpen} />
         </MantineProvider>
       </ColorSchemeProvider>

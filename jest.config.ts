@@ -37,7 +37,7 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^jotai-devtools$': '<rootDir>/src/index.ts',
     '^jotai-devtools/(.*)$': '<rootDir>/src/$1.ts',
-    '\\.(css|less|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+    '\\.(css|less|sass|scss|woff2)$': '<rootDir>/__mocks__/styleMock.js',
   },
   modulePathIgnorePatterns: ['dist'],
   globals: {

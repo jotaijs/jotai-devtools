@@ -9,6 +9,8 @@ const defaultOutExtension: Options['outExtension'] = ({ format }) => {
 
 const defaultEsBuildPlugins: Options['esbuildPlugins'] = [
   replace({
+    // FIXME - Should filter it by `include` instead of `exclude`. This doesn't seem to be working /^.*\.js$/,
+    exclude: /\.woff2$/,
     __DEV__: '(process.env.NODE_ENV!=="production")',
   }),
 ];
@@ -18,6 +20,9 @@ const baseConfig: Options = {
   entry: {
     index: 'src/index.ts',
     utils: 'src/utils/index.ts',
+  },
+  loader: {
+    '.woff2': 'dataurl',
   },
   sourcemap: false,
   // Clean output directory before each build
@@ -30,8 +35,8 @@ const baseConfig: Options = {
   platform: 'node',
   outExtension: defaultOutExtension,
   esbuildPlugins: defaultEsBuildPlugins,
-  // TSUP does not appear to be respecting tsconfig's jsx property
-  // See - https://github.com/egoist/tsup/issues/792
+  // // TSUP does not appear to be respecting tsconfig's jsx property
+  // // See - https://github.com/egoist/tsup/issues/792
   inject: ['./react-shim.js'],
 };
 
@@ -48,6 +53,8 @@ const mjsOutExtension: Options['outExtension'] = ({ format }) => {
 
 const mjsEsBuildPlugins: Options['esbuildPlugins'] = [
   replace({
+    // FIXME - Should filter it by `include` instead of `exclude`. This doesn't seem to be working /^.*\.js$/,
+    exclude: /\.woff2$/,
     __DEV__: '((import.meta.env&&import.meta.env.MODE)!=="production")',
   }),
 ];
