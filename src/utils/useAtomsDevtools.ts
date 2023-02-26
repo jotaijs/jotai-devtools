@@ -33,8 +33,6 @@ export function useAtomsDevtools(
 ): void {
   const { enabled } = options || {};
 
-  const extension = getReduxExtension(enabled);
-
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
   const goToSnapshot = useGotoAtomsSnapshot(options);
@@ -46,9 +44,17 @@ export function useAtomsDevtools(
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    const extension = getReduxExtension(enabled);
+    devtools.current = createReduxConnector(extension, name);
+    return () => {
+      extension?.disconnect?.();
+    };
+  }, [enabled, name]);
+
+  useEffect(() => {
+    const connector = devtools.current;
+    if (!connector) return;
+
     const getSnapshotAt = (index = snapshots.current.length - 1) => {
       // index 0 is @@INIT, so we need to return the next action (0)
       const snapshot = snapshots.current[index >= 0 ? index : 0];
@@ -58,9 +64,7 @@ export function useAtomsDevtools(
       return snapshot;
     };
 
-    devtools.current = createReduxConnector(extension, name);
-
-    const devtoolsUnsubscribe = devtools.current?.subscribe((message) => {
+    const devtoolsUnsubscribe = connector.subscribe((message) => {
       switch (message.type) {
         case 'DISPATCH':
           switch (message.payload?.type) {
@@ -86,26 +90,23 @@ export function useAtomsDevtools(
       }
     });
 
-    return () => {
-      extension?.disconnect?.();
-      devtoolsUnsubscribe?.();
-    };
-  }, [extension, goToSnapshot, name]);
+    return devtoolsUnsubscribe;
+  }, [goToSnapshot]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
-    if (devtools.current.shouldInit) {
-      devtools.current.init(undefined);
-      devtools.current.shouldInit = false;
+    const connector = devtools.current;
+    if (!connector) return;
+
+    if (connector.shouldInit) {
+      connector.init(undefined);
+      connector.shouldInit = false;
       return;
     }
     if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else if (isRecording.current) {
       snapshots.current.push(atomsSnapshot);
-      devtools.current.send(
+      connector.send(
         {
           type: `${snapshots.current.length}`,
           updatedAt: new Date().toLocaleString(),

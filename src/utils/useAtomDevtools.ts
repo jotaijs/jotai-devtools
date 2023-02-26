@@ -15,8 +15,6 @@ export function useAtomDevtools<Value, Result>(
 ): void {
   const { enabled, name } = options || {};
 
-  const extension = getReduxExtension(enabled);
-
   const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
@@ -26,9 +24,14 @@ export function useAtomDevtools<Value, Result>(
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    const extension = getReduxExtension(enabled);
+    devtools.current = createReduxConnector(extension, atomName);
+  }, [atomName, enabled]);
+
+  useEffect(() => {
+    const connector = devtools.current;
+    if (!connector) return;
+
     const setValueIfWritable = (value: Value) => {
       if (typeof setValue === 'function') {
         (setValue as (value: Value) => void)(value);
@@ -40,9 +43,7 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = createReduxConnector(extension, atomName);
-
-    const unsubscribe = devtools.current?.subscribe((message) => {
+    const unsubscribe = connector.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {
         try {
           setValueIfWritable(JSON.parse(message.payload));
@@ -84,23 +85,23 @@ export function useAtomDevtools<Value, Result>(
     });
 
     return unsubscribe;
-  }, [anAtom, extension, atomName, setValue]);
+  }, [anAtom, setValue]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
+    const connector = devtools.current;
+    if (!connector) return;
+
     lastValue.current = value;
-    if (devtools.current.shouldInit) {
-      devtools.current.init(value);
-      devtools.current.shouldInit = false;
+    if (connector.shouldInit) {
+      connector.init(value);
+      connector.shouldInit = false;
     } else if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else {
-      devtools.current.send(
+      connector.send(
         `${atomName} - ${new Date().toLocaleString()}` as any,
         value,
       );
     }
-  }, [anAtom, extension, atomName, value]);
+  }, [atomName, value]);
 }
