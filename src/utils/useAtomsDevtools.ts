@@ -1,7 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
+import {
+  Connection,
+  createReduxConnection,
+} from './redux-extension/createReduxConnection';
 import { getReduxExtension } from './redux-extension/getReduxExtension';
-import { Message } from './types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
@@ -41,13 +44,7 @@ export function useAtomsDevtools(
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const devtools = useRef<
-    ReturnType<
-      NonNullable<typeof window['__REDUX_DEVTOOLS_EXTENSION__']>['connect']
-    > & {
-      shouldInit?: boolean;
-    }
-  >();
+  const devtools = useRef<Connection>();
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
@@ -63,16 +60,10 @@ export function useAtomsDevtools(
       }
       return snapshot;
     };
-    const connection = extension.connect({ name });
 
-    const devtoolsUnsubscribe = (
-      connection as unknown as {
-        // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
-        subscribe: (
-          listener: (message: Message) => void,
-        ) => (() => void) | undefined;
-      }
-    ).subscribe((message) => {
+    devtools.current = createReduxConnection(extension, name);
+
+    const devtoolsUnsubscribe = devtools.current?.subscribe((message) => {
       switch (message.type) {
         case 'DISPATCH':
           switch (message.payload?.type) {
@@ -81,7 +72,7 @@ export function useAtomsDevtools(
               break;
 
             case 'COMMIT':
-              connection.init(getDevtoolsState(getSnapshotAt()));
+              devtools.current?.init(getDevtoolsState(getSnapshotAt()));
               snapshots.current = [];
               break;
 
@@ -98,8 +89,6 @@ export function useAtomsDevtools(
       }
     });
 
-    devtools.current = connection;
-    devtools.current.shouldInit = true;
     return () => {
       extension?.disconnect?.();
       devtoolsUnsubscribe?.();
