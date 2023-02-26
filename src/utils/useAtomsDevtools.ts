@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
 import { Message } from './types';
+import { getReduxExtension } from './getReduxExtension';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
@@ -32,19 +33,7 @@ export function useAtomsDevtools(
 ): void {
   const { enabled } = options || {};
 
-  let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
-
-  try {
-    extension = (enabled ?? __DEV__) && window.__REDUX_DEVTOOLS_EXTENSION__;
-  } catch {
-    // ignored
-  }
-
-  if (!extension) {
-    if (__DEV__ && enabled) {
-      console.warn('Please install/enable Redux devtools extension');
-    }
-  }
+  const extension = getReduxExtension(enabled);
 
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
@@ -112,7 +101,7 @@ export function useAtomsDevtools(
     devtools.current = connection;
     devtools.current.shouldInit = true;
     return () => {
-      (extension as any).disconnect();
+      extension?.disconnect?.();
       devtoolsUnsubscribe?.();
     };
   }, [extension, goToSnapshot, name]);

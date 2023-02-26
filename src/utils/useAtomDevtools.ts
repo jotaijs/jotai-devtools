@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
 import type { Atom, WritableAtom } from 'jotai/vanilla';
+import { getReduxExtension } from './getReduxExtension';
 import { Message } from './types';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
@@ -14,19 +15,7 @@ export function useAtomDevtools<Value, Result>(
 ): void {
   const { enabled, name } = options || {};
 
-  let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
-
-  try {
-    extension = (enabled ?? __DEV__) && window.__REDUX_DEVTOOLS_EXTENSION__;
-  } catch {
-    // ignored
-  }
-
-  if (!extension) {
-    if (__DEV__ && enabled) {
-      console.warn('Please install/enable Redux devtools extension');
-    }
-  }
+  const extension = getReduxExtension(enabled);
 
   const [value, setValue] = useAtom(anAtom, options);
 
