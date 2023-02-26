@@ -3,7 +3,6 @@ import { Message } from './types';
 
 type ConnectResponse = ReturnType<NonNullable<ReduxExtension>['connect']>;
 export type Connector = ConnectResponse & {
-  shouldInit?: boolean;
   // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
   subscribe: (listener: (message: Message) => void) => (() => void) | undefined;
 };
@@ -12,13 +11,9 @@ export type Connector = ConnectResponse & {
  *  https://github.com/reduxjs/redux-devtools/blob/main/extension/docs/API/Methods.md#connectoptions
  **/
 export const createReduxConnector = (
-  extension: ReduxExtension | undefined,
+  extension: ReduxExtension,
   name: string,
 ) => {
-  if (!extension) return undefined;
   const connector = extension.connect({ name });
-
-  return Object.assign(connector, {
-    shouldInit: true,
-  }) as Connector;
+  return connector as Connector;
 };

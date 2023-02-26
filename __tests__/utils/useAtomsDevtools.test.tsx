@@ -75,7 +75,10 @@ describe('useAtomsDevtools', () => {
       </StrictMode>,
     );
 
-    expect(extension.init).toHaveBeenLastCalledWith(undefined);
+    expect(extension.init).toHaveBeenLastCalledWith({
+      dependents: {},
+      values: {},
+    });
   });
 
   describe('If there is no extension installed...', () => {

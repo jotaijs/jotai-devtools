@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
-import { Connector, createReduxConnector } from './createReduxConnector';
-import { getReduxExtension } from './getReduxExtension';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
+import { useDidMount } from './useDidMount';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
+import { useReduxConnector } from './useReduxConnector';
 
 const atomToPrintable = (atom: AnyAtom) =>
   atom.debugLabel ? `${atom}:${atom.debugLabel}` : `${atom}`;
@@ -32,6 +32,7 @@ export function useAtomsDevtools(
   options?: DevtoolsOptions,
 ): void {
   const { enabled } = options || {};
+  const didMount = useDidMount();
 
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
@@ -39,21 +40,22 @@ export function useAtomsDevtools(
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const devtools = useRef<Connector>();
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
-  useEffect(() => {
-    const extension = getReduxExtension(enabled);
-    devtools.current = createReduxConnector(extension, name);
-    return () => {
-      extension?.disconnect?.();
-    };
-  }, [enabled, name]);
+  const connector = useReduxConnector({
+    name,
+    enabled,
+    initialValue: getDevtoolsState(atomsSnapshot),
+  });
 
+  const subscriptionCleanup = useRef<() => void>();
   useEffect(() => {
-    const connector = devtools.current;
-    if (!connector) return;
+    // Only subscribe once.
+    // If there is an existing subscription, we don't want to create a second one.
+    if (subscriptionCleanup.current) subscriptionCleanup.current();
+
+    if (!connector.current) return;
 
     const getSnapshotAt = (index = snapshots.current.length - 1) => {
       // index 0 is @@INIT, so we need to return the next action (0)
@@ -64,7 +66,7 @@ export function useAtomsDevtools(
       return snapshot;
     };
 
-    const devtoolsUnsubscribe = connector.subscribe((message) => {
+    subscriptionCleanup.current = connector.current.subscribe((message) => {
       switch (message.type) {
         case 'DISPATCH':
           switch (message.payload?.type) {
@@ -73,7 +75,7 @@ export function useAtomsDevtools(
               break;
 
             case 'COMMIT':
-              devtools.current?.init(getDevtoolsState(getSnapshotAt()));
+              connector.current?.init(getDevtoolsState(getSnapshotAt()));
               snapshots.current = [];
               break;
 
@@ -90,23 +92,18 @@ export function useAtomsDevtools(
       }
     });
 
-    return devtoolsUnsubscribe;
-  }, [goToSnapshot]);
+    return subscriptionCleanup.current;
+  }, [connector, goToSnapshot]);
 
   useEffect(() => {
-    const connector = devtools.current;
-    if (!connector) return;
+    const connection = connector.current;
+    if (!connection || !didMount) return;
 
-    if (connector.shouldInit) {
-      connector.init(undefined);
-      connector.shouldInit = false;
-      return;
-    }
     if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else if (isRecording.current) {
       snapshots.current.push(atomsSnapshot);
-      connector.send(
+      connection.send(
         {
           type: `${snapshots.current.length}`,
           updatedAt: new Date().toLocaleString(),
@@ -114,5 +111,5 @@ export function useAtomsDevtools(
         getDevtoolsState(atomsSnapshot),
       );
     }
-  }, [atomsSnapshot]);
+  }, [atomsSnapshot, connector, didMount]);
 }
