@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
 import type { Atom, WritableAtom } from 'jotai/vanilla';
+import { Connector, createReduxConnector } from './createReduxConnector';
 import { getReduxExtension } from './getReduxExtension';
-import { Message } from './types';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;
@@ -21,13 +21,7 @@ export function useAtomDevtools<Value, Result>(
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const devtools = useRef<
-    ReturnType<
-      NonNullable<typeof window['__REDUX_DEVTOOLS_EXTENSION__']>['connect']
-    > & {
-      shouldInit?: boolean;
-    }
-  >();
+  const devtools = useRef<Connector>();
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
@@ -46,16 +40,9 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = extension.connect({ name: atomName });
+    devtools.current = createReduxConnector(extension, atomName);
 
-    const unsubscribe = (
-      devtools.current as unknown as {
-        // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
-        subscribe: (
-          listener: (message: Message) => void,
-        ) => (() => void) | undefined;
-      }
-    ).subscribe((message) => {
+    const unsubscribe = devtools.current?.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {
         try {
           setValueIfWritable(JSON.parse(message.payload));
@@ -95,7 +82,7 @@ export function useAtomDevtools<Value, Result>(
         });
       }
     });
-    devtools.current.shouldInit = true;
+
     return unsubscribe;
   }, [anAtom, extension, atomName, setValue]);
 
