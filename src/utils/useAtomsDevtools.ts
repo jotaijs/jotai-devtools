@@ -36,22 +36,28 @@ export function useAtomsDevtools(
 ): void {
   const { enabled } = options || {};
 
-  const extension = getReduxExtension(enabled);
-
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
   const goToSnapshot = useGotoAtomsSnapshot(options);
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const devtools = useRef<Connection>();
+  const connection = useRef<Connection>();
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    const extension = getReduxExtension(enabled);
+    connection.current = createReduxConnection(extension, name);
+
+    return () => {
+      extension?.disconnect?.();
+    };
+  }, [enabled, name]);
+
+  useEffect(() => {
+    if (!connection.current) return;
+
     const getSnapshotAt = (index = snapshots.current.length - 1) => {
       // index 0 is @@INIT, so we need to return the next action (0)
       const snapshot = snapshots.current[index >= 0 ? index : 0];
@@ -61,9 +67,7 @@ export function useAtomsDevtools(
       return snapshot;
     };
 
-    devtools.current = createReduxConnection(extension, name);
-
-    const devtoolsUnsubscribe = devtools.current?.subscribe((message) => {
+    const unsubscribe = connection.current.subscribe((message) => {
       switch (message.type) {
         case 'DISPATCH':
           switch (message.payload?.type) {
@@ -72,7 +76,7 @@ export function useAtomsDevtools(
               break;
 
             case 'COMMIT':
-              devtools.current?.init(getDevtoolsState(getSnapshotAt()));
+              connection.current?.init(getDevtoolsState(getSnapshotAt()));
               snapshots.current = [];
               break;
 
@@ -89,26 +93,22 @@ export function useAtomsDevtools(
       }
     });
 
-    return () => {
-      extension?.disconnect?.();
-      devtoolsUnsubscribe?.();
-    };
-  }, [extension, goToSnapshot, name]);
+    return unsubscribe;
+  }, [goToSnapshot]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
-    if (devtools.current.shouldInit) {
-      devtools.current.init(undefined);
-      devtools.current.shouldInit = false;
+    if (!connection.current) return;
+
+    if (connection.current.shouldInit) {
+      connection.current.init(undefined);
+      connection.current.shouldInit = false;
       return;
     }
     if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else if (isRecording.current) {
       snapshots.current.push(atomsSnapshot);
-      devtools.current.send(
+      connection.current.send(
         {
           type: `${snapshots.current.length}`,
           updatedAt: new Date().toLocaleString(),

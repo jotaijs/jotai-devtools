@@ -18,20 +18,22 @@ export function useAtomDevtools<Value, Result>(
 ): void {
   const { enabled, name } = options || {};
 
-  const extension = getReduxExtension(enabled);
-
   const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const devtools = useRef<Connection>();
+  const connection = useRef<Connection>();
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    const extension = getReduxExtension(enabled);
+    connection.current = createReduxConnection(extension, atomName);
+  }, [atomName, enabled]);
+
+  useEffect(() => {
+    if (!connection.current) return;
+
     const setValueIfWritable = (value: Value) => {
       if (typeof setValue === 'function') {
         (setValue as (value: Value) => void)(value);
@@ -43,9 +45,7 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = createReduxConnection(extension, atomName);
-
-    const unsubscribe = devtools.current?.subscribe((message) => {
+    const unsubscribe = connection.current.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {
         try {
           setValueIfWritable(JSON.parse(message.payload));
@@ -68,7 +68,7 @@ export function useAtomDevtools<Value, Result>(
         message.type === 'DISPATCH' &&
         message.payload?.type === 'COMMIT'
       ) {
-        devtools.current?.init(lastValue.current);
+        connection.current?.init(lastValue.current);
       } else if (
         message.type === 'DISPATCH' &&
         message.payload?.type === 'IMPORT_STATE'
@@ -78,7 +78,7 @@ export function useAtomDevtools<Value, Result>(
 
         computedStates.forEach(({ state }: { state: Value }, index: number) => {
           if (index === 0) {
-            devtools.current?.init(state);
+            connection.current?.init(state);
           } else {
             setValueIfWritable(state);
           }
@@ -87,23 +87,22 @@ export function useAtomDevtools<Value, Result>(
     });
 
     return unsubscribe;
-  }, [anAtom, extension, atomName, setValue]);
+  }, [anAtom, setValue]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
+    if (!connection.current) return;
+
     lastValue.current = value;
-    if (devtools.current.shouldInit) {
-      devtools.current.init(value);
-      devtools.current.shouldInit = false;
+    if (connection.current.shouldInit) {
+      connection.current.init(value);
+      connection.current.shouldInit = false;
     } else if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else {
-      devtools.current.send(
+      connection.current.send(
         `${atomName} - ${new Date().toLocaleString()}` as any,
         value,
       );
     }
-  }, [anAtom, extension, atomName, value]);
+  }, [atomName, value]);
 }
