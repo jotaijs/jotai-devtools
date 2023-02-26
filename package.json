@@ -57,7 +57,8 @@
     "release:minor": "yarn run release minor",
     "release:patch": "yarn run release patch",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
