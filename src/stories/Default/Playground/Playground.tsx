@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Title } from '@mantine/core';
-import { atom } from 'jotai';
+import { atom, useAtom } from 'jotai';
+import { atomsWithQuery } from 'jotai-tanstack-query';
 import {
   atomWithDefault,
   atomWithObservable,
@@ -9,7 +10,7 @@ import {
   unstable_unwrap as unwrap,
 } from 'jotai/vanilla/utils';
 import { interval } from 'rxjs';
-import { count, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 const baseCountAtom = atom(1);
 baseCountAtom.debugLabel = 'baseCountAtom';
@@ -60,11 +61,28 @@ asyncArrayAtom.debugLabel = 'asyncArrayAtom';
 const splitAsyncAtom = splitAtom(unwrap(asyncArrayAtom, () => []));
 splitAsyncAtom.debugLabel = 'splitAsyncAtom';
 
+const idAtom = atom(1);
+idAtom.debugLabel = 'idAtom';
+
+const [userAtom] = atomsWithQuery((get) => ({
+  queryKey: ['users', get(idAtom)],
+  queryFn: async ({ queryKey: [, id] }) => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    return res.json();
+  },
+}));
+userAtom.debugLabel = 'userAtom';
+
+const UserData = () => {
+  const [data] = useAtom(userAtom);
+  return <div>{JSON.stringify(data)}</div>;
+};
+
 export const Playground = () => {
   return (
     <>
       <Title>Playground</Title>
-      {count}
+      <UserData />
     </>
   );
 };

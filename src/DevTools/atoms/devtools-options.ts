@@ -15,10 +15,18 @@ export type DevToolsOptions = {
      *  the bigger the object, the slower the performance
      */
     | 'deep-nested';
+  /**
+   * Defaults to `false`
+   *
+   * Private are atoms that are used by Jotai libraries internally to manage state.
+   * They're often used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
+   */
+  shouldShowPrivateAtoms?: boolean;
 };
 
 const defaultDevToolsOptions: DevToolsOptions = {
   atomValueParser: 'raw',
+  shouldShowPrivateAtoms: false,
 };
 
 const internalDevToolsOptions = atom<DevToolsOptions>(defaultDevToolsOptions);

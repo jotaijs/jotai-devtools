@@ -5,7 +5,7 @@ import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
 import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
 
 type AtomListItemProps = {
-  label?: string;
+  label?: string | undefined;
   onClick: (pos: number) => void;
   atomKey: string;
   pos: number;

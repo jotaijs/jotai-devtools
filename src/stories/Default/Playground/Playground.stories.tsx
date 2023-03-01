@@ -23,6 +23,7 @@ export default {
 
 type CustomStorybookProps = DevToolsProps & {
   'options.atomValueParser': 'raw' | 'deep-nested';
+  'options.shouldShowPrivateAtoms': boolean;
 };
 
 type Story = StoryObj<CustomStorybookProps>;
@@ -32,6 +33,7 @@ export const Default: Story = {
     const nextOptions = {
       ...args.options,
       atomValueParser: args['options.atomValueParser'],
+      shouldShowPrivateAtoms: args['options.shouldShowPrivateAtoms'],
     };
     const props = {
       ...args,
@@ -54,6 +56,7 @@ export const Default: Story = {
   args: {
     isInitialOpen: true,
     'options.atomValueParser': 'raw',
+    'options.shouldShowPrivateAtoms': false,
   },
   argTypes: {
     store: {

@@ -1,14 +1,19 @@
 import * as React from 'react';
-import { Box, Code, Text, Title } from '@mantine/core';
+import { Box, Code, MantineColor, Text, Title, Tooltip } from '@mantine/core';
 import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
 import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
 
 type AtomDetailItemProps = {
   label: string;
   value: string;
+  color?: MantineColor;
 };
 
-const DisplayAtomDetailsItem = ({ label, value }: AtomDetailItemProps) => {
+const DisplayAtomDetailsItem = ({
+  label,
+  value,
+  color,
+}: AtomDetailItemProps) => {
   return (
     <Box mb={10}>
       <Text
@@ -20,18 +25,25 @@ const DisplayAtomDetailsItem = ({ label, value }: AtomDetailItemProps) => {
       >
         {label}
       </Text>
-      <Code data-testid={`display-detail-item-value-${value}`}>{value}</Code>
+      <Code data-testid={`display-detail-item-value-${value}`} color={color}>
+        {value}
+      </Code>
     </Box>
   );
 };
 
 type AtomMetaDetailsProps = {
-  debugLabel?: string;
+  debugLabel?: string | undefined;
   atomValueType: AtomValueType;
+  isAtomPrivate?: boolean | undefined;
 };
 
 export const AtomMetaDetails = React.memo(
-  ({ debugLabel, atomValueType }: AtomMetaDetailsProps): JSX.Element => {
+  ({
+    debugLabel,
+    atomValueType,
+    isAtomPrivate,
+  }: AtomMetaDetailsProps): JSX.Element => {
     return (
       <Box>
         <Title size="h3" mb={10}>
@@ -45,6 +57,9 @@ export const AtomMetaDetails = React.memo(
           value={parseDebugLabel(debugLabel)}
         />
         <DisplayAtomDetailsItem label="Value type" value={atomValueType} />
+        {isAtomPrivate && (
+          <DisplayAtomDetailsItem label="Private" value={'Yes'} color={'red'} />
+        )}
       </Box>
     );
   },

@@ -2,9 +2,10 @@ import React from 'react';
 import { Box, Text } from '@mantine/core';
 import { AnyAtomValue } from 'src/types';
 import {
-  AtomValueType,
+  ErrorSymbol,
   stringifyAtomValue,
 } from '../../../../../../../../utils/';
+import { ErrorMessage } from '../../../../ErrorMessage';
 import {
   MemoizedValueRenderer,
   getPrismLanguageType,
@@ -12,14 +13,13 @@ import {
 
 type AtomParseRawValueValueProps = {
   atomValue: AnyAtomValue;
-  atomValueType: AtomValueType;
 };
 
 export const AtomParseRawValueValue = ({
   atomValue,
-  atomValueType,
 }: AtomParseRawValueValueProps): JSX.Element => {
   const prismLanguageType = getPrismLanguageType(atomValue);
+  const parsedValue = stringifyAtomValue(atomValue);
 
   return (
     <Box>
@@ -27,11 +27,11 @@ export const AtomParseRawValueValue = ({
         Raw value
       </Text>
       {/* TODO investigate if this could ever be the case given that the parent component is wrapped with suspense */}
-      {atomValueType === 'promise' ? (
-        <Text>No Preview available</Text>
+      {parsedValue === ErrorSymbol ? (
+        <ErrorMessage message="Failed to parse the value of the atom" />
       ) : (
         <MemoizedValueRenderer
-          value={stringifyAtomValue(atomValue)}
+          value={parsedValue}
           prismLanguageType={prismLanguageType}
         />
       )}

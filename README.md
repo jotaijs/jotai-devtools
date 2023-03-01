@@ -119,6 +119,9 @@ type DevToolsProps = {
     // `raw` - parses the top level atom value but does not parse the values of atoms within atoms
     // `deep-nested` - Parses values of atoms within atoms. Linear performance curve. Bigger the object, the slower the performance
     atomValueParser?: 'raw' | 'deep-nested';
+    // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
+    // Defaults to `false`
+    shouldShowPrivateAtoms?: boolean;
   };
 };
 ```

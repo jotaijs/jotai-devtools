@@ -29,13 +29,11 @@ export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
       <AtomMetaDetails
         debugLabel={atom?.debugLabel}
         atomValueType={atomValueType}
+        isAtomPrivate={atom?.debugPrivate}
       />
 
       {shouldDisplayRawValue && (
-        <AtomParseRawValueValue
-          atomValue={atomValue}
-          atomValueType={atomValueType}
-        />
+        <AtomParseRawValueValue atomValue={atomValue} />
       )}
 
       {shouldDisplayDeepNestedValue && (

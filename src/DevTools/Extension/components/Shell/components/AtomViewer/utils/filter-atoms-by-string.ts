@@ -10,8 +10,8 @@ export const filterAtomsByString = (
     return defaultAtoms;
   }
 
-  return defaultAtoms.filter((atomTuple) => {
-    const parsedDebugLabel = parseDebugLabel(atomTuple[0].debugLabel);
+  return defaultAtoms.filter(([atomTuple]) => {
+    const parsedDebugLabel = parseDebugLabel(atomTuple?.debugLabel);
     const normalizedLabel = parsedDebugLabel.toLocaleLowerCase();
     return normalizedLabel.includes(normalizedStr);
   });
