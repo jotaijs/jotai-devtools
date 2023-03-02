@@ -4,11 +4,12 @@
 
 - Debug 🐞 raw or deeply nested (atoms-in-atoms) atom values with ease
 - Out-of-the-box 🔌 support for async/suspendible atoms
-- Built-in Dark mode 🌗 support
+- Built-in Dark mode 🌗
 - ✅ Supports custom `store`
 - ✅ Works with provider-less mode
 - ✅ Works with Next.js
 - ✅ Supports custom `nonce` for CSP
+- ✅ Hides private atoms with ability to configure (requires Jotai `>=2.0.3`)
 
 ## Preview
 
