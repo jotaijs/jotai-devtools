@@ -46,7 +46,7 @@
     "test": "jest",
     "test:watch": "yarn run test --watch",
     "test:coverage": "yarn run test --coverage",
-    "test:ci": "yarn run test:coverage --maxWorkers=1",
+    "test:ci": "yarn run test:coverage --maxWorkers=1 --silent",
     "commitlint": "commitlint",
     "lint-staged": "lint-staged",
     "compile": "tsup",

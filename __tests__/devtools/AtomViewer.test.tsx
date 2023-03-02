@@ -48,6 +48,118 @@ describe('DevTools - AtomViewer', () => {
       expect(container).toMatchSnapshot();
     });
 
+    describe('private atoms', () => {
+      const PrivateAtomsWithDevTools = ({
+        markAtomPrivate = true,
+        shouldShowPrivateAtoms = false,
+      }: {
+        markAtomPrivate?: boolean;
+        shouldShowPrivateAtoms?: boolean;
+      }) => {
+        // Create atoms inside the component so that they are recreated for each test
+        const countAtom = useMemo(() => atom(0), []);
+        countAtom.debugLabel = 'countAtom';
+
+        const privateAtom = useMemo(
+          () => atom((get) => get(countAtom) * 0),
+          [countAtom],
+        );
+        privateAtom.debugLabel = 'privateAtom';
+        privateAtom.debugPrivate = markAtomPrivate;
+
+        const doubleAtom = useMemo(
+          () => atom((get) => get(countAtom) * get(privateAtom)),
+          [countAtom, privateAtom],
+        );
+
+        useAtomValue(countAtom);
+        useAtomValue(doubleAtom);
+        useAtomValue(privateAtom);
+
+        return (
+          <DevTools
+            isInitialOpen={true}
+            options={{
+              shouldShowPrivateAtoms: shouldShowPrivateAtoms,
+            }}
+          />
+        );
+      };
+
+      it('should not render private atoms', async () => {
+        customRender(<PrivateAtomsWithDevTools />);
+        expect(screen.queryByText('privateAtom')).not.toBeInTheDocument();
+        expect(screen.getByText('countAtom')).toBeInTheDocument();
+        expect(screen.getByText('<unlabeled-atom>')).toBeInTheDocument();
+      });
+
+      it('should render private atoms when shouldShowPrivateAtoms is marked as true', async () => {
+        customRender(<PrivateAtomsWithDevTools shouldShowPrivateAtoms />);
+        expect(screen.getByText('privateAtom')).toBeInTheDocument();
+      });
+
+      it('should hide private atoms from dependents list when shouldShowPrivateAtoms is marked as false', async () => {
+        const { container } = customRender(<PrivateAtomsWithDevTools />);
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('countAtom'));
+        });
+
+        expect(screen.getByText('Atom Details')).toBeInTheDocument();
+        expect(screen.getByText('Meta')).toBeInTheDocument();
+        expect(screen.getByText('Debug Label')).toBeInTheDocument();
+        expect(
+          screen.getByTestId('display-detail-item-value-countAtom'),
+        ).toHaveTextContent('countAtom');
+        expect(screen.getByText('Value type')).toBeInTheDocument();
+        expect(screen.getByText('number')).toBeInTheDocument();
+        expect(screen.queryByText('Private')).not.toBeInTheDocument();
+        expect(screen.queryByText('Yes')).not.toBeInTheDocument();
+
+        expect(screen.getByText('Raw value')).toBeInTheDocument();
+        expect(screen.getByTestId('atom-parsed-value')).toHaveTextContent('0');
+
+        expect(screen.getByText('Dependents')).toBeInTheDocument();
+        expect(
+          screen.queryByTestId('dependents-list-item-<unlabeled-atom>-0'),
+        ).toBeInTheDocument();
+        expect(
+          screen.queryByTestId('dependents-list-item-privateAtom-0'),
+        ).not.toBeInTheDocument();
+        expect(container).toMatchSnapshot();
+      });
+
+      it('should mark private atoms in atom details', async () => {
+        const { container } = customRender(
+          <PrivateAtomsWithDevTools shouldShowPrivateAtoms />,
+        );
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('privateAtom'));
+        });
+
+        expect(screen.getByText('Atom Details')).toBeInTheDocument();
+        expect(screen.getByText('Meta')).toBeInTheDocument();
+        expect(screen.getByText('Debug Label')).toBeInTheDocument();
+        expect(
+          screen.getByTestId('display-detail-item-value-privateAtom'),
+        ).toHaveTextContent('privateAtom');
+        expect(screen.getByText('Value type')).toBeInTheDocument();
+        expect(screen.getByText('number')).toBeInTheDocument();
+        expect(screen.getByText('Private')).toBeInTheDocument();
+        expect(screen.getByText('Yes')).toBeInTheDocument();
+
+        expect(screen.getByText('Raw value')).toBeInTheDocument();
+        expect(screen.getByTestId('atom-parsed-value')).toHaveTextContent('0');
+
+        expect(screen.getByText('Dependents')).toBeInTheDocument();
+        expect(
+          screen.getByTestId('dependents-list-item-<unlabeled-atom>-0'),
+        ).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
+      });
+    });
+
     describe('Search', () => {
       it('should search for atoms correctly', async () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
@@ -81,6 +193,45 @@ describe('DevTools - AtomViewer', () => {
 
   describe('Atom details', () => {
     describe('Raw value', () => {
+      it('should display an error when we are not able to parse the value', async () => {
+        class CircularClass {
+          circular: any;
+          constructor() {
+            this.circular = this;
+          }
+        }
+
+        const circularObject: InstanceType<typeof CircularClass> =
+          new CircularClass();
+
+        const CircularAtomWithDevTools = () => {
+          // Create atoms inside the component so that they are recreated for each test
+          const circularAtom = useMemo(() => atom(circularObject), []);
+          circularAtom.debugLabel = 'circularAtom';
+
+          useAtomValue(circularAtom);
+          return <DevTools isInitialOpen={true} />;
+        };
+
+        const { container } = customRender(<CircularAtomWithDevTools />);
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('circularAtom'));
+        });
+
+        expect(screen.getByText('Atom Details')).toBeInTheDocument();
+        expect(screen.getByText('Meta')).toBeInTheDocument();
+        expect(screen.getByText('Debug Label')).toBeInTheDocument();
+
+        expect(screen.getByText('Raw value')).toBeInTheDocument();
+        expect(
+          screen.getByText('Failed to parse the value of the atom'),
+        ).toBeInTheDocument();
+        expect(screen.getByText('Dependents')).toBeInTheDocument();
+        expect(screen.getByText('No dependents')).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
+      });
+
       it('should display atom details when an atom is selected', async () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
 

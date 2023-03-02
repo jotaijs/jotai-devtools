@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Title } from '@mantine/core';
-import { atom, useAtom } from 'jotai';
+import { atom, useAtom, useAtomValue } from 'jotai';
 import { atomsWithQuery } from 'jotai-tanstack-query';
 import {
   atomWithDefault,
@@ -78,11 +78,24 @@ const UserData = () => {
   return <div>{JSON.stringify(data)}</div>;
 };
 
+class CircularClass {
+  circular: any;
+  constructor() {
+    this.circular = this;
+  }
+}
+
+const circularObject: InstanceType<typeof CircularClass> = new CircularClass();
+
+const circularAtom = atom(circularObject);
+circularAtom.debugLabel = 'circularAtom';
+circularAtom.debugPrivate = true;
+
 export const Playground = () => {
   return (
     <>
       <Title>Playground</Title>
-      <UserData />
+      {/* <UserData /> */}
     </>
   );
 };
