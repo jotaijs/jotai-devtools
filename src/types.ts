@@ -6,10 +6,7 @@ export type Store = ReturnType<typeof createStore>;
 export type Options = Parameters<typeof useStore>[0];
 
 export type AnyAtomValue = unknown;
-export type AnyAtom = Atom<AnyAtomValue> & {
-  // FIXME remove this after jotai@2.0.3 is added
-  debugPrivate?: boolean;
-};
+export type AnyAtom = Atom<AnyAtomValue>;
 export type AtomsValues = Map<AnyAtom, AnyAtomValue>; // immutable
 export type AtomsDependents = Map<AnyAtom, Set<AnyAtom>>; // immutable
 export type AtomsSnapshot = Readonly<{

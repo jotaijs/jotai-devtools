@@ -8544,10 +8544,10 @@ jotai-tanstack-query@^0.5.0:
   resolved "https://registry.yarnpkg.com/jotai-tanstack-query/-/jotai-tanstack-query-0.5.0.tgz#d6d5e3efbd9704f4c4c5c381f8b46f635e62d062"
   integrity sha512-UXfI+I+bdrYL3R1o+OrADY9diizQD8/yqi+DJswOisKGzvNJs1FUIXi9ugtWVR9cjAfRuroG6fQzJhuNyUJ70g==
 
-jotai@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/jotai/-/jotai-2.0.2.tgz#52728e91de61742263e40fda79a367ab4649506c"
-  integrity sha512-0yOked08Swa84LUbBjtj7ZLZrE05n3u50rHeZ+bsT86thUjcy0kFgQz9GmEWhYbQDFoT1G8Ww6edSj/MBJHO4A==
+jotai@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-2.0.3.tgz#3b67cda9f6d5feb70a14db0b842a9873aacda8b5"
+  integrity sha512-MMjhSPAL3RoeZD9WbObufRT2quThEAEknHHridf2ma8Ml7ZVQmUiHk0ssdbR3F0h3kcwhYqSGJ59OjhPge7RRg==
 
 joycon@^3.0.1:
   version "3.1.1"
