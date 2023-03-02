@@ -1,3 +1,19 @@
+# [0.3.0-next.4](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.3...v0.3.0-next.4) (2023-03-02)
+
+### Bug Fixes
+
+- bundle in fonts for better stability
+  ([236cd75](https://github.com/jotai-labs/jotai-devtools/commit/236cd75c82add160635b0ded2fa2e0bfadc60e71))
+- fonts css
+  ([be8c16c](https://github.com/jotai-labs/jotai-devtools/commit/be8c16ccab78a0b9153b2a6c655d4f840547c73c))
+- use JetBrains mono fonts on NavLink
+  ([68cbe5a](https://github.com/jotai-labs/jotai-devtools/commit/68cbe5a4427ed1b5ea1bb968c1554a50f5ce1127))
+
+### Features
+
+- add option to display private atoms
+  ([d1875ee](https://github.com/jotai-labs/jotai-devtools/commit/d1875ee58ca2faa49512e30d1efc17f10b93de3b))
+
 # [0.3.0-next.3](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.2...v0.3.0-next.3) (2023-02-17)
 
 ### Bug Fixes
