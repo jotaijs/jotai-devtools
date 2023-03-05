@@ -49,7 +49,18 @@ export const useAtomsDebugValue = (options?: Options) => {
     const callback = () => {
       setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
     };
-    const unsubscribe = store.dev_subscribe_state?.(callback);
+    // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
+    let devSubscribeStore = store.dev_subscribe_state;
+
+    if (typeof store.dev_subscribe_store !== 'function') {
+      console.warn(
+        "[DEPRECATION-WARNING] Jotai version you're using contains deprecated dev-only properties that will be removed soon. Please update to the latest version of Jotai.",
+      );
+    } else {
+      devSubscribeStore = store.dev_subscribe_store;
+    }
+
+    const unsubscribe = devSubscribeStore?.(callback);
     callback();
     return unsubscribe;
   }, [enabled, store]);

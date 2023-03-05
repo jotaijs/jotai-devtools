@@ -189,6 +189,73 @@ describe('DevTools - AtomViewer', () => {
         expect(container).toMatchSnapshot();
       });
     });
+
+    describe('auto unmount', () => {
+      it('should unselect the atom when an atom is unsubscribed', async () => {
+        const BasicAtoms = () => {
+          const countAtom = useMemo(() => atom(0), []);
+          countAtom.debugLabel = 'countAtom';
+          const doubleCountAtom = useMemo(
+            () => atom((get) => get(countAtom) * 2),
+            [countAtom],
+          );
+          doubleCountAtom.debugLabel = 'doubleCountAtom';
+          useAtomValue(doubleCountAtom);
+
+          return <div data-testid="basic-atoms"></div>;
+        };
+
+        const ToggleAbleAtomWithDevTools = () => {
+          const [shouldShow, setShouldShow] = React.useState(true);
+
+          const handleOntoggle = React.useCallback(() => {
+            setShouldShow((s) => !s);
+          }, [setShouldShow]);
+
+          return (
+            <>
+              {shouldShow ? <BasicAtoms /> : null}
+              <button onClick={handleOntoggle}>Toggle</button>
+            </>
+          );
+        };
+
+        const TestComponent = () => {
+          return (
+            <>
+              <DevTools isInitialOpen={true} />
+              <ToggleAbleAtomWithDevTools />
+            </>
+          );
+        };
+
+        customRender(<TestComponent />);
+        await act(async () => {
+          await userEvent.click(screen.getByText('doubleCountAtom'));
+        });
+        expect(
+          screen.getByTestId('display-detail-item-value-doubleCountAtom'),
+        ).toBeInTheDocument();
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('Toggle'));
+        });
+
+        expect(screen.queryByText('Atom Details')).not.toBeInTheDocument();
+        expect(
+          screen.queryByText('display-detail-item-value-doubleCountAtom'),
+        ).not.toBeInTheDocument();
+        expect(
+          screen.getByTestId('atom-list-no-atoms-found-message'),
+        ).toHaveTextContent('No Atoms found!');
+        expect(screen.getByLabelText('Search')).toBeInTheDocument();
+        expect(
+          screen.getByText(
+            'Select an atom from the left panel to view the details',
+          ),
+        ).toBeInTheDocument();
+      });
+    });
   });
 
   describe('Atom details', () => {
@@ -276,100 +343,6 @@ describe('DevTools - AtomViewer', () => {
         const AtomRenderer = ({ atom }: { atom: AnyAtom }) => {
           useAtomValue(atom);
           return <DevTools isInitialOpen={true} />;
-        };
-
-        it.each`
-          type           | value                    | expected
-          ${'string'}    | ${'some-string'}         | ${'some-string'}
-          ${'number'}    | ${123}                   | ${123}
-          ${'boolean'}   | ${true}                  | ${true}
-          ${'boolean'}   | ${false}                 | ${false}
-          ${'null'}      | ${null}                  | ${'null'}
-          ${'undefined'} | ${undefined}             | ${'undefined'}
-          ${'bigint'}    | ${BigInt(123)}           | ${'123'}
-          ${'symbol'}    | ${Symbol('some-symbol')} | ${'Symbol(some-symbol)'}
-          ${'function'}  | ${() => () => 'hello'}   | ${"()=>'hello'"}
-          ${'object'}    | ${{ foo: 'bar' }}        | ${'{ "foo": "bar"}'}
-          ${'array'}     | ${[1, 2, 3]}             | ${'[ 1, 2, 3]'}
-        `(
-          'should parse "$type" value correctly',
-          async ({ value, expected }) => {
-            const valueAtom = atom(value);
-            valueAtom.debugLabel = 'valueAtom';
-
-            customRender(<AtomRenderer atom={valueAtom} />);
-
-            await act(async () => {
-              await userEvent.click(screen.getByText('valueAtom'));
-            });
-
-            expect(screen.getByTestId('atom-parsed-value')).toHaveTextContent(
-              expected,
-            );
-          },
-        );
-      });
-    });
-
-    describe('Deep nested values', () => {
-      it('should display atom details with deeply parsed value when an atom is selected', async () => {
-        const NestedAtomsWithDevTools = () => {
-          // Create atoms inside the component so that they are recreated for each test
-          const countAtom = useMemo(() => atom(0), []);
-          countAtom.debugLabel = 'countAtom';
-
-          const doubleNestedAtom = useMemo(
-            () => atom(atom((get) => get(countAtom) * 2 + 1)),
-            [countAtom],
-          );
-
-          useAtomValue(countAtom);
-          useAtomValue(doubleNestedAtom);
-          return (
-            <DevTools
-              isInitialOpen={true}
-              options={{ atomValueParser: 'deep-nested' }}
-            />
-          );
-        };
-
-        const { container } = customRender(<NestedAtomsWithDevTools />);
-
-        await act(async () => {
-          await userEvent.click(screen.getByText('<unlabeled-atom>'));
-        });
-
-        expect(screen.getByText('Atom Details')).toBeInTheDocument();
-        expect(screen.getByText('Meta')).toBeInTheDocument();
-        expect(screen.getByText('Debug Label')).toBeInTheDocument();
-        expect(
-          screen.getByTestId('display-detail-item-value-<unlabeled-atom>'),
-        ).toHaveTextContent('<unlabeled-atom>');
-        expect(screen.getByText('Value type')).toBeInTheDocument();
-        expect(
-          screen.getByTestId('display-detail-item-value-atom'),
-        ).toHaveTextContent('atom');
-
-        expect(screen.getByText('Parsed value')).toBeInTheDocument();
-        expect(screen.getByTestId('atom-parsed-value')).toHaveTextContent('1');
-
-        expect(screen.getByText('Dependents')).toBeInTheDocument();
-        // There are no dependents for this atom yet because those dependents are not yet mounted
-        expect(screen.getByText('No dependents')).toBeInTheDocument();
-        await waitFor(() => expect(container).toMatchSnapshot());
-      });
-
-      describe('Supports most primitive value types', () => {
-        const AtomRenderer = ({ atom }: { atom: AnyAtom }) => {
-          useAtomValue(atom);
-          return (
-            <DevTools
-              isInitialOpen={true}
-              options={{
-                atomValueParser: 'deep-nested',
-              }}
-            />
-          );
         };
 
         it.each`

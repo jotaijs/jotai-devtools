@@ -1,13 +1,10 @@
 import React from 'react';
 import { Stack } from '@mantine/core';
-import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';
-import { useDevToolsOptionsValue } from '../../../../../../../../atoms/devtools-options';
-import { useUserStoreOptions } from '../../../../../../../../hooks/useUserStore';
 import { getTypeOfAtomValue } from '../../../../../../../../utils/get-type-of-atom-value';
+import { useInternalAtomValue } from '../../../hooks/useInternalAtomValue';
 import { AtomDependentsList } from './AtomDependentsList';
 import { AtomMetaDetails } from './AtomMetaDetails';
-import { AtomParseDeepNestedValue } from './AtomParseDeepNestedValue';
 import { AtomParseRawValueValue } from './AtomParseRawValue';
 
 type DisplayAtomDetailsProps = {
@@ -15,14 +12,8 @@ type DisplayAtomDetailsProps = {
 };
 
 export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
-  const atomValue = useAtomValue(atom, useUserStoreOptions());
-  const devtoolsOptions = useDevToolsOptionsValue();
+  const atomValue = useInternalAtomValue(atom);
   const atomValueType = getTypeOfAtomValue(atomValue);
-
-  const shouldDisplayDeepNestedValue =
-    devtoolsOptions.atomValueParser === 'deep-nested';
-
-  const shouldDisplayRawValue = devtoolsOptions.atomValueParser === 'raw';
 
   return (
     <Stack h="auto">
@@ -32,13 +23,12 @@ export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
         isAtomPrivate={atom?.debugPrivate}
       />
 
-      {shouldDisplayRawValue && (
-        <AtomParseRawValueValue atomValue={atomValue} />
-      )}
+      <AtomParseRawValueValue atomValue={atomValue} />
 
-      {shouldDisplayDeepNestedValue && (
+      {/* FIXME: Bug in core jotai prevents us from subscribing deeply nested atoms properly*/}
+      {/* {shouldDisplayDeepNestedValue && (
         <AtomParseDeepNestedValue atom={atom} atomValueType={atomValueType} />
-      )}
+      )} */}
 
       {/* TODO add dependencies list */}
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box, Text } from '@mantine/core';
-import { useAtomValue } from 'jotai/react';
 import { AnyAtom } from 'src/types';
 import { useUserStore } from '../../../../../../../../hooks/useUserStore';
 import {
@@ -8,6 +7,7 @@ import {
   deepParseAtomValue,
   stringifyAtomValue,
 } from '../../../../../../../../utils';
+import { useInternalAtomValue } from '../../../hooks/useInternalAtomValue';
 import {
   MemoizedValueRenderer,
   getPrismLanguageType,
@@ -21,7 +21,7 @@ const useAtomValueSubscribe = (atom: AnyAtom) => {
   const store = useUserStore();
   // We use `useAtomValue` because it supports async atoms too
   // Should we support nested async atoms?
-  const atomValue = useAtomValue(atom, { store });
+  const atomValue = useInternalAtomValue(atom);
 
   // Using an object to hold a value allows us to store values like functions
   const [nextValue, setNextValue] = React.useState(() => ({
@@ -29,13 +29,22 @@ const useAtomValueSubscribe = (atom: AnyAtom) => {
   }));
 
   React.useEffect(() => {
-    const cb = () => {
+    if (!store.dev_subscribe_state) return;
+    // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
+    let devSubscribeStore = store.dev_subscribe_state;
+    if (typeof store.dev_subscribe_store === 'function') {
+      devSubscribeStore = store.dev_subscribe_store;
+    }
+
+    const cb = (
+      type?: Parameters<Parameters<typeof store.dev_subscribe_store>[0]>[0],
+    ) => {
       setNextValue({ value: deepParseAtomValue(atomValue, store) });
     };
 
     // Perhaps there is a more efficient way to subscribe more granularly to atom updates?
     // We could explore the store.sub approach and figure out how to unsubscribe
-    const unsubscribe = store.dev_subscribe_state?.(cb);
+    const unsubscribe = devSubscribeStore?.(cb);
     cb();
     return unsubscribe;
   }, [store, setNextValue, atomValue]);

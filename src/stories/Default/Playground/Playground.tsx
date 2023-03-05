@@ -11,6 +11,7 @@ import {
 } from 'jotai/vanilla/utils';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { SomeComponentWithToggle } from './SomeComponent';
 
 const baseCountAtom = atom(1);
 baseCountAtom.debugLabel = 'baseCountAtom';
@@ -96,6 +97,7 @@ export const Playground = () => {
     <>
       <Title>Playground</Title>
       {/* <UserData /> */}
+      <SomeComponentWithToggle />
     </>
   );
 };

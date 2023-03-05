@@ -2,7 +2,7 @@
 
 ## Features
 
-- Debug 🐞 raw or deeply nested (atoms-in-atoms) atom values with ease
+- Debug 🐞 atom values with ease
 - Out-of-the-box 🔌 support for async/suspendible atoms
 - Built-in Dark mode 🌗
 - ✅ Supports custom `store`
@@ -116,10 +116,6 @@ type DevToolsProps = {
   // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
   nonce?: string;
   options?: {
-    // Parsing strategy for AtomViewer. Defaults to `raw`
-    // `raw` - parses the top level atom value but does not parse the values of atoms within atoms
-    // `deep-nested` - Parses values of atoms within atoms. Linear performance curve. Bigger the object, the slower the performance
-    atomValueParser?: 'raw' | 'deep-nested';
     // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
     // Defaults to `false`
     shouldShowPrivateAtoms?: boolean;

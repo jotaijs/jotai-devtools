@@ -48,6 +48,8 @@ const config: Config.InitialOptions = {
     'src/**/*.{js,ts,tsx}',
     '!src/**/*.stories.{js,ts,tsx}',
     '!src/stories/**',
+    // Copied as is from Jotai core and we're not changing it
+    '!src/DevTools/Extension/components/Shell/components/AtomViewer/hooks/use.ts',
     '__tests__/**/*.{js,ts,tsx}',
   ],
   coverageDirectory: './coverage/',
