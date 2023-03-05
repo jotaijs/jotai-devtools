@@ -1,6 +1,9 @@
 # Jotai DevTools
 
-## Features
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jotaijs/jotai-devtools/ci.yml?style=flat&colorA=000000&colorB=259e02)](https://github.com/jotaijs/jotai-devtools/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/npm/v/jotai-devtools?style=flat&colorA=000000&colorB=259e02)](https://www.npmjs.com/package/jotai-devtools)
+
+## 🚀 Features
 
 - Debug 🐞 atom values with ease
 - Out-of-the-box 🔌 support for async/suspendible atoms
@@ -10,8 +13,9 @@
 - ✅ Works with Next.js
 - ✅ Supports custom `nonce` for CSP
 - ✅ Hides private atoms with ability to configure (requires Jotai `>=2.0.3`)
+- ✅ Tree-shakable and built for non-production environments
 
-## Preview
+## 📺 Preview
 
 <p>
     <a href="https://www.npmjs.com/package/jotai-devtools">
@@ -19,12 +23,12 @@
   </a>
 </p>
 
-## Prerequisites
+## ☝️ Prerequisites
 
 - Jotai version `>=1.11.0` (highly recommended to use `2.x.x`)
 - React version `>=17.0.0`
 
-## Setup
+## 📦 Setup
 
 ```sh
 # yarn
@@ -34,12 +38,16 @@ yarn add jotai-devtools
 npm install jotai-devtools --save
 ```
 
-## UI DevTools
+## ✨ UI DevTools
+
+Enhance your development experience with the UI based Jotai DevTool
+
+[![Demo](https://img.shields.io/badge/demo-%F0%9F%9A%80-green?style=flat&colorA=000000&colorB=259e02)](https://codesandbox.io/s/jotai-devtools-demo-k5p12d)
 
 ### Babel plugin setup - (Optional but highly recommended)
 
-Use Jotai babel plugins for optimal experience. Full guide is available on
-[jotai.org](https://jotai.org/docs/tools/babel)
+Use Jotai babel plugins for optimal debugging experience. Find the complete
+guide on [jotai.org](https://jotai.org/docs/tools/babel)
 
 Eg.
 
@@ -56,7 +64,10 @@ Eg.
 
 ### Next JS setup
 
-Enable `transpilePackages` for CSS to be imported correctly.
+_You may skip this section if you're not using [Next.js](https://nextjs.org)._
+
+Enable `transpilePackages` for the UI CSS and components to be transpiled
+correctly.
 
 ```ts
 // next.config.ts
@@ -68,6 +79,26 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+```
+
+### Available props
+
+```ts
+type DevToolsProps = {
+  // Defaults to false
+  isInitialOpen?: boolean;
+  // pass a custom store
+  store?: Store;
+  // Defaults to light
+  theme?: 'dark' | 'light';
+  // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
+  nonce?: string;
+  options?: {
+    // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
+    // Defaults to `false`
+    shouldShowPrivateAtoms?: boolean;
+  };
+};
 ```
 
 ### Provider-less
@@ -100,26 +131,6 @@ const App = () => {
       {/* your app */}
     </Provider>
   );
-};
-```
-
-### Available props
-
-```ts
-type DevToolsProps = {
-  // defaults to false
-  isInitialOpen?: boolean;
-  // pass a custom store
-  store?: Store;
-  // Defaults to light
-  theme?: 'dark' | 'light';
-  // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
-  nonce?: string;
-  options?: {
-    // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
-    // Defaults to `false`
-    shouldShowPrivateAtoms?: boolean;
-  };
 };
 ```
 
