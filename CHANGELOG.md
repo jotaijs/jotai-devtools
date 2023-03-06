@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/jotaijs/jotai-devtools/compare/v0.3.0-next.4...v0.3.0) (2023-03-06)
+
+### Bug Fixes
+
+- improve atom list stability + remove deep parse feature
+  ([fe82bfe](https://github.com/jotaijs/jotai-devtools/commit/fe82bfe4e5d1b69366bc8ca4f5f1f612a32209e1))
+
 # [0.3.0-next.4](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.3...v0.3.0-next.4) (2023-03-02)
 
 ### Bug Fixes
