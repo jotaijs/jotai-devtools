@@ -1,11 +1,6 @@
 import { useEffect, useRef } from 'react';
-import {
-  AnyAtom,
-  AnyAtomValue,
-  AtomsSnapshot,
-  Message,
-  Options,
-} from './types';
+import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
+import { Message } from './types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 

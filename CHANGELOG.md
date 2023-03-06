@@ -1,3 +1,61 @@
+# [0.3.0-next.4](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.3...v0.3.0-next.4) (2023-03-02)
+
+### Bug Fixes
+
+- bundle in fonts for better stability
+  ([236cd75](https://github.com/jotai-labs/jotai-devtools/commit/236cd75c82add160635b0ded2fa2e0bfadc60e71))
+- fonts css
+  ([be8c16c](https://github.com/jotai-labs/jotai-devtools/commit/be8c16ccab78a0b9153b2a6c655d4f840547c73c))
+- use JetBrains mono fonts on NavLink
+  ([68cbe5a](https://github.com/jotai-labs/jotai-devtools/commit/68cbe5a4427ed1b5ea1bb968c1554a50f5ce1127))
+
+### Features
+
+- add option to display private atoms
+  ([d1875ee](https://github.com/jotai-labs/jotai-devtools/commit/d1875ee58ca2faa49512e30d1efc17f10b93de3b))
+
+# [0.3.0-next.3](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.2...v0.3.0-next.3) (2023-02-17)
+
+### Bug Fixes
+
+- infer options type from Jotai
+  ([8ddad63](https://github.com/jotai-labs/jotai-devtools/commit/8ddad63821ce825b8871a14e7a6cc37eb2c93622))
+- use exactOptionalPropertyTypes
+  ([6c9cbdf](https://github.com/jotai-labs/jotai-devtools/commit/6c9cbdffa020e9f15e1e0198d18eefae0b2e4f28))
+
+### Features
+
+- add custom style nonce + remove global normalized styles
+  ([10d3c4a](https://github.com/jotai-labs/jotai-devtools/commit/10d3c4a93494bd27fc16d1607cc42ea3f2e00ae4))
+
+# [0.3.0-next.2](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.1...v0.3.0-next.2) (2023-02-12)
+
+### Features
+
+- add error boundary
+  ([5667a05](https://github.com/jotai-labs/jotai-devtools/commit/5667a059da325ee8d0452e5d097d4eb14ab97c5e))
+
+# [0.3.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.3.0-next.0...v0.3.0-next.1) (2023-02-10)
+
+### Bug Fixes
+
+- handle atom containing undefined values
+  ([c086a75](https://github.com/jotai-labs/jotai-devtools/commit/c086a75ed92066c78a3d42f5b3e5b924576bbee5))
+- inject react shim to the build
+  ([a20a235](https://github.com/jotai-labs/jotai-devtools/commit/a20a2355b08193fc4f8cde6dec85602ead7229df))
+
+### Features
+
+- make raw and parse value copyable
+  ([5348337](https://github.com/jotai-labs/jotai-devtools/commit/5348337530177f8db80e53d0d35e339cd78ad84c))
+
+# [0.3.0-next.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0...v0.3.0-next.0) (2023-02-07)
+
+### Features
+
+- **ui-devtools:** initial commit
+  ([7c38133](https://github.com/jotai-labs/jotai-devtools/commit/7c38133a360c0c97db6406becdc1bf939e1001e7))
+
 # [0.2.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.1...v0.2.0) (2023-02-01)
 
 # [0.2.0-next.1](https://github.com/jotai-labs/jotai-devtools/compare/v0.2.0-next.0...v0.2.0-next.1) (2023-01-17)

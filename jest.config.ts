@@ -37,14 +37,27 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^jotai-devtools$': '<rootDir>/src/index.ts',
     '^jotai-devtools/(.*)$': '<rootDir>/src/$1.ts',
+    '\\.(css|less|sass|scss|woff2)$': '<rootDir>/__mocks__/styleMock.js',
   },
   modulePathIgnorePatterns: ['dist'],
   globals: {
     __DEV__: true,
   },
   coverageReporters: ['json', 'html', 'text', 'text-summary'],
-  collectCoverageFrom: ['src/**/*.{js,ts,tsx}', '__tests__/**/*.{js,ts,tsx}'],
+  collectCoverageFrom: [
+    'src/**/*.{js,ts,tsx}',
+    '!src/**/*.stories.{js,ts,tsx}',
+    '!src/stories/**',
+    // Copied as is from Jotai core and we're not changing it
+    '!src/DevTools/Extension/components/Shell/components/AtomViewer/hooks/use.ts',
+    '__tests__/**/*.{js,ts,tsx}',
+  ],
   coverageDirectory: './coverage/',
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    '<rootDir>/__tests__/setup.ts',
+  ],
+  snapshotSerializers: ['@emotion/jest/serializer'],
 };
 
 export default config;

@@ -2,3 +2,9 @@
 // Do not rename this file or move these types into index.d.ts
 // @see https://code.visualstudio.com/docs/nodejs/working-with-javascript#_global-variables-and-type-checking
 declare let __DEV__: boolean;
+
+declare module '*.png';
+declare module '*.svg';
+declare module '*.jpeg';
+declare module '*.jpg';
+declare module '*.woff2';

@@ -5,7 +5,7 @@ import type {
   AtomsSnapshot,
   AtomsValues,
   Options,
-} from './types';
+} from '../types';
 
 const isEqualAtomsValues = (left: AtomsValues, right: AtomsValues) =>
   left.size === right.size &&
@@ -34,10 +34,22 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
   }));
 
   useEffect(() => {
+    // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
     if (!store.dev_subscribe_state) return;
 
     let prevValues: AtomsValues = new Map();
     let prevDependents: AtomsDependents = new Map();
+
+    let devSubscribeStore = store.dev_subscribe_state;
+
+    if (typeof store?.dev_subscribe_store !== 'function') {
+      console.warn(
+        "[DEPRECATION-WARNING] Jotai version you're using contains deprecated dev-only properties that will be removed soon. Please update to the latest version of Jotai.",
+      );
+    } else {
+      devSubscribeStore = store.dev_subscribe_store;
+    }
+
     const callback = () => {
       const values: AtomsValues = new Map();
       const dependents: AtomsDependents = new Map();
@@ -64,7 +76,7 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
       prevDependents = dependents;
       setAtomsSnapshot({ values, dependents });
     };
-    const unsubscribe = store.dev_subscribe_state(callback);
+    const unsubscribe = devSubscribeStore?.(callback);
     callback();
     return unsubscribe;
   }, [store]);
