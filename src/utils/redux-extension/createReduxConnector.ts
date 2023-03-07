@@ -1,5 +1,5 @@
+import { Message } from '../types';
 import { ReduxExtension } from './getReduxExtension';
-import { Message } from './types';
 
 type ConnectResponse = ReturnType<NonNullable<ReduxExtension>['connect']>;
 export type Connector = ConnectResponse & {

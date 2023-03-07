@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
 import { Atom, WritableAtom } from 'jotai/vanilla';
+import { useReduxConnector } from './redux-extension';
 import { useDidMount } from './useDidMount';
-import { useReduxConnector } from './useReduxConnector';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;

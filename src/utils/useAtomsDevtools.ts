@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useReduxConnector } from './redux-extension';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useDidMount } from './useDidMount';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
-import { useReduxConnector } from './useReduxConnector';
 
 const atomToPrintable = (atom: AnyAtom) =>
   atom.debugLabel ? `${atom}:${atom.debugLabel}` : `${atom}`;
