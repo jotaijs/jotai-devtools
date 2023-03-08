@@ -12,7 +12,8 @@ const shellTriggerButtonStyles: Sx = () => ({
   left: 10,
   bottom: 10,
   borderRadius: '50%',
-  padding: '2rem',
+  width: '4rem',
+  height: '4rem',
   zIndex: 99999,
   img: {
     height: '2rem',
