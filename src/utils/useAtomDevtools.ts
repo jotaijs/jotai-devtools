@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
-import type { Atom, WritableAtom } from 'jotai/vanilla';
-import { Message } from './types';
+import { Atom, WritableAtom } from 'jotai/vanilla';
+import { useReduxConnector } from './redux-extension';
+import { useDidMount } from './useDidMount';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;
@@ -12,40 +13,30 @@ export function useAtomDevtools<Value, Result>(
   anAtom: WritableAtom<Value, [Value], Result> | Atom<Value>,
   options?: DevtoolOptions,
 ): void {
+  const didMount = useDidMount();
   const { enabled, name } = options || {};
-
-  let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
-
-  try {
-    extension = (enabled ?? __DEV__) && window.__REDUX_DEVTOOLS_EXTENSION__;
-  } catch {
-    // ignored
-  }
-
-  if (!extension) {
-    if (__DEV__ && enabled) {
-      console.warn('Please install/enable Redux devtools extension');
-    }
-  }
 
   const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const devtools = useRef<
-    ReturnType<
-      NonNullable<typeof window['__REDUX_DEVTOOLS_EXTENSION__']>['connect']
-    > & {
-      shouldInit?: boolean;
-    }
-  >();
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
+  const connector = useReduxConnector({
+    name: atomName,
+    enabled,
+    initialValue: value,
+  });
+
+  const subscriptionCleanup = useRef<() => void>();
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    // Only subscribe once.
+    // If there is an existing subscription, we don't want to create a second one.
+    if (subscriptionCleanup.current) return subscriptionCleanup.current;
+
+    if (!connector.current) return;
+
     const setValueIfWritable = (value: Value) => {
       if (typeof setValue === 'function') {
         (setValue as (value: Value) => void)(value);
@@ -57,16 +48,7 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = extension.connect({ name: atomName });
-
-    const unsubscribe = (
-      devtools.current as unknown as {
-        // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
-        subscribe: (
-          listener: (message: Message) => void,
-        ) => (() => void) | undefined;
-      }
-    ).subscribe((message) => {
+    subscriptionCleanup.current = connector.current.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {
         try {
           setValueIfWritable(JSON.parse(message.payload));
@@ -89,7 +71,7 @@ export function useAtomDevtools<Value, Result>(
         message.type === 'DISPATCH' &&
         message.payload?.type === 'COMMIT'
       ) {
-        devtools.current?.init(lastValue.current);
+        connector.current?.init(lastValue.current);
       } else if (
         message.type === 'DISPATCH' &&
         message.payload?.type === 'IMPORT_STATE'
@@ -99,32 +81,29 @@ export function useAtomDevtools<Value, Result>(
 
         computedStates.forEach(({ state }: { state: Value }, index: number) => {
           if (index === 0) {
-            devtools.current?.init(state);
+            connector.current?.init(state);
           } else {
             setValueIfWritable(state);
           }
         });
       }
     });
-    devtools.current.shouldInit = true;
-    return unsubscribe;
-  }, [anAtom, extension, atomName, setValue]);
+
+    return subscriptionCleanup.current;
+  }, [anAtom, connector, setValue]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
+    const connection = connector.current;
+    if (!connection || !didMount) return;
+
     lastValue.current = value;
-    if (devtools.current.shouldInit) {
-      devtools.current.init(value);
-      devtools.current.shouldInit = false;
-    } else if (isTimeTraveling.current) {
+    if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else {
-      devtools.current.send(
+      connection.send(
         `${atomName} - ${new Date().toLocaleString()}` as any,
         value,
       );
     }
-  }, [anAtom, extension, atomName, value]);
+  }, [atomName, connector, didMount, value]);
 }

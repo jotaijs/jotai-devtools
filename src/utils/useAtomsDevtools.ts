@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { useReduxConnector } from './redux-extension';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
-import { Message } from './types';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
+import { useDidMount } from './useDidMount';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
 const atomToPrintable = (atom: AnyAtom) =>
@@ -31,20 +32,7 @@ export function useAtomsDevtools(
   options?: DevtoolsOptions,
 ): void {
   const { enabled } = options || {};
-
-  let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
-
-  try {
-    extension = (enabled ?? __DEV__) && window.__REDUX_DEVTOOLS_EXTENSION__;
-  } catch {
-    // ignored
-  }
-
-  if (!extension) {
-    if (__DEV__ && enabled) {
-      console.warn('Please install/enable Redux devtools extension');
-    }
-  }
+  const didMount = useDidMount();
 
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
@@ -52,20 +40,23 @@ export function useAtomsDevtools(
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const devtools = useRef<
-    ReturnType<
-      NonNullable<typeof window['__REDUX_DEVTOOLS_EXTENSION__']>['connect']
-    > & {
-      shouldInit?: boolean;
-    }
-  >();
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
+  const connector = useReduxConnector({
+    name,
+    enabled,
+    initialValue: getDevtoolsState(atomsSnapshot),
+  });
+
+  const subscriptionCleanup = useRef<() => void>();
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    // Only subscribe once.
+    // If there is an existing subscription, we don't want to create a second one.
+    if (subscriptionCleanup.current) subscriptionCleanup.current();
+
+    if (!connector.current) return;
+
     const getSnapshotAt = (index = snapshots.current.length - 1) => {
       // index 0 is @@INIT, so we need to return the next action (0)
       const snapshot = snapshots.current[index >= 0 ? index : 0];
@@ -74,16 +65,8 @@ export function useAtomsDevtools(
       }
       return snapshot;
     };
-    const connection = extension.connect({ name });
 
-    const devtoolsUnsubscribe = (
-      connection as unknown as {
-        // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
-        subscribe: (
-          listener: (message: Message) => void,
-        ) => (() => void) | undefined;
-      }
-    ).subscribe((message) => {
+    subscriptionCleanup.current = connector.current.subscribe((message) => {
       switch (message.type) {
         case 'DISPATCH':
           switch (message.payload?.type) {
@@ -92,7 +75,7 @@ export function useAtomsDevtools(
               break;
 
             case 'COMMIT':
-              connection.init(getDevtoolsState(getSnapshotAt()));
+              connector.current?.init(getDevtoolsState(getSnapshotAt()));
               snapshots.current = [];
               break;
 
@@ -109,28 +92,18 @@ export function useAtomsDevtools(
       }
     });
 
-    devtools.current = connection;
-    devtools.current.shouldInit = true;
-    return () => {
-      (extension as any).disconnect();
-      devtoolsUnsubscribe?.();
-    };
-  }, [extension, goToSnapshot, name]);
+    return subscriptionCleanup.current;
+  }, [connector, goToSnapshot]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
-    if (devtools.current.shouldInit) {
-      devtools.current.init(undefined);
-      devtools.current.shouldInit = false;
-      return;
-    }
+    const connection = connector.current;
+    if (!connection || !didMount) return;
+
     if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else if (isRecording.current) {
       snapshots.current.push(atomsSnapshot);
-      devtools.current.send(
+      connection.send(
         {
           type: `${snapshots.current.length}`,
           updatedAt: new Date().toLocaleString(),
@@ -138,5 +111,5 @@ export function useAtomsDevtools(
         getDevtoolsState(atomsSnapshot),
       );
     }
-  }, [atomsSnapshot]);
+  }, [atomsSnapshot, connector, didMount]);
 }
