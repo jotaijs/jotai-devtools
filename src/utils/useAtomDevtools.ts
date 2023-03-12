@@ -107,7 +107,10 @@ export function useAtomDevtools<Value, Result>(
       }
     });
     devtools.current.shouldInit = true;
-    return unsubscribe;
+    return () => {
+      (extension as any).disconnect();
+      unsubscribe?.();
+    };
   }, [anAtom, extension, atomName, setValue]);
 
   useEffect(() => {

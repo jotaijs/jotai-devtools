@@ -16,18 +16,24 @@ const extension = {
   init: jest.fn(),
   error: jest.fn(),
 };
-const extensionConnector = { connect: jest.fn(() => extension) };
+
+const disconnect = () => {
+  extensionConnector.connect.mockClear();
+  extension.subscribe.mockClear();
+  extension.unsubscribe.mockClear();
+  extension.send.mockClear();
+  extension.init.mockClear();
+  extension.error.mockClear();
+  extensionSubscriber = undefined;
+};
+
+const extensionConnector = {
+  connect: jest.fn(() => extension),
+  disconnect: jest.fn(disconnect),
+};
 (window as any).__REDUX_DEVTOOLS_EXTENSION__ = extensionConnector;
 describe('useAtomDevtools', () => {
-  beforeEach(() => {
-    extensionConnector.connect.mockClear();
-    extension.subscribe.mockClear();
-    extension.unsubscribe.mockClear();
-    extension.send.mockClear();
-    extension.init.mockClear();
-    extension.error.mockClear();
-    extensionSubscriber = undefined;
-  });
+  beforeEach(disconnect);
 
   it('[DEV-ONLY] connects to the extension by initializing', () => {
     __DEV__ = true;
