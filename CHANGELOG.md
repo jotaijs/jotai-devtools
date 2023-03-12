@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/jotaijs/jotai-devtools/compare/v0.3.0...v0.3.1) (2023-03-12)
+
+### Bug Fixes
+
+- ShellTriggerButton icon disappears
+  [#34](https://github.com/jotaijs/jotai-devtools/issues/34)
+  ([#35](https://github.com/jotaijs/jotai-devtools/issues/35))
+  ([8f800ce](https://github.com/jotaijs/jotai-devtools/commit/8f800ce1b3f43cc87a7a9474fb9e1ade943b6f22))
+
 # [0.3.0](https://github.com/jotaijs/jotai-devtools/compare/v0.3.0-next.4...v0.3.0) (2023-03-06)
 
 ### Bug Fixes
