@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
-import { Message } from './types';
+import {
+  Connection,
+  createReduxConnection,
+} from './redux-extension/createReduxConnection';
+import { getReduxExtension } from './redux-extension/getReduxExtension';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
@@ -32,19 +36,7 @@ export function useAtomsDevtools(
 ): void {
   const { enabled } = options || {};
 
-  let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
-
-  try {
-    extension = (enabled ?? __DEV__) && window.__REDUX_DEVTOOLS_EXTENSION__;
-  } catch {
-    // ignored
-  }
-
-  if (!extension) {
-    if (__DEV__ && enabled) {
-      console.warn('Please install/enable Redux devtools extension');
-    }
-  }
+  const extension = getReduxExtension(enabled);
 
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
@@ -52,13 +44,7 @@ export function useAtomsDevtools(
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const devtools = useRef<
-    ReturnType<
-      NonNullable<typeof window['__REDUX_DEVTOOLS_EXTENSION__']>['connect']
-    > & {
-      shouldInit?: boolean;
-    }
-  >();
+  const devtools = useRef<Connection>();
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
@@ -74,16 +60,10 @@ export function useAtomsDevtools(
       }
       return snapshot;
     };
-    const connection = extension.connect({ name });
 
-    const devtoolsUnsubscribe = (
-      connection as unknown as {
-        // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
-        subscribe: (
-          listener: (message: Message) => void,
-        ) => (() => void) | undefined;
-      }
-    ).subscribe((message) => {
+    devtools.current = createReduxConnection(extension, name);
+
+    const devtoolsUnsubscribe = devtools.current?.subscribe((message) => {
       switch (message.type) {
         case 'DISPATCH':
           switch (message.payload?.type) {
@@ -92,7 +72,7 @@ export function useAtomsDevtools(
               break;
 
             case 'COMMIT':
-              connection.init(getDevtoolsState(getSnapshotAt()));
+              devtools.current?.init(getDevtoolsState(getSnapshotAt()));
               snapshots.current = [];
               break;
 
@@ -109,10 +89,8 @@ export function useAtomsDevtools(
       }
     });
 
-    devtools.current = connection;
-    devtools.current.shouldInit = true;
     return () => {
-      (extension as any).disconnect();
+      extension?.disconnect?.();
       devtoolsUnsubscribe?.();
     };
   }, [extension, goToSnapshot, name]);

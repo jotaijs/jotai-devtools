@@ -1,7 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
 import type { Atom, WritableAtom } from 'jotai/vanilla';
-import { Message } from './types';
+import {
+  Connection,
+  createReduxConnection,
+} from './redux-extension/createReduxConnection';
+import { getReduxExtension } from './redux-extension/getReduxExtension';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;
@@ -14,31 +18,13 @@ export function useAtomDevtools<Value, Result>(
 ): void {
   const { enabled, name } = options || {};
 
-  let extension: typeof window['__REDUX_DEVTOOLS_EXTENSION__'] | false;
-
-  try {
-    extension = (enabled ?? __DEV__) && window.__REDUX_DEVTOOLS_EXTENSION__;
-  } catch {
-    // ignored
-  }
-
-  if (!extension) {
-    if (__DEV__ && enabled) {
-      console.warn('Please install/enable Redux devtools extension');
-    }
-  }
+  const extension = getReduxExtension(enabled);
 
   const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const devtools = useRef<
-    ReturnType<
-      NonNullable<typeof window['__REDUX_DEVTOOLS_EXTENSION__']>['connect']
-    > & {
-      shouldInit?: boolean;
-    }
-  >();
+  const devtools = useRef<Connection>();
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
@@ -57,16 +43,9 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = extension.connect({ name: atomName });
+    devtools.current = createReduxConnection(extension, atomName);
 
-    const unsubscribe = (
-      devtools.current as unknown as {
-        // FIXME https://github.com/reduxjs/redux-devtools/issues/1097
-        subscribe: (
-          listener: (message: Message) => void,
-        ) => (() => void) | undefined;
-      }
-    ).subscribe((message) => {
+    const unsubscribe = devtools.current?.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {
         try {
           setValueIfWritable(JSON.parse(message.payload));
@@ -106,7 +85,7 @@ export function useAtomDevtools<Value, Result>(
         });
       }
     });
-    devtools.current.shouldInit = true;
+
     return unsubscribe;
   }, [anAtom, extension, atomName, setValue]);
 
