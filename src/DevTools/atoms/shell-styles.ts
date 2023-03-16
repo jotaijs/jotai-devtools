@@ -1,4 +1,5 @@
 import { atom } from 'jotai/vanilla';
+import { atomWithStorage } from 'jotai/vanilla/utils';
 import { shellStyleDefaults } from '../constants';
 
 type ShellStyleAtomData = {
@@ -6,7 +7,10 @@ type ShellStyleAtomData = {
   isDragging: boolean;
 };
 
-export const shellStylesAtom = atom<ShellStyleAtomData>({
-  height: shellStyleDefaults.defaultHeight,
-  isDragging: false,
-});
+export const shellStylesAtom = atomWithStorage<ShellStyleAtomData>(
+  'jotai-devtools-shell-height',
+  {
+    height: shellStyleDefaults.defaultHeight,
+    isDragging: false,
+  },
+);
