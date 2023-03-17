@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Sx, Text } from '@mantine/core';
-import { IconAlertCircle } from '@tabler/icons';
+import { IconAlertCircle } from '@tabler/icons-react';
 import { useThemeMode } from '../../../../hooks/useThemeMode';
 type ErrorMessageProps = {
   message: string;

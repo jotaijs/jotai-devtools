@@ -1190,7 +1190,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -1201,11 +1201,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -1223,7 +1218,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -1235,15 +1230,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -1269,7 +1256,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -1281,23 +1268,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -1384,7 +1358,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -1396,12 +1370,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -1521,7 +1490,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                     class="emotion-8 emotion-92"
                   >
                     <svg
-                      class="icon icon-tabler icon-tabler-alert-circle"
+                      class="tabler-icon tabler-icon-alert-circle"
                       fill="none"
                       height="16"
                       stroke="currentColor"
@@ -1533,26 +1502,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M0 0h24v24H0z"
-                        fill="none"
-                        stroke="none"
+                        d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
                       />
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="9"
+                      <path
+                        d="M12 8v4"
                       />
-                      <line
-                        x1="12"
-                        x2="12"
-                        y1="8"
-                        y2="12"
-                      />
-                      <line
-                        x1="12"
-                        x2="12.01"
-                        y1="16"
-                        y2="16"
+                      <path
+                        d="M12 16h.01"
                       />
                     </svg>
                   </div>
@@ -2880,7 +2836,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -2891,11 +2847,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -2913,7 +2864,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -2925,15 +2876,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -2959,7 +2902,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -2971,23 +2914,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -3074,7 +3004,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -3086,12 +3016,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -3133,7 +3058,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -3145,12 +3070,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -4654,7 +4574,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -4665,11 +4585,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -4687,7 +4602,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -4699,15 +4614,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -4733,7 +4640,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -4745,23 +4652,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -4846,7 +4740,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -4858,12 +4752,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -4907,7 +4796,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -4919,12 +4808,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -6001,7 +5885,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -6012,11 +5896,6 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -6034,7 +5913,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -6046,15 +5925,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -6080,7 +5951,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -6092,23 +5963,10 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -6173,7 +6031,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
               class="emotion-6 emotion-48"
             >
               <svg
-                class="icon icon-tabler icon-tabler-alert-circle"
+                class="tabler-icon tabler-icon-alert-circle"
                 fill="none"
                 height="16"
                 stroke="currentColor"
@@ -6185,26 +6043,13 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                  stroke="none"
+                  d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
                 />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="9"
+                <path
+                  d="M12 8v4"
                 />
-                <line
-                  x1="12"
-                  x2="12"
-                  y1="8"
-                  y2="12"
-                />
-                <line
-                  x1="12"
-                  x2="12.01"
-                  y1="16"
-                  y2="16"
+                <path
+                  d="M12 16h.01"
                 />
               </svg>
               <div
@@ -7266,7 +7111,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -7277,11 +7122,6 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -7299,7 +7139,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -7311,15 +7151,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -7345,7 +7177,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -7357,23 +7189,10 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -7458,7 +7277,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -7470,12 +7289,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -8845,7 +8659,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -8856,11 +8670,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -8878,7 +8687,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -8890,15 +8699,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -8924,7 +8725,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -8936,23 +8737,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -9039,7 +8827,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -9051,12 +8839,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -9098,7 +8881,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -9110,12 +8893,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -10640,7 +10418,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -10651,11 +10429,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -10673,7 +10446,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -10685,15 +10458,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -10719,7 +10484,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -10731,23 +10496,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -10832,7 +10584,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -10844,12 +10596,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -10891,7 +10638,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -10903,12 +10650,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -10952,7 +10694,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -10964,12 +10706,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -12202,7 +11939,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -12213,11 +11950,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -12235,7 +11967,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -12247,15 +11979,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -12281,7 +12005,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -12293,23 +12017,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -12394,7 +12105,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -12406,12 +12117,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -12453,7 +12159,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                   class="emotion-60 emotion-61"
                 >
                   <svg
-                    class="icon icon-tabler icon-tabler-chevron-right"
+                    class="tabler-icon tabler-icon-chevron-right"
                     fill="none"
                     height="12"
                     stroke="currentColor"
@@ -12465,12 +12171,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      stroke="none"
-                    />
-                    <polyline
-                      points="9 6 15 12 9 18"
+                      d="M9 6l6 6l-6 6"
                     />
                   </svg>
                 </span>
@@ -13418,7 +13119,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -13429,11 +13130,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -13451,7 +13147,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -13463,15 +13159,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -13497,7 +13185,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           class="emotion-27 emotion-25Icon"
         >
           <svg
-            class="icon icon-tabler icon-tabler-layout-list"
+            class="tabler-icon tabler-icon-layout-list"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -13509,23 +13197,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 0h24v24H0z"
-              fill="none"
-              stroke="none"
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="4"
-            />
-            <rect
-              height="6"
-              rx="2"
-              width="16"
-              x="4"
-              y="14"
+            <path
+              d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
             />
           </svg>
         </div>
@@ -13590,7 +13265,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
               class="emotion-6 emotion-48"
             >
               <svg
-                class="icon icon-tabler icon-tabler-alert-circle"
+                class="tabler-icon tabler-icon-alert-circle"
                 fill="none"
                 height="16"
                 stroke="currentColor"
@@ -13602,26 +13277,13 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                  stroke="none"
+                  d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
                 />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="9"
+                <path
+                  d="M12 8v4"
                 />
-                <line
-                  x1="12"
-                  x2="12"
-                  y1="8"
-                  y2="12"
-                />
-                <line
-                  x1="12"
-                  x2="12.01"
-                  y1="16"
-                  y2="16"
+                <path
+                  d="M12 16h.01"
                 />
               </svg>
               <div

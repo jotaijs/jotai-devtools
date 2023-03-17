@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Group, Sx, Text, TextInput } from '@mantine/core';
-import { IconAlertCircle } from '@tabler/icons';
+import { IconAlertCircle } from '@tabler/icons-react';
 import { useAtom, useAtomValue } from 'jotai/react';
 import { useSyncSnapshotValuesToAtom } from '../../../../../../../hooks/useAtomsSnapshots';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
