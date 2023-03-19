@@ -5,9 +5,6 @@ import { ReduxExtension } from './getReduxExtension';
 type ConnectResponse = ReturnType<NonNullable<ReduxExtension>['connect']>;
 
 export type Connection = {
-  /** Mark the connection as not initiated, so it can be initiated before using it. */
-  shouldInit?: boolean;
-
   /** Initiate the connection and add it to the extension connections.
    *  Should only be executed once in the live time of the connection.
    */
@@ -40,7 +37,5 @@ export const createReduxConnection = (
   if (!extension) return undefined;
   const connection = extension.connect({ name });
 
-  return Object.assign(connection, {
-    shouldInit: true,
-  }) as Connection;
+  return connection as Connection;
 };

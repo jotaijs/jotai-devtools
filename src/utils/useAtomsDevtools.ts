@@ -1,11 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
-import {
-  Connection,
-  createReduxConnection,
-} from './redux-extension/createReduxConnection';
-import { getReduxExtension } from './redux-extension/getReduxExtension';
+import { useReduxConnection } from './redux-extension/useReduxConnection';
 import { useAtomsSnapshot } from './useAtomsSnapshot';
+import { useDidMount } from './useDidMount';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
 const atomToPrintable = (atom: AnyAtom) =>
@@ -35,6 +32,7 @@ export function useAtomsDevtools(
   options?: DevtoolsOptions,
 ): void {
   const { enabled } = options || {};
+  const didMount = useDidMount();
 
   // This an exception, we don't usually use utils in themselves!
   const atomsSnapshot = useAtomsSnapshot(options);
@@ -42,18 +40,14 @@ export function useAtomsDevtools(
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const connection = useRef<Connection>();
-
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
-  useEffect(() => {
-    const extension = getReduxExtension(enabled);
-    connection.current = createReduxConnection(extension, name);
-
-    return () => {
-      extension?.disconnect?.();
-    };
-  }, [enabled, name]);
+  const connection = useReduxConnection({
+    name,
+    enabled,
+    initialValue: undefined,
+    disconnectAllOnCleanup: true,
+  });
 
   useEffect(() => {
     if (!connection.current) return;
@@ -94,16 +88,11 @@ export function useAtomsDevtools(
     });
 
     return unsubscribe;
-  }, [goToSnapshot]);
+  }, [connection, goToSnapshot]);
 
   useEffect(() => {
-    if (!connection.current) return;
+    if (!connection.current || !didMount) return;
 
-    if (connection.current.shouldInit) {
-      connection.current.init(undefined);
-      connection.current.shouldInit = false;
-      return;
-    }
     if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else if (isRecording.current) {
@@ -116,5 +105,5 @@ export function useAtomsDevtools(
         getDevtoolsState(atomsSnapshot),
       );
     }
-  }, [atomsSnapshot]);
+  }, [atomsSnapshot, connection, didMount]);
 }

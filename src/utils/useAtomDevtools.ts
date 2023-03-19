@@ -1,11 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
 import type { Atom, WritableAtom } from 'jotai/vanilla';
-import {
-  Connection,
-  createReduxConnection,
-} from './redux-extension/createReduxConnection';
-import { getReduxExtension } from './redux-extension/getReduxExtension';
+import { useReduxConnection } from './redux-extension/useReduxConnection';
+import { useDidMount } from './useDidMount';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;
@@ -17,19 +14,20 @@ export function useAtomDevtools<Value, Result>(
   options?: DevtoolOptions,
 ): void {
   const { enabled, name } = options || {};
+  const didMount = useDidMount();
 
   const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const connection = useRef<Connection>();
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
-  useEffect(() => {
-    const extension = getReduxExtension(enabled);
-    connection.current = createReduxConnection(extension, atomName);
-  }, [atomName, enabled]);
+  const connection = useReduxConnection({
+    name: atomName,
+    enabled,
+    initialValue: value,
+  });
 
   useEffect(() => {
     if (!connection.current) return;
@@ -87,16 +85,13 @@ export function useAtomDevtools<Value, Result>(
     });
 
     return unsubscribe;
-  }, [anAtom, setValue]);
+  }, [anAtom, connection, setValue]);
 
   useEffect(() => {
-    if (!connection.current) return;
+    if (!connection.current || !didMount) return;
 
     lastValue.current = value;
-    if (connection.current.shouldInit) {
-      connection.current.init(value);
-      connection.current.shouldInit = false;
-    } else if (isTimeTraveling.current) {
+    if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else {
       connection.current.send(
@@ -104,5 +99,5 @@ export function useAtomDevtools<Value, Result>(
         value,
       );
     }
-  }, [atomName, value]);
+  }, [atomName, connection, didMount, value]);
 }
