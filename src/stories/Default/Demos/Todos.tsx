@@ -10,7 +10,7 @@ import {
   TextInput,
   Title,
 } from '@mantine/core';
-import { IconX } from '@tabler/icons';
+import { IconX } from '@tabler/icons-react';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { PrimitiveAtom, atom } from 'jotai/vanilla';
 import { demoStoreOptions } from './demo-store';

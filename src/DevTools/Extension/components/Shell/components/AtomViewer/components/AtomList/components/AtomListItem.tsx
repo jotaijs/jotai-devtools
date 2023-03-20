@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavLink, Sx, Text } from '@mantine/core';
-import { IconChevronRight } from '@tabler/icons';
+import { IconChevronRight } from '@tabler/icons-react';
 import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
 import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
 

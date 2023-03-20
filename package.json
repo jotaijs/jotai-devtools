@@ -158,7 +158,7 @@
     "@mantine/hooks": "^5.10.3",
     "@mantine/prism": "^5.10.3",
     "@redux-devtools/extension": "^3.2.3",
-    "@tabler/icons": "^1.119.0",
+    "@tabler/icons-react": "^2.11.0",
     "react-error-boundary": "^3.1.4",
     "react-resizable-panels": "^0.0.35",
     "stacktracey": "^2.1.8",

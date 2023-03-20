@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Anchor, Box, Flex, Sx, Text } from '@mantine/core';
-import { IconAlertCircle } from '@tabler/icons';
+import { IconAlertCircle } from '@tabler/icons-react';
 import {
   FallbackProps,
   ErrorBoundary as ReactErrorBoundary,

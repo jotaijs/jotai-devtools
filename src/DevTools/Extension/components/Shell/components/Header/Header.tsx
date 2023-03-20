@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ActionIcon, Badge, Box, Flex, Group, Sx, Title } from '@mantine/core';
-import { IconMinus } from '@tabler/icons';
+import { IconMinus } from '@tabler/icons-react';
 import { useSetAtom } from 'jotai/react';
 import { isShellOpenAtom } from '../../../../../atoms/is-shell-open-atom';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../internal-jotai-store';
