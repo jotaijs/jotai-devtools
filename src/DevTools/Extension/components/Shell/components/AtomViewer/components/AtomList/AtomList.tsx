@@ -40,6 +40,7 @@ const SearchAtoms = React.memo(() => {
       sx={textStyles}
       value={userInput}
       onChange={handleOnChange}
+      id="jotai-devtools-atom-debug-search-input"
     />
   );
 });
