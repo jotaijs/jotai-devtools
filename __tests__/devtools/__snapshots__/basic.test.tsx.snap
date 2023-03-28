@@ -38,7 +38,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   flex-direction: column;
   z-index: 99999;
   margin: 10px;
-  height: 370px;
+  height: 200px;
   max-height: 90%;
 }
 
@@ -987,7 +987,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   flex-direction: column;
   z-index: 99999;
   margin: 10px;
-  height: 370px;
+  height: 200px;
   max-height: 90%;
 }
 
