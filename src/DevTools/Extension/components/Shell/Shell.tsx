@@ -29,16 +29,6 @@ export const Shell = ({ store }: ShellProps) => {
     useDevtoolsJotaiStoreOptions(),
   );
 
-  useEffect(() => {
-    // Allocating more height at the end of the content allows users to scroll down fully
-    // FIXME should we handle a use-case where there is padding set around `body`?
-    document.body.style.paddingBottom = height + 'px';
-
-    return () => {
-      document.body.style.paddingBottom = `0px`;
-    };
-  }, [height]);
-
   return (
     <Tabs
       keepMounted={false}

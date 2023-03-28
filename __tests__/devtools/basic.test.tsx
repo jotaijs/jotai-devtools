@@ -30,10 +30,6 @@ describe('DevTools - basic', () => {
   it('should resize the devtools upon dragging the resize bar', async () => {
     customRender(<DevTools isInitialOpen={true} />);
 
-    expect(document.body).toHaveStyle({
-      paddingBottom: '370px',
-    });
-
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
       height: '370px',
     });
@@ -47,10 +43,6 @@ describe('DevTools - basic', () => {
 
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
       height: '200px',
-    });
-
-    expect(document.body).toHaveStyle({
-      paddingBottom: '200px',
     });
   });
 
