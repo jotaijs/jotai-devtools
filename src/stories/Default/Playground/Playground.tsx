@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Title } from '@mantine/core';
-import { atom, useAtom, useAtomValue } from 'jotai';
-import { atomsWithQuery } from 'jotai-tanstack-query';
+import { atom, useAtom } from 'jotai';
 import {
   atomWithDefault,
   atomWithObservable,
@@ -9,6 +8,7 @@ import {
   splitAtom,
   unstable_unwrap as unwrap,
 } from 'jotai/vanilla/utils';
+import { atomsWithQuery } from 'jotai-tanstack-query';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { SomeComponentWithToggle } from './SomeComponent';

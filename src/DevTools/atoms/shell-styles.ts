@@ -1,4 +1,3 @@
-import { atom } from 'jotai/vanilla';
 import { atomWithStorage } from 'jotai/vanilla/utils';
 import { shellStyleDefaults } from '../constants';
 
