@@ -30,8 +30,9 @@ describe('DevTools - basic', () => {
   it('should resize the devtools upon dragging the resize bar', async () => {
     customRender(<DevTools isInitialOpen={true} />);
 
+    // Mantine automatically converts the values to `rem` so we test it in rem
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '370px',
+      height: '23.125rem',
     });
 
     await act(async () => {
@@ -42,7 +43,7 @@ describe('DevTools - basic', () => {
     });
 
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '200px',
+      height: '12.5rem',
     });
   });
 

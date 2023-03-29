@@ -41,6 +41,7 @@ export const Shell = ({ store }: ShellProps) => {
       ref={shellRef}
       className="jotai-devtools-shell"
       data-testid="jotai-devtools-shell"
+      id="jotai-devtools-shell"
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />
