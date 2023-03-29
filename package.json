@@ -93,6 +93,7 @@
     "@commitlint/cli": "^17.5.0",
     "@commitlint/config-conventional": "^17.4.4",
     "@emotion/jest": "^11.10.5",
+    "@emotion/react": "^11.10.6",
     "@release-it/conventional-changelog": "^5.1.1",
     "@storybook/addon-a11y": "^7.0.0-rc.8",
     "@storybook/addon-actions": "^7.0.0-rc.8",
@@ -150,11 +151,11 @@
     "webpack": "^5.76.3"
   },
   "peerDependencies": {
+    "@emotion/react": ">=11.0.0",
     "jotai": ">=1.11.0",
     "react": ">=17.0.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
     "@mantine/core": "^6.0.4",
     "@mantine/hooks": "^6.0.4",
     "@mantine/prism": "^6.0.4",

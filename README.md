@@ -32,10 +32,10 @@
 
 ```sh
 # yarn
-yarn add jotai-devtools
+yarn add jotai-devtools @emotion/react
 
 # npm
-npm install jotai-devtools --save
+npm install jotai-devtools @emotion/react --save
 ```
 
 ## ✨ UI DevTools
