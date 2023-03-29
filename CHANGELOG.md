@@ -1,3 +1,20 @@
+# [0.4.0](https://github.com/jotaijs/jotai-devtools/compare/v0.3.1...v0.4.0) (2023-03-29)
+
+### Bug Fixes
+
+- move @emotion/react to peer dependency
+  ([#42](https://github.com/jotaijs/jotai-devtools/issues/42))
+  ([b4cdb50](https://github.com/jotaijs/jotai-devtools/commit/b4cdb50e9751cec092d6192a059d1b10e0819d89))
+- prevent adding padding to body
+  ([#51](https://github.com/jotaijs/jotai-devtools/issues/51))
+  ([98b34fe](https://github.com/jotaijs/jotai-devtools/commit/98b34feaa1eed75518d14d1e6f82667c32318e8b))
+
+### Features
+
+- cache user-set shell height for optimal UX
+  ([#43](https://github.com/jotaijs/jotai-devtools/issues/43))
+  ([a2d5ea6](https://github.com/jotaijs/jotai-devtools/commit/a2d5ea6211c4d2bf316f8dcbd59dc463eeaa4a94))
+
 ## [0.3.1](https://github.com/jotaijs/jotai-devtools/compare/v0.3.0...v0.3.1) (2023-03-12)
 
 ### Bug Fixes
