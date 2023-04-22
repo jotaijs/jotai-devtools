@@ -53,40 +53,10 @@ const mjsOutExtension: Options['outExtension'] = ({ format }) => {
   };
 };
 
-const mjsEsBuildPlugins: Options['esbuildPlugins'] = [
-  replace({
-    // FIXME - Should filter it by `include` instead of `exclude`. This doesn't seem to be working /^.*\.js$/,
-    exclude: /\.woff2$/,
-    __DEV__: '((import.meta.env&&import.meta.env.MODE)!=="production")',
-  }),
-];
-
 const mjsConfig: Options = {
   ...baseConfig,
   format: ['esm'],
   outExtension: mjsOutExtension,
-  esbuildPlugins: mjsEsBuildPlugins,
 };
 
-const esmOutExtension: Options['outExtension'] = ({ format }) => {
-  return {
-    js: `.${format}.js`,
-  };
-};
-
-const esmEsBuildPlugins: Options['esbuildPlugins'] = [
-  replace({
-    // FIXME - Should filter it by `include` instead of `exclude`. This doesn't seem to be working /^.*\.js$/,
-    exclude: /\.woff2$/,
-    __DEV__: '(process.env.NODE_ENV!=="production")',
-  }),
-];
-
-const esmConfig: Options = {
-  ...baseConfig,
-  format: ['esm'],
-  outExtension: esmOutExtension,
-  esbuildPlugins: esmEsBuildPlugins,
-};
-
-export default defineConfig([cjsConfig, mjsConfig, esmConfig]);
+export default defineConfig([cjsConfig, mjsConfig]);
