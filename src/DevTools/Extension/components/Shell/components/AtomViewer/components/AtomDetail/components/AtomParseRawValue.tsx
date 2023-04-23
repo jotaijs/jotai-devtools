@@ -6,10 +6,7 @@ import {
   stringifyAtomValue,
 } from '../../../../../../../../utils/';
 import { ErrorMessage } from '../../../../ErrorMessage';
-import {
-  MemoizedValueRenderer,
-  getPrismLanguageType,
-} from './MemoizedValueRenderer';
+import { MemoizedValueRenderer } from './MemoizedValueRenderer';
 
 type AtomParseRawValueValueProps = {
   atomValue: AnyAtomValue;
@@ -18,7 +15,6 @@ type AtomParseRawValueValueProps = {
 export const AtomParseRawValueValue = ({
   atomValue,
 }: AtomParseRawValueValueProps): JSX.Element => {
-  const prismLanguageType = getPrismLanguageType(atomValue);
   const parsedValue = stringifyAtomValue(atomValue);
 
   return (
@@ -30,10 +26,7 @@ export const AtomParseRawValueValue = ({
       {parsedValue === ErrorSymbol ? (
         <ErrorMessage message="Failed to parse the value of the atom" />
       ) : (
-        <MemoizedValueRenderer
-          value={parsedValue}
-          prismLanguageType={prismLanguageType}
-        />
+        <MemoizedValueRenderer value={parsedValue} />
       )}
     </Box>
   );

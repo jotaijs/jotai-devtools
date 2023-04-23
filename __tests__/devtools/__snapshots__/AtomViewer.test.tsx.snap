@@ -929,7 +929,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   padding-left: 1.25rem;
 }
 
-.emotion-65 {
+.emotion-83 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -942,19 +942,19 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   height: 100%;
 }
 
-.emotion-65 ._jotai-devtools-internal-panel-resize-handle {
+.emotion-83 ._jotai-devtools-internal-panel-resize-handle {
   -webkit-transition: max-height,min-height,height,0.2s ease-out;
   transition: max-height,min-height,height,0.2s ease-out;
 }
 
-[data-resize-handle-active] .emotion-65 ._jotai-devtools-internal-panel-resize-handle,
-.emotion-65:hover ._jotai-devtools-internal-panel-resize-handle {
+[data-resize-handle-active] .emotion-83 ._jotai-devtools-internal-panel-resize-handle,
+.emotion-83:hover ._jotai-devtools-internal-panel-resize-handle {
   height: 90%;
   min-height: 90%;
   max-height: 90%;
 }
 
-.emotion-66 {
+.emotion-84 {
   border-radius: 2rem;
   vertical-align: middle;
   margin: 0.3125rem;
@@ -965,7 +965,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   max-height: 6.25rem;
 }
 
-.emotion-67 {
+.emotion-85 {
   padding: 0.625rem;
   height: 100%;
   position: relative;
@@ -978,7 +978,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   flex-direction: column;
 }
 
-.emotion-69 {
+.emotion-87 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -998,7 +998,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   height: auto;
 }
 
-.emotion-73 {
+.emotion-91 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1014,16 +1014,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   margin-bottom: 0.625rem;
 }
 
-.emotion-73:focus {
+.emotion-91:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-73:focus:not(:focus-visible) {
+.emotion-91:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-75 {
+.emotion-93 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1035,20 +1035,20 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   font-weight: bold;
 }
 
-.emotion-75:focus {
+.emotion-93:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-75:focus:not(:focus-visible) {
+.emotion-93:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-76 {
+.emotion-94 {
   margin-bottom: 0.625rem;
 }
 
-.emotion-78 {
+.emotion-96 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
@@ -1061,16 +1061,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   text-transform: uppercase;
 }
 
-.emotion-78:focus {
+.emotion-96:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-78:focus:not(:focus-visible) {
+.emotion-96:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-80 {
+.emotion-98 {
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   line-height: 1.55;
   padding: 0.125rem calc(0.625rem / 2);
@@ -1080,7 +1080,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   font-size: 0.75rem;
 }
 
-.emotion-88 {
+.emotion-106 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1092,16 +1092,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   font-weight: bold;
 }
 
-.emotion-88:focus {
+.emotion-106:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-88:focus:not(:focus-visible) {
+.emotion-106:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-90 {
+.emotion-108 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #e03131;
@@ -1120,16 +1120,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   font-weight: 500;
 }
 
-.emotion-90:focus {
+.emotion-108:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-90:focus:not(:focus-visible) {
+.emotion-108:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-92 {
+.emotion-110 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1148,16 +1148,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   margin-right: 0.3125rem;
 }
 
-.emotion-92:focus {
+.emotion-110:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-92:focus:not(:focus-visible) {
+.emotion-110:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-95 {
+.emotion-113 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -1170,33 +1170,62 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   font-weight: bold;
 }
 
-.emotion-95:focus {
+.emotion-113:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-95:focus:not(:focus-visible) {
+.emotion-113:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-97 {
+.emotion-115 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: 0.875rem;
+  color: #000;
+  font-size: 1rem;
   line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
   margin-bottom: 0.625rem;
 }
 
-.emotion-97:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
+.emotion-117 {
+  white-space: nowrap;
+  line-height: 1.55;
 }
 
-.emotion-97:focus:not(:focus-visible) {
-  outline: none;
+.emotion-117:not(:first-of-type) {
+  margin-top: 0rem;
+}
+
+.emotion-117[data-with-icon] {
+  list-style: none;
+}
+
+.emotion-117[data-with-icon] .___ref-itemWrapper {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-118 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: normal;
 }
 
 <div>
@@ -1424,12 +1453,71 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      circularAtom
+                      countAtom
                     </div>
                   </span>
                   <span
                     class="emotion-8 emotion-58 emotion-59"
                     data-active="true"
+                  />
+                </span>
+                <span
+                  class="emotion-60 emotion-61"
+                >
+                  <svg
+                    class="icon icon-tabler icon-tabler-chevron-right"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                      stroke="none"
+                    />
+                    <polyline
+                      points="9 6 15 12 9 18"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                aria-hidden="true"
+                class="emotion-62"
+                style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="opacity: 0; transition: opacity 200ms ease;"
+                >
+                  <div
+                    class="emotion-63 emotion-64"
+                  />
+                </div>
+              </div>
+              <button
+                class="emotion-16 emotion-48 emotion-49"
+                type="button"
+              >
+                <span
+                  class="emotion-50 emotion-51"
+                >
+                  <span
+                    class="emotion-8 emotion-53 emotion-54"
+                  >
+                    <div
+                      class="emotion-8 emotion-56"
+                    >
+                      &lt;unlabeled-atom&gt;
+                    </div>
+                  </span>
+                  <span
+                    class="emotion-8 emotion-58 emotion-59"
                   />
                 </span>
                 <span
@@ -1489,10 +1577,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           tabindex="0"
         >
           <div
-            class="emotion-65"
+            class="emotion-83"
           >
             <div
-              class="_jotai-devtools-internal-panel-resize-handle emotion-66"
+              class="_jotai-devtools-internal-panel-resize-handle emotion-84"
             />
           </div>
         </div>
@@ -1505,56 +1593,56 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
         >
           <div
-            class="emotion-67"
+            class="emotion-85"
           >
             <div
-              class="emotion-68 emotion-69"
+              class="emotion-86 emotion-87"
             >
               <div
                 class="emotion-62"
               >
                 <h1
-                  class="emotion-8 emotion-9 emotion-73"
+                  class="emotion-8 emotion-9 emotion-91"
                 >
                   Atom Details
                 </h1>
                 <div
-                  class="emotion-8 emotion-75"
+                  class="emotion-8 emotion-93"
                 >
                   Meta
                 </div>
                 <div
-                  class="emotion-76"
+                  class="emotion-94"
                 >
                   <div
-                    class="emotion-8 emotion-78"
+                    class="emotion-8 emotion-96"
                     data-testid="display-detail-item-label-Debug Label"
                   >
                     Debug Label
                   </div>
                   <code
-                    class="emotion-79 emotion-80"
-                    data-testid="display-detail-item-value-circularAtom"
+                    class="emotion-97 emotion-98"
+                    data-testid="display-detail-item-value-countAtom"
                     dir="ltr"
                   >
-                    circularAtom
+                    countAtom
                   </code>
                 </div>
                 <div
-                  class="emotion-76"
+                  class="emotion-94"
                 >
                   <div
-                    class="emotion-8 emotion-78"
+                    class="emotion-8 emotion-96"
                     data-testid="display-detail-item-label-Value type"
                   >
                     Value type
                   </div>
                   <code
-                    class="emotion-79 emotion-80"
-                    data-testid="display-detail-item-value-object"
+                    class="emotion-97 emotion-98"
+                    data-testid="display-detail-item-value-number"
                     dir="ltr"
                   >
-                    object
+                    number
                   </code>
                 </div>
               </div>
@@ -1562,15 +1650,15 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 class="emotion-62"
               >
                 <div
-                  class="emotion-8 emotion-88"
+                  class="emotion-8 emotion-106"
                 >
                   Raw value
                 </div>
                 <div
-                  class="emotion-8 emotion-90"
+                  class="emotion-8 emotion-108"
                 >
                   <div
-                    class="emotion-8 emotion-92"
+                    class="emotion-8 emotion-110"
                   >
                     <svg
                       class="icon icon-tabler icon-tabler-alert-circle"
@@ -1615,15 +1703,31 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 class="emotion-62"
               >
                 <div
-                  class="emotion-8 emotion-95"
+                  class="emotion-8 emotion-113"
                 >
                   Dependents
                 </div>
-                <div
-                  class="emotion-8 emotion-97"
+                <ol
+                  class="emotion-114 emotion-115"
                 >
-                  No dependents
-                </div>
+                  <li
+                    class="emotion-116 emotion-117"
+                  >
+                    <div
+                      class="___ref-itemWrapper emotion-118 emotion-116Wrapper"
+                    >
+                      <span>
+                        <code
+                          class="emotion-97 emotion-98"
+                          data-testid="dependents-list-item-<unlabeled-atom>-0"
+                          dir="ltr"
+                        >
+                          &lt;unlabeled-atom&gt;
+                        </code>
+                      </span>
+                    </div>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
@@ -3431,7 +3535,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                         style="min-width: 100%; display: table;"
                       >
                         <pre
-                          class="emotion-118 emotion-119 prism-code language-markdown"
+                          class="emotion-118 emotion-119 prism-code language-javascript"
                           dir="ltr"
                           style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                         >
@@ -3442,7 +3546,8 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                               class="emotion-122 emotion-121Content"
                             >
                               <span
-                                class="token plain"
+                                class="token number"
+                                style="color: rgb(28, 126, 214);"
                               >
                                 0
                               </span>
@@ -5261,7 +5366,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                         style="min-width: 100%; display: table;"
                       >
                         <pre
-                          class="emotion-118 emotion-119 prism-code language-markdown"
+                          class="emotion-118 emotion-119 prism-code language-javascript"
                           dir="ltr"
                           style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                         >
@@ -5272,7 +5377,8 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                               class="emotion-122 emotion-121Content"
                             >
                               <span
-                                class="token plain"
+                                class="token number"
+                                style="color: rgb(28, 126, 214);"
                               >
                                 0
                               </span>
@@ -9630,7 +9736,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                         style="min-width: 100%; display: table;"
                       >
                         <pre
-                          class="emotion-118 emotion-119 prism-code language-markdown"
+                          class="emotion-118 emotion-119 prism-code language-javascript"
                           dir="ltr"
                           style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                         >
@@ -9641,7 +9747,8 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                               class="emotion-122 emotion-121Content"
                             >
                               <span
-                                class="token plain"
+                                class="token number"
+                                style="color: rgb(28, 126, 214);"
                               >
                                 0
                               </span>
@@ -11575,7 +11682,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                         style="min-width: 100%; display: table;"
                       >
                         <pre
-                          class="emotion-141 emotion-142 prism-code language-markdown"
+                          class="emotion-141 emotion-142 prism-code language-javascript"
                           dir="ltr"
                           style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
                         >
@@ -11586,7 +11693,8 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                               class="emotion-145 emotion-144Content"
                             >
                               <span
-                                class="token plain"
+                                class="token number"
+                                style="color: rgb(28, 126, 214);"
                               >
                                 0
                               </span>
