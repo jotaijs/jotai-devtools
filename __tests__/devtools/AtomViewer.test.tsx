@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import * as stringifyModule from 'javascript-stringify';
 import { atom, useAtomValue } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { AnyAtom } from 'src/types';
@@ -261,29 +262,16 @@ describe('DevTools - AtomViewer', () => {
   describe('Atom details', () => {
     describe('Raw value', () => {
       it('should display an error when we are not able to parse the value', async () => {
-        class CircularClass {
-          circular: any;
-          constructor() {
-            this.circular = this;
-          }
-        }
+        const stringifySpy = jest
+          .spyOn(stringifyModule, 'stringify')
+          .mockImplementation(() => {
+            throw new Error('some-error');
+          });
 
-        const circularObject: InstanceType<typeof CircularClass> =
-          new CircularClass();
-
-        const CircularAtomWithDevTools = () => {
-          // Create atoms inside the component so that they are recreated for each test
-          const circularAtom = useMemo(() => atom(circularObject), []);
-          circularAtom.debugLabel = 'circularAtom';
-
-          useAtomValue(circularAtom);
-          return <DevTools isInitialOpen={true} />;
-        };
-
-        const { container } = customRender(<CircularAtomWithDevTools />);
+        const { container } = customRender(<BasicAtomsWithDevTools />);
 
         await act(async () => {
-          await userEvent.click(screen.getByText('circularAtom'));
+          await userEvent.click(screen.getByText('countAtom'));
         });
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();
@@ -295,8 +283,8 @@ describe('DevTools - AtomViewer', () => {
           screen.getByText('Failed to parse the value of the atom'),
         ).toBeInTheDocument();
         expect(screen.getByText('Dependents')).toBeInTheDocument();
-        expect(screen.getByText('No dependents')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
+        stringifySpy.mockRestore();
       });
 
       it('should display atom details when an atom is selected', async () => {
@@ -345,19 +333,23 @@ describe('DevTools - AtomViewer', () => {
           return <DevTools isInitialOpen={true} />;
         };
 
+        const circObj: any = { circObj: null };
+        circObj.circObj = circObj;
+
         it.each`
-          type           | value                    | expected
-          ${'string'}    | ${'some-string'}         | ${'some-string'}
-          ${'number'}    | ${123}                   | ${123}
-          ${'boolean'}   | ${true}                  | ${true}
-          ${'boolean'}   | ${false}                 | ${false}
-          ${'null'}      | ${null}                  | ${'null'}
-          ${'undefined'} | ${undefined}             | ${'undefined'}
-          ${'bigint'}    | ${BigInt(123)}           | ${'123'}
-          ${'symbol'}    | ${Symbol('some-symbol')} | ${'Symbol(some-symbol)'}
-          ${'function'}  | ${() => () => 'hello'}   | ${"()=>'hello'"}
-          ${'object'}    | ${{ foo: 'bar' }}        | ${'{ "foo": "bar"}'}
-          ${'array'}     | ${[1, 2, 3]}             | ${'[ 1, 2, 3]'}
+          type                 | value                    | expected
+          ${'string'}          | ${'some-string'}         | ${'some-string'}
+          ${'number'}          | ${123}                   | ${123}
+          ${'boolean'}         | ${true}                  | ${true}
+          ${'boolean'}         | ${false}                 | ${false}
+          ${'null'}            | ${null}                  | ${'null'}
+          ${'undefined'}       | ${undefined}             | ${'undefined'}
+          ${'bigint'}          | ${BigInt(123)}           | ${'123'}
+          ${'symbol'}          | ${Symbol('some-symbol')} | ${'Symbol(some-symbol)'}
+          ${'function'}        | ${() => () => 'hello'}   | ${"()=>'hello'"}
+          ${'object'}          | ${{ foo: 'bar' }}        | ${'{ foo: "bar"}'}
+          ${'circular-object'} | ${circObj}               | ${'{}'}
+          ${'array'}           | ${[1, 2, 3]}             | ${'[ 1, 2, 3]'}
         `(
           'should parse "$type" value correctly',
           async ({ value, expected }) => {
