@@ -163,6 +163,7 @@
     "@tabler/icons": "^1.119.0",
     "javascript-stringify": "^2.1.0",
     "react-error-boundary": "^3.1.4",
+    "react-json-tree": "^0.18.0",
     "react-resizable-panels": "^0.0.37",
     "stacktracey": "^2.1.8"
   }

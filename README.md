@@ -14,6 +14,7 @@
 - ✅ Supports custom `nonce` for CSP
 - ✅ Hides private atoms with ability to configure (requires Jotai `>=2.0.3`)
 - ✅ Tree-shakable and built for non-production environments
+- ✅ Parses all the JavaScript values with JSON Tree view
 
 ## 📺 Preview
 
@@ -97,6 +98,9 @@ type DevToolsProps = {
     // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
     // Defaults to `false`
     shouldShowPrivateAtoms?: boolean;
+    // Expands the JSON tree view on initial render on Atom Viewer tab, Timeline tab, etc.
+    // Defaults to `false`
+    shouldExpandJsonTreeViewInitially?: boolean;
   };
 };
 ```
@@ -181,6 +185,11 @@ Find the official migration guide on
    - } from 'jotai/react/devtools';
    + } from 'jotai-devtools';
    ```
+
+### Inspirations
+
+[Redux DevTools](https://github.com/reduxjs/redux-devtools)
+[React Query DevTools](https://tanstack.com/query/v4/docs/react/devtools)
 
 ### Other announcements
 

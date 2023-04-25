@@ -5,7 +5,7 @@ import { getTypeOfAtomValue } from '../../../../../../../../utils/get-type-of-at
 import { useInternalAtomValue } from '../../../hooks/useInternalAtomValue';
 import { AtomDependentsList } from './AtomDependentsList';
 import { AtomMetaDetails } from './AtomMetaDetails';
-import { AtomParseRawValueValue } from './AtomParseRawValue';
+import { AtomValue } from './AtomValue';
 
 type DisplayAtomDetailsProps = {
   atom: AnyAtom;
@@ -23,8 +23,7 @@ export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
         isAtomPrivate={atom?.debugPrivate}
       />
 
-      <AtomParseRawValueValue atomValue={atomValue} />
-
+      <AtomValue atomValue={atomValue} />
       {/* FIXME: Bug in core jotai prevents us from subscribing deeply nested atoms properly*/}
       {/* {shouldDisplayDeepNestedValue && (
         <AtomParseDeepNestedValue atom={atom} atomValueType={atomValueType} />

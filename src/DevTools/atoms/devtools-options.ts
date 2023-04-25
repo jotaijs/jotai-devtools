@@ -23,10 +23,17 @@ export type DevToolsOptions = {
    * They're often used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
    */
   shouldShowPrivateAtoms?: boolean;
+  /**
+   * Defaults to `false`
+   *
+   * Expands the JSON tree view fully on Atom Viewer, Timeline, etc.
+   */
+  shouldExpandJsonTreeViewInitially?: boolean;
 };
 
 const defaultDevToolsOptions: DevToolsOptions = {
   shouldShowPrivateAtoms: false,
+  shouldExpandJsonTreeViewInitially: false,
 };
 
 const internalDevToolsOptions = atom<DevToolsOptions>(defaultDevToolsOptions);
