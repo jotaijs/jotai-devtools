@@ -369,5 +369,112 @@ describe('DevTools - AtomViewer', () => {
         );
       });
     });
+    describe('JSON value', () => {
+      const localStorageSetItemSpy = jest.spyOn(
+        window.localStorage.__proto__,
+        'setItem',
+      );
+
+      const localStorageGetItemSpy = jest.spyOn(
+        window.localStorage.__proto__,
+        'getItem',
+      );
+
+      beforeAll(() => {
+        localStorageSetItemSpy.mockImplementation(jest.fn());
+        localStorageGetItemSpy.mockImplementation(jest.fn());
+      });
+
+      afterAll(() => {
+        localStorageSetItemSpy.mockRestore();
+        localStorageGetItemSpy.mockRestore();
+      });
+
+      it('should display both the options when object is compatible with JSON tree view and defaults to raw value', async () => {
+        const ObjectAtomsWithDevTools = () => {
+          // Create atoms inside the component so that they are recreated for each test
+          const objectAtom = useMemo(() => atom({ x: 0, a: { b: 'c' } }), []);
+          objectAtom.debugLabel = 'objectAtom';
+
+          useAtomValue(objectAtom);
+          return <DevTools isInitialOpen={true} />;
+        };
+
+        customRender(<ObjectAtomsWithDevTools />);
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('objectAtom'));
+        });
+
+        expect(screen.getByText('Raw value')).toBeInTheDocument();
+        expect(screen.getByText('Tree view')).toBeInTheDocument();
+        expect(screen.getByTestId('atom-parsed-value')).toBeVisible();
+        expect(screen.getByTestId('json-tree-panel')).not.toBeVisible();
+      });
+      it('should display JSON tree view when user selects from the tab header', async () => {
+        const ObjectAtomsWithDevTools = () => {
+          // Create atoms inside the component so that they are recreated for each test
+          const objectAtom = useMemo(() => atom({ x: 0, a: { b: 'c' } }), []);
+          objectAtom.debugLabel = 'objectAtom';
+
+          useAtomValue(objectAtom);
+          return <DevTools isInitialOpen={true} />;
+        };
+        customRender(<ObjectAtomsWithDevTools />);
+        await act(async () => {
+          await userEvent.click(screen.getByText('objectAtom'));
+        });
+
+        expect(screen.getByTestId('json-tree-panel')).not.toBeVisible();
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('Tree view'));
+        });
+
+        expect(screen.getByTestId('json-tree-panel')).toBeVisible();
+        expect(screen.getByTestId('json-tree-panel')).toMatchSnapshot();
+        expect(
+          screen.queryByTestId('atom-parsed-value'),
+        ).not.toBeInTheDocument();
+
+        expect(screen.getByTestId('json-tree-panel')).toHaveTextContent(
+          `x:0▶a:{ b: "c" }`,
+        );
+      });
+
+      it('should display JSON tree view with all the values expanded', async () => {
+        const ObjectAtomsWithDevTools = () => {
+          // Create atoms inside the component so that they are recreated for each test
+          const objectAtom = useMemo(() => atom({ x: 0, a: { b: 'c' } }), []);
+          objectAtom.debugLabel = 'objectAtom';
+
+          useAtomValue(objectAtom);
+          return (
+            <DevTools
+              isInitialOpen={true}
+              options={{
+                shouldExpandJsonTreeViewInitially: true,
+              }}
+            />
+          );
+        };
+
+        customRender(<ObjectAtomsWithDevTools />);
+        await act(async () => {
+          await userEvent.click(screen.getByText('objectAtom'));
+        });
+
+        expect(screen.getByTestId('json-tree-panel')).not.toBeVisible();
+
+        await act(async () => {
+          await userEvent.click(screen.getByText('Tree view'));
+        });
+
+        expect(screen.getByTestId('json-tree-panel')).toMatchSnapshot();
+        expect(screen.getByTestId('json-tree-panel')).toHaveTextContent(
+          `x:0▶a:{ b: "c" }b:"c"`,
+        );
+      });
+    });
   });
 });

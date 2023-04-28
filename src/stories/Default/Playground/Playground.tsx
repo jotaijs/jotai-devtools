@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Title } from '@mantine/core';
-import { atom, useAtom } from 'jotai';
+import { Button, Title } from '@mantine/core';
+import { atom, useAtom, useAtomValue } from 'jotai';
 import {
   atomWithDefault,
   atomWithObservable,
@@ -92,12 +92,37 @@ const circularAtom = atom(circularObject);
 circularAtom.debugLabel = 'circularAtom';
 circularAtom.debugPrivate = true;
 
+const anAtomWithObject = atom((get) => ({
+  count: get(baseCountAtom),
+  0: 'some string',
+  a: 1,
+  b: {
+    c: {
+      d: ['h', 'e', 'l', 'l', { o: 'world' }, { o: 'world' }],
+      e: [new Date(), 2, 3, () => {}, () => true, true, null, undefined],
+    },
+    d: {
+      e: Symbol('e'),
+      f: BigInt(Number.MAX_SAFE_INTEGER),
+    },
+    2: () => {
+      const name = 'John';
+      return `Hello ${name}!`;
+    },
+    3: true,
+    4: null,
+    5: undefined,
+  },
+}));
+
+anAtomWithObject.debugLabel = 'anAtomWithObject';
+
 export const Playground = () => {
   return (
     <>
       <Title>Playground</Title>
       {/* <UserData /> */}
-      <SomeComponentWithToggle />
+      {/* <SomeComponentWithToggle /> */}
     </>
   );
 };
