@@ -1729,7 +1729,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r47:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -3519,7 +3519,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r4j:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -5314,7 +5314,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r55:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -6599,7 +6599,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r39:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -7900,7 +7900,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r2t:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -9578,7 +9578,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r1p:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -11466,7 +11466,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r2b:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -12984,7 +12984,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":rl:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
@@ -14139,7 +14139,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           data-panel-resize-handle-enabled="true"
           data-panel-resize-handle-id=":r9:"
           role="separator"
-          style="cursor: col-resize; user-select: none;"
+          style="cursor: ew-resize; user-select: none;"
           tabindex="0"
         >
           <div
