@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Grid, MantineProvider, Text, Title } from '@mantine/core';
-import { DevTools, DevToolsProps } from '../../../DevTools';
+import { DevTools, DevToolsProps } from '../../../';
 import { Async } from './Async';
 import { Counter } from './Counter';
 import { DemoJotaiStoreContext, demoStore } from './demo-store';
