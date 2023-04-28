@@ -18,13 +18,13 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.cjs.js"
     },
-    "./*": {
+    "./utils": {
       "import": {
-        "types": "./dist/*.d.mts",
-        "default": "./dist/*.esm.mjs"
+        "types": "./dist/utils.d.mts",
+        "default": "./dist/utils.esm.mjs"
       },
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.cjs.js"
+      "types": "./dist/utils.d.ts",
+      "default": "./dist/utils.cjs.js"
     }
   },
   "typesVersions": {

@@ -19,6 +19,8 @@ const baseConfig: Options = {
   // Outputs `dist/index.js` and `dist/utils.js`
   entry: {
     index: 'src/index.ts',
+    // Workaround to generate seperate chunks for DevTools so we could export a null component for production builds
+    internal__devtools: 'src/DevTools/index.ts',
     utils: 'src/utils/index.ts',
   },
   loader: {
@@ -27,7 +29,7 @@ const baseConfig: Options = {
   sourcemap: false,
   // Clean output directory before each build
   clean: true,
-  minify: true,
+  minify: false,
   splitting: true,
   tsconfig: './tsconfig.build.json',
   dts: true,
@@ -51,19 +53,10 @@ const mjsOutExtension: Options['outExtension'] = ({ format }) => {
   };
 };
 
-const mjsEsBuildPlugins: Options['esbuildPlugins'] = [
-  replace({
-    // FIXME - Should filter it by `include` instead of `exclude`. This doesn't seem to be working /^.*\.js$/,
-    exclude: /\.woff2$/,
-    __DEV__: '((import.meta.env&&import.meta.env.MODE)!=="production")',
-  }),
-];
-
 const mjsConfig: Options = {
   ...baseConfig,
   format: ['esm'],
   outExtension: mjsOutExtension,
-  esbuildPlugins: mjsEsBuildPlugins,
 };
 
 export default defineConfig([cjsConfig, mjsConfig]);
