@@ -752,7 +752,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -763,11 +763,6 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -785,7 +780,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -797,15 +792,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -827,7 +814,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             class="emotion-8 emotion-27"
           >
             <svg
-              class="icon icon-tabler icon-tabler-alert-circle"
+              class="tabler-icon tabler-icon-alert-circle"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -839,26 +826,13 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
+                d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
               />
-              <circle
-                cx="12"
-                cy="12"
-                r="9"
+              <path
+                d="M12 8v4"
               />
-              <line
-                x1="12"
-                x2="12"
-                y1="8"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="16"
-                y2="16"
+              <path
+                d="M12 16h.01"
               />
             </svg>
           </div>
@@ -1715,7 +1689,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-moon-stars"
+              class="tabler-icon tabler-icon-moon-stars"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -1726,11 +1700,6 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
               <path
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
               />
@@ -1748,7 +1717,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             type="button"
           >
             <svg
-              class="icon icon-tabler icon-tabler-minus"
+              class="tabler-icon tabler-icon-minus"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -1760,15 +1729,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
+                d="M5 12l14 0"
               />
             </svg>
           </button>
@@ -1790,7 +1751,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             class="emotion-8 emotion-27"
           >
             <svg
-              class="icon icon-tabler icon-tabler-alert-circle"
+              class="tabler-icon tabler-icon-alert-circle"
               fill="none"
               height="16"
               stroke="currentColor"
@@ -1802,26 +1763,13 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-                stroke="none"
+                d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
               />
-              <circle
-                cx="12"
-                cy="12"
-                r="9"
+              <path
+                d="M12 8v4"
               />
-              <line
-                x1="12"
-                x2="12"
-                y1="8"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="16"
-                y2="16"
+              <path
+                d="M12 16h.01"
               />
             </svg>
           </div>
