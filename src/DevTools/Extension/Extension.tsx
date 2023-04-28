@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { ActionIcon, Sx } from '@mantine/core';
-import { useAtom, useSetAtom } from 'jotai/react';
-import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
+import {
+  useIsShellOpenValue,
+  useSetIsShellOpen,
+} from '../atoms/is-shell-open-atom';
 import { useThemeMode } from '../hooks/useThemeMode';
-import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 import { logo } from './assets/logo';
 import { Shell, ShellProps } from './components/Shell';
 
@@ -21,10 +22,7 @@ const shellTriggerButtonStyles: Sx = () => ({
 });
 
 const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
-  const setIsShellOpen = useSetAtom(
-    isShellOpenAtom,
-    useDevtoolsJotaiStoreOptions(),
-  );
+  const setIsShellOpen = useSetIsShellOpen();
 
   return (
     <ActionIcon
@@ -50,19 +48,12 @@ export const Extension = ({
   isInitialOpen = false,
   store,
 }: ExtensionProps): JSX.Element => {
-  const [isShellOpen, setIsShellOpen] = useAtom(
-    isShellOpenAtom,
-    useDevtoolsJotaiStoreOptions(),
+  const isShellOpen = useIsShellOpenValue();
+
+  const isShellOpenSafe =
+    typeof isShellOpen !== 'boolean' ? isInitialOpen : isShellOpen;
+
+  return (
+    <>{isShellOpenSafe ? <Shell store={store} /> : <ShellTriggerButton />}</>
   );
-
-  React.useEffect(() => {
-    // Avoid setting the initial value if the value is found in the local storage
-    if (typeof isShellOpen !== 'boolean') {
-      setIsShellOpen(isInitialOpen);
-    }
-    // Intentionally disabled
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return <>{isShellOpen ? <Shell store={store} /> : <ShellTriggerButton />}</>;
 };
