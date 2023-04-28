@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { DevTools, DevToolsProps } from '../../DevTools';
+import { DevTools, DevToolsProps } from '../../';
 import { DemoApp } from './Demos/DemoApp';
 
 export default {
