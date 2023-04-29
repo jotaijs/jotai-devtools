@@ -52,7 +52,7 @@
     "lint-staged": "lint-staged",
     "compile": "tsup",
     "postcompile": "node -e \"require('shelljs').find('dist/**/*.d.ts').forEach(f=>require('fs').copyFileSync(f,f.replace(/\\.ts$/,'.mts')))\";",
-    "prerelease": "pnpm install --immutable && pnpm run lint && pnpm run test && pnpm run compile",
+    "prerelease": "pnpm install --frozen-lockfile && pnpm run lint && pnpm run test && pnpm run compile",
     "release": "release-it",
     "release:next": "pnpm run release --preRelease=next",
     "release:minor": "pnpm run release minor",
