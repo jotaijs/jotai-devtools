@@ -1,4 +1,4 @@
-import { MantineTheme } from '@mantine/styles';
+import { MantineTheme } from '@mantine/core';
 import type { Base16Theme } from 'base16';
 import type { StylingConfig } from 'react-base16-styling';
 

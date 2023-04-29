@@ -1,4 +1,4 @@
-import { MantineTheme, useMantineTheme } from '@mantine/styles';
+import { MantineTheme, useMantineTheme } from '@mantine/core';
 import type { Base16Theme } from 'base16';
 import { getJsonTreeTheme } from './get-json-tree-theme';
 
