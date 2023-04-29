@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { Box, Tabs, Text } from '@mantine/core';
-import { IconBinaryTree2, IconSourceCode } from '@tabler/icons';
+import { IconBinaryTree2, IconSourceCode } from '@tabler/icons-react';
 import { AnyAtomValue } from 'src/types';
 import {
   ErrorSymbol,
