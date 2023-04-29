@@ -10,6 +10,6 @@
 
 Run the following to conduct a release
 
-- `yarn run release` (installs and bundles all the required files)
+- `pnpm run release` (installs and bundles all the required files)
 - Select a version to release
 - Answer all the prompts, and select publish to npm as well as GitHub
