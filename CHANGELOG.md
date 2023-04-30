@@ -1,3 +1,20 @@
+# [0.5.0](https://github.com/jotaijs/jotai-devtools/compare/v0.4.0...v0.5.0) (2023-04-30)
+
+### Bug Fixes
+
+- generate esm modules with process.env.NODE_ENV
+  ([#60](https://github.com/jotaijs/jotai-devtools/issues/60))
+  ([0d07f94](https://github.com/jotaijs/jotai-devtools/commit/0d07f9440814a04ff41a7471459bfb50ce0178db))
+
+### Features
+
+- add json tree viewer
+  ([#62](https://github.com/jotaijs/jotai-devtools/issues/62))
+  ([fb9453f](https://github.com/jotaijs/jotai-devtools/commit/fb9453fa1657f6357c236001c7977de7c2f4fa79))
+- use javascript value stringifier
+  ([#61](https://github.com/jotaijs/jotai-devtools/issues/61))
+  ([9fdea17](https://github.com/jotaijs/jotai-devtools/commit/9fdea173b91056e573bba4ceabe1db091bf2b121))
+
 # [0.4.0](https://github.com/jotaijs/jotai-devtools/compare/v0.3.1...v0.4.0) (2023-03-29)
 
 ### Bug Fixes
