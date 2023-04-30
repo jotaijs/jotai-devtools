@@ -1,3 +1,11 @@
+## [0.5.1](https://github.com/jotaijs/jotai-devtools/compare/v0.5.0...v0.5.1) (2023-04-30)
+
+### Bug Fixes
+
+- add mts types after compile
+  ([#66](https://github.com/jotaijs/jotai-devtools/issues/66))
+  ([15b770e](https://github.com/jotaijs/jotai-devtools/commit/15b770eb8e00b210d7fae2b9d5af53087252b738))
+
 # [0.5.0](https://github.com/jotaijs/jotai-devtools/compare/v0.4.0...v0.5.0) (2023-04-30)
 
 ### Bug Fixes
