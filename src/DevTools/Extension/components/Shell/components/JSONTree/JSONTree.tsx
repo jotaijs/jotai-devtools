@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
-import { Box } from '@mantine/core';
-import { Sx } from '@mantine/styles';
+import { Box, Sx } from '@mantine/core';
 import { JSONTree as ReactJSONTree, ValueRenderer } from 'react-json-tree';
 import { useDevToolsOptionsValue } from '../../../../../atoms/devtools-options';
 import { ErrorSymbol, stringifyAtomValue } from '../../../../../utils/';
