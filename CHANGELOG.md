@@ -1,3 +1,11 @@
+## [0.5.2](https://github.com/jotaijs/jotai-devtools/compare/v0.5.1...v0.5.2) (2023-05-01)
+
+### Bug Fixes
+
+- avoid running preinstall scripts on userland
+  ([#67](https://github.com/jotaijs/jotai-devtools/issues/67))
+  ([2c49877](https://github.com/jotaijs/jotai-devtools/commit/2c49877d843d53f40ab7d339bfbb0559310422a0))
+
 ## [0.5.1](https://github.com/jotaijs/jotai-devtools/compare/v0.5.0...v0.5.1) (2023-04-30)
 
 ### Bug Fixes
