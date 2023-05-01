@@ -41,7 +41,6 @@
     "package.json"
   ],
   "scripts": {
-    "preinstall": "npx --yes only-allow pnpm",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
