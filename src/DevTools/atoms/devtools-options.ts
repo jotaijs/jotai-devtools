@@ -4,19 +4,6 @@ import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 
 export type DevToolsOptions = {
   /**
-   * Parsing strategy for AtomViewer. Defaults to `raw`
-   */
-  // FIXME: There is a bug in Jotai core that prevents us from subscribing to nested atom value properly
-  // atomValueParser?: /**
-  //  *  parses the top level atom value but doesn't parse values of atoms within atoms
-  //  */
-  // | 'raw'
-  //   /**
-  //    *  parses values of atoms within atoms. Comes with linear performance curve
-  //    *  the bigger the object, the slower the performance
-  //    */
-  //   | 'deep-nested';
-  /**
    * Defaults to `false`
    *
    * Private are atoms that are used by Jotai libraries internally to manage state.

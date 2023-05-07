@@ -24,10 +24,6 @@ export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
       />
 
       <AtomValue atomValue={atomValue} />
-      {/* FIXME: Bug in core jotai prevents us from subscribing deeply nested atoms properly*/}
-      {/* {shouldDisplayDeepNestedValue && (
-        <AtomParseDeepNestedValue atom={atom} atomValueType={atomValueType} />
-      )} */}
 
       {/* TODO add dependencies list */}
 
