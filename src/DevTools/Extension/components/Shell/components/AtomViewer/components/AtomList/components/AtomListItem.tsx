@@ -16,8 +16,8 @@ const monoSpaceFonts: Sx = (theme) => ({
   fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
 });
 
-const navLinkStyles: Sx = () => ({
-  borderRadius: 5,
+const navLinkStyles: Sx = (theme) => ({
+  borderRadius: theme.radius.md,
 });
 
 export const AtomListItem = React.memo(

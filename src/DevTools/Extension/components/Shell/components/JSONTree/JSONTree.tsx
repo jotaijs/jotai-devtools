@@ -10,7 +10,7 @@ const monoSpaceFonts: Sx = (theme) => ({
   fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
   fontSize: '13px',
   'ul:first-of-type': {
-    borderRadius: theme.radius.sm,
+    borderRadius: theme.radius.md,
   },
 });
 
