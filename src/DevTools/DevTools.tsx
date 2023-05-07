@@ -27,6 +27,7 @@ const theme: MantineThemeOverride = {
     fontFamily:
       'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
   },
+  defaultRadius: 'md',
   globalStyles: (theme) => ({
     '.jotai-devtools-shell': {
       '*, *::before, *::after': {

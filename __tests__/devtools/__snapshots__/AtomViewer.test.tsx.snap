@@ -11,7 +11,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
 }
 
 .emotion-2 ul:first-of-type {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 <div
@@ -98,7 +98,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
 }
 
 .emotion-2 ul:first-of-type {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 <div
@@ -406,7 +406,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -492,7 +492,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -662,7 +662,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -813,7 +813,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -975,7 +975,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -2095,7 +2095,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -2181,7 +2181,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -2351,7 +2351,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -2502,7 +2502,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -2664,7 +2664,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -3005,7 +3005,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -3096,7 +3096,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -3120,7 +3120,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   line-height: 1.7;
   font-size: 0.8125rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0.75rem 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -3919,7 +3919,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -4005,7 +4005,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -4175,7 +4175,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -4326,7 +4326,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -4488,7 +4488,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -4829,7 +4829,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -4920,7 +4920,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -4944,7 +4944,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   line-height: 1.7;
   font-size: 0.8125rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0.75rem 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -5698,7 +5698,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -5784,7 +5784,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -5954,7 +5954,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -6105,7 +6105,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -6853,7 +6853,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -6939,7 +6939,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -7109,7 +7109,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -7260,7 +7260,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -7422,7 +7422,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -8154,7 +8154,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -8240,7 +8240,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -8410,7 +8410,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -8561,7 +8561,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -8723,7 +8723,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -9064,7 +9064,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -9155,7 +9155,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -9179,7 +9179,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   line-height: 1.7;
   font-size: 0.8125rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0.75rem 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -9978,7 +9978,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -10064,7 +10064,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -10234,7 +10234,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -10385,7 +10385,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -10547,7 +10547,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -10898,7 +10898,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -10989,7 +10989,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -11013,7 +11013,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   line-height: 1.7;
   font-size: 0.8125rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0.75rem 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -11883,7 +11883,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -11969,7 +11969,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -12139,7 +12139,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -12290,7 +12290,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
@@ -12452,7 +12452,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .emotion-49:focus {
@@ -13238,7 +13238,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   text-decoration: none;
   box-sizing: border-box;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 0;
   line-height: 1;
   display: -webkit-box;
@@ -13324,7 +13324,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   left: -0.0625rem;
   bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: not-allowed;
 }
 
@@ -13494,7 +13494,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   line-height: 1;
   border-bottom: 0.125rem solid transparent;
   margin-bottom: -0.125rem;
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .emotion-26:focus {
@@ -13645,7 +13645,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   min-height: 2.25rem;
   padding-left: calc(2.25rem  / 3);
   padding-right: calc(2.25rem  / 3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .emotion-45:focus,
