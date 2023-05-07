@@ -63,14 +63,11 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
   }
 
   useEffect(() => {
-    if (!userStore.dev_subscribe_state) return;
+    const devSubscribeStore: Store['dev_subscribe_store'] =
+      // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
+      userStore?.dev_subscribe_store || userStore?.dev_subscribe_state;
 
-    // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
-    let devSubscribeStore = userStore.dev_subscribe_state;
-
-    if (typeof userStore.dev_subscribe_store === 'function') {
-      devSubscribeStore = userStore.dev_subscribe_store;
-    }
+    if (!devSubscribeStore) return;
 
     const atomSubCb = <AtomSubscribeFunction>(() => {
       if (typeof delay === 'number') {
@@ -84,7 +81,7 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     atomSubCb.isJotaiDevTools = true;
 
     const devSubCb = (
-      type?: Parameters<Parameters<typeof userStore.dev_subscribe_store>[0]>[0],
+      type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
     ) => {
       if (type !== 'unsub') {
         return;
