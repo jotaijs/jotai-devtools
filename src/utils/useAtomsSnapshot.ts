@@ -5,6 +5,7 @@ import type {
   AtomsSnapshot,
   AtomsValues,
   Options,
+  Store,
 } from '../types';
 
 const isEqualAtomsValues = (left: AtomsValues, right: AtomsValues) =>
@@ -34,33 +35,32 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
   }));
 
   useEffect(() => {
-    // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
-    if (!store.dev_subscribe_state) return;
+    const devSubscribeStore: Store['dev_subscribe_store'] =
+      // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
+      store?.dev_subscribe_store || store?.dev_subscribe_state;
+
+    if (!devSubscribeStore) return;
 
     let prevValues: AtomsValues = new Map();
     let prevDependents: AtomsDependents = new Map();
 
-    let devSubscribeStore = store.dev_subscribe_state;
-
-    if (typeof store?.dev_subscribe_store !== 'function') {
+    if (!('dev_subscribe_store' in store)) {
       console.warn(
         "[DEPRECATION-WARNING] Jotai version you're using contains deprecated dev-only properties that will be removed soon. Please update to the latest version of Jotai.",
       );
-    } else {
-      devSubscribeStore = store.dev_subscribe_store;
     }
 
     const callback = () => {
       const values: AtomsValues = new Map();
       const dependents: AtomsDependents = new Map();
-      for (const atom of store.dev_get_mounted_atoms() || []) {
-        const atomState = store.dev_get_atom_state(atom);
+      for (const atom of store.dev_get_mounted_atoms?.() || []) {
+        const atomState = store.dev_get_atom_state?.(atom);
         if (atomState) {
           if ('v' in atomState) {
             values.set(atom, atomState.v);
           }
         }
-        const mounted = store.dev_get_mounted(atom);
+        const mounted = store.dev_get_mounted?.(atom);
         if (mounted) {
           dependents.set(atom, mounted.t);
         }
