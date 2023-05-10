@@ -2,7 +2,6 @@ import * as React from 'react';
 import { NavLink, Sx, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
-import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
 
 type AtomListItemProps = {
   label?: string | undefined;
@@ -26,7 +25,7 @@ export const AtomListItem = React.memo(
       <NavLink
         label={React.useMemo(
           () => (
-            <Text sx={monoSpaceFonts}>{parseDebugLabel(label)}</Text>
+            <Text sx={monoSpaceFonts}>{label}</Text>
           ),
           [label],
         )}

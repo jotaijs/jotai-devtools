@@ -4,6 +4,7 @@ import { IconAlertCircle } from '@tabler/icons-react';
 import { useAtom, useAtomValue } from 'jotai/react';
 import { useSyncSnapshotValuesToAtom } from '../../../../../../../hooks/useAtomsSnapshots';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
+import { atomToPrintable } from '../../../../../../../utils';
 import {
   filteredValuesAtom,
   searchInputAtom,
@@ -93,7 +94,7 @@ export const AtomList = () => {
         return (
           <AtomListItem
             key={`atom-list-item-${atom.toString() + i}`}
-            label={atom.debugLabel}
+            label={atomToPrintable(atom)}
             onClick={handleOnClick}
             pos={i}
             isActive={selectedAtomData?.atomKey === atom.toString()}

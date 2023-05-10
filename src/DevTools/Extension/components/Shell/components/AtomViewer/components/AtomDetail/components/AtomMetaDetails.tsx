@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, Code, MantineColor, Text, Title, Tooltip } from '@mantine/core';
 import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
-import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
 
 type AtomDetailItemProps = {
   label: string;
@@ -52,10 +51,7 @@ export const AtomMetaDetails = React.memo(
         <Text fw="bold" mb={10}>
           Meta
         </Text>
-        <DisplayAtomDetailsItem
-          label="Debug Label"
-          value={parseDebugLabel(debugLabel)}
-        />
+        <DisplayAtomDetailsItem label="Debug Label" value={debugLabel} />
         <DisplayAtomDetailsItem label="Value type" value={atomValueType} />
         {isAtomPrivate && (
           <DisplayAtomDetailsItem label="Private" value={'Yes'} color={'red'} />

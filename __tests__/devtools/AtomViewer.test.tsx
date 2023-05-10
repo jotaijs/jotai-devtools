@@ -16,6 +16,8 @@ const BasicAtomsWithDevTools = () => {
     [countAtom],
   );
 
+  doubleAtom.debugLabel = 'doubleCountAtom';
+
   useAtomValue(countAtom);
   useAtomValue(doubleAtom);
   return <DevTools isInitialOpen={true} />;
@@ -45,7 +47,7 @@ describe('DevTools - AtomViewer', () => {
       const { container } = customRender(<BasicAtomsWithDevTools />);
       expect(screen.getByText('countAtom')).toBeInTheDocument();
       // We did not add `debugLabel` to `doubleAtom` so it should be unlabeled
-      expect(screen.getByText('<unlabeled-atom>')).toBeInTheDocument();
+      expect(screen.getByText('doubleCountAtom')).toBeInTheDocument();
       expect(container).toMatchSnapshot();
     });
 
@@ -73,6 +75,8 @@ describe('DevTools - AtomViewer', () => {
           [countAtom, privateAtom],
         );
 
+        doubleAtom.debugLabel = 'doubleCountAtom';
+
         useAtomValue(countAtom);
         useAtomValue(doubleAtom);
         useAtomValue(privateAtom);
@@ -91,7 +95,7 @@ describe('DevTools - AtomViewer', () => {
         customRender(<PrivateAtomsWithDevTools />);
         expect(screen.queryByText('privateAtom')).not.toBeInTheDocument();
         expect(screen.getByText('countAtom')).toBeInTheDocument();
-        expect(screen.getByText('<unlabeled-atom>')).toBeInTheDocument();
+        expect(screen.getByText('doubleCountAtom')).toBeInTheDocument();
       });
 
       it('should render private atoms when shouldShowPrivateAtoms is marked as true', async () => {
@@ -122,7 +126,7 @@ describe('DevTools - AtomViewer', () => {
 
         expect(screen.getByText('Dependents')).toBeInTheDocument();
         expect(
-          screen.queryByTestId('dependents-list-item-<unlabeled-atom>-0'),
+          screen.queryByTestId('dependents-list-item-doubleCountAtom-0'),
         ).toBeInTheDocument();
         expect(
           screen.queryByTestId('dependents-list-item-privateAtom-0'),
@@ -155,7 +159,7 @@ describe('DevTools - AtomViewer', () => {
 
         expect(screen.getByText('Dependents')).toBeInTheDocument();
         expect(
-          screen.getByTestId('dependents-list-item-<unlabeled-atom>-0'),
+          screen.getByTestId('dependents-list-item-doubleCountAtom-0'),
         ).toBeInTheDocument();
         expect(container).toMatchSnapshot();
       });
@@ -166,16 +170,20 @@ describe('DevTools - AtomViewer', () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
 
         await act(async () => {
-          await userEvent.type(screen.getByLabelText('Search'), 'count');
+          await userEvent.type(
+            screen.getByLabelText('Search'),
+            'doubleCountAtom',
+          );
         });
 
         expect(
           screen.queryByTestId('atom-list-no-atoms-found-message'),
         ).not.toBeInTheDocument();
-        expect(screen.getByText('countAtom')).toBeInTheDocument();
-        expect(screen.queryByText('<unlabeled-atom>')).not.toBeInTheDocument();
+        expect(screen.queryByText('countAtom')).not.toBeInTheDocument();
+        expect(screen.getByText('doubleCountAtom')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
       });
+
       it('should display an error if no atoms are found', async () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
 
@@ -186,7 +194,7 @@ describe('DevTools - AtomViewer', () => {
           screen.getByTestId('atom-list-no-atoms-found-message'),
         ).toHaveTextContent('No Atoms found!');
         expect(screen.queryByText('countAtom')).not.toBeInTheDocument();
-        expect(screen.queryByText('<unlabeled-atom>')).not.toBeInTheDocument();
+        expect(screen.queryByText('doubleCountAtom')).not.toBeInTheDocument();
         expect(container).toMatchSnapshot();
       });
     });
@@ -308,7 +316,7 @@ describe('DevTools - AtomViewer', () => {
 
         expect(screen.getByText('Dependents')).toBeInTheDocument();
         expect(
-          screen.getByTestId('dependents-list-item-<unlabeled-atom>-0'),
+          screen.getByTestId('dependents-list-item-doubleCountAtom-0'),
         ).toBeInTheDocument();
         expect(container).toMatchSnapshot();
       });
@@ -317,7 +325,7 @@ describe('DevTools - AtomViewer', () => {
         const { container } = render(<BasicAtomsWithDevTools />);
 
         await act(async () => {
-          await userEvent.click(screen.getByText('<unlabeled-atom>'));
+          await userEvent.click(screen.getByText('doubleCountAtom'));
         });
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();

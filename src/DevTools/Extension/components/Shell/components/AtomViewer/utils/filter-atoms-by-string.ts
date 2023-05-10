@@ -1,5 +1,5 @@
 import { ValuesAtomTuple } from 'src/types';
-import { parseDebugLabel } from './../../../../../../utils/parse-debug-label';
+import { atomToPrintable } from '../../../../../../utils';
 
 export const filterAtomsByString = (
   searchString: string,
@@ -11,7 +11,7 @@ export const filterAtomsByString = (
   }
 
   return defaultAtoms.filter(([atomTuple]) => {
-    const parsedDebugLabel = parseDebugLabel(atomTuple?.debugLabel);
+    const parsedDebugLabel = atomToPrintable(atomTuple);
     const normalizedLabel = parsedDebugLabel.toLocaleLowerCase();
     return normalizedLabel.includes(normalizedStr);
   });
