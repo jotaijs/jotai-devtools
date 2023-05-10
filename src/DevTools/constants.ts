@@ -1,7 +1,3 @@
-// storing this as a constants to reuse it across the Shell
-// This could be searched by user on the Atom viewer as well
-export const unlabeledAtomLabel = '<unlabeled-atom>';
-
 export const shellStyleDefaults = {
   minHeight: 200, // in px
   maxHeight: '90%',

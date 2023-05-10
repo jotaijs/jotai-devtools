@@ -1674,7 +1674,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      &lt;unlabeled-atom&gt;
+                      doubleCountAtom
                     </div>
                   </span>
                   <span
@@ -1862,10 +1862,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                       <span>
                         <code
                           class="emotion-97 emotion-98"
-                          data-testid="dependents-list-item-<unlabeled-atom>-0"
+                          data-testid="dependents-list-item-doubleCountAtom-0"
                           dir="ltr"
                         >
-                          &lt;unlabeled-atom&gt;
+                          doubleCountAtom
                         </code>
                       </span>
                     </div>
@@ -3464,7 +3464,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      &lt;unlabeled-atom&gt;
+                      doubleCountAtom
                     </div>
                   </span>
                   <span
@@ -3686,10 +3686,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                       <span>
                         <code
                           class="emotion-97 emotion-98"
-                          data-testid="dependents-list-item-<unlabeled-atom>-0"
+                          data-testid="dependents-list-item-doubleCountAtom-0"
                           dir="ltr"
                         >
-                          &lt;unlabeled-atom&gt;
+                          doubleCountAtom
                         </code>
                       </span>
                     </div>
@@ -5258,7 +5258,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      &lt;unlabeled-atom&gt;
+                      doubleCountAtom
                     </div>
                   </span>
                   <span
@@ -5363,10 +5363,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   </div>
                   <code
                     class="emotion-97 emotion-98"
-                    data-testid="display-detail-item-value-<unlabeled-atom>"
+                    data-testid="display-detail-item-value-doubleCountAtom"
                     dir="ltr"
                   >
-                    &lt;unlabeled-atom&gt;
+                    doubleCountAtom
                   </code>
                 </div>
                 <div
@@ -7825,7 +7825,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                   id="jotai-devtools-atom-debug-search-input"
                   placeholder="atom debug label"
                   type="text"
-                  value="count"
+                  value="doubleCountAtom"
                 />
               </div>
             </div>
@@ -7845,7 +7845,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      countAtom
+                      doubleCountAtom
                     </div>
                   </span>
                   <span
@@ -9523,7 +9523,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      &lt;unlabeled-atom&gt;
+                      doubleCountAtom
                     </div>
                   </span>
                   <span
@@ -9745,10 +9745,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                       <span>
                         <code
                           class="emotion-97 emotion-98"
-                          data-testid="dependents-list-item-<unlabeled-atom>-0"
+                          data-testid="dependents-list-item-doubleCountAtom-0"
                           dir="ltr"
                         >
-                          &lt;unlabeled-atom&gt;
+                          doubleCountAtom
                         </code>
                       </span>
                     </div>
@@ -11355,7 +11355,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      &lt;unlabeled-atom&gt;
+                      doubleCountAtom
                     </div>
                   </span>
                   <span
@@ -11650,10 +11650,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       <span>
                         <code
                           class="emotion-115 emotion-116"
-                          data-testid="dependents-list-item-<unlabeled-atom>-0"
+                          data-testid="dependents-list-item-doubleCountAtom-0"
                           dir="ltr"
                         >
-                          &lt;unlabeled-atom&gt;
+                          doubleCountAtom
                         </code>
                       </span>
                     </div>
@@ -12929,7 +12929,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                     <div
                       class="emotion-8 emotion-56"
                     >
-                      &lt;unlabeled-atom&gt;
+                      doubleCountAtom
                     </div>
                   </span>
                   <span

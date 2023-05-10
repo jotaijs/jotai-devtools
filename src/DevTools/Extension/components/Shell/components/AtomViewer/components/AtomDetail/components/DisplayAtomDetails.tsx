@@ -1,7 +1,10 @@
 import React from 'react';
 import { Stack } from '@mantine/core';
 import { AnyAtom } from 'src/types';
-import { getTypeOfAtomValue } from '../../../../../../../../utils/get-type-of-atom-value';
+import {
+  atomToPrintable,
+  getTypeOfAtomValue,
+} from '../../../../../../../../utils';
 import { useInternalAtomValue } from '../../../hooks/useInternalAtomValue';
 import { AtomDependentsList } from './AtomDependentsList';
 import { AtomMetaDetails } from './AtomMetaDetails';
@@ -18,7 +21,7 @@ export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
   return (
     <Stack h="auto">
       <AtomMetaDetails
-        debugLabel={atom?.debugLabel}
+        debugLabel={atomToPrintable(atom)}
         atomValueType={atomValueType}
         isAtomPrivate={atom?.debugPrivate}
       />

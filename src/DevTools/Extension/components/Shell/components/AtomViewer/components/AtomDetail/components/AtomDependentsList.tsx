@@ -3,7 +3,7 @@ import { Box, Code, List, Text } from '@mantine/core';
 import { AnyAtom } from 'src/types';
 import { useDevToolsOptionsValue } from '../../../../../../../../atoms/devtools-options';
 import { useAtomsSnapshots } from '../../../../../../../../hooks/useAtomsSnapshots';
-import { parseDebugLabel } from '../../../../../../../../utils/parse-debug-label';
+import { atomToPrintable } from '../../../../../../../../utils/';
 
 type AtomDependentsListProps = {
   atom: AnyAtom;
@@ -33,10 +33,10 @@ export const AtomDependentsList = ({
 
   const listOfDependents = React.useMemo(
     () =>
-      depsForAtom.map((value, i) => {
-        const parsedDebugLabel = parseDebugLabel(value?.debugLabel);
+      depsForAtom.map((atom, i) => {
+        const parsedDebugLabel = atomToPrintable(atom);
         return (
-          <List.Item key={`${i}-${value.toString()}-dependents-list`}>
+          <List.Item key={`${i}-${atom.toString()}-dependents-list`}>
             <Code data-testid={`dependents-list-item-${parsedDebugLabel}-${i}`}>
               {parsedDebugLabel}
             </Code>
