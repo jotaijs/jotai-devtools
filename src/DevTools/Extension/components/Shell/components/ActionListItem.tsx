@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { NavLink, Sx, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
-import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
+import { useThemeMode } from '../../../../hooks/useThemeMode';
 
-type AtomListItemProps = {
+type ActionListItemProps = {
   label?: string | undefined;
-  onClick: (pos: number) => void;
-  atomKey: string;
-  pos: number;
+  id: string | number;
+  onClick: (id: string | number) => void;
   isActive: boolean;
 };
 
@@ -19,8 +18,10 @@ const navLinkStyles: Sx = (theme) => ({
   borderRadius: theme.radius.md,
 });
 
-export const AtomListItem = React.memo(
-  ({ label, onClick, pos, isActive }: AtomListItemProps) => {
+export const ActionListItem = React.memo(
+  ({ label, onClick, id, isActive }: ActionListItemProps) => {
+    const handleOnClick = React.useCallback(() => onClick(id), [onClick, id]);
+
     return (
       <NavLink
         label={React.useMemo(
@@ -33,7 +34,7 @@ export const AtomListItem = React.memo(
         sx={navLinkStyles}
         active={isActive}
         color={useThemeMode('dark', 'gray')}
-        onClick={React.useCallback(() => onClick(pos), [onClick, pos])}
+        onClick={handleOnClick}
         rightSection={React.useMemo(
           () => (
             <IconChevronRight size={12} stroke={1.5} />
@@ -45,4 +46,4 @@ export const AtomListItem = React.memo(
   },
 );
 
-AtomListItem.displayName = 'AtomListItem';
+ActionListItem.displayName = 'ActionListItem';
