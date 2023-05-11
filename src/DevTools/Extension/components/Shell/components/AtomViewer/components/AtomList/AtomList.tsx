@@ -5,12 +5,12 @@ import { useAtom, useAtomValue } from 'jotai/react';
 import { useSyncSnapshotValuesToAtom } from '../../../../../../../hooks/useAtomsSnapshots';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
 import { atomToPrintable } from '../../../../../../../utils';
+import { ActionListItem } from '../../../ActionListItem';
 import {
   filteredValuesAtom,
   searchInputAtom,
   selectedAtomAtom,
 } from '../../atoms';
-import { AtomListItem } from './components/AtomListItem';
 
 const textStyles: Sx = {
   position: 'sticky',
@@ -67,7 +67,11 @@ export const AtomList = () => {
   }, [values]);
 
   const handleOnClick = React.useCallback(
-    (pos: number) => {
+    (pos: string | number) => {
+      if (typeof pos === 'string') {
+        throw new Error('Invalid atom position, must be a number');
+      }
+
       if (!valuesRef.current[pos]) {
         // This should almost never occur
         // Atom pos and valuesRef.current are out-of-sync if it occurs
@@ -91,14 +95,14 @@ export const AtomList = () => {
   const atomItems = React.useMemo(
     () =>
       values.map(([atom], i) => {
+        const atomKey = atom.toString();
         return (
-          <AtomListItem
-            key={`atom-list-item-${atom.toString() + i}`}
+          <ActionListItem
+            key={`atom-list-item-${atomKey + i}`}
             label={atomToPrintable(atom)}
             onClick={handleOnClick}
-            pos={i}
-            isActive={selectedAtomData?.atomKey === atom.toString()}
-            atomKey={atom.toString()}
+            id={i}
+            isActive={selectedAtomData?.atomKey === atomKey}
           />
         );
       }),
