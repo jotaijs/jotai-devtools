@@ -1,3 +1,29 @@
+## [0.5.3](https://github.com/jotaijs/jotai-devtools/compare/v0.5.2...v0.5.3) (2023-05-11)
+
+### Features
+
+- use atom keys as debug label
+  ([#74](https://github.com/jotaijs/jotai-devtools/issues/74))
+  ([28db5b6](https://github.com/jotaijs/jotai-devtools/commit/28db5b674c9f1b4982945576ba55ec2577bcf5ee))
+- version local storage keys
+  ([#72](https://github.com/jotaijs/jotai-devtools/issues/72))
+  ([4c88c60](https://github.com/jotaijs/jotai-devtools/commit/4c88c600a08808b6f47e51745b5de1118fe7515f))
+
+### Bug Fixes
+
+- add backwards compatible store support for <=2.1.0
+  ([#70](https://github.com/jotaijs/jotai-devtools/issues/70))
+  ([f1f6f79](https://github.com/jotaijs/jotai-devtools/commit/f1f6f7989de123d7fe013af4e9b62c9a9e11071e))
+
+### Refactors
+
+- cosmetic update streamline border radius
+  ([#71](https://github.com/jotaijs/jotai-devtools/issues/71))
+  ([7f8e70c](https://github.com/jotaijs/jotai-devtools/commit/7f8e70c3656cd46984beeda82286b4db93160ef3))
+- extract action list item to its own component
+  ([#75](https://github.com/jotaijs/jotai-devtools/issues/75))
+  ([e218e5f](https://github.com/jotaijs/jotai-devtools/commit/e218e5f743100ec17e4c0361e9336405ec19021c))
+
 ## [0.5.2](https://github.com/jotaijs/jotai-devtools/compare/v0.5.1...v0.5.2) (2023-05-01)
 
 ### Bug Fixes
