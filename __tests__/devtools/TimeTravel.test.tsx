@@ -223,7 +223,7 @@ describe('DevTools - TimeTravel', () => {
       const og = global.performance;
       beforeEach(() => {
         jest.useFakeTimers({ advanceTimers: true });
-        jest.setSystemTime(new Date('2023-01-01T00:00:00.000Z'));
+        jest.setSystemTime(new Date('2023-01-01T10:00:00.000Z'));
 
         const mockPerformance = {
           timeOrigin: Date.now(),
@@ -271,8 +271,7 @@ describe('DevTools - TimeTravel', () => {
           screen.getByTestId('meta-info-label-Timestamp'),
         ).toBeInTheDocument();
 
-        screen.debug(undefined, 150000);
-        expect(screen.getByText('7:00:00.000 PM')).toBeInTheDocument();
+        expect(screen.getByText('5:00:00.000 AM')).toBeInTheDocument();
         expect(screen.getByText('Value')).toBeInTheDocument();
         expect(screen.getByText('State')).toBeInTheDocument();
         expect(screen.getByText('Diff')).toBeInTheDocument();

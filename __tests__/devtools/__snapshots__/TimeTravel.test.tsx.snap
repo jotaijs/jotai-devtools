@@ -4778,10 +4778,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 </div>
                 <code
                   class="emotion-114 emotion-115"
-                  data-testid="meta-info-value-7:00:00.000 PM"
+                  data-testid="meta-info-value-5:00:00.000 AM"
                   dir="ltr"
                 >
-                  7:00:00.000 PM
+                  5:00:00.000 AM
                 </code>
               </div>
             </div>
