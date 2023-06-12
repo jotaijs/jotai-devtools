@@ -1187,7 +1187,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
         class="emotion-3 emotion-6"
       >
         <button
-          aria-label="Record snapshot history"
+          aria-label="Stop recording snapshot history"
           class="emotion-7 emotion-8 emotion-9"
           type="button"
         >
@@ -2035,7 +2035,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
         class="emotion-3 emotion-6"
       >
         <button
-          aria-label="Record snapshot history"
+          aria-label="Stop recording snapshot history"
           class="emotion-7 emotion-8 emotion-9"
           type="button"
         >
@@ -4528,7 +4528,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 class="emotion-6 emotion-56"
               >
                 <button
-                  aria-label="Record snapshot history"
+                  aria-label="Stop recording snapshot history"
                   class="emotion-16 emotion-17 emotion-59"
                   type="button"
                 >

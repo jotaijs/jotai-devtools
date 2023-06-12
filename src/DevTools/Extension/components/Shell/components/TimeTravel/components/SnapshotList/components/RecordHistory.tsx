@@ -9,8 +9,11 @@ export const RecordHistory = () => {
   const handleOnClick = () => {
     setShouldRecord((prev) => !prev);
   };
+  const label = shouldRecord
+    ? 'Stop recording snapshot history'
+    : 'Record snapshot history';
   return (
-    <Tooltip label="Record snapshot history" openDelay={750}>
+    <Tooltip label={label} openDelay={750}>
       <ActionIcon
         variant="outline"
         color={useThemeMode(
@@ -18,7 +21,7 @@ export const RecordHistory = () => {
           shouldRecord ? 'red.7' : 'gray',
         )}
         onClick={handleOnClick}
-        aria-label="Record snapshot history"
+        aria-label={label}
       >
         <IconPlayerRecordFilled size={18} />
       </ActionIcon>
