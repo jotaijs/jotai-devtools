@@ -191,11 +191,11 @@ devDependencies:
     specifier: ^2.2.2
     version: 2.2.2(jest@29.5.0)
   jotai:
-    specifier: https://pkg.csb.dev/pmndrs/jotai/commit/f57a26b4/jotai/_pkg.tgz
-    version: '@pkg.csb.dev/pmndrs/jotai/commit/f57a26b4/jotai/_pkg.tgz(react@18.2.0)'
+    specifier: ^2.2.0
+    version: 2.2.0(react@18.2.0)
   jotai-tanstack-query:
     specifier: ^0.7.0
-    version: 0.7.0(@tanstack/query-core@4.29.5)(jotai@2.1.1)
+    version: 0.7.0(@tanstack/query-core@4.29.5)(jotai@2.2.0)
   lint-staged:
     specifier: ^13.2.2
     version: 13.2.2
@@ -9747,14 +9747,26 @@ packages:
       - ts-node
     dev: true
 
-  /jotai-tanstack-query@0.7.0(@tanstack/query-core@4.29.5)(jotai@2.1.1):
+  /jotai-tanstack-query@0.7.0(@tanstack/query-core@4.29.5)(jotai@2.2.0):
     resolution: {integrity: sha512-/fzDgMDmJYHYCHHCfWtcHJCiNkxiLJazIza4FEyXptGIDIEVDHvmt8TWmHBbbqgXLkQOjJEWb2HwUIwmATyAew==}
     peerDependencies:
       '@tanstack/query-core': '*'
       jotai: '>=1.11.0'
     dependencies:
       '@tanstack/query-core': 4.29.5
-      jotai: '@pkg.csb.dev/pmndrs/jotai/commit/f57a26b4/jotai/_pkg.tgz(react@18.2.0)'
+      jotai: 2.2.0(react@18.2.0)
+    dev: true
+
+  /jotai@2.2.0(react@18.2.0):
+    resolution: {integrity: sha512-2gsMVpoaBa6aPHLArNhphck4+n8unZ8xF4Ciqhb+Z+tjsvabn5QFisNFHBMWooMAAmmTNU5TcvBIP8/XAsZy8Q==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
     dev: true
 
   /joycon@3.1.1:
@@ -14420,19 +14432,4 @@ packages:
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
-    dev: true
-
-  '@pkg.csb.dev/pmndrs/jotai/commit/f57a26b4/jotai/_pkg.tgz(react@18.2.0)':
-    resolution: {tarball: https://pkg.csb.dev/pmndrs/jotai/commit/f57a26b4/jotai/_pkg.tgz}
-    id: '@pkg.csb.dev/pmndrs/jotai/commit/f57a26b4/jotai/_pkg.tgz'
-    name: jotai
-    version: 2.1.1
-    engines: {node: '>=12.20.0'}
-    peerDependencies:
-      react: '>=17.0.0'
-    peerDependenciesMeta:
-      react:
-        optional: true
-    dependencies:
-      react: 18.2.0
     dev: true
