@@ -1,7 +1,5 @@
-const getLocale = () => Intl.NumberFormat().resolvedOptions().locale || 'en-US';
-
 const formatTimeToTimeStamp = (time: number) =>
-  new Date(time).toLocaleString(getLocale(), {
+  new Date(time).toLocaleString('en-US', {
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
