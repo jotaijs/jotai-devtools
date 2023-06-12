@@ -1,7 +1,15 @@
 {
-  "editor.formatOnSave": true,
-  "[javascript,typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "files.autoSave": "onFocusChange",
   "editor.smoothScrolling": true,
@@ -13,5 +21,7 @@
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "editor.multiCursorModifier": "alt",
+  "eslint.useESLintClass": true
 }

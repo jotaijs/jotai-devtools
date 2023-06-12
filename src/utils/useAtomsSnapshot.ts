@@ -46,11 +46,20 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
 
     if (!('dev_subscribe_store' in store)) {
       console.warn(
-        "[DEPRECATION-WARNING] Jotai version you're using contains deprecated dev-only properties that will be removed soon. Please update to the latest version of Jotai.",
+        '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
       );
     }
 
-    const callback = () => {
+    // TODO remove this `t: any` and deprecation warnings in next breaking change release
+    const callback = (
+      type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
+    ) => {
+      if (typeof type !== 'object') {
+        console.warn(
+          '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
+        );
+      }
+
       const values: AtomsValues = new Map();
       const dependents: AtomsDependents = new Map();
       for (const atom of store.dev_get_mounted_atoms?.() || []) {
@@ -76,8 +85,8 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
       prevDependents = dependents;
       setAtomsSnapshot({ values, dependents });
     };
-    const unsubscribe = devSubscribeStore?.(callback);
-    callback();
+    const unsubscribe = devSubscribeStore?.(callback, 2);
+    callback({} as any);
     return unsubscribe;
   }, [store]);
 

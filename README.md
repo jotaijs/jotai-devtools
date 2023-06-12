@@ -94,6 +94,7 @@ type DevToolsProps = {
   theme?: 'dark' | 'light';
   // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
   nonce?: string;
+  // We recommend keeping these options static. i.e. set it only once. Avoid connecting it to re-renderable state
   options?: {
     // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
     // Defaults to `false`
@@ -101,6 +102,10 @@ type DevToolsProps = {
     // Expands the JSON tree view on initial render on Atom Viewer tab, Timeline tab, etc.
     // Defaults to `false`
     shouldExpandJsonTreeViewInitially?: boolean;
+    // The maximum number of snapshots to keep in the history.
+    // The higher the number the more memory it will consume.
+    // Defaults to Infinity. Recommended: ~30
+    snapshotHistoryLimit?: number;
   };
 };
 ```

@@ -1,0 +1,7297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevTools - TimeTravel Snapshot details diff should display highlighted diff 1`] = `
+.emotion-1 {
+  padding-top: 0.625rem;
+}
+
+.emotion-2 {
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 13px;
+}
+
+.emotion-2 ul:first-of-type {
+  border-radius: 0.5rem;
+}
+
+<div
+  aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
+  class="emotion-0 emotion-1"
+  data-testid="jotai-devtools-diff-panel"
+  id="jotai-devtools-time-travel-value-tabs-panel-diff"
+  role="tabpanel"
+>
+  <div
+    class="emotion-2"
+    data-testid="json-tree-view-container"
+  >
+    <ul
+      style="border: 0px; padding: 0.625rem; margin: 0px; list-style: none; background-color: rgba(248, 249, 250, 0.65);"
+    >
+      <li
+        style="padding: 0px; margin: 0px;"
+      >
+        <ul
+          style="padding: 0px; margin: 0px; list-style: none;"
+        >
+          <li
+            style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 1.25em; text-indent: -0.5em; word-break: break-all;"
+          >
+            <label
+              style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+            >
+              <span>
+                countAtom
+                :
+              </span>
+            </label>
+            <span>
+              <span
+                style="position: relative; padding: 2px 3px; border-radius: 3px; text-decoration: line-through; background-color: rgba(224, 49, 49, 0.65);"
+              >
+                1
+              </span>
+              <span
+                style="position: relative; padding: 2px 3px; border-radius: 3px; color: rgb(144, 146, 150);"
+              >
+                 =&gt; 
+              </span>
+              <span
+                style="position: relative; padding: 2px 3px; border-radius: 3px; background-color: rgba(47, 158, 68, 0.65);"
+              >
+                2
+              </span>
+            </span>
+          </li>
+          <li
+            style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 1.25em; text-indent: -0.5em; word-break: break-all;"
+          >
+            <label
+              style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+            >
+              <span>
+                doubleCountAtom
+                :
+              </span>
+            </label>
+            <span>
+              <span
+                style="position: relative; padding: 2px 3px; border-radius: 3px; text-decoration: line-through; background-color: rgba(224, 49, 49, 0.65);"
+              >
+                2
+              </span>
+              <span
+                style="position: relative; padding: 2px 3px; border-radius: 3px; color: rgb(144, 146, 150);"
+              >
+                 =&gt; 
+              </span>
+              <span
+                style="position: relative; padding: 2px 3px; border-radius: 3px; background-color: rgba(47, 158, 68, 0.65);"
+              >
+                4
+              </span>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot details diff should display highlighted diff when performing "Add" on arrays and objects 1`] = `
+.emotion-1 {
+  padding-top: 0.625rem;
+}
+
+.emotion-2 {
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 13px;
+}
+
+.emotion-2 ul:first-of-type {
+  border-radius: 0.5rem;
+}
+
+<div
+  aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
+  class="emotion-0 emotion-1"
+  data-testid="jotai-devtools-diff-panel"
+  id="jotai-devtools-time-travel-value-tabs-panel-diff"
+  role="tabpanel"
+>
+  <div
+    class="emotion-2"
+    data-testid="json-tree-view-container"
+  >
+    <ul
+      style="border: 0px; padding: 0.625rem; margin: 0px; list-style: none; background-color: rgba(248, 249, 250, 0.65);"
+    >
+      <li
+        style="padding: 0px; margin: 0px;"
+      >
+        <ul
+          style="padding: 0px; margin: 0px; list-style: none;"
+        >
+          <li
+            style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+          >
+            <div
+              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+            >
+              <div
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+              >
+                ▶
+              </div>
+            </div>
+            <label
+              style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+            >
+              <span>
+                objectAtom
+                :
+              </span>
+            </label>
+            <span
+              style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+            >
+              { add: {…} }
+            </span>
+            <ul
+              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+            >
+              <li
+                style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+              >
+                <div
+                  style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                >
+                  <div
+                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                  >
+                    ▶
+                  </div>
+                </div>
+                <label
+                  style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+                >
+                  <span>
+                    add
+                    :
+                  </span>
+                </label>
+                <span
+                  style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+                >
+                  { arr: {…} }
+                </span>
+                <ul
+                  style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                >
+                  <li
+                    style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                  >
+                    <div
+                      style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                    >
+                      <div
+                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                      >
+                        ▶
+                      </div>
+                    </div>
+                    <label
+                      style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+                    >
+                      <span>
+                        arr
+                        :
+                      </span>
+                    </label>
+                    <span
+                      style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+                    >
+                      { 1: 2 }
+                    </span>
+                    <ul
+                      style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                    >
+                      <li
+                        style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 2.125em; text-indent: -0.5em; word-break: break-all;"
+                      >
+                        <label
+                          style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+                        >
+                          <span>
+                            1
+                            :
+                          </span>
+                        </label>
+                        <span>
+                          <span
+                            style="position: relative; padding: 2px 3px; border-radius: 3px; background-color: rgba(47, 158, 68, 0.65);"
+                          >
+                            2
+                          </span>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot details diff should display highlighted diff when performing "Move" on arrays and objects 1`] = `
+.emotion-1 {
+  padding-top: 0.625rem;
+}
+
+.emotion-2 {
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 13px;
+}
+
+.emotion-2 ul:first-of-type {
+  border-radius: 0.5rem;
+}
+
+<div
+  aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
+  class="emotion-0 emotion-1"
+  data-testid="jotai-devtools-diff-panel"
+  id="jotai-devtools-time-travel-value-tabs-panel-diff"
+  role="tabpanel"
+>
+  <div
+    class="emotion-2"
+    data-testid="json-tree-view-container"
+  >
+    <ul
+      style="border: 0px; padding: 0.625rem; margin: 0px; list-style: none; background-color: rgba(248, 249, 250, 0.65);"
+    >
+      <li
+        style="padding: 0px; margin: 0px;"
+      >
+        <ul
+          style="padding: 0px; margin: 0px; list-style: none;"
+        >
+          <li
+            style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+          >
+            <div
+              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+            >
+              <div
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+              >
+                ▶
+              </div>
+            </div>
+            <label
+              style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+            >
+              <span>
+                objectAtom
+                :
+              </span>
+            </label>
+            <span
+              style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+            >
+              { move: {…} }
+            </span>
+            <ul
+              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+            >
+              <li
+                style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+              >
+                <div
+                  style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                >
+                  <div
+                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                  >
+                    ▶
+                  </div>
+                </div>
+                <label
+                  style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+                >
+                  <span>
+                    move
+                    :
+                  </span>
+                </label>
+                <span
+                  style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+                >
+                  { arr: {…} }
+                </span>
+                <ul
+                  style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                >
+                  <li
+                    style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                  >
+                    <div
+                      style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                    >
+                      <div
+                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                      >
+                        ▶
+                      </div>
+                    </div>
+                    <label
+                      style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+                    >
+                      <span>
+                        arr
+                        :
+                      </span>
+                    </label>
+                    <span
+                      style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+                    >
+                      { 0: 2, 1: 2 }
+                    </span>
+                    <ul
+                      style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                    >
+                      <li
+                        style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 2.125em; text-indent: -0.5em; word-break: break-all;"
+                      >
+                        <label
+                          style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+                        >
+                          <span>
+                            0
+                            :
+                          </span>
+                        </label>
+                        <span>
+                          <span
+                            style="position: relative; padding: 2px 3px; border-radius: 3px; background-color: rgba(47, 158, 68, 0.65);"
+                          >
+                            2
+                          </span>
+                        </span>
+                      </li>
+                      <li
+                        style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 2.125em; text-indent: -0.5em; word-break: break-all;"
+                      >
+                        <label
+                          style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+                        >
+                          <span>
+                            1
+                            :
+                          </span>
+                        </label>
+                        <span>
+                          <span
+                            style="position: relative; padding: 2px 3px; border-radius: 3px; text-decoration: line-through; background-color: rgba(224, 49, 49, 0.65);"
+                          >
+                            2
+                          </span>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot details diff should display highlighted diff when performing "Remove" on arrays and objects 1`] = `
+.emotion-1 {
+  padding-top: 0.625rem;
+}
+
+.emotion-2 {
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 13px;
+}
+
+.emotion-2 ul:first-of-type {
+  border-radius: 0.5rem;
+}
+
+<div
+  aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
+  class="emotion-0 emotion-1"
+  data-testid="jotai-devtools-diff-panel"
+  id="jotai-devtools-time-travel-value-tabs-panel-diff"
+  role="tabpanel"
+>
+  <div
+    class="emotion-2"
+    data-testid="json-tree-view-container"
+  >
+    <ul
+      style="border: 0px; padding: 0.625rem; margin: 0px; list-style: none; background-color: rgba(248, 249, 250, 0.65);"
+    >
+      <li
+        style="padding: 0px; margin: 0px;"
+      >
+        <ul
+          style="padding: 0px; margin: 0px; list-style: none;"
+        >
+          <li
+            style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+          >
+            <div
+              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+            >
+              <div
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+              >
+                ▶
+              </div>
+            </div>
+            <label
+              style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+            >
+              <span>
+                objectAtom
+                :
+              </span>
+            </label>
+            <span
+              style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+            >
+              { remove: {…} }
+            </span>
+            <ul
+              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+            >
+              <li
+                style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+              >
+                <div
+                  style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                >
+                  <div
+                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                  >
+                    ▶
+                  </div>
+                </div>
+                <label
+                  style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+                >
+                  <span>
+                    remove
+                    :
+                  </span>
+                </label>
+                <span
+                  style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+                >
+                  { arr: {…} }
+                </span>
+                <ul
+                  style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                >
+                  <li
+                    style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                  >
+                    <div
+                      style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                    >
+                      <div
+                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                      >
+                        ▶
+                      </div>
+                    </div>
+                    <label
+                      style="display: inline-block; color: rgb(52, 58, 64); margin: 0px; padding: 0px; cursor: pointer;"
+                    >
+                      <span>
+                        arr
+                        :
+                      </span>
+                    </label>
+                    <span
+                      style="padding-left: 0.5em; cursor: pointer; color: rgb(144, 146, 150); display: none;"
+                    >
+                      { 1: 2 }
+                    </span>
+                    <ul
+                      style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                    >
+                      <li
+                        style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 2.125em; text-indent: -0.5em; word-break: break-all;"
+                      >
+                        <label
+                          style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+                        >
+                          <span>
+                            1
+                            :
+                          </span>
+                        </label>
+                        <span>
+                          <span
+                            style="position: relative; padding: 2px 3px; border-radius: 3px; text-decoration: line-through; background-color: rgba(224, 49, 49, 0.65);"
+                          >
+                            2
+                          </span>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot details should display the full state in json tree format when state is selected 1`] = `
+.emotion-0 {
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 13px;
+}
+
+.emotion-0 ul:first-of-type {
+  border-radius: 0.5rem;
+}
+
+<div
+  class="emotion-0"
+  data-testid="json-tree-view-container"
+>
+  <ul
+    style="border: 0px; padding: 0.625rem; margin: 0px; list-style: none; background-color: rgba(248, 249, 250, 0.65);"
+  >
+    <li
+      style="padding: 0px; margin: 0px;"
+    >
+      <ul
+        style="padding: 0px; margin: 0px; list-style: none;"
+      >
+        <li
+          style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 1.25em; text-indent: -0.5em; word-break: break-all;"
+        >
+          <label
+            style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+          >
+            <span>
+              countAtom
+              :
+            </span>
+          </label>
+          <span
+            style="color: rgb(25, 113, 194);"
+          >
+            1
+          </span>
+        </li>
+        <li
+          style="padding-top: 0.25em; padding-right: 0px; margin-left: 0.875em; word-wrap: break-word; padding-left: 1.25em; text-indent: -0.5em; word-break: break-all;"
+        >
+          <label
+            style="display: inline-block; color: rgb(52, 58, 64); margin: 0px 0.5em 0px 0px;"
+          >
+            <span>
+              doubleCountAtom
+              :
+            </span>
+          </label>
+          <span
+            style="color: rgb(25, 113, 194);"
+          >
+            2
+          </span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot list Search should display an error if no snapshots are found 1`] = `
+.emotion-0 {
+  padding: 0.625rem;
+  padding-top: 0rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #e9ecef;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 0.75rem;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0.625rem;
+}
+
+.emotion-4>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.emotion-6>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-9 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #f03e3e;
+  background-color: transparent;
+  color: #f03e3e;
+}
+
+.emotion-9:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-9:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-9:hover {
+    background-color: rgba(255, 245, 245, 0.35);
+  }
+}
+
+@media (hover: none) {
+  .emotion-9:active {
+    background-color: rgba(255, 245, 245, 0.35);
+  }
+}
+
+.emotion-9:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-9 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-9:disabled,
+.emotion-9[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-9:disabled:active,
+.emotion-9[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-9[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-9[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-12 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  color: #000;
+}
+
+.emotion-12:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-12:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-12:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-12:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-12:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-12 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-12:disabled,
+.emotion-12[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-12:disabled:active,
+.emotion-12[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-12[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-12[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-23 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  line-height: 1.55;
+}
+
+.emotion-26 {
+  position: relative;
+}
+
+.emotion-29 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  height: 2.25rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(2.25rem - 0.125rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  width: 100%;
+  color: #000;
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 2.25rem;
+  padding-left: calc(2.25rem  / 3);
+  padding-right: calc(2.25rem  / 3);
+  border-radius: 0.5rem;
+}
+
+.emotion-29:focus,
+.emotion-29:focus-within {
+  outline: none;
+  border-color: #25262b;
+}
+
+.emotion-29:disabled,
+.emotion-29[data-disabled] {
+  background-color: #f1f3f5;
+  color: #909296;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emotion-29:disabled::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29:disabled::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-29:disabled:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-disabled]::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-disabled]::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-disabled]:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29:disabled::placeholder,
+.emotion-29[data-disabled]::placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-invalid] {
+  color: #fa5252;
+  border-color: #fa5252;
+}
+
+.emotion-29[data-invalid]::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-invalid]::-moz-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-invalid]:-ms-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-invalid]::placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-with-icon] {
+  padding-left: 2.25rem;
+}
+
+.emotion-29::-webkit-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29::-moz-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29:-ms-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29::placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29::-webkit-inner-spin-button,
+.emotion-29::-webkit-outer-spin-button,
+.emotion-29::-webkit-search-decoration,
+.emotion-29::-webkit-search-cancel-button,
+.emotion-29::-webkit-search-results-button,
+.emotion-29::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-29[type=number] {
+  -moz-appearance: textfield;
+}
+
+.emotion-30 {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.emotion-32>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-34 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-left: 0rem;
+  font-size: 0.875rem;
+}
+
+.emotion-34:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-34:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="emotion-0"
+  data-testid="jotai-devtools-time-travel-panel-left-content"
+>
+  <div
+    class="emotion-1 emotion-2"
+  >
+    <div
+      class="emotion-3 emotion-4"
+    >
+      <div
+        class="emotion-3 emotion-6"
+      >
+        <button
+          aria-label="Record snapshot history"
+          class="emotion-7 emotion-8 emotion-9"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-player-record-filled"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 5.072a8 8 0 1 1 -3.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 3.995 -6.643z"
+              fill="currentColor"
+              stroke-width="0"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Clear snapshot history"
+          class="emotion-7 emotion-8 emotion-12"
+          data-disabled="true"
+          disabled=""
+          title="Clear snapshot history"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-trash-x"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 7h16"
+            />
+            <path
+              d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+            />
+            <path
+              d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+            />
+            <path
+              d="M10 12l4 4m0 -4l-4 4"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-3 emotion-6"
+      >
+        <button
+          aria-label="Select previous snapshot"
+          class="emotion-7 emotion-8 emotion-12"
+          data-disabled="true"
+          disabled=""
+          title="Select previous snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-up"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 15l6 -6l6 6"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Select next snapshot"
+          class="emotion-7 emotion-8 emotion-12"
+          data-disabled="true"
+          disabled=""
+          title="Select next snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-down"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 9l6 6l6 -6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="emotion-21 emotion-22 emotion-23"
+    >
+      <div
+        class="emotion-24 emotion-25 emotion-26"
+      >
+        <input
+          aria-invalid="false"
+          class="emotion-27 emotion-28 emotion-29"
+          id="jotai-devtools-search-input"
+          placeholder="Search"
+          type="text"
+          value="a"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-30"
+    data-testid="jotai-devtools-snapshot-history-list"
+  />
+  <div
+    class="emotion-3 emotion-32"
+  >
+    <svg
+      class="tabler-icon tabler-icon-alert-circle"
+      fill="none"
+      height="16"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
+      />
+      <path
+        d="M12 8v4"
+      />
+      <path
+        d="M12 16h.01"
+      />
+    </svg>
+    <div
+      class="emotion-33 emotion-34"
+      data-testid="jotai-devtools-no-snapshot-found-message"
+    >
+      No snapshots found!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot list Search should search for atoms correctly 1`] = `
+.emotion-0 {
+  padding: 0.625rem;
+  padding-top: 0rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #e9ecef;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 0.75rem;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0.625rem;
+}
+
+.emotion-4>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.emotion-6>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-9 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #f03e3e;
+  background-color: transparent;
+  color: #f03e3e;
+}
+
+.emotion-9:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-9:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-9:hover {
+    background-color: rgba(255, 245, 245, 0.35);
+  }
+}
+
+@media (hover: none) {
+  .emotion-9:active {
+    background-color: rgba(255, 245, 245, 0.35);
+  }
+}
+
+.emotion-9:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-9 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-9:disabled,
+.emotion-9[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-9:disabled:active,
+.emotion-9[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-9[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-9[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-12 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  color: #000;
+}
+
+.emotion-12:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-12:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-12:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-12:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-12:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-12 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-12:disabled,
+.emotion-12[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-12:disabled:active,
+.emotion-12[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-12[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-12[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-23 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  line-height: 1.55;
+}
+
+.emotion-26 {
+  position: relative;
+}
+
+.emotion-29 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  height: 2.25rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(2.25rem - 0.125rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  width: 100%;
+  color: #000;
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 2.25rem;
+  padding-left: calc(2.25rem  / 3);
+  padding-right: calc(2.25rem  / 3);
+  border-radius: 0.5rem;
+}
+
+.emotion-29:focus,
+.emotion-29:focus-within {
+  outline: none;
+  border-color: #25262b;
+}
+
+.emotion-29:disabled,
+.emotion-29[data-disabled] {
+  background-color: #f1f3f5;
+  color: #909296;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emotion-29:disabled::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29:disabled::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-29:disabled:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-disabled]::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-disabled]::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-disabled]:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-29:disabled::placeholder,
+.emotion-29[data-disabled]::placeholder {
+  color: #909296;
+}
+
+.emotion-29[data-invalid] {
+  color: #fa5252;
+  border-color: #fa5252;
+}
+
+.emotion-29[data-invalid]::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-invalid]::-moz-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-invalid]:-ms-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-invalid]::placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-29[data-with-icon] {
+  padding-left: 2.25rem;
+}
+
+.emotion-29::-webkit-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29::-moz-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29:-ms-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29::placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-29::-webkit-inner-spin-button,
+.emotion-29::-webkit-outer-spin-button,
+.emotion-29::-webkit-search-decoration,
+.emotion-29::-webkit-search-cancel-button,
+.emotion-29::-webkit-search-results-button,
+.emotion-29::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-29[type=number] {
+  -moz-appearance: textfield;
+}
+
+.emotion-30 {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.emotion-33 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0.5rem;
+}
+
+.emotion-33:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-33:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-33[data-active] {
+  background-color: #25262b;
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .emotion-33[data-active]:hover {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33[data-active]:active {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: hover) {
+  .emotion-33:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-33[data-disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.emotion-34 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-38 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-38:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-38:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-40 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.emotion-40:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-40:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-43 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #868e96;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.emotion-43:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-43:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-43[data-active] {
+  color: inherit;
+}
+
+.emotion-44 {
+  margin-left: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: -webkit-transform 150ms ease;
+  transition: transform 150ms ease;
+}
+
+.emotion-44[data-rotate] {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-47 {
+  padding-left: 1.25rem;
+}
+
+<div
+  class="emotion-0"
+  data-testid="jotai-devtools-time-travel-panel-left-content"
+>
+  <div
+    class="emotion-1 emotion-2"
+  >
+    <div
+      class="emotion-3 emotion-4"
+    >
+      <div
+        class="emotion-3 emotion-6"
+      >
+        <button
+          aria-label="Record snapshot history"
+          class="emotion-7 emotion-8 emotion-9"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-player-record-filled"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 5.072a8 8 0 1 1 -3.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 3.995 -6.643z"
+              fill="currentColor"
+              stroke-width="0"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Clear snapshot history"
+          class="emotion-7 emotion-8 emotion-12"
+          title="Clear snapshot history"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-trash-x"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 7h16"
+            />
+            <path
+              d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+            />
+            <path
+              d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+            />
+            <path
+              d="M10 12l4 4m0 -4l-4 4"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-3 emotion-6"
+      >
+        <button
+          aria-label="Select previous snapshot"
+          class="emotion-7 emotion-8 emotion-12"
+          data-disabled="true"
+          disabled=""
+          title="Select previous snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-up"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 15l6 -6l6 6"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Select next snapshot"
+          class="emotion-7 emotion-8 emotion-12"
+          data-disabled="true"
+          disabled=""
+          title="Select next snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-down"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 9l6 6l6 -6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="emotion-21 emotion-22 emotion-23"
+    >
+      <div
+        class="emotion-24 emotion-25 emotion-26"
+      >
+        <input
+          aria-invalid="false"
+          class="emotion-27 emotion-28 emotion-29"
+          id="jotai-devtools-search-input"
+          placeholder="Search"
+          type="text"
+          value="2"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-30"
+    data-testid="jotai-devtools-snapshot-history-list"
+  >
+    <button
+      class="emotion-7 emotion-32 emotion-33"
+      data-testid="jotai-devtools-snapshot-2"
+      type="button"
+    >
+      <span
+        class="emotion-34 emotion-35"
+      >
+        <span
+          class="emotion-36 emotion-37 emotion-38"
+        >
+          <div
+            class="emotion-36 emotion-40"
+          >
+            2
+          </div>
+        </span>
+        <span
+          class="emotion-36 emotion-42 emotion-43"
+        />
+      </span>
+      <span
+        class="emotion-44 emotion-45"
+      >
+        <svg
+          class="tabler-icon tabler-icon-chevron-right"
+          fill="none"
+          height="12"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 6l6 6l-6 6"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden="true"
+      class="emotion-46"
+      style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
+    >
+      <div
+        style="opacity: 0; transition: opacity 200ms ease;"
+      >
+        <div
+          class="emotion-47 emotion-48"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions should render a snapshot list with initial snapshot details on action with recording on 1`] = `
+@keyframes animation-0 {
+  from {
+    box-shadow: 0 0 0.03125rem 0 #fa5252;
+    opacity: 0.6;
+  }
+
+  to {
+    box-shadow: 0 0 0.03125rem 0.275rem #fa5252;
+    opacity: 0;
+  }
+}
+
+.emotion-1 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  color: #000;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+}
+
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 20px);
+  border-color: #dee2e6;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 99999;
+  margin: 0.625rem;
+  height: 23.125rem;
+  max-height: 90%;
+}
+
+.emotion-3 {
+  width: 100%;
+  height: 5px;
+  cursor: row-resize;
+  z-index: 2;
+  position: absolute;
+  top: -2px;
+}
+
+.emotion-4 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.emotion-5 {
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-right: 0.625rem;
+}
+
+.emotion-7>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-10 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-10:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-10:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-size: 0.5625rem;
+  height: 1rem;
+  line-height: calc(1rem - 0.125rem);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0 calc(0.625rem / 1.5);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: auto;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.015625rem;
+  cursor: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: rgba(255, 244, 230, 1);
+  color: #fd7e14;
+  border: 0.0625rem solid transparent;
+}
+
+.emotion-12:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-12:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-13 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid transparent;
+  background-color: #25262b;
+  color: #fff;
+}
+
+.emotion-18:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-18:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-18:hover {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: none) {
+  .emotion-18:active {
+    background-color: #1A1B1E;
+  }
+}
+
+.emotion-18:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-18 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-18:disabled,
+.emotion-18[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-18:disabled:active,
+.emotion-18[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-18[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-18[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-21 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid transparent;
+  background-color: transparent;
+  color: #868e96;
+  margin-left: 0.625rem;
+}
+
+.emotion-21:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-21:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-21:hover {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+@media (hover: none) {
+  .emotion-21:active {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+.emotion-21:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-21 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-21:disabled,
+.emotion-21[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-21:disabled:active,
+.emotion-21[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-21[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-21[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  border-bottom: 0.125rem solid #dee2e6;
+}
+
+.emotion-26 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.625rem 1rem;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  line-height: 1;
+  border-bottom: 0.125rem solid transparent;
+  margin-bottom: -0.125rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.emotion-26:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-26:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-26:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .emotion-26:disabled:hover {
+    background-color: transparent;
+  }
+}
+
+@media (hover: none) {
+  .emotion-26:disabled:active {
+    background-color: transparent;
+  }
+}
+
+.emotion-26:focus {
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .emotion-26:hover {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+@media (hover: none) {
+  .emotion-26:active {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+.emotion-26[data-active] {
+  border-color: #25262b;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .emotion-26[data-active]:hover {
+    border-color: #25262b;
+  }
+}
+
+@media (hover: none) {
+  .emotion-26[data-active]:active {
+    border-color: #25262b;
+  }
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-27:not(:only-child) {
+  margin-right: 0.4375rem;
+}
+
+.emotion-33 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.625rem 1rem;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  line-height: 1;
+  border-bottom: 0.125rem solid transparent;
+  margin-bottom: -0.125rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding-right: 1.5rem;
+}
+
+.emotion-33:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-33:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-33:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .emotion-33:disabled:hover {
+    background-color: transparent;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33:disabled:active {
+    background-color: transparent;
+  }
+}
+
+.emotion-33:focus {
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .emotion-33:hover {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33:active {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+.emotion-33[data-active] {
+  border-color: #25262b;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .emotion-33[data-active]:hover {
+    border-color: #25262b;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33[data-active]:active {
+    border-color: #25262b;
+  }
+}
+
+.emotion-39 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-42 {
+  top: 50%;
+  right: -12px;
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  z-index: 100;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.75rem;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 62.5rem;
+  background-color: #fa5252;
+  border: 0.125rem solid #fff;
+  color: #fff;
+  white-space: nowrap;
+  top: 50%;
+  right: -12px;
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 62.5rem;
+}
+
+.emotion-45 {
+  -webkit-animation: animation-0 1000ms linear infinite;
+  animation: animation-0 1000ms linear infinite;
+  top: 50%;
+  right: -12px;
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 62.5rem;
+}
+
+.emotion-47 {
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.emotion-49 {
+  height: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.emotion-50 {
+  padding: 0.625rem;
+  padding-top: 0rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #e9ecef;
+}
+
+.emotion-52 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 0.75rem;
+}
+
+.emotion-54 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0.625rem;
+}
+
+.emotion-54>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-56 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.emotion-56>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-59 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #f03e3e;
+  background-color: transparent;
+  color: #f03e3e;
+}
+
+.emotion-59:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-59:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-59:hover {
+    background-color: rgba(255, 245, 245, 0.35);
+  }
+}
+
+@media (hover: none) {
+  .emotion-59:active {
+    background-color: rgba(255, 245, 245, 0.35);
+  }
+}
+
+.emotion-59:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-59 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-59:disabled,
+.emotion-59[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-59:disabled:active,
+.emotion-59[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-59[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-59[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-62 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  color: #000;
+}
+
+.emotion-62:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-62:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-62:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-62:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-62:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-62 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-62:disabled,
+.emotion-62[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-62:disabled:active,
+.emotion-62[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-62[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-62[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-73 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  line-height: 1.55;
+}
+
+.emotion-76 {
+  position: relative;
+}
+
+.emotion-79 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  height: 2.25rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(2.25rem - 0.125rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  width: 100%;
+  color: #000;
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 2.25rem;
+  padding-left: calc(2.25rem  / 3);
+  padding-right: calc(2.25rem  / 3);
+  border-radius: 0.5rem;
+}
+
+.emotion-79:focus,
+.emotion-79:focus-within {
+  outline: none;
+  border-color: #25262b;
+}
+
+.emotion-79:disabled,
+.emotion-79[data-disabled] {
+  background-color: #f1f3f5;
+  color: #909296;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emotion-79:disabled::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-79:disabled::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-79:disabled:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-79[data-disabled]::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-79[data-disabled]::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-79[data-disabled]:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-79:disabled::placeholder,
+.emotion-79[data-disabled]::placeholder {
+  color: #909296;
+}
+
+.emotion-79[data-invalid] {
+  color: #fa5252;
+  border-color: #fa5252;
+}
+
+.emotion-79[data-invalid]::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-79[data-invalid]::-moz-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-79[data-invalid]:-ms-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-79[data-invalid]::placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-79[data-with-icon] {
+  padding-left: 2.25rem;
+}
+
+.emotion-79::-webkit-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-79::-moz-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-79:-ms-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-79::placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-79::-webkit-inner-spin-button,
+.emotion-79::-webkit-outer-spin-button,
+.emotion-79::-webkit-search-decoration,
+.emotion-79::-webkit-search-cancel-button,
+.emotion-79::-webkit-search-results-button,
+.emotion-79::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-79[type=number] {
+  -moz-appearance: textfield;
+}
+
+.emotion-80 {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.emotion-83 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0.5rem;
+}
+
+.emotion-83:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-83:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-83[data-active] {
+  background-color: #25262b;
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .emotion-83[data-active]:hover {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: none) {
+  .emotion-83[data-active]:active {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: hover) {
+  .emotion-83:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-83:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-83[data-disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.emotion-84 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-88 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-88:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-88:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-90 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.emotion-90:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-90:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-93 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #868e96;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.emotion-93:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-93:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-93[data-active] {
+  color: inherit;
+}
+
+.emotion-94 {
+  margin-left: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: -webkit-transform 150ms ease;
+  transition: transform 150ms ease;
+}
+
+.emotion-94[data-rotate] {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-97 {
+  padding-left: 1.25rem;
+}
+
+.emotion-99 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5;
+  height: 100%;
+}
+
+.emotion-99 ._jotai-devtools-internal-panel-resize-handle {
+  -webkit-transition: max-height,min-height,height,0.2s ease-out;
+  transition: max-height,min-height,height,0.2s ease-out;
+}
+
+[data-resize-handle-active] .emotion-99 ._jotai-devtools-internal-panel-resize-handle,
+.emotion-99:hover ._jotai-devtools-internal-panel-resize-handle {
+  height: 90%;
+  min-height: 90%;
+  max-height: 90%;
+}
+
+.emotion-100 {
+  border-radius: 2rem;
+  vertical-align: middle;
+  margin: 0.3125rem;
+  background: #dee2e6;
+  width: 0.3125rem;
+  height: 20%;
+  min-height: 3.125rem;
+  max-height: 6.25rem;
+}
+
+.emotion-101 {
+  padding: 0.625rem;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-103 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  height: auto;
+}
+
+.emotion-106 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.emotion-106:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-106:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-110 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 0.625rem;
+}
+
+.emotion-110:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-110:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-111 {
+  margin-bottom: 0.625rem;
+}
+
+.emotion-113 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #868e96;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.625rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.emotion-113:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-113:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-115 {
+  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  line-height: 1.55;
+  padding: 0.125rem calc(0.625rem / 2);
+  border-radius: 0.25rem;
+  color: #1A1B1E;
+  background-color: rgba(248, 249, 250, 1);
+  font-size: 0.75rem;
+}
+
+.emotion-121 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-139 {
+  padding-top: 0.625rem;
+  display: none;
+}
+
+.emotion-141 {
+  padding-top: 0.625rem;
+}
+
+.emotion-150 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 1.875rem;
+  padding-left: calc(0.875rem  / 1.5);
+  padding-right: 0.875rem;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  width: auto;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  position: relative;
+  line-height: 1;
+  font-size: 0.75rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  color: #000;
+}
+
+.emotion-150:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-150:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-150:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-150:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-150:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-150:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-150:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-150:disabled,
+.emotion-150[data-disabled] {
+  border-color: transparent;
+  background-color: #e9ecef;
+  color: #adb5bd;
+  cursor: not-allowed;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-150:disabled:active,
+.emotion-150[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-150[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-150[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-151 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  overflow: visible;
+}
+
+.emotion-155 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 0.625rem;
+  margin-right: 0.325rem;
+  -webkit-transform: rotate(130deg);
+  -moz-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+
+.emotion-156 {
+  white-space: nowrap;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-158 {
+  height: 56px;
+  border-top: 0.09rem solid #dee2e6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.75rem;
+  gap: 12px;
+}
+
+.emotion-163 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  touch-action: none;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-164 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: calc(0.25rem * 2);
+  cursor: pointer;
+}
+
+.emotion-166 {
+  position: relative;
+  height: 0.25rem;
+  width: 100%;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.emotion-166::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  right: calc(0.25rem * -1);
+  left: calc(0.25rem * -1);
+  background-color: #e9ecef;
+  z-index: 0;
+}
+
+.emotion-166:before {
+  background-color: #dee2e6;
+}
+
+.emotion-169 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  background-color: #25262b;
+  border-radius: 2rem;
+  background-color: #373A40;
+  left: calc(0% - 0.25rem);
+  width: calc(0% + 2 * 0.25rem);
+}
+
+.emotion-171 {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(0.25rem * 2);
+  width: calc(0.25rem * 2);
+  background-color: #fff;
+  border: 0.25rem solid #25262b;
+  color: #25262b;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  cursor: pointer;
+  border-radius: 1000px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  transition-duration: 100ms;
+  transition-property: box-shadow,transform;
+  transition-timing-function: ease;
+  z-index: 3;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+  height: 0.875rem;
+  width: 0.875rem;
+  border-width: 0.1875rem;
+  border-color: #373A40;
+}
+
+.emotion-171:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-171:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-172 {
+  position: absolute;
+  right: 0.25rem;
+  left: 0.25rem;
+}
+
+.emotion-184 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  line-height: 1.55;
+  max-width: 5rem;
+}
+
+.emotion-190 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  height: 1.875rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(1.875rem - 0.125rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  width: 100%;
+  color: #000;
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 1.875rem;
+  padding-left: calc(1.875rem  / 3);
+  padding-right: 1.875rem;
+  border-radius: 0.5rem;
+}
+
+.emotion-190:focus,
+.emotion-190:focus-within {
+  outline: none;
+  border-color: #25262b;
+}
+
+.emotion-190:disabled,
+.emotion-190[data-disabled] {
+  background-color: #f1f3f5;
+  color: #909296;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emotion-190:disabled::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-190:disabled::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-190:disabled:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-190[data-disabled]::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-190[data-disabled]::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-190[data-disabled]:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-190:disabled::placeholder,
+.emotion-190[data-disabled]::placeholder {
+  color: #909296;
+}
+
+.emotion-190[data-invalid] {
+  color: #fa5252;
+  border-color: #fa5252;
+}
+
+.emotion-190[data-invalid]::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-190[data-invalid]::-moz-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-190[data-invalid]:-ms-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-190[data-invalid]::placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-190[data-with-icon] {
+  padding-left: 1.875rem;
+}
+
+.emotion-190::-webkit-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-190::-moz-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-190:-ms-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-190::placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-190::-webkit-inner-spin-button,
+.emotion-190::-webkit-outer-spin-button,
+.emotion-190::-webkit-search-decoration,
+.emotion-190::-webkit-search-cancel-button,
+.emotion-190::-webkit-search-results-button,
+.emotion-190::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-190[type=number] {
+  -moz-appearance: textfield;
+}
+
+.emotion-190:not(:disabled) {
+  cursor: pointer;
+}
+
+.emotion-190:not(:disabled)::selection {
+  background-color: transparent;
+}
+
+.emotion-191 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 1.875rem;
+  pointer-events: none;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2"
+  data-testid="emotion-1"
+  id="emotion-1"
+>
+  <div
+    class="emotion-3"
+    data-testid="shell-resize-bar"
+  />
+  <div
+    class="emotion-4"
+  >
+    <div
+      class="emotion-5"
+    >
+      <div
+        class="emotion-6 emotion-7"
+      >
+        <h1
+          class="emotion-8 emotion-9 emotion-10"
+        >
+          👻 Jōtai DevTools
+        </h1>
+        <div
+          class="emotion-11 emotion-12"
+        >
+          <span
+            class="emotion-13 emotion-14"
+          >
+            Alpha
+          </span>
+        </div>
+      </div>
+      <div
+        class="emotion-15"
+      >
+        <button
+          class="emotion-16 emotion-17 emotion-18"
+          title="Toggle color scheme"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-moon-stars"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+            />
+            <path
+              d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+            />
+            <path
+              d="M19 11h2m-1 -1v2"
+            />
+          </svg>
+        </button>
+        <button
+          class="emotion-16 emotion-17 emotion-21"
+          title="Minimize panel"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-minus"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12l14 0"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-orientation="horizontal"
+    class="emotion-22 emotion-23"
+    role="tablist"
+  >
+    <button
+      aria-controls="emotion-1-panel-atom-viewer"
+      aria-selected="false"
+      class="emotion-16 emotion-25 emotion-26"
+      id="emotion-1-tab-atom-viewer"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <span
+        class="emotion-27 emotion-25Icon"
+      >
+        <svg
+          class="tabler-icon tabler-icon-layout-list"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+          />
+          <path
+            d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="emotion-29 emotion-25Label"
+      >
+        Atom Viewer
+      </span>
+    </button>
+    <button
+      aria-controls="emotion-1-panel-time-travel"
+      aria-selected="true"
+      class="emotion-16 emotion-25 emotion-33"
+      data-active="true"
+      id="emotion-1-tab-time-travel"
+      role="tab"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="emotion-27 emotion-25Icon"
+      >
+        <svg
+          class="tabler-icon tabler-icon-timeline"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 16l6 -7l5 5l5 -6"
+          />
+          <path
+            d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+          <path
+            d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+          <path
+            d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+          <path
+            d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+        </svg>
+      </span>
+      <span
+        class="emotion-29 emotion-25Label"
+      >
+        <div
+          class="emotion-38 emotion-39"
+          data-testid="jotai-devtools-time-travel-recording-indicator"
+        >
+          <div
+            class="emotion-40 emotion-41 emotion-42"
+          />
+          <div
+            class="emotion-43 emotion-41 emotion-45"
+          />
+          Time travel
+        </div>
+      </span>
+    </button>
+  </div>
+  <div
+    aria-labelledby="emotion-1-tab-atom-viewer"
+    class="emotion-46 emotion-47"
+    id="emotion-1-panel-atom-viewer"
+    role="tabpanel"
+  />
+  <div
+    aria-labelledby="emotion-1-tab-time-travel"
+    class="emotion-46 emotion-49"
+    id="emotion-1-panel-time-travel"
+    role="tabpanel"
+  >
+    <div
+      class=""
+      data-panel-group=""
+      data-panel-group-direction="horizontal"
+      data-panel-group-id="jotai-devtools-time-travel-panel-group"
+      style="display: flex; flex-direction: row; height: calc(100% - 56px); overflow: hidden; width: 100%;"
+    >
+      <div
+        class=""
+        data-panel=""
+        data-panel-id="jotai-devtools-time-travel-panel-left"
+        data-panel-size="45.0"
+        id="data-panel-id-jotai-devtools-time-travel-panel-left"
+        style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
+      >
+        <div
+          class="emotion-50"
+          data-testid="jotai-devtools-time-travel-panel-left-content"
+        >
+          <div
+            class="emotion-51 emotion-52"
+          >
+            <div
+              class="emotion-6 emotion-54"
+            >
+              <div
+                class="emotion-6 emotion-56"
+              >
+                <button
+                  aria-label="Record snapshot history"
+                  class="emotion-16 emotion-17 emotion-59"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-player-record-filled"
+                    fill="none"
+                    height="18"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 5.072a8 8 0 1 1 -3.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 3.995 -6.643z"
+                      fill="currentColor"
+                      stroke-width="0"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Clear snapshot history"
+                  class="emotion-16 emotion-17 emotion-62"
+                  title="Clear snapshot history"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-trash-x"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 7h16"
+                    />
+                    <path
+                      d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                    />
+                    <path
+                      d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+                    />
+                    <path
+                      d="M10 12l4 4m0 -4l-4 4"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="emotion-6 emotion-56"
+              >
+                <button
+                  aria-label="Select previous snapshot"
+                  class="emotion-16 emotion-17 emotion-62"
+                  data-disabled="true"
+                  disabled=""
+                  title="Select previous snapshot"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-chevron-up"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 15l6 -6l6 6"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Select next snapshot"
+                  class="emotion-16 emotion-17 emotion-62"
+                  data-disabled="true"
+                  disabled=""
+                  title="Select next snapshot"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-chevron-down"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9l6 6l6 -6"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="emotion-71 emotion-72 emotion-73"
+            >
+              <div
+                class="emotion-74 emotion-75 emotion-76"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-77 emotion-78 emotion-79"
+                  id="jotai-devtools-search-input"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-80"
+            data-testid="jotai-devtools-snapshot-history-list"
+          >
+            <button
+              class="emotion-16 emotion-82 emotion-83"
+              data-testid="jotai-devtools-snapshot-1"
+              type="button"
+            >
+              <span
+                class="emotion-84 emotion-85"
+              >
+                <span
+                  class="emotion-8 emotion-87 emotion-88"
+                >
+                  <div
+                    class="emotion-8 emotion-90"
+                  >
+                    1
+                  </div>
+                </span>
+                <span
+                  class="emotion-8 emotion-92 emotion-93"
+                />
+              </span>
+              <span
+                class="emotion-94 emotion-95"
+              >
+                <svg
+                  class="tabler-icon tabler-icon-chevron-right"
+                  fill="none"
+                  height="12"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 6l6 6l-6 6"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              aria-hidden="true"
+              class="emotion-96"
+              style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
+            >
+              <div
+                style="opacity: 0; transition: opacity 200ms ease;"
+              >
+                <div
+                  class="emotion-97 emotion-98"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-controls="data-panel-id-jotai-devtools-time-travel-panel-left"
+        aria-valuemax="60"
+        aria-valuemin="30"
+        aria-valuenow="45"
+        class=""
+        data-panel-group-direction="horizontal"
+        data-panel-group-id="jotai-devtools-time-travel-panel-group"
+        data-panel-resize-handle-enabled="true"
+        data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+        role="separator"
+        style="cursor: ew-resize; user-select: none;"
+        tabindex="0"
+      >
+        <div
+          class="emotion-99"
+        >
+          <div
+            class="_jotai-devtools-internal-panel-resize-handle emotion-100"
+          />
+        </div>
+      </div>
+      <div
+        class=""
+        data-panel=""
+        data-panel-id="jotai-devtools-time-travel-panel-right"
+        data-panel-size="55.0"
+        id="data-panel-id-jotai-devtools-time-travel-panel-right"
+        style="flex-basis: 0px; flex-grow: 55; flex-shrink: 1; overflow: auto;"
+      >
+        <div
+          class="emotion-101"
+        >
+          <div
+            class="emotion-51 emotion-103"
+          >
+            <h1
+              class="emotion-8 emotion-9 emotion-106"
+            >
+              Snapshot 
+            </h1>
+            <div
+              class="emotion-96"
+            >
+              <h1
+                class="emotion-8 emotion-9 emotion-110"
+              >
+                Meta
+              </h1>
+              <div
+                class="emotion-111"
+              >
+                <div
+                  class="emotion-8 emotion-113"
+                  data-testid="meta-info-label-Timestamp"
+                >
+                  Timestamp
+                </div>
+                <code
+                  class="emotion-114 emotion-115"
+                  data-testid="meta-info-value-7:00:00.000 PM"
+                  dir="ltr"
+                >
+                  7:00:00.000 PM
+                </code>
+              </div>
+            </div>
+            <div
+              class="emotion-96"
+            >
+              <h1
+                class="emotion-8 emotion-9 emotion-110"
+              >
+                Value
+              </h1>
+              <div
+                class="emotion-0 emotion-121"
+                id="jotai-devtools-time-travel-value-tabs"
+              >
+                <div
+                  aria-orientation="horizontal"
+                  class="emotion-22 emotion-23"
+                  role="tablist"
+                >
+                  <button
+                    aria-controls="jotai-devtools-time-travel-value-tabs-panel-state"
+                    aria-selected="false"
+                    class="emotion-16 emotion-25 emotion-26"
+                    id="jotai-devtools-time-travel-value-tabs-tab-state"
+                    role="tab"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="emotion-27 emotion-25Icon"
+                    >
+                      <svg
+                        class="tabler-icon tabler-icon-file-code"
+                        fill="none"
+                        height="0.9rem"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.75"
+                        viewBox="0 0 24 24"
+                        width="0.9rem"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 3v4a1 1 0 0 0 1 1h4"
+                        />
+                        <path
+                          d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                        />
+                        <path
+                          d="M10 13l-1 2l1 2"
+                        />
+                        <path
+                          d="M14 13l1 2l-1 2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="emotion-29 emotion-25Label"
+                    >
+                      State
+                    </span>
+                  </button>
+                  <button
+                    aria-controls="jotai-devtools-time-travel-value-tabs-panel-diff"
+                    aria-selected="true"
+                    class="emotion-16 emotion-25 emotion-26"
+                    data-active="true"
+                    id="jotai-devtools-time-travel-value-tabs-tab-diff"
+                    role="tab"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="emotion-27 emotion-25Icon"
+                    >
+                      <svg
+                        class="tabler-icon tabler-icon-file-diff"
+                        fill="none"
+                        height="0.9rem"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.75"
+                        viewBox="0 0 24 24"
+                        width="0.9rem"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 3v4a1 1 0 0 0 1 1h4"
+                        />
+                        <path
+                          d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                        />
+                        <path
+                          d="M12 10l0 4"
+                        />
+                        <path
+                          d="M10 12l4 0"
+                        />
+                        <path
+                          d="M10 17l4 0"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="emotion-29 emotion-25Label"
+                    >
+                      Diff
+                    </span>
+                  </button>
+                </div>
+                <div
+                  aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-state"
+                  class="emotion-46 emotion-139"
+                  id="jotai-devtools-time-travel-value-tabs-panel-state"
+                  role="tabpanel"
+                />
+                <div
+                  aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
+                  class="emotion-46 emotion-141"
+                  data-testid="jotai-devtools-diff-panel"
+                  id="jotai-devtools-time-travel-value-tabs-panel-diff"
+                  role="tabpanel"
+                >
+                  <code
+                    class="emotion-114 emotion-115"
+                    dir="ltr"
+                  >
+                    (states are equal)
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-96"
+            >
+              <h1
+                class="emotion-8 emotion-9 emotion-110"
+              >
+                Actions
+              </h1>
+              <button
+                class="emotion-16 emotion-149 emotion-150"
+                data-button="true"
+                data-disabled="true"
+                disabled=""
+                title="Restore this state"
+                type="button"
+              >
+                <div
+                  class="emotion-151 emotion-152"
+                >
+                  <span
+                    class="emotion-153 emotion-154 emotion-155"
+                  >
+                    <svg
+                      class="tabler-icon tabler-icon-rotate-2"
+                      fill="none"
+                      height="0.8rem"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="0.8rem"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5"
+                      />
+                      <path
+                        d="M18.37 7.16l0 .01"
+                      />
+                      <path
+                        d="M13 19.94l0 .01"
+                      />
+                      <path
+                        d="M16.84 18.37l0 .01"
+                      />
+                      <path
+                        d="M19.37 15.1l0 .01"
+                      />
+                      <path
+                        d="M19.94 11l0 .01"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="emotion-156 emotion-157"
+                  >
+                    Restore
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-158"
+    >
+      <button
+        class="emotion-16 emotion-17 emotion-18"
+        title="Start time travel"
+        type="button"
+      >
+        <svg
+          class="tabler-icon tabler-icon-player-play-filled"
+          fill="none"
+          height="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+            fill="currentColor"
+            stroke-width="0"
+          />
+        </svg>
+      </button>
+      <div
+        class="emotion-162 emotion-163"
+        tabindex="-1"
+      >
+        <div
+          class="emotion-164 emotion-165"
+        >
+          <div
+            class="emotion-166 emotion-167"
+          >
+            <div
+              class="emotion-168 emotion-169"
+            />
+            <div
+              aria-label=""
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              class="emotion-170 emotion-171"
+              role="slider"
+              style="left: 0%;"
+              tabindex="0"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-172 emotion-173"
+        />
+        <input
+          type="hidden"
+          value="0"
+        />
+      </div>
+      <div
+        class="emotion-6 emotion-56"
+      >
+        <button
+          aria-label="Restore previous snapshot"
+          class="emotion-16 emotion-17 emotion-62"
+          data-disabled="true"
+          disabled=""
+          title="Restore previous snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-left"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 6l-6 6l6 6"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Restore next snapshot"
+          class="emotion-16 emotion-17 emotion-62"
+          title="Restore next snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-right"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 6l6 6l-6 6"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-71 emotion-183 emotion-184"
+      >
+        <div
+          aria-controls="jotai-devtools-playback-speed-dropdown"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          class=""
+          role="combobox"
+          tabindex="-1"
+        >
+          <input
+            type="hidden"
+            value="1x"
+          />
+          <div
+            class="emotion-74 emotion-186 emotion-76"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-invalid="false"
+              autocomplete="off"
+              class="emotion-77 emotion-189 emotion-190"
+              color="dark"
+              data-mantine-stop-propagation="false"
+              data-testid="jotai-devtools-playback-speed-dropdown"
+              id="jotai-devtools-playback-speed-dropdown"
+              readonly=""
+              type="search"
+              value="1x"
+            />
+            <div
+              class="emotion-191 emotion-192 emotion-193"
+            >
+              <svg
+                data-chevron="true"
+                fill="none"
+                height="0.875rem"
+                style="color: rgb(134, 142, 150);"
+                viewBox="0 0 15 15"
+                width="0.875rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DevTools - TimeTravel Snapshot list should render time travel without any errors 1`] = `
+.emotion-1 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  color: #000;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+}
+
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 20px);
+  border-color: #dee2e6;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 99999;
+  margin: 0.625rem;
+  height: 23.125rem;
+  max-height: 90%;
+}
+
+.emotion-3 {
+  width: 100%;
+  height: 5px;
+  cursor: row-resize;
+  z-index: 2;
+  position: absolute;
+  top: -2px;
+}
+
+.emotion-4 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.emotion-5 {
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-right: 0.625rem;
+}
+
+.emotion-7>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-10 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-10:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-10:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  font-size: 0.5625rem;
+  height: 1rem;
+  line-height: calc(1rem - 0.125rem);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0 calc(0.625rem / 1.5);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: auto;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.015625rem;
+  cursor: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: rgba(255, 244, 230, 1);
+  color: #fd7e14;
+  border: 0.0625rem solid transparent;
+}
+
+.emotion-12:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-12:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-13 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid transparent;
+  background-color: #25262b;
+  color: #fff;
+}
+
+.emotion-18:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-18:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-18:hover {
+    background-color: #1A1B1E;
+  }
+}
+
+@media (hover: none) {
+  .emotion-18:active {
+    background-color: #1A1B1E;
+  }
+}
+
+.emotion-18:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-18 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-18:disabled,
+.emotion-18[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-18:disabled:active,
+.emotion-18[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-18[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-18[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-21 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid transparent;
+  background-color: transparent;
+  color: #868e96;
+  margin-left: 0.625rem;
+}
+
+.emotion-21:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-21:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-21:hover {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+@media (hover: none) {
+  .emotion-21:active {
+    background-color: rgba(248, 249, 250, 1);
+  }
+}
+
+.emotion-21:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-21 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-21:disabled,
+.emotion-21[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-21:disabled:active,
+.emotion-21[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-21[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-21[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  border-bottom: 0.125rem solid #dee2e6;
+}
+
+.emotion-26 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.625rem 1rem;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  line-height: 1;
+  border-bottom: 0.125rem solid transparent;
+  margin-bottom: -0.125rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.emotion-26:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-26:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-26:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .emotion-26:disabled:hover {
+    background-color: transparent;
+  }
+}
+
+@media (hover: none) {
+  .emotion-26:disabled:active {
+    background-color: transparent;
+  }
+}
+
+.emotion-26:focus {
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .emotion-26:hover {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+@media (hover: none) {
+  .emotion-26:active {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+.emotion-26[data-active] {
+  border-color: #25262b;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .emotion-26[data-active]:hover {
+    border-color: #25262b;
+  }
+}
+
+@media (hover: none) {
+  .emotion-26[data-active]:active {
+    border-color: #25262b;
+  }
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-27:not(:only-child) {
+  margin-right: 0.4375rem;
+}
+
+.emotion-33 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.625rem 1rem;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  line-height: 1;
+  border-bottom: 0.125rem solid transparent;
+  margin-bottom: -0.125rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding-right: 1rem;
+}
+
+.emotion-33:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-33:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-33:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .emotion-33:disabled:hover {
+    background-color: transparent;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33:disabled:active {
+    background-color: transparent;
+  }
+}
+
+.emotion-33:focus {
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .emotion-33:hover {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33:active {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+}
+
+.emotion-33[data-active] {
+  border-color: #25262b;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .emotion-33[data-active]:hover {
+    border-color: #25262b;
+  }
+}
+
+@media (hover: none) {
+  .emotion-33[data-active]:active {
+    border-color: #25262b;
+  }
+}
+
+.emotion-39 {
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.emotion-41 {
+  height: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.emotion-42 {
+  padding: 0.625rem;
+  padding-top: 0rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #e9ecef;
+}
+
+.emotion-44 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 0.75rem;
+}
+
+.emotion-46 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0.625rem;
+}
+
+.emotion-46>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-48 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.emotion-48>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.emotion-51 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #25262b;
+  background-color: transparent;
+  color: #25262b;
+}
+
+.emotion-51:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-51:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-51:hover {
+    background-color: rgba(193, 194, 197, 0.35);
+  }
+}
+
+@media (hover: none) {
+  .emotion-51:active {
+    background-color: rgba(193, 194, 197, 0.35);
+  }
+}
+
+.emotion-51:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-51 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-51:disabled,
+.emotion-51[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-51:disabled:active,
+.emotion-51[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-51[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-51[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-54 {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: left;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  width: 1.75rem;
+  min-width: 1.75rem;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  color: #000;
+}
+
+.emotion-54:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-54:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .emotion-54:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+@media (hover: none) {
+  .emotion-54:active {
+    background-color: #f8f9fa;
+  }
+}
+
+.emotion-54:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-54 [data-action-icon-loader] {
+  max-width: 70%;
+}
+
+.emotion-54:disabled,
+.emotion-54[data-disabled] {
+  color: #ced4da;
+  cursor: not-allowed;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+  background-image: none;
+  pointer-events: none;
+}
+
+.emotion-54:disabled:active,
+.emotion-54[data-disabled]:active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-54[data-loading] {
+  pointer-events: none;
+}
+
+.emotion-54[data-loading]::before {
+  content: "";
+  position: absolute;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.emotion-65 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  line-height: 1.55;
+}
+
+.emotion-68 {
+  position: relative;
+}
+
+.emotion-71 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  height: 2.25rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(2.25rem - 0.125rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  width: 100%;
+  color: #000;
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 2.25rem;
+  padding-left: calc(2.25rem  / 3);
+  padding-right: calc(2.25rem  / 3);
+  border-radius: 0.5rem;
+}
+
+.emotion-71:focus,
+.emotion-71:focus-within {
+  outline: none;
+  border-color: #25262b;
+}
+
+.emotion-71:disabled,
+.emotion-71[data-disabled] {
+  background-color: #f1f3f5;
+  color: #909296;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emotion-71:disabled::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-71:disabled::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-71:disabled:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-71[data-disabled]::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-71[data-disabled]::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-71[data-disabled]:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-71:disabled::placeholder,
+.emotion-71[data-disabled]::placeholder {
+  color: #909296;
+}
+
+.emotion-71[data-invalid] {
+  color: #fa5252;
+  border-color: #fa5252;
+}
+
+.emotion-71[data-invalid]::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-71[data-invalid]::-moz-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-71[data-invalid]:-ms-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-71[data-invalid]::placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-71[data-with-icon] {
+  padding-left: 2.25rem;
+}
+
+.emotion-71::-webkit-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-71::-moz-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-71:-ms-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-71::placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-71::-webkit-inner-spin-button,
+.emotion-71::-webkit-outer-spin-button,
+.emotion-71::-webkit-search-decoration,
+.emotion-71::-webkit-search-cancel-button,
+.emotion-71::-webkit-search-results-button,
+.emotion-71::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-71[type=number] {
+  -moz-appearance: textfield;
+}
+
+.emotion-72 {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.emotion-73 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5;
+  height: 100%;
+}
+
+.emotion-73 ._jotai-devtools-internal-panel-resize-handle {
+  -webkit-transition: max-height,min-height,height,0.2s ease-out;
+  transition: max-height,min-height,height,0.2s ease-out;
+}
+
+[data-resize-handle-active] .emotion-73 ._jotai-devtools-internal-panel-resize-handle,
+.emotion-73:hover ._jotai-devtools-internal-panel-resize-handle {
+  height: 90%;
+  min-height: 90%;
+  max-height: 90%;
+}
+
+.emotion-74 {
+  border-radius: 2rem;
+  vertical-align: middle;
+  margin: 0.3125rem;
+  background: #dee2e6;
+  width: 0.3125rem;
+  height: 20%;
+  min-height: 3.125rem;
+  max-height: 6.25rem;
+}
+
+.emotion-75 {
+  padding: 0.625rem;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-76 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-78 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.55;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-78:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-78:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-79 {
+  height: 56px;
+  border-top: 0.09rem solid #dee2e6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.75rem;
+  gap: 12px;
+}
+
+.emotion-84 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  touch-action: none;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-85 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: calc(0.25rem * 2);
+  cursor: pointer;
+}
+
+.emotion-87 {
+  position: relative;
+  height: 0.25rem;
+  width: 100%;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.emotion-87::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  right: calc(0.25rem * -1);
+  left: calc(0.25rem * -1);
+  background-color: #e9ecef;
+  z-index: 0;
+}
+
+.emotion-87:before {
+  background-color: #dee2e6;
+}
+
+.emotion-90 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  background-color: #ced4da;
+  border-radius: 2rem;
+  background-color: #373A40;
+  left: calc(0% - 0.25rem);
+  width: calc(NaN% + 2 * 0.25rem);
+}
+
+.emotion-92 {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  position: absolute;
+  display: none;
+  height: calc(0.25rem * 2);
+  width: calc(0.25rem * 2);
+  background-color: #fff;
+  border: 0.25rem solid #25262b;
+  color: #25262b;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  cursor: pointer;
+  border-radius: 1000px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  transition-duration: 100ms;
+  transition-property: box-shadow,transform;
+  transition-timing-function: ease;
+  z-index: 3;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+  height: 0.875rem;
+  width: 0.875rem;
+  border-width: 0.1875rem;
+  border-color: #373A40;
+}
+
+.emotion-92:focus {
+  outline-offset: 0.125rem;
+  outline: 0.125rem solid #2C2E33;
+}
+
+.emotion-92:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-93 {
+  position: absolute;
+  right: 0.25rem;
+  left: 0.25rem;
+}
+
+.emotion-105 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  line-height: 1.55;
+  max-width: 5rem;
+}
+
+.emotion-111 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
+  height: 1.875rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(1.875rem - 0.125rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  width: 100%;
+  color: #000;
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid #ced4da;
+  background-color: #fff;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 1.875rem;
+  padding-left: calc(1.875rem  / 3);
+  padding-right: 1.875rem;
+  border-radius: 0.5rem;
+}
+
+.emotion-111:focus,
+.emotion-111:focus-within {
+  outline: none;
+  border-color: #25262b;
+}
+
+.emotion-111:disabled,
+.emotion-111[data-disabled] {
+  background-color: #f1f3f5;
+  color: #909296;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emotion-111:disabled::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-111:disabled::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-111:disabled:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-111[data-disabled]::-webkit-input-placeholder {
+  color: #909296;
+}
+
+.emotion-111[data-disabled]::-moz-placeholder {
+  color: #909296;
+}
+
+.emotion-111[data-disabled]:-ms-input-placeholder {
+  color: #909296;
+}
+
+.emotion-111:disabled::placeholder,
+.emotion-111[data-disabled]::placeholder {
+  color: #909296;
+}
+
+.emotion-111[data-invalid] {
+  color: #fa5252;
+  border-color: #fa5252;
+}
+
+.emotion-111[data-invalid]::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-111[data-invalid]::-moz-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-111[data-invalid]:-ms-input-placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-111[data-invalid]::placeholder {
+  opacity: 1;
+  color: #fa5252;
+}
+
+.emotion-111[data-with-icon] {
+  padding-left: 1.875rem;
+}
+
+.emotion-111::-webkit-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-111::-moz-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-111:-ms-input-placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-111::placeholder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.emotion-111::-webkit-inner-spin-button,
+.emotion-111::-webkit-outer-spin-button,
+.emotion-111::-webkit-search-decoration,
+.emotion-111::-webkit-search-cancel-button,
+.emotion-111::-webkit-search-results-button,
+.emotion-111::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-111[type=number] {
+  -moz-appearance: textfield;
+}
+
+.emotion-111:not(:disabled) {
+  cursor: pointer;
+}
+
+.emotion-111:not(:disabled)::selection {
+  background-color: transparent;
+}
+
+.emotion-112 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 1.875rem;
+  pointer-events: none;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2"
+  data-testid="emotion-1"
+  id="emotion-1"
+>
+  <div
+    class="emotion-3"
+    data-testid="shell-resize-bar"
+  />
+  <div
+    class="emotion-4"
+  >
+    <div
+      class="emotion-5"
+    >
+      <div
+        class="emotion-6 emotion-7"
+      >
+        <h1
+          class="emotion-8 emotion-9 emotion-10"
+        >
+          👻 Jōtai DevTools
+        </h1>
+        <div
+          class="emotion-11 emotion-12"
+        >
+          <span
+            class="emotion-13 emotion-14"
+          >
+            Alpha
+          </span>
+        </div>
+      </div>
+      <div
+        class="emotion-15"
+      >
+        <button
+          class="emotion-16 emotion-17 emotion-18"
+          title="Toggle color scheme"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-moon-stars"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+            />
+            <path
+              d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+            />
+            <path
+              d="M19 11h2m-1 -1v2"
+            />
+          </svg>
+        </button>
+        <button
+          class="emotion-16 emotion-17 emotion-21"
+          title="Minimize panel"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-minus"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12l14 0"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-orientation="horizontal"
+    class="emotion-22 emotion-23"
+    role="tablist"
+  >
+    <button
+      aria-controls="emotion-1-panel-atom-viewer"
+      aria-selected="false"
+      class="emotion-16 emotion-25 emotion-26"
+      id="emotion-1-tab-atom-viewer"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <span
+        class="emotion-27 emotion-25Icon"
+      >
+        <svg
+          class="tabler-icon tabler-icon-layout-list"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+          />
+          <path
+            d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="emotion-29 emotion-25Label"
+      >
+        Atom Viewer
+      </span>
+    </button>
+    <button
+      aria-controls="emotion-1-panel-time-travel"
+      aria-selected="true"
+      class="emotion-16 emotion-25 emotion-33"
+      data-active="true"
+      id="emotion-1-tab-time-travel"
+      role="tab"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="emotion-27 emotion-25Icon"
+      >
+        <svg
+          class="tabler-icon tabler-icon-timeline"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 16l6 -7l5 5l5 -6"
+          />
+          <path
+            d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+          <path
+            d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+          <path
+            d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+          <path
+            d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+          />
+        </svg>
+      </span>
+      <span
+        class="emotion-29 emotion-25Label"
+      >
+        Time travel
+      </span>
+    </button>
+  </div>
+  <div
+    aria-labelledby="emotion-1-tab-atom-viewer"
+    class="emotion-38 emotion-39"
+    id="emotion-1-panel-atom-viewer"
+    role="tabpanel"
+  />
+  <div
+    aria-labelledby="emotion-1-tab-time-travel"
+    class="emotion-38 emotion-41"
+    id="emotion-1-panel-time-travel"
+    role="tabpanel"
+  >
+    <div
+      class=""
+      data-panel-group=""
+      data-panel-group-direction="horizontal"
+      data-panel-group-id="jotai-devtools-time-travel-panel-group"
+      style="display: flex; flex-direction: row; height: calc(100% - 56px); overflow: hidden; width: 100%;"
+    >
+      <div
+        class=""
+        data-panel=""
+        data-panel-id="jotai-devtools-time-travel-panel-left"
+        data-panel-size="45.0"
+        id="data-panel-id-jotai-devtools-time-travel-panel-left"
+        style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
+      >
+        <div
+          class="emotion-42"
+          data-testid="jotai-devtools-time-travel-panel-left-content"
+        >
+          <div
+            class="emotion-43 emotion-44"
+          >
+            <div
+              class="emotion-6 emotion-46"
+            >
+              <div
+                class="emotion-6 emotion-48"
+              >
+                <button
+                  aria-label="Record snapshot history"
+                  class="emotion-16 emotion-17 emotion-51"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-player-record-filled"
+                    fill="none"
+                    height="18"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 5.072a8 8 0 1 1 -3.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 3.995 -6.643z"
+                      fill="currentColor"
+                      stroke-width="0"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Clear snapshot history"
+                  class="emotion-16 emotion-17 emotion-54"
+                  data-disabled="true"
+                  disabled=""
+                  title="Clear snapshot history"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-trash-x"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 7h16"
+                    />
+                    <path
+                      d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                    />
+                    <path
+                      d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+                    />
+                    <path
+                      d="M10 12l4 4m0 -4l-4 4"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="emotion-6 emotion-48"
+              >
+                <button
+                  aria-label="Select previous snapshot"
+                  class="emotion-16 emotion-17 emotion-54"
+                  data-disabled="true"
+                  disabled=""
+                  title="Select previous snapshot"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-chevron-up"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 15l6 -6l6 6"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Select next snapshot"
+                  class="emotion-16 emotion-17 emotion-54"
+                  data-disabled="true"
+                  disabled=""
+                  title="Select next snapshot"
+                  type="button"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-chevron-down"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9l6 6l6 -6"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="emotion-63 emotion-64 emotion-65"
+            >
+              <div
+                class="emotion-66 emotion-67 emotion-68"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-69 emotion-70 emotion-71"
+                  id="jotai-devtools-search-input"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-72"
+            data-testid="jotai-devtools-snapshot-history-list"
+          />
+        </div>
+      </div>
+      <div
+        aria-controls="data-panel-id-jotai-devtools-time-travel-panel-left"
+        aria-valuemax="60"
+        aria-valuemin="30"
+        aria-valuenow="45"
+        class=""
+        data-panel-group-direction="horizontal"
+        data-panel-group-id="jotai-devtools-time-travel-panel-group"
+        data-panel-resize-handle-enabled="true"
+        data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+        role="separator"
+        style="cursor: ew-resize; user-select: none;"
+        tabindex="0"
+      >
+        <div
+          class="emotion-73"
+        >
+          <div
+            class="_jotai-devtools-internal-panel-resize-handle emotion-74"
+          />
+        </div>
+      </div>
+      <div
+        class=""
+        data-panel=""
+        data-panel-id="jotai-devtools-time-travel-panel-right"
+        data-panel-size="55.0"
+        id="data-panel-id-jotai-devtools-time-travel-panel-right"
+        style="flex-basis: 0px; flex-grow: 55; flex-shrink: 1; overflow: auto;"
+      >
+        <div
+          class="emotion-75"
+        >
+          <div
+            class="emotion-76"
+          >
+            <div
+              class="emotion-8 emotion-78"
+            >
+              Select a snapshot from the left panel to view the details
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-79"
+    >
+      <button
+        class="emotion-16 emotion-17 emotion-18"
+        data-disabled="true"
+        disabled=""
+        title="Start time travel"
+        type="button"
+      >
+        <svg
+          class="tabler-icon tabler-icon-player-play-filled"
+          fill="none"
+          height="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+            fill="currentColor"
+            stroke-width="0"
+          />
+        </svg>
+      </button>
+      <div
+        class="emotion-83 emotion-84"
+        tabindex="-1"
+      >
+        <div
+          class="emotion-85 emotion-86"
+        >
+          <div
+            class="emotion-87 emotion-88"
+          >
+            <div
+              class="emotion-89 emotion-90"
+            />
+            <div
+              aria-label=""
+              aria-valuemax="0"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              class="emotion-91 emotion-92"
+              role="slider"
+              tabindex="0"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-93 emotion-94"
+        />
+        <input
+          type="hidden"
+          value="0"
+        />
+      </div>
+      <div
+        class="emotion-6 emotion-48"
+      >
+        <button
+          aria-label="Restore previous snapshot"
+          class="emotion-16 emotion-17 emotion-54"
+          data-disabled="true"
+          disabled=""
+          title="Restore previous snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-left"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 6l-6 6l6 6"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Restore next snapshot"
+          class="emotion-16 emotion-17 emotion-54"
+          data-disabled="true"
+          disabled=""
+          title="Restore next snapshot"
+          type="button"
+        >
+          <svg
+            class="tabler-icon tabler-icon-chevron-right"
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 6l6 6l-6 6"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-63 emotion-104 emotion-105"
+      >
+        <div
+          aria-controls="jotai-devtools-playback-speed-dropdown"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          class=""
+          role="combobox"
+          tabindex="-1"
+        >
+          <input
+            type="hidden"
+            value="1x"
+          />
+          <div
+            class="emotion-66 emotion-107 emotion-68"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-invalid="false"
+              autocomplete="off"
+              class="emotion-69 emotion-110 emotion-111"
+              color="dark"
+              data-mantine-stop-propagation="false"
+              data-testid="jotai-devtools-playback-speed-dropdown"
+              id="jotai-devtools-playback-speed-dropdown"
+              readonly=""
+              type="search"
+              value="1x"
+            />
+            <div
+              class="emotion-112 emotion-113 emotion-114"
+            >
+              <svg
+                data-chevron="true"
+                fill="none"
+                height="0.875rem"
+                style="color: rgb(134, 142, 150);"
+                viewBox="0 0 15 15"
+                width="0.875rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

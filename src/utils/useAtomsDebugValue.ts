@@ -60,7 +60,7 @@ export const useAtomsDebugValue = (options?: Options) => {
       );
     }
 
-    const unsubscribe = devSubscribeStore?.(callback);
+    const unsubscribe = devSubscribeStore?.(callback, 2);
     callback();
     return unsubscribe;
   }, [enabled, store]);

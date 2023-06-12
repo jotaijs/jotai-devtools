@@ -9,7 +9,11 @@ export default function isIterable(obj: any) {
   );
 }
 
-function getShortTypeString(val: unknown) {
+function getShortTypeString(val: unknown, isForDiff?: boolean) {
+  if (isForDiff && Array.isArray(val)) {
+    val = val[val.length === 2 ? 1 : 0];
+  }
+
   if (isIterable(val)) {
     return '(…)';
   }
@@ -49,11 +53,14 @@ function getShortTypeString(val: unknown) {
 
 // Inspired by Redux DevTools Inspector Monitor
 // Source: https://github.com/reduxjs/redux-devtools/blob/main/packages/redux-devtools-inspector-monitor/src/tabs/getItemString.tsx
-export const getItemString: GetItemString = (
+export const getItemStringWithDiff = (
   nodeType: string,
   data: any,
-  previewContent = true,
+  isForDiff: boolean,
 ) => {
+  // We could make this configurable in the future
+  const previewContent = true;
+
   if (nodeType === 'Object') {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const keys = Object.keys(data as {});
@@ -61,7 +68,10 @@ export const getItemString: GetItemString = (
 
     const str = keys
       .slice(0, 3)
-      .map((key) => `${key}: ${getShortTypeString(data[key]) as string}`)
+      .map(
+        (key) =>
+          `${key}: ${getShortTypeString(data[key], isForDiff) as string}`,
+      )
       .concat(keys.length > 3 ? ['…'] : [])
       .join(', ');
 
@@ -73,7 +83,7 @@ export const getItemString: GetItemString = (
 
     const str = data
       .slice(0, 4)
-      .map((val: any) => getShortTypeString(val))
+      .map((val: any) => getShortTypeString(val), isForDiff)
       .concat(data.length > 3 ? ['…'] : [])
       .join(', ');
 
@@ -82,3 +92,11 @@ export const getItemString: GetItemString = (
 
   return nodeType;
 };
+
+export const getItemString: GetItemString = (nodeType: string, data: any) =>
+  getItemStringWithDiff(nodeType, data, false);
+
+export const getItemStringWithDiffEnabled: GetItemString = (
+  nodeType: string,
+  data: any,
+) => getItemStringWithDiff(nodeType, data, true);

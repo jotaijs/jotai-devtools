@@ -1,34 +1,30 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Tabs } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
-import { Store } from 'src/types';
 import { shellStylesAtom } from '../../../atoms/shell-styles';
-import { useSetCustomStore } from '../../../atoms/user-custom-store';
 import { TabKeys, shellStyleDefaults } from '../../../constants';
 import { useDevtoolsJotaiStoreOptions } from '../../../internal-jotai-store';
+import { useSelectedShellTab } from './atoms';
 import { AtomViewer } from './components/AtomViewer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Header } from './components/Header';
 import { ShellResizeBar } from './components/ShellResizeBar';
 import { TabsHeader } from './components/TabsHeader';
+import { TimeTravel } from './components/TimeTravel';
 import { shellStyles } from './styles';
 
-export type ShellProps = {
-  store?: Store | undefined;
-};
-
-export const Shell = ({ store }: ShellProps) => {
-  const setUserStore = useSetCustomStore();
-  useEffect(() => {
-    setUserStore(store);
-  }, [setUserStore, store]);
+export const Shell = () => {
+  const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
 
   const shellRef = useRef<HTMLDivElement>(null);
+
+  // TODO move this to a custom hook
   const { height } = useAtomValue(
     shellStylesAtom,
     useDevtoolsJotaiStoreOptions(),
   );
 
+  const handleOnTabChange = (value: TabKeys) => setSelectedShellTab(value);
   return (
     <Tabs
       keepMounted={false}
@@ -42,6 +38,8 @@ export const Shell = ({ store }: ShellProps) => {
       className="jotai-devtools-shell"
       data-testid="jotai-devtools-shell"
       id="jotai-devtools-shell"
+      value={selectedShellTab}
+      onTabChange={handleOnTabChange}
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />
@@ -58,6 +56,18 @@ export const Shell = ({ store }: ShellProps) => {
           }}
         >
           <AtomViewer />
+        </Tabs.Panel>
+        <Tabs.Panel
+          value={TabKeys.TimeTravel}
+          h="100%"
+          sx={{
+            overflow: 'hidden',
+            // Hide the overlap of this div's bg
+            borderBottomLeftRadius: '7px',
+            borderBottomRightRadius: '7px',
+          }}
+        >
+          <TimeTravel />
         </Tabs.Panel>
       </ErrorBoundary>
     </Tabs>

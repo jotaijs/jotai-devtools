@@ -1,5 +1,5 @@
-import { useEffect, useReducer } from 'react';
 import type { ReducerWithoutAction } from 'react';
+import { useEffect, useReducer } from 'react';
 import { useSetAtom, useStore } from 'jotai/react';
 import type { Atom, ExtractAtomValue } from 'jotai/vanilla';
 import {
@@ -83,7 +83,9 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     const devSubCb = (
       type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
     ) => {
-      if (type !== 'unsub') {
+      const normalizedType = typeof type === 'string' ? type : type?.type;
+
+      if (normalizedType !== 'unsub') {
         return;
       }
 
@@ -102,7 +104,7 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
         }
       }
     };
-    const devUnsubscribeStore = devSubscribeStore?.(devSubCb);
+    const devUnsubscribeStore = devSubscribeStore?.(devSubCb, 2);
 
     const unsub = userStore.sub(atom, atomSubCb);
     rerender();

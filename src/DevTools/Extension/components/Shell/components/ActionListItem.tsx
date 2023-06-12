@@ -19,31 +19,35 @@ const navLinkStyles: Sx = (theme) => ({
 });
 
 export const ActionListItem = React.memo(
-  ({ label, onClick, id, isActive }: ActionListItemProps) => {
-    const handleOnClick = React.useCallback(() => onClick(id), [onClick, id]);
+  React.forwardRef<HTMLButtonElement, ActionListItemProps>(
+    ({ label, onClick, id, isActive, ...rest }, ref) => {
+      const handleOnClick = React.useCallback(() => onClick(id), [onClick, id]);
 
-    return (
-      <NavLink
-        label={React.useMemo(
-          () => (
-            <Text sx={monoSpaceFonts}>{label}</Text>
-          ),
-          [label],
-        )}
-        variant="filled"
-        sx={navLinkStyles}
-        active={isActive}
-        color={useThemeMode('dark', 'gray')}
-        onClick={handleOnClick}
-        rightSection={React.useMemo(
-          () => (
-            <IconChevronRight size={12} stroke={1.5} />
-          ),
-          [],
-        )}
-      />
-    );
-  },
+      return (
+        <NavLink
+          {...rest}
+          ref={ref}
+          label={React.useMemo(
+            () => (
+              <Text sx={monoSpaceFonts}>{label}</Text>
+            ),
+            [label],
+          )}
+          variant="filled"
+          sx={navLinkStyles}
+          active={isActive}
+          color={useThemeMode('dark', 'gray')}
+          onClick={handleOnClick}
+          rightSection={React.useMemo(
+            () => (
+              <IconChevronRight size={12} stroke={1.5} />
+            ),
+            [],
+          )}
+        />
+      );
+    },
+  ),
 );
 
 ActionListItem.displayName = 'ActionListItem';

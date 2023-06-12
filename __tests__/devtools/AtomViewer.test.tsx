@@ -2,7 +2,8 @@ import React, { useMemo } from 'react';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import * as stringifyModule from 'javascript-stringify';
-import { atom, useAtomValue } from 'jotai';
+import { useAtomValue } from 'jotai';
+import { atom } from 'jotai/vanilla';
 import { DevTools } from 'jotai-devtools';
 import { AnyAtom } from 'src/types';
 import { customRender } from '../custom-render';
@@ -114,7 +115,7 @@ describe('DevTools - AtomViewer', () => {
         expect(screen.getByText('Meta')).toBeInTheDocument();
         expect(screen.getByText('Debug Label')).toBeInTheDocument();
         expect(
-          screen.getByTestId('display-detail-item-value-countAtom'),
+          screen.getByTestId('meta-info-value-countAtom'),
         ).toHaveTextContent('countAtom');
         expect(screen.getByText('Value type')).toBeInTheDocument();
         expect(screen.getByText('number')).toBeInTheDocument();
@@ -147,7 +148,7 @@ describe('DevTools - AtomViewer', () => {
         expect(screen.getByText('Meta')).toBeInTheDocument();
         expect(screen.getByText('Debug Label')).toBeInTheDocument();
         expect(
-          screen.getByTestId('display-detail-item-value-privateAtom'),
+          screen.getByTestId('meta-info-value-privateAtom'),
         ).toHaveTextContent('privateAtom');
         expect(screen.getByText('Value type')).toBeInTheDocument();
         expect(screen.getByText('number')).toBeInTheDocument();
@@ -243,7 +244,7 @@ describe('DevTools - AtomViewer', () => {
           await userEvent.click(screen.getByText('doubleCountAtom'));
         });
         expect(
-          screen.getByTestId('display-detail-item-value-doubleCountAtom'),
+          screen.getByTestId('meta-info-value-doubleCountAtom'),
         ).toBeInTheDocument();
 
         await act(async () => {
@@ -252,7 +253,7 @@ describe('DevTools - AtomViewer', () => {
 
         expect(screen.queryByText('Atom Details')).not.toBeInTheDocument();
         expect(
-          screen.queryByText('display-detail-item-value-doubleCountAtom'),
+          screen.queryByText('meta-info-value-doubleCountAtom'),
         ).not.toBeInTheDocument();
         expect(
           screen.getByTestId('atom-list-no-atoms-found-message'),
@@ -306,7 +307,7 @@ describe('DevTools - AtomViewer', () => {
         expect(screen.getByText('Meta')).toBeInTheDocument();
         expect(screen.getByText('Debug Label')).toBeInTheDocument();
         expect(
-          screen.getByTestId('display-detail-item-value-countAtom'),
+          screen.getByTestId('meta-info-value-countAtom'),
         ).toHaveTextContent('countAtom');
         expect(screen.getByText('Value type')).toBeInTheDocument();
         expect(screen.getByText('number')).toBeInTheDocument();

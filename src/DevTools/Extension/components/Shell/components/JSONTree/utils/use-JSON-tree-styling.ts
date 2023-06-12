@@ -1,5 +1,6 @@
 import { MantineTheme, useMantineTheme } from '@mantine/core';
 import type { Base16Theme } from 'base16';
+import { StylingFunction, createStyling } from 'react-base16-styling';
 import { getJsonTreeTheme } from './get-json-tree-theme';
 
 /**
@@ -35,8 +36,8 @@ const createJSONTreeTheme = (
     base03: theme.colors.dark[2], // expanded string
     base04: '#ffffff', // ?? unused
     base05: '#ffffff', // ?? unused
-    base06: '#ffffff', // ?? unused // reserved for diff add
-    base07: '#ffffff', // ?? unused // reserved for diff remove
+    base06: theme.fn.rgba(theme.colors.green[8], 0.65), // reserved for diff add
+    base07: theme.fn.rgba(theme.colors.red[8], 0.65), // reserved for diff remove
     base08: '#ffffff', // ?? unused
     base09: theme.colors.blue[8], // boolean, symbol, numbers, constants
     base0A: theme.colors.violet[9], // function
@@ -56,8 +57,8 @@ const createJSONTreeTheme = (
     base03: theme.colors.dark[3], // expanded string
     base04: '#ffffff', // ?? unused
     base05: '#ffffff', // ?? unused
-    base06: '#ffffff', // ?? unused // reserved for diff add
-    base07: '#ffffff', // ?? unused // reserved for diff remove
+    base06: theme.fn.rgba(theme.colors.green[7], 0.65), // reserved for diff add
+    base07: theme.fn.rgba(theme.colors.red[7], 0.65), // reserved for diff remove
     base08: '#ffffff', // ?? unused
     base09: theme.colors.blue[4], // boolean, symbol, numbers, constants
     base0A: theme.colors.violet[4], // function
@@ -71,8 +72,18 @@ const createJSONTreeTheme = (
   return { light, dark };
 };
 
-export const useGetJSONTreeStyling = () => {
+const useCreateJSONTreeBase16Theme = () => {
   const theme = useMantineTheme();
   const base16Theme = createJSONTreeTheme(theme)[theme.colorScheme];
-  return getJsonTreeTheme(theme, base16Theme);
+  return base16Theme;
+};
+
+export const useJSONTreeStyling = () => {
+  const base16Theme = useCreateJSONTreeBase16Theme();
+  const createStylingFromTheme = createStyling(getJsonTreeTheme, {
+    defaultBase16: base16Theme,
+  });
+
+  const styling: StylingFunction = createStylingFromTheme(base16Theme);
+  return { theme: getJsonTreeTheme(base16Theme), styling } as const;
 };

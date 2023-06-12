@@ -24,7 +24,7 @@ const innerContainerStyles: Sx = {
 
 export const PanelResizeHandle = () => {
   return (
-    <ReactPanelResizeHandle>
+    <ReactPanelResizeHandle id="jotai-devtools-panel-resize-handle">
       <Box p="5" h="100%" sx={reactPanelResizeHandleStyles}>
         <Box
           className="_jotai-devtools-internal-panel-resize-handle"
