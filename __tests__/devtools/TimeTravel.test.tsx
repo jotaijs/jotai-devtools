@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { act, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { atom, useAtomValue, useSetAtom } from 'jotai';
 import { DevTools, DevToolsProps } from 'jotai-devtools';
@@ -48,15 +48,12 @@ describe('DevTools - TimeTravel', () => {
     localStorageGetItemSpy.mockRestore();
   });
   describe('Snapshot list', () => {
-    it('should render time travel without any errors', async () => {
+    it('should render time travel without any errors', () => {
       customRender(<DevTools isInitialOpen={true} />);
-      await waitFor(() =>
-        expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument(),
-      );
+      expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument(),
+        expect(screen.getByText('Time travel')).toBeInTheDocument();
 
-      expect(screen.getByText('Time travel')).toBeInTheDocument();
-
-      await userEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByText('Time travel'));
       expect(screen.getByPlaceholderText('Search')).toBeInTheDocument(),
         expect(
           screen.getByText(
@@ -66,16 +63,16 @@ describe('DevTools - TimeTravel', () => {
       expect(screen.getByTestId('jotai-devtools-shell')).toMatchSnapshot();
     });
 
-    it('should clear the list when user presses the trash icon and show the last snapshot on the right side', async () => {
+    it('should clear the list when user presses the trash icon and show the last snapshot on the right side', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
       expect(
         screen.getByTestId('jotai-devtools-snapshot-1'),
       ).toBeInTheDocument();
-      await userEvent.click(screen.getByTitle('Clear snapshot history'));
+      fireEvent.click(screen.getByTitle('Clear snapshot history'));
       expect(
         screen.getByTestId('jotai-devtools-snapshot-history-list'),
       ).toBeEmptyDOMElement();
@@ -87,7 +84,7 @@ describe('DevTools - TimeTravel', () => {
       ).not.toBeInTheDocument();
     });
 
-    it('should limit the number of snapshot history based on props', async () => {
+    it('should limit the number of snapshot history based on props', () => {
       customRender(
         <BasicAtomsWithDevTools
           options={{
@@ -96,11 +93,11 @@ describe('DevTools - TimeTravel', () => {
         />,
       );
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
       expect(
         screen.getByTestId('jotai-devtools-snapshot-2'),
       ).toBeInTheDocument();
@@ -128,41 +125,41 @@ describe('DevTools - TimeTravel', () => {
         expect(screen.getByText('Snapshot 2')).toBeInTheDocument();
       });
 
-      it('should disable next snapshot button if user has selected the last snapshot', async () => {
+      it('should disable next snapshot button if user has selected the last snapshot', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
 
         expect(screen.getByTitle('Select next snapshot')).toBeDisabled();
       });
 
-      it('should display previous snapshot when user clicks on the previous button', async () => {
+      it('should display previous snapshot when user clicks on the previous button', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
 
-        await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
+        fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
 
-        await userEvent.click(screen.getByTitle('Select previous snapshot'));
+        fireEvent.click(screen.getByTitle('Select previous snapshot'));
 
         expect(screen.getByText('Snapshot 1')).toBeInTheDocument();
       });
 
-      it('should disable previous snapshot button if user has selected the first snapshot', async () => {
+      it('should disable previous snapshot button if user has selected the first snapshot', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
 
         expect(screen.getByTitle('Select previous snapshot')).toBeDisabled();
       });
@@ -172,10 +169,10 @@ describe('DevTools - TimeTravel', () => {
       it('should search for atoms correctly', async () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
 
         await act(async () => {
           await userEvent.type(screen.getByPlaceholderText('Search'), '2');
@@ -201,9 +198,9 @@ describe('DevTools - TimeTravel', () => {
       it('should display an error if no snapshots are found', async () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
 
         await act(async () => {
           await userEvent.type(screen.getByPlaceholderText('Search'), 'a');
@@ -236,34 +233,30 @@ describe('DevTools - TimeTravel', () => {
         jest.runOnlyPendingTimers();
         jest.useRealTimers();
       });
-      it('should render empty snapshot list when there is action', async () => {
+      it('should render empty snapshot list when there is action', () => {
         customRender(<BasicAtomsWithDevTools />);
-        await userEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByText('Time travel'));
         expect(
           screen.getByTestId('jotai-devtools-snapshot-history-list'),
         ).toBeEmptyDOMElement();
       });
 
-      it('should render a snapshot list when there is action but recording is turned off', async () => {
+      it('should render a snapshot list when there is action but recording is turned off', () => {
         customRender(<BasicAtomsWithDevTools />);
-        await userEvent.click(screen.getByText('Time travel'));
-        await act(
-          async () => await userEvent.click(screen.getByText('Increment')),
-        );
-        await waitFor(() =>
-          expect(
-            screen.queryByTestId('jotai-devtools-snapshot-1'),
-          ).not.toBeInTheDocument(),
-        );
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByText('Increment'));
+        expect(
+          screen.queryByTestId('jotai-devtools-snapshot-1'),
+        ).not.toBeInTheDocument();
       });
 
-      it('should render a snapshot list with initial snapshot details on action with recording on', async () => {
+      it('should render a snapshot list with initial snapshot details on action with recording on', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
         jest.clearAllTimers();
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
         expect(
           screen.getByTestId('jotai-devtools-snapshot-1'),
         ).toBeInTheDocument();
@@ -292,23 +285,23 @@ describe('DevTools - TimeTravel', () => {
     it('should make the restore button disabled if if the states are equal', async () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
 
       await waitFor(() =>
         expect(screen.getByTitle('Restore this state')).toBeDisabled(),
       );
     });
-    it('should display the full state in json tree format when state is selected', async () => {
+    it('should display the full state in json tree format when state is selected', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
-      await userEvent.click(screen.getByText('State'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
+      fireEvent.click(screen.getByText('State'));
       expect(screen.getByTestId('json-tree-view-container')).toMatchSnapshot();
     });
 
@@ -381,26 +374,26 @@ describe('DevTools - TimeTravel', () => {
         );
       };
 
-      it('should show "states are equal" msg when there is no diff', async () => {
+      it('should show "states are equal" msg when there is no diff', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
-        await userEvent.click(screen.getByText('Diff'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
+        fireEvent.click(screen.getByText('Diff'));
         expect(screen.getByText('(states are equal)')).toBeInTheDocument();
       });
 
-      it('should display highlighted diff', async () => {
+      it('should display highlighted diff', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
-        await userEvent.click(screen.getByText('Diff'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
+        fireEvent.click(screen.getByText('Diff'));
         expect(
           screen.getByTestId('jotai-devtools-diff-panel'),
         ).toMatchSnapshot();
@@ -413,20 +406,16 @@ describe('DevTools - TimeTravel', () => {
         ${'Remove'}
       `(
         'should display highlighted diff when performing "$operation" on arrays and objects',
-        async ({ operation }) => {
+        ({ operation }) => {
           customRender(<AddMoveRemoveDiffTest />);
 
-          await userEvent.click(screen.getByText('Time travel'));
-          await userEvent.click(
-            screen.getByLabelText('Record snapshot history'),
-          );
-          await userEvent.click(screen.getByText('Increment'));
+          fireEvent.click(screen.getByText('Time travel'));
+          fireEvent.click(screen.getByLabelText('Record snapshot history'));
+          fireEvent.click(screen.getByText('Increment'));
 
-          await userEvent.click(screen.getByText(operation));
-          await userEvent.click(
-            screen.getByTestId('jotai-devtools-snapshot-2'),
-          );
-          await userEvent.click(screen.getByText('Diff'));
+          fireEvent.click(screen.getByText(operation));
+          fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
+          fireEvent.click(screen.getByText('Diff'));
           expect(
             screen.getByTestId('jotai-devtools-diff-panel'),
           ).toMatchSnapshot();
@@ -434,35 +423,35 @@ describe('DevTools - TimeTravel', () => {
       );
     });
 
-    it('should restore the snapshot when user clicks on "restore" button', async () => {
+    it('should restore the snapshot when user clicks on "restore" button', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
 
       expect(screen.getByTestId('count-atom-value')).toHaveTextContent('3');
-      await userEvent.click(screen.getByTitle('Restore this state'));
+      fireEvent.click(screen.getByTitle('Restore this state'));
       expect(screen.getByTestId('count-atom-value')).toHaveTextContent('2');
     });
 
-    it('should not add another snapshot history entry when restoring', async () => {
+    it('should not add another snapshot history entry when restoring', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
 
       expect(
         screen.getAllByTestId(/jotai-devtools-snapshot-[0-9]/),
       ).toHaveLength(3);
-      await userEvent.click(screen.getByTitle('Restore this state'));
+      fireEvent.click(screen.getByTitle('Restore this state'));
       expect(
         screen.getAllByTestId(/jotai-devtools-snapshot-[0-9]/),
       ).toHaveLength(3);
@@ -471,18 +460,17 @@ describe('DevTools - TimeTravel', () => {
 
   describe('Time travel', () => {
     const defaultTravelTime = 750;
-    it('should automatically play through the snapshots history when user clicks on "play" button', async () => {
+    it('should automatically play through the snapshots history when user clicks on "play" button', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
       expect(screen.getByTestId('count-atom-value')).toHaveTextContent('3');
       jest.useFakeTimers();
-      const user = userEvent.setup({ delay: null });
-      await user.click(screen.getByTitle('Start time travel'));
+      fireEvent.click(screen.getByTitle('Start time travel'));
 
       act(() => {
         jest.advanceTimersByTime(defaultTravelTime);
@@ -501,23 +489,22 @@ describe('DevTools - TimeTravel', () => {
       jest.useRealTimers();
     });
 
-    it('should pause time travel when user clicks on "pause" button', async () => {
+    it('should pause time travel when user clicks on "pause" button', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
-      await userEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Time travel'));
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Increment'));
       jest.useFakeTimers();
-      const user = userEvent.setup({ delay: null });
-      await user.click(screen.getByTitle('Start time travel'));
+      fireEvent.click(screen.getByTitle('Start time travel'));
 
       act(() => {
         jest.advanceTimersByTime(defaultTravelTime);
       });
       expect(screen.getByTestId('count-atom-value')).toHaveTextContent('1');
 
-      await user.click(screen.getByTitle('Pause time travel'));
+      fireEvent.click(screen.getByTitle('Pause time travel'));
       act(() => {
         jest.advanceTimersByTime(defaultTravelTime);
       });
@@ -525,15 +512,15 @@ describe('DevTools - TimeTravel', () => {
       jest.useRealTimers();
     });
 
-    it('should change the "play" button to "pause" button when time travelling', async () => {
+    it('should change the "play" button to "pause" button when time travelling', () => {
       customRender(<BasicAtomsWithDevTools />);
 
-      await userEvent.click(screen.getByText('Time travel'));
-      await userEvent.click(screen.getByLabelText('Record snapshot history'));
-      await userEvent.click(screen.getByText('Increment'));
+      fireEvent.click(screen.getByText('Time travel'));
+
+      fireEvent.click(screen.getByLabelText('Record snapshot history'));
+      fireEvent.click(screen.getByText('Increment'));
       jest.useFakeTimers();
-      const user = userEvent.setup({ delay: null });
-      await user.click(screen.getByTitle('Start time travel'));
+      fireEvent.click(screen.getByTitle('Start time travel'));
       expect(screen.getByTitle('Pause time travel')).toBeInTheDocument();
 
       act(() => {
@@ -613,51 +600,51 @@ describe('DevTools - TimeTravel', () => {
     );
 
     describe('manual time travel', () => {
-      it('should restore next snapshot when user clicks on the next button', async () => {
+      it('should restore next snapshot when user clicks on the next button', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
 
-        await userEvent.click(screen.getByTitle('Restore next snapshot'));
+        fireEvent.click(screen.getByTitle('Restore next snapshot'));
         expect(screen.getByTestId('count-atom-value')).toHaveTextContent('1');
       });
 
-      it('should disable next snapshot restore button if user has selected the last snapshot', async () => {
+      it('should disable next snapshot restore button if user has selected the last snapshot', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByTitle('Restore next snapshot'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByTitle('Restore next snapshot'));
 
         expect(screen.getByTitle('Restore next snapshot')).toBeDisabled();
       });
 
-      it('should display previous snapshot when user clicks on the previous snapshot restore button', async () => {
+      it('should display previous snapshot when user clicks on the previous snapshot restore button', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Increment'));
 
-        await userEvent.click(screen.getByTitle('Restore next snapshot'));
-        await userEvent.click(screen.getByTitle('Restore next snapshot'));
+        fireEvent.click(screen.getByTitle('Restore next snapshot'));
+        fireEvent.click(screen.getByTitle('Restore next snapshot'));
         expect(screen.getByTestId('count-atom-value')).toHaveTextContent('2');
 
-        await userEvent.click(screen.getByTitle('Restore previous snapshot'));
+        fireEvent.click(screen.getByTitle('Restore previous snapshot'));
         expect(screen.getByTestId('count-atom-value')).toHaveTextContent('1');
       });
 
-      it('should disable previous snapshot restore button if user has selected the first snapshot', async () => {
+      it('should disable previous snapshot restore button if user has selected the first snapshot', () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await userEvent.click(screen.getByText('Time travel'));
-        await userEvent.click(screen.getByLabelText('Record snapshot history'));
-        await userEvent.click(screen.getByText('Increment'));
+        fireEvent.click(screen.getByText('Time travel'));
+        fireEvent.click(screen.getByLabelText('Record snapshot history'));
+        fireEvent.click(screen.getByText('Increment'));
 
         expect(screen.getByTitle('Restore previous snapshot')).toBeDisabled();
       });
