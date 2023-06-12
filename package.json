@@ -43,7 +43,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest",
+    "test": "TZ=UTC jest",
     "test:watch": "pnpm run test --watch",
     "test:coverage": "pnpm run test --coverage",
     "test:ci": "pnpm run test:coverage --maxWorkers=1",
