@@ -271,6 +271,7 @@ describe('DevTools - TimeTravel', () => {
           screen.getByTestId('meta-info-label-Timestamp'),
         ).toBeInTheDocument();
 
+        screen.debug(undefined, 150000);
         expect(screen.getByText('7:00:00.000 PM')).toBeInTheDocument();
         expect(screen.getByText('Value')).toBeInTheDocument();
         expect(screen.getByText('State')).toBeInTheDocument();
