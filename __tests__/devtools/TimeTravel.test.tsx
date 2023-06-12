@@ -233,6 +233,7 @@ describe('DevTools - TimeTravel', () => {
       });
       afterEach(() => {
         global.performance = og;
+        jest.runOnlyPendingTimers();
         jest.useRealTimers();
       });
       it('should render empty snapshot list when there is action', async () => {
@@ -261,6 +262,7 @@ describe('DevTools - TimeTravel', () => {
 
         await userEvent.click(screen.getByText('Time travel'));
         await userEvent.click(screen.getByLabelText('Record snapshot history'));
+        jest.clearAllTimers();
         await userEvent.click(screen.getByText('Increment'));
         expect(
           screen.getByTestId('jotai-devtools-snapshot-1'),
