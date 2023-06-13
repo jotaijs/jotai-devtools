@@ -2,10 +2,13 @@
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/jotaijs/jotai-devtools/ci.yml?style=flat&colorA=000000&colorB=259e02)](https://github.com/jotaijs/jotai-devtools/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/npm/v/jotai-devtools?style=flat&colorA=000000&colorB=259e02)](https://www.npmjs.com/package/jotai-devtools)
+[![Version](https://img.shields.io/npm/dw/jotai-devtools?style=flat&colorA=000000&colorB=259e02)](https://www.npmjs.com/package/jotai-devtools)
 
 ## 🚀 Features
 
 - Debug 🐞 atom values with ease
+- ⏳ Time-travel through your atoms and find bugs faster than before
+  (recommended jotai `>=2.2.0`)
 - Out-of-the-box 🔌 support for async/suspendible atoms
 - Built-in Dark mode 🌗
 - ✅ Supports custom `store`
@@ -15,6 +18,7 @@
 - ✅ Hides private atoms with ability to configure (requires Jotai `>=2.0.3`)
 - ✅ Tree-shakable and built for non-production environments
 - ✅ Parses all the JavaScript values with JSON Tree view
+- ✅ Diff checking with additions and deletion highlights
 
 ## 📺 Preview
 
@@ -30,6 +34,8 @@
 - React version `>=17.0.0`
 
 ## 📦 Setup
+
+_(See complete setup guide for UI-based devtools below)_
 
 ```sh
 # yarn
@@ -102,9 +108,12 @@ type DevToolsProps = {
     // Expands the JSON tree view on initial render on Atom Viewer tab, Timeline tab, etc.
     // Defaults to `false`
     shouldExpandJsonTreeViewInitially?: boolean;
+    // The interval (in milliseconds) between each step of the time travel playback.
+    // Defaults to `750ms`
+    timeTravelPlaybackInterval?: number;
     // The maximum number of snapshots to keep in the history.
     // The higher the number the more memory it will consume.
-    // Defaults to Infinity. Recommended: ~30
+    // Defaults to `Infinity`. Recommended: `~30`
     snapshotHistoryLimit?: number;
   };
 };

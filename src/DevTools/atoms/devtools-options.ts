@@ -19,8 +19,7 @@ export type DevToolsOptions = {
   /**
    * Defaults to 750ms
    *
-   * Disables the snapshot recording on mount.
-   * This is useful when you want to record snapshots manually.
+   * The interval (in milliseconds) between each step of the time travel playback.
    */
   timeTravelPlaybackInterval?: number;
   /**
