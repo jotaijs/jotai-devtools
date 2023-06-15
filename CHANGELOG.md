@@ -1,3 +1,22 @@
+## [0.6.0-next.0](https://github.com/jotaijs/jotai-devtools/compare/v0.5.3...v0.6.0-next.0) (2023-06-15)
+
+### Features
+
+- add time travel feature
+  ([53b916a](https://github.com/jotaijs/jotai-devtools/commit/53b916a1fc69182a64db06fbcd4eea08769c6538))
+- hardcode locale to en-US for now
+  ([312deff](https://github.com/jotaijs/jotai-devtools/commit/312deff99bbbb918d1885e4e144f3578d594fb92))
+
+### Bug Fixes
+
+- **create-timestamp.ts:** add default locale
+  ([10c2ef8](https://github.com/jotaijs/jotai-devtools/commit/10c2ef832cda9a0bfffef77a91ee6ef7b65e40fd))
+
+### Refactors
+
+- **RecordHistory.tsx:** update tooltip content
+  ([04187a2](https://github.com/jotaijs/jotai-devtools/commit/04187a2102b78142bf0af7835ef16a6d3c4d1460))
+
 ## [0.5.3](https://github.com/jotaijs/jotai-devtools/compare/v0.5.2...v0.5.3) (2023-05-11)
 
 ### Features
