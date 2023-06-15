@@ -21,9 +21,13 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -37,7 +41,6 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 12.5rem;
   max-height: 90%;
 }
@@ -958,9 +961,13 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -974,7 +981,6 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 12.5rem;
   max-height: 90%;
 }

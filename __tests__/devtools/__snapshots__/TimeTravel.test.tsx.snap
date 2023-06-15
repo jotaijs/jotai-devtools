@@ -2259,9 +2259,13 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -2275,7 +2279,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -5175,9 +5178,13 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -5191,7 +5198,6 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }

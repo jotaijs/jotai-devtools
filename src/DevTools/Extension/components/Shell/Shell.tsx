@@ -30,7 +30,6 @@ export const Shell = () => {
       keepMounted={false}
       variant="default"
       defaultValue={TabKeys.AtomViewer}
-      m={10}
       sx={shellStyles}
       h={height}
       mah={shellStyleDefaults.maxHeight}

@@ -213,9 +213,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -229,7 +233,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -2065,9 +2068,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -2081,7 +2088,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -4052,9 +4058,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -4068,7 +4078,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -5994,9 +6003,13 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -6010,7 +6023,6 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -7313,9 +7325,13 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -7329,7 +7345,6 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -8778,9 +8793,13 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -8794,7 +8813,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -10765,9 +10783,13 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -10781,7 +10803,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -12833,9 +12854,13 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -12849,7 +12874,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
@@ -14352,9 +14376,13 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -14368,7 +14396,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
-  margin: 0.625rem;
   height: 23.125rem;
   max-height: 90%;
 }
