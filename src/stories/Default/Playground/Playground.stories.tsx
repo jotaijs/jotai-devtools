@@ -1,7 +1,8 @@
 import React from 'react';
 import { MantineProvider } from '@mantine/core';
 import { Meta, StoryObj } from '@storybook/react';
-import { DevTools, DevToolsProps } from '../../../';
+import { Provider } from 'jotai/react';
+import { DevTools, DevToolsProps, useAtomsDevtools } from '../../../';
 import { Playground } from './Playground';
 
 export default {
@@ -23,6 +24,8 @@ export default {
 
 type CustomStorybookProps = DevToolsProps & {
   'options.shouldShowPrivateAtoms': boolean;
+  'options.snapshotHistoryLimit': number;
+  'options.shouldExpandJsonTreeViewInitially': boolean;
 };
 
 type Story = StoryObj<CustomStorybookProps>;
@@ -32,6 +35,9 @@ export const Default: Story = {
     const nextOptions = {
       ...args.options,
       shouldShowPrivateAtoms: args['options.shouldShowPrivateAtoms'],
+      snapshotHistoryLimit: args['options.snapshotHistoryLimit'],
+      shouldExpandJsonTreeViewInitially:
+        args['options.shouldExpandJsonTreeViewInitially'],
     };
     const props = {
       ...args,
@@ -46,14 +52,18 @@ export const Default: Story = {
           cursorType: 'pointer',
         }}
       >
-        <DevTools {...props} />
-        <Playground />
+        <Provider>
+          <DevTools {...props} />
+          <Playground />
+        </Provider>
       </MantineProvider>
     );
   },
   args: {
     isInitialOpen: true,
     'options.shouldShowPrivateAtoms': false,
+    'options.snapshotHistoryLimit': Infinity,
+    'options.shouldExpandJsonTreeViewInitially': false,
   },
   argTypes: {
     store: {

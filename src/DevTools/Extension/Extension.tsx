@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { ActionIcon, Sx } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
+import { Store } from '../../types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
+import { useSetCustomStore } from '../atoms/user-custom-store';
 import { useThemeMode } from '../hooks/useThemeMode';
 import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 import { logo } from './assets/logo';
-import { Shell, ShellProps } from './components/Shell';
+import { Shell } from './components/Shell';
+import useSyncSnapshotHistory from './components/Shell/components/TimeTravel/useSyncSnapshotHistory';
 
 const shellTriggerButtonStyles: Sx = () => ({
   position: 'fixed',
@@ -41,7 +44,8 @@ const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
   );
 });
 
-export type ExtensionProps = ShellProps & {
+export type ExtensionProps = {
+  store?: Store | undefined;
   // false by default
   isInitialOpen?: boolean;
 };
@@ -55,6 +59,14 @@ export const Extension = ({
     useDevtoolsJotaiStoreOptions(),
   );
 
+  const setUserStore = useSetCustomStore();
+
+  React.useEffect(() => {
+    setUserStore(store);
+  }, [setUserStore, store]);
+
+  useSyncSnapshotHistory();
+
   React.useEffect(() => {
     // Avoid setting the initial value if the value is found in the local storage
     if (typeof isShellOpen !== 'boolean') {
@@ -64,5 +76,5 @@ export const Extension = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <>{isShellOpen ? <Shell store={store} /> : <ShellTriggerButton />}</>;
+  return <>{isShellOpen ? <Shell /> : <ShellTriggerButton />}</>;
 };

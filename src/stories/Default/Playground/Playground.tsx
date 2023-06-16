@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Button, Title } from '@mantine/core';
-import { atom, useAtom, useAtomValue } from 'jotai';
+import { Title } from '@mantine/core';
+import { atom, useAtom } from 'jotai';
 import {
   atomWithDefault,
   atomWithObservable,
@@ -11,7 +11,8 @@ import {
 import { atomsWithQuery } from 'jotai-tanstack-query';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { SomeComponentWithToggle } from './SomeComponent';
+import { Async } from './Async';
+import { Counter } from './Counter';
 
 const baseCountAtom = atom(1);
 baseCountAtom.debugLabel = 'baseCountAtom';
@@ -103,7 +104,7 @@ const anAtomWithObject = atom((get) => ({
     },
     d: {
       e: Symbol('e'),
-      f: BigInt(Number.MAX_SAFE_INTEGER),
+      f: Number.MAX_SAFE_INTEGER,
     },
     2: () => {
       const name = 'John';
@@ -117,10 +118,49 @@ const anAtomWithObject = atom((get) => ({
 
 anAtomWithObject.debugLabel = 'anAtomWithObject';
 
+const aVeryBigSetOfAtoms = Array.from({ length: 5000 }, (_, i) => {
+  const anAtom = atom(i);
+  anAtom.debugLabel = `anAtom${i}`;
+  return anAtom;
+});
+const anBigAtomHolder = atom((get) => {
+  return aVeryBigSetOfAtoms.map((a) => get(a));
+});
+anBigAtomHolder.debugLabel = 'anBigAtomHolder';
+
+const uselessCount = atom(0);
+uselessCount.debugLabel = 'frozenCountAtom';
+// uselessCount.debugLabel
+const FrozenCounter = () => {
+  const [count, setUselessCount] = useAtom(uselessCount);
+  return (
+    <div>
+      <pre>useless count:{count}</pre>
+      <button
+        onClick={() => {
+          setUselessCount((p) => p);
+        }}
+      >
+        click
+      </button>
+    </div>
+  );
+};
+const countAtomA = atom(1);
+countAtomA.debugLabel = 'countAtomA';
+
 export const Playground = () => {
+  // useAtomValue(countAtomWithDefaultAtom);
+  // useAtomValue(countAtomA);
+  // useAtomValue(countAtomADupe);
   return (
     <>
       <Title>Playground</Title>
+      <Counter />
+      <FrozenCounter />
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Async />
+      </React.Suspense>
       {/* <UserData /> */}
       {/* <SomeComponentWithToggle /> */}
     </>

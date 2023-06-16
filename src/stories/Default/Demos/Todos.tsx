@@ -2,8 +2,10 @@ import * as React from 'react';
 import {
   ActionIcon,
   Box,
+  Button,
   Checkbox,
   Flex,
+  Group,
   List,
   Radio,
   Text,
@@ -129,9 +131,19 @@ const TodoList = () => {
     }
   };
 
+  const handleOnSortClick = () => {
+    setTodos((prev) => [...prev].reverse());
+  };
   return (
     <form onSubmit={add}>
-      <Filter />
+      <Group
+        sx={{
+          justifyContent: 'space-between',
+        }}
+      >
+        <Filter />
+        <Button onClick={handleOnSortClick}>Reverse</Button>
+      </Group>
       <TextInput placeholder="Type your todo" name="inputTitle" mt="sm" />
       <List listStyleType="none">
         <Filtered remove={remove} />

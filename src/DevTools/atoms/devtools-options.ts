@@ -16,17 +16,36 @@ export type DevToolsOptions = {
    * Expands the JSON tree view fully on Atom Viewer, Timeline, etc.
    */
   shouldExpandJsonTreeViewInitially?: boolean;
+  /**
+   * Defaults to 750ms
+   *
+   * The interval (in milliseconds) between each step of the time travel playback.
+   */
+  timeTravelPlaybackInterval?: number;
+  /**
+   * Defaults to Infinity
+   *
+   * The maximum number of snapshots to keep in the history.
+   * The higher the number the more memory it will consume.
+   *
+   * We recommend setting it to around ~30
+   */
+  snapshotHistoryLimit?: number;
 };
 
-const defaultDevToolsOptions: DevToolsOptions = {
+const defaultDevToolsOptions: Required<DevToolsOptions> = {
   shouldShowPrivateAtoms: false,
   shouldExpandJsonTreeViewInitially: false,
+  timeTravelPlaybackInterval: 750,
+  snapshotHistoryLimit: Infinity,
 };
 
-const internalDevToolsOptions = atom<DevToolsOptions>(defaultDevToolsOptions);
+const internalDevToolsOptions = atom<Required<DevToolsOptions>>(
+  defaultDevToolsOptions,
+);
 
 export const devToolsOptionsAtom = atom<
-  DevToolsOptions,
+  Required<DevToolsOptions>,
   [DevToolsOptions | undefined],
   void
 >(

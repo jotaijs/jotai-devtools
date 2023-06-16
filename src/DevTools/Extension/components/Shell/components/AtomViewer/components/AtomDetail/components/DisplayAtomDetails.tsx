@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack } from '@mantine/core';
+import { Stack, Title } from '@mantine/core';
 import { AnyAtom } from 'src/types';
 import {
   atomToPrintable,
@@ -20,6 +20,7 @@ export const DisplayAtomDetails = ({ atom }: DisplayAtomDetailsProps) => {
 
   return (
     <Stack h="auto">
+      <Title size="h3">Atom Details</Title>
       <AtomMetaDetails
         debugLabel={atomToPrintable(atom)}
         atomValueType={atomValueType}

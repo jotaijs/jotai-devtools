@@ -4,7 +4,10 @@ import { JSONTree as ReactJSONTree, ValueRenderer } from 'react-json-tree';
 import { useDevToolsOptionsValue } from '../../../../../atoms/devtools-options';
 import { ErrorSymbol, stringifyAtomValue } from '../../../../../utils/';
 import { getItemString } from './utils/get-item-string';
-import { useGetJSONTreeStyling } from './utils/useGetStyling';
+import { useJSONTreeStyling } from './utils/use-JSON-tree-styling';
+
+export { getItemStringWithDiffEnabled } from './utils/get-item-string';
+export { useJSONTreeStyling } from './utils/use-JSON-tree-styling';
 
 const monoSpaceFonts: Sx = (theme) => ({
   fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
@@ -23,7 +26,7 @@ const defaultValueRenderer: ValueRenderer = (_, value) => {
 };
 
 export const JSONTree: typeof ReactJSONTree = (props) => {
-  const theme = useGetJSONTreeStyling();
+  const JSONTreeStyling = useJSONTreeStyling();
   const { shouldExpandJsonTreeViewInitially } = useDevToolsOptionsValue();
 
   const memoizedShouldExpandNodeInitially = useCallback(
@@ -36,7 +39,7 @@ export const JSONTree: typeof ReactJSONTree = (props) => {
       <ReactJSONTree
         hideRoot
         shouldExpandNodeInitially={memoizedShouldExpandNodeInitially}
-        theme={theme}
+        theme={JSONTreeStyling.theme}
         getItemString={getItemString}
         valueRenderer={defaultValueRenderer}
         {...props}
