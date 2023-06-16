@@ -1,3 +1,11 @@
+## [0.6.0](https://github.com/jotaijs/jotai-devtools/compare/v0.5.3...v0.6.0) (2023-06-16)
+
+### Features
+
+- add time travel feature
+  ([#79](https://github.com/jotaijs/jotai-devtools/issues/79))
+  ([08d9dee](https://github.com/jotaijs/jotai-devtools/commit/08d9dee3d71379b701437d73c558afc91de9a478))
+
 ## [0.6.0-next.0](https://github.com/jotaijs/jotai-devtools/compare/v0.5.3...v0.6.0-next.0) (2023-06-15)
 
 ### Features
