@@ -896,6 +896,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -934,6 +938,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -1629,7 +1634,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -1668,7 +1672,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -2751,6 +2754,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -2789,6 +2796,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -3585,7 +3593,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -3624,7 +3631,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -4741,6 +4747,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -4779,6 +4789,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -5546,7 +5557,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -5585,7 +5595,6 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -6686,6 +6695,10 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -6724,6 +6737,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -7077,7 +7091,6 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -7116,7 +7129,6 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -8008,6 +8020,10 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -8046,6 +8062,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -8522,7 +8539,6 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -8561,7 +8577,6 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -9476,6 +9491,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -9514,6 +9533,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -10310,7 +10330,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -10349,7 +10368,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -11466,6 +11484,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -11504,6 +11526,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -12310,7 +12333,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -12349,7 +12371,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -13537,6 +13558,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -13575,6 +13600,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -14051,7 +14077,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -14090,7 +14115,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
@@ -15059,6 +15083,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   position: relative;
 }
 
+.emotion-49:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-52 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -15097,6 +15125,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-52:disabled::-webkit-input-placeholder {
@@ -15450,7 +15479,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
       role="tablist"
     >
       <button
-        aria-controls="emotion-1-panel-atom-viewer"
         aria-selected="true"
         class="emotion-16 emotion-25 emotion-26"
         data-active="true"
@@ -15489,7 +15517,6 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
         </span>
       </button>
       <button
-        aria-controls="emotion-1-panel-time-travel"
         aria-selected="false"
         class="emotion-16 emotion-25 emotion-33"
         id="emotion-1-tab-time-travel"
