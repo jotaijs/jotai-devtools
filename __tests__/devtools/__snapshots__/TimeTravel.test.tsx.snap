@@ -964,6 +964,10 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
   position: relative;
 }
 
+.emotion-26:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-29 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -1002,6 +1006,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-29:disabled::-webkit-input-placeholder {
@@ -1689,6 +1694,10 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
   position: relative;
 }
 
+.emotion-26:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-29 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -1727,6 +1736,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-29:disabled::-webkit-input-placeholder {
@@ -3307,6 +3317,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   position: relative;
 }
 
+.emotion-76:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-79 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -3345,6 +3359,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-79:disabled::-webkit-input-placeholder {
@@ -4019,6 +4034,23 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: pointer;
 }
 
+.emotion-164:has(~ input:disabled) {
+  pointer-events: none;
+}
+
+.emotion-164:has(~ input:disabled) .mantine-Slider-thumb {
+  display: none;
+}
+
+.emotion-164:has(~ input:disabled) .mantine-Slider-track::before {
+  content: "";
+  background-color: #e9ecef;
+}
+
+.emotion-164:has(~ input:disabled) .mantine-Slider-bar {
+  background-color: #ced4da;
+}
+
 .emotion-166 {
   position: relative;
   height: 0.25rem;
@@ -4113,6 +4145,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   left: 0.25rem;
 }
 
+.emotion-172:has(~ input:disabled) .mantine-Slider-markFilled {
+  border: 0.125rem solid #e9ecef;
+  border-color: #ced4da;
+}
+
 .emotion-184 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
@@ -4157,6 +4194,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-190:disabled::-webkit-input-placeholder {
@@ -4393,7 +4431,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
     role="tablist"
   >
     <button
-      aria-controls="emotion-1-panel-atom-viewer"
       aria-selected="false"
       class="emotion-16 emotion-25 emotion-26"
       id="emotion-1-tab-atom-viewer"
@@ -4431,7 +4468,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       </span>
     </button>
     <button
-      aria-controls="emotion-1-panel-time-travel"
       aria-selected="true"
       class="emotion-16 emotion-25 emotion-33"
       data-active="true"
@@ -4806,7 +4842,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                   role="tablist"
                 >
                   <button
-                    aria-controls="jotai-devtools-time-travel-value-tabs-panel-state"
                     aria-selected="false"
                     class="emotion-16 emotion-25 emotion-26"
                     id="jotai-devtools-time-travel-value-tabs-tab-state"
@@ -4850,7 +4885,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                     </span>
                   </button>
                   <button
-                    aria-controls="jotai-devtools-time-travel-value-tabs-panel-diff"
                     aria-selected="true"
                     class="emotion-16 emotion-25 emotion-26"
                     data-active="true"
@@ -6163,6 +6197,10 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   position: relative;
 }
 
+.emotion-68:has(input:disabled) .mantine-Input-rightSection {
+  display: none;
+}
+
 .emotion-71 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
@@ -6201,6 +6239,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-71:disabled::-webkit-input-placeholder {
@@ -6449,6 +6488,23 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   cursor: pointer;
 }
 
+.emotion-85:has(~ input:disabled) {
+  pointer-events: none;
+}
+
+.emotion-85:has(~ input:disabled) .mantine-Slider-thumb {
+  display: none;
+}
+
+.emotion-85:has(~ input:disabled) .mantine-Slider-track::before {
+  content: "";
+  background-color: #e9ecef;
+}
+
+.emotion-85:has(~ input:disabled) .mantine-Slider-bar {
+  background-color: #ced4da;
+}
+
 .emotion-87 {
   position: relative;
   height: 0.25rem;
@@ -6540,6 +6596,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   left: 0.25rem;
 }
 
+.emotion-93:has(~ input:disabled) .mantine-Slider-markFilled {
+  border: 0.125rem solid #e9ecef;
+  border-color: #ced4da;
+}
+
 .emotion-105 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
@@ -6584,6 +6645,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   color: #909296;
   opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .emotion-111:disabled::-webkit-input-placeholder {
@@ -6820,7 +6882,6 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
     role="tablist"
   >
     <button
-      aria-controls="emotion-1-panel-atom-viewer"
       aria-selected="false"
       class="emotion-16 emotion-25 emotion-26"
       id="emotion-1-tab-atom-viewer"
@@ -6858,7 +6919,6 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       </span>
     </button>
     <button
-      aria-controls="emotion-1-panel-time-travel"
       aria-selected="true"
       class="emotion-16 emotion-25 emotion-33"
       data-active="true"
