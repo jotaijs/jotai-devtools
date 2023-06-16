@@ -168,7 +168,6 @@
     "jsondiffpatch": "^0.4.1",
     "react-error-boundary": "^3.1.4",
     "react-json-tree": "^0.18.0",
-    "react-resizable-panels": "^0.0.42",
-    "stacktracey": "^2.1.8"
+    "react-resizable-panels": "^0.0.42"
   }
 }
