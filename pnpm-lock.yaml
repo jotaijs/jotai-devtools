@@ -33,8 +33,8 @@ dependencies:
     specifier: ^0.18.0
     version: 0.18.0(@types/react@18.2.12)(react@18.2.0)
   react-resizable-panels:
-    specifier: ^0.0.42
-    version: 0.0.42(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.0.53
+    version: 0.0.53(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@babel/core':
@@ -13094,8 +13094,8 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.2.12)(react@18.2.0)
     dev: false
 
-  /react-resizable-panels@0.0.42(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-nOaN9DeUTsmKjN3MFGaLd35kngGyO29SHRLdBRafYR1SV2F/LbWbpVUKVPwL2fBBTnQe2/rqOQwT4k+3cKeK+w==}
+  /react-resizable-panels@0.0.53(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lGOJF0Hh5+Y+Usi7x8btmBTi+6CQV1/RKxnj6jVrzvJ9vLbftbSoJPzymOuX8ZCFimlEwP2AKsGtQVKG/KieHA==}
     peerDependencies:
       react: ^16.14.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
