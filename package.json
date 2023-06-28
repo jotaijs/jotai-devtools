@@ -169,5 +169,10 @@
     "react-error-boundary": "^3.1.4",
     "react-json-tree": "^0.18.0",
     "react-resizable-panels": "^0.0.53"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "chalk@2.4.2": "patches/chalk@2.4.2.patch"
+    }
   }
 }

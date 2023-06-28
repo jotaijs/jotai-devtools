@@ -1,0 +1,13 @@
+diff --git a/index.js b/index.js
+index 1cc5fa89a951596647e711d84cf88b1410e4d3ea..c9a2dc12634d0fd68ebf8ba5c1276e03e169409b 100644
+--- a/index.js
++++ b/index.js
+@@ -5,7 +5,7 @@ const stdoutColor = require('supports-color').stdout;
+ 
+ const template = require('./templates.js');
+ 
+-const isSimpleWindowsTerm = process.platform === 'win32' && !(process.env.TERM || '').toLowerCase().startsWith('xterm');
++const isSimpleWindowsTerm = false;
+ 
+ // `supportsColor.level` → `ansiStyles.color[name]` mapping
+ const levelMapping = ['ansi', 'ansi', 'ansi256', 'ansi16m'];
