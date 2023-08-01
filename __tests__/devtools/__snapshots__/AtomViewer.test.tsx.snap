@@ -3401,6 +3401,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
   font-size: 0.8125rem;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
+}
+
+.emotion-125.mantine-Prism-code {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -3944,9 +3947,8 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                   >
                     <svg
                       fill="none"
-                      height="1rem"
+                      style="width: 1rem; height: 1rem;"
                       viewBox="0 0 15 15"
-                      width="1rem"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -5394,6 +5396,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
   font-size: 0.8125rem;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
+}
+
+.emotion-125.mantine-Prism-code {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -5908,9 +5913,8 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   >
                     <svg
                       fill="none"
-                      height="1rem"
+                      style="width: 1rem; height: 1rem;"
                       viewBox="0 0 15 15"
-                      width="1rem"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -10138,6 +10142,9 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
   font-size: 0.8125rem;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
+}
+
+.emotion-125.mantine-Prism-code {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -10681,9 +10688,8 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                   >
                     <svg
                       fill="none"
-                      height="1rem"
+                      style="width: 1rem; height: 1rem;"
                       viewBox="0 0 15 15"
-                      width="1rem"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -12141,6 +12147,9 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
   font-size: 0.8125rem;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
+}
+
+.emotion-148.mantine-Prism-code {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -12755,9 +12764,8 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   >
                     <svg
                       fill="none"
-                      height="1rem"
+                      style="width: 1rem; height: 1rem;"
                       viewBox="0 0 15 15"
-                      width="1rem"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path

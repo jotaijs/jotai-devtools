@@ -695,6 +695,9 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
   font-size: 0.8125rem;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
+}
+
+.emotion-44.mantine-Prism-code {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -868,9 +871,8 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           >
             <svg
               fill="none"
-              height="1rem"
+              style="width: 1rem; height: 1rem;"
               viewBox="0 0 15 15"
-              width="1rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -1635,6 +1637,9 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
   font-size: 0.8125rem;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
+}
+
+.emotion-44.mantine-Prism-code {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -1808,9 +1813,8 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           >
             <svg
               fill="none"
-              height="1rem"
+              style="width: 1rem; height: 1rem;"
               viewBox="0 0 15 15"
-              width="1rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
