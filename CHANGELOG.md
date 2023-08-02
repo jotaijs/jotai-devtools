@@ -1,3 +1,11 @@
+## [0.6.1](https://github.com/jotaijs/jotai-devtools/compare/v0.6.0...v0.6.1) (2023-08-02)
+
+### Bug Fixes
+
+- bundle in tabler-icons
+  ([#88](https://github.com/jotaijs/jotai-devtools/issues/88))
+  ([3c956b4](https://github.com/jotaijs/jotai-devtools/commit/3c956b4402588ceff0c1bda65b210fab343d243e))
+
 ## [0.6.0](https://github.com/jotaijs/jotai-devtools/compare/v0.5.3...v0.6.0) (2023-06-16)
 
 ### Features
