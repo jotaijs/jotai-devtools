@@ -44,7 +44,7 @@ module.exports = {
       },
     ],
     'import/export': 'error',
-    '@typescript-eslint/no-duplicate-imports': ['error'],
+    'import/no-duplicates': ['error'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',

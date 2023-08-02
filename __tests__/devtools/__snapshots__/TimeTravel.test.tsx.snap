@@ -5169,10 +5169,8 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
               <svg
                 data-chevron="true"
                 fill="none"
-                height="0.875rem"
-                style="color: rgb(134, 142, 150);"
+                style="color: rgb(134, 142, 150); width: 0.875rem; height: 0.875rem;"
                 viewBox="0 0 15 15"
-                width="0.875rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -7340,10 +7338,8 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
               <svg
                 data-chevron="true"
                 fill="none"
-                height="0.875rem"
-                style="color: rgb(134, 142, 150);"
+                style="color: rgb(134, 142, 150); width: 0.875rem; height: 0.875rem;"
                 viewBox="0 0 15 15"
-                width="0.875rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
