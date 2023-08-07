@@ -137,7 +137,7 @@
     "jest": "^29.6.2",
     "jest-environment-jsdom": "^29.6.2",
     "jest-watch-typeahead": "^2.2.2",
-    "jotai": "^2.2.3",
+    "jotai": "^2.3.0",
     "jotai-tanstack-query": "^0.7.1",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
@@ -157,6 +157,7 @@
   },
   "peerDependencies": {
     "@emotion/react": ">=11.0.0",
+    "jotai": ">=2.3.0",
     "react": ">=17.0.0"
   },
   "dependencies": {

@@ -44,8 +44,7 @@ export const useAtomsDebugValue = (options?: Options) => {
   const [atoms, setAtoms] = useState<Atom<unknown>[]>([]);
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
-      // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
-      store?.dev_subscribe_store || store?.dev_subscribe_state;
+      store?.dev_subscribe_store;
 
     if (!enabled || !devSubscribeStore) {
       return;
@@ -53,14 +52,8 @@ export const useAtomsDebugValue = (options?: Options) => {
     const callback = () => {
       setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
     };
-    // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
-    if (!('dev_subscribe_store' in store)) {
-      console.warn(
-        "[DEPRECATION-WARNING] Jotai version you're using contains deprecated dev-only properties that will be removed soon. Please update to the latest version of Jotai.",
-      );
-    }
 
-    const unsubscribe = devSubscribeStore?.(callback, 2);
+    const unsubscribe = devSubscribeStore(callback, 2);
     callback();
     return unsubscribe;
   }, [enabled, store]);

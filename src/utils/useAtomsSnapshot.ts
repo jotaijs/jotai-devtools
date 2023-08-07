@@ -36,27 +36,19 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
 
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
-      // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
-      store?.dev_subscribe_store || store?.dev_subscribe_state;
+      store?.dev_subscribe_store;
 
     if (!devSubscribeStore) return;
 
     let prevValues: AtomsValues = new Map();
     let prevDependents: AtomsDependents = new Map();
 
-    if (!('dev_subscribe_store' in store)) {
-      console.warn(
-        '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
-      );
-    }
-
-    // TODO remove this `t: any` and deprecation warnings in next breaking change release
     const callback = (
-      type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
+      type: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
     ) => {
       if (typeof type !== 'object') {
-        console.warn(
-          '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
+        throw Error(
+          '[DEPRECATION-ERROR]: `dev_subscribe_store` v1 is deprecated. Please update to the latest version of Jotai to automatically switch to v2.',
         );
       }
 

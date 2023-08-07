@@ -188,11 +188,11 @@ devDependencies:
     specifier: ^2.2.2
     version: 2.2.2(jest@29.6.2)
   jotai:
-    specifier: ^2.2.3
-    version: 2.2.3(@types/react@18.2.18)(react@18.2.0)
+    specifier: ^2.3.0
+    version: 2.3.0(@types/react@18.2.18)(react@18.2.0)
   jotai-tanstack-query:
     specifier: ^0.7.1
-    version: 0.7.1(@tanstack/query-core@4.32.1)(jotai@2.2.3)
+    version: 0.7.1(@tanstack/query-core@4.32.1)(jotai@2.3.0)
   lint-staged:
     specifier: ^13.2.3
     version: 13.2.3
@@ -10101,18 +10101,18 @@ packages:
       - ts-node
     dev: true
 
-  /jotai-tanstack-query@0.7.1(@tanstack/query-core@4.32.1)(jotai@2.2.3):
+  /jotai-tanstack-query@0.7.1(@tanstack/query-core@4.32.1)(jotai@2.3.0):
     resolution: {integrity: sha512-62PDt8s3c1fN/f3AmTMzAFUHZAstUIPUZMFdhERbmTRWiGznVAq6uJMt08FCI3JL53wZj5q5FhuA39LTL5zqRg==}
     peerDependencies:
       '@tanstack/query-core': '*'
       jotai: '>=1.11.0'
     dependencies:
       '@tanstack/query-core': 4.32.1
-      jotai: 2.2.3(@types/react@18.2.18)(react@18.2.0)
+      jotai: 2.3.0(@types/react@18.2.18)(react@18.2.0)
     dev: true
 
-  /jotai@2.2.3(@types/react@18.2.18)(react@18.2.0):
-    resolution: {integrity: sha512-E3tTBb2CKwjAJKUJYVV6rKM8zxmpsPMedRclRnI2RgLzkvgDEH6mhtZPVesxIoixJ8p7949RWd8eo/8TqDDFDA==}
+  /jotai@2.3.0(@types/react@18.2.18)(react@18.2.0):
+    resolution: {integrity: sha512-EZlZvmqmzl+Wdc6j6gRFUwZW1FME8pb4S8IogDFESvIM+062mmXKQdZUdxXgb8+Kdjz75QTXJT/zX2Gw1Jk0BQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=17.0.0'
@@ -10284,6 +10284,7 @@ packages:
       chalk: 2.4.2
       diff-match-patch: 1.0.5
     dev: false
+    bundledDependencies: []
 
   /jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
