@@ -1,3 +1,11 @@
+## [0.6.2](https://github.com/jotaijs/jotai-devtools/compare/v0.6.1...v0.6.2) (2023-08-21)
+
+### Bug Fixes
+
+- update jsondiffpatch to resolve process.platform undefined error
+  ([#93](https://github.com/jotaijs/jotai-devtools/issues/93))
+  ([19f885d](https://github.com/jotaijs/jotai-devtools/commit/19f885db2e292622be66fb9ec774150424cf0f73))
+
 ## [0.6.1](https://github.com/jotaijs/jotai-devtools/compare/v0.6.0...v0.6.1) (2023-08-02)
 
 ### Bug Fixes
