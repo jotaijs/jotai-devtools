@@ -56,7 +56,7 @@ export function useAtomsDevtools(
       // index 0 is @@INIT, so we need to return the next action (0)
       const snapshot = snapshots.current[index >= 0 ? index : 0];
       if (!snapshot) {
-        throw new Error('snaphost index out of bounds');
+        throw new Error('snapshot index out of bounds');
       }
       return snapshot;
     };
