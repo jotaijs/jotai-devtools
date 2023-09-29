@@ -12,7 +12,11 @@ import {
   DevToolsOptions,
   useSetDevToolsOptions,
 } from './atoms/devtools-options';
-import { Extension, ExtensionProps } from './Extension';
+import {
+  Extension,
+  ExtensionProps,
+  shellTriggerButtonStyles,
+} from './Extension';
 import { fontCss } from './fonts';
 import { InternalDevToolsContext } from './internal-jotai-store';
 import { createMemoizedEmotionCache } from './utils';
@@ -40,6 +44,7 @@ const theme: MantineThemeOverride = {
       MozOsxFontSmoothing: 'grayscale',
       fontSize: theme.fontSizes.md,
     },
+    ...shellTriggerButtonStyles,
   }),
 };
 
