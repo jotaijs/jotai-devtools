@@ -1,3 +1,11 @@
+## [0.6.3](https://github.com/jotaijs/jotai-devtools/compare/v0.6.2...v0.6.3) (2023-10-01)
+
+### Bug Fixes
+
+- add trigger button to global css
+  ([#98](https://github.com/jotaijs/jotai-devtools/issues/98))
+  ([1033c5e](https://github.com/jotaijs/jotai-devtools/commit/1033c5e5b81e2911eb81d3e7c9032b07f80be71c))
+
 ## [0.6.2](https://github.com/jotaijs/jotai-devtools/compare/v0.6.1...v0.6.2) (2023-08-21)
 
 ### Bug Fixes
