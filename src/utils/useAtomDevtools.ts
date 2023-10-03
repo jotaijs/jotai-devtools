@@ -1,11 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useAtom } from 'jotai/react';
 import type { Atom, WritableAtom } from 'jotai/vanilla';
-import {
-  Connection,
-  createReduxConnection,
-} from './redux-extension/createReduxConnection';
-import { getReduxExtension } from './redux-extension/getReduxExtension';
+import { useReduxConnection } from './redux-extension/useReduxConnection';
+import { useDidMount } from './useDidMount';
 
 type DevtoolOptions = Parameters<typeof useAtom>[1] & {
   name?: string;
@@ -17,21 +14,24 @@ export function useAtomDevtools<Value, Result>(
   options?: DevtoolOptions,
 ): void {
   const { enabled, name } = options || {};
-
-  const extension = getReduxExtension(enabled);
+  const didMount = useDidMount();
 
   const [value, setValue] = useAtom(anAtom, options);
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const devtools = useRef<Connection>();
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
+  const connection = useReduxConnection({
+    name: atomName,
+    enabled,
+    initialValue: value,
+  });
+
   useEffect(() => {
-    if (!extension) {
-      return;
-    }
+    if (!connection.current) return;
+
     const setValueIfWritable = (value: Value) => {
       if (typeof setValue === 'function') {
         (setValue as (value: Value) => void)(value);
@@ -43,9 +43,7 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = createReduxConnection(extension, atomName);
-
-    const unsubscribe = devtools.current?.subscribe((message) => {
+    const unsubscribe = connection.current.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {
         try {
           setValueIfWritable(JSON.parse(message.payload));
@@ -68,7 +66,7 @@ export function useAtomDevtools<Value, Result>(
         message.type === 'DISPATCH' &&
         message.payload?.type === 'COMMIT'
       ) {
-        devtools.current?.init(lastValue.current);
+        connection.current?.init(lastValue.current);
       } else if (
         message.type === 'DISPATCH' &&
         message.payload?.type === 'IMPORT_STATE'
@@ -78,7 +76,7 @@ export function useAtomDevtools<Value, Result>(
 
         computedStates.forEach(({ state }: { state: Value }, index: number) => {
           if (index === 0) {
-            devtools.current?.init(state);
+            connection.current?.init(state);
           } else {
             setValueIfWritable(state);
           }
@@ -87,23 +85,19 @@ export function useAtomDevtools<Value, Result>(
     });
 
     return unsubscribe;
-  }, [anAtom, extension, atomName, setValue]);
+  }, [anAtom, connection, setValue]);
 
   useEffect(() => {
-    if (!devtools.current) {
-      return;
-    }
+    if (!connection.current || !didMount) return;
+
     lastValue.current = value;
-    if (devtools.current.shouldInit) {
-      devtools.current.init(value);
-      devtools.current.shouldInit = false;
-    } else if (isTimeTraveling.current) {
+    if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else {
-      devtools.current.send(
+      connection.current.send(
         `${atomName} - ${new Date().toLocaleString()}` as any,
         value,
       );
     }
-  }, [anAtom, extension, atomName, value]);
+  }, [atomName, connection, didMount, value]);
 }
