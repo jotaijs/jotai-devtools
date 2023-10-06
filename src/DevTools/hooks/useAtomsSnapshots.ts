@@ -1,12 +1,15 @@
 import { useEffect, useMemo } from 'react';
-import { Options } from 'src/types';
 import { useAtomsSnapshot as useJotaiAtomsSnapshot } from '../../utils';
+import { useDevToolsOptionsValue } from '../atoms/devtools-options';
 import { useSnapshotValues } from '../atoms/values-atom';
 import { useUserStore } from './useUserStore';
 
+type SnapshotOptions = Parameters<typeof useJotaiAtomsSnapshot>[0];
+
 export const useAtomsSnapshots = () => {
+  const { shouldShowPrivateAtoms } = useDevToolsOptionsValue();
   const store = useUserStore();
-  const opts: Options = { store };
+  const opts: SnapshotOptions = { store, shouldShowPrivateAtoms };
 
   const currentSnapshots = useJotaiAtomsSnapshot(opts);
   return currentSnapshots;
