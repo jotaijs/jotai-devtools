@@ -1,3 +1,11 @@
+## [0.7.0](https://github.com/jotaijs/jotai-devtools/compare/v0.6.3...v0.7.0) (2023-10-14)
+
+### Features
+
+- hide private atoms in utils
+  ([#105](https://github.com/jotaijs/jotai-devtools/issues/105))
+  ([c925680](https://github.com/jotaijs/jotai-devtools/commit/c925680c00dfba205e9e1456476d02e2ada39c67))
+
 ## [0.6.3](https://github.com/jotaijs/jotai-devtools/compare/v0.6.2...v0.6.3) (2023-10-01)
 
 ### Bug Fixes
