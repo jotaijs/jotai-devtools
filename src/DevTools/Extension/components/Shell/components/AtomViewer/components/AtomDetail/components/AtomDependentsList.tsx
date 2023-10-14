@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, Code, List, Text } from '@mantine/core';
 import { AnyAtom } from 'src/types';
-import { useDevToolsOptionsValue } from '../../../../../../../../atoms/devtools-options';
 import { useAtomsSnapshots } from '../../../../../../../../hooks/useAtomsSnapshots';
 import { atomToPrintable } from '../../../../../../../../utils/';
 
@@ -13,7 +12,6 @@ export const AtomDependentsList = ({
   atom,
 }: AtomDependentsListProps): JSX.Element => {
   const { dependents } = useAtomsSnapshots();
-  const devtoolsOptions = useDevToolsOptionsValue();
 
   const depsForAtom = React.useMemo(() => {
     const arr = Array.from(dependents.get(atom) || []);
@@ -21,15 +19,8 @@ export const AtomDependentsList = ({
       (a) => a.toString() !== atom.toString(),
     );
 
-    if (!devtoolsOptions.shouldShowPrivateAtoms) {
-      const filteredPrivateAtoms = filteredCurrentAtom.filter(
-        (a) => !a?.debugPrivate,
-      );
-      return filteredPrivateAtoms;
-    }
-
     return filteredCurrentAtom;
-  }, [dependents, devtoolsOptions.shouldShowPrivateAtoms, atom]);
+  }, [dependents, atom]);
 
   const listOfDependents = React.useMemo(
     () =>

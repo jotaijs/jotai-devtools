@@ -1,6 +1,6 @@
 import React, { StrictMode, useState } from 'react';
-import { fireEvent, render, waitFor } from '@testing-library/react';
-import { Provider, useAtom } from 'jotai/react';
+import { act, fireEvent, render, waitFor } from '@testing-library/react';
+import { Provider, useAtom, useAtomValue } from 'jotai/react';
 import { atom, createStore } from 'jotai/vanilla';
 import { useAtomsSnapshot } from 'jotai-devtools/utils';
 
@@ -122,6 +122,66 @@ describe('useAtomsSnapshot', () => {
 
     await findByText('countAtom: 42');
     await findByText('petAtom: dog');
+  });
+
+  it('[DEV-ONLY] should filter private atoms', async () => {
+    __DEV__ = true;
+    const petAtom = atom('cat');
+    petAtom.debugLabel = 'petAtom';
+    const lengthAtom = atom((get) => get(petAtom).length);
+    lengthAtom.debugLabel = 'lengthAtom';
+    lengthAtom.debugPrivate = true;
+
+    const shouldShowPrivateAtomsAtom = atom(false);
+    shouldShowPrivateAtomsAtom.debugLabel = 'shouldShowPrivateAtomsAtom';
+    shouldShowPrivateAtomsAtom.debugPrivate = true;
+
+    const Displayer = () => {
+      useAtom(lengthAtom);
+      useAtom(petAtom);
+      return null;
+    };
+
+    const SimpleDevtools = () => {
+      const { values: atoms, dependents } = useAtomsSnapshot({
+        shouldShowPrivateAtoms: useAtomValue(shouldShowPrivateAtomsAtom),
+      });
+
+      return (
+        <div>
+          {Array.from(atoms).map(([atom, atomValue]) => (
+            <p key={atom.debugLabel}>
+              {`${atom.debugLabel}: ${atomValue} (deps: ${Array.from(
+                dependents.get(atom) || [],
+                (atom) => atom.debugLabel,
+              ).join(', ')})`}
+            </p>
+          ))}
+        </div>
+      );
+    };
+
+    const store = createStore();
+    store.set(petAtom, 'dog');
+
+    const { findByText, findAllByText } = render(
+      <StrictMode>
+        <Provider store={store}>
+          <Displayer />
+          <SimpleDevtools />
+        </Provider>
+      </StrictMode>,
+    );
+
+    await expect(() =>
+      findAllByText('lengthAtom', { exact: false }),
+    ).rejects.toThrow('Unable to find an element with the text: lengthAtom.');
+    await findByText('petAtom: dog (deps: )');
+
+    await act(() => store.set(shouldShowPrivateAtomsAtom, true));
+
+    await findAllByText('lengthAtom', { exact: false });
+    await findByText('petAtom: dog (deps: lengthAtom)');
   });
 
   it('[DEV-ONLY] conditional dependencies + updating state should call devtools.send', async () => {

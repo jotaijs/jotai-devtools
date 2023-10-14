@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { AnyAtom, AnyAtomValue, AtomsSnapshot, Options } from '../types';
+import { AnyAtom, AnyAtomValue, AtomsSnapshot } from '../types';
 import {
   Connection,
   createReduxConnection,
 } from './redux-extension/createReduxConnection';
 import { getReduxExtension } from './redux-extension/getReduxExtension';
-import { useAtomsSnapshot } from './useAtomsSnapshot';
+import { SnapshotOptions, useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
 const atomToPrintable = (atom: AnyAtom) =>
@@ -26,7 +26,7 @@ const getDevtoolsState = (atomsSnapshot: AtomsSnapshot) => {
   };
 };
 
-type DevtoolsOptions = Options & {
+type DevtoolsOptions = SnapshotOptions & {
   enabled?: boolean;
 };
 

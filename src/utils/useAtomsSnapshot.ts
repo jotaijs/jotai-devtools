@@ -26,7 +26,20 @@ const isEqualAtomsDependents = (
     );
   });
 
-export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
+export type SnapshotOptions = Options & {
+  /**
+   * Defaults to `false`
+   *
+   * Private are atoms that are used by Jotai libraries internally to manage state.
+   * They're often used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
+   */
+  shouldShowPrivateAtoms?: boolean;
+};
+
+export function useAtomsSnapshot({
+  shouldShowPrivateAtoms = false,
+  ...options
+}: SnapshotOptions = {}): AtomsSnapshot {
   const store = useStore(options);
 
   const [atomsSnapshot, setAtomsSnapshot] = useState<AtomsSnapshot>(() => ({
@@ -63,6 +76,11 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
       const values: AtomsValues = new Map();
       const dependents: AtomsDependents = new Map();
       for (const atom of store.dev_get_mounted_atoms?.() || []) {
+        if (!shouldShowPrivateAtoms && atom.debugPrivate) {
+          // Skip private atoms
+          continue;
+        }
+
         const atomState = store.dev_get_atom_state?.(atom);
         if (atomState) {
           if ('v' in atomState) {
@@ -71,7 +89,21 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
         }
         const mounted = store.dev_get_mounted?.(atom);
         if (mounted) {
-          dependents.set(atom, mounted.t);
+          let atomDependents = mounted.t;
+
+          if (!shouldShowPrivateAtoms) {
+            // Filter private dependent atoms
+            atomDependents = new Set(
+              Array.from(atomDependents.values()).filter(
+                /* NOTE: This just removes private atoms from the dependents list,
+                 instead of hiding them from the dependency chain and showing
+                 the nested dependents of the private atoms. */
+                (dependent) => !dependent.debugPrivate,
+              ),
+            );
+          }
+
+          dependents.set(atom, atomDependents);
         }
       }
       if (
@@ -88,7 +120,7 @@ export function useAtomsSnapshot(options?: Options): AtomsSnapshot {
     const unsubscribe = devSubscribeStore?.(callback, 2);
     callback({} as any);
     return unsubscribe;
-  }, [store]);
+  }, [store, shouldShowPrivateAtoms]);
 
   return atomsSnapshot;
 }
