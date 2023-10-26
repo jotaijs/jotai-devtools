@@ -1,5 +1,5 @@
 import type { ReducerWithoutAction } from 'react';
-import { useEffect, useLayoutEffect, useReducer, useRef } from 'react';
+import { useEffect, useReducer } from 'react';
 import { useSetAtom, useStore } from 'jotai/react';
 import type { Atom, ExtractAtomValue } from 'jotai/vanilla';
 import {
@@ -61,12 +61,6 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     rerender();
     value = userStore.get(atom);
   }
-
-  const deferAtomSetActions = useRef(true);
-  deferAtomSetActions.current = true;
-  useLayoutEffect(() => {
-    deferAtomSetActions.current = false;
-  });
 
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
