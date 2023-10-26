@@ -106,10 +106,7 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
         // If all the callbacks are internal, and there is only one listener, then we can assume that the atom is not being used anywhere else in user's app
         // and is safe to deselect
         if (areAllCallbacksInternal && t && t?.size <= 1) {
-          const deferrableAtomSetAction = () => setSelectedAtomAtom(undefined);
-          deferAtomSetActions.current
-            ? () => Promise.resolve().then(deferrableAtomSetAction)
-            : deferrableAtomSetAction();
+          return setSelectedAtomAtom(undefined);
         }
       }
     };
