@@ -51,7 +51,9 @@ export const useAtomsDebugValue = (options?: Options) => {
       return;
     }
     const callback = () => {
-      setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
+      Promise.resolve().then(() => {
+        setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
+      });
     };
     // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
     if (!('dev_subscribe_store' in store)) {

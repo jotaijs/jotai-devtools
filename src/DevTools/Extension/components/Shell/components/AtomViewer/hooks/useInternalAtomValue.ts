@@ -83,26 +83,28 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     const devSubCb = (
       type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
     ) => {
-      const normalizedType = typeof type === 'string' ? type : type?.type;
+      Promise.resolve().then(() => {
+        const normalizedType = typeof type === 'string' ? type : type?.type;
 
-      if (normalizedType !== 'unsub') {
-        return;
-      }
-
-      const activeValue = internalStore.get(selectedAtomAtom);
-      if (activeValue) {
-        const { l = [], t } =
-          userStore.dev_get_mounted?.(activeValue.atom) || {};
-        const listenersArray = Array.from(l);
-        const areAllCallbacksInternal = listenersArray.every(
-          isInternalAtomSubscribeFunction,
-        );
-        // If all the callbacks are internal, and there is only one listener, then we can assume that the atom is not being used anywhere else in user's app
-        // and is safe to deselect
-        if (areAllCallbacksInternal && t && t?.size <= 1) {
-          return setSelectedAtomAtom(undefined);
+        if (normalizedType !== 'unsub') {
+          return;
         }
-      }
+
+        const activeValue = internalStore.get(selectedAtomAtom);
+        if (activeValue) {
+          const { l = [], t } =
+            userStore.dev_get_mounted?.(activeValue.atom) || {};
+          const listenersArray = Array.from(l);
+          const areAllCallbacksInternal = listenersArray.every(
+            isInternalAtomSubscribeFunction,
+          );
+          // If all the callbacks are internal, and there is only one listener, then we can assume that the atom is not being used anywhere else in user's app
+          // and is safe to deselect
+          if (areAllCallbacksInternal && t && t?.size <= 1) {
+            return setSelectedAtomAtom(undefined);
+          }
+        }
+      });
     };
     const devUnsubscribeStore = devSubscribeStore?.(devSubCb, 2);
 

@@ -67,55 +67,57 @@ export function useAtomsSnapshot({
     const callback = (
       type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
     ) => {
-      if (typeof type !== 'object') {
-        console.warn(
-          '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
-        );
-      }
-
-      const values: AtomsValues = new Map();
-      const dependents: AtomsDependents = new Map();
-      for (const atom of store.dev_get_mounted_atoms?.() || []) {
-        if (!shouldShowPrivateAtoms && atom.debugPrivate) {
-          // Skip private atoms
-          continue;
+      Promise.resolve().then(() => {
+        if (typeof type !== 'object') {
+          console.warn(
+            '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
+          );
         }
 
-        const atomState = store.dev_get_atom_state?.(atom);
-        if (atomState) {
-          if ('v' in atomState) {
-            values.set(atom, atomState.v);
-          }
-        }
-        const mounted = store.dev_get_mounted?.(atom);
-        if (mounted) {
-          let atomDependents = mounted.t;
-
-          if (!shouldShowPrivateAtoms) {
-            // Filter private dependent atoms
-            atomDependents = new Set(
-              Array.from(atomDependents.values()).filter(
-                /* NOTE: This just removes private atoms from the dependents list,
-                 instead of hiding them from the dependency chain and showing
-                 the nested dependents of the private atoms. */
-                (dependent) => !dependent.debugPrivate,
-              ),
-            );
+        const values: AtomsValues = new Map();
+        const dependents: AtomsDependents = new Map();
+        for (const atom of store.dev_get_mounted_atoms?.() || []) {
+          if (!shouldShowPrivateAtoms && atom.debugPrivate) {
+            // Skip private atoms
+            continue;
           }
 
-          dependents.set(atom, atomDependents);
+          const atomState = store.dev_get_atom_state?.(atom);
+          if (atomState) {
+            if ('v' in atomState) {
+              values.set(atom, atomState.v);
+            }
+          }
+          const mounted = store.dev_get_mounted?.(atom);
+          if (mounted) {
+            let atomDependents = mounted.t;
+
+            if (!shouldShowPrivateAtoms) {
+              // Filter private dependent atoms
+              atomDependents = new Set(
+                Array.from(atomDependents.values()).filter(
+                  /* NOTE: This just removes private atoms from the dependents list,
+                  instead of hiding them from the dependency chain and showing
+                  the nested dependents of the private atoms. */
+                  (dependent) => !dependent.debugPrivate,
+                ),
+              );
+            }
+
+            dependents.set(atom, atomDependents);
+          }
         }
-      }
-      if (
-        isEqualAtomsValues(prevValues, values) &&
-        isEqualAtomsDependents(prevDependents, dependents)
-      ) {
-        // not changed
-        return;
-      }
-      prevValues = values;
-      prevDependents = dependents;
-      setAtomsSnapshot({ values, dependents });
+        if (
+          isEqualAtomsValues(prevValues, values) &&
+          isEqualAtomsDependents(prevDependents, dependents)
+        ) {
+          // not changed
+          return;
+        }
+        prevValues = values;
+        prevDependents = dependents;
+        setAtomsSnapshot({ values, dependents });
+      });
     };
     const unsubscribe = devSubscribeStore?.(callback, 2);
     callback({} as any);
