@@ -124,7 +124,7 @@ export function useAtomsSnapshot({
       const deferrableAtomSetAction = () =>
         setAtomsSnapshot({ values, dependents });
       deferAtomSetActions.current
-        ? () => Promise.resolve().then(deferrableAtomSetAction)
+        ? Promise.resolve().then(deferrableAtomSetAction)
         : deferrableAtomSetAction();
     };
     const unsubscribe = devSubscribeStore?.(callback, 2);

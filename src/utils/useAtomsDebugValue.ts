@@ -65,7 +65,7 @@ export const useAtomsDebugValue = (options?: Options) => {
       const deferrableAtomSetAction = () =>
         setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
       deferAtomSetActions.current
-        ? () => Promise.resolve().then(deferrableAtomSetAction)
+        ? Promise.resolve().then(deferrableAtomSetAction)
         : deferrableAtomSetAction();
     };
     // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
