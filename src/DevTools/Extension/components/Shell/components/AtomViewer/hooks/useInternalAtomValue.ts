@@ -1,5 +1,5 @@
 import type { ReducerWithoutAction } from 'react';
-import { useEffect, useReducer } from 'react';
+import { useEffect, useLayoutEffect, useReducer, useRef } from 'react';
 import { useSetAtom, useStore } from 'jotai/react';
 import type { Atom, ExtractAtomValue } from 'jotai/vanilla';
 import {
@@ -62,6 +62,12 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     value = userStore.get(atom);
   }
 
+  const deferAtomSetActions = useRef(true);
+  deferAtomSetActions.current = true;
+  useLayoutEffect(() => {
+    deferAtomSetActions.current = false;
+  });
+
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
       // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
@@ -83,28 +89,29 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     const devSubCb = (
       type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
     ) => {
-      Promise.resolve().then(() => {
-        const normalizedType = typeof type === 'string' ? type : type?.type;
+      const normalizedType = typeof type === 'string' ? type : type?.type;
 
-        if (normalizedType !== 'unsub') {
-          return;
-        }
+      if (normalizedType !== 'unsub') {
+        return;
+      }
 
-        const activeValue = internalStore.get(selectedAtomAtom);
-        if (activeValue) {
-          const { l = [], t } =
-            userStore.dev_get_mounted?.(activeValue.atom) || {};
-          const listenersArray = Array.from(l);
-          const areAllCallbacksInternal = listenersArray.every(
-            isInternalAtomSubscribeFunction,
-          );
-          // If all the callbacks are internal, and there is only one listener, then we can assume that the atom is not being used anywhere else in user's app
-          // and is safe to deselect
-          if (areAllCallbacksInternal && t && t?.size <= 1) {
-            return setSelectedAtomAtom(undefined);
-          }
+      const activeValue = internalStore.get(selectedAtomAtom);
+      if (activeValue) {
+        const { l = [], t } =
+          userStore.dev_get_mounted?.(activeValue.atom) || {};
+        const listenersArray = Array.from(l);
+        const areAllCallbacksInternal = listenersArray.every(
+          isInternalAtomSubscribeFunction,
+        );
+        // If all the callbacks are internal, and there is only one listener, then we can assume that the atom is not being used anywhere else in user's app
+        // and is safe to deselect
+        if (areAllCallbacksInternal && t && t?.size <= 1) {
+          const deferrableAtomSetAction = () => setSelectedAtomAtom(undefined);
+          deferAtomSetActions.current
+            ? () => Promise.resolve().then(deferrableAtomSetAction)
+            : deferrableAtomSetAction();
         }
-      });
+      }
     };
     const devUnsubscribeStore = devSubscribeStore?.(devSubCb, 2);
 
