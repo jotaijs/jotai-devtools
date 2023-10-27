@@ -48,10 +48,10 @@ export const useAtomsDebugValue = (options?: Options) => {
   const enabled = options?.enabled ?? __DEV__;
   const store = useStore(options);
   const [atoms, setAtoms] = useState<Atom<unknown>[]>([]);
-  const deferAtomSetActions = useRef(true);
-  deferAtomSetActions.current = true;
+  const duringReactRenderPhase = useRef(true);
+  duringReactRenderPhase.current = true;
   useLayoutEffect(() => {
-    deferAtomSetActions.current = false;
+    duringReactRenderPhase.current = false;
   });
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
@@ -64,9 +64,12 @@ export const useAtomsDebugValue = (options?: Options) => {
     const callback = () => {
       const deferrableAtomSetAction = () =>
         setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
-      deferAtomSetActions.current
-        ? Promise.resolve().then(deferrableAtomSetAction)
-        : deferrableAtomSetAction();
+      if (duringReactRenderPhase.current) {
+        // avoid set action when react is rendering components
+        Promise.resolve().then(deferrableAtomSetAction);
+      } else {
+        deferrableAtomSetAction();
+      }
     };
     // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
     if (!('dev_subscribe_store' in store)) {

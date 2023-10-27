@@ -47,10 +47,10 @@ export function useAtomsSnapshot({
     dependents: new Map(),
   }));
 
-  const deferAtomSetActions = useRef(true);
-  deferAtomSetActions.current = true;
+  const duringReactRenderPhase = useRef(true);
+  duringReactRenderPhase.current = true;
   useLayoutEffect(() => {
-    deferAtomSetActions.current = false;
+    duringReactRenderPhase.current = false;
   });
 
   useEffect(() => {
@@ -123,9 +123,12 @@ export function useAtomsSnapshot({
       prevDependents = dependents;
       const deferrableAtomSetAction = () =>
         setAtomsSnapshot({ values, dependents });
-      deferAtomSetActions.current
-        ? Promise.resolve().then(deferrableAtomSetAction)
-        : deferrableAtomSetAction();
+      if (duringReactRenderPhase.current) {
+        // avoid set action when react is rendering components
+        Promise.resolve().then(deferrableAtomSetAction);
+      } else {
+        deferrableAtomSetAction();
+      }
     };
     const unsubscribe = devSubscribeStore?.(callback, 2);
     callback({} as any);
