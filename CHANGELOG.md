@@ -1,3 +1,11 @@
+## [0.7.1](https://github.com/jotaijs/jotai-devtools/compare/v0.7.0...v0.7.1) (2023-12-04)
+
+### Bug Fixes
+
+- defer setAtom in subscribers of store change during main render to next micro
+  task ([#109](https://github.com/jotaijs/jotai-devtools/issues/109))
+  ([2cdc81d](https://github.com/jotaijs/jotai-devtools/commit/2cdc81d8342956cd2463e05e37c0524a9c36f1e6))
+
 ## [0.7.0](https://github.com/jotaijs/jotai-devtools/compare/v0.6.3...v0.7.0) (2023-10-14)
 
 ### Features
