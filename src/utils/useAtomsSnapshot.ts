@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useStore } from 'jotai/react';
 import type {
   AtomsDependents,
@@ -46,6 +46,12 @@ export function useAtomsSnapshot({
     values: new Map(),
     dependents: new Map(),
   }));
+
+  const duringReactRenderPhase = useRef(true);
+  duringReactRenderPhase.current = true;
+  useLayoutEffect(() => {
+    duringReactRenderPhase.current = false;
+  });
 
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
@@ -96,8 +102,8 @@ export function useAtomsSnapshot({
             atomDependents = new Set(
               Array.from(atomDependents.values()).filter(
                 /* NOTE: This just removes private atoms from the dependents list,
-                 instead of hiding them from the dependency chain and showing
-                 the nested dependents of the private atoms. */
+                  instead of hiding them from the dependency chain and showing
+                  the nested dependents of the private atoms. */
                 (dependent) => !dependent.debugPrivate,
               ),
             );
@@ -115,7 +121,14 @@ export function useAtomsSnapshot({
       }
       prevValues = values;
       prevDependents = dependents;
-      setAtomsSnapshot({ values, dependents });
+      const deferrableAtomSetAction = () =>
+        setAtomsSnapshot({ values, dependents });
+      if (duringReactRenderPhase.current) {
+        // avoid set action when react is rendering components
+        Promise.resolve().then(deferrableAtomSetAction);
+      } else {
+        deferrableAtomSetAction();
+      }
     };
     const unsubscribe = devSubscribeStore?.(callback, 2);
     callback({} as any);

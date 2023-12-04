@@ -1,4 +1,10 @@
-import { useDebugValue, useEffect, useState } from 'react';
+import {
+  useDebugValue,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useStore } from 'jotai/react';
 import type { Atom } from 'jotai/vanilla';
 
@@ -42,6 +48,11 @@ export const useAtomsDebugValue = (options?: Options) => {
   const enabled = options?.enabled ?? __DEV__;
   const store = useStore(options);
   const [atoms, setAtoms] = useState<Atom<unknown>[]>([]);
+  const duringReactRenderPhase = useRef(true);
+  duringReactRenderPhase.current = true;
+  useLayoutEffect(() => {
+    duringReactRenderPhase.current = false;
+  });
   useEffect(() => {
     const devSubscribeStore: Store['dev_subscribe_store'] =
       // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
@@ -51,7 +62,14 @@ export const useAtomsDebugValue = (options?: Options) => {
       return;
     }
     const callback = () => {
-      setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
+      const deferrableAtomSetAction = () =>
+        setAtoms(Array.from(store.dev_get_mounted_atoms?.() || []));
+      if (duringReactRenderPhase.current) {
+        // avoid set action when react is rendering components
+        Promise.resolve().then(deferrableAtomSetAction);
+      } else {
+        deferrableAtomSetAction();
+      }
     };
     // FIXME replace this with `store.dev_subscribe_store` check after next minor Jotai 2.1.0?
     if (!('dev_subscribe_store' in store)) {
