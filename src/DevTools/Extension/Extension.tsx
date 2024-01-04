@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ActionIcon } from '@mantine/core';
-import type { CSSObject } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from '../../types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
@@ -11,25 +10,12 @@ import { logo } from './assets/logo';
 import { Shell } from './components/Shell';
 import useSyncSnapshotHistory from './components/Shell/components/TimeTravel/useSyncSnapshotHistory';
 
-const shellTriggerButtonClassName = 'jotai-devtools-trigger-button';
+export const shellTriggerButtonClassName = 'jotai-devtools-trigger-button';
 
-export const shellTriggerButtonStyles: CSSObject = {
-  [`.${shellTriggerButtonClassName}`]: {
-    position: 'fixed',
-    left: 10,
-    bottom: 10,
-    borderRadius: '50%',
-    borderWidth: 0,
-    width: '4rem',
-    height: '4rem',
-    zIndex: 99999,
-    img: {
-      height: '2rem',
-    },
-  },
-};
-
-const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
+const ShellTriggerButton = React.forwardRef<
+  HTMLButtonElement,
+  { className?: string }
+>(({ className }, ref) => {
   const setIsShellOpen = useSetAtom(
     isShellOpenAtom,
     useDevtoolsJotaiStoreOptions(),
@@ -42,7 +28,7 @@ const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
       onClick={() => setIsShellOpen(true)}
       ref={ref}
       title="Open Jotai Devtools"
-      className={shellTriggerButtonClassName}
+      className={`${shellTriggerButtonClassName} ${className}`}
     >
       <img src={logo} alt="Jotai Mascot" />
     </ActionIcon>
@@ -53,11 +39,13 @@ export type ExtensionProps = {
   store?: Store | undefined;
   // false by default
   isInitialOpen?: boolean;
+  className?: string;
 };
 
 export const Extension = ({
   isInitialOpen = false,
   store,
+  className = '',
 }: ExtensionProps): JSX.Element => {
   const [isShellOpen, setIsShellOpen] = useAtom(
     isShellOpenAtom,
@@ -81,5 +69,13 @@ export const Extension = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <>{isShellOpen ? <Shell /> : <ShellTriggerButton />}</>;
+  return (
+    <>
+      {isShellOpen ? (
+        <Shell className={className} />
+      ) : (
+        <ShellTriggerButton className={className} />
+      )}
+    </>
+  );
 };
