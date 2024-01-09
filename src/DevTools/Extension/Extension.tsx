@@ -36,7 +36,6 @@ export type ExtensionProps = {
   store?: Store | undefined;
   // false by default
   isInitialOpen?: boolean;
-  className?: string;
 };
 
 export const Extension = ({
