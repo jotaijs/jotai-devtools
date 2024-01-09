@@ -13,7 +13,7 @@ import { TabsHeader } from './components/TabsHeader';
 import { TimeTravel } from './components/TimeTravel';
 import { shellStyles } from './styles';
 
-export const Shell = ({ className }: { className?: string }) => {
+export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
 
   const shellRef = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ export const Shell = ({ className }: { className?: string }) => {
       h={height}
       mah={shellStyleDefaults.maxHeight}
       ref={shellRef}
-      className={`"jotai-devtools-shell" ${className}`}
+      className="jotai-devtools-shell"
       data-testid="jotai-devtools-shell"
       id="jotai-devtools-shell"
       value={selectedShellTab}

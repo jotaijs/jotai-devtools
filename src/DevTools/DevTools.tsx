@@ -33,7 +33,6 @@ const DevToolsMain = ({
   isInitialOpen = false,
   theme: userColorScheme = 'light',
   position = 'bottom-left',
-  className = '',
   nonce,
   options,
 }: DevToolsProps): JSX.Element => {
@@ -114,11 +113,7 @@ const DevToolsMain = ({
           emotionCache={jotaiDevtoolsEmotionCache.current}
         >
           <Global styles={fontCss} />
-          <Extension
-            store={store}
-            isInitialOpen={isInitialOpen}
-            className={className}
-          />
+          <Extension store={store} isInitialOpen={isInitialOpen} />
         </MantineProvider>
       </ColorSchemeProvider>
     </React.StrictMode>

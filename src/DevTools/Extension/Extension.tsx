@@ -12,10 +12,7 @@ import useSyncSnapshotHistory from './components/Shell/components/TimeTravel/use
 
 export const shellTriggerButtonClassName = 'jotai-devtools-trigger-button';
 
-const ShellTriggerButton = React.forwardRef<
-  HTMLButtonElement,
-  { className?: string }
->(({ className }, ref) => {
+const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
   const setIsShellOpen = useSetAtom(
     isShellOpenAtom,
     useDevtoolsJotaiStoreOptions(),
@@ -28,7 +25,7 @@ const ShellTriggerButton = React.forwardRef<
       onClick={() => setIsShellOpen(true)}
       ref={ref}
       title="Open Jotai Devtools"
-      className={`${shellTriggerButtonClassName} ${className}`}
+      className={shellTriggerButtonClassName}
     >
       <img src={logo} alt="Jotai Mascot" />
     </ActionIcon>
@@ -45,7 +42,6 @@ export type ExtensionProps = {
 export const Extension = ({
   isInitialOpen = false,
   store,
-  className = '',
 }: ExtensionProps): JSX.Element => {
   const [isShellOpen, setIsShellOpen] = useAtom(
     isShellOpenAtom,
@@ -69,13 +65,5 @@ export const Extension = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return (
-    <>
-      {isShellOpen ? (
-        <Shell className={className} />
-      ) : (
-        <ShellTriggerButton className={className} />
-      )}
-    </>
-  );
+  return <>{isShellOpen ? <Shell /> : <ShellTriggerButton />}</>;
 };
