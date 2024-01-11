@@ -40,6 +40,8 @@ describe('DevTools - basic', () => {
     expect(screen.getByTitle('Open Jotai Devtools')).toHaveStyle({
       top: '0.2rem',
       right: '0.2rem',
+      bottom: 'unset',
+      left: 'unset',
     });
   });
 
