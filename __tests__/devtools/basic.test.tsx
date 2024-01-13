@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { act, fireEvent, screen, waitFor } from '@testing-library/react';
+import { act, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { atom, useAtom } from 'jotai';
 import { DevTools } from 'jotai-devtools';
