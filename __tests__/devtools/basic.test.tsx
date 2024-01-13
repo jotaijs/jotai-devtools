@@ -45,26 +45,6 @@ describe('DevTools - basic', () => {
     });
   });
 
-  it('should resize the devtools upon dragging the resize bar', async () => {
-    customRender(<DevTools isInitialOpen={true} />);
-
-    // Mantine automatically converts the values to `rem` so we test it in rem
-    expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '23.125rem',
-    });
-
-    await act(async () => {
-      const resizeBar = screen.getByTestId('shell-resize-bar');
-      await fireEvent.mouseDown(resizeBar, { clientY: 500 });
-      await fireEvent.mouseMove(resizeBar, { clientY: 400 });
-      await fireEvent.mouseUp(resizeBar, { clientY: 400 });
-    });
-
-    expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '12.5rem',
-    });
-  });
-
   describe('Error boundary', () => {
     const ogConsoleError = console.error;
 

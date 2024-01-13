@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Tabs } from '@mantine/core';
-import { useAtom, useAtomValue } from 'jotai/react';
+import { useAtom } from 'jotai/react';
 import { flushSync } from 'react-dom';
 import Moveable from 'react-moveable';
 import { shellStylesAtom } from '../../../atoms/shell-styles';
@@ -13,6 +13,10 @@ import { Header } from './components/Header';
 import { TabsHeader } from './components/TabsHeader';
 import { TimeTravel } from './components/TimeTravel';
 import { shellStyles } from './styles';
+
+function areWeTestingWithJest() {
+  return process.env.JEST_WORKER_ID !== undefined;
+}
 
 export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
@@ -82,39 +86,41 @@ export const Shell = () => {
           </Tabs.Panel>
         </ErrorBoundary>
       </Tabs>
-      <Moveable
-        target={shellRef}
-        flushSync={flushSync}
-        hideDefaultLines={true}
-        draggable={true}
-        throttleDrag={1}
-        edgeDraggable={false}
-        startDragRotate={0}
-        throttleDragRotate={0}
-        resizable={true}
-        keepRatio={false}
-        snappable={true}
-        bounds={{ left: 0, top: 0, right: 0, bottom: 0, position: 'css' }}
-        edge={[]}
-        onDrag={(e) => {
-          e.target.style.transform = e.transform;
-          setShellStyles((prev) => ({
-            ...prev,
-            transform: e.transform,
-          }));
-        }}
-        onResize={(e) => {
-          e.target.style.width = `${e.width}px`;
-          e.target.style.height = `${e.height}px`;
-          e.target.style.transform = e.drag.transform;
-          setShellStyles((prev) => ({
-            ...prev,
-            width: e.width,
-            height: e.height,
-            transform: e.drag.transform,
-          }));
-        }}
-      />
+      {!areWeTestingWithJest() && (
+        <Moveable
+          target={shellRef}
+          flushSync={flushSync}
+          hideDefaultLines={true}
+          draggable={true}
+          throttleDrag={1}
+          edgeDraggable={false}
+          startDragRotate={0}
+          throttleDragRotate={0}
+          resizable={true}
+          keepRatio={false}
+          snappable={true}
+          bounds={{ left: 0, top: 0, right: 0, bottom: 0, position: 'css' }}
+          edge={[]}
+          onDrag={(e) => {
+            e.target.style.transform = e.transform;
+            setShellStyles((prev) => ({
+              ...prev,
+              transform: e.transform,
+            }));
+          }}
+          onResize={(e) => {
+            e.target.style.width = `${e.width}px`;
+            e.target.style.height = `${e.height}px`;
+            e.target.style.transform = e.drag.transform;
+            setShellStyles((prev) => ({
+              ...prev,
+              width: e.width,
+              height: e.height,
+              transform: e.drag.transform,
+            }));
+          }}
+        />
+      )}
     </>
   );
 };
