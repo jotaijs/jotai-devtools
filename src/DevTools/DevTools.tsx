@@ -97,6 +97,10 @@ const DevToolsMain = ({
           top: position.includes('top') ? '0.2rem' : 'unset',
           bottom: position.includes('bottom') ? '0.2rem' : 'unset',
         },
+        '.moveable-control.moveable-resizable': {
+          '--moveable-color': 'transparent',
+          border: 'none !important',
+        },
       }),
       colorScheme,
     };
