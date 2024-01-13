@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Tabs } from '@mantine/core';
 import { useAtom } from 'jotai/react';
 import { flushSync } from 'react-dom';
@@ -22,12 +22,17 @@ export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
 
   const shellRef = useRef<HTMLDivElement>(null);
+  const moveableRef = useRef<Moveable>(null);
 
   // TODO move this to a custom hook
-  const [{ height, width, transform }, setShellStyles] = useAtom(
+  const [shellStyle, setShellStyles] = useAtom(
     shellStylesAtom,
     useDevtoolsJotaiStoreOptions(),
   );
+
+  useEffect(() => {
+    moveableRef.current?.updateRect();
+  }, [shellStyle]);
 
   const handleOnTabChange = (value: TabKeys) => setSelectedShellTab(value);
   return (
@@ -41,15 +46,15 @@ export const Shell = () => {
             ...(typeof shellStyles === 'function'
               ? shellStyles(theme)
               : shellStyles),
-            transform,
+            transform: shellStyle.transform,
           };
         }}
         mah={shellStyleDefaults.maxHeight}
         maw={shellStyleDefaults.maxWidth}
         mih={shellStyleDefaults.minHeight}
         miw={shellStyleDefaults.minWidth}
-        h={height}
-        w={width}
+        h={shellStyle.height}
+        w={shellStyle.width}
         ref={shellRef}
         className="jotai-devtools-shell"
         data-testid="jotai-devtools-shell"
@@ -88,26 +93,15 @@ export const Shell = () => {
       </Tabs>
       {!areWeTestingWithJest() && (
         <Moveable
+          ref={moveableRef}
           target={shellRef}
           flushSync={flushSync}
           hideDefaultLines={true}
-          draggable={true}
-          throttleDrag={1}
-          edgeDraggable={false}
-          startDragRotate={0}
-          throttleDragRotate={0}
           resizable={true}
           keepRatio={false}
           snappable={true}
           bounds={{ left: 0, top: 0, right: 0, bottom: 0, position: 'css' }}
           edge={[]}
-          onDrag={(e) => {
-            e.target.style.transform = e.transform;
-            setShellStyles((prev) => ({
-              ...prev,
-              transform: e.transform,
-            }));
-          }}
           onResize={(e) => {
             e.target.style.width = `${e.width}px`;
             e.target.style.height = `${e.height}px`;
