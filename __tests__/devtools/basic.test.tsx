@@ -27,6 +27,24 @@ describe('DevTools - basic', () => {
     ).toBeInTheDocument();
   });
 
+  it('should be placed on the bottom left by default', async () => {
+    customRender(<DevTools />);
+    expect(screen.getByTitle('Open Jotai Devtools')).toHaveStyle({
+      bottom: '0.2rem',
+      left: '0.2rem',
+    });
+  });
+
+  it('should respect the position prop', async () => {
+    customRender(<DevTools position="top-right" />);
+    expect(screen.getByTitle('Open Jotai Devtools')).toHaveStyle({
+      top: '0.2rem',
+      right: '0.2rem',
+      bottom: 'unset',
+      left: 'unset',
+    });
+  });
+
   it('should resize the devtools upon dragging the resize bar', async () => {
     customRender(<DevTools isInitialOpen={true} />);
 

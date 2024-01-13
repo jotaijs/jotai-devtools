@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ActionIcon } from '@mantine/core';
-import type { CSSObject } from '@mantine/core';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from '../../types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
@@ -11,23 +10,7 @@ import { logo } from './assets/logo';
 import { Shell } from './components/Shell';
 import useSyncSnapshotHistory from './components/Shell/components/TimeTravel/useSyncSnapshotHistory';
 
-const shellTriggerButtonClassName = 'jotai-devtools-trigger-button';
-
-export const shellTriggerButtonStyles: CSSObject = {
-  [`.${shellTriggerButtonClassName}`]: {
-    position: 'fixed',
-    left: 10,
-    bottom: 10,
-    borderRadius: '50%',
-    borderWidth: 0,
-    width: '4rem',
-    height: '4rem',
-    zIndex: 99999,
-    img: {
-      height: '2rem',
-    },
-  },
-};
+export const shellTriggerButtonClassName = 'jotai-devtools-trigger-button';
 
 const ShellTriggerButton = React.forwardRef<HTMLButtonElement>((_, ref) => {
   const setIsShellOpen = useSetAtom(

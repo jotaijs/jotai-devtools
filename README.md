@@ -98,6 +98,8 @@ type DevToolsProps = {
   store?: Store;
   // Defaults to light
   theme?: 'dark' | 'light';
+  // Defaults to 'bottom-left'
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
   nonce?: string;
   // We recommend keeping these options static. i.e. set it only once. Avoid connecting it to re-renderable state

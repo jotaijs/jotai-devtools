@@ -15,41 +15,15 @@ import {
 import {
   Extension,
   ExtensionProps,
-  shellTriggerButtonStyles,
+  shellTriggerButtonClassName,
 } from './Extension';
 import { fontCss } from './fonts';
 import { InternalDevToolsContext } from './internal-jotai-store';
 import { createMemoizedEmotionCache } from './utils';
 
-const theme: MantineThemeOverride = {
-  primaryColor: 'dark',
-  activeStyles: { transform: 'scale(1)' },
-  fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
-  fontFamilyMonospace:
-    'JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
-  headings: {
-    fontFamily:
-      'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
-  },
-  defaultRadius: 'md',
-  globalStyles: (theme) => ({
-    '.jotai-devtools-shell': {
-      '*, *::before, *::after': {
-        boxSizing: 'border-box',
-      },
-      ...theme.fn.fontStyles(),
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-      lineHeight: theme.lineHeight,
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
-      fontSize: theme.fontSizes.md,
-    },
-    ...shellTriggerButtonStyles,
-  }),
-};
-
 export type DevToolsProps = ExtensionProps & {
   theme?: 'dark' | 'light';
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   nonce?: string;
   options?: DevToolsOptions;
 };
@@ -58,6 +32,7 @@ const DevToolsMain = ({
   store,
   isInitialOpen = false,
   theme: userColorScheme = 'light',
+  position = 'bottom-left',
   nonce,
   options,
 }: DevToolsProps): JSX.Element => {
@@ -83,10 +58,49 @@ const DevToolsMain = ({
     setDevToolsOptions(options);
   }, [setDevToolsOptions, options]);
 
-  const theme_ = {
-    ...theme,
-    colorScheme,
-  };
+  const theme: MantineThemeOverride = React.useMemo(() => {
+    return {
+      primaryColor: 'dark',
+      activeStyles: { transform: 'scale(1)' },
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
+      fontFamilyMonospace:
+        'JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
+      headings: {
+        fontFamily:
+          'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+      },
+      defaultRadius: 'md',
+      globalStyles: (theme) => ({
+        '.jotai-devtools-shell': {
+          '*, *::before, *::after': {
+            boxSizing: 'border-box',
+          },
+          ...theme.fn.fontStyles(),
+          color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+          lineHeight: theme.lineHeight,
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
+          fontSize: theme.fontSizes.md,
+        },
+        [`.${shellTriggerButtonClassName}`]: {
+          position: 'fixed',
+          borderRadius: '50%',
+          borderWidth: 0,
+          width: '4rem',
+          height: '4rem',
+          zIndex: 99999,
+          img: {
+            height: '2rem',
+          },
+          left: position.includes('left') ? '0.2rem' : 'unset',
+          right: position.includes('right') ? '0.2rem' : 'unset',
+          top: position.includes('top') ? '0.2rem' : 'unset',
+          bottom: position.includes('bottom') ? '0.2rem' : 'unset',
+        },
+      }),
+      colorScheme,
+    };
+  }, [colorScheme, position]);
 
   return (
     <React.StrictMode>
@@ -95,7 +109,7 @@ const DevToolsMain = ({
         toggleColorScheme={toggleColorScheme}
       >
         <MantineProvider
-          theme={theme_}
+          theme={theme}
           emotionCache={jotaiDevtoolsEmotionCache.current}
         >
           <Global styles={fontCss} />
