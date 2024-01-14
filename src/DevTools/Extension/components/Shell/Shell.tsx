@@ -14,10 +14,6 @@ import { TabsHeader } from './components/TabsHeader';
 import { TimeTravel } from './components/TimeTravel';
 import { shellStyles } from './styles';
 
-function areWeTestingWithJest() {
-  return process.env.JEST_WORKER_ID !== undefined;
-}
-
 export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
 
@@ -91,30 +87,28 @@ export const Shell = () => {
           </Tabs.Panel>
         </ErrorBoundary>
       </Tabs>
-      {!areWeTestingWithJest() && (
-        <Moveable
-          ref={moveableRef}
-          target={shellRef}
-          flushSync={flushSync}
-          hideDefaultLines={true}
-          resizable={true}
-          keepRatio={false}
-          snappable={true}
-          bounds={{ left: 0, top: 0, right: 0, bottom: 0, position: 'css' }}
-          edge={[]}
-          onResize={(e) => {
-            e.target.style.width = `${e.width}px`;
-            e.target.style.height = `${e.height}px`;
-            e.target.style.transform = e.drag.transform;
-            setShellStyles((prev) => ({
-              ...prev,
-              width: e.width,
-              height: e.height,
-              transform: e.drag.transform,
-            }));
-          }}
-        />
-      )}
+      <Moveable
+        ref={moveableRef}
+        target={shellRef}
+        flushSync={flushSync}
+        hideDefaultLines={true}
+        resizable={true}
+        keepRatio={false}
+        snappable={true}
+        bounds={{ left: 0, top: 0, right: 0, bottom: 0, position: 'css' }}
+        edge={[]}
+        onResize={(e) => {
+          e.target.style.width = `${e.width}px`;
+          e.target.style.height = `${e.height}px`;
+          e.target.style.transform = e.drag.transform;
+          setShellStyles((prev) => ({
+            ...prev,
+            width: e.width,
+            height: e.height,
+            transform: e.drag.transform,
+          }));
+        }}
+      />
     </>
   );
 };

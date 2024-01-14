@@ -924,6 +924,69 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
       </div>
     </div>
   </div>
+  <div
+    class="moveable-control-box     rCS1bhdyl6"
+    data-able-clickable="true"
+    data-able-origin="true"
+    data-able-padding="true"
+    data-able-resizable="true"
+    data-able-snappable="true"
+    data-styled-id="rCS1bhdyl6"
+    style="position: fixed; display: block; visibility: visible; transform: translate3d(0px, 0px, 0); --zoom: 1; --zoompx: 1px;"
+  >
+    <div
+      class="moveable-control moveable-direction moveable-n moveable-resizable"
+      data-direction="n"
+      data-rotation="0"
+      style="transform: translateZ(0px) translate(19.75px, 0px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-w moveable-resizable"
+      data-direction="w"
+      data-rotation="90"
+      style="transform: translateZ(0px) translate(0px, 12.5625px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-s moveable-resizable"
+      data-direction="s"
+      data-rotation="0"
+      style="transform: translateZ(0px) translate(19.75px, 25.125px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-e moveable-resizable"
+      data-direction="e"
+      data-rotation="90"
+      style="transform: translateZ(0px) translate(39.5px, 12.5625px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-nw moveable-resizable"
+      data-direction="nw"
+      data-rotation="135"
+      style="transform: translateZ(0px) translate(0px, 0px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-ne moveable-resizable"
+      data-direction="ne"
+      data-rotation="45"
+      style="transform: translateZ(0px) translate(39.5px, 0px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-sw moveable-resizable"
+      data-direction="sw"
+      data-rotation="45"
+      style="transform: translateZ(0px) translate(0px, 25.125px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-se moveable-resizable"
+      data-direction="se"
+      data-rotation="135"
+      style="transform: translateZ(0px) translate(39.5px, 25.125px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-origin"
+      style="transform: translateZ(0px) translate(0px, 0px) rotate(0rad) scale(1);"
+    />
+  </div>
   <button>
     trigger error
   </button>
@@ -1853,6 +1916,69 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
         </div>
       </div>
     </div>
+  </div>
+  <div
+    class="moveable-control-box     rCS1bhdyl6"
+    data-able-clickable="true"
+    data-able-origin="true"
+    data-able-padding="true"
+    data-able-resizable="true"
+    data-able-snappable="true"
+    data-styled-id="rCS1bhdyl6"
+    style="position: fixed; display: block; visibility: visible; transform: translate3d(0px, 0px, 0); --zoom: 1; --zoompx: 1px;"
+  >
+    <div
+      class="moveable-control moveable-direction moveable-n moveable-resizable"
+      data-direction="n"
+      data-rotation="0"
+      style="transform: translateZ(0px) translate(19.75px, 0px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-w moveable-resizable"
+      data-direction="w"
+      data-rotation="90"
+      style="transform: translateZ(0px) translate(0px, 12.5625px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-s moveable-resizable"
+      data-direction="s"
+      data-rotation="0"
+      style="transform: translateZ(0px) translate(19.75px, 25.125px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-e moveable-resizable"
+      data-direction="e"
+      data-rotation="90"
+      style="transform: translateZ(0px) translate(39.5px, 12.5625px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-nw moveable-resizable"
+      data-direction="nw"
+      data-rotation="135"
+      style="transform: translateZ(0px) translate(0px, 0px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-ne moveable-resizable"
+      data-direction="ne"
+      data-rotation="45"
+      style="transform: translateZ(0px) translate(39.5px, 0px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-sw moveable-resizable"
+      data-direction="sw"
+      data-rotation="45"
+      style="transform: translateZ(0px) translate(0px, 25.125px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-direction moveable-se moveable-resizable"
+      data-direction="se"
+      data-rotation="135"
+      style="transform: translateZ(0px) translate(39.5px, 25.125px) rotate(0rad) scale(1);"
+    />
+    <div
+      class="moveable-control moveable-origin"
+      style="transform: translateZ(0px) translate(0px, 0px) rotate(0rad) scale(1);"
+    />
   </div>
   <button>
     trigger error
