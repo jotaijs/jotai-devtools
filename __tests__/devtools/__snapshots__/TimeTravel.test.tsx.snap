@@ -2269,13 +2269,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  width: calc(100% - 1.25rem);
-  left: 50%;
-  bottom: 0.625rem;
-  -webkit-transform: translate(-50%, 0%);
-  -moz-transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -2289,20 +2282,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 37.5rem;
+  min-width: 18.75rem;
+  max-width: 90%;
   height: 23.125rem;
+  min-height: 12.5rem;
   max-height: 90%;
 }
 
 .emotion-3 {
-  width: 100%;
-  height: 5px;
-  cursor: row-resize;
-  z-index: 2;
-  position: absolute;
-  top: -2px;
-}
-
-.emotion-4 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -2310,7 +2302,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   padding: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2325,7 +2317,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   justify-content: space-between;
 }
 
-.emotion-7 {
+.emotion-6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2350,7 +2342,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   margin-right: 0.625rem;
 }
 
-.emotion-7>* {
+.emotion-6>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -2358,7 +2350,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   flex-grow: 0;
 }
 
-.emotion-10 {
+.emotion-9 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -2377,16 +2369,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   user-select: none;
 }
 
-.emotion-10:focus {
+.emotion-9:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-10:focus:not(:focus-visible) {
+.emotion-9:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 0.5625rem;
@@ -2421,22 +2413,22 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border: 0.0625rem solid transparent;
 }
 
-.emotion-12:focus {
+.emotion-11:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-12:focus:not(:focus-visible) {
+.emotion-11:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-13 {
+.emotion-12 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2447,7 +2439,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   align-items: center;
 }
 
-.emotion-18 {
+.emotion-17 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -2489,40 +2481,40 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   color: #fff;
 }
 
-.emotion-18:focus {
+.emotion-17:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-18:focus:not(:focus-visible) {
+.emotion-17:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-18:hover {
+  .emotion-17:hover {
     background-color: #1A1B1E;
   }
 }
 
 @media (hover: none) {
-  .emotion-18:active {
+  .emotion-17:active {
     background-color: #1A1B1E;
   }
 }
 
-.emotion-18:active {
+.emotion-17:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-18 [data-action-icon-loader] {
+.emotion-17 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-18:disabled,
-.emotion-18[data-disabled] {
+.emotion-17:disabled,
+.emotion-17[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -2531,19 +2523,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-18:disabled:active,
-.emotion-18[data-disabled]:active {
+.emotion-17:disabled:active,
+.emotion-17[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-18[data-loading] {
+.emotion-17[data-loading] {
   pointer-events: none;
 }
 
-.emotion-18[data-loading]::before {
+.emotion-17[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -2555,7 +2547,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: not-allowed;
 }
 
-.emotion-21 {
+.emotion-20 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -2598,40 +2590,40 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   margin-left: 0.625rem;
 }
 
-.emotion-21:focus {
+.emotion-20:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-21:focus:not(:focus-visible) {
+.emotion-20:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-21:hover {
+  .emotion-20:hover {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
 @media (hover: none) {
-  .emotion-21:active {
+  .emotion-20:active {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
-.emotion-21:active {
+.emotion-20:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-21 [data-action-icon-loader] {
+.emotion-20 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-21:disabled,
-.emotion-21[data-disabled] {
+.emotion-20:disabled,
+.emotion-20[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -2640,19 +2632,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-21:disabled:active,
-.emotion-21[data-disabled]:active {
+.emotion-20:disabled:active,
+.emotion-20[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-21[data-loading] {
+.emotion-20[data-loading] {
   pointer-events: none;
 }
 
-.emotion-21[data-loading]::before {
+.emotion-20[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -2664,7 +2656,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: not-allowed;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2683,7 +2675,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-bottom: 0.125rem solid #dee2e6;
 }
 
-.emotion-26 {
+.emotion-25 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -2724,68 +2716,68 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-26:focus:not(:focus-visible) {
+.emotion-25:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-26:disabled {
+.emotion-25:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
 @media (hover: hover) {
-  .emotion-26:disabled:hover {
+  .emotion-25:disabled:hover {
     background-color: transparent;
   }
 }
 
 @media (hover: none) {
-  .emotion-26:disabled:active {
+  .emotion-25:disabled:active {
     background-color: transparent;
   }
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   z-index: 1;
 }
 
 @media (hover: hover) {
-  .emotion-26:hover {
+  .emotion-25:hover {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
 @media (hover: none) {
-  .emotion-26:active {
+  .emotion-25:active {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
-.emotion-26[data-active] {
+.emotion-25[data-active] {
   border-color: #25262b;
   color: #000;
 }
 
 @media (hover: hover) {
-  .emotion-26[data-active]:hover {
+  .emotion-25[data-active]:hover {
     border-color: #25262b;
   }
 }
 
 @media (hover: none) {
-  .emotion-26[data-active]:active {
+  .emotion-25[data-active]:active {
     border-color: #25262b;
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2800,11 +2792,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   align-items: center;
 }
 
-.emotion-27:not(:only-child) {
+.emotion-26:not(:only-child) {
   margin-right: 0.4375rem;
 }
 
-.emotion-33 {
+.emotion-32 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -2846,73 +2838,73 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   padding-right: 1.5rem;
 }
 
-.emotion-33:focus {
+.emotion-32:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-33:focus:not(:focus-visible) {
+.emotion-32:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-33:disabled {
+.emotion-32:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
 @media (hover: hover) {
-  .emotion-33:disabled:hover {
+  .emotion-32:disabled:hover {
     background-color: transparent;
   }
 }
 
 @media (hover: none) {
-  .emotion-33:disabled:active {
+  .emotion-32:disabled:active {
     background-color: transparent;
   }
 }
 
-.emotion-33:focus {
+.emotion-32:focus {
   z-index: 1;
 }
 
 @media (hover: hover) {
-  .emotion-33:hover {
+  .emotion-32:hover {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
 @media (hover: none) {
-  .emotion-33:active {
+  .emotion-32:active {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
-.emotion-33[data-active] {
+.emotion-32[data-active] {
   border-color: #25262b;
   color: #000;
 }
 
 @media (hover: hover) {
-  .emotion-33[data-active]:hover {
+  .emotion-32[data-active]:hover {
     border-color: #25262b;
   }
 }
 
 @media (hover: none) {
-  .emotion-33[data-active]:active {
+  .emotion-32[data-active]:active {
     border-color: #25262b;
   }
 }
 
-.emotion-39 {
+.emotion-38 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-42 {
+.emotion-41 {
   top: 50%;
   right: -12px;
   -webkit-transform: translate(50%, -50%);
@@ -2955,7 +2947,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-radius: 62.5rem;
 }
 
-.emotion-45 {
+.emotion-44 {
   -webkit-animation: animation-0 1000ms linear infinite;
   animation: animation-0 1000ms linear infinite;
   top: 50%;
@@ -2970,7 +2962,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-radius: 62.5rem;
 }
 
-.emotion-47 {
+.emotion-46 {
   height: 100%;
   display: none;
   overflow: hidden;
@@ -2978,14 +2970,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-bottom-right-radius: 7px;
 }
 
-.emotion-49 {
+.emotion-48 {
   height: 100%;
   overflow: hidden;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
 
-.emotion-50 {
+.emotion-49 {
   padding: 0.625rem;
   padding-top: 0rem;
   height: 100%;
@@ -2999,7 +2991,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   background: #e9ecef;
 }
 
-.emotion-52 {
+.emotion-51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3022,7 +3014,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   margin-top: 0.75rem;
 }
 
-.emotion-54 {
+.emotion-53 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3052,7 +3044,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   padding: 0.625rem;
 }
 
-.emotion-54>* {
+.emotion-53>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -3060,7 +3052,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   flex-grow: 0;
 }
 
-.emotion-56 {
+.emotion-55 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3084,7 +3076,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   gap: 1rem;
 }
 
-.emotion-56>* {
+.emotion-55>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -3092,7 +3084,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   flex-grow: 0;
 }
 
-.emotion-59 {
+.emotion-58 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -3134,40 +3126,40 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   color: #f03e3e;
 }
 
-.emotion-59:focus {
+.emotion-58:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-59:focus:not(:focus-visible) {
+.emotion-58:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-59:hover {
+  .emotion-58:hover {
     background-color: rgba(255, 245, 245, 0.35);
   }
 }
 
 @media (hover: none) {
-  .emotion-59:active {
+  .emotion-58:active {
     background-color: rgba(255, 245, 245, 0.35);
   }
 }
 
-.emotion-59:active {
+.emotion-58:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-59 [data-action-icon-loader] {
+.emotion-58 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-59:disabled,
-.emotion-59[data-disabled] {
+.emotion-58:disabled,
+.emotion-58[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -3176,19 +3168,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-59:disabled:active,
-.emotion-59[data-disabled]:active {
+.emotion-58:disabled:active,
+.emotion-58[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-59[data-loading] {
+.emotion-58[data-loading] {
   pointer-events: none;
 }
 
-.emotion-59[data-loading]::before {
+.emotion-58[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -3200,7 +3192,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-61 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -3242,40 +3234,40 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   color: #000;
 }
 
-.emotion-62:focus {
+.emotion-61:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-62:focus:not(:focus-visible) {
+.emotion-61:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-62:hover {
+  .emotion-61:hover {
     background-color: #f8f9fa;
   }
 }
 
 @media (hover: none) {
-  .emotion-62:active {
+  .emotion-61:active {
     background-color: #f8f9fa;
   }
 }
 
-.emotion-62:active {
+.emotion-61:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-62 [data-action-icon-loader] {
+.emotion-61 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-62:disabled,
-.emotion-62[data-disabled] {
+.emotion-61:disabled,
+.emotion-61[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -3284,19 +3276,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-62:disabled:active,
-.emotion-62[data-disabled]:active {
+.emotion-61:disabled:active,
+.emotion-61[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-62[data-loading] {
+.emotion-61[data-loading] {
   pointer-events: none;
 }
 
-.emotion-62[data-loading]::before {
+.emotion-61[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -3308,20 +3300,20 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: not-allowed;
 }
 
-.emotion-73 {
+.emotion-72 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
 }
 
-.emotion-76 {
+.emotion-75 {
   position: relative;
 }
 
-.emotion-76:has(input:disabled) .mantine-Input-rightSection {
+.emotion-75:has(input:disabled) .mantine-Input-rightSection {
   display: none;
 }
 
-.emotion-79 {
+.emotion-78 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
   -webkit-tap-highlight-color: transparent;
@@ -3347,14 +3339,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-radius: 0.5rem;
 }
 
-.emotion-79:focus,
-.emotion-79:focus-within {
+.emotion-78:focus,
+.emotion-78:focus-within {
   outline: none;
   border-color: #25262b;
 }
 
-.emotion-79:disabled,
-.emotion-79[data-disabled] {
+.emotion-78:disabled,
+.emotion-78[data-disabled] {
   background-color: #f1f3f5;
   color: #909296;
   opacity: 0.6;
@@ -3362,65 +3354,65 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-79:disabled::-webkit-input-placeholder {
+.emotion-78:disabled::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-79:disabled::-moz-placeholder {
+.emotion-78:disabled::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-79:disabled:-ms-input-placeholder {
+.emotion-78:disabled:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-79[data-disabled]::-webkit-input-placeholder {
+.emotion-78[data-disabled]::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-79[data-disabled]::-moz-placeholder {
+.emotion-78[data-disabled]::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-79[data-disabled]:-ms-input-placeholder {
+.emotion-78[data-disabled]:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-79:disabled::placeholder,
-.emotion-79[data-disabled]::placeholder {
+.emotion-78:disabled::placeholder,
+.emotion-78[data-disabled]::placeholder {
   color: #909296;
 }
 
-.emotion-79[data-invalid] {
+.emotion-78[data-invalid] {
   color: #fa5252;
   border-color: #fa5252;
 }
 
-.emotion-79[data-invalid]::-webkit-input-placeholder {
+.emotion-78[data-invalid]::-webkit-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-79[data-invalid]::-moz-placeholder {
+.emotion-78[data-invalid]::-moz-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-79[data-invalid]:-ms-input-placeholder {
+.emotion-78[data-invalid]:-ms-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-79[data-invalid]::placeholder {
+.emotion-78[data-invalid]::placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-79[data-with-icon] {
+.emotion-78[data-with-icon] {
   padding-left: 2.25rem;
 }
 
-.emotion-79::-webkit-input-placeholder {
+.emotion-78::-webkit-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3429,7 +3421,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-79::-moz-placeholder {
+.emotion-78::-moz-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3438,7 +3430,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-79:-ms-input-placeholder {
+.emotion-78:-ms-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3447,7 +3439,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-79::placeholder {
+.emotion-78::placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3456,28 +3448,28 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-79::-webkit-inner-spin-button,
-.emotion-79::-webkit-outer-spin-button,
-.emotion-79::-webkit-search-decoration,
-.emotion-79::-webkit-search-cancel-button,
-.emotion-79::-webkit-search-results-button,
-.emotion-79::-webkit-search-results-decoration {
+.emotion-78::-webkit-inner-spin-button,
+.emotion-78::-webkit-outer-spin-button,
+.emotion-78::-webkit-search-decoration,
+.emotion-78::-webkit-search-cancel-button,
+.emotion-78::-webkit-search-results-button,
+.emotion-78::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.emotion-79[type=number] {
+.emotion-78[type=number] {
   -moz-appearance: textfield;
 }
 
-.emotion-80 {
+.emotion-79 {
   overflow: auto;
   margin-top: 10px;
 }
 
-.emotion-83 {
+.emotion-82 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -3511,50 +3503,50 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-radius: 0.5rem;
 }
 
-.emotion-83:focus {
+.emotion-82:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-83:focus:not(:focus-visible) {
+.emotion-82:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-83[data-active] {
+.emotion-82[data-active] {
   background-color: #25262b;
   color: #fff;
 }
 
 @media (hover: hover) {
-  .emotion-83[data-active]:hover {
+  .emotion-82[data-active]:hover {
     background-color: #1A1B1E;
   }
 }
 
 @media (hover: none) {
-  .emotion-83[data-active]:active {
+  .emotion-82[data-active]:active {
     background-color: #1A1B1E;
   }
 }
 
 @media (hover: hover) {
-  .emotion-83:hover {
+  .emotion-82:hover {
     background-color: #f8f9fa;
   }
 }
 
 @media (hover: none) {
-  .emotion-83:active {
+  .emotion-82:active {
     background-color: #f8f9fa;
   }
 }
 
-.emotion-83[data-disabled] {
+.emotion-82[data-disabled] {
   opacity: 0.4;
   pointer-events: none;
 }
 
-.emotion-84 {
+.emotion-83 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3562,7 +3554,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   text-overflow: ellipsis;
 }
 
-.emotion-88 {
+.emotion-87 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -3572,16 +3564,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   text-decoration: none;
 }
 
-.emotion-88:focus {
+.emotion-87:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-88:focus:not(:focus-visible) {
+.emotion-87:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-90 {
+.emotion-89 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -3592,16 +3584,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
-.emotion-90:focus {
+.emotion-89:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-90:focus:not(:focus-visible) {
+.emotion-89:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-93 {
+.emotion-92 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
@@ -3612,20 +3604,20 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   display: block;
 }
 
-.emotion-93:focus {
+.emotion-92:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-93:focus:not(:focus-visible) {
+.emotion-92:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-93[data-active] {
+.emotion-92[data-active] {
   color: inherit;
 }
 
-.emotion-94 {
+.emotion-93 {
   margin-left: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3643,18 +3635,18 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   transition: transform 150ms ease;
 }
 
-.emotion-94[data-rotate] {
+.emotion-93[data-rotate] {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-97 {
+.emotion-96 {
   padding-left: 1.25rem;
 }
 
-.emotion-99 {
+.emotion-98 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3667,19 +3659,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   height: 100%;
 }
 
-.emotion-99 ._jotai-devtools-internal-panel-resize-handle {
+.emotion-98 ._jotai-devtools-internal-panel-resize-handle {
   -webkit-transition: max-height,min-height,height,0.2s ease-out;
   transition: max-height,min-height,height,0.2s ease-out;
 }
 
-[data-resize-handle-active] .emotion-99 ._jotai-devtools-internal-panel-resize-handle,
-.emotion-99:hover ._jotai-devtools-internal-panel-resize-handle {
+[data-resize-handle-active] .emotion-98 ._jotai-devtools-internal-panel-resize-handle,
+.emotion-98:hover ._jotai-devtools-internal-panel-resize-handle {
   height: 90%;
   min-height: 90%;
   max-height: 90%;
 }
 
-.emotion-100 {
+.emotion-99 {
   border-radius: 2rem;
   vertical-align: middle;
   margin: 0.3125rem;
@@ -3690,7 +3682,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   max-height: 6.25rem;
 }
 
-.emotion-101 {
+.emotion-100 {
   padding: 0.625rem;
   height: 100%;
   position: relative;
@@ -3703,7 +3695,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   flex-direction: column;
 }
 
-.emotion-103 {
+.emotion-102 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3724,7 +3716,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   height: auto;
 }
 
-.emotion-106 {
+.emotion-105 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -3739,16 +3731,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   margin: 0;
 }
 
-.emotion-106:focus {
+.emotion-105:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-106:focus:not(:focus-visible) {
+.emotion-105:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-110 {
+.emotion-109 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -3764,20 +3756,20 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   margin-bottom: 0.625rem;
 }
 
-.emotion-110:focus {
+.emotion-109:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-110:focus:not(:focus-visible) {
+.emotion-109:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-111 {
+.emotion-110 {
   margin-bottom: 0.625rem;
 }
 
-.emotion-113 {
+.emotion-112 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #868e96;
@@ -3790,16 +3782,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   text-transform: uppercase;
 }
 
-.emotion-113:focus {
+.emotion-112:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-113:focus:not(:focus-visible) {
+.emotion-112:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-115 {
+.emotion-114 {
   font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   line-height: 1.55;
   padding: 0.125rem calc(0.625rem / 2);
@@ -3809,22 +3801,22 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   font-size: 0.75rem;
 }
 
-.emotion-121 {
+.emotion-120 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
-.emotion-139 {
+.emotion-138 {
   padding-top: 0.625rem;
   display: none;
 }
 
-.emotion-141 {
+.emotion-140 {
   padding-top: 0.625rem;
 }
 
-.emotion-150 {
+.emotion-149 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -3863,45 +3855,45 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   color: #000;
 }
 
-.emotion-150:focus {
+.emotion-149:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-150:focus:not(:focus-visible) {
+.emotion-149:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-150:focus {
+.emotion-149:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-150:focus:not(:focus-visible) {
+.emotion-149:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-150:hover {
+  .emotion-149:hover {
     background-color: #f8f9fa;
   }
 }
 
 @media (hover: none) {
-  .emotion-150:active {
+  .emotion-149:active {
     background-color: #f8f9fa;
   }
 }
 
-.emotion-150:active {
+.emotion-149:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-150:disabled,
-.emotion-150[data-disabled] {
+.emotion-149:disabled,
+.emotion-149[data-disabled] {
   border-color: transparent;
   background-color: #e9ecef;
   color: #adb5bd;
@@ -3910,19 +3902,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-150:disabled:active,
-.emotion-150[data-disabled]:active {
+.emotion-149:disabled:active,
+.emotion-149[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-150[data-loading] {
+.emotion-149[data-loading] {
   pointer-events: none;
 }
 
-.emotion-150[data-loading]::before {
+.emotion-149[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -3934,7 +3926,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: not-allowed;
 }
 
-.emotion-151 {
+.emotion-150 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3951,7 +3943,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   overflow: visible;
 }
 
-.emotion-155 {
+.emotion-154 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3968,7 +3960,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   transform: rotate(130deg);
 }
 
-.emotion-156 {
+.emotion-155 {
   white-space: nowrap;
   height: 100%;
   overflow: hidden;
@@ -3982,7 +3974,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   align-items: center;
 }
 
-.emotion-158 {
+.emotion-157 {
   height: 56px;
   border-top: 0.09rem solid #dee2e6;
   display: -webkit-box;
@@ -3997,7 +3989,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   gap: 12px;
 }
 
-.emotion-163 {
+.emotion-162 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
@@ -4020,7 +4012,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   flex-grow: 1;
 }
 
-.emotion-164 {
+.emotion-163 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4034,24 +4026,24 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   cursor: pointer;
 }
 
-.emotion-164:has(~ input:disabled) {
+.emotion-163:has(~ input:disabled) {
   pointer-events: none;
 }
 
-.emotion-164:has(~ input:disabled) .mantine-Slider-thumb {
+.emotion-163:has(~ input:disabled) .mantine-Slider-thumb {
   display: none;
 }
 
-.emotion-164:has(~ input:disabled) .mantine-Slider-track::before {
+.emotion-163:has(~ input:disabled) .mantine-Slider-track::before {
   content: "";
   background-color: #e9ecef;
 }
 
-.emotion-164:has(~ input:disabled) .mantine-Slider-bar {
+.emotion-163:has(~ input:disabled) .mantine-Slider-bar {
   background-color: #ced4da;
 }
 
-.emotion-166 {
+.emotion-165 {
   position: relative;
   height: 0.25rem;
   width: 100%;
@@ -4059,7 +4051,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   margin-left: 0.25rem;
 }
 
-.emotion-166::before {
+.emotion-165::before {
   content: "";
   position: absolute;
   top: 0;
@@ -4071,11 +4063,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   z-index: 0;
 }
 
-.emotion-166:before {
+.emotion-165:before {
   background-color: #dee2e6;
 }
 
-.emotion-169 {
+.emotion-168 {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -4087,7 +4079,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   width: calc(0% + 2 * 0.25rem);
 }
 
-.emotion-171 {
+.emotion-170 {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   position: absolute;
@@ -4130,33 +4122,33 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-color: #373A40;
 }
 
-.emotion-171:focus {
+.emotion-170:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-171:focus:not(:focus-visible) {
+.emotion-170:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-172 {
+.emotion-171 {
   position: absolute;
   right: 0.25rem;
   left: 0.25rem;
 }
 
-.emotion-172:has(~ input:disabled) .mantine-Slider-markFilled {
+.emotion-171:has(~ input:disabled) .mantine-Slider-markFilled {
   border: 0.125rem solid #e9ecef;
   border-color: #ced4da;
 }
 
-.emotion-184 {
+.emotion-183 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   max-width: 5rem;
 }
 
-.emotion-190 {
+.emotion-189 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 1.875rem;
   -webkit-tap-highlight-color: transparent;
@@ -4182,14 +4174,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   border-radius: 0.5rem;
 }
 
-.emotion-190:focus,
-.emotion-190:focus-within {
+.emotion-189:focus,
+.emotion-189:focus-within {
   outline: none;
   border-color: #25262b;
 }
 
-.emotion-190:disabled,
-.emotion-190[data-disabled] {
+.emotion-189:disabled,
+.emotion-189[data-disabled] {
   background-color: #f1f3f5;
   color: #909296;
   opacity: 0.6;
@@ -4197,65 +4189,65 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   pointer-events: none;
 }
 
-.emotion-190:disabled::-webkit-input-placeholder {
+.emotion-189:disabled::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-190:disabled::-moz-placeholder {
+.emotion-189:disabled::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-190:disabled:-ms-input-placeholder {
+.emotion-189:disabled:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-190[data-disabled]::-webkit-input-placeholder {
+.emotion-189[data-disabled]::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-190[data-disabled]::-moz-placeholder {
+.emotion-189[data-disabled]::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-190[data-disabled]:-ms-input-placeholder {
+.emotion-189[data-disabled]:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-190:disabled::placeholder,
-.emotion-190[data-disabled]::placeholder {
+.emotion-189:disabled::placeholder,
+.emotion-189[data-disabled]::placeholder {
   color: #909296;
 }
 
-.emotion-190[data-invalid] {
+.emotion-189[data-invalid] {
   color: #fa5252;
   border-color: #fa5252;
 }
 
-.emotion-190[data-invalid]::-webkit-input-placeholder {
+.emotion-189[data-invalid]::-webkit-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-190[data-invalid]::-moz-placeholder {
+.emotion-189[data-invalid]::-moz-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-190[data-invalid]:-ms-input-placeholder {
+.emotion-189[data-invalid]:-ms-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-190[data-invalid]::placeholder {
+.emotion-189[data-invalid]::placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-190[data-with-icon] {
+.emotion-189[data-with-icon] {
   padding-left: 1.875rem;
 }
 
-.emotion-190::-webkit-input-placeholder {
+.emotion-189::-webkit-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4264,7 +4256,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-190::-moz-placeholder {
+.emotion-189::-moz-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4273,7 +4265,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-190:-ms-input-placeholder {
+.emotion-189:-ms-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4282,7 +4274,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-190::placeholder {
+.emotion-189::placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4291,31 +4283,31 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   opacity: 1;
 }
 
-.emotion-190::-webkit-inner-spin-button,
-.emotion-190::-webkit-outer-spin-button,
-.emotion-190::-webkit-search-decoration,
-.emotion-190::-webkit-search-cancel-button,
-.emotion-190::-webkit-search-results-button,
-.emotion-190::-webkit-search-results-decoration {
+.emotion-189::-webkit-inner-spin-button,
+.emotion-189::-webkit-outer-spin-button,
+.emotion-189::-webkit-search-decoration,
+.emotion-189::-webkit-search-cancel-button,
+.emotion-189::-webkit-search-results-button,
+.emotion-189::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.emotion-190[type=number] {
+.emotion-189[type=number] {
   -moz-appearance: textfield;
 }
 
-.emotion-190:not(:disabled) {
+.emotion-189:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-190:not(:disabled)::selection {
+.emotion-189:not(:disabled)::selection {
   background-color: transparent;
 }
 
-.emotion-191 {
+.emotion-190 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -4343,37 +4335,33 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
 >
   <div
     class="emotion-3"
-    data-testid="shell-resize-bar"
-  />
-  <div
-    class="emotion-4"
   >
     <div
-      class="emotion-5"
+      class="emotion-4"
     >
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
       >
         <h1
-          class="emotion-8 emotion-9 emotion-10"
+          class="emotion-7 emotion-8 emotion-9"
         >
           👻 Jōtai DevTools
         </h1>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-10 emotion-11"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-12 emotion-13"
           >
             Alpha
           </span>
         </div>
       </div>
       <div
-        class="emotion-15"
+        class="emotion-14"
       >
         <button
-          class="emotion-16 emotion-17 emotion-18"
+          class="emotion-15 emotion-16 emotion-17"
           title="Toggle color scheme"
           type="button"
         >
@@ -4401,7 +4389,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
           </svg>
         </button>
         <button
-          class="emotion-16 emotion-17 emotion-21"
+          class="emotion-15 emotion-16 emotion-20"
           title="Minimize panel"
           type="button"
         >
@@ -4427,19 +4415,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   </div>
   <div
     aria-orientation="horizontal"
-    class="emotion-22 emotion-23"
+    class="emotion-21 emotion-22"
     role="tablist"
   >
     <button
       aria-selected="false"
-      class="emotion-16 emotion-25 emotion-26"
+      class="emotion-15 emotion-24 emotion-25"
       id="emotion-1-tab-atom-viewer"
       role="tab"
       tabindex="-1"
       type="button"
     >
       <span
-        class="emotion-27 emotion-25Icon"
+        class="emotion-26 emotion-24Icon"
       >
         <svg
           class="tabler-icon tabler-icon-layout-list"
@@ -4462,14 +4450,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </svg>
       </span>
       <span
-        class="emotion-29 emotion-25Label"
+        class="emotion-28 emotion-24Label"
       >
         Atom Viewer
       </span>
     </button>
     <button
       aria-selected="true"
-      class="emotion-16 emotion-25 emotion-33"
+      class="emotion-15 emotion-24 emotion-32"
       data-active="true"
       id="emotion-1-tab-time-travel"
       role="tab"
@@ -4477,7 +4465,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       type="button"
     >
       <span
-        class="emotion-27 emotion-25Icon"
+        class="emotion-26 emotion-24Icon"
       >
         <svg
           class="tabler-icon tabler-icon-timeline"
@@ -4509,17 +4497,17 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </svg>
       </span>
       <span
-        class="emotion-29 emotion-25Label"
+        class="emotion-28 emotion-24Label"
       >
         <div
-          class="emotion-38 emotion-39"
+          class="emotion-37 emotion-38"
           data-testid="jotai-devtools-time-travel-recording-indicator"
         >
           <div
-            class="emotion-40 emotion-41 emotion-42"
+            class="emotion-39 emotion-40 emotion-41"
           />
           <div
-            class="emotion-43 emotion-41 emotion-45"
+            class="emotion-42 emotion-40 emotion-44"
           />
           Time travel
         </div>
@@ -4528,13 +4516,13 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   </div>
   <div
     aria-labelledby="emotion-1-tab-atom-viewer"
-    class="emotion-46 emotion-47"
+    class="emotion-45 emotion-46"
     id="emotion-1-panel-atom-viewer"
     role="tabpanel"
   />
   <div
     aria-labelledby="emotion-1-tab-time-travel"
-    class="emotion-46 emotion-49"
+    class="emotion-45 emotion-48"
     id="emotion-1-panel-time-travel"
     role="tabpanel"
   >
@@ -4554,21 +4542,21 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
       >
         <div
-          class="emotion-50"
+          class="emotion-49"
           data-testid="jotai-devtools-time-travel-panel-left-content"
         >
           <div
-            class="emotion-51 emotion-52"
+            class="emotion-50 emotion-51"
           >
             <div
-              class="emotion-6 emotion-54"
+              class="emotion-5 emotion-53"
             >
               <div
-                class="emotion-6 emotion-56"
+                class="emotion-5 emotion-55"
               >
                 <button
                   aria-label="Stop recording snapshot history"
-                  class="emotion-16 emotion-17 emotion-59"
+                  class="emotion-15 emotion-16 emotion-58"
                   type="button"
                 >
                   <svg
@@ -4592,7 +4580,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 </button>
                 <button
                   aria-label="Clear snapshot history"
-                  class="emotion-16 emotion-17 emotion-62"
+                  class="emotion-15 emotion-16 emotion-61"
                   title="Clear snapshot history"
                   type="button"
                 >
@@ -4624,11 +4612,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 </button>
               </div>
               <div
-                class="emotion-6 emotion-56"
+                class="emotion-5 emotion-55"
               >
                 <button
                   aria-label="Select previous snapshot"
-                  class="emotion-16 emotion-17 emotion-62"
+                  class="emotion-15 emotion-16 emotion-61"
                   data-disabled="true"
                   disabled=""
                   title="Select previous snapshot"
@@ -4653,7 +4641,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 </button>
                 <button
                   aria-label="Select next snapshot"
-                  class="emotion-16 emotion-17 emotion-62"
+                  class="emotion-15 emotion-16 emotion-61"
                   data-disabled="true"
                   disabled=""
                   title="Select next snapshot"
@@ -4679,14 +4667,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
               </div>
             </div>
             <div
-              class="emotion-71 emotion-72 emotion-73"
+              class="emotion-70 emotion-71 emotion-72"
             >
               <div
-                class="emotion-74 emotion-75 emotion-76"
+                class="emotion-73 emotion-74 emotion-75"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-77 emotion-78 emotion-79"
+                  class="emotion-76 emotion-77 emotion-78"
                   id="jotai-devtools-search-input"
                   placeholder="Search"
                   type="text"
@@ -4696,32 +4684,32 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
             </div>
           </div>
           <div
-            class="emotion-80"
+            class="emotion-79"
             data-testid="jotai-devtools-snapshot-history-list"
           >
             <button
-              class="emotion-16 emotion-82 emotion-83"
+              class="emotion-15 emotion-81 emotion-82"
               data-testid="jotai-devtools-snapshot-1"
               type="button"
             >
               <span
-                class="emotion-84 emotion-85"
+                class="emotion-83 emotion-84"
               >
                 <span
-                  class="emotion-8 emotion-87 emotion-88"
+                  class="emotion-7 emotion-86 emotion-87"
                 >
                   <div
-                    class="emotion-8 emotion-90"
+                    class="emotion-7 emotion-89"
                   >
                     1
                   </div>
                 </span>
                 <span
-                  class="emotion-8 emotion-92 emotion-93"
+                  class="emotion-7 emotion-91 emotion-92"
                 />
               </span>
               <span
-                class="emotion-94 emotion-95"
+                class="emotion-93 emotion-94"
               >
                 <svg
                   class="tabler-icon tabler-icon-chevron-right"
@@ -4743,14 +4731,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
             </button>
             <div
               aria-hidden="true"
-              class="emotion-96"
+              class="emotion-95"
               style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
             >
               <div
                 style="opacity: 0; transition: opacity 200ms ease;"
               >
                 <div
-                  class="emotion-97 emotion-98"
+                  class="emotion-96 emotion-97"
                 />
               </div>
             </div>
@@ -4772,10 +4760,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         tabindex="0"
       >
         <div
-          class="emotion-99"
+          class="emotion-98"
         >
           <div
-            class="_jotai-devtools-internal-panel-resize-handle emotion-100"
+            class="_jotai-devtools-internal-panel-resize-handle emotion-99"
           />
         </div>
       </div>
@@ -4788,35 +4776,35 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         style="flex-basis: 0px; flex-grow: 55; flex-shrink: 1; overflow: auto;"
       >
         <div
-          class="emotion-101"
+          class="emotion-100"
         >
           <div
-            class="emotion-51 emotion-103"
+            class="emotion-50 emotion-102"
           >
             <h1
-              class="emotion-8 emotion-9 emotion-106"
+              class="emotion-7 emotion-8 emotion-105"
             >
               Snapshot 
             </h1>
             <div
-              class="emotion-96"
+              class="emotion-95"
             >
               <h1
-                class="emotion-8 emotion-9 emotion-110"
+                class="emotion-7 emotion-8 emotion-109"
               >
                 Meta
               </h1>
               <div
-                class="emotion-111"
+                class="emotion-110"
               >
                 <div
-                  class="emotion-8 emotion-113"
+                  class="emotion-7 emotion-112"
                   data-testid="meta-info-label-Timestamp"
                 >
                   Timestamp
                 </div>
                 <code
-                  class="emotion-114 emotion-115"
+                  class="emotion-113 emotion-114"
                   data-testid="meta-info-value-10:00:00.000 AM"
                   dir="ltr"
                 >
@@ -4825,32 +4813,32 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
               </div>
             </div>
             <div
-              class="emotion-96"
+              class="emotion-95"
             >
               <h1
-                class="emotion-8 emotion-9 emotion-110"
+                class="emotion-7 emotion-8 emotion-109"
               >
                 Value
               </h1>
               <div
-                class="emotion-0 emotion-121"
+                class="emotion-0 emotion-120"
                 id="jotai-devtools-time-travel-value-tabs"
               >
                 <div
                   aria-orientation="horizontal"
-                  class="emotion-22 emotion-23"
+                  class="emotion-21 emotion-22"
                   role="tablist"
                 >
                   <button
                     aria-selected="false"
-                    class="emotion-16 emotion-25 emotion-26"
+                    class="emotion-15 emotion-24 emotion-25"
                     id="jotai-devtools-time-travel-value-tabs-tab-state"
                     role="tab"
                     tabindex="-1"
                     type="button"
                   >
                     <span
-                      class="emotion-27 emotion-25Icon"
+                      class="emotion-26 emotion-24Icon"
                     >
                       <svg
                         class="tabler-icon tabler-icon-file-code"
@@ -4879,14 +4867,14 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                       </svg>
                     </span>
                     <span
-                      class="emotion-29 emotion-25Label"
+                      class="emotion-28 emotion-24Label"
                     >
                       State
                     </span>
                   </button>
                   <button
                     aria-selected="true"
-                    class="emotion-16 emotion-25 emotion-26"
+                    class="emotion-15 emotion-24 emotion-25"
                     data-active="true"
                     id="jotai-devtools-time-travel-value-tabs-tab-diff"
                     role="tab"
@@ -4894,7 +4882,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                     type="button"
                   >
                     <span
-                      class="emotion-27 emotion-25Icon"
+                      class="emotion-26 emotion-24Icon"
                     >
                       <svg
                         class="tabler-icon tabler-icon-file-diff"
@@ -4926,7 +4914,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                       </svg>
                     </span>
                     <span
-                      class="emotion-29 emotion-25Label"
+                      class="emotion-28 emotion-24Label"
                     >
                       Diff
                     </span>
@@ -4934,19 +4922,19 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 </div>
                 <div
                   aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-state"
-                  class="emotion-46 emotion-139"
+                  class="emotion-45 emotion-138"
                   id="jotai-devtools-time-travel-value-tabs-panel-state"
                   role="tabpanel"
                 />
                 <div
                   aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
-                  class="emotion-46 emotion-141"
+                  class="emotion-45 emotion-140"
                   data-testid="jotai-devtools-diff-panel"
                   id="jotai-devtools-time-travel-value-tabs-panel-diff"
                   role="tabpanel"
                 >
                   <code
-                    class="emotion-114 emotion-115"
+                    class="emotion-113 emotion-114"
                     dir="ltr"
                   >
                     (states are equal)
@@ -4955,15 +4943,15 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
               </div>
             </div>
             <div
-              class="emotion-96"
+              class="emotion-95"
             >
               <h1
-                class="emotion-8 emotion-9 emotion-110"
+                class="emotion-7 emotion-8 emotion-109"
               >
                 Actions
               </h1>
               <button
-                class="emotion-16 emotion-149 emotion-150"
+                class="emotion-15 emotion-148 emotion-149"
                 data-button="true"
                 data-disabled="true"
                 disabled=""
@@ -4971,10 +4959,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 type="button"
               >
                 <div
-                  class="emotion-151 emotion-152"
+                  class="emotion-150 emotion-151"
                 >
                   <span
-                    class="emotion-153 emotion-154 emotion-155"
+                    class="emotion-152 emotion-153 emotion-154"
                   >
                     <svg
                       class="tabler-icon tabler-icon-rotate-2"
@@ -5009,7 +4997,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                     </svg>
                   </span>
                   <span
-                    class="emotion-156 emotion-157"
+                    class="emotion-155 emotion-156"
                   >
                     Restore
                   </span>
@@ -5021,10 +5009,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       </div>
     </div>
     <div
-      class="emotion-158"
+      class="emotion-157"
     >
       <button
-        class="emotion-16 emotion-17 emotion-18"
+        class="emotion-15 emotion-16 emotion-17"
         title="Start time travel"
         type="button"
       >
@@ -5048,24 +5036,24 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </svg>
       </button>
       <div
-        class="emotion-162 emotion-163"
+        class="emotion-161 emotion-162"
         tabindex="-1"
       >
         <div
-          class="emotion-164 emotion-165"
+          class="emotion-163 emotion-164"
         >
           <div
-            class="emotion-166 emotion-167"
+            class="emotion-165 emotion-166"
           >
             <div
-              class="emotion-168 emotion-169"
+              class="emotion-167 emotion-168"
             />
             <div
               aria-label=""
               aria-valuemax="100"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="emotion-170 emotion-171"
+              class="emotion-169 emotion-170"
               role="slider"
               style="left: 0%;"
               tabindex="0"
@@ -5073,7 +5061,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
           </div>
         </div>
         <div
-          class="emotion-172 emotion-173"
+          class="emotion-171 emotion-172"
         />
         <input
           type="hidden"
@@ -5081,11 +5069,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         />
       </div>
       <div
-        class="emotion-6 emotion-56"
+        class="emotion-5 emotion-55"
       >
         <button
           aria-label="Restore previous snapshot"
-          class="emotion-16 emotion-17 emotion-62"
+          class="emotion-15 emotion-16 emotion-61"
           data-disabled="true"
           disabled=""
           title="Restore previous snapshot"
@@ -5110,7 +5098,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </button>
         <button
           aria-label="Restore next snapshot"
-          class="emotion-16 emotion-17 emotion-62"
+          class="emotion-15 emotion-16 emotion-61"
           title="Restore next snapshot"
           type="button"
         >
@@ -5133,7 +5121,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </button>
       </div>
       <div
-        class="emotion-71 emotion-183 emotion-184"
+        class="emotion-70 emotion-182 emotion-183"
       >
         <div
           aria-controls="jotai-devtools-playback-speed-dropdown"
@@ -5148,13 +5136,13 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
             value="1x"
           />
           <div
-            class="emotion-74 emotion-186 emotion-76"
+            class="emotion-73 emotion-185 emotion-75"
           >
             <input
               aria-autocomplete="list"
               aria-invalid="false"
               autocomplete="off"
-              class="emotion-77 emotion-189 emotion-190"
+              class="emotion-76 emotion-188 emotion-189"
               color="dark"
               data-mantine-stop-propagation="false"
               data-testid="jotai-devtools-playback-speed-dropdown"
@@ -5164,7 +5152,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
               value="1x"
             />
             <div
-              class="emotion-191 emotion-192 emotion-193"
+              class="emotion-190 emotion-191 emotion-192"
             >
               <svg
                 data-chevron="true"
@@ -5210,13 +5198,6 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  width: calc(100% - 1.25rem);
-  left: 50%;
-  bottom: 0.625rem;
-  -webkit-transform: translate(-50%, 0%);
-  -moz-transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
   border-color: #dee2e6;
   border-width: 1px;
   border-style: solid;
@@ -5230,20 +5211,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 99999;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 37.5rem;
+  min-width: 18.75rem;
+  max-width: 90%;
   height: 23.125rem;
+  min-height: 12.5rem;
   max-height: 90%;
 }
 
 .emotion-3 {
-  width: 100%;
-  height: 5px;
-  cursor: row-resize;
-  z-index: 2;
-  position: absolute;
-  top: -2px;
-}
-
-.emotion-4 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -5251,7 +5231,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   padding: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5266,7 +5246,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   justify-content: space-between;
 }
 
-.emotion-7 {
+.emotion-6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5291,7 +5271,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   margin-right: 0.625rem;
 }
 
-.emotion-7>* {
+.emotion-6>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -5299,7 +5279,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   flex-grow: 0;
 }
 
-.emotion-10 {
+.emotion-9 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -5318,16 +5298,16 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   user-select: none;
 }
 
-.emotion-10:focus {
+.emotion-9:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-10:focus:not(:focus-visible) {
+.emotion-9:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   font-size: 0.5625rem;
@@ -5362,22 +5342,22 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border: 0.0625rem solid transparent;
 }
 
-.emotion-12:focus {
+.emotion-11:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-12:focus:not(:focus-visible) {
+.emotion-11:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-13 {
+.emotion-12 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5388,7 +5368,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   align-items: center;
 }
 
-.emotion-18 {
+.emotion-17 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -5430,40 +5410,40 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   color: #fff;
 }
 
-.emotion-18:focus {
+.emotion-17:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-18:focus:not(:focus-visible) {
+.emotion-17:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-18:hover {
+  .emotion-17:hover {
     background-color: #1A1B1E;
   }
 }
 
 @media (hover: none) {
-  .emotion-18:active {
+  .emotion-17:active {
     background-color: #1A1B1E;
   }
 }
 
-.emotion-18:active {
+.emotion-17:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-18 [data-action-icon-loader] {
+.emotion-17 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-18:disabled,
-.emotion-18[data-disabled] {
+.emotion-17:disabled,
+.emotion-17[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -5472,19 +5452,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   pointer-events: none;
 }
 
-.emotion-18:disabled:active,
-.emotion-18[data-disabled]:active {
+.emotion-17:disabled:active,
+.emotion-17[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-18[data-loading] {
+.emotion-17[data-loading] {
   pointer-events: none;
 }
 
-.emotion-18[data-loading]::before {
+.emotion-17[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -5496,7 +5476,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   cursor: not-allowed;
 }
 
-.emotion-21 {
+.emotion-20 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -5539,40 +5519,40 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   margin-left: 0.625rem;
 }
 
-.emotion-21:focus {
+.emotion-20:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-21:focus:not(:focus-visible) {
+.emotion-20:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-21:hover {
+  .emotion-20:hover {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
 @media (hover: none) {
-  .emotion-21:active {
+  .emotion-20:active {
     background-color: rgba(248, 249, 250, 1);
   }
 }
 
-.emotion-21:active {
+.emotion-20:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-21 [data-action-icon-loader] {
+.emotion-20 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-21:disabled,
-.emotion-21[data-disabled] {
+.emotion-20:disabled,
+.emotion-20[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -5581,19 +5561,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   pointer-events: none;
 }
 
-.emotion-21:disabled:active,
-.emotion-21[data-disabled]:active {
+.emotion-20:disabled:active,
+.emotion-20[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-21[data-loading] {
+.emotion-20[data-loading] {
   pointer-events: none;
 }
 
-.emotion-21[data-loading]::before {
+.emotion-20[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -5605,7 +5585,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   cursor: not-allowed;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5624,7 +5604,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border-bottom: 0.125rem solid #dee2e6;
 }
 
-.emotion-26 {
+.emotion-25 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -5665,68 +5645,68 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-26:focus:not(:focus-visible) {
+.emotion-25:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-26:disabled {
+.emotion-25:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
 @media (hover: hover) {
-  .emotion-26:disabled:hover {
+  .emotion-25:disabled:hover {
     background-color: transparent;
   }
 }
 
 @media (hover: none) {
-  .emotion-26:disabled:active {
+  .emotion-25:disabled:active {
     background-color: transparent;
   }
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   z-index: 1;
 }
 
 @media (hover: hover) {
-  .emotion-26:hover {
+  .emotion-25:hover {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
 @media (hover: none) {
-  .emotion-26:active {
+  .emotion-25:active {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
-.emotion-26[data-active] {
+.emotion-25[data-active] {
   border-color: #25262b;
   color: #000;
 }
 
 @media (hover: hover) {
-  .emotion-26[data-active]:hover {
+  .emotion-25[data-active]:hover {
     border-color: #25262b;
   }
 }
 
 @media (hover: none) {
-  .emotion-26[data-active]:active {
+  .emotion-25[data-active]:active {
     border-color: #25262b;
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5741,11 +5721,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   align-items: center;
 }
 
-.emotion-27:not(:only-child) {
+.emotion-26:not(:only-child) {
   margin-right: 0.4375rem;
 }
 
-.emotion-33 {
+.emotion-32 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -5787,68 +5767,68 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   padding-right: 1rem;
 }
 
-.emotion-33:focus {
+.emotion-32:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-33:focus:not(:focus-visible) {
+.emotion-32:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-33:disabled {
+.emotion-32:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
 @media (hover: hover) {
-  .emotion-33:disabled:hover {
+  .emotion-32:disabled:hover {
     background-color: transparent;
   }
 }
 
 @media (hover: none) {
-  .emotion-33:disabled:active {
+  .emotion-32:disabled:active {
     background-color: transparent;
   }
 }
 
-.emotion-33:focus {
+.emotion-32:focus {
   z-index: 1;
 }
 
 @media (hover: hover) {
-  .emotion-33:hover {
+  .emotion-32:hover {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
 @media (hover: none) {
-  .emotion-33:active {
+  .emotion-32:active {
     background-color: #f8f9fa;
     border-color: #dee2e6;
   }
 }
 
-.emotion-33[data-active] {
+.emotion-32[data-active] {
   border-color: #25262b;
   color: #000;
 }
 
 @media (hover: hover) {
-  .emotion-33[data-active]:hover {
+  .emotion-32[data-active]:hover {
     border-color: #25262b;
   }
 }
 
 @media (hover: none) {
-  .emotion-33[data-active]:active {
+  .emotion-32[data-active]:active {
     border-color: #25262b;
   }
 }
 
-.emotion-39 {
+.emotion-38 {
   height: 100%;
   display: none;
   overflow: hidden;
@@ -5856,14 +5836,14 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border-bottom-right-radius: 7px;
 }
 
-.emotion-41 {
+.emotion-40 {
   height: 100%;
   overflow: hidden;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
 
-.emotion-42 {
+.emotion-41 {
   padding: 0.625rem;
   padding-top: 0rem;
   height: 100%;
@@ -5877,7 +5857,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   background: #e9ecef;
 }
 
-.emotion-44 {
+.emotion-43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5900,7 +5880,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   margin-top: 0.75rem;
 }
 
-.emotion-46 {
+.emotion-45 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5930,7 +5910,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   padding: 0.625rem;
 }
 
-.emotion-46>* {
+.emotion-45>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -5938,7 +5918,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   flex-grow: 0;
 }
 
-.emotion-48 {
+.emotion-47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5962,7 +5942,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   gap: 1rem;
 }
 
-.emotion-48>* {
+.emotion-47>* {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -5970,7 +5950,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   flex-grow: 0;
 }
 
-.emotion-51 {
+.emotion-50 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -6012,40 +5992,40 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   color: #25262b;
 }
 
-.emotion-51:focus {
+.emotion-50:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-51:focus:not(:focus-visible) {
+.emotion-50:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-51:hover {
+  .emotion-50:hover {
     background-color: rgba(193, 194, 197, 0.35);
   }
 }
 
 @media (hover: none) {
-  .emotion-51:active {
+  .emotion-50:active {
     background-color: rgba(193, 194, 197, 0.35);
   }
 }
 
-.emotion-51:active {
+.emotion-50:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-51 [data-action-icon-loader] {
+.emotion-50 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-51:disabled,
-.emotion-51[data-disabled] {
+.emotion-50:disabled,
+.emotion-50[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -6054,19 +6034,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   pointer-events: none;
 }
 
-.emotion-51:disabled:active,
-.emotion-51[data-disabled]:active {
+.emotion-50:disabled:active,
+.emotion-50[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-51[data-loading] {
+.emotion-50[data-loading] {
   pointer-events: none;
 }
 
-.emotion-51[data-loading]::before {
+.emotion-50[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -6078,7 +6058,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   cursor: not-allowed;
 }
 
-.emotion-54 {
+.emotion-53 {
   -webkit-tap-highlight-color: transparent;
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   cursor: pointer;
@@ -6120,40 +6100,40 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   color: #000;
 }
 
-.emotion-54:focus {
+.emotion-53:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-54:focus:not(:focus-visible) {
+.emotion-53:focus:not(:focus-visible) {
   outline: none;
 }
 
 @media (hover: hover) {
-  .emotion-54:hover {
+  .emotion-53:hover {
     background-color: #f8f9fa;
   }
 }
 
 @media (hover: none) {
-  .emotion-54:active {
+  .emotion-53:active {
     background-color: #f8f9fa;
   }
 }
 
-.emotion-54:active {
+.emotion-53:active {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-54 [data-action-icon-loader] {
+.emotion-53 [data-action-icon-loader] {
   max-width: 70%;
 }
 
-.emotion-54:disabled,
-.emotion-54[data-disabled] {
+.emotion-53:disabled,
+.emotion-53[data-disabled] {
   color: #ced4da;
   cursor: not-allowed;
   background-color: #f1f3f5;
@@ -6162,19 +6142,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   pointer-events: none;
 }
 
-.emotion-54:disabled:active,
-.emotion-54[data-disabled]:active {
+.emotion-53:disabled:active,
+.emotion-53[data-disabled]:active {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-54[data-loading] {
+.emotion-53[data-loading] {
   pointer-events: none;
 }
 
-.emotion-54[data-loading]::before {
+.emotion-53[data-loading]::before {
   content: "";
   position: absolute;
   top: -0.0625rem;
@@ -6186,20 +6166,20 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   cursor: not-allowed;
 }
 
-.emotion-65 {
+.emotion-64 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
 }
 
-.emotion-68 {
+.emotion-67 {
   position: relative;
 }
 
-.emotion-68:has(input:disabled) .mantine-Input-rightSection {
+.emotion-67:has(input:disabled) .mantine-Input-rightSection {
   display: none;
 }
 
-.emotion-71 {
+.emotion-70 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 2.25rem;
   -webkit-tap-highlight-color: transparent;
@@ -6225,14 +6205,14 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border-radius: 0.5rem;
 }
 
-.emotion-71:focus,
-.emotion-71:focus-within {
+.emotion-70:focus,
+.emotion-70:focus-within {
   outline: none;
   border-color: #25262b;
 }
 
-.emotion-71:disabled,
-.emotion-71[data-disabled] {
+.emotion-70:disabled,
+.emotion-70[data-disabled] {
   background-color: #f1f3f5;
   color: #909296;
   opacity: 0.6;
@@ -6240,65 +6220,65 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   pointer-events: none;
 }
 
-.emotion-71:disabled::-webkit-input-placeholder {
+.emotion-70:disabled::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-71:disabled::-moz-placeholder {
+.emotion-70:disabled::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-71:disabled:-ms-input-placeholder {
+.emotion-70:disabled:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-71[data-disabled]::-webkit-input-placeholder {
+.emotion-70[data-disabled]::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-71[data-disabled]::-moz-placeholder {
+.emotion-70[data-disabled]::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-71[data-disabled]:-ms-input-placeholder {
+.emotion-70[data-disabled]:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-71:disabled::placeholder,
-.emotion-71[data-disabled]::placeholder {
+.emotion-70:disabled::placeholder,
+.emotion-70[data-disabled]::placeholder {
   color: #909296;
 }
 
-.emotion-71[data-invalid] {
+.emotion-70[data-invalid] {
   color: #fa5252;
   border-color: #fa5252;
 }
 
-.emotion-71[data-invalid]::-webkit-input-placeholder {
+.emotion-70[data-invalid]::-webkit-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-71[data-invalid]::-moz-placeholder {
+.emotion-70[data-invalid]::-moz-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-71[data-invalid]:-ms-input-placeholder {
+.emotion-70[data-invalid]:-ms-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-71[data-invalid]::placeholder {
+.emotion-70[data-invalid]::placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-71[data-with-icon] {
+.emotion-70[data-with-icon] {
   padding-left: 2.25rem;
 }
 
-.emotion-71::-webkit-input-placeholder {
+.emotion-70::-webkit-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6307,7 +6287,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-71::-moz-placeholder {
+.emotion-70::-moz-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6316,7 +6296,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-71:-ms-input-placeholder {
+.emotion-70:-ms-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6325,7 +6305,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-71::placeholder {
+.emotion-70::placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6334,28 +6314,28 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-71::-webkit-inner-spin-button,
-.emotion-71::-webkit-outer-spin-button,
-.emotion-71::-webkit-search-decoration,
-.emotion-71::-webkit-search-cancel-button,
-.emotion-71::-webkit-search-results-button,
-.emotion-71::-webkit-search-results-decoration {
+.emotion-70::-webkit-inner-spin-button,
+.emotion-70::-webkit-outer-spin-button,
+.emotion-70::-webkit-search-decoration,
+.emotion-70::-webkit-search-cancel-button,
+.emotion-70::-webkit-search-results-button,
+.emotion-70::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.emotion-71[type=number] {
+.emotion-70[type=number] {
   -moz-appearance: textfield;
 }
 
-.emotion-72 {
+.emotion-71 {
   overflow: auto;
   margin-top: 10px;
 }
 
-.emotion-73 {
+.emotion-72 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6368,19 +6348,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   height: 100%;
 }
 
-.emotion-73 ._jotai-devtools-internal-panel-resize-handle {
+.emotion-72 ._jotai-devtools-internal-panel-resize-handle {
   -webkit-transition: max-height,min-height,height,0.2s ease-out;
   transition: max-height,min-height,height,0.2s ease-out;
 }
 
-[data-resize-handle-active] .emotion-73 ._jotai-devtools-internal-panel-resize-handle,
-.emotion-73:hover ._jotai-devtools-internal-panel-resize-handle {
+[data-resize-handle-active] .emotion-72 ._jotai-devtools-internal-panel-resize-handle,
+.emotion-72:hover ._jotai-devtools-internal-panel-resize-handle {
   height: 90%;
   min-height: 90%;
   max-height: 90%;
 }
 
-.emotion-74 {
+.emotion-73 {
   border-radius: 2rem;
   vertical-align: middle;
   margin: 0.3125rem;
@@ -6391,7 +6371,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   max-height: 6.25rem;
 }
 
-.emotion-75 {
+.emotion-74 {
   padding: 0.625rem;
   height: 100%;
   position: relative;
@@ -6404,7 +6384,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   flex-direction: column;
 }
 
-.emotion-76 {
+.emotion-75 {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -6413,7 +6393,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   transform: translateY(-50%);
 }
 
-.emotion-78 {
+.emotion-77 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: inherit;
@@ -6425,16 +6405,16 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   width: 100%;
 }
 
-.emotion-78:focus {
+.emotion-77:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-78:focus:not(:focus-visible) {
+.emotion-77:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-79 {
+.emotion-78 {
   height: 56px;
   border-top: 0.09rem solid #dee2e6;
   display: -webkit-box;
@@ -6449,7 +6429,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   gap: 12px;
 }
 
-.emotion-84 {
+.emotion-83 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
@@ -6472,7 +6452,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   flex-grow: 1;
 }
 
-.emotion-85 {
+.emotion-84 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6486,24 +6466,24 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   cursor: pointer;
 }
 
-.emotion-85:has(~ input:disabled) {
+.emotion-84:has(~ input:disabled) {
   pointer-events: none;
 }
 
-.emotion-85:has(~ input:disabled) .mantine-Slider-thumb {
+.emotion-84:has(~ input:disabled) .mantine-Slider-thumb {
   display: none;
 }
 
-.emotion-85:has(~ input:disabled) .mantine-Slider-track::before {
+.emotion-84:has(~ input:disabled) .mantine-Slider-track::before {
   content: "";
   background-color: #e9ecef;
 }
 
-.emotion-85:has(~ input:disabled) .mantine-Slider-bar {
+.emotion-84:has(~ input:disabled) .mantine-Slider-bar {
   background-color: #ced4da;
 }
 
-.emotion-87 {
+.emotion-86 {
   position: relative;
   height: 0.25rem;
   width: 100%;
@@ -6511,7 +6491,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   margin-left: 0.25rem;
 }
 
-.emotion-87::before {
+.emotion-86::before {
   content: "";
   position: absolute;
   top: 0;
@@ -6523,11 +6503,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   z-index: 0;
 }
 
-.emotion-87:before {
+.emotion-86:before {
   background-color: #dee2e6;
 }
 
-.emotion-90 {
+.emotion-89 {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -6539,7 +6519,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   width: calc(NaN% + 2 * 0.25rem);
 }
 
-.emotion-92 {
+.emotion-91 {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   position: absolute;
@@ -6579,33 +6559,33 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border-color: #373A40;
 }
 
-.emotion-92:focus {
+.emotion-91:focus {
   outline-offset: 0.125rem;
   outline: 0.125rem solid #2C2E33;
 }
 
-.emotion-92:focus:not(:focus-visible) {
+.emotion-91:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-93 {
+.emotion-92 {
   position: absolute;
   right: 0.25rem;
   left: 0.25rem;
 }
 
-.emotion-93:has(~ input:disabled) .mantine-Slider-markFilled {
+.emotion-92:has(~ input:disabled) .mantine-Slider-markFilled {
   border: 0.125rem solid #e9ecef;
   border-color: #ced4da;
 }
 
-.emotion-105 {
+.emotion-104 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   line-height: 1.55;
   max-width: 5rem;
 }
 
-.emotion-111 {
+.emotion-110 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
   height: 1.875rem;
   -webkit-tap-highlight-color: transparent;
@@ -6631,14 +6611,14 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   border-radius: 0.5rem;
 }
 
-.emotion-111:focus,
-.emotion-111:focus-within {
+.emotion-110:focus,
+.emotion-110:focus-within {
   outline: none;
   border-color: #25262b;
 }
 
-.emotion-111:disabled,
-.emotion-111[data-disabled] {
+.emotion-110:disabled,
+.emotion-110[data-disabled] {
   background-color: #f1f3f5;
   color: #909296;
   opacity: 0.6;
@@ -6646,65 +6626,65 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   pointer-events: none;
 }
 
-.emotion-111:disabled::-webkit-input-placeholder {
+.emotion-110:disabled::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-111:disabled::-moz-placeholder {
+.emotion-110:disabled::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-111:disabled:-ms-input-placeholder {
+.emotion-110:disabled:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-111[data-disabled]::-webkit-input-placeholder {
+.emotion-110[data-disabled]::-webkit-input-placeholder {
   color: #909296;
 }
 
-.emotion-111[data-disabled]::-moz-placeholder {
+.emotion-110[data-disabled]::-moz-placeholder {
   color: #909296;
 }
 
-.emotion-111[data-disabled]:-ms-input-placeholder {
+.emotion-110[data-disabled]:-ms-input-placeholder {
   color: #909296;
 }
 
-.emotion-111:disabled::placeholder,
-.emotion-111[data-disabled]::placeholder {
+.emotion-110:disabled::placeholder,
+.emotion-110[data-disabled]::placeholder {
   color: #909296;
 }
 
-.emotion-111[data-invalid] {
+.emotion-110[data-invalid] {
   color: #fa5252;
   border-color: #fa5252;
 }
 
-.emotion-111[data-invalid]::-webkit-input-placeholder {
+.emotion-110[data-invalid]::-webkit-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-111[data-invalid]::-moz-placeholder {
+.emotion-110[data-invalid]::-moz-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-111[data-invalid]:-ms-input-placeholder {
+.emotion-110[data-invalid]:-ms-input-placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-111[data-invalid]::placeholder {
+.emotion-110[data-invalid]::placeholder {
   opacity: 1;
   color: #fa5252;
 }
 
-.emotion-111[data-with-icon] {
+.emotion-110[data-with-icon] {
   padding-left: 1.875rem;
 }
 
-.emotion-111::-webkit-input-placeholder {
+.emotion-110::-webkit-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6713,7 +6693,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-111::-moz-placeholder {
+.emotion-110::-moz-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6722,7 +6702,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-111:-ms-input-placeholder {
+.emotion-110:-ms-input-placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6731,7 +6711,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-111::placeholder {
+.emotion-110::placeholder {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6740,31 +6720,31 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   opacity: 1;
 }
 
-.emotion-111::-webkit-inner-spin-button,
-.emotion-111::-webkit-outer-spin-button,
-.emotion-111::-webkit-search-decoration,
-.emotion-111::-webkit-search-cancel-button,
-.emotion-111::-webkit-search-results-button,
-.emotion-111::-webkit-search-results-decoration {
+.emotion-110::-webkit-inner-spin-button,
+.emotion-110::-webkit-outer-spin-button,
+.emotion-110::-webkit-search-decoration,
+.emotion-110::-webkit-search-cancel-button,
+.emotion-110::-webkit-search-results-button,
+.emotion-110::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.emotion-111[type=number] {
+.emotion-110[type=number] {
   -moz-appearance: textfield;
 }
 
-.emotion-111:not(:disabled) {
+.emotion-110:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-111:not(:disabled)::selection {
+.emotion-110:not(:disabled)::selection {
   background-color: transparent;
 }
 
-.emotion-112 {
+.emotion-111 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -6792,37 +6772,33 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
 >
   <div
     class="emotion-3"
-    data-testid="shell-resize-bar"
-  />
-  <div
-    class="emotion-4"
   >
     <div
-      class="emotion-5"
+      class="emotion-4"
     >
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
       >
         <h1
-          class="emotion-8 emotion-9 emotion-10"
+          class="emotion-7 emotion-8 emotion-9"
         >
           👻 Jōtai DevTools
         </h1>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-10 emotion-11"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-12 emotion-13"
           >
             Alpha
           </span>
         </div>
       </div>
       <div
-        class="emotion-15"
+        class="emotion-14"
       >
         <button
-          class="emotion-16 emotion-17 emotion-18"
+          class="emotion-15 emotion-16 emotion-17"
           title="Toggle color scheme"
           type="button"
         >
@@ -6850,7 +6826,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
           </svg>
         </button>
         <button
-          class="emotion-16 emotion-17 emotion-21"
+          class="emotion-15 emotion-16 emotion-20"
           title="Minimize panel"
           type="button"
         >
@@ -6876,19 +6852,19 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   </div>
   <div
     aria-orientation="horizontal"
-    class="emotion-22 emotion-23"
+    class="emotion-21 emotion-22"
     role="tablist"
   >
     <button
       aria-selected="false"
-      class="emotion-16 emotion-25 emotion-26"
+      class="emotion-15 emotion-24 emotion-25"
       id="emotion-1-tab-atom-viewer"
       role="tab"
       tabindex="-1"
       type="button"
     >
       <span
-        class="emotion-27 emotion-25Icon"
+        class="emotion-26 emotion-24Icon"
       >
         <svg
           class="tabler-icon tabler-icon-layout-list"
@@ -6911,14 +6887,14 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </svg>
       </span>
       <span
-        class="emotion-29 emotion-25Label"
+        class="emotion-28 emotion-24Label"
       >
         Atom Viewer
       </span>
     </button>
     <button
       aria-selected="true"
-      class="emotion-16 emotion-25 emotion-33"
+      class="emotion-15 emotion-24 emotion-32"
       data-active="true"
       id="emotion-1-tab-time-travel"
       role="tab"
@@ -6926,7 +6902,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       type="button"
     >
       <span
-        class="emotion-27 emotion-25Icon"
+        class="emotion-26 emotion-24Icon"
       >
         <svg
           class="tabler-icon tabler-icon-timeline"
@@ -6958,7 +6934,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </svg>
       </span>
       <span
-        class="emotion-29 emotion-25Label"
+        class="emotion-28 emotion-24Label"
       >
         Time travel
       </span>
@@ -6966,13 +6942,13 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   </div>
   <div
     aria-labelledby="emotion-1-tab-atom-viewer"
-    class="emotion-38 emotion-39"
+    class="emotion-37 emotion-38"
     id="emotion-1-panel-atom-viewer"
     role="tabpanel"
   />
   <div
     aria-labelledby="emotion-1-tab-time-travel"
-    class="emotion-38 emotion-41"
+    class="emotion-37 emotion-40"
     id="emotion-1-panel-time-travel"
     role="tabpanel"
   >
@@ -6992,21 +6968,21 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
       >
         <div
-          class="emotion-42"
+          class="emotion-41"
           data-testid="jotai-devtools-time-travel-panel-left-content"
         >
           <div
-            class="emotion-43 emotion-44"
+            class="emotion-42 emotion-43"
           >
             <div
-              class="emotion-6 emotion-46"
+              class="emotion-5 emotion-45"
             >
               <div
-                class="emotion-6 emotion-48"
+                class="emotion-5 emotion-47"
               >
                 <button
                   aria-label="Record snapshot history"
-                  class="emotion-16 emotion-17 emotion-51"
+                  class="emotion-15 emotion-16 emotion-50"
                   type="button"
                 >
                   <svg
@@ -7030,7 +7006,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
                 </button>
                 <button
                   aria-label="Clear snapshot history"
-                  class="emotion-16 emotion-17 emotion-54"
+                  class="emotion-15 emotion-16 emotion-53"
                   data-disabled="true"
                   disabled=""
                   title="Clear snapshot history"
@@ -7064,11 +7040,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
                 </button>
               </div>
               <div
-                class="emotion-6 emotion-48"
+                class="emotion-5 emotion-47"
               >
                 <button
                   aria-label="Select previous snapshot"
-                  class="emotion-16 emotion-17 emotion-54"
+                  class="emotion-15 emotion-16 emotion-53"
                   data-disabled="true"
                   disabled=""
                   title="Select previous snapshot"
@@ -7093,7 +7069,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
                 </button>
                 <button
                   aria-label="Select next snapshot"
-                  class="emotion-16 emotion-17 emotion-54"
+                  class="emotion-15 emotion-16 emotion-53"
                   data-disabled="true"
                   disabled=""
                   title="Select next snapshot"
@@ -7119,14 +7095,14 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
               </div>
             </div>
             <div
-              class="emotion-63 emotion-64 emotion-65"
+              class="emotion-62 emotion-63 emotion-64"
             >
               <div
-                class="emotion-66 emotion-67 emotion-68"
+                class="emotion-65 emotion-66 emotion-67"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-69 emotion-70 emotion-71"
+                  class="emotion-68 emotion-69 emotion-70"
                   id="jotai-devtools-search-input"
                   placeholder="Search"
                   type="text"
@@ -7136,7 +7112,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
             </div>
           </div>
           <div
-            class="emotion-72"
+            class="emotion-71"
             data-testid="jotai-devtools-snapshot-history-list"
           />
         </div>
@@ -7156,10 +7132,10 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         tabindex="0"
       >
         <div
-          class="emotion-73"
+          class="emotion-72"
         >
           <div
-            class="_jotai-devtools-internal-panel-resize-handle emotion-74"
+            class="_jotai-devtools-internal-panel-resize-handle emotion-73"
           />
         </div>
       </div>
@@ -7172,13 +7148,13 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         style="flex-basis: 0px; flex-grow: 55; flex-shrink: 1; overflow: auto;"
       >
         <div
-          class="emotion-75"
+          class="emotion-74"
         >
           <div
-            class="emotion-76"
+            class="emotion-75"
           >
             <div
-              class="emotion-8 emotion-78"
+              class="emotion-7 emotion-77"
             >
               Select a snapshot from the left panel to view the details
             </div>
@@ -7187,10 +7163,10 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       </div>
     </div>
     <div
-      class="emotion-79"
+      class="emotion-78"
     >
       <button
-        class="emotion-16 emotion-17 emotion-18"
+        class="emotion-15 emotion-16 emotion-17"
         data-disabled="true"
         disabled=""
         title="Start time travel"
@@ -7216,31 +7192,31 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </svg>
       </button>
       <div
-        class="emotion-83 emotion-84"
+        class="emotion-82 emotion-83"
         tabindex="-1"
       >
         <div
-          class="emotion-85 emotion-86"
+          class="emotion-84 emotion-85"
         >
           <div
-            class="emotion-87 emotion-88"
+            class="emotion-86 emotion-87"
           >
             <div
-              class="emotion-89 emotion-90"
+              class="emotion-88 emotion-89"
             />
             <div
               aria-label=""
               aria-valuemax="0"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="emotion-91 emotion-92"
+              class="emotion-90 emotion-91"
               role="slider"
               tabindex="0"
             />
           </div>
         </div>
         <div
-          class="emotion-93 emotion-94"
+          class="emotion-92 emotion-93"
         />
         <input
           type="hidden"
@@ -7248,11 +7224,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         />
       </div>
       <div
-        class="emotion-6 emotion-48"
+        class="emotion-5 emotion-47"
       >
         <button
           aria-label="Restore previous snapshot"
-          class="emotion-16 emotion-17 emotion-54"
+          class="emotion-15 emotion-16 emotion-53"
           data-disabled="true"
           disabled=""
           title="Restore previous snapshot"
@@ -7277,7 +7253,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </button>
         <button
           aria-label="Restore next snapshot"
-          class="emotion-16 emotion-17 emotion-54"
+          class="emotion-15 emotion-16 emotion-53"
           data-disabled="true"
           disabled=""
           title="Restore next snapshot"
@@ -7302,7 +7278,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </button>
       </div>
       <div
-        class="emotion-63 emotion-104 emotion-105"
+        class="emotion-62 emotion-103 emotion-104"
       >
         <div
           aria-controls="jotai-devtools-playback-speed-dropdown"
@@ -7317,13 +7293,13 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
             value="1x"
           />
           <div
-            class="emotion-66 emotion-107 emotion-68"
+            class="emotion-65 emotion-106 emotion-67"
           >
             <input
               aria-autocomplete="list"
               aria-invalid="false"
               autocomplete="off"
-              class="emotion-69 emotion-110 emotion-111"
+              class="emotion-68 emotion-109 emotion-110"
               color="dark"
               data-mantine-stop-propagation="false"
               data-testid="jotai-devtools-playback-speed-dropdown"
@@ -7333,7 +7309,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
               value="1x"
             />
             <div
-              class="emotion-112 emotion-113 emotion-114"
+              class="emotion-111 emotion-112 emotion-113"
             >
               <svg
                 data-chevron="true"

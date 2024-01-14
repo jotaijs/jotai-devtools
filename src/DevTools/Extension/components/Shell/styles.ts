@@ -2,11 +2,6 @@ import { Sx } from '@mantine/core';
 
 export const shellStyles: Sx = (theme) => ({
   position: 'fixed',
-  // subtract margins
-  width: 'calc(100% - 1.25rem)',
-  left: '50%',
-  bottom: '0.625rem',
-  transform: 'translate(-50%, 0%)',
   // TODO Do we need this
   //   userSelect: isDragging ? 'none' : 'auto',
   borderColor:
