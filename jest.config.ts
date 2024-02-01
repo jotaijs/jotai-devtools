@@ -3,6 +3,7 @@ import type { Config } from 'jest';
 const config: Config = {
   rootDir: '.',
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/__tests__/setup.ts'],
   transform: {
     '^.+\\.(t|j)sx?$': [
       '@swc/jest',
@@ -52,11 +53,6 @@ const config: Config = {
     '!src/DevTools/Extension/components/Shell/components/AtomViewer/hooks/use.ts',
   ],
   coverageDirectory: './coverage/',
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom/extend-expect',
-    '<rootDir>/__tests__/setup.ts',
-  ],
-  snapshotSerializers: ['@emotion/jest/serializer'],
 };
 
 export default config;

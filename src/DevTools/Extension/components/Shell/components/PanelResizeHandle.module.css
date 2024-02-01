@@ -1,0 +1,17 @@
+.reactPanelResizeHandle {
+    display: flex;
+    align-items: center;
+}
+
+.innerContainer {
+    border-radius: 2rem;
+    vertical-align: middle;
+    transition: max-height, min-height, height, 0.2s ease-out;
+}
+
+.reactPanelResizeHandle:hover .innerContainer,
+[data-resize-handle-active] .innerContainer {
+    height: 90% !important;
+    min-height: 90% !important;
+    max-height: 90% !important;
+}

@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  ActionIcon,
-  Box,
-  Group,
-  Slider,
-  SliderProps,
-  Sx,
-  rem,
-} from '@mantine/core';
+import { ActionIcon, Box, Group, Slider } from '@mantine/core';
 import {
   IconChevronLeft,
   IconChevronRight,
@@ -21,54 +13,7 @@ import {
   useTimeTravelNavigateActions,
 } from '../atoms';
 import { PlaybackSpeedDropdown } from './PlaybackSpeedDropdown';
-
-const sliderStyles: SliderProps['styles'] = (theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  markLabel: { display: 'none' },
-  bar: {
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.colors.gray[6]
-        : theme.colors.dark[4],
-  },
-  track: {
-    '&:before': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[4]
-          : theme.colors.gray[3],
-    },
-  },
-  mark: {
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.colors.gray[5]
-        : theme.colors.gray[7],
-    borderWidth: rem(0),
-  },
-  thumb: {
-    height: rem(14),
-    width: rem(14),
-    borderWidth: rem(3),
-    borderColor:
-      theme.colorScheme === 'dark'
-        ? theme.colors.gray[6]
-        : theme.colors.dark[4],
-  },
-});
-
-const playBarWrapperStyles: Sx = (theme) => ({
-  height: 56,
-  borderTop: `0.09rem solid ${
-    theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
-  }`,
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing.sm,
-  gap: '12px',
-});
+import classes from './PlayBar.module.css';
 
 export const PlayBar = () => {
   const { step, isSlidePossible, max, value } = useSnapshotSliderValue();
@@ -84,7 +29,7 @@ export const PlayBar = () => {
   const isDisabled = !isSlidePossible;
 
   return (
-    <Box sx={playBarWrapperStyles}>
+    <Box className={classes.playBarWrapper}>
       <ActionIcon
         variant="filled"
         color={useThemeMode('dark', 'gray')}
@@ -106,7 +51,12 @@ export const PlayBar = () => {
         disabled={isDisabled}
         step={step}
         onChange={handleOnSliderChange}
-        styles={sliderStyles}
+        classNames={{
+          bar: classes.bar,
+          thumb: classes.thumb,
+          markLabel: classes.markLabel,
+          root: classes.root,
+        }}
       />
       <Group>
         <ActionIcon

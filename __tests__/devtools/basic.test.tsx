@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from '@testing-library/user-event';
 import { atom, useAtom } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { customRender } from '../custom-render';
@@ -50,7 +50,7 @@ describe('DevTools - basic', () => {
 
     // Mantine automatically converts the values to `rem` so we test it in rem
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '23.125rem',
+      height: 'calc(23.125rem * var(--mantine-scale))',
     });
 
     await act(async () => {
@@ -60,8 +60,10 @@ describe('DevTools - basic', () => {
       await fireEvent.mouseUp(resizeBar, { clientY: 400 });
     });
 
+    // console.debug(getComputedStyle(screen.getByTestId('jotai-devtools-shell')));
+
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '12.5rem',
+      height: 'calc(12.5rem * var(--mantine-scale))',
     });
   });
 

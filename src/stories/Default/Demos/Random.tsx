@@ -87,20 +87,12 @@ export const Random = () => {
         mt={5}
         onClick={React.useCallback(() => setCount((c) => c + 1), [setCount])}
         size="xs"
-        uppercase
         color="dark"
       >
         Add 1
       </Button>
       <Divider size="sm" my="lg" />
-      <Button
-        display="block"
-        mt={5}
-        onClick={setError}
-        size="xs"
-        uppercase
-        color="red.8"
-      >
+      <Button display="block" mt={5} onClick={setError} size="xs" color="red.8">
         Trigger error 💥
       </Button>
     </Box>

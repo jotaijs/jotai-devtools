@@ -1,0 +1,7 @@
+.monoSpaceFonts {
+    font-family: var(--mantine-font-family-monospace);
+}
+  
+.navLink {
+    border-radius: var(--mantine-radius-md);
+}

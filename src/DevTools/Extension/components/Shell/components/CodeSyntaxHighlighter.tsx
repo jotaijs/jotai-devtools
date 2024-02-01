@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { Prism, PrismProps } from '@mantine/prism';
+import { CodeHighlight, CodeHighlightProps } from '@mantine/code-highlight';
 
-// Omit "getPrismTheme" prop because we'll apply a custom component-wide theme here
-export type CodeSyntaxHighlighterProps = Omit<PrismProps, 'getPrismTheme'>;
+export type CodeSyntaxHighlighterProps = CodeHighlightProps;
 
 export const CodeSyntaxHighlighter = ({
   children,
   ...rest
 }: React.PropsWithChildren<CodeSyntaxHighlighterProps>) => {
-  return <Prism {...rest}>{children}</Prism>;
+  return <CodeHighlight {...rest}>{children}</CodeHighlight>;
 };

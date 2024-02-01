@@ -1,823 +1,162 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present 1`] = `
-.emotion-1 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  color: #000;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
-}
-
-.emotion-1 *,
-.emotion-1 *::before,
-.emotion-1 *::after {
-  box-sizing: border-box;
-}
-
-.emotion-2 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  position: fixed;
-  width: calc(100% - 1.25rem);
-  left: 50%;
-  bottom: 0.625rem;
-  -webkit-transform: translate(-50%, 0%);
-  -moz-transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
-  border-color: #dee2e6;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 8px;
-  background: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  z-index: 99999;
-  height: 12.5rem;
-  max-height: 90%;
-}
-
-.emotion-3 {
-  width: 100%;
-  height: 5px;
-  cursor: row-resize;
-  z-index: 2;
-  position: absolute;
-  top: -2px;
-}
-
-.emotion-4 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-}
-
-.emotion-5 {
-  padding: 0.625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.emotion-7 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-right: 0.625rem;
-}
-
-.emotion-7>* {
-  box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-}
-
-.emotion-10 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.45;
-  margin: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-10:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-10:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-12 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  font-size: 0.5625rem;
-  height: 1rem;
-  line-height: calc(1rem - 0.125rem);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0 calc(0.625rem / 1.5);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: auto;
-  text-transform: uppercase;
-  border-radius: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.015625rem;
-  cursor: inherit;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  background: rgba(255, 244, 230, 1);
-  color: #fd7e14;
-  border: 0.0625rem solid transparent;
-}
-
-.emotion-12:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-12:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-13 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-18 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: 1rem;
-  background-color: transparent;
-  text-align: left;
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0;
-  line-height: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 1.75rem;
-  min-height: 1.75rem;
-  width: 1.75rem;
-  min-width: 1.75rem;
-  border: 0.0625rem solid transparent;
-  background-color: #25262b;
-  color: #fff;
-}
-
-.emotion-18:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-18:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-18:hover {
-    background-color: #1A1B1E;
-  }
-}
-
-@media (hover: none) {
-  .emotion-18:active {
-    background-color: #1A1B1E;
-  }
-}
-
-.emotion-18:active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-18 [data-action-icon-loader] {
-  max-width: 70%;
-}
-
-.emotion-18:disabled,
-.emotion-18[data-disabled] {
-  color: #ced4da;
-  cursor: not-allowed;
-  background-color: #f1f3f5;
-  border-color: #f1f3f5;
-  background-image: none;
-  pointer-events: none;
-}
-
-.emotion-18:disabled:active,
-.emotion-18[data-disabled]:active {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-18[data-loading] {
-  pointer-events: none;
-}
-
-.emotion-18[data-loading]::before {
-  content: "";
-  position: absolute;
-  top: -0.0625rem;
-  right: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-}
-
-.emotion-21 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: 1rem;
-  background-color: transparent;
-  text-align: left;
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0;
-  line-height: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 1.75rem;
-  min-height: 1.75rem;
-  width: 1.75rem;
-  min-width: 1.75rem;
-  border: 0.0625rem solid transparent;
-  background-color: transparent;
-  color: #868e96;
-  margin-left: 0.625rem;
-}
-
-.emotion-21:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-21:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-21:hover {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-@media (hover: none) {
-  .emotion-21:active {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-.emotion-21:active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-21 [data-action-icon-loader] {
-  max-width: 70%;
-}
-
-.emotion-21:disabled,
-.emotion-21[data-disabled] {
-  color: #ced4da;
-  cursor: not-allowed;
-  background-color: #f1f3f5;
-  border-color: #f1f3f5;
-  background-image: none;
-  pointer-events: none;
-}
-
-.emotion-21:disabled:active,
-.emotion-21[data-disabled]:active {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-21[data-loading] {
-  pointer-events: none;
-}
-
-.emotion-21[data-loading]::before {
-  content: "";
-  position: absolute;
-  top: -0.0625rem;
-  right: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-}
-
-.emotion-22 {
-  height: 90%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  overflow: scroll;
-}
-
-.emotion-23 {
-  width: 100%;
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.emotion-25 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: #e03131;
-  font-size: 1rem;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 0.3125rem;
-  font-weight: 500;
-}
-
-.emotion-25:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-25:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-27 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 0.3125rem;
-}
-
-.emotion-27:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-27:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-29 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: #e03131;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.75rem;
-}
-
-.emotion-29:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-29:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-32 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  border: 0;
-  color: #e03131;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-32:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-32:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-32:hover {
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-  }
-}
-
-@media (hover: none) {
-  .emotion-32:active {
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-  }
-}
-
-.emotion-34 {
-  position: relative;
-}
-
-.emotion-38 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: 1rem;
-  background-color: transparent;
-  text-align: left;
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0;
-  line-height: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 1.75rem;
-  min-height: 1.75rem;
-  width: 1.75rem;
-  min-width: 1.75rem;
-  border: 0.0625rem solid transparent;
-  background-color: transparent;
-  color: #868e96;
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  left: unset;
-  z-index: 2;
-}
-
-.emotion-38:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-38:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-38:hover {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-@media (hover: none) {
-  .emotion-38:active {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-.emotion-38:active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-38 [data-action-icon-loader] {
-  max-width: 70%;
-}
-
-.emotion-38:disabled,
-.emotion-38[data-disabled] {
-  color: #ced4da;
-  cursor: not-allowed;
-  background-color: #f1f3f5;
-  border-color: #f1f3f5;
-  background-image: none;
-  pointer-events: none;
-}
-
-.emotion-38:disabled:active,
-.emotion-38[data-disabled]:active {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-38[data-loading] {
-  pointer-events: none;
-}
-
-.emotion-38[data-loading]::before {
-  content: "";
-  position: absolute;
-  top: -0.0625rem;
-  right: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-}
-
-.emotion-38,
-.emotion-38:hover {
-  background-color: #f8f9fa;
-}
-
-.emotion-41 {
-  overflow: hidden;
-}
-
-.emotion-42 {
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-44 {
-  box-sizing: border-box;
-  position: relative;
-  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  line-height: 1.7;
-  font-size: 0.8125rem;
-  border-radius: 0.5rem;
-  padding: 0.75rem 0;
-}
-
-.emotion-44.mantine-Prism-code {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.emotion-46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.emotion-48 {
-  width: 100%;
-}
-
 <div>
+  <style
+    data-mantine-styles="true"
+  >
+    :root{--mantine-font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif;--mantine-font-family-monospace: JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;--mantine-font-family-headings: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;--mantine-radius-default: calc(0.5rem * var(--mantine-scale));--mantine-primary-color-filled: var(--mantine-color-dark-filled);--mantine-primary-color-filled-hover: var(--mantine-color-dark-filled-hover);--mantine-primary-color-light: var(--mantine-color-dark-light);--mantine-primary-color-light-hover: var(--mantine-color-dark-light-hover);--mantine-primary-color-light-color: var(--mantine-color-dark-light-color);--mantine-primary-color-0: var(--mantine-color-dark-0);--mantine-primary-color-1: var(--mantine-color-dark-1);--mantine-primary-color-2: var(--mantine-color-dark-2);--mantine-primary-color-3: var(--mantine-color-dark-3);--mantine-primary-color-4: var(--mantine-color-dark-4);--mantine-primary-color-5: var(--mantine-color-dark-5);--mantine-primary-color-6: var(--mantine-color-dark-6);--mantine-primary-color-7: var(--mantine-color-dark-7);--mantine-primary-color-8: var(--mantine-color-dark-8);--mantine-primary-color-9: var(--mantine-color-dark-9);--mantine-color-dark-0: #C1C2C5;--mantine-color-dark-1: #A6A7AB;--mantine-color-dark-2: #909296;--mantine-color-dark-3: #5c5f66;--mantine-color-dark-4: #373A40;--mantine-color-dark-5: #2C2E33;--mantine-color-dark-6: #25262b;--mantine-color-dark-7: #1A1B1E;--mantine-color-dark-8: #141517;--mantine-color-dark-9: #101113;}:root[data-mantine-color-scheme="dark"]{--mantine-color-anchor: var(--mantine-color-dark-4);--mantine-color-dark-light: rgba(37, 38, 43, 0.15);--mantine-color-dark-light-hover: rgba(37, 38, 43, 0.2);--mantine-color-dark-outline-hover: rgba(55, 58, 64, 0.05);}:root[data-mantine-color-scheme="light"]{--mantine-color-anchor: var(--mantine-color-dark-6);--mantine-color-dark-light: rgba(37, 38, 43, 0.1);--mantine-color-dark-light-hover: rgba(37, 38, 43, 0.12);--mantine-color-dark-outline-hover: rgba(37, 38, 43, 0.05);}
+  </style>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
   <div
-    class="emotion-0 emotion-1 emotion-2"
-    data-testid="emotion-1"
-    id="emotion-1"
+    class="undefined jotai-devtools-shell m-89d60db1 mantine-Tabs-root"
+    data-orientation="horizontal"
+    data-testid="jotai-devtools-shell"
+    data-variant="default"
+    id="jotai-devtools-shell"
+    style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
   >
     <div
-      class="emotion-3"
+      class=""
       data-testid="shell-resize-bar"
     />
     <div
-      class="emotion-4"
+      class=""
     >
       <div
-        class="emotion-5"
+        class="m-8bffd616 mantine-Flex-root __m__-rfr"
+        style="align-items: center; justify-content: space-between;"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="m-4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         >
           <h1
-            class="emotion-8 emotion-9 emotion-10"
+            class="m-8a5d1357 mantine-Title-root"
+            data-order="1"
+            data-size="h4"
+            style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
           >
             👻 Jōtai DevTools
           </h1>
           <div
-            class="emotion-11 emotion-12"
+            class="m-347db0ec mantine-Badge-root"
+            data-size="xs"
+            data-variant="light"
+            style="--badge-height: var(--badge-height-xs); --badge-padding-x: var(--badge-padding-x-xs); --badge-fz: var(--badge-fz-xs); --badge-bg: var(--mantine-color-orange-light); --badge-color: var(--mantine-color-orange-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="m-5add502a mantine-Badge-label"
             >
               Alpha
             </span>
           </div>
         </div>
         <div
-          class="emotion-15"
+          class="m-8bffd616 mantine-Flex-root __m__-rg5"
+          style="align-items: center;"
         >
           <button
-            class="emotion-16 emotion-17 emotion-18"
+            class="mantine-focus-auto mantine-active m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+            data-variant="filled"
+            style="--ai-bg: var(--mantine-color-gray-filled); --ai-hover: var(--mantine-color-gray-filled-hover); --ai-color: var(--mantine-color-white); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
             title="Toggle color scheme"
             type="button"
           >
-            <svg
-              class="tabler-icon tabler-icon-moon-stars"
-              fill="none"
-              height="16"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              aria-hidden="true"
+              class="m-302b9fb1 mantine-ActionIcon-loader"
             >
-              <path
-                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+              <span
+                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
               />
-              <path
-                d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
-              />
-              <path
-                d="M19 11h2m-1 -1v2"
-              />
-            </svg>
+            </span>
+            <span
+              class="m-8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                class="tabler-icon tabler-icon-sun"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+                />
+                <path
+                  d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"
+                />
+              </svg>
+            </span>
           </button>
           <button
-            class="emotion-16 emotion-17 emotion-21"
+            class="mantine-focus-auto mantine-active m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+            data-variant="subtle"
+            style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
             title="Minimize panel"
             type="button"
           >
-            <svg
-              class="tabler-icon tabler-icon-minus"
-              fill="none"
-              height="16"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              aria-hidden="true"
+              class="m-302b9fb1 mantine-ActionIcon-loader"
             >
-              <path
-                d="M5 12l14 0"
+              <span
+                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
               />
-            </svg>
+            </span>
+            <span
+              class="m-8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                class="tabler-icon tabler-icon-minus"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12l14 0"
+                />
+              </svg>
+            </span>
           </button>
         </div>
       </div>
     </div>
     <div
-      class="emotion-22"
+      class="m-8bffd616 mantine-Flex-root __m__-rm3"
       data-testid="jotai-devtools-error-boundary"
       role="alert"
+      style="align-items: center; justify-content: center; height: 90%;"
     >
       <div
-        class="emotion-23"
+        class=""
+        style="width: 100%; max-width: 80%; max-height: 80%;"
       >
         <div
-          class="emotion-8 emotion-25"
+          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          data-size="md"
+          style="--text-fz: var(--mantine-font-size-md); --text-lh: var(--mantine-line-height-md); font-weight: 500;"
         >
-          <div
-            class="emotion-8 emotion-27"
+          <span
+            class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
           >
             <svg
               class="tabler-icon tabler-icon-alert-circle"
@@ -841,93 +180,104 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
                 d="M12 16h.01"
               />
             </svg>
-          </div>
+          </span>
           Uh-oh, something went wrong.
         </div>
-        <div
-          class="emotion-8 emotion-29"
+        <span
+          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          data-size="sm"
+          style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
         >
           If you believe this to be a bug, please file an issue on
            
           <a
-            class="emotion-8 emotion-31 emotion-32"
+            class="mantine-focus-auto m-849cf0da m-b6d8b162 mantine-Text-root mantine-Anchor-root"
+            data-underline="hover"
             href="https://github.com/jotaijs/jotai-devtools/issues"
             rel="noreferrer noopener"
+            style="text-decoration: underline;"
             target="_blank"
           >
             Jotai DevTool's GitHub repo
           </a>
            
           with a minimal reproduction and the following error
-        </div>
+        </span>
         <div
-          class="emotion-33 emotion-34"
-          translate="no"
+          class="m-5cb1b9c8 m-1f5e827e mantine-CodeHighlight-root"
+          dir="ltr"
         >
           <button
-            aria-label="Copy code"
-            class="emotion-16 emotion-17 emotion-37 emotion-38"
+            class="mantine-focus-auto mantine-active m-5caae85b mantine-CodeHighlight-copy m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+            data-variant="none"
             type="button"
           >
-            <svg
-              fill="none"
-              style="width: 1rem; height: 1rem;"
-              viewBox="0 0 15 15"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              aria-hidden="true"
+              class="m-302b9fb1 mantine-ActionIcon-loader"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5 2V1H10V2H5ZM4.75 0C4.33579 0 4 0.335786 4 0.75V1H3.5C2.67157 1 2 1.67157 2 2.5V12.5C2 13.3284 2.67157 14 3.5 14H11.5C12.3284 14 13 13.3284 13 12.5V2.5C13 1.67157 12.3284 1 11.5 1H11V0.75C11 0.335786 10.6642 0 10.25 0H4.75ZM11 2V2.25C11 2.66421 10.6642 3 10.25 3H4.75C4.33579 3 4 2.66421 4 2.25V2H3.5C3.22386 2 3 2.22386 3 2.5V12.5C3 12.7761 3.22386 13 3.5 13H11.5C11.7761 13 12 12.7761 12 12.5V2.5C12 2.22386 11.7761 2 11.5 2H11Z"
-                fill="currentColor"
-                fill-rule="evenodd"
+              <span
+                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
               />
-            </svg>
+            </span>
+            <span
+              class="m-8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                />
+                <path
+                  d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"
+                />
+                <path
+                  d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"
+                />
+              </svg>
+            </span>
           </button>
           <div
-            class="emotion-39 emotion-40 emotion-41"
+            class="m-d57069b5 mantine-ScrollArea-root"
             dir="ltr"
-            style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
+            style="--sa-corner-width: 0px; --sa-corner-height: 0px;"
           >
-            <style>
-              [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
-            </style>
             <div
-              class="emotion-42 emotion-43"
-              data-radix-scroll-area-viewport=""
+              class="m-c0783ff9 mantine-ScrollArea-viewport"
+              data-scrollbars="xy"
               style="overflow-x: scroll; overflow-y: scroll;"
             >
               <div
                 style="min-width: 100%; display: table;"
               >
                 <pre
-                  class="emotion-44 emotion-45 prism-code language-javascript"
-                  dir="ltr"
-                  style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
+                  class="m-2c47c4fd mantine-CodeHighlight-pre"
                 >
-                  <div
-                    class="emotion-46 emotion-47 token-line"
+                  <code
+                    class="m-5caae6d3 mantine-CodeHighlight-code"
                   >
-                    <div
-                      class="emotion-48 emotion-47Content"
+                    <span
+                      class="hljs-title class_"
                     >
-                      <span
-                        class="token maybe-class-name"
-                      >
-                        Test
-                      </span>
-                      <span
-                        class="token plain"
-                      >
-                         
-                      </span>
-                      <span
-                        class="token known-class-name class-name"
-                        style="color: rgb(201, 42, 42);"
-                      >
-                        Error
-                      </span>
-                    </div>
-                  </div>
+                      Test
+                    </span>
+                     
+                    <span
+                      class="hljs-title class_"
+                    >
+                      Error
+                    </span>
+                  </code>
                 </pre>
               </div>
             </div>
@@ -943,823 +293,162 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 `;
 
 exports[`DevTools - basic Error boundary should display an error boundary with stack 1`] = `
-.emotion-1 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  color: #000;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
-}
-
-.emotion-1 *,
-.emotion-1 *::before,
-.emotion-1 *::after {
-  box-sizing: border-box;
-}
-
-.emotion-2 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  position: fixed;
-  width: calc(100% - 1.25rem);
-  left: 50%;
-  bottom: 0.625rem;
-  -webkit-transform: translate(-50%, 0%);
-  -moz-transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
-  border-color: #dee2e6;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 8px;
-  background: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  z-index: 99999;
-  height: 12.5rem;
-  max-height: 90%;
-}
-
-.emotion-3 {
-  width: 100%;
-  height: 5px;
-  cursor: row-resize;
-  z-index: 2;
-  position: absolute;
-  top: -2px;
-}
-
-.emotion-4 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-}
-
-.emotion-5 {
-  padding: 0.625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.emotion-7 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-right: 0.625rem;
-}
-
-.emotion-7>* {
-  box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-}
-
-.emotion-10 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.45;
-  margin: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-10:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-10:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-12 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  font-size: 0.5625rem;
-  height: 1rem;
-  line-height: calc(1rem - 0.125rem);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0 calc(0.625rem / 1.5);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: auto;
-  text-transform: uppercase;
-  border-radius: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.015625rem;
-  cursor: inherit;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  background: rgba(255, 244, 230, 1);
-  color: #fd7e14;
-  border: 0.0625rem solid transparent;
-}
-
-.emotion-12:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-12:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-13 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-18 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: 1rem;
-  background-color: transparent;
-  text-align: left;
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0;
-  line-height: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 1.75rem;
-  min-height: 1.75rem;
-  width: 1.75rem;
-  min-width: 1.75rem;
-  border: 0.0625rem solid transparent;
-  background-color: #25262b;
-  color: #fff;
-}
-
-.emotion-18:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-18:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-18:hover {
-    background-color: #1A1B1E;
-  }
-}
-
-@media (hover: none) {
-  .emotion-18:active {
-    background-color: #1A1B1E;
-  }
-}
-
-.emotion-18:active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-18 [data-action-icon-loader] {
-  max-width: 70%;
-}
-
-.emotion-18:disabled,
-.emotion-18[data-disabled] {
-  color: #ced4da;
-  cursor: not-allowed;
-  background-color: #f1f3f5;
-  border-color: #f1f3f5;
-  background-image: none;
-  pointer-events: none;
-}
-
-.emotion-18:disabled:active,
-.emotion-18[data-disabled]:active {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-18[data-loading] {
-  pointer-events: none;
-}
-
-.emotion-18[data-loading]::before {
-  content: "";
-  position: absolute;
-  top: -0.0625rem;
-  right: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-}
-
-.emotion-21 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: 1rem;
-  background-color: transparent;
-  text-align: left;
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0;
-  line-height: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 1.75rem;
-  min-height: 1.75rem;
-  width: 1.75rem;
-  min-width: 1.75rem;
-  border: 0.0625rem solid transparent;
-  background-color: transparent;
-  color: #868e96;
-  margin-left: 0.625rem;
-}
-
-.emotion-21:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-21:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-21:hover {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-@media (hover: none) {
-  .emotion-21:active {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-.emotion-21:active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-21 [data-action-icon-loader] {
-  max-width: 70%;
-}
-
-.emotion-21:disabled,
-.emotion-21[data-disabled] {
-  color: #ced4da;
-  cursor: not-allowed;
-  background-color: #f1f3f5;
-  border-color: #f1f3f5;
-  background-image: none;
-  pointer-events: none;
-}
-
-.emotion-21:disabled:active,
-.emotion-21[data-disabled]:active {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-21[data-loading] {
-  pointer-events: none;
-}
-
-.emotion-21[data-loading]::before {
-  content: "";
-  position: absolute;
-  top: -0.0625rem;
-  right: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-}
-
-.emotion-22 {
-  height: 90%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  overflow: scroll;
-}
-
-.emotion-23 {
-  width: 100%;
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.emotion-25 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: #e03131;
-  font-size: 1rem;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 0.3125rem;
-  font-weight: 500;
-}
-
-.emotion-25:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-25:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-27 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 0.3125rem;
-}
-
-.emotion-27:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-27:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-29 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: #e03131;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.75rem;
-}
-
-.emotion-29:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-29:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-32 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1.55;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  border: 0;
-  color: #e03131;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-32:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-32:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-32:hover {
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-  }
-}
-
-@media (hover: none) {
-  .emotion-32:active {
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-  }
-}
-
-.emotion-34 {
-  position: relative;
-}
-
-.emotion-38 {
-  -webkit-tap-highlight-color: transparent;
-  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe,sans-serif;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: 1rem;
-  background-color: transparent;
-  text-align: left;
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0;
-  line-height: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 1.75rem;
-  min-height: 1.75rem;
-  width: 1.75rem;
-  min-width: 1.75rem;
-  border: 0.0625rem solid transparent;
-  background-color: transparent;
-  color: #868e96;
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  left: unset;
-  z-index: 2;
-}
-
-.emotion-38:focus {
-  outline-offset: 0.125rem;
-  outline: 0.125rem solid #2C2E33;
-}
-
-.emotion-38:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media (hover: hover) {
-  .emotion-38:hover {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-@media (hover: none) {
-  .emotion-38:active {
-    background-color: rgba(248, 249, 250, 1);
-  }
-}
-
-.emotion-38:active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-38 [data-action-icon-loader] {
-  max-width: 70%;
-}
-
-.emotion-38:disabled,
-.emotion-38[data-disabled] {
-  color: #ced4da;
-  cursor: not-allowed;
-  background-color: #f1f3f5;
-  border-color: #f1f3f5;
-  background-image: none;
-  pointer-events: none;
-}
-
-.emotion-38:disabled:active,
-.emotion-38[data-disabled]:active {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-38[data-loading] {
-  pointer-events: none;
-}
-
-.emotion-38[data-loading]::before {
-  content: "";
-  position: absolute;
-  top: -0.0625rem;
-  right: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-}
-
-.emotion-38,
-.emotion-38:hover {
-  background-color: #f8f9fa;
-}
-
-.emotion-41 {
-  overflow: hidden;
-}
-
-.emotion-42 {
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-44 {
-  box-sizing: border-box;
-  position: relative;
-  font-family: JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  line-height: 1.7;
-  font-size: 0.8125rem;
-  border-radius: 0.5rem;
-  padding: 0.75rem 0;
-}
-
-.emotion-44.mantine-Prism-code {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.emotion-46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.emotion-48 {
-  width: 100%;
-}
-
 <div>
+  <style
+    data-mantine-styles="true"
+  >
+    :root{--mantine-font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif;--mantine-font-family-monospace: JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;--mantine-font-family-headings: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;--mantine-radius-default: calc(0.5rem * var(--mantine-scale));--mantine-primary-color-filled: var(--mantine-color-dark-filled);--mantine-primary-color-filled-hover: var(--mantine-color-dark-filled-hover);--mantine-primary-color-light: var(--mantine-color-dark-light);--mantine-primary-color-light-hover: var(--mantine-color-dark-light-hover);--mantine-primary-color-light-color: var(--mantine-color-dark-light-color);--mantine-primary-color-0: var(--mantine-color-dark-0);--mantine-primary-color-1: var(--mantine-color-dark-1);--mantine-primary-color-2: var(--mantine-color-dark-2);--mantine-primary-color-3: var(--mantine-color-dark-3);--mantine-primary-color-4: var(--mantine-color-dark-4);--mantine-primary-color-5: var(--mantine-color-dark-5);--mantine-primary-color-6: var(--mantine-color-dark-6);--mantine-primary-color-7: var(--mantine-color-dark-7);--mantine-primary-color-8: var(--mantine-color-dark-8);--mantine-primary-color-9: var(--mantine-color-dark-9);--mantine-color-dark-0: #C1C2C5;--mantine-color-dark-1: #A6A7AB;--mantine-color-dark-2: #909296;--mantine-color-dark-3: #5c5f66;--mantine-color-dark-4: #373A40;--mantine-color-dark-5: #2C2E33;--mantine-color-dark-6: #25262b;--mantine-color-dark-7: #1A1B1E;--mantine-color-dark-8: #141517;--mantine-color-dark-9: #101113;}:root[data-mantine-color-scheme="dark"]{--mantine-color-anchor: var(--mantine-color-dark-4);--mantine-color-dark-light: rgba(37, 38, 43, 0.15);--mantine-color-dark-light-hover: rgba(37, 38, 43, 0.2);--mantine-color-dark-outline-hover: rgba(55, 58, 64, 0.05);}:root[data-mantine-color-scheme="light"]{--mantine-color-anchor: var(--mantine-color-dark-6);--mantine-color-dark-light: rgba(37, 38, 43, 0.1);--mantine-color-dark-light-hover: rgba(37, 38, 43, 0.12);--mantine-color-dark-outline-hover: rgba(37, 38, 43, 0.05);}
+  </style>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
   <div
-    class="emotion-0 emotion-1 emotion-2"
-    data-testid="emotion-1"
-    id="emotion-1"
+    class="undefined jotai-devtools-shell m-89d60db1 mantine-Tabs-root"
+    data-orientation="horizontal"
+    data-testid="jotai-devtools-shell"
+    data-variant="default"
+    id="jotai-devtools-shell"
+    style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
   >
     <div
-      class="emotion-3"
+      class=""
       data-testid="shell-resize-bar"
     />
     <div
-      class="emotion-4"
+      class=""
     >
       <div
-        class="emotion-5"
+        class="m-8bffd616 mantine-Flex-root __m__-r7t"
+        style="align-items: center; justify-content: space-between;"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="m-4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         >
           <h1
-            class="emotion-8 emotion-9 emotion-10"
+            class="m-8a5d1357 mantine-Title-root"
+            data-order="1"
+            data-size="h4"
+            style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
           >
             👻 Jōtai DevTools
           </h1>
           <div
-            class="emotion-11 emotion-12"
+            class="m-347db0ec mantine-Badge-root"
+            data-size="xs"
+            data-variant="light"
+            style="--badge-height: var(--badge-height-xs); --badge-padding-x: var(--badge-padding-x-xs); --badge-fz: var(--badge-fz-xs); --badge-bg: var(--mantine-color-orange-light); --badge-color: var(--mantine-color-orange-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="m-5add502a mantine-Badge-label"
             >
               Alpha
             </span>
           </div>
         </div>
         <div
-          class="emotion-15"
+          class="m-8bffd616 mantine-Flex-root __m__-r87"
+          style="align-items: center;"
         >
           <button
-            class="emotion-16 emotion-17 emotion-18"
+            class="mantine-focus-auto mantine-active m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+            data-variant="filled"
+            style="--ai-bg: var(--mantine-color-gray-filled); --ai-hover: var(--mantine-color-gray-filled-hover); --ai-color: var(--mantine-color-white); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
             title="Toggle color scheme"
             type="button"
           >
-            <svg
-              class="tabler-icon tabler-icon-moon-stars"
-              fill="none"
-              height="16"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              aria-hidden="true"
+              class="m-302b9fb1 mantine-ActionIcon-loader"
             >
-              <path
-                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+              <span
+                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
               />
-              <path
-                d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
-              />
-              <path
-                d="M19 11h2m-1 -1v2"
-              />
-            </svg>
+            </span>
+            <span
+              class="m-8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                class="tabler-icon tabler-icon-sun"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+                />
+                <path
+                  d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"
+                />
+              </svg>
+            </span>
           </button>
           <button
-            class="emotion-16 emotion-17 emotion-21"
+            class="mantine-focus-auto mantine-active m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+            data-variant="subtle"
+            style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
             title="Minimize panel"
             type="button"
           >
-            <svg
-              class="tabler-icon tabler-icon-minus"
-              fill="none"
-              height="16"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              aria-hidden="true"
+              class="m-302b9fb1 mantine-ActionIcon-loader"
             >
-              <path
-                d="M5 12l14 0"
+              <span
+                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
               />
-            </svg>
+            </span>
+            <span
+              class="m-8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                class="tabler-icon tabler-icon-minus"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12l14 0"
+                />
+              </svg>
+            </span>
           </button>
         </div>
       </div>
     </div>
     <div
-      class="emotion-22"
+      class="m-8bffd616 mantine-Flex-root __m__-re5"
       data-testid="jotai-devtools-error-boundary"
       role="alert"
+      style="align-items: center; justify-content: center; height: 90%;"
     >
       <div
-        class="emotion-23"
+        class=""
+        style="width: 100%; max-width: 80%; max-height: 80%;"
       >
         <div
-          class="emotion-8 emotion-25"
+          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          data-size="md"
+          style="--text-fz: var(--mantine-font-size-md); --text-lh: var(--mantine-line-height-md); font-weight: 500;"
         >
-          <div
-            class="emotion-8 emotion-27"
+          <span
+            class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
           >
             <svg
               class="tabler-icon tabler-icon-alert-circle"
@@ -1783,93 +472,94 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
                 d="M12 16h.01"
               />
             </svg>
-          </div>
+          </span>
           Uh-oh, something went wrong.
         </div>
-        <div
-          class="emotion-8 emotion-29"
+        <span
+          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          data-size="sm"
+          style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
         >
           If you believe this to be a bug, please file an issue on
            
           <a
-            class="emotion-8 emotion-31 emotion-32"
+            class="mantine-focus-auto m-849cf0da m-b6d8b162 mantine-Text-root mantine-Anchor-root"
+            data-underline="hover"
             href="https://github.com/jotaijs/jotai-devtools/issues"
             rel="noreferrer noopener"
+            style="text-decoration: underline;"
             target="_blank"
           >
             Jotai DevTool's GitHub repo
           </a>
            
           with a minimal reproduction and the following error
-        </div>
+        </span>
         <div
-          class="emotion-33 emotion-34"
-          translate="no"
+          class="m-5cb1b9c8 m-1f5e827e mantine-CodeHighlight-root"
+          dir="ltr"
         >
           <button
-            aria-label="Copy code"
-            class="emotion-16 emotion-17 emotion-37 emotion-38"
+            class="mantine-focus-auto mantine-active m-5caae85b mantine-CodeHighlight-copy m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+            data-variant="none"
             type="button"
           >
-            <svg
-              fill="none"
-              style="width: 1rem; height: 1rem;"
-              viewBox="0 0 15 15"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              aria-hidden="true"
+              class="m-302b9fb1 mantine-ActionIcon-loader"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5 2V1H10V2H5ZM4.75 0C4.33579 0 4 0.335786 4 0.75V1H3.5C2.67157 1 2 1.67157 2 2.5V12.5C2 13.3284 2.67157 14 3.5 14H11.5C12.3284 14 13 13.3284 13 12.5V2.5C13 1.67157 12.3284 1 11.5 1H11V0.75C11 0.335786 10.6642 0 10.25 0H4.75ZM11 2V2.25C11 2.66421 10.6642 3 10.25 3H4.75C4.33579 3 4 2.66421 4 2.25V2H3.5C3.22386 2 3 2.22386 3 2.5V12.5C3 12.7761 3.22386 13 3.5 13H11.5C11.7761 13 12 12.7761 12 12.5V2.5C12 2.22386 11.7761 2 11.5 2H11Z"
-                fill="currentColor"
-                fill-rule="evenodd"
+              <span
+                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
               />
-            </svg>
+            </span>
+            <span
+              class="m-8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                />
+                <path
+                  d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"
+                />
+                <path
+                  d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"
+                />
+              </svg>
+            </span>
           </button>
           <div
-            class="emotion-39 emotion-40 emotion-41"
+            class="m-d57069b5 mantine-ScrollArea-root"
             dir="ltr"
-            style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
+            style="--sa-corner-width: 0px; --sa-corner-height: 0px;"
           >
-            <style>
-              [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
-            </style>
             <div
-              class="emotion-42 emotion-43"
-              data-radix-scroll-area-viewport=""
+              class="m-c0783ff9 mantine-ScrollArea-viewport"
+              data-scrollbars="xy"
               style="overflow-x: scroll; overflow-y: scroll;"
             >
               <div
                 style="min-width: 100%; display: table;"
               >
                 <pre
-                  class="emotion-44 emotion-45 prism-code language-javascript"
-                  dir="ltr"
-                  style="color: rgb(33, 37, 41); background-color: rgba(248, 249, 250, 0.65);"
+                  class="m-2c47c4fd mantine-CodeHighlight-pre"
                 >
-                  <div
-                    class="emotion-46 emotion-47 token-line"
+                  <code
+                    class="m-5caae6d3 mantine-CodeHighlight-code"
                   >
-                    <div
-                      class="emotion-48 emotion-47Content"
-                    >
-                      <span
-                        class="token plain"
-                      >
-                        some
-                      </span>
-                      <span
-                        class="token operator"
-                        style="color: rgb(201, 42, 42);"
-                      >
-                        -
-                      </span>
-                      <span
-                        class="token plain"
-                      >
-                        stack
-                      </span>
-                    </div>
-                  </div>
+                    some-stack
+                  </code>
                 </pre>
               </div>
             </div>

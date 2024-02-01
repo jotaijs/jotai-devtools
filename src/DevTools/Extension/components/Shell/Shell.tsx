@@ -11,7 +11,7 @@ import { Header } from './components/Header';
 import { ShellResizeBar } from './components/ShellResizeBar';
 import { TabsHeader } from './components/TabsHeader';
 import { TimeTravel } from './components/TimeTravel';
-import { shellStyles } from './styles';
+import classes from './Shell.module.css';
 
 export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
@@ -24,21 +24,21 @@ export const Shell = () => {
     useDevtoolsJotaiStoreOptions(),
   );
 
-  const handleOnTabChange = (value: TabKeys) => setSelectedShellTab(value);
+  const handleOnTabChange = (value: string | null) =>
+    setSelectedShellTab(value as TabKeys);
   return (
     <Tabs
       keepMounted={false}
       variant="default"
       defaultValue={TabKeys.AtomViewer}
-      sx={shellStyles}
+      className={`${classes.root} jotai-devtools-shell`}
       h={height}
       mah={shellStyleDefaults.maxHeight}
       ref={shellRef}
-      className="jotai-devtools-shell"
       data-testid="jotai-devtools-shell"
       id="jotai-devtools-shell"
       value={selectedShellTab}
-      onTabChange={handleOnTabChange}
+      onChange={handleOnTabChange}
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />
@@ -47,24 +47,14 @@ export const Shell = () => {
         <Tabs.Panel
           value={TabKeys.AtomViewer}
           h="100%"
-          sx={{
-            overflow: 'hidden',
-            // Hide the overlap of this div's bg
-            borderBottomLeftRadius: '7px',
-            borderBottomRightRadius: '7px',
-          }}
+          className={classes.tabPanel}
         >
           <AtomViewer />
         </Tabs.Panel>
         <Tabs.Panel
           value={TabKeys.TimeTravel}
           h="100%"
-          sx={{
-            overflow: 'hidden',
-            // Hide the overlap of this div's bg
-            borderBottomLeftRadius: '7px',
-            borderBottomRightRadius: '7px',
-          }}
+          className={classes.tabPanel}
         >
           <TimeTravel />
         </Tabs.Panel>

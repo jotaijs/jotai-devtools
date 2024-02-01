@@ -1,6 +1,8 @@
-import { useMantineColorScheme } from '@mantine/core';
+import { useComputedColorScheme } from '@mantine/core';
 
 export const useThemeMode = <L, T>(light: L, dark: T) => {
-  const { colorScheme } = useMantineColorScheme();
-  return colorScheme === 'light' ? light : dark;
+  const theme = useComputedColorScheme('dark', {
+    getInitialValueInEffect: true,
+  });
+  return theme === 'light' ? light : dark;
 };

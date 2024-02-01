@@ -8,6 +8,8 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     '@storybook/addon-mdx-gfm',
+    '@storybook/addon-styling-webpack', // Add this line only if you are not using Vite
+    'storybook-dark-mode',
   ],
   framework: {
     name: '@storybook/react-webpack5',

@@ -29,7 +29,7 @@ export const AtomValue = ({
   const parsedValue = stringifyAtomValue(atomValue);
 
   const handleOnTabChange = useCallback(
-    (value: AtomValueViewer) => {
+    (value: string | null) => {
       if (value) {
         setSelectedValueViewer(value as AtomValueViewer);
       }
@@ -40,7 +40,7 @@ export const AtomValue = ({
   if (parsedValue === ErrorSymbol) {
     return (
       <Box>
-        <Text fw="bold" mb="sm">
+        <Text component="span" fw="bold" mb="sm">
           Raw value
         </Text>
         <ErrorMessage message="Failed to parse the value of the atom" />
@@ -54,7 +54,7 @@ export const AtomValue = ({
   if (!isJsonTreeCompatible) {
     return (
       <Box>
-        <Text fw="bold" mb="sm">
+        <Text component="div" fw="bold" mb="sm">
           Raw value
         </Text>
         <MemoizedValueRenderer value={parsedValue} />
@@ -64,7 +64,7 @@ export const AtomValue = ({
 
   return (
     <Box>
-      <Text fw="bold" mb="sm">
+      <Text component="span" fw="bold" mb="sm">
         Value
       </Text>
       <Tabs
@@ -72,18 +72,18 @@ export const AtomValue = ({
         keepMounted={false}
         id="jotai-devtools-atom-viewer-value-tabs"
         value={atomValueViewer}
-        onTabChange={handleOnTabChange}
+        onChange={handleOnTabChange}
       >
         <Tabs.List>
           <Tabs.Tab
             value="raw-value"
-            icon={<IconSourceCode size="0.9rem" stroke="1.75" />}
+            leftSection={<IconSourceCode size="0.9rem" stroke="1.75" />}
           >
             Raw value
           </Tabs.Tab>
           <Tabs.Tab
             value="json-tree"
-            icon={<IconBinaryTree2 size="0.9rem" stroke="1.75" />}
+            leftSection={<IconBinaryTree2 size="0.9rem" stroke="1.75" />}
           >
             Tree view
           </Tabs.Tab>

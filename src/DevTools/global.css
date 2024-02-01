@@ -1,0 +1,18 @@
+.jotai-devtools-shell {
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  }
+
+.jotai-devtools-trigger-button {
+    position: fixed;
+    border-radius: 50%;
+    border-width: 0;
+    width: 4rem;
+    height: 4rem;
+    z-index: 99999;
+
+    img {
+      height: 2rem;
+    }
+  }

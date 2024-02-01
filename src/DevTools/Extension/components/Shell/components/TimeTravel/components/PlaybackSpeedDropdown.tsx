@@ -19,20 +19,25 @@ export const PlaybackSpeedDropdown = () => {
     if (isValidPlaybackOption(value)) {
       return setOption(value);
     }
+
+    // Null is returned when when value has not changed
+    if (value === null) return;
+
     throw new Error(`[jotai-devtools]: invalid playback option: ${value}`);
   };
 
   return (
     <Select
       value={value}
-      dropdownPosition="top"
       data={options}
+      defaultValue={'1x'}
       onChange={handleOnChange}
       size="xs"
       maw={80}
       color="dark"
       id="jotai-devtools-playback-speed-dropdown"
       data-testid="jotai-devtools-playback-speed-dropdown"
+      comboboxProps={{ position: 'top' }}
     />
   );
 };

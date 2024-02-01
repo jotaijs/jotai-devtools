@@ -1,0 +1,7 @@
+.tab:hover,
+.tab[data-active] {
+    .tabLabel,
+    .tabSection {
+        color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    }
+}

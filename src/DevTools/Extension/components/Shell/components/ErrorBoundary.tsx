@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Anchor, Box, Flex, Sx, Text } from '@mantine/core';
+import { Anchor, Box, Flex, Text } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
 import {
   FallbackProps,
@@ -7,11 +7,7 @@ import {
 } from 'react-error-boundary';
 import { useThemeMode } from '../../../../hooks/useThemeMode';
 import { CodeSyntaxHighlighter } from './CodeSyntaxHighlighter';
-
-const textStyles: Sx = {
-  display: 'flex',
-  alignItems: 'center',
-};
+import classes from './ErrorBoundary.module.css';
 
 const ErrorFallback = ({ error }: FallbackProps) => {
   if (Error?.stackTraceLimit) {
@@ -28,22 +24,29 @@ const ErrorFallback = ({ error }: FallbackProps) => {
       justify="center"
       align="center"
       h="90%"
-      sx={{ overflow: 'scroll' }}
+      className={classes.alert}
       data-testid="jotai-devtools-error-boundary"
     >
       <Box w="100%" maw="80%" mah="80%">
-        <Text size="md" fw="500" color={themedRedColor} sx={textStyles} mb={5}>
-          <Text mr={5} sx={textStyles}>
+        <Text
+          component="div"
+          size="md"
+          fw="500"
+          c={themedRedColor}
+          className={classes.text}
+          mb={5}
+        >
+          <Text component="span" mr={5} className={classes.text}>
             <IconAlertCircle size={16} />
           </Text>
           Uh-oh, something went wrong.
         </Text>
 
-        <Text size="sm" color={themedRedColor} mb="sm">
+        <Text component="span" size="sm" c={themedRedColor} mb="sm">
           If you believe this to be a bug, please file an issue on{' '}
           <Anchor
             href="https://github.com/jotaijs/jotai-devtools/issues"
-            color={themedRedColor}
+            c={themedRedColor}
             td="underline"
             target="_blank"
             rel="noreferrer noopener"
@@ -52,9 +55,10 @@ const ErrorFallback = ({ error }: FallbackProps) => {
           </Anchor>{' '}
           with a minimal reproduction and the following error
         </Text>
-        <CodeSyntaxHighlighter language="javascript">
-          {error.stack?.toString() || error.message}
-        </CodeSyntaxHighlighter>
+        <CodeSyntaxHighlighter
+          code={error.stack?.toString() || error.message}
+          language="javascript"
+        />
       </Box>
     </Flex>
   );

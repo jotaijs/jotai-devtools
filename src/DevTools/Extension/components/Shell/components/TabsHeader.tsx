@@ -2,20 +2,34 @@ import * as React from 'react';
 import { Indicator, Tabs } from '@mantine/core';
 import { IconLayoutList, IconTimeline } from '@tabler/icons-react';
 import { TabKeys } from '../../../../constants';
+import classes from './TabsHeader.module.css';
 import { useShouldRecordSnapshotHistoryValue } from './TimeTravel/atoms';
 
 export const TabsHeader = React.memo(() => {
   const isSnapshotRecordingOn = useShouldRecordSnapshotHistoryValue();
   return (
     <Tabs.List>
-      <Tabs.Tab value={TabKeys.AtomViewer} icon={<IconLayoutList size={14} />}>
+      <Tabs.Tab
+        value={TabKeys.AtomViewer}
+        leftSection={<IconLayoutList size={14} />}
+        classNames={{
+          tab: classes.tab,
+          tabLabel: classes.tabLabel,
+          tabSection: classes.tabSection,
+        }}
+      >
         Atom Viewer
       </Tabs.Tab>
 
       <Tabs.Tab
         value={TabKeys.TimeTravel}
-        icon={<IconTimeline size={14} />}
+        leftSection={<IconTimeline size={14} />}
         pr={isSnapshotRecordingOn ? 'xl' : 'md'}
+        classNames={{
+          tab: classes.tab,
+          tabLabel: classes.tabLabel,
+          tabSection: classes.tabSection,
+        }}
       >
         {isSnapshotRecordingOn ? (
           <Indicator

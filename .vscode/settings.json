@@ -23,5 +23,12 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.multiCursorModifier": "alt",
-  "eslint.useESLintClass": true
+  "eslint.useESLintClass": true,
+  "cssVariables.lookupFiles": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "node_modules/@mantine/core/styles.css"
+  ]
 }
