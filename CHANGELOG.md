@@ -1,3 +1,11 @@
+## [0.8.0](https://github.com/jotaijs/jotai-devtools/compare/v0.7.1...v0.8.0) (2024-02-20)
+
+### Features
+
+- add position option
+  ([#118](https://github.com/jotaijs/jotai-devtools/issues/118))
+  ([9db1951](https://github.com/jotaijs/jotai-devtools/commit/9db195108ce82fa44f3dd72b0515d8a94d480048))
+
 ## [0.7.1](https://github.com/jotaijs/jotai-devtools/compare/v0.7.0...v0.7.1) (2023-12-04)
 
 ### Bug Fixes
