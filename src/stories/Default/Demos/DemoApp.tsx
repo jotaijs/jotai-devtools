@@ -11,24 +11,23 @@ export const DemoApp = (props: DevToolsProps) => {
   return (
     <DemoJotaiStoreContext.Provider value={demoStore}>
       <MantineProvider
-        withNormalizeCSS
-        withGlobalStyles
         theme={{
-          primaryColor: 'dark',
+          primaryColor: 'blue',
           cursorType: 'pointer',
         }}
+        defaultColorScheme={props.defaultColorScheme || 'dark'}
       >
         <DevTools store={demoStore} {...props} />
         <div className="App">
           <React.Suspense
             fallback={
-              <Text className="loading-suspense">
+              <Text component="div" className="loading-suspense">
                 Your suspense loading component...
               </Text>
             }
           >
             <Title size="h3">Demos</Title>
-            <Text mb={10} color="dark.2">
+            <Text component="div" mb={10} c="dark.2">
               Jotai DevTools — Early Preview
             </Text>
 

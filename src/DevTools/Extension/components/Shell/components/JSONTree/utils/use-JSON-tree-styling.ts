@@ -1,4 +1,9 @@
-import { MantineTheme, useMantineTheme } from '@mantine/core';
+import {
+  MantineTheme,
+  rgba,
+  useMantineColorScheme,
+  useMantineTheme,
+} from '@mantine/core';
 import type { Base16Theme } from 'base16';
 import { StylingFunction, createStyling } from 'react-base16-styling';
 import { getJsonTreeTheme } from './get-json-tree-theme';
@@ -30,14 +35,14 @@ const createJSONTreeTheme = (
   const light = {
     scheme: 'Jotai DevTools Light',
     author: 'Jotai DevTools',
-    base00: theme.fn.rgba(theme.colors.gray[0], 0.65),
+    base00: rgba(theme.colors.gray[0], 0.65),
     base01: '#ffffff', // ?? unused
     base02: '#ffffff', // ?? unused
     base03: theme.colors.dark[2], // expanded string
     base04: '#ffffff', // ?? unused
     base05: '#ffffff', // ?? unused
-    base06: theme.fn.rgba(theme.colors.green[8], 0.65), // reserved for diff add
-    base07: theme.fn.rgba(theme.colors.red[8], 0.65), // reserved for diff remove
+    base06: rgba(theme.colors.green[8], 0.65), // reserved for diff add
+    base07: rgba(theme.colors.red[8], 0.65), // reserved for diff remove
     base08: '#ffffff', // ?? unused
     base09: theme.colors.blue[8], // boolean, symbol, numbers, constants
     base0A: theme.colors.violet[9], // function
@@ -57,8 +62,8 @@ const createJSONTreeTheme = (
     base03: theme.colors.dark[3], // expanded string
     base04: '#ffffff', // ?? unused
     base05: '#ffffff', // ?? unused
-    base06: theme.fn.rgba(theme.colors.green[7], 0.65), // reserved for diff add
-    base07: theme.fn.rgba(theme.colors.red[7], 0.65), // reserved for diff remove
+    base06: rgba(theme.colors.green[7], 0.65), // reserved for diff add
+    base07: rgba(theme.colors.red[7], 0.65), // reserved for diff remove
     base08: '#ffffff', // ?? unused
     base09: theme.colors.blue[4], // boolean, symbol, numbers, constants
     base0A: theme.colors.violet[4], // function
@@ -74,7 +79,9 @@ const createJSONTreeTheme = (
 
 const useCreateJSONTreeBase16Theme = () => {
   const theme = useMantineTheme();
-  const base16Theme = createJSONTreeTheme(theme)[theme.colorScheme];
+  const { colorScheme } = useMantineColorScheme();
+  const lightOrDark = colorScheme === 'auto' ? 'dark' : colorScheme;
+  const base16Theme = createJSONTreeTheme(theme)[lightOrDark];
   return base16Theme;
 };
 

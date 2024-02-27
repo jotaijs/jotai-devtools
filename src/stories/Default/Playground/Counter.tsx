@@ -43,14 +43,7 @@ export const Counter = () => {
         {count}
       </Code>
 
-      <Button
-        display="block"
-        mt={5}
-        onClick={add}
-        size="xs"
-        uppercase
-        color="dark"
-      >
+      <Button display="block" mt={5} onClick={add} size="xs" color="dark">
         Add 1
       </Button>
     </Box>

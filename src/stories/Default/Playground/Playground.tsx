@@ -26,7 +26,7 @@ const counterSubject = interval(1000).pipe(map((i) => `#${i}`));
 const counterAtom = atomWithObservable(() => counterSubject);
 counterAtom.debugLabel = 'counterAtom';
 
-const asyncAtom = atom(async (get) => {
+const asyncAtom = atom(async () => {
   return new Promise((resolve) => {
     const timer = window.setTimeout(() => {
       clearTimeout(timer);
@@ -74,11 +74,6 @@ const [userAtom] = atomsWithQuery((get) => ({
   },
 }));
 userAtom.debugLabel = 'userAtom';
-
-const UserData = () => {
-  const [data] = useAtom(userAtom);
-  return <div>{JSON.stringify(data)}</div>;
-};
 
 class CircularClass {
   circular: any;

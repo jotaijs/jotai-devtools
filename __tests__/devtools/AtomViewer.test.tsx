@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { act, render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from '@testing-library/user-event';
 import * as stringifyModule from 'javascript-stringify';
 import { useAtomValue } from 'jotai';
 import { atom } from 'jotai/vanilla';
@@ -216,9 +216,9 @@ describe('DevTools - AtomViewer', () => {
         };
 
         const ToggleAbleAtomWithDevTools = () => {
-          const [shouldShow, setShouldShow] = React.useState(true);
+          const [shouldShow, setShouldShow] = useState(true);
 
-          const handleOntoggle = React.useCallback(() => {
+          const handleOntoggle = useCallback(() => {
             setShouldShow((s) => !s);
           }, [setShouldShow]);
 
@@ -356,9 +356,9 @@ describe('DevTools - AtomViewer', () => {
           ${'bigint'}          | ${BigInt(123)}           | ${'123'}
           ${'symbol'}          | ${Symbol('some-symbol')} | ${'Symbol(some-symbol)'}
           ${'function'}        | ${() => () => 'hello'}   | ${"()=>'hello'"}
-          ${'object'}          | ${{ foo: 'bar' }}        | ${'{ foo: "bar"}'}
+          ${'object'}          | ${{ foo: 'bar' }}        | ${'{ foo: "bar" }'}
           ${'circular-object'} | ${circObj}               | ${'{}'}
-          ${'array'}           | ${[1, 2, 3]}             | ${'[ 1, 2, 3]'}
+          ${'array'}           | ${[1, 2, 3]}             | ${'[ 1, 2, 3 ]'}
         `(
           'should parse "$type" value correctly',
           async ({ value, expected }) => {

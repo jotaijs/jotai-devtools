@@ -68,9 +68,8 @@ const TodoItem = ({ atom, remove }: TodoItemProps) => {
           mb={-6}
         />
         <Text
-          sx={() => ({
-            textDecoration: item.completed ? 'line-through' : '',
-          })}
+          component="div"
+          td={item.completed ? 'line-through' : undefined}
           fz="md"
         >
           {item.title}
@@ -136,11 +135,7 @@ const TodoList = () => {
   };
   return (
     <form onSubmit={add}>
-      <Group
-        sx={{
-          justifyContent: 'space-between',
-        }}
-      >
+      <Group justify="space-between">
         <Filter />
         <Button onClick={handleOnSortClick}>Reverse</Button>
       </Group>

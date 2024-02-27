@@ -9,13 +9,12 @@ export const MemoizedValueRenderer = React.memo(
   ({ value }: MemoizedValueRendererProps): JSX.Element => {
     return (
       <CodeSyntaxHighlighter
+        code={value}
         language="javascript"
         mb={10}
         copyLabel="Copy value"
         data-testid="atom-parsed-value"
-      >
-        {value}
-      </CodeSyntaxHighlighter>
+      />
     );
   },
 );

@@ -1,16 +1,11 @@
 import * as React from 'react';
-import { Box, LoaderProps, LoadingOverlay, Sx, Text } from '@mantine/core';
+import { Box, LoaderProps, LoadingOverlay, Text } from '@mantine/core';
 import { useAtomValue } from 'jotai/react';
 import { useThemeMode } from '../../../../../../../hooks/useThemeMode';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
 import { selectedAtomAtom } from '../../atoms';
+import classes from './AtomDetail.module.css';
 import { DisplayAtomDetails } from './components/DisplayAtomDetails';
-
-const messageBoxWrapperStyles: Sx = {
-  position: 'relative',
-  top: '50%',
-  transform: 'translateY(-50%)',
-};
 
 export const AtomDetail = React.memo((): JSX.Element => {
   const selectedAtomData = useAtomValue(
@@ -24,8 +19,8 @@ export const AtomDetail = React.memo((): JSX.Element => {
 
   if (!selectedAtomData) {
     return (
-      <Box sx={messageBoxWrapperStyles}>
-        <Text w="100%" ta="center">
+      <Box className={classes.messageBoxWrapper}>
+        <Text component="div" w="100%" ta="center">
           Select an atom from the left panel to view the details{' '}
         </Text>
       </Box>
@@ -37,7 +32,9 @@ export const AtomDetail = React.memo((): JSX.Element => {
       fallback={
         <LoadingOverlay
           visible={true}
-          overlayBlur={2}
+          overlayProps={{
+            blur: 2,
+          }}
           loaderProps={loaderProps}
         />
       }

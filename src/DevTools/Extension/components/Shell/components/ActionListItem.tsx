@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { NavLink, Sx, Text } from '@mantine/core';
+import { NavLink, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import { useThemeMode } from '../../../../hooks/useThemeMode';
+import classes from './ActionListItem.module.css';
 
 type ActionListItemProps = {
   label?: string | undefined;
@@ -10,16 +11,8 @@ type ActionListItemProps = {
   isActive: boolean;
 };
 
-const monoSpaceFonts: Sx = (theme) => ({
-  fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
-});
-
-const navLinkStyles: Sx = (theme) => ({
-  borderRadius: theme.radius.md,
-});
-
 export const ActionListItem = React.memo(
-  React.forwardRef<HTMLButtonElement, ActionListItemProps>(
+  React.forwardRef<HTMLAnchorElement, ActionListItemProps>(
     ({ label, onClick, id, isActive, ...rest }, ref) => {
       const handleOnClick = React.useCallback(() => onClick(id), [onClick, id]);
 
@@ -29,12 +22,14 @@ export const ActionListItem = React.memo(
           ref={ref}
           label={React.useMemo(
             () => (
-              <Text sx={monoSpaceFonts}>{label}</Text>
+              <Text component="div" className={classes.monoSpaceFonts}>
+                {label}
+              </Text>
             ),
             [label],
           )}
           variant="filled"
-          sx={navLinkStyles}
+          className={classes.navLink}
           active={isActive}
           color={useThemeMode('dark', 'gray')}
           onClick={handleOnClick}

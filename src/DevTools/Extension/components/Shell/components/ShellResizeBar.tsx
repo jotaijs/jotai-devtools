@@ -1,24 +1,15 @@
 import * as React from 'react';
-import { Box, Sx } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { useSetAtom } from 'jotai/react';
 import { shellStylesAtom } from '../../../../atoms/shell-styles';
 import { shellStyleDefaults } from '../../../../constants';
 import { useDevtoolsJotaiStoreOptions } from '../../../../internal-jotai-store';
+import classes from './ShellResizeBar.module.css';
 
 type ShellResizeBarProps = {
-  // element: HTMLDivElement | null;
   shellRef?: React.RefObject<HTMLDivElement> | null;
 };
 
-const shellResizeBarStyles: Sx = {
-  width: '100%',
-  height: 5,
-  cursor: 'row-resize',
-  zIndex: 2,
-  position: 'absolute',
-  // offset it by 2px as user might try to lift it from the edge
-  top: -2,
-};
 export const ShellResizeBar = ({ shellRef }: ShellResizeBarProps) => {
   const setShellStyle = useSetAtom(
     shellStylesAtom,
@@ -53,7 +44,8 @@ export const ShellResizeBar = ({ shellRef }: ShellResizeBarProps) => {
 
   return (
     <Box
-      sx={shellResizeBarStyles}
+      className={classes.root}
+      h={5}
       onMouseDown={handleMouseDown}
       data-testid="shell-resize-bar"
     />

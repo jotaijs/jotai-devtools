@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Code, MantineColor, Text, Title, Tooltip } from '@mantine/core';
+import { Box, Text } from '@mantine/core';
 import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
 import { MetaInfo } from '../../../../MetaInfo';
 

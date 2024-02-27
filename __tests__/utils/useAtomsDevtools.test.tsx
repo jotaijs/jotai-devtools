@@ -179,15 +179,15 @@ describe('useAtomsDevtools', () => {
     );
 
     await findByText('count: 0');
-    expect(extension.send).toBeCalledTimes(1);
+    expect(extension.send).toHaveBeenCalledTimes(1);
 
     fireEvent.click(getByText('button'));
     await findByText('count: 1');
-    expect(extension.send).toBeCalledTimes(2);
+    expect(extension.send).toHaveBeenCalledTimes(2);
 
     fireEvent.click(getByText('button'));
     await findByText('count: 2');
-    expect(extension.send).toBeCalledTimes(3);
+    expect(extension.send).toHaveBeenCalledTimes(3);
   });
 
   it('[DEV-ONLY] updating state should call devtools.send once in StrictMode', async () => {
@@ -212,8 +212,8 @@ describe('useAtomsDevtools', () => {
       </StrictMode>,
     );
 
-    expect(extensionConnector.disconnect).toBeCalled();
-    expect(extension.init).toBeCalledTimes(1);
+    expect(extensionConnector.disconnect).toHaveBeenCalled();
+    expect(extension.init).toHaveBeenCalledTimes(1);
   });
 
   it('[DEV-ONLY] dependencies + updating state should call devtools.send', async () => {
@@ -242,8 +242,8 @@ describe('useAtomsDevtools', () => {
     );
 
     await findByText('count: 0');
-    expect(extension.send).toBeCalledTimes(1);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(1);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '1' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -265,8 +265,8 @@ describe('useAtomsDevtools', () => {
       getByText('count: 1');
       getByText('double: 2');
     });
-    expect(extension.send).toBeCalledTimes(2);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(2);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '2' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -288,8 +288,8 @@ describe('useAtomsDevtools', () => {
       getByText('count: 2');
       getByText('double: 4');
     });
-    expect(extension.send).toBeCalledTimes(3);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(3);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '3' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -340,8 +340,8 @@ describe('useAtomsDevtools', () => {
       getByText('enabled: true');
       getByText('condition: 0');
     });
-    expect(extension.send).toBeCalledTimes(1);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(1);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '1' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -368,8 +368,8 @@ describe('useAtomsDevtools', () => {
       getByText('enabled: false');
       getByText('condition: 0');
     });
-    expect(extension.send).toBeCalledTimes(2);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(2);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '2' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -396,8 +396,8 @@ describe('useAtomsDevtools', () => {
       getByText('enabled: true');
       getByText('condition: 0');
     });
-    expect(extension.send).toBeCalledTimes(3);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(3);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '3' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -469,8 +469,8 @@ describe('useAtomsDevtools', () => {
       getByText('derived: 1');
       getByText('doubleCount: 2');
     });
-    expect(extension.send).toBeCalledTimes(1);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(1);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '1' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -496,9 +496,9 @@ describe('useAtomsDevtools', () => {
       getByText('loading');
     });
     await waitFor(() => {
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
     });
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '2' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -522,8 +522,8 @@ describe('useAtomsDevtools', () => {
       getByText('derived: 3');
       getByText('doubleCount: 6');
     });
-    expect(extension.send).toBeCalledTimes(3);
-    expect(extension.send).lastCalledWith(
+    expect(extension.send).toHaveBeenCalledTimes(3);
+    expect(extension.send).toHaveBeenLastCalledWith(
       expect.objectContaining({ type: '3' }),
       expect.objectContaining({
         values: expect.objectContaining({
@@ -568,11 +568,11 @@ describe('useAtomsDevtools', () => {
       );
 
       await findByText('count: 0');
-      expect(extension.send).toBeCalledTimes(1);
+      expect(extension.send).toHaveBeenCalledTimes(1);
 
       fireEvent.click(getByText('button'));
       await findByText('count: 1');
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -581,7 +581,7 @@ describe('useAtomsDevtools', () => {
         }),
       );
       await waitFor(() =>
-        expect(extension.init).toBeCalledWith({
+        expect(extension.init).toHaveBeenCalledWith({
           values: {
             [`${countAtom}`]: 1,
           },
@@ -634,7 +634,7 @@ describe('useAtomsDevtools', () => {
         getByText('enabled: false');
         getByText('condition: 0');
       });
-      expect(extension.send).toBeCalledTimes(4);
+      expect(extension.send).toHaveBeenCalledTimes(4);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -646,7 +646,7 @@ describe('useAtomsDevtools', () => {
         getByText('enabled: true');
         getByText('condition: 0');
       });
-      expect(extension.send).toBeCalledTimes(4);
+      expect(extension.send).toHaveBeenCalledTimes(4);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -658,7 +658,7 @@ describe('useAtomsDevtools', () => {
         getByText('enabled: false');
         getByText('condition: 0');
       });
-      expect(extension.send).toBeCalledTimes(4);
+      expect(extension.send).toHaveBeenCalledTimes(4);
     });
 
     it('[DEV-ONLY] time travelling with JUMP_TO_ACTION', async () => {
@@ -684,11 +684,11 @@ describe('useAtomsDevtools', () => {
       );
 
       await findByText('count: 0');
-      expect(extension.send).toBeCalledTimes(1);
+      expect(extension.send).toHaveBeenCalledTimes(1);
 
       fireEvent.click(getByText('button'));
       await findByText('count: 1');
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -697,15 +697,15 @@ describe('useAtomsDevtools', () => {
         }),
       );
       await findByText('count: 0');
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
 
       fireEvent.click(getByText('button'));
       await findByText('count: 1');
-      expect(extension.send).toBeCalledTimes(3);
+      expect(extension.send).toHaveBeenCalledTimes(3);
 
       fireEvent.click(getByText('button'));
       await findByText('count: 2');
-      expect(extension.send).toBeCalledTimes(4);
+      expect(extension.send).toHaveBeenCalledTimes(4);
     });
 
     it('[DEV-ONLY] time travelling with JUMP_TO_STATE', async () => {
@@ -731,15 +731,15 @@ describe('useAtomsDevtools', () => {
       );
 
       await findByText('count: 0');
-      expect(extension.send).toBeCalledTimes(1);
+      expect(extension.send).toHaveBeenCalledTimes(1);
 
       fireEvent.click(getByText('button'));
       await findByText('count: 1');
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
 
       fireEvent.click(getByText('button'));
       await findByText('count: 2');
-      expect(extension.send).toBeCalledTimes(3);
+      expect(extension.send).toHaveBeenCalledTimes(3);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -797,7 +797,7 @@ describe('useAtomsDevtools', () => {
       );
 
       await findByText('count: 0');
-      expect(extension.send).toBeCalledTimes(1);
+      expect(extension.send).toHaveBeenCalledTimes(1);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -807,7 +807,7 @@ describe('useAtomsDevtools', () => {
       );
       fireEvent.click(getByText('button'));
       await findByText('count: 1');
-      expect(extension.send).toBeCalledTimes(1);
+      expect(extension.send).toHaveBeenCalledTimes(1);
 
       act(() =>
         (extensionSubscriber as (message: any) => void)({
@@ -817,7 +817,7 @@ describe('useAtomsDevtools', () => {
       );
       fireEvent.click(getByText('button'));
       await findByText('count: 2');
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
     });
   });
 });

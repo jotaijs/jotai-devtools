@@ -1,0 +1,8 @@
+.alert {
+    overflow: scroll;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}

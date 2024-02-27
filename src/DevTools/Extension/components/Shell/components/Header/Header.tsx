@@ -1,34 +1,27 @@
 import * as React from 'react';
-import { ActionIcon, Badge, Box, Flex, Group, Sx, Title } from '@mantine/core';
+import { ActionIcon, Badge, Box, Flex, Group, Title } from '@mantine/core';
 import { IconMinus } from '@tabler/icons-react';
 import { useSetAtom } from 'jotai/react';
 import { isShellOpenAtom } from '../../../../../atoms/is-shell-open-atom';
+import { useThemeMode } from '../../../../../hooks/useThemeMode';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../internal-jotai-store';
 import { ThemeToggle } from './components/ThemeToggle';
-
-const headerStyles: Sx = {
-  position: 'sticky',
-  top: 0,
-  zIndex: 1,
-  width: '100%',
-};
-
-const logoStyles: Sx = { userSelect: 'none' };
+import classes from './Header.module.css';
 
 export const Header = React.memo(() => {
+  const themedColor = useThemeMode('dark', 'gray');
   const setIsShellOpen = useSetAtom(
     isShellOpenAtom,
     useDevtoolsJotaiStoreOptions(),
   );
-
   return (
-    <Box sx={headerStyles}>
+    <Box className={classes.header}>
       <Flex justify="space-between" align="center" p={10}>
         <Group mr={10}>
-          <Title size="h4" sx={logoStyles}>
+          <Title size="h4" className={classes.logo}>
             👻&nbsp;Jōtai DevTools
           </Title>
-          <Badge color="orange" size="xs">
+          <Badge color="orange" variant="light" size="xs">
             Alpha
           </Badge>
         </Group>
@@ -39,6 +32,8 @@ export const Header = React.memo(() => {
             ml={10}
             title="Minimize panel"
             radius="md"
+            variant="subtle"
+            color={themedColor}
             onClick={() => setIsShellOpen(false)}
           >
             <IconMinus size={16} />

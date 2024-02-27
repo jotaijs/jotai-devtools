@@ -2,7 +2,7 @@ import React from 'react';
 import { MantineProvider } from '@mantine/core';
 import { Meta, StoryObj } from '@storybook/react';
 import { Provider } from 'jotai/react';
-import { DevTools, DevToolsProps, useAtomsDevtools } from '../../../';
+import { DevTools, DevToolsProps } from '../../../';
 import { Playground } from './Playground';
 
 export default {
@@ -45,12 +45,11 @@ export const Default: Story = {
     };
     return (
       <MantineProvider
-        withNormalizeCSS
-        withGlobalStyles
         theme={{
           primaryColor: 'dark',
           cursorType: 'pointer',
         }}
+        defaultColorScheme="dark"
       >
         <Provider>
           <DevTools {...props} />

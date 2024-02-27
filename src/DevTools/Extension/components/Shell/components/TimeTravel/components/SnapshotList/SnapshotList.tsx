@@ -11,10 +11,7 @@ import {
   useSnapshotSearchInputValue,
 } from '../../atoms';
 import { Header } from './components/Header';
-const snapshotHistoryListWrapperStyle = {
-  overflow: 'auto',
-  marginTop: 10,
-};
+import classes from './SnapshotList.module.css';
 
 export const SnapshotList = () => {
   const historyList = useFilteredSnapshotHistoryAtomValue();
@@ -24,7 +21,7 @@ export const SnapshotList = () => {
   const [shouldAutoScroll, setShouldAutoScroll] = useShouldAutoScroll();
 
   const { cancel, scrollIntoView, targetRef, scrollableRef } =
-    useScrollIntoView<HTMLButtonElement, HTMLDivElement>({
+    useScrollIntoView<HTMLAnchorElement, HTMLDivElement>({
       cancelable: true,
       isList: true,
       duration: 200,
@@ -83,16 +80,17 @@ export const SnapshotList = () => {
     <>
       <Header />
       <Box
-        sx={snapshotHistoryListWrapperStyle}
+        className={classes.snapshotHistoryListWrapper}
         ref={scrollableRef}
         data-testid="jotai-devtools-snapshot-history-list"
       >
         {snapshotHistoryList}
       </Box>
       {noResultsFound && (
-        <Group mt={20} position="center">
+        <Group mt={20} justify="center">
           <IconAlertCircle size={16} />
           <Text
+            component="span"
             fz="sm"
             ml={0}
             data-testid="jotai-devtools-no-snapshot-found-message"

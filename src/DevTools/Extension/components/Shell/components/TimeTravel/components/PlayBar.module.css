@@ -1,0 +1,47 @@
+.root {
+    flex-grow: 1;
+}
+
+.markLabel {
+    display: none;
+}
+
+.bar {
+    background-color: var(--mantine-color-dark-4);
+
+    [data-mantine-color-scheme='dark'] & {
+        background-color: var(--mantine-color-gray-6);
+    }
+}
+
+.mark {
+    border-width: 0;
+    background-color: var(--mantine-color-gray-7);
+
+    [data-mantine-color-scheme='dark'] & {
+        background-color: var(--mantine-color-gray-5);
+    }
+}
+
+.thumb {
+    height: 14px;
+    width: 14px;
+    border-width: 3px;
+    
+    border-color: light-dark(var(--mantine-color-dark-4), var(--mantine-color-gray-6));
+}
+
+.playBarWrapper {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: var(--mantine-spacing-sm);
+    gap: 12px;
+    border-top-width: 0.09rem;
+    border-top-style: solid;
+    border-top-color: var(--mantine-color-gray-3);
+
+    [data-mantine-color-scheme='dark'] & {
+        border-top-color: var(--mantine-color-dark-4);
+    }
+}

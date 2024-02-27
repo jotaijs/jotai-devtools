@@ -1,0 +1,32 @@
+
+.root {
+    position: fixed;
+    /* subtract margins */
+    width: calc(100% - 1.25rem);
+    left: 50%;
+    bottom: 0.625rem;
+    transform: translate(-50%, 0%);
+    /* TODO Do we need this */
+    /* userSelect: isDragging ? 'none' : 'auto', */
+    border-width: 1px;
+    border-style: solid;
+    /* Changing this may cause overlaps of bg in nested divs */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+    border-color: var(--mantine-color-gray-3);
+    background: var(--mantine-color-white);
+
+    [data-mantine-color-scheme='dark'] & {
+        border-color: var(--mantine-color-dark-4);
+        background: var(--mantine-color-dark-7);
+    }
+}
+
+.tabPanel {
+    overflow: hidden;
+    /* Hide the overlap of this div's bg */
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}

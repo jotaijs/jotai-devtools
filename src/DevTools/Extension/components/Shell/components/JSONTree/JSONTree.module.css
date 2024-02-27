@@ -1,0 +1,8 @@
+.monoSpaceFonts {
+    font-family: var(--mantine-font-family-monospace);
+    font-size: 13px;
+
+    ul:first-of-type {
+        border-radius: var(--mantine-radius-md);
+    }
+}

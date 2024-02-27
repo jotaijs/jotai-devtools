@@ -10,10 +10,11 @@ export const MetaInfo = ({ label, value, color }: MetaInfoProps) => {
   return (
     <Box mb={10}>
       <Text
+        component="div"
         tt="uppercase"
         fz={10}
         fw="bold"
-        color="dimmed"
+        c="dimmed"
         data-testid={`meta-info-label-${label}`}
       >
         {label}

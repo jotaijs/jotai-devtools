@@ -1,0 +1,15 @@
+.root {
+    width: 100%;
+    cursor: row-resize;
+    z-index: 2;
+    position: absolute;
+    /* offset it by 2px as user might try to lift it from the edge */
+    top: -2px;
+} 
+
+.timeTravelPanel {
+    overflow: hidden;
+    /* Hide the overlap of this div's bg */
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
