@@ -1,12 +1,24 @@
 import * as React from 'react';
-import { Prism, PrismProps } from '@mantine/prism';
+import { CodeHighlight, CodeHighlightProps } from '@mantine/code-highlight';
+import clsx from 'clsx';
+import styles from './CodeSyntaxHighlighter.module.css';
 
-// Omit "getPrismTheme" prop because we'll apply a custom component-wide theme here
-export type CodeSyntaxHighlighterProps = Omit<PrismProps, 'getPrismTheme'>;
+export type CodeSyntaxHighlighterProps = Omit<CodeHighlightProps, 'code'> & {
+  children: CodeHighlightProps['code'];
+};
 
 export const CodeSyntaxHighlighter = ({
   children,
   ...rest
 }: React.PropsWithChildren<CodeSyntaxHighlighterProps>) => {
-  return <Prism {...rest}>{children}</Prism>;
+  return (
+    <CodeHighlight
+      {...rest}
+      code={children}
+      className={clsx(
+        styles['jotai-devtools-code-syntax-highlighter'],
+        rest.className,
+      )}
+    />
+  );
 };

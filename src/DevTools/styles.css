@@ -1,0 +1,15 @@
+.jotai-devtools-shell {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  --webkit-font-smoothing: antialiased;
+  font-size: var(--mantine-font-size-md);
+}
+
+@import '@mantine/core/styles.css';
+@import '@mantine/code-highlight/styles.css';
+@import './fonts/fonts.css';

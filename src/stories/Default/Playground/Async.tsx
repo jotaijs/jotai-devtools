@@ -44,12 +44,12 @@ export const Async = () => {
   return (
     <Box>
       <Title size="h5">Async</Title>
-      <Text mb={10} color="dark.2">
+      <Text mb={10} c="dark.2">
         Out-of-the-box Suspense support. <i>Timeout: 8000 ms</i>
       </Text>
       User: {userId}
       <Text>Request status: {!request ? 'Ready' : '✅ Success'} </Text>
-      <Button onClick={handleFetchClick} size="xs" uppercase mt={5}>
+      <Button onClick={handleFetchClick} size="xs" tt="uppercase" mt={5}>
         Fetch
       </Button>
     </Box>

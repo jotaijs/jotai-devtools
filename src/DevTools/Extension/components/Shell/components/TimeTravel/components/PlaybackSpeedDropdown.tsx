@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Select } from '@mantine/core';
 import { defaultPlaybackOptions, usePlaybackSpeedOption } from '../atoms';
 
@@ -16,6 +16,11 @@ export const PlaybackSpeedDropdown = () => {
   const [value, setOption] = usePlaybackSpeedOption();
 
   const handleOnChange = (value: string | null) => {
+    // User select the option that was already selected
+    if (value === null) {
+      return;
+    }
+
     if (isValidPlaybackOption(value)) {
       return setOption(value);
     }
@@ -25,14 +30,13 @@ export const PlaybackSpeedDropdown = () => {
   return (
     <Select
       value={value}
-      dropdownPosition="top"
       data={options}
       onChange={handleOnChange}
       size="xs"
       maw={80}
-      color="dark"
       id="jotai-devtools-playback-speed-dropdown"
       data-testid="jotai-devtools-playback-speed-dropdown"
+      comboboxProps={{ position: 'top', keepMounted: false, zIndex: 99999 }}
     />
   );
 };

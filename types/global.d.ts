@@ -8,3 +8,4 @@ declare module '*.svg';
 declare module '*.jpeg';
 declare module '*.jpg';
 declare module '*.woff2';
+declare module '*.module.css';

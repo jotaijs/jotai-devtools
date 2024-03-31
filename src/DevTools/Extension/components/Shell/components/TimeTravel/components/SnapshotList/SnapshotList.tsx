@@ -83,14 +83,14 @@ export const SnapshotList = () => {
     <>
       <Header />
       <Box
-        sx={snapshotHistoryListWrapperStyle}
+        style={snapshotHistoryListWrapperStyle}
         ref={scrollableRef}
         data-testid="jotai-devtools-snapshot-history-list"
       >
         {snapshotHistoryList}
       </Box>
       {noResultsFound && (
-        <Group mt={20} position="center">
+        <Group mt={20} justify="center" gap={6}>
           <IconAlertCircle size={16} />
           <Text
             fz="sm"

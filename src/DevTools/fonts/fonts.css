@@ -1,0 +1,61 @@
+@font-face {
+  /* inter-latin-400-normal*/
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./files/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  /* inter-latin-500-normal*/
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./files/Inter-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  /* inter-latin-600-normal*/
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('./files/Inter-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./files/Inter-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  /* jetbrains-mono-latin-400-normal*/
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./files/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  /* jetbrains-mono-latin-600-normal*/
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('./files/JetBrainsMono-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  /* jetbrains-mono-latin-700-normal*/
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./files/JetBrainsMono-Bold.woff2') format('woff2');
+}

@@ -50,7 +50,7 @@ describe('DevTools - basic', () => {
 
     // Mantine automatically converts the values to `rem` so we test it in rem
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '23.125rem',
+      height: 'calc(23.125rem * var(--mantine-scale))',
     });
 
     await act(async () => {
@@ -61,7 +61,7 @@ describe('DevTools - basic', () => {
     });
 
     expect(screen.getByTestId('jotai-devtools-shell')).toHaveStyle({
-      height: '12.5rem',
+      height: 'calc(12.5rem * var(--mantine-scale))',
     });
   });
 

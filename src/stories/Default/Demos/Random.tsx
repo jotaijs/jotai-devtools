@@ -78,17 +78,15 @@ export const Random = () => {
   return (
     <Box maw="500px">
       <Title size="h5">Random</Title>
-      <Code color="gray" block>
-        {count}
-      </Code>
+      <Code block>{count}</Code>
 
       <Button
         display="block"
         mt={5}
         onClick={React.useCallback(() => setCount((c) => c + 1), [setCount])}
         size="xs"
-        uppercase
         color="dark"
+        tt="uppercase"
       >
         Add 1
       </Button>
@@ -98,8 +96,8 @@ export const Random = () => {
         mt={5}
         onClick={setError}
         size="xs"
-        uppercase
         color="red.8"
+        tt="uppercase"
       >
         Trigger error 💥
       </Button>

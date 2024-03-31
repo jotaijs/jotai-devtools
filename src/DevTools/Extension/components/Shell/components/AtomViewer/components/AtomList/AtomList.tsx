@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Group, Sx, Text, TextInput } from '@mantine/core';
+import { Box, Group, MantineStyleProp, Text, TextInput } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
 import { useAtom, useAtomValue } from 'jotai/react';
 import { useSyncSnapshotValuesToAtom } from '../../../../../../../hooks/useAtomsSnapshots';
@@ -12,7 +12,7 @@ import {
   selectedAtomAtom,
 } from '../../atoms';
 
-const textStyles: Sx = {
+const textStyles: MantineStyleProp = {
   position: 'sticky',
   top: 0,
 };
@@ -38,7 +38,7 @@ const SearchAtoms = React.memo(() => {
       placeholder="atom debug label"
       pt={10}
       pb={10}
-      sx={textStyles}
+      style={textStyles}
       value={userInput}
       onChange={handleOnChange}
       id="jotai-devtools-atom-debug-search-input"
@@ -114,9 +114,9 @@ export const AtomList = () => {
   return (
     <>
       <SearchAtoms />
-      <Box sx={atomItemsWrapperStyle}>{atomItems}</Box>
+      <Box style={atomItemsWrapperStyle}>{atomItems}</Box>
       {noResultsFound && (
-        <Group mt={20} position="center">
+        <Group mt={20} justify="center" gap={6}>
           <IconAlertCircle size={16} />
           <Text fz="sm" ml={0} data-testid="atom-list-no-atoms-found-message">
             No Atoms found!

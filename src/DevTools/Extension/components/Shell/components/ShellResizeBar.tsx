@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Sx } from '@mantine/core';
+import { Box, MantineStyleProp } from '@mantine/core';
 import { useSetAtom } from 'jotai/react';
 import { shellStylesAtom } from '../../../../atoms/shell-styles';
 import { shellStyleDefaults } from '../../../../constants';
@@ -10,7 +10,7 @@ type ShellResizeBarProps = {
   shellRef?: React.RefObject<HTMLDivElement> | null;
 };
 
-const shellResizeBarStyles: Sx = {
+const shellResizeBarStyles: MantineStyleProp = {
   width: '100%',
   height: 5,
   cursor: 'row-resize',
@@ -53,7 +53,7 @@ export const ShellResizeBar = ({ shellRef }: ShellResizeBarProps) => {
 
   return (
     <Box
-      sx={shellResizeBarStyles}
+      style={shellResizeBarStyles}
       onMouseDown={handleMouseDown}
       data-testid="shell-resize-bar"
     />

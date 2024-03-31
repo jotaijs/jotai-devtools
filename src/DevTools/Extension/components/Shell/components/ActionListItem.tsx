@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { NavLink, Sx, Text } from '@mantine/core';
+import { NavLink, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import { useThemeMode } from '../../../../hooks/useThemeMode';
+import style from './ActionListItem.module.css';
 
 type ActionListItemProps = {
   label?: string | undefined;
@@ -10,14 +11,6 @@ type ActionListItemProps = {
   isActive: boolean;
 };
 
-const monoSpaceFonts: Sx = (theme) => ({
-  fontFamily: theme.fontFamilyMonospace || 'JetBrains Mono',
-});
-
-const navLinkStyles: Sx = (theme) => ({
-  borderRadius: theme.radius.md,
-});
-
 export const ActionListItem = React.memo(
   React.forwardRef<HTMLButtonElement, ActionListItemProps>(
     ({ label, onClick, id, isActive, ...rest }, ref) => {
@@ -25,16 +18,19 @@ export const ActionListItem = React.memo(
 
       return (
         <NavLink
+          component="button"
           {...rest}
           ref={ref}
           label={React.useMemo(
             () => (
-              <Text sx={monoSpaceFonts}>{label}</Text>
+              <Text className={style['jotai-devtools-monospace-font']}>
+                {label}
+              </Text>
             ),
             [label],
           )}
           variant="filled"
-          sx={navLinkStyles}
+          className={style['jotai-devtools-navlink']}
           active={isActive}
           color={useThemeMode('dark', 'gray')}
           onClick={handleOnClick}

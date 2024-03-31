@@ -1,0 +1,13 @@
+.jotai-devtools-header-wrapper {
+  position: 'sticky';
+  top: 0;
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.jotai-devtools-header-content {
+  border-radius: var(--mantine-radius-md);
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-7)
+  );
+}

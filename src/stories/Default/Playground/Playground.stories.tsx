@@ -45,10 +45,8 @@ export const Default: Story = {
     };
     return (
       <MantineProvider
-        withNormalizeCSS
-        withGlobalStyles
         theme={{
-          primaryColor: 'dark',
+          primaryColor: 'blue',
           cursorType: 'pointer',
         }}
       >

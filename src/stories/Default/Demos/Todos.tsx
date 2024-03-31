@@ -68,9 +68,9 @@ const TodoItem = ({ atom, remove }: TodoItemProps) => {
           mb={-6}
         />
         <Text
-          sx={() => ({
+          style={{
             textDecoration: item.completed ? 'line-through' : '',
-          })}
+          }}
           fz="md"
         >
           {item.title}
@@ -137,7 +137,7 @@ const TodoList = () => {
   return (
     <form onSubmit={add}>
       <Group
-        sx={{
+        style={{
           justifyContent: 'space-between',
         }}
       >

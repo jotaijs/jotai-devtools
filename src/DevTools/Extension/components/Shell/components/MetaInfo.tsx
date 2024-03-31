@@ -13,7 +13,7 @@ export const MetaInfo = ({ label, value, color }: MetaInfoProps) => {
         tt="uppercase"
         fz={10}
         fw="bold"
-        color="dimmed"
+        c="dimmed"
         data-testid={`meta-info-label-${label}`}
       >
         {label}
