@@ -12,6 +12,8 @@ import {
 } from './atoms/devtools-options';
 import { Extension, ExtensionProps } from './Extension';
 import { InternalDevToolsContext } from './internal-jotai-store';
+
+// TODO move these out to a separate entry point
 import './styles.css';
 
 export type DevToolsProps = ExtensionProps & {
@@ -20,6 +22,7 @@ export type DevToolsProps = ExtensionProps & {
   options?: DevToolsOptions;
 };
 
+// TODO move the id to a common place as a const
 const getRootElement = () => {
   const value =
     typeof window === 'undefined'

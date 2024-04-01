@@ -36,7 +36,15 @@ export const PlaybackSpeedDropdown = () => {
       maw={80}
       id="jotai-devtools-playback-speed-dropdown"
       data-testid="jotai-devtools-playback-speed-dropdown"
-      comboboxProps={{ position: 'top', keepMounted: false, zIndex: 99999 }}
+      comboboxProps={{
+        position: 'top',
+        keepMounted: false,
+        withinPortal: false,
+        zIndex: 99999,
+        portalProps: {
+          target: `#jotai-devtools-root`,
+        },
+      }}
     />
   );
 };
