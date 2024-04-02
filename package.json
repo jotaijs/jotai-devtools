@@ -95,8 +95,6 @@
     "@babel/preset-typescript": "^7.23.3",
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
-    "@emotion/jest": "^11.11.0",
-    "@emotion/react": "^11.11.3",
     "@release-it/conventional-changelog": "^7.0.2",
     "@storybook/addon-a11y": "^7.6.17",
     "@storybook/addon-actions": "^7.6.17",
@@ -163,7 +161,6 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@emotion/react": ">=11.0.0",
     "react": ">=17.0.0"
   },
   "dependencies": {
