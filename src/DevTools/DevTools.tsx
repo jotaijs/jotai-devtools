@@ -13,7 +13,6 @@ import {
 import { Extension, ExtensionProps } from './Extension';
 import { InternalDevToolsContext } from './internal-jotai-store';
 
-// TODO move these out to a separate entry point
 import './styles.css';
 
 export type DevToolsProps = ExtensionProps & {

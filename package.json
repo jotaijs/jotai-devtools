@@ -6,7 +6,9 @@
     "name": "Arjun Vegda",
     "url": "https://arjunvegda.com"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "source": "./src/index.ts",
   "exports": {
     "./package.json": "./package.json",
@@ -18,6 +20,7 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.cjs.js"
     },
+    "./styles.css": "./dist/index.css",
     "./utils": {
       "import": {
         "types": "./dist/utils.d.mts",
