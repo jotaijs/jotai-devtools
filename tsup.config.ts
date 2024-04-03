@@ -25,6 +25,7 @@ const baseConfig: Options = {
   },
   loader: {
     '.woff2': 'dataurl',
+    '.css': 'local-css',
   },
   sourcemap: false,
   // Clean output directory before each build

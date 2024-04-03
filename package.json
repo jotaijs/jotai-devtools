@@ -142,10 +142,10 @@
     "jotai": "^2.2.3",
     "jotai-tanstack-query": "^0.7.1",
     "lint-staged": "^13.3.0",
-    "prettier": "^3.2.5",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "postcss-preset-mantine": "^1.13.0",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-base16-styling": "^0.9.1",
     "react-dom": "^18.2.0",
@@ -157,7 +157,7 @@
     "shelljs": "^0.8.5",
     "storybook": "^7.6.17",
     "ts-node": "^10.9.2",
-    "tsup": "^7.2.0",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
