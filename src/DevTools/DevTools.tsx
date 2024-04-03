@@ -14,6 +14,7 @@ import { Extension, ExtensionProps } from './Extension';
 import { InternalDevToolsContext } from './internal-jotai-store';
 
 import './styles.css';
+import './fonts/fonts.css';
 
 export type DevToolsProps = ExtensionProps & {
   theme?: 'dark' | 'light';

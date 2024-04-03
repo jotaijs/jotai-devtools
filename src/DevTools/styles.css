@@ -1,3 +1,6 @@
+@import '@mantine/core/styles.css';
+@import '@mantine/code-highlight/styles.css';
+
 .jotai-devtools-shell {
   *,
   *::before,
@@ -9,8 +12,3 @@
   --webkit-font-smoothing: antialiased;
   font-size: var(--mantine-font-size-md);
 }
-
-/* TODO import more granular styles */
-@import '@mantine/core/styles.css';
-@import '@mantine/code-highlight/styles.css';
-@import './fonts/fonts.css';
