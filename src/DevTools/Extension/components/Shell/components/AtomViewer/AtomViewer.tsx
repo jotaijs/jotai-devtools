@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Flex } from '@mantine/core';
 import { Panel, PanelGroup } from 'react-resizable-panels';
 import { PanelResizeHandle } from '../PanelResizeHandle';
-import styles from './AtomViewer.module.css';
+import './AtomViewer.css';
 import { AtomDetail } from './components/AtomDetail';
 import { AtomList } from './components/AtomList';
 
@@ -17,7 +17,7 @@ export const AtomViewer = React.memo(() => {
           pt={0}
           h="100%"
           direction="column"
-          className={styles['jotai-devtools-atom-viewer-wrapper']}
+          className="internal-jotai-devtools-atom-viewer-wrapper"
         >
           <AtomList />
         </Flex>

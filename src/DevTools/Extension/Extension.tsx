@@ -10,7 +10,7 @@ import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 import { logo } from './assets/logo';
 import { Shell } from './components/Shell';
 import useSyncSnapshotHistory from './components/Shell/components/TimeTravel/useSyncSnapshotHistory';
-import styles from './ShellTriggerButton.module.css';
+import './ShellTriggerButton.css';
 
 type ShellTriggerButtonProps = {
   position?:
@@ -52,7 +52,7 @@ const ShellTriggerButton = React.forwardRef<
       top={position?.includes('top') ? '0.2rem' : 'unset'}
       bottom={position?.includes('bottom') ? '0.2rem' : 'unset'}
       className={clsx(
-        styles['jotai-devtools-trigger-button'],
+        'internal-jotai-devtools-trigger-button',
         'jotai-devtools-trigger-button',
       )}
     >

@@ -1,4 +1,4 @@
-.jotai-devtools-playbar-wrapper {
+.internal-jotai-devtools-playbar-wrapper {
   height: 56px;
   border-top: 0.09rem solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
@@ -8,29 +8,29 @@
   gap: 12px;
 }
 
-.jotai-devtools-playbar-root {
+.internal-jotai-devtools-playbar-root {
   flex-grow: 1;
 }
 
-.jotai-devtools-playbar-markLabel {
+.internal-jotai-devtools-playbar-markLabel {
   display: none;
 }
 
-.jotai-devtools-playbar-bar {
+.internal-jotai-devtools-playbar-bar {
   background-color: light-dark(
     var(--mantine-color-dark-4),
     var(--mantine-color-gray-6)
   );
 }
 
-.jotai-devtools-playbar-track:before {
+.internal-jotai-devtools-playbar-track:before {
   background-color: light-dark(
     var(--mantine-color-gray-3),
     var(--mantine-color-dark-4)
   );
 }
 
-.jotai-devtools-playbar-mark {
+.internal-jotai-devtools-playbar-mark {
   background-color: light-dark(
     var(--mantine-color-gray-7),
     var(--mantine-color-gray-5)
@@ -38,7 +38,7 @@
   border-width: 0;
 }
 
-.jotai-devtools-playbar-thumb {
+.internal-jotai-devtools-playbar-thumb {
   height: 14px !important;
   width: 14px !important;
   border-width: 3px !important;

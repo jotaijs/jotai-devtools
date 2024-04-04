@@ -13,7 +13,7 @@ import {
   useTimeTravelNavigateActions,
 } from '../atoms';
 import { PlaybackSpeedDropdown } from './PlaybackSpeedDropdown';
-import styles from './PlayBar.module.css';
+import './PlayBar.css';
 
 export const PlayBar = () => {
   const { step, isSlidePossible, max, value } = useSnapshotSliderValue();
@@ -29,7 +29,7 @@ export const PlayBar = () => {
   const isDisabled = !isSlidePossible;
 
   return (
-    <Box className={styles['jotai-devtools-playbar-wrapper']}>
+    <Box className="internal-jotai-devtools-playbar-wrapper">
       <ActionIcon
         variant="filled"
         color={useThemeMode('dark', 'gray')}
@@ -53,12 +53,12 @@ export const PlayBar = () => {
         step={step}
         onChange={handleOnSliderChange}
         classNames={{
-          root: styles['jotai-devtools-playbar-root'],
-          markLabel: styles['jotai-devtools-playbar-markLabel'],
-          bar: styles['jotai-devtools-playbar-bar'],
-          track: styles['jotai-devtools-playbar-track:before'],
-          mark: styles['jotai-devtools-playbar-mark'],
-          thumb: styles['jotai-devtools-playbar-thumb'],
+          root: 'internal-jotai-devtools-playbar-root',
+          markLabel: 'internal-jotai-devtools-playbar-markLabel',
+          bar: 'internal-jotai-devtools-playbar-bar',
+          track: 'internal-jotai-devtools-playbar-track:before',
+          mark: 'internal-jotai-devtools-playbar-mark',
+          thumb: 'internal-jotai-devtools-playbar-thumb',
         }}
       />
       <Group>

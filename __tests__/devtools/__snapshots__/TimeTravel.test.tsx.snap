@@ -10,7 +10,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   role="tabpanel"
 >
   <div
-    class=""
+    class="internal-jotai-devtools-json-tree-wrapper"
     data-testid="json-tree-view-container"
   >
     <ul
@@ -97,7 +97,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   role="tabpanel"
 >
   <div
-    class=""
+    class="internal-jotai-devtools-json-tree-wrapper"
     data-testid="json-tree-view-container"
   >
     <ul
@@ -235,7 +235,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   role="tabpanel"
 >
   <div
-    class=""
+    class="internal-jotai-devtools-json-tree-wrapper"
     data-testid="json-tree-view-container"
   >
     <ul
@@ -392,7 +392,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   role="tabpanel"
 >
   <div
-    class=""
+    class="internal-jotai-devtools-json-tree-wrapper"
     data-testid="json-tree-view-container"
   >
     <ul
@@ -522,7 +522,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
 
 exports[`DevTools - TimeTravel Snapshot details should display the full state in json tree format when state is selected 1`] = `
 <div
-  class=""
+  class="internal-jotai-devtools-json-tree-wrapper"
   data-testid="json-tree-view-container"
 >
   <ul
@@ -576,16 +576,16 @@ exports[`DevTools - TimeTravel Snapshot details should display the full state in
 
 exports[`DevTools - TimeTravel Snapshot list Search should display an error if no snapshots are found 1`] = `
 <div
-  class="m_8bffd616 __m__-r2dv"
+  class="internal-jotai-devtools-time-travel-wrapper m_8bffd616 __m__-r2dv"
   data-testid="jotai-devtools-time-travel-panel-left-content"
   style="flex-direction: column; padding-top: 0rem; height: 100%;"
 >
   <div
-    class="m_6d731127"
+    class="internal-jotai-devtools-header-wrapper m_6d731127"
     style="--stack-gap: var(--mantine-spacing-sm); --stack-align: stretch; --stack-justify: flex-start;"
   >
     <div
-      class="m_4081bf90"
+      class="internal-jotai-devtools-header-content m_4081bf90"
       style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
     >
       <div
@@ -793,16 +793,16 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
 
 exports[`DevTools - TimeTravel Snapshot list Search should search for atoms correctly 1`] = `
 <div
-  class="m_8bffd616 __m__-r24d"
+  class="internal-jotai-devtools-time-travel-wrapper m_8bffd616 __m__-r24d"
   data-testid="jotai-devtools-time-travel-panel-left-content"
   style="flex-direction: column; padding-top: 0rem; height: 100%;"
 >
   <div
-    class="m_6d731127"
+    class="internal-jotai-devtools-header-wrapper m_6d731127"
     style="--stack-gap: var(--mantine-spacing-sm); --stack-align: stretch; --stack-justify: flex-start;"
   >
     <div
-      class="m_4081bf90"
+      class="internal-jotai-devtools-header-content m_4081bf90"
       style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
     >
       <div
@@ -970,7 +970,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
     style="overflow: auto; margin-top: 10px;"
   >
     <button
-      class="jotai-devtools-focus m_f0824112 m_87cf2631"
+      class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
       color="dark"
       data-testid="jotai-devtools-snapshot-2"
       data-variant="filled"
@@ -984,7 +984,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
           class="m_1f6ac4c4"
         >
           <p
-            class="jotai-devtools-focus m_b6d8b162"
+            class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
           >
             2
           </p>
@@ -1030,7 +1030,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
 
 exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions should render a snapshot list with initial snapshot details on action with recording on 1`] = `
 <div
-  class="jotai-devtools-shell m_89d60db1"
+  class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
   data-orientation="horizontal"
   data-testid="jotai-devtools-shell"
   data-variant="default"
@@ -1288,16 +1288,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
       >
         <div
-          class="m_8bffd616 __m__-r34f"
+          class="internal-jotai-devtools-time-travel-wrapper m_8bffd616 __m__-r34f"
           data-testid="jotai-devtools-time-travel-panel-left-content"
           style="flex-direction: column; padding-top: 0rem; height: 100%;"
         >
           <div
-            class="m_6d731127"
+            class="internal-jotai-devtools-header-wrapper m_6d731127"
             style="--stack-gap: var(--mantine-spacing-sm); --stack-align: stretch; --stack-justify: flex-start;"
           >
             <div
-              class="m_4081bf90"
+              class="internal-jotai-devtools-header-content m_4081bf90"
               style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
             >
               <div
@@ -1465,7 +1465,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
             style="overflow: auto; margin-top: 10px;"
           >
             <button
-              class="jotai-devtools-focus m_f0824112 m_87cf2631"
+              class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
               color="dark"
               data-testid="jotai-devtools-snapshot-1"
               data-variant="filled"
@@ -1479,7 +1479,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                   class="m_1f6ac4c4"
                 >
                   <p
-                    class="jotai-devtools-focus m_b6d8b162"
+                    class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                   >
                     1
                   </p>
@@ -1537,10 +1537,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         tabindex="0"
       >
         <div
-          class=""
+          class="internal-jotai-devtools-panel-resize-handle-wrapper"
         >
           <div
-            class=""
+            class="internal-jotai-devtools-panel-resize-handle-content"
             style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
           />
         </div>
@@ -1823,7 +1823,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       </div>
     </div>
     <div
-      class=""
+      class="internal-jotai-devtools-playbar-wrapper"
     >
       <button
         class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
@@ -1856,7 +1856,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </span>
       </button>
       <div
-        class="m_dd36362e"
+        class="internal-jotai-devtools-playbar-root m_dd36362e"
         data-size="xs"
         style="--slider-size: var(--slider-size-xs); --slider-radius: var(--mantine-radius-xl); --slider-thumb-size: calc(var(--slider-size) * 2);"
         tabindex="-1"
@@ -1865,10 +1865,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
           class="m_a8645c2"
         >
           <div
-            class="m_c9ade57f"
+            class="internal-jotai-devtools-playbar-track:before m_c9ade57f"
           >
             <div
-              class="m_38aeed47"
+              class="internal-jotai-devtools-playbar-bar m_38aeed47"
               style="--slider-bar-width: calc(0% + var(--slider-size)); --slider-bar-offset: calc(0% - var(--slider-size));"
             />
             <div
@@ -1876,7 +1876,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
               aria-valuemax="100"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="jotai-devtools-focus m_c9a9a60a"
+              class="jotai-devtools-focus internal-jotai-devtools-playbar-thumb m_c9a9a60a"
               role="slider"
               style="--slider-thumb-offset: 0%;"
               tabindex="0"
@@ -2012,7 +2012,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
 
 exports[`DevTools - TimeTravel Snapshot list should render time travel without any errors 1`] = `
 <div
-  class="jotai-devtools-shell m_89d60db1"
+  class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
   data-orientation="horizontal"
   data-testid="jotai-devtools-shell"
   data-variant="default"
@@ -2258,16 +2258,16 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
       >
         <div
-          class="m_8bffd616 __m__-r2p"
+          class="internal-jotai-devtools-time-travel-wrapper m_8bffd616 __m__-r2p"
           data-testid="jotai-devtools-time-travel-panel-left-content"
           style="flex-direction: column; padding-top: 0rem; height: 100%;"
         >
           <div
-            class="m_6d731127"
+            class="internal-jotai-devtools-header-wrapper m_6d731127"
             style="--stack-gap: var(--mantine-spacing-sm); --stack-align: stretch; --stack-justify: flex-start;"
           >
             <div
-              class="m_4081bf90"
+              class="internal-jotai-devtools-header-content m_4081bf90"
               style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
             >
               <div
@@ -2453,10 +2453,10 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         tabindex="0"
       >
         <div
-          class=""
+          class="internal-jotai-devtools-panel-resize-handle-wrapper"
         >
           <div
-            class=""
+            class="internal-jotai-devtools-panel-resize-handle-content"
             style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
           />
         </div>
@@ -2488,7 +2488,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       </div>
     </div>
     <div
-      class=""
+      class="internal-jotai-devtools-playbar-wrapper"
     >
       <button
         class="jotai-devtools-focus m_8d3f4000 m_87cf2631"
@@ -2523,7 +2523,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </span>
       </button>
       <div
-        class="m_dd36362e"
+        class="internal-jotai-devtools-playbar-root m_dd36362e"
         data-size="xs"
         style="--slider-size: var(--slider-size-xs); --slider-radius: var(--mantine-radius-xl); --slider-thumb-size: calc(var(--slider-size) * 2);"
         tabindex="-1"
@@ -2533,11 +2533,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
           data-disabled="true"
         >
           <div
-            class="m_c9ade57f"
+            class="internal-jotai-devtools-playbar-track:before m_c9ade57f"
             data-disabled="true"
           >
             <div
-              class="m_38aeed47"
+              class="internal-jotai-devtools-playbar-bar m_38aeed47"
               data-disabled="true"
               style="--slider-bar-width: calc(NaN% + var(--slider-size)); --slider-bar-offset: calc(0% - var(--slider-size));"
             />
@@ -2546,7 +2546,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
               aria-valuemax="0"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="jotai-devtools-focus m_c9a9a60a"
+              class="jotai-devtools-focus internal-jotai-devtools-playbar-thumb m_c9a9a60a"
               data-disabled="true"
               role="slider"
               style="--slider-thumb-offset: NaN%;"

@@ -11,7 +11,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
   style=""
 >
   <div
-    class=""
+    class="internal-jotai-devtools-json-tree-wrapper"
     data-testid="json-tree-view-container"
   >
     <ul
@@ -87,7 +87,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
   style=""
 >
   <div
-    class=""
+    class="internal-jotai-devtools-json-tree-wrapper"
     data-testid="json-tree-view-container"
   >
     <ul
@@ -186,7 +186,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -424,7 +424,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r16l"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r16l"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -457,7 +457,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-active="true"
                   data-variant="filled"
@@ -471,7 +471,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         countAtom
                       </p>
@@ -513,7 +513,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -526,7 +526,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -584,10 +584,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -774,7 +774,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -1012,7 +1012,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r1bd"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1bd"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -1045,7 +1045,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-active="true"
                   data-variant="filled"
@@ -1059,7 +1059,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         countAtom
                       </p>
@@ -1101,7 +1101,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -1114,7 +1114,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -1172,10 +1172,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -1260,7 +1260,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     Raw value
                   </p>
                   <div
-                    class="m_5cb1b9c8 m_1f5e827e"
+                    class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
                   >
@@ -1393,7 +1393,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -1631,7 +1631,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r1gh"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1gh"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -1664,7 +1664,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -1677,7 +1677,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         countAtom
                       </p>
@@ -1718,7 +1718,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-active="true"
                   data-variant="filled"
@@ -1732,7 +1732,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -1791,10 +1791,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -1879,7 +1879,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     Raw value
                   </p>
                   <div
-                    class="m_5cb1b9c8 m_1f5e827e"
+                    class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
                   >
@@ -1996,7 +1996,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -2234,7 +2234,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-rtr"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-rtr"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -2317,10 +2317,10 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -2382,7 +2382,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -2620,7 +2620,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-rpt"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-rpt"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -2653,7 +2653,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -2666,7 +2666,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -2724,10 +2724,10 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -2789,7 +2789,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -3027,7 +3027,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-rf1"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-rf1"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -3060,7 +3060,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-active="true"
                   data-variant="filled"
@@ -3074,7 +3074,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         countAtom
                       </p>
@@ -3116,7 +3116,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -3129,7 +3129,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -3187,10 +3187,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -3275,7 +3275,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     Raw value
                   </p>
                   <div
-                    class="m_5cb1b9c8 m_1f5e827e"
+                    class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
                   >
@@ -3408,7 +3408,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -3646,7 +3646,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-rk5"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-rk5"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -3679,7 +3679,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -3692,7 +3692,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         countAtom
                       </p>
@@ -3733,7 +3733,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -3746,7 +3746,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -3787,7 +3787,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-active="true"
                   data-variant="filled"
@@ -3801,7 +3801,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         privateAtom
                       </p>
@@ -3860,10 +3860,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -3967,7 +3967,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     Raw value
                   </p>
                   <div
-                    class="m_5cb1b9c8 m_1f5e827e"
+                    class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
                   >
@@ -4100,7 +4100,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -4338,7 +4338,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r43"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r43"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -4371,7 +4371,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                 style="overflow: auto;"
               >
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -4384,7 +4384,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         countAtom
                       </p>
@@ -4425,7 +4425,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                   />
                 </div>
                 <button
-                  class="jotai-devtools-focus m_f0824112 m_87cf2631"
+                  class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
@@ -4438,7 +4438,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                       class="m_1f6ac4c4"
                     >
                       <p
-                        class="jotai-devtools-focus m_b6d8b162"
+                        class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
                         doubleCountAtom
                       </p>
@@ -4496,10 +4496,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
@@ -4561,7 +4561,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -4799,7 +4799,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r1f"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1f"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -4882,10 +4882,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             tabindex="0"
           >
             <div
-              class=""
+              class="internal-jotai-devtools-panel-resize-handle-wrapper"
             >
               <div
-                class=""
+                class="internal-jotai-devtools-panel-resize-handle-content"
                 style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>

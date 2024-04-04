@@ -5,7 +5,7 @@ import { PanelResizeHandle } from '../PanelResizeHandle';
 import { PlayBar } from './components/PlayBar';
 import { SnapshotDetail } from './components/SnapshotDetail';
 import { SnapshotList } from './components/SnapshotList';
-import styles from './TimeTravel.module.css';
+import './TimeTravel.css';
 const panelStyles = { overflow: 'auto' };
 
 // 56px is the height of the playbar
@@ -30,7 +30,7 @@ export const TimeTravel = React.memo(() => {
             pt={0}
             h="100%"
             direction="column"
-            className={styles['jotai-devtools-time-travel-wrapper']}
+            className="internal-jotai-devtools-time-travel-wrapper"
             data-testid="jotai-devtools-time-travel-panel-left-content"
           >
             <SnapshotList />

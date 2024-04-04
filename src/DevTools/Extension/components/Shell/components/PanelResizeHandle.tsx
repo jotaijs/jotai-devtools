@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, MantineStyleProp } from '@mantine/core';
 import { PanelResizeHandle as ReactPanelResizeHandle } from 'react-resizable-panels';
 import { useThemeMode } from '../../../../hooks/useThemeMode';
-import styles from './PanelResizeHandle.module.css';
+import './PanelResizeHandle.css';
 
 const innerContainerStyles: MantineStyleProp = {
   borderRadius: '2rem',
@@ -14,10 +14,10 @@ export const PanelResizeHandle = () => {
     <ReactPanelResizeHandle id="jotai-devtools-panel-resize-handle">
       <Box
         p="5"
-        className={styles['jotai-devtools-panel-resize-handle-wrapper']}
+        className="internal-jotai-devtools-panel-resize-handle-wrapper"
       >
         <Box
-          className={styles['jotai-devtools-panel-resize-handle-content']}
+          className="internal-jotai-devtools-panel-resize-handle-content"
           mah={100}
           mih={50}
           h="20%"

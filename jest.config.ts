@@ -56,7 +56,6 @@ const config: Config = {
     '@testing-library/jest-dom/extend-expect',
     '<rootDir>/__tests__/setup.ts',
   ],
-  snapshotSerializers: ['@emotion/jest/serializer'],
 };
 
 export default config;

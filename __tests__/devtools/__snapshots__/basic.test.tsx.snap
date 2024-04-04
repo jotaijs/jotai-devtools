@@ -16,7 +16,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -195,7 +195,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             with a minimal reproduction and the following error
           </p>
           <div
-            class="m_5cb1b9c8 m_1f5e827e"
+            class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
             dir="ltr"
           >
             <button
@@ -291,7 +291,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
 
     </style>
     <div
-      class="jotai-devtools-shell m_89d60db1"
+      class="internal-jotai-devtools-shell jotai-devtools-shell m_89d60db1"
       data-orientation="horizontal"
       data-testid="jotai-devtools-shell"
       data-variant="default"
@@ -470,7 +470,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             with a minimal reproduction and the following error
           </p>
           <div
-            class="m_5cb1b9c8 m_1f5e827e"
+            class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
             dir="ltr"
           >
             <button

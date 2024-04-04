@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavLink, Text } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import { useThemeMode } from '../../../../hooks/useThemeMode';
-import style from './ActionListItem.module.css';
+import './ActionListItem.css';
 
 type ActionListItemProps = {
   label?: string | undefined;
@@ -23,14 +23,14 @@ export const ActionListItem = React.memo(
           ref={ref}
           label={React.useMemo(
             () => (
-              <Text className={style['jotai-devtools-monospace-font']}>
+              <Text className={'internal-jotai-devtools-monospace-font'}>
                 {label}
               </Text>
             ),
             [label],
           )}
           variant="filled"
-          className={style['jotai-devtools-navlink']}
+          className="internal-jotai-devtools-navlink"
           active={isActive}
           color={useThemeMode('dark', 'gray')}
           onClick={handleOnClick}

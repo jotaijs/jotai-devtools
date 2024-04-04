@@ -12,7 +12,7 @@ import { Header } from './components/Header';
 import { ShellResizeBar } from './components/ShellResizeBar';
 import { TabsHeader } from './components/TabsHeader';
 import { TimeTravel } from './components/TimeTravel';
-import styles from './Shell.module.css';
+import './Shell.css';
 
 export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
@@ -36,7 +36,7 @@ export const Shell = () => {
       h={height}
       mah={shellStyleDefaults.maxHeight}
       ref={shellRef}
-      className={clsx(styles['jotai-devtools-shell'], 'jotai-devtools-shell')}
+      className={clsx('internal-jotai-devtools-shell', 'jotai-devtools-shell')}
       data-testid="jotai-devtools-shell"
       id="jotai-devtools-shell"
       value={selectedShellTab}

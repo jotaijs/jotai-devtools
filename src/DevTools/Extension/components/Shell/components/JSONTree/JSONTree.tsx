@@ -3,7 +3,7 @@ import { Box } from '@mantine/core';
 import { JSONTree as ReactJSONTree, ValueRenderer } from 'react-json-tree';
 import { useDevToolsOptionsValue } from '../../../../../atoms/devtools-options';
 import { ErrorSymbol, stringifyAtomValue } from '../../../../../utils/';
-import styles from './JSONTree.module.css';
+import './JSONTree.css';
 import { getItemString } from './utils/get-item-string';
 import { useJSONTreeStyling } from './utils/use-JSON-tree-styling';
 export { getItemStringWithDiffEnabled } from './utils/get-item-string';
@@ -28,7 +28,7 @@ export const JSONTree: typeof ReactJSONTree = (props) => {
 
   return (
     <Box
-      className={styles['jotai-devtools-json-tree-wrapper']}
+      className="internal-jotai-devtools-json-tree-wrapper"
       data-testid="json-tree-view-container"
     >
       <ReactJSONTree
