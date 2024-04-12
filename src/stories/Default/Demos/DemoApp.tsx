@@ -1,5 +1,12 @@
 import * as React from 'react';
-import { Grid, MantineProvider, Select, Text, Title } from '@mantine/core';
+import {
+  Grid,
+  MantineProvider,
+  Select,
+  Text,
+  Title,
+  useComputedColorScheme,
+} from '@mantine/core';
 import { DevTools, DevToolsProps } from '../../../';
 import { Async } from './Async';
 import { Counter } from './Counter';
@@ -7,6 +14,11 @@ import { DemoJotaiStoreContext, demoStore } from './demo-store';
 import { Random } from './Random';
 import { ThemeToggle } from './ThemeToggle';
 import { Todos } from './Todos';
+
+const DevToolsWithColorScheme = (props: DevToolsProps) => {
+  const colorScheme = useComputedColorScheme();
+  return <DevTools store={demoStore} theme={colorScheme} {...props} />;
+};
 
 export const DemoApp = (props: DevToolsProps) => {
   return (
@@ -17,7 +29,7 @@ export const DemoApp = (props: DevToolsProps) => {
           cursorType: 'pointer',
         }}
       >
-        <DevTools store={demoStore} {...props} />
+        <DevToolsWithColorScheme {...props} />
         <div className="App">
           <ThemeToggle />
           <React.Suspense

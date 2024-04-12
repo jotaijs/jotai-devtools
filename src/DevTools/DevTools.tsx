@@ -67,7 +67,7 @@ const theme = createTheme({
 const DevToolsMain = ({
   store,
   isInitialOpen = false,
-  theme: userColorScheme = 'light',
+  theme: userColorScheme,
   position = 'bottom-left',
   nonce = '',
   options,
@@ -79,19 +79,27 @@ const DevToolsMain = ({
     setDevToolsOptions(options);
   }, [setDevToolsOptions, options]);
 
+  const conditionalProps = React.useMemo(() => {
+    if (typeof userColorScheme === 'string') {
+      return { forceColorScheme: userColorScheme };
+    }
+    return {};
+  }, [userColorScheme]);
+
   return (
     <React.StrictMode>
       <span id="jotai-devtools-root">
         <MantineProvider
           theme={theme}
           colorSchemeManager={colorSchemeManager}
-          defaultColorScheme={userColorScheme}
+          defaultColorScheme="light"
           classNamesPrefix="jotai-devtools"
           withStaticClasses={false}
           withGlobalClasses={false}
           getRootElement={getRootElement}
           cssVariablesSelector="#jotai-devtools-root"
           getStyleNonce={() => nonce}
+          {...conditionalProps}
         >
           <Extension
             store={store}
