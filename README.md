@@ -125,6 +125,7 @@ type DevToolsProps = {
 
 ```tsx
 import { DevTools } from 'jotai-devtools';
+import 'jotai-devtools/styles.css';
 
 const App = () => {
   return (
@@ -141,6 +142,7 @@ const App = () => {
 ```tsx
 import { createStore } from 'jotai';
 import { DevTools } from 'jotai-devtools';
+import 'jotai-devtools/styles.css';
 
 const customStore = createStore();
 
@@ -171,6 +173,28 @@ import {
 ```
 
 ## Migration guides
+
+### Migrate ƒrom @emotion/react to native CSS
+
+With the latest release, Jotai DevTools no longer depends on `@emotion/react`
+and is replaced it with native CSS.
+
+1. Remove `@emotion/react` from your dependencies
+
+   ```sh
+   # yarn
+   yarn remove @emotion/react
+
+   # npm
+   npm uninstall @emotion/react
+   ```
+
+2. Replace `@emotion/react` with `jotai-devtools/styles.css` in your code
+
+```diff
+import { DevTools } from 'jotai-devtools';
++ import 'jotai-devtools/styles.css';
+```
 
 ### Migrate Jotai to V2
 
