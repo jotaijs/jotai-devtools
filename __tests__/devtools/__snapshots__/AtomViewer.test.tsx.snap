@@ -3735,6 +3735,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 <button
                   class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
+                  data-active="true"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
                   type="button"
@@ -3748,11 +3749,12 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       <p
                         class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
-                        doubleCountAtom
+                        privateAtom
                       </p>
                     </span>
                     <span
                       class="m_57492dcc"
+                      data-active="true"
                     />
                   </div>
                   <span
@@ -3789,7 +3791,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 <button
                   class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
-                  data-active="true"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
                   type="button"
@@ -3803,12 +3804,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       <p
                         class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
-                        privateAtom
+                        doubleCountAtom
                       </p>
                     </span>
                     <span
                       class="m_57492dcc"
-                      data-active="true"
                     />
                   </div>
                   <span
@@ -3951,7 +3951,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       class="m_b183c0a2"
                       data-testid="meta-info-value-Yes"
                       dir="ltr"
-                      style="--code-bg: var(--mantine-color-red-filled);"
+                      style="--code-bg: var(--mantine-color-red-1);"
                     >
                       Yes
                     </code>

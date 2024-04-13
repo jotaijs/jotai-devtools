@@ -251,10 +251,7 @@ describe('useAtomsDevtools', () => {
           [`${doubleAtom}`]: 0,
         }),
         dependents: expect.objectContaining({
-          [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
-            `${doubleAtom}`,
-          ]),
+          [`${countAtom}`]: expect.arrayContaining([`${doubleAtom}`]),
           [`${doubleAtom}`]: [],
         }),
       }),
@@ -274,10 +271,7 @@ describe('useAtomsDevtools', () => {
           [`${doubleAtom}`]: 2,
         }),
         dependents: expect.objectContaining({
-          [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
-            `${doubleAtom}`,
-          ]),
+          [`${countAtom}`]: expect.arrayContaining([`${doubleAtom}`]),
           [`${doubleAtom}`]: [],
         }),
       }),
@@ -297,10 +291,7 @@ describe('useAtomsDevtools', () => {
           [`${doubleAtom}`]: 4,
         }),
         dependents: expect.objectContaining({
-          [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
-            `${doubleAtom}`,
-          ]),
+          [`${countAtom}`]: expect.arrayContaining([`${doubleAtom}`]),
           [`${doubleAtom}`]: [],
         }),
       }),
@@ -350,14 +341,8 @@ describe('useAtomsDevtools', () => {
           [`${anAtom}`]: 0,
         }),
         dependents: expect.objectContaining({
-          [`${enabledAtom}`]: expect.arrayContaining([
-            `${enabledAtom}`,
-            `${anAtom}`,
-          ]),
-          [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
-            `${anAtom}`,
-          ]),
+          [`${enabledAtom}`]: expect.arrayContaining([`${anAtom}`]),
+          [`${countAtom}`]: expect.arrayContaining([`${anAtom}`]),
           [`${anAtom}`]: [],
         }),
       }),
@@ -378,14 +363,8 @@ describe('useAtomsDevtools', () => {
           [`${anAtom}`]: 0,
         }),
         dependents: expect.objectContaining({
-          [`${enabledAtom}`]: expect.arrayContaining([
-            `${enabledAtom}`,
-            `${anAtom}`,
-          ]),
-          [`${secondCountAtom}`]: expect.arrayContaining([
-            `${secondCountAtom}`,
-            `${anAtom}`,
-          ]),
+          [`${enabledAtom}`]: expect.arrayContaining([`${anAtom}`]),
+          [`${secondCountAtom}`]: expect.arrayContaining([`${anAtom}`]),
           [`${anAtom}`]: [],
         }),
       }),
@@ -406,14 +385,8 @@ describe('useAtomsDevtools', () => {
           [`${anAtom}`]: 0,
         }),
         dependents: expect.objectContaining({
-          [`${enabledAtom}`]: expect.arrayContaining([
-            `${enabledAtom}`,
-            `${anAtom}`,
-          ]),
-          [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
-            `${anAtom}`,
-          ]),
+          [`${enabledAtom}`]: expect.arrayContaining([`${anAtom}`]),
+          [`${countAtom}`]: expect.arrayContaining([`${anAtom}`]),
           [`${anAtom}`]: [],
         }),
       }),
@@ -480,7 +453,6 @@ describe('useAtomsDevtools', () => {
         }),
         dependents: expect.objectContaining({
           [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
             `${derivedAtom}`,
             `${doubleCountAtom}`,
           ]),
@@ -506,7 +478,6 @@ describe('useAtomsDevtools', () => {
         }),
         dependents: expect.objectContaining({
           [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
             `${derivedAtom}`,
             `${doubleCountAtom}`,
           ]),
@@ -533,7 +504,6 @@ describe('useAtomsDevtools', () => {
         }),
         dependents: expect.objectContaining({
           [`${countAtom}`]: expect.arrayContaining([
-            `${countAtom}`,
             `${derivedAtom}`,
             `${doubleCountAtom}`,
           ]),
@@ -586,7 +556,7 @@ describe('useAtomsDevtools', () => {
             [`${countAtom}`]: 1,
           },
           dependents: {
-            [`${countAtom}`]: [`${countAtom}`],
+            [`${countAtom}`]: [],
           },
         }),
       );
