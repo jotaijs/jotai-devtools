@@ -164,9 +164,9 @@
     "react": ">=17.0.0"
   },
   "dependencies": {
-    "@mantine/code-highlight": "^7.7.1",
-    "@mantine/core": "^7.7.1",
-    "@mantine/hooks": "^7.7.1",
+    "@mantine/code-highlight": "^7.8.0",
+    "@mantine/core": "^7.8.0",
+    "@mantine/hooks": "^7.8.0",
     "@redux-devtools/extension": "^3.3.0",
     "clsx": "^2.1.0",
     "javascript-stringify": "^2.1.0",
