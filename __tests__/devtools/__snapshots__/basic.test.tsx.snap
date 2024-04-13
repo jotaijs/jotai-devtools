@@ -76,7 +76,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -110,7 +110,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -150,7 +150,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               style="display: flex; align-items: center;"
             >
               <svg
-                class="tabler-icon tabler-icon-alert-circle"
+                class="tabler-icon tabler-icon-alert-circle "
                 fill="none"
                 height="16"
                 stroke="currentColor"
@@ -351,7 +351,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -385,7 +385,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -425,7 +425,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               style="display: flex; align-items: center;"
             >
               <svg
-                class="tabler-icon tabler-icon-alert-circle"
+                class="tabler-icon tabler-icon-alert-circle "
                 fill="none"
                 height="16"
                 stroke="currentColor"

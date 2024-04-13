@@ -246,7 +246,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -280,7 +280,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -324,7 +324,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -365,7 +365,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -486,7 +486,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -540,7 +540,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -682,7 +682,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                       style="display: flex; align-items: center;"
                     >
                       <svg
-                        class="tabler-icon tabler-icon-alert-circle"
+                        class="tabler-icon tabler-icon-alert-circle "
                         fill="none"
                         height="16"
                         stroke="currentColor"
@@ -834,7 +834,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -868,7 +868,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -912,7 +912,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -953,7 +953,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -1074,7 +1074,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -1128,7 +1128,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -1453,7 +1453,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -1487,7 +1487,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -1531,7 +1531,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -1572,7 +1572,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -1691,7 +1691,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -1747,7 +1747,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -2056,7 +2056,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2090,7 +2090,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2134,7 +2134,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -2175,7 +2175,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -2271,7 +2271,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                 style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap;"
               >
                 <svg
-                  class="tabler-icon tabler-icon-alert-circle"
+                  class="tabler-icon tabler-icon-alert-circle "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2442,7 +2442,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2476,7 +2476,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2520,7 +2520,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -2561,7 +2561,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -2680,7 +2680,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -2849,7 +2849,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2883,7 +2883,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -2927,7 +2927,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -2968,7 +2968,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -3089,7 +3089,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -3143,7 +3143,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -3468,7 +3468,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -3502,7 +3502,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -3546,7 +3546,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -3587,7 +3587,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -3706,7 +3706,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -3762,7 +3762,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -3816,7 +3816,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -4160,7 +4160,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -4194,7 +4194,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -4238,7 +4238,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -4279,7 +4279,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -4398,7 +4398,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -4452,7 +4452,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                     data-position="right"
                   >
                     <svg
-                      class="tabler-icon tabler-icon-chevron-right"
+                      class="tabler-icon tabler-icon-chevron-right "
                       fill="none"
                       height="12"
                       stroke="currentColor"
@@ -4621,7 +4621,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-moon-stars"
+                  class="tabler-icon tabler-icon-moon-stars "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -4655,7 +4655,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                 class="m_8d3afb97"
               >
                 <svg
-                  class="tabler-icon tabler-icon-minus"
+                  class="tabler-icon tabler-icon-minus "
                   fill="none"
                   height="16"
                   stroke="currentColor"
@@ -4699,7 +4699,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-layout-list"
+              class="tabler-icon tabler-icon-layout-list "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -4740,7 +4740,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             data-position="left"
           >
             <svg
-              class="tabler-icon tabler-icon-timeline"
+              class="tabler-icon tabler-icon-timeline "
               fill="none"
               height="14"
               stroke="currentColor"
@@ -4836,7 +4836,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                 style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap;"
               >
                 <svg
-                  class="tabler-icon tabler-icon-alert-circle"
+                  class="tabler-icon tabler-icon-alert-circle "
                   fill="none"
                   height="16"
                   stroke="currentColor"
