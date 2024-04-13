@@ -19,7 +19,10 @@ const messageBoxWrapperStyles: MantineStyleProp = {
   transform: 'translateY(-50%)',
 };
 
-const loadingOverlayOverlayProps: OverlayProps = { blur: 2 };
+const loadingOverlayOverlayProps: OverlayProps = {
+  blur: 2,
+  backgroundOpacity: 0,
+};
 
 export const AtomDetail = React.memo((): JSX.Element => {
   const selectedAtomData = useAtomValue(
