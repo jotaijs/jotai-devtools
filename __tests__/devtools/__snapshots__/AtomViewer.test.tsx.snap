@@ -418,9 +418,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r16h:"
             data-panel-id=":r16j:"
             data-panel-size="50.0"
-            id="data-panel-id-:r16j:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -570,7 +570,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:r16j:"
+            aria-controls=":r16j:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -579,8 +579,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             data-panel-group-id=":r16h:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -595,9 +598,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r16h:"
             data-panel-id=":r17f:"
             data-panel-size="50.0"
-            id="data-panel-id-:r17f:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -1006,9 +1009,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r1b9:"
             data-panel-id=":r1bb:"
             data-panel-size="50.0"
-            id="data-panel-id-:r1bb:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -1158,7 +1161,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:r1bb:"
+            aria-controls=":r1bb:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -1167,8 +1170,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             data-panel-group-id=":r1b9:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -1183,9 +1189,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r1b9:"
             data-panel-id=":r1c7:"
             data-panel-size="50.0"
-            id="data-panel-id-:r1c7:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -1625,9 +1631,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r1gd:"
             data-panel-id=":r1gf:"
             data-panel-size="50.0"
-            id="data-panel-id-:r1gf:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -1777,7 +1783,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:r1gf:"
+            aria-controls=":r1gf:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -1786,8 +1792,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             data-panel-group-id=":r1gd:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -1802,9 +1811,9 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r1gd:"
             data-panel-id=":r1hb:"
             data-panel-size="50.0"
-            id="data-panel-id-:r1hb:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -2228,9 +2237,9 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":rtn:"
             data-panel-id=":rtp:"
             data-panel-size="50.0"
-            id="data-panel-id-:rtp:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -2303,7 +2312,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:rtp:"
+            aria-controls=":rtp:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -2312,8 +2321,11 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             data-panel-group-id=":rtn:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -2328,9 +2340,9 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":rtn:"
             data-panel-id=":rul:"
             data-panel-size="50.0"
-            id="data-panel-id-:rul:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -2614,9 +2626,9 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":rpp:"
             data-panel-id=":rpr:"
             data-panel-size="50.0"
-            id="data-panel-id-:rpr:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -2710,7 +2722,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:rpr:"
+            aria-controls=":rpr:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -2719,8 +2731,11 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             data-panel-group-id=":rpp:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -2735,9 +2750,9 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":rpp:"
             data-panel-id=":rqn:"
             data-panel-size="50.0"
-            id="data-panel-id-:rqn:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -3021,9 +3036,9 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":ret:"
             data-panel-id=":rev:"
             data-panel-size="50.0"
-            id="data-panel-id-:rev:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -3173,7 +3188,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:rev:"
+            aria-controls=":rev:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -3182,8 +3197,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             data-panel-group-id=":ret:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -3198,9 +3216,9 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":ret:"
             data-panel-id=":rfr:"
             data-panel-size="50.0"
-            id="data-panel-id-:rfr:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -3640,9 +3658,9 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":rk1:"
             data-panel-id=":rk3:"
             data-panel-size="50.0"
-            id="data-panel-id-:rk3:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -3846,7 +3864,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:rk3:"
+            aria-controls=":rk3:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -3855,8 +3873,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             data-panel-group-id=":rk1:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -3871,9 +3892,9 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":rk1:"
             data-panel-id=":rkv:"
             data-panel-size="50.0"
-            id="data-panel-id-:rkv:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -4332,9 +4353,9 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r3v:"
             data-panel-id=":r41:"
             data-panel-size="50.0"
-            id="data-panel-id-:r41:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -4482,7 +4503,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:r41:"
+            aria-controls=":r41:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -4491,8 +4512,11 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             data-panel-group-id=":r3v:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -4507,9 +4531,9 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r3v:"
             data-panel-id=":r4t:"
             data-panel-size="50.0"
-            id="data-panel-id-:r4t:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -4793,9 +4817,9 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r1b:"
             data-panel-id=":r1d:"
             data-panel-size="50.0"
-            id="data-panel-id-:r1d:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
@@ -4868,7 +4892,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             </div>
           </div>
           <div
-            aria-controls="data-panel-id-:r1d:"
+            aria-controls=":r1d:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
@@ -4877,8 +4901,11 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             data-panel-group-id=":r1b:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+            data-resize-handle=""
+            data-resize-handle-state="inactive"
+            id="jotai-devtools-panel-resize-handle"
             role="separator"
-            style="cursor: ew-resize; user-select: none;"
+            style="user-select: none;"
             tabindex="0"
           >
             <div
@@ -4893,9 +4920,9 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           <div
             class=""
             data-panel=""
+            data-panel-group-id=":r1b:"
             data-panel-id=":r29:"
             data-panel-size="50.0"
-            id="data-panel-id-:r29:"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div

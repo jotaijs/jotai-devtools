@@ -1267,14 +1267,16 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       data-panel-group=""
       data-panel-group-direction="horizontal"
       data-panel-group-id="jotai-devtools-time-travel-panel-group"
+      id="jotai-devtools-time-travel-panel-group"
       style="display: flex; flex-direction: row; height: calc(100% - 56px); overflow: hidden; width: 100%;"
     >
       <div
         class=""
         data-panel=""
+        data-panel-group-id="jotai-devtools-time-travel-panel-group"
         data-panel-id="jotai-devtools-time-travel-panel-left"
         data-panel-size="45.0"
-        id="data-panel-id-jotai-devtools-time-travel-panel-left"
+        id="jotai-devtools-time-travel-panel-left"
         style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
       >
         <div
@@ -1508,7 +1510,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         </div>
       </div>
       <div
-        aria-controls="data-panel-id-jotai-devtools-time-travel-panel-left"
+        aria-controls="jotai-devtools-time-travel-panel-left"
         aria-valuemax="60"
         aria-valuemin="30"
         aria-valuenow="45"
@@ -1517,8 +1519,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         data-panel-group-id="jotai-devtools-time-travel-panel-group"
         data-panel-resize-handle-enabled="true"
         data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+        data-resize-handle=""
+        data-resize-handle-state="inactive"
+        id="jotai-devtools-panel-resize-handle"
         role="separator"
-        style="cursor: ew-resize; user-select: none;"
+        style="user-select: none;"
         tabindex="0"
       >
         <div
@@ -1533,9 +1538,10 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       <div
         class=""
         data-panel=""
+        data-panel-group-id="jotai-devtools-time-travel-panel-group"
         data-panel-id="jotai-devtools-time-travel-panel-right"
         data-panel-size="55.0"
-        id="data-panel-id-jotai-devtools-time-travel-panel-right"
+        id="jotai-devtools-time-travel-panel-right"
         style="flex-basis: 0px; flex-grow: 55; flex-shrink: 1; overflow: auto;"
       >
         <div
@@ -2227,14 +2233,16 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       data-panel-group=""
       data-panel-group-direction="horizontal"
       data-panel-group-id="jotai-devtools-time-travel-panel-group"
+      id="jotai-devtools-time-travel-panel-group"
       style="display: flex; flex-direction: row; height: calc(100% - 56px); overflow: hidden; width: 100%;"
     >
       <div
         class=""
         data-panel=""
+        data-panel-group-id="jotai-devtools-time-travel-panel-group"
         data-panel-id="jotai-devtools-time-travel-panel-left"
         data-panel-size="45.0"
-        id="data-panel-id-jotai-devtools-time-travel-panel-left"
+        id="jotai-devtools-time-travel-panel-left"
         style="flex-basis: 0px; flex-grow: 45; flex-shrink: 1; overflow: auto;"
       >
         <div
@@ -2414,7 +2422,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         </div>
       </div>
       <div
-        aria-controls="data-panel-id-jotai-devtools-time-travel-panel-left"
+        aria-controls="jotai-devtools-time-travel-panel-left"
         aria-valuemax="60"
         aria-valuemin="30"
         aria-valuenow="45"
@@ -2423,8 +2431,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         data-panel-group-id="jotai-devtools-time-travel-panel-group"
         data-panel-resize-handle-enabled="true"
         data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
+        data-resize-handle=""
+        data-resize-handle-state="inactive"
+        id="jotai-devtools-panel-resize-handle"
         role="separator"
-        style="cursor: ew-resize; user-select: none;"
+        style="user-select: none;"
         tabindex="0"
       >
         <div
@@ -2439,9 +2450,10 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       <div
         class=""
         data-panel=""
+        data-panel-group-id="jotai-devtools-time-travel-panel-group"
         data-panel-id="jotai-devtools-time-travel-panel-right"
         data-panel-size="55.0"
-        id="data-panel-id-jotai-devtools-time-travel-panel-right"
+        id="jotai-devtools-time-travel-panel-right"
         style="flex-basis: 0px; flex-grow: 55; flex-shrink: 1; overflow: auto;"
       >
         <div
