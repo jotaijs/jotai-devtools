@@ -1,0 +1,8 @@
+.internal-jotai-devtools-monospace-font {
+  font-family: var(--mantine-font-family-monospace);
+  font-size: var(--mantine-font-size-sm) !important;
+}
+
+.internal-jotai-devtools-navlink {
+  border-radius: var(--mantine-radius-md);
+}

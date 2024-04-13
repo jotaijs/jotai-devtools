@@ -1,0 +1,22 @@
+.internal-jotai-devtools-panel-resize-handle-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  .internal-jotai-devtools-panel-resize-handle-content {
+    transition:
+      max-height,
+      min-height,
+      height,
+      0.2s ease-out;
+  }
+}
+
+[data-resize-handle-active]
+  .internal-jotai-devtools-panel-resize-handle-wrapper,
+.internal-jotai-devtools-panel-resize-handle-wrapper:hover {
+  .internal-jotai-devtools-panel-resize-handle-content {
+    height: 90% !important;
+    min-height: 90% !important;
+    max-height: 90% !important;
+  }
+}

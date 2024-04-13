@@ -39,17 +39,15 @@ export const Counter = () => {
   return (
     <Box maw="500px">
       <Title size="h5">Counter</Title>
-      <Code color="gray" block>
-        {count}
-      </Code>
+      <Code block>{count}</Code>
 
       <Button
         display="block"
         mt={5}
         onClick={add}
         size="xs"
-        uppercase
         color="dark"
+        tt="uppercase"
       >
         Add 1
       </Button>

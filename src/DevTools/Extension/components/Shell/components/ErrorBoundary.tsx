@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Anchor, Box, Flex, Sx, Text } from '@mantine/core';
+import { Anchor, Box, Flex, MantineStyleProp, Text } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
 import {
   FallbackProps,
@@ -8,7 +8,7 @@ import {
 import { useThemeMode } from '../../../../hooks/useThemeMode';
 import { CodeSyntaxHighlighter } from './CodeSyntaxHighlighter';
 
-const textStyles: Sx = {
+const textStyles: MantineStyleProp = {
   display: 'flex',
   alignItems: 'center',
 };
@@ -28,22 +28,22 @@ const ErrorFallback = ({ error }: FallbackProps) => {
       justify="center"
       align="center"
       h="90%"
-      sx={{ overflow: 'scroll' }}
+      style={{ overflow: 'scroll' }}
       data-testid="jotai-devtools-error-boundary"
     >
       <Box w="100%" maw="80%" mah="80%">
-        <Text size="md" fw="500" color={themedRedColor} sx={textStyles} mb={5}>
-          <Text mr={5} sx={textStyles}>
+        <Text size="md" fw="500" c={themedRedColor} style={textStyles} mb={5}>
+          <Text mr={5} style={textStyles}>
             <IconAlertCircle size={16} />
           </Text>
           Uh-oh, something went wrong.
         </Text>
 
-        <Text size="sm" color={themedRedColor} mb="sm">
+        <Text size="sm" c={themedRedColor} mb="sm">
           If you believe this to be a bug, please file an issue on{' '}
           <Anchor
             href="https://github.com/jotaijs/jotai-devtools/issues"
-            color={themedRedColor}
+            c={themedRedColor}
             td="underline"
             target="_blank"
             rel="noreferrer noopener"

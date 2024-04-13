@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { EmotionCache, Global } from '@emotion/react';
 import {
-  ColorScheme,
-  ColorSchemeProvider,
   MantineProvider,
-  MantineThemeOverride,
+  createTheme,
+  localStorageColorSchemeManager,
 } from '@mantine/core';
 import { createStore } from 'jotai/vanilla';
 import { Store } from 'src/types';
@@ -12,110 +10,104 @@ import {
   DevToolsOptions,
   useSetDevToolsOptions,
 } from './atoms/devtools-options';
-import {
-  Extension,
-  ExtensionProps,
-  shellTriggerButtonClassName,
-} from './Extension';
-import { fontCss } from './fonts';
+import { Extension, ExtensionProps } from './Extension';
 import { InternalDevToolsContext } from './internal-jotai-store';
-import { createMemoizedEmotionCache } from './utils';
+
+import './styles.css';
+import './fonts/fonts.css';
 
 export type DevToolsProps = ExtensionProps & {
   theme?: 'dark' | 'light';
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   nonce?: string;
   options?: DevToolsOptions;
 };
 
+// TODO move the id to a common place as a const
+const getRootElement = () => {
+  const value =
+    typeof window === 'undefined'
+      ? undefined
+      : document.getElementById('jotai-devtools-root') || undefined;
+
+  return value;
+};
+
+const colorSchemeManager = localStorageColorSchemeManager({
+  key: 'jotai-devtools-color-scheme',
+});
+
+const theme = createTheme({
+  primaryColor: 'dark',
+  fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
+  fontFamilyMonospace:
+    'JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
+  headings: {
+    fontFamily:
+      'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+  },
+  defaultRadius: 'md',
+  activeClassName: 'jotai-devtools-active',
+  focusClassName: 'jotai-devtools-focus',
+  colors: {
+    dark: [
+      '#C1C2C5',
+      '#A6A7AB',
+      '#909296',
+      '#5c5f66',
+      '#373A40',
+      '#2C2E33',
+      '#25262b',
+      '#1A1B1E',
+      '#141517',
+      '#101113',
+    ],
+  },
+});
+
 const DevToolsMain = ({
   store,
   isInitialOpen = false,
-  theme: userColorScheme = 'light',
+  theme: userColorScheme,
   position = 'bottom-left',
-  nonce,
+  nonce = '',
   options,
 }: DevToolsProps): JSX.Element => {
-  const [colorScheme, setColorScheme] =
-    React.useState<ColorScheme>(userColorScheme);
   const setDevToolsOptions = useSetDevToolsOptions();
-
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
-
-  const jotaiDevtoolsEmotionCache = React.useRef<EmotionCache>();
-
-  if (!jotaiDevtoolsEmotionCache.current) {
-    jotaiDevtoolsEmotionCache.current = createMemoizedEmotionCache(nonce)();
-  }
-
-  React.useEffect(() => {
-    setColorScheme(userColorScheme);
-  }, [userColorScheme]);
 
   React.useEffect(() => {
     // Should we consider caching these options in the future instead of allowing users to change these?
     setDevToolsOptions(options);
   }, [setDevToolsOptions, options]);
 
-  const theme: MantineThemeOverride = React.useMemo(() => {
-    return {
-      primaryColor: 'dark',
-      activeStyles: { transform: 'scale(1)' },
-      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Segoe, sans-serif',
-      fontFamilyMonospace:
-        'JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
-      headings: {
-        fontFamily:
-          'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
-      },
-      defaultRadius: 'md',
-      globalStyles: (theme) => ({
-        '.jotai-devtools-shell': {
-          '*, *::before, *::after': {
-            boxSizing: 'border-box',
-          },
-          ...theme.fn.fontStyles(),
-          color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-          lineHeight: theme.lineHeight,
-          WebkitFontSmoothing: 'antialiased',
-          MozOsxFontSmoothing: 'grayscale',
-          fontSize: theme.fontSizes.md,
-        },
-        [`.${shellTriggerButtonClassName}`]: {
-          position: 'fixed',
-          borderRadius: '50%',
-          borderWidth: 0,
-          width: '4rem',
-          height: '4rem',
-          zIndex: 99999,
-          img: {
-            height: '2rem',
-          },
-          left: position.includes('left') ? '0.2rem' : 'unset',
-          right: position.includes('right') ? '0.2rem' : 'unset',
-          top: position.includes('top') ? '0.2rem' : 'unset',
-          bottom: position.includes('bottom') ? '0.2rem' : 'unset',
-        },
-      }),
-      colorScheme,
-    };
-  }, [colorScheme, position]);
+  const conditionalProps = React.useMemo(() => {
+    if (typeof userColorScheme === 'string') {
+      return { forceColorScheme: userColorScheme };
+    }
+    return {};
+  }, [userColorScheme]);
 
   return (
     <React.StrictMode>
-      <ColorSchemeProvider
-        colorScheme={colorScheme}
-        toggleColorScheme={toggleColorScheme}
-      >
+      <span id="jotai-devtools-root">
         <MantineProvider
           theme={theme}
-          emotionCache={jotaiDevtoolsEmotionCache.current}
+          colorSchemeManager={colorSchemeManager}
+          defaultColorScheme="light"
+          classNamesPrefix="jotai-devtools"
+          withStaticClasses={false}
+          withGlobalClasses={false}
+          getRootElement={getRootElement}
+          cssVariablesSelector="#jotai-devtools-root"
+          getStyleNonce={() => nonce}
+          {...conditionalProps}
         >
-          <Global styles={fontCss} />
-          <Extension store={store} isInitialOpen={isInitialOpen} />
+          <Extension
+            store={store}
+            isInitialOpen={isInitialOpen}
+            position={position}
+          />
         </MantineProvider>
-      </ColorSchemeProvider>
+      </span>
     </React.StrictMode>
   );
 };

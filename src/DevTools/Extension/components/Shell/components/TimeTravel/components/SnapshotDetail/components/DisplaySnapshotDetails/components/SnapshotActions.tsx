@@ -8,15 +8,15 @@ import { useUserStoreOptions } from '../../../../../../../../../../hooks/useUser
 import { useIsTimeTravelingValue } from '../../../../../atoms';
 
 const commonStyles: ButtonProps['styles'] = {
-  leftIcon: {
+  section: {
     marginRight: '0.325rem',
   },
 };
 
 const rotateButtonStyles: ButtonProps['styles'] = {
   ...commonStyles,
-  leftIcon: {
-    ...commonStyles.leftIcon,
+  section: {
+    ...commonStyles.section,
     // There isn't a suitable icon for "undo" in @tabler/icons, so we rotate it slightly to our needs
     transform: 'rotate(130deg)',
   },
@@ -53,7 +53,7 @@ export const SnapshotActions = (props: SnapshotActionsProps) => {
         onClick={handleOnRestoreClick}
         variant="default"
         styles={justRestored ? commonStyles : rotateButtonStyles}
-        leftIcon={
+        leftSection={
           justRestored ? (
             <IconCircleCheck size="0.8rem" />
           ) : (

@@ -34,7 +34,11 @@ const baseConfig: Options = {
   tsconfig: './tsconfig.build.json',
   dts: true,
   external: ['jotai', 'react', 'react-dom'],
-  noExternal: ['@tabler/icons-react'],
+  noExternal: [
+    '@tabler/icons-react',
+    '@mantine/core/styles.css',
+    '@mantine/code-highlight/styles.css',
+  ],
   platform: 'node',
   outExtension: defaultOutExtension,
   esbuildPlugins: defaultEsBuildPlugins,

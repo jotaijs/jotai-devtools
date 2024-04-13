@@ -15,7 +15,7 @@ export const SnapshotValue = (props: SnapshotValueProps): JSX.Element => {
     useSnapshotValueViewer();
 
   const handleOnTabChange = useCallback(
-    (value: SnapshotValueViewer) => {
+    (value: string | null) => {
       if (value) {
         setSnapshotValueViewer(value as SnapshotValueViewer);
       }
@@ -33,18 +33,18 @@ export const SnapshotValue = (props: SnapshotValueProps): JSX.Element => {
         keepMounted={false}
         id="jotai-devtools-time-travel-value-tabs"
         value={snapshotValueViewer}
-        onTabChange={handleOnTabChange}
+        onChange={handleOnTabChange}
       >
         <Tabs.List>
           <Tabs.Tab
             value="state"
-            icon={<IconFileCode size="0.9rem" stroke="1.75" />}
+            leftSection={<IconFileCode size="0.9rem" stroke="1.75" />}
           >
             State
           </Tabs.Tab>
           <Tabs.Tab
             value="diff"
-            icon={<IconFileDiff size="0.9rem" stroke="1.75" />}
+            leftSection={<IconFileDiff size="0.9rem" stroke="1.75" />}
           >
             Diff
           </Tabs.Tab>

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Tabs } from '@mantine/core';
+import clsx from 'clsx';
 import { useAtomValue } from 'jotai/react';
 import { shellStylesAtom } from '../../../atoms/shell-styles';
 import { TabKeys, shellStyleDefaults } from '../../../constants';
@@ -11,7 +12,7 @@ import { Header } from './components/Header';
 import { ShellResizeBar } from './components/ShellResizeBar';
 import { TabsHeader } from './components/TabsHeader';
 import { TimeTravel } from './components/TimeTravel';
-import { shellStyles } from './styles';
+import './Shell.css';
 
 export const Shell = () => {
   const [selectedShellTab, setSelectedShellTab] = useSelectedShellTab();
@@ -24,21 +25,23 @@ export const Shell = () => {
     useDevtoolsJotaiStoreOptions(),
   );
 
-  const handleOnTabChange = (value: TabKeys) => setSelectedShellTab(value);
+  const handleOnTabChange = (value: string | null) =>
+    setSelectedShellTab(value as TabKeys);
+
   return (
     <Tabs
       keepMounted={false}
       variant="default"
       defaultValue={TabKeys.AtomViewer}
-      sx={shellStyles}
       h={height}
       mah={shellStyleDefaults.maxHeight}
       ref={shellRef}
-      className="jotai-devtools-shell"
+      className={clsx('internal-jotai-devtools-shell', 'jotai-devtools-shell')}
       data-testid="jotai-devtools-shell"
       id="jotai-devtools-shell"
       value={selectedShellTab}
-      onTabChange={handleOnTabChange}
+      onChange={handleOnTabChange}
+      color="dark"
     >
       <ShellResizeBar shellRef={shellRef} />
       <Header />
@@ -47,7 +50,7 @@ export const Shell = () => {
         <Tabs.Panel
           value={TabKeys.AtomViewer}
           h="100%"
-          sx={{
+          style={{
             overflow: 'hidden',
             // Hide the overlap of this div's bg
             borderBottomLeftRadius: '7px',
@@ -59,7 +62,7 @@ export const Shell = () => {
         <Tabs.Panel
           value={TabKeys.TimeTravel}
           h="100%"
-          sx={{
+          style={{
             overflow: 'hidden',
             // Hide the overlap of this div's bg
             borderBottomLeftRadius: '7px',

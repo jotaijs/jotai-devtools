@@ -8,13 +8,16 @@ export const TabsHeader = React.memo(() => {
   const isSnapshotRecordingOn = useShouldRecordSnapshotHistoryValue();
   return (
     <Tabs.List>
-      <Tabs.Tab value={TabKeys.AtomViewer} icon={<IconLayoutList size={14} />}>
+      <Tabs.Tab
+        value={TabKeys.AtomViewer}
+        leftSection={<IconLayoutList size={14} />}
+      >
         Atom Viewer
       </Tabs.Tab>
 
       <Tabs.Tab
         value={TabKeys.TimeTravel}
-        icon={<IconTimeline size={14} />}
+        leftSection={<IconTimeline size={14} />}
         pr={isSnapshotRecordingOn ? 'xl' : 'md'}
       >
         {isSnapshotRecordingOn ? (

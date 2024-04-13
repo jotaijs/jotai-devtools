@@ -1,0 +1,21 @@
+.internal-jotai-devtools-shell {
+  position: fixed;
+  width: calc(100% - 1.25rem);
+  left: 50%;
+  bottom: 0.625rem;
+  transform: translate(-50%, 0%);
+  border-color: light-dark(
+    var(--mantine-color-gray-3),
+    var(--mantine-color-dark-4)
+  );
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  background: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-7)
+  );
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 99999;
+}

@@ -42,7 +42,7 @@ export const Async = () => {
         Out-of-the-box Suspense support. <i>Timeout: 8000 ms</i>
       </Text>
       <Text>Request status: {!request ? 'Ready' : '✅ Success'} </Text>
-      <Button onClick={handleFetchClick} size="xs" uppercase mt={5}>
+      <Button onClick={handleFetchClick} size="xs" tt="uppercase" mt={5}>
         Fetch
       </Button>
     </Box>
