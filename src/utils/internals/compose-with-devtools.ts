@@ -1,0 +1,224 @@
+import { Atom } from 'jotai';
+import {
+  AnyAtom,
+  AnyAtomError,
+  AnyAtomValue,
+  AnyWritableAtom,
+  Store,
+  StoreV1,
+  StoreV2,
+} from '../../types';
+
+type DevSubscribeStoreListener = (action: {
+  type: 'get' | 'set' | 'sub' | 'unsub' | 'restore';
+}) => void;
+
+type DevToolsStoreMethods = {
+  subscribeStore: (l: DevSubscribeStoreListener) => () => void;
+  getMountedAtoms: () => Iterable<Atom<unknown>>;
+  getAtomState: (
+    atom: Atom<unknown>,
+  ) =>
+    | { readonly v: AnyAtomValue; readonly d: Iterable<AnyAtom> }
+    | { readonly e: AnyAtomError; readonly d: Iterable<AnyAtom> }
+    | undefined;
+  getMountedAtomState: (atom: Atom<unknown>) =>
+    | {
+        // Atom's listeners
+        readonly l: Set<() => void>;
+        // Atom's dependents. Atoms that depend on this atom
+        readonly t: Set<Atom<unknown>>;
+      }
+    | undefined;
+  restoreAtoms: (values: Iterable<readonly [AnyAtom, AnyAtomValue]>) => void;
+};
+
+type WithDevToolsStore<S extends Store> = S & DevToolsStoreMethods;
+
+const isStoreV2 = (store: Store | undefined): store is StoreV2 => {
+  return store ? 'dev4_get_internal_weak_map' in store : false;
+};
+
+const isStoreV1 = (store: Store | undefined): store is StoreV1 => {
+  return !isStoreV2(store);
+};
+
+export const isDevToolsStore = (
+  store: Store | WithDevToolsStore<Store>,
+): store is WithDevToolsStore<Store> => {
+  return 'subscribeStore' in store;
+};
+
+const __composeV2StoreWithDevTools = (
+  store: StoreV2,
+): WithDevToolsStore<StoreV2> => {
+  const { sub, set, get } = store;
+  const storeListeners: Set<DevSubscribeStoreListener> = new Set();
+  const mountedAtoms = new Set<Atom<unknown>>();
+
+  store.dev4_override_method('sub', (...args) => {
+    mountedAtoms.add(args[0]);
+    const unsub = sub(...args);
+    storeListeners.forEach((l) => l({ type: 'sub' }));
+    return () => {
+      // Check if the atom has no listeners, if so, remove it from the mounted list
+      if (store.dev4_get_internal_weak_map().get(args[0])?.m?.l.size === 0) {
+        mountedAtoms.delete(args[0]);
+      }
+      unsub();
+      storeListeners.forEach((l) => l({ type: 'unsub' }));
+    };
+  });
+
+  store.dev4_override_method('get', (...args) => {
+    const value = get(...args);
+    storeListeners.forEach((l) => l({ type: 'get' }));
+    return value;
+  });
+
+  store.dev4_override_method('set', (...args) => {
+    const value = set(...args);
+    storeListeners.forEach((l) => l({ type: 'set' }));
+    return value;
+  });
+
+  (store as WithDevToolsStore<typeof store>).subscribeStore = (l) => {
+    storeListeners.add(l);
+    return () => {
+      storeListeners.delete(l);
+    };
+  };
+
+  (store as WithDevToolsStore<typeof store>).getMountedAtoms = () => {
+    return mountedAtoms.values();
+  };
+
+  (store as WithDevToolsStore<typeof store>).getAtomState = (atom) => {
+    const aState = store.dev4_get_internal_weak_map().get(atom);
+
+    if (aState?.s) {
+      return { ...aState.s, d: new Set(aState.d.keys()) };
+    }
+
+    return undefined;
+  };
+
+  (store as WithDevToolsStore<typeof store>).getMountedAtomState = (atom) => {
+    const aState = store.dev4_get_internal_weak_map().get(atom);
+
+    if (aState && aState.m) {
+      return {
+        l: aState.m.l,
+        t: aState.t,
+      };
+    }
+
+    return undefined;
+  };
+
+  (store as WithDevToolsStore<typeof store>).restoreAtoms = (values) => {
+    for (const [a, v] of values) {
+      set(a as AnyWritableAtom, v);
+    }
+
+    storeListeners.forEach((l) => l({ type: 'restore' }));
+  };
+
+  return store as typeof store & DevToolsStoreMethods;
+};
+
+const __composeV1StoreWithDevTools = (
+  store: StoreV1,
+): StoreV1 | WithDevToolsStore<StoreV1> => {
+  if (
+    'dev_subscribe_store' in store &&
+    'dev_get_mounted_atoms' in store &&
+    'dev_get_atom_state' in store &&
+    'dev_get_mounted' in store &&
+    'dev_restore_atoms' in store
+  ) {
+    const {
+      dev_subscribe_store,
+      dev_get_mounted_atoms,
+      dev_get_atom_state,
+      dev_get_mounted,
+      dev_restore_atoms,
+    } = store;
+
+    (store as WithDevToolsStore<typeof store>).subscribeStore = (l) => {
+      const cb: Parameters<typeof dev_subscribe_store>[0] = (action) => {
+        if (action.type === 'write' || action.type === 'async-write') {
+          l({ type: 'set' });
+        }
+
+        if (action.type === 'sub') {
+          l({ type: 'sub' });
+        }
+
+        if (action.type === 'unsub') {
+          l({ type: 'unsub' });
+        }
+
+        if (action.type === 'restore') {
+          l({ type: 'restore' });
+        }
+      };
+
+      return dev_subscribe_store(cb, 2);
+    };
+
+    (store as WithDevToolsStore<typeof store>).getMountedAtoms = () => {
+      return dev_get_mounted_atoms();
+    };
+
+    (store as WithDevToolsStore<typeof store>).getAtomState = (atom) => {
+      const aState = dev_get_atom_state(atom);
+
+      if (aState) {
+        const d = new Set(aState.d.keys());
+        d.delete(atom);
+
+        if ('v' in aState) {
+          return { v: aState.v, d };
+        }
+        if ('e' in aState) {
+          return { e: aState.e, d };
+        }
+
+        return undefined;
+      }
+    };
+
+    (store as WithDevToolsStore<typeof store>).getMountedAtomState = (atom) => {
+      const mounted = dev_get_mounted(atom);
+      return mounted;
+    };
+
+    (store as WithDevToolsStore<typeof store>).restoreAtoms = (values) => {
+      dev_restore_atoms(values);
+    };
+
+    return store as typeof store & DevToolsStoreMethods;
+  }
+
+  return store;
+};
+
+export const composeWithDevTools = (
+  store: Store,
+): typeof store | WithDevToolsStore<typeof store> => {
+  // Check if the store is already composed with DevTools
+  if (isDevToolsStore(store)) {
+    return store;
+  }
+
+  if (isStoreV2(store)) {
+    return __composeV2StoreWithDevTools(store);
+  }
+
+  if (isStoreV1(store)) {
+    return __composeV1StoreWithDevTools(store);
+  }
+
+  return store;
+};

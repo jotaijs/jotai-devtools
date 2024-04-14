@@ -1,12 +1,11 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { useStore } from 'jotai/react';
 import type {
   AtomsDependents,
   AtomsSnapshot,
   AtomsValues,
   Options,
-  Store,
 } from '../types';
+import { isDevToolsStore, useDevToolsStore } from './hooks/useDevToolsStore';
 
 const isEqualAtomsValues = (left: AtomsValues, right: AtomsValues) =>
   left.size === right.size &&
@@ -40,7 +39,7 @@ export function useAtomsSnapshot({
   shouldShowPrivateAtoms = false,
   ...options
 }: SnapshotOptions = {}): AtomsSnapshot {
-  const store = useStore(options);
+  const store = useDevToolsStore(options);
 
   const [atomsSnapshot, setAtomsSnapshot] = useState<AtomsSnapshot>(() => ({
     values: new Map(),
@@ -54,46 +53,27 @@ export function useAtomsSnapshot({
   });
 
   useEffect(() => {
-    const devSubscribeStore: Store['dev_subscribe_store'] =
-      // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
-      store?.dev_subscribe_store || store?.dev_subscribe_state;
-
-    if (!devSubscribeStore) return;
+    if (!isDevToolsStore(store)) return;
 
     let prevValues: AtomsValues = new Map();
     let prevDependents: AtomsDependents = new Map();
 
-    if (!('dev_subscribe_store' in store)) {
-      console.warn(
-        '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
-      );
-    }
-
-    // TODO remove this `t: any` and deprecation warnings in next breaking change release
-    const callback = (
-      type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
-    ) => {
-      if (typeof type !== 'object') {
-        console.warn(
-          '[DEPRECATION-WARNING]: Your Jotai version is out-of-date and contains deprecated properties that will be removed soon. Please update to the latest version of Jotai.',
-        );
-      }
-
+    const callback = () => {
       const values: AtomsValues = new Map();
       const dependents: AtomsDependents = new Map();
-      for (const atom of store.dev_get_mounted_atoms?.() || []) {
+      for (const atom of store.getMountedAtoms() || []) {
         if (!shouldShowPrivateAtoms && atom.debugPrivate) {
           // Skip private atoms
           continue;
         }
 
-        const atomState = store.dev_get_atom_state?.(atom);
+        const atomState = store.getAtomState(atom);
         if (atomState) {
           if ('v' in atomState) {
             values.set(atom, atomState.v);
           }
         }
-        const mounted = store.dev_get_mounted?.(atom);
+        const mounted = store.getMountedAtomState(atom);
         if (mounted) {
           let atomDependents = mounted.t;
 
@@ -130,8 +110,9 @@ export function useAtomsSnapshot({
         deferrableAtomSetAction();
       }
     };
-    const unsubscribe = devSubscribeStore?.(callback, 2);
-    callback({} as any);
+
+    const unsubscribe = store.subscribeStore(callback);
+    callback();
     return unsubscribe;
   }, [store, shouldShowPrivateAtoms]);
 

@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
-import { useStore } from 'jotai/react';
 import type { AtomsSnapshot, Options } from '../types';
+import { isDevToolsStore, useDevToolsStore } from './hooks/useDevToolsStore';
 
 export function useGotoAtomsSnapshot(options?: Options) {
-  const store = useStore(options);
+  const store = useDevToolsStore(options);
   return useCallback(
     (snapshot: AtomsSnapshot) => {
-      if (store.dev_restore_atoms) {
-        store.dev_restore_atoms(snapshot.values);
+      if (isDevToolsStore(store)) {
+        store.restoreAtoms(snapshot.values);
       }
     },
     [store],

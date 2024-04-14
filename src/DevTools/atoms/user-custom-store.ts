@@ -3,10 +3,10 @@ import { atom } from 'jotai/vanilla';
 import { Store } from 'src/types';
 import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 
-const userCustomStoreAtom = atom<Store | undefined>(undefined);
+const userStore = atom<Store | undefined>(undefined);
 
-export const useUserCustomStoreValue = () =>
-  useAtomValue(userCustomStoreAtom, useDevtoolsJotaiStoreOptions());
+export const useUserStoreValue = () =>
+  useAtomValue(userStore, useDevtoolsJotaiStoreOptions());
 
-export const useSetCustomStore = () =>
-  useSetAtom(userCustomStoreAtom, useDevtoolsJotaiStoreOptions());
+export const useSetUserStore = () =>
+  useSetAtom(userStore, useDevtoolsJotaiStoreOptions());

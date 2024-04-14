@@ -7,7 +7,10 @@ import {
   useInternalStore,
 } from '../../../../../../../DevTools/internal-jotai-store';
 import { selectedAtomAtom } from '../atoms';
-import { useUserStore } from './../../../../../../hooks/useUserStore';
+import {
+  isDevToolsStore,
+  useUserStore,
+} from './../../../../../../hooks/useUserStore';
 import { isPromise, use } from './use';
 
 type Store = ReturnType<typeof useStore>;
@@ -63,11 +66,7 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
   }
 
   useEffect(() => {
-    const devSubscribeStore: Store['dev_subscribe_store'] =
-      // @ts-expect-error dev_subscribe_state is deprecated in <= 2.0.3
-      userStore?.dev_subscribe_store || userStore?.dev_subscribe_state;
-
-    if (!devSubscribeStore) return;
+    if (!isDevToolsStore(userStore)) return;
 
     const atomSubCb = <AtomSubscribeFunction>(() => {
       if (typeof delay === 'number') {
@@ -81,18 +80,18 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
     atomSubCb.isJotaiDevTools = true;
 
     const devSubCb = (
-      type?: Parameters<Parameters<typeof devSubscribeStore>[0]>[0],
+      action: Parameters<
+        Parameters<(typeof userStore)['subscribeStore']>[0]
+      >[0],
     ) => {
-      const normalizedType = typeof type === 'string' ? type : type?.type;
-
-      if (normalizedType !== 'unsub') {
+      if (action.type !== 'unsub') {
         return;
       }
 
       const activeValue = internalStore.get(selectedAtomAtom);
       if (activeValue) {
         const { l = [], t } =
-          userStore.dev_get_mounted?.(activeValue.atom) || {};
+          userStore.getMountedAtomState(activeValue.atom) || {};
         const listenersArray = Array.from(l);
         const areAllCallbacksInternal = listenersArray.every(
           isInternalAtomSubscribeFunction,
@@ -104,7 +103,8 @@ export function useInternalAtomValue<Value>(atom: Atom<Value>) {
         }
       }
     };
-    const devUnsubscribeStore = devSubscribeStore?.(devSubCb, 2);
+
+    const devUnsubscribeStore = userStore.subscribeStore(devSubCb);
 
     const unsub = userStore.sub(atom, atomSubCb);
     rerender();

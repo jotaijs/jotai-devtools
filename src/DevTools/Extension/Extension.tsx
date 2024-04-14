@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { useAtom, useSetAtom } from 'jotai/react';
 import { Store } from '../../types';
 import { isShellOpenAtom } from '../atoms/is-shell-open-atom';
-import { useSetCustomStore } from '../atoms/user-custom-store';
+import { useSetUserStore } from '../atoms/user-custom-store';
 import { useThemeMode } from '../hooks/useThemeMode';
 import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 import { logo } from './assets/logo';
@@ -77,7 +77,7 @@ export const Extension = ({
     useDevtoolsJotaiStoreOptions(),
   );
 
-  const setUserStore = useSetCustomStore();
+  const setUserStore = useSetUserStore();
 
   React.useEffect(() => {
     setUserStore(store);
