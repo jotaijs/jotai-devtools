@@ -1,7 +1,7 @@
 import { StorybookConfig } from '@storybook/react-webpack5';
 const webpack = require('webpack');
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -34,6 +34,7 @@ const config: StorybookConfig = {
         ],
       },
     },
+    '@storybook/addon-webpack5-compiler-babel',
   ],
   framework: {
     name: '@storybook/react-webpack5',

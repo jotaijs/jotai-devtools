@@ -52,10 +52,7 @@ const config: Config = {
     '!src/DevTools/Extension/components/Shell/components/AtomViewer/hooks/use.ts',
   ],
   coverageDirectory: './coverage/',
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom/extend-expect',
-    '<rootDir>/__tests__/setup.ts',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/__tests__/setup.ts'],
 };
 
 export default config;

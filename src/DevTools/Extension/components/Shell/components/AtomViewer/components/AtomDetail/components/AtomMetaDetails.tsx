@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box, Text } from '@mantine/core';
+import { useThemeMode } from '../../../../../../../../hooks/useThemeMode';
 import { AtomValueType } from '../../../../../../../../utils/get-type-of-atom-value';
 import { MetaInfo } from '../../../../MetaInfo';
 
@@ -15,6 +16,8 @@ export const AtomMetaDetails = React.memo(
     atomValueType,
     isAtomPrivate,
   }: AtomMetaDetailsProps): JSX.Element => {
+    const privateColor = useThemeMode('red.1', 'red.7');
+
     return (
       <Box>
         <Text fw="bold" mb={10}>
@@ -23,7 +26,7 @@ export const AtomMetaDetails = React.memo(
         <MetaInfo label="Debug Label" value={debugLabel} />
         <MetaInfo label="Value type" value={atomValueType} />
         {isAtomPrivate && (
-          <MetaInfo label="Private" value={'Yes'} color={'red'} />
+          <MetaInfo label="Private" value="Yes" color={privateColor} />
         )}
       </Box>
     );
