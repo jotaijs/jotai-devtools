@@ -10,7 +10,7 @@ import {
 } from '../../types';
 
 type DevSubscribeStoreListener = (action: {
-  type: 'get' | 'set' | 'sub' | 'unsub' | 'restore';
+  type: 'get' | 'async-get' | 'set' | 'sub' | 'unsub' | 'restore';
 }) => void;
 
 type DevToolsStoreMethods = {
@@ -56,28 +56,76 @@ const __composeV2StoreWithDevTools = (
   const storeListeners: Set<DevSubscribeStoreListener> = new Set();
   const mountedAtoms = new Set<Atom<unknown>>();
 
+  // Map to keep track of how many times an atom was set recently
+  // We mostly use this to re-collect the values for history tracking for async atoms
+  // Async atoms call `get` once they finish fetching the value, so we verify if the atom was set recently and then trigger the history tracking
+  // I hope there is a better way to do this
+  const recentlySetAtomsMap = new WeakMap<Atom<unknown>, number>();
+
+  const reduceCountOrRemoveRecentlySetAtom = (
+    atom: Atom<unknown>,
+    onFound?: () => void,
+  ) => {
+    const foundCount = recentlySetAtomsMap.get(atom);
+    if (typeof foundCount === 'number') {
+      if (foundCount > 1) {
+        recentlySetAtomsMap.set(atom, foundCount - 1);
+      } else {
+        recentlySetAtomsMap.delete(atom);
+      }
+      onFound?.();
+    }
+  };
+
+  const increaseCountRecentlySetAtom = (atom: Atom<unknown>) => {
+    const foundCount = recentlySetAtomsMap.get(atom);
+    recentlySetAtomsMap.set(atom, (foundCount || 0) + 1);
+  };
+
   store.dev4_override_method('sub', (...args) => {
     mountedAtoms.add(args[0]);
     const unsub = sub(...args);
     storeListeners.forEach((l) => l({ type: 'sub' }));
     return () => {
-      // Check if the atom has no listeners, if so, remove it from the mounted list
-      if (store.dev4_get_internal_weak_map().get(args[0])?.m?.l.size === 0) {
-        mountedAtoms.delete(args[0]);
-      }
       unsub();
+
+      // FIXME is there a better way to check if its mounted?
+      // Check if the atom has no listeners, if so, remove it from the mounted list in the next tick
+      Promise.resolve().then(() => {
+        const atomState = store.dev4_get_internal_weak_map().get(args[0]);
+        if (typeof atomState?.m === 'undefined') {
+          mountedAtoms.delete(args[0]);
+        }
+      });
+
+      // We remove the atom from the recently set map if it was set recently when it is unsubscribed
+      reduceCountOrRemoveRecentlySetAtom(args[0]);
+
       storeListeners.forEach((l) => l({ type: 'unsub' }));
     };
   });
 
   store.dev4_override_method('get', (...args) => {
     const value = get(...args);
+
+    reduceCountOrRemoveRecentlySetAtom(args[0], () => {
+      if (value instanceof Promise) {
+        value.then(() => {
+          // We wait for a tick to ensure that if there are any derived atoms, we wait for them to be flushed out as well
+          Promise.resolve().then(() => {
+            storeListeners.forEach((l) => l({ type: 'async-get' }));
+          });
+        });
+      }
+    });
+
     storeListeners.forEach((l) => l({ type: 'get' }));
     return value;
   });
 
   store.dev4_override_method('set', (...args) => {
     const value = set(...args);
+    increaseCountRecentlySetAtom(args[0]);
     storeListeners.forEach((l) => l({ type: 'set' }));
     return value;
   });

@@ -120,7 +120,7 @@ export default function useSyncSnapshotHistory() {
     const cb = (
       action: Parameters<Parameters<typeof userStore.subscribeStore>[0]>[0],
     ) => {
-      const isWrite = action.type === 'set';
+      const isWrite = action.type === 'set' || action.type === 'async-get';
       if (
         isWrite &&
         shouldRecordSnapshotHistory &&
