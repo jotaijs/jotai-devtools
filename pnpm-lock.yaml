@@ -211,6 +211,9 @@ devDependencies:
   postcss-preset-mantine:
     specifier: ^1.14.4
     version: 1.14.4(postcss@8.4.38)
+  postcss-remove-declaration:
+    specifier: ^1.1.0
+    version: 1.1.0
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -11764,6 +11767,10 @@ packages:
       through2: 2.0.5
     dev: true
 
+  /picocolors@0.2.1:
+    resolution: {integrity: sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==}
+    dev: true
+
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
     dev: true
@@ -11953,6 +11960,12 @@ packages:
       postcss-nested: 6.0.1(postcss@8.4.38)
     dev: true
 
+  /postcss-remove-declaration@1.1.0:
+    resolution: {integrity: sha512-GWQNWeyHg+HjhB6cUH+/2+bsyWt35H8GX8hcZiXApOK309VGwLIiyfbfjnMaf56WvDMEnLE/anLGYhuH2exbbA==}
+    dependencies:
+      postcss: 7.0.39
+    dev: true
+
   /postcss-selector-parser@6.0.13:
     resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
     engines: {node: '>=4'}
@@ -11972,6 +11985,14 @@ packages:
 
   /postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+    dev: true
+
+  /postcss@7.0.39:
+    resolution: {integrity: sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      picocolors: 0.2.1
+      source-map: 0.6.1
     dev: true
 
   /postcss@8.4.38:

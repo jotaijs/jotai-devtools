@@ -11,4 +11,15 @@
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   --webkit-font-smoothing: antialiased;
   font-size: var(--mantine-font-size-md);
+  font-family: var(--mantine-font-family);
+  line-height: var(--mantine-line-height);
+  background-color: var(--mantine-color-body);
+  color: var(--mantine-color-text);
+
+  -webkit-font-smoothing: var(--mantine-webkit-font-smoothing);
+  -moz-osx-font-smoothing: var(--mantine-moz-font-smoothing);
+
+  @media screen and (max-device-width: em(500px)) {
+    -webkit-text-size-adjust: 100%;
+  }
 }
