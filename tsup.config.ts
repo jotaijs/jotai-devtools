@@ -36,7 +36,7 @@ const baseConfig: Options = {
   external: ['jotai', 'react', 'react-dom'],
   noExternal: [
     '@tabler/icons-react',
-    '@mantine/core/styles.css',
+    /@mantine\/core\/styles\/[a-zA-Z]+\.css/,
     '@mantine/code-highlight/styles.css',
   ],
   platform: 'node',

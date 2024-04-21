@@ -14,6 +14,11 @@ import { DemoJotaiStoreContext, demoStore } from './demo-store';
 import { Random } from './Random';
 import { ThemeToggle } from './ThemeToggle';
 import { Todos } from './Todos';
+// Intentionally disabled to import css only for this storybook
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+// eslint-disable-next-line
+import css from '!css-loader!@mantine/core/styles.css';
 
 const DevToolsWithColorScheme = (props: DevToolsProps) => {
   const colorScheme = useComputedColorScheme();
@@ -23,6 +28,8 @@ const DevToolsWithColorScheme = (props: DevToolsProps) => {
 export const DemoApp = (props: DevToolsProps) => {
   return (
     <DemoJotaiStoreContext.Provider value={demoStore}>
+      <style>{css.toString()}</style>
+
       <MantineProvider
         theme={{
           primaryColor: 'cyan',
