@@ -1,3 +1,11 @@
+## [0.9.1](https://github.com/jotaijs/jotai-devtools/compare/v0.9.0...v0.9.1) (2024-04-24)
+
+### Bug Fixes
+
+- remove global styles from final css build
+  ([#139](https://github.com/jotaijs/jotai-devtools/issues/139))
+  ([13e9d60](https://github.com/jotaijs/jotai-devtools/commit/13e9d603eb4d336aef8eb541a5507ceeebf64692))
+
 ## [0.9.0](https://github.com/jotaijs/jotai-devtools/compare/v0.8.0...v0.9.0) (2024-04-16)
 
 ### Features
