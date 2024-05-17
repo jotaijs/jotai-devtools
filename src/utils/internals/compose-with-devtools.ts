@@ -165,10 +165,7 @@ const __composeV2StoreWithDevTools = (
   };
 
   (store as WithDevToolsStore<typeof store>).restoreAtoms = (values) => {
-    for (const [a, v] of values) {
-      set(a as AnyWritableAtom, v);
-    }
-
+    store.dev4_restore_atoms(values);
     storeListeners.forEach((l) => l({ type: 'restore' }));
   };
 
