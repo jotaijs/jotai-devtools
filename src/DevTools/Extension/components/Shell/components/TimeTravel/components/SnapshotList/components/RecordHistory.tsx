@@ -13,7 +13,7 @@ export const RecordHistory = () => {
     ? 'Stop recording snapshot history'
     : 'Record snapshot history';
   return (
-    <Tooltip label={label} openDelay={750}>
+    <Tooltip label={label} openDelay={750} withinPortal={false}>
       <ActionIcon
         variant="outline"
         color={useThemeMode(
