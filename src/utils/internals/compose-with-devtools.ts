@@ -3,7 +3,6 @@ import {
   AnyAtom,
   AnyAtomError,
   AnyAtomValue,
-  AnyWritableAtom,
   Store,
   StoreV1,
   StoreV2,
@@ -111,7 +110,7 @@ const __composeV2StoreWithDevTools = (
     reduceCountOrRemoveRecentlySetAtom(args[0], () => {
       if (value instanceof Promise) {
         value.then(() => {
-          // We wait for a tick to ensure that if there are any derived atoms, we wait for them to be flushed out as well
+          // We wait for a tick to ensure that if there are any derived atoms then we wait for them to be flushed out as well
           Promise.resolve().then(() => {
             storeListeners.forEach((l) => l({ type: 'async-get' }));
           });
@@ -144,8 +143,8 @@ const __composeV2StoreWithDevTools = (
   (store as WithDevToolsStore<typeof store>).getAtomState = (atom) => {
     const aState = store.dev4_get_internal_weak_map().get(atom);
 
-    if (aState?.s) {
-      return { ...aState.s, d: new Set(aState.d.keys()) };
+    if (aState) {
+      return { v: aState.v, e: aState.e, d: new Set(aState.d.keys()) };
     }
 
     return undefined;
@@ -157,7 +156,7 @@ const __composeV2StoreWithDevTools = (
     if (aState && aState.m) {
       return {
         l: aState.m.l,
-        t: aState.t,
+        t: aState.m.t,
       };
     }
 
