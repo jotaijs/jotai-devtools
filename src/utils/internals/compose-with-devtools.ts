@@ -1,4 +1,5 @@
 import { Atom } from 'jotai';
+import { INTERNAL_PrdStore } from 'jotai/vanilla/store2';
 import {
   AnyAtom,
   AnyAtomError,
@@ -81,7 +82,7 @@ const __composeV2StoreWithDevTools = (
     recentlySetAtomsMap.set(atom, (foundCount || 0) + 1);
   };
 
-  store.dev4_override_method('sub', (...args) => {
+  store.sub = (...args) => {
     mountedAtoms.add(args[0]);
     const unsub = sub(...args);
     storeListeners.forEach((l) => l({ type: 'sub' }));
@@ -102,9 +103,9 @@ const __composeV2StoreWithDevTools = (
 
       storeListeners.forEach((l) => l({ type: 'unsub' }));
     };
-  });
+  };
 
-  store.dev4_override_method('get', (...args) => {
+  store.get = (...args) => {
     const value = get(...args);
 
     reduceCountOrRemoveRecentlySetAtom(args[0], () => {
@@ -120,14 +121,14 @@ const __composeV2StoreWithDevTools = (
 
     storeListeners.forEach((l) => l({ type: 'get' }));
     return value;
-  });
+  };
 
-  store.dev4_override_method('set', (...args) => {
+  store.set = (...args) => {
     const value = set(...args);
     increaseCountRecentlySetAtom(args[0]);
     storeListeners.forEach((l) => l({ type: 'set' }));
     return value;
-  });
+  };
 
   (store as WithDevToolsStore<typeof store>).subscribeStore = (l) => {
     storeListeners.add(l);

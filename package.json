@@ -140,7 +140,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-watch-typeahead": "^2.2.2",
-    "jotai": "https://pkg.csb.dev/pmndrs/jotai/commit/4d2e9495/jotai/_pkg.tgz",
+    "jotai": "^2.8.2",
     "jotai-tanstack-query": "^0.7.2",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
