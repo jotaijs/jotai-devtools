@@ -203,7 +203,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
         style="position: sticky; top: 0px; z-index: 1; width: 100%;"
       >
         <div
-          class="m_8bffd616 __m__-r151"
+          class="m_8bffd616 __m__-r15j"
           style="align-items: center; justify-content: space-between;"
         >
           <div
@@ -232,7 +232,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             </div>
           </div>
           <div
-            class="m_8bffd616 __m__-r15b"
+            class="m_8bffd616 __m__-r15t"
             style="align-items: center;"
           >
             <button
@@ -412,19 +412,19 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           class=""
           data-panel-group=""
           data-panel-group-direction="horizontal"
-          data-panel-group-id=":r15v:"
+          data-panel-group-id=":r16h:"
           style="display: flex; flex-direction: row; height: 100%; overflow: hidden; width: 100%;"
         >
           <div
             class=""
             data-panel=""
-            data-panel-group-id=":r15v:"
-            data-panel-id=":r161:"
+            data-panel-group-id=":r16h:"
+            data-panel-id=":r16j:"
             data-panel-size="50.0"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r163"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r16l"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -570,13 +570,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             </div>
           </div>
           <div
-            aria-controls=":r161:"
+            aria-controls=":r16j:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
             class=""
             data-panel-group-direction="horizontal"
-            data-panel-group-id=":r15v:"
+            data-panel-group-id=":r16h:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
             data-resize-handle=""
@@ -598,13 +598,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           <div
             class=""
             data-panel=""
-            data-panel-group-id=":r15v:"
-            data-panel-id=":r16t:"
+            data-panel-group-id=":r16h:"
+            data-panel-id=":r17f:"
             data-panel-size="50.0"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r16v"
+              class="m_8bffd616 __m__-r17h"
               style="flex-direction: column; padding-left: 0rem; height: 100%; position: relative;"
             >
               <div
@@ -794,7 +794,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
         style="position: sticky; top: 0px; z-index: 1; width: 100%;"
       >
         <div
-          class="m_8bffd616 __m__-r19p"
+          class="m_8bffd616 __m__-r1ab"
           style="align-items: center; justify-content: space-between;"
         >
           <div
@@ -823,7 +823,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             </div>
           </div>
           <div
-            class="m_8bffd616 __m__-r1a3"
+            class="m_8bffd616 __m__-r1al"
             style="align-items: center;"
           >
             <button
@@ -1003,19 +1003,19 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           class=""
           data-panel-group=""
           data-panel-group-direction="horizontal"
-          data-panel-group-id=":r1an:"
+          data-panel-group-id=":r1b9:"
           style="display: flex; flex-direction: row; height: 100%; overflow: hidden; width: 100%;"
         >
           <div
             class=""
             data-panel=""
-            data-panel-group-id=":r1an:"
-            data-panel-id=":r1ap:"
+            data-panel-group-id=":r1b9:"
+            data-panel-id=":r1bb:"
             data-panel-size="50.0"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1ar"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1bd"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -1161,13 +1161,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             </div>
           </div>
           <div
-            aria-controls=":r1ap:"
+            aria-controls=":r1bb:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
             class=""
             data-panel-group-direction="horizontal"
-            data-panel-group-id=":r1an:"
+            data-panel-group-id=":r1b9:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
             data-resize-handle=""
@@ -1189,13 +1189,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           <div
             class=""
             data-panel=""
-            data-panel-group-id=":r1an:"
-            data-panel-id=":r1bl:"
+            data-panel-group-id=":r1b9:"
+            data-panel-id=":r1c7:"
             data-panel-size="50.0"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r1bn"
+              class="m_8bffd616 __m__-r1c9"
               style="flex-direction: column; padding-left: 0rem; height: 100%; position: relative;"
             >
               <div
@@ -1416,7 +1416,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
         style="position: sticky; top: 0px; z-index: 1; width: 100%;"
       >
         <div
-          class="m_8bffd616 __m__-r1et"
+          class="m_8bffd616 __m__-r1ff"
           style="align-items: center; justify-content: space-between;"
         >
           <div
@@ -1445,7 +1445,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             </div>
           </div>
           <div
-            class="m_8bffd616 __m__-r1f7"
+            class="m_8bffd616 __m__-r1fp"
             style="align-items: center;"
           >
             <button
@@ -1625,19 +1625,19 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           class=""
           data-panel-group=""
           data-panel-group-direction="horizontal"
-          data-panel-group-id=":r1fr:"
+          data-panel-group-id=":r1gd:"
           style="display: flex; flex-direction: row; height: 100%; overflow: hidden; width: 100%;"
         >
           <div
             class=""
             data-panel=""
-            data-panel-group-id=":r1fr:"
-            data-panel-id=":r1ft:"
+            data-panel-group-id=":r1gd:"
+            data-panel-id=":r1gf:"
             data-panel-size="50.0"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1fv"
+              class="internal-jotai-devtools-atom-viewer-wrapper m_8bffd616 __m__-r1gh"
               style="flex-direction: column; padding-top: 0rem; height: 100%;"
             >
               <div
@@ -1783,13 +1783,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             </div>
           </div>
           <div
-            aria-controls=":r1ft:"
+            aria-controls=":r1gf:"
             aria-valuemax="70"
             aria-valuemin="30"
             aria-valuenow="50"
             class=""
             data-panel-group-direction="horizontal"
-            data-panel-group-id=":r1fr:"
+            data-panel-group-id=":r1gd:"
             data-panel-resize-handle-enabled="true"
             data-panel-resize-handle-id="jotai-devtools-panel-resize-handle"
             data-resize-handle=""
@@ -1811,13 +1811,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           <div
             class=""
             data-panel=""
-            data-panel-group-id=":r1fr:"
-            data-panel-id=":r1gp:"
+            data-panel-group-id=":r1gd:"
+            data-panel-id=":r1hb:"
             data-panel-size="50.0"
             style="flex-basis: 0px; flex-grow: 50; flex-shrink: 1; overflow: auto;"
           >
             <div
-              class="m_8bffd616 __m__-r1gr"
+              class="m_8bffd616 __m__-r1hd"
               style="flex-direction: column; padding-left: 0rem; height: 100%; position: relative;"
             >
               <div
@@ -3753,6 +3753,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 <button
                   class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
+                  data-active="true"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
                   type="button"
@@ -3766,11 +3767,12 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       <p
                         class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
-                        doubleCountAtom
+                        privateAtom
                       </p>
                     </span>
                     <span
                       class="m_57492dcc"
+                      data-active="true"
                     />
                   </div>
                   <span
@@ -3807,7 +3809,6 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 <button
                   class="jotai-devtools-focus internal-jotai-devtools-navlink m_f0824112 m_87cf2631"
                   color="dark"
-                  data-active="true"
                   data-variant="filled"
                   style="--nl-bg: var(--mantine-color-dark-filled); --nl-hover: var(--mantine-color-dark-filled-hover); --nl-color: var(--mantine-color-white);"
                   type="button"
@@ -3821,12 +3822,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                       <p
                         class="jotai-devtools-focus internal-jotai-devtools-monospace-font m_b6d8b162"
                       >
-                        privateAtom
+                        doubleCountAtom
                       </p>
                     </span>
                     <span
                       class="m_57492dcc"
-                      data-active="true"
                     />
                   </div>
                   <span
