@@ -1,5 +1,4 @@
 import { Atom } from 'jotai';
-import { INTERNAL_PrdStore } from 'jotai/vanilla/store2';
 import {
   AnyAtom,
   AnyAtomError,
@@ -95,6 +94,7 @@ const __composeV2StoreWithDevTools = (
         const atomState = store.dev4_get_internal_weak_map().get(args[0]);
         if (typeof atomState?.m === 'undefined') {
           mountedAtoms.delete(args[0]);
+          storeListeners.forEach((l) => l({ type: 'unsub' }));
         }
       });
 
