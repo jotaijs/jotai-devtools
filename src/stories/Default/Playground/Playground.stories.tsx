@@ -31,6 +31,9 @@ type CustomStorybookProps = DevToolsProps & {
 
 type Story = StoryObj<CustomStorybookProps>;
 
+const ReduxDevTools = () => {
+  useAtomsDevtools('playground');
+};
 export const Default: Story = {
   render: ({ ...args }) => {
     const nextOptions = {
@@ -53,6 +56,7 @@ export const Default: Story = {
       >
         <Provider store={getDefaultStore()}>
           <DevTools {...props} />
+          <ReduxDevTools />
           <Playground />
         </Provider>
       </MantineProvider>

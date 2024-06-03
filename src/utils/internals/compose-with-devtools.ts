@@ -53,7 +53,6 @@ const __composeV2StoreWithDevTools = (
 ): WithDevToolsStore<StoreV2> => {
   const { sub, set, get } = store;
   const storeListeners: Set<DevSubscribeStoreListener> = new Set();
-  const mountedAtoms = new Set<Atom<unknown>>();
 
   // Map to keep track of how many times an atom was set recently
   // We mostly use this to re-collect the values for history tracking for async atoms
@@ -82,21 +81,10 @@ const __composeV2StoreWithDevTools = (
   };
 
   store.sub = (...args) => {
-    mountedAtoms.add(args[0]);
     const unsub = sub(...args);
     storeListeners.forEach((l) => l({ type: 'sub' }));
     return () => {
       unsub();
-
-      // FIXME is there a better way to check if its mounted?
-      // Check if the atom has no listeners, if so, remove it from the mounted list in the next tick
-      Promise.resolve().then(() => {
-        const atomState = store.dev4_get_internal_weak_map().get(args[0]);
-        if (typeof atomState?.m === 'undefined') {
-          mountedAtoms.delete(args[0]);
-          storeListeners.forEach((l) => l({ type: 'unsub' }));
-        }
-      });
 
       // We remove the atom from the recently set map if it was set recently when it is unsubscribed
       reduceCountOrRemoveRecentlySetAtom(args[0]);
@@ -138,7 +126,7 @@ const __composeV2StoreWithDevTools = (
   };
 
   (store as WithDevToolsStore<typeof store>).getMountedAtoms = () => {
-    return mountedAtoms.values();
+    return store.dev4_get_mounted_atoms();
   };
 
   (store as WithDevToolsStore<typeof store>).getAtomState = (atom) => {

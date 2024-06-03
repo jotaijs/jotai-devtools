@@ -33,7 +33,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
         style="position: sticky; top: 0px; z-index: 1; width: 100%;"
       >
         <div
-          class="m_8bffd616 __m__-rcj"
+          class="m_8bffd616 __m__-rd1"
           style="align-items: center; justify-content: space-between;"
         >
           <div
@@ -62,7 +62,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             </div>
           </div>
           <div
-            class="m_8bffd616 __m__-rct"
+            class="m_8bffd616 __m__-rdb"
             style="align-items: center;"
           >
             <button
@@ -131,7 +131,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
         </div>
       </div>
       <div
-        class="m_8bffd616 __m__-rhr"
+        class="m_8bffd616 __m__-rin"
         data-testid="jotai-devtools-error-boundary"
         role="alert"
         style="overflow: scroll; align-items: center; justify-content: center; height: 90%;"
@@ -406,7 +406,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
         </div>
       </div>
       <div
-        class="m_8bffd616 __m__-rb9"
+        class="m_8bffd616 __m__-rbn"
         data-testid="jotai-devtools-error-boundary"
         role="alert"
         style="overflow: scroll; align-items: center; justify-content: center; height: 90%;"
