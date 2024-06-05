@@ -1,20 +1,9 @@
-import React, {
-  JSXElementConstructor,
-  StrictMode,
-  Suspense,
-  useEffect,
-  useRef,
-} from 'react';
+import React, { StrictMode, Suspense, useEffect, useRef } from 'react';
 import { fireEvent, render, waitFor } from '@testing-library/react';
-import { getDefaultStore } from 'jotai/experimental';
-import { Provider, useAtom } from 'jotai/react';
+import { useAtom } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
 import type { Atom } from 'jotai/vanilla';
 import { useAtomsSnapshot, useGotoAtomsSnapshot } from 'jotai-devtools/utils';
-
-const storeV2Wrapper: JSXElementConstructor<{ children: React.ReactNode }> = ({
-  children,
-}) => <Provider store={getDefaultStore()}>{children}</Provider>;
 
 describe('useAtomsSnapshot', () => {
   it('[DEV-ONLY] useGotoAtomsSnapshot should modify atoms snapshot', async () => {
@@ -58,9 +47,6 @@ describe('useAtomsSnapshot', () => {
         <DisplayAtoms />
         <UpdateSnapshot />
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await findByText('cat');
@@ -111,9 +97,6 @@ describe('useAtomsSnapshot', () => {
         <DisplayPrice />
         <UpdateSnapshot />
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await waitFor(() => {
@@ -174,9 +157,6 @@ describe('useAtomsSnapshot', () => {
           <UpdateSnapshot />
         </Suspense>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await findByText('loading');
@@ -247,9 +227,6 @@ describe('useAtomsSnapshot', () => {
         <DisplayPrice />
         <UpdateSnapshot />
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await waitFor(() => {

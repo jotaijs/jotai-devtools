@@ -1,15 +1,10 @@
-import React, { JSXElementConstructor, StrictMode, Suspense } from 'react';
+import React, { StrictMode, Suspense } from 'react';
 import { act, fireEvent, render } from '@testing-library/react';
-import { createStore } from 'jotai/experimental';
-import { Provider, useAtom } from 'jotai/react';
+import { useAtom } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
 import { useAtomDevtools } from 'jotai-devtools/utils';
 
 let extensionSubscriber: ((message: any) => void) | undefined;
-
-const storeV2Wrapper: JSXElementConstructor<{ children: React.ReactNode }> = ({
-  children,
-}) => <Provider store={createStore()}>{children}</Provider>;
 
 const extension = {
   subscribe: jest.fn((f) => {
@@ -52,9 +47,6 @@ describe('useAtomDevtools', () => {
       <StrictMode>
         <Counter />
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     expect(extension.init).toHaveBeenLastCalledWith(0);
@@ -90,9 +82,6 @@ describe('useAtomDevtools', () => {
           <StrictMode>
             <Counter />
           </StrictMode>,
-          {
-            wrapper: storeV2Wrapper,
-          },
         );
       }).not.toThrow();
     });
@@ -106,9 +95,6 @@ describe('useAtomDevtools', () => {
         <>
           <Counter enabled={true} />
         </>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
       expect(console.warn).toHaveBeenLastCalledWith(
         'Please install/enable Redux devtools extension',
@@ -126,9 +112,6 @@ describe('useAtomDevtools', () => {
         <StrictMode>
           <Counter enabled={true} />
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       expect(console.warn).not.toHaveBeenLastCalledWith(
@@ -147,9 +130,6 @@ describe('useAtomDevtools', () => {
         <StrictMode>
           <Counter />
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
       expect(consoleWarn).not.toBeCalled();
 
@@ -177,9 +157,6 @@ describe('useAtomDevtools', () => {
       <StrictMode>
         <Counter />
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     expect(extension.send).toBeCalledTimes(0);
@@ -214,9 +191,6 @@ describe('useAtomDevtools', () => {
             <Counter />
           </Suspense>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       expect(extension.send).toBeCalledTimes(0);
@@ -254,9 +228,6 @@ describe('useAtomDevtools', () => {
           <StrictMode>
             <Counter />
           </StrictMode>,
-          {
-            wrapper: storeV2Wrapper,
-          },
         );
 
         expect(extension.send).toBeCalledTimes(0);
@@ -295,9 +266,6 @@ describe('useAtomDevtools', () => {
           <StrictMode>
             <Counter />
           </StrictMode>,
-          {
-            wrapper: storeV2Wrapper,
-          },
         );
 
         const nextLiftedState = {
@@ -340,9 +308,6 @@ describe('useAtomDevtools', () => {
             <StrictMode>
               <Counter />
             </StrictMode>,
-            {
-              wrapper: storeV2Wrapper,
-            },
           );
 
           expect(extension.send).toBeCalledTimes(0);
