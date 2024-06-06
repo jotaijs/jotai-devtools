@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Button, Text, Title } from '@mantine/core';
+import React, { useState } from 'react';
+import { Box, Button, Flex, Text, Title } from '@mantine/core';
 import { useAtom, useAtomValue } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
 
@@ -24,7 +24,7 @@ const makeRandomFetchReq = async () => {
   );
 };
 // const asyncAtom = atom<Promise<any>>(Promise.resolve(null));
-const asyncAtom = atom(Promise.resolve<any>(null));
+const asyncAtom = atom<Promise<any> | null>(null);
 asyncAtom.debugLabel = 'asyncAtom';
 
 const derivedAsyncAtom = atom(async (get) => {
@@ -32,13 +32,21 @@ const derivedAsyncAtom = atom(async (get) => {
   return result?.userId || 'No user';
 });
 
+const ConditionalAsync = () => {
+  const userId = useAtomValue(derivedAsyncAtom);
+  return <Text>User: {userId}</Text>;
+};
+
 export const Async = () => {
   const [request, setRequest] = useAtom(asyncAtom);
-  const userId = useAtomValue(derivedAsyncAtom);
-  // const setRequest = useSetAtom(asyncAtom, demoStoreOptions);
+  const [showResult, setShowResult] = useState(false);
 
   const handleFetchClick = async () => {
     setRequest(makeRandomFetchReq); // Will suspend until request resolves
+  };
+
+  const handleShowResultClick = () => {
+    setShowResult((v) => !v);
   };
 
   return (
@@ -47,11 +55,25 @@ export const Async = () => {
       <Text mb={10} c="dark.2">
         Out-of-the-box Suspense support. <i>Timeout: 8000 ms</i>
       </Text>
-      User: {userId}
+      {/* User: {userId} */}
+      {showResult && <ConditionalAsync />}
       <Text>Request status: {!request ? 'Ready' : '✅ Success'} </Text>
-      <Button onClick={handleFetchClick} size="xs" tt="uppercase" mt={5}>
-        Fetch
-      </Button>
+      <Flex>
+        <Button onClick={handleFetchClick} size="xs" tt="uppercase" mt={5}>
+          Fetch
+        </Button>
+
+        <Button
+          onClick={handleShowResultClick}
+          size="xs"
+          tt="uppercase"
+          mt={5}
+          ml={5}
+          color="green"
+        >
+          Toggle result
+        </Button>
+      </Flex>
     </Box>
   );
 };

@@ -1,7 +1,7 @@
 import { createContext } from 'react';
-import { createStore } from 'jotai/vanilla';
+import { createStore, getDefaultStore } from 'jotai/experimental';
 
-export const demoStore = createStore();
+export const demoStore = getDefaultStore();
 export const DemoJotaiStoreContext =
   createContext<ReturnType<typeof createStore>>(demoStore);
 

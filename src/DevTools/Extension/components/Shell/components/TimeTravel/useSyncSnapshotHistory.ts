@@ -5,7 +5,10 @@ import {
   AtomsValues,
 } from '../../../../../../types';
 import { useDevToolsOptionsValue } from '../../../../../atoms/devtools-options';
-import { useUserStore } from '../../../../../hooks/useUserStore';
+import {
+  isDevToolsStore,
+  useUserStore,
+} from '../../../../../hooks/useUserStore';
 import { useInternalStore } from '../../../../../internal-jotai-store';
 import { atomToPrintable } from '../../../../../utils';
 import { createTimestamp } from '../../../../../utils/create-timestamp';
@@ -39,7 +42,8 @@ export default function useSyncSnapshotHistory() {
     useDevToolsOptionsValue();
 
   useEffect(() => {
-    if (!userStore?.dev_subscribe_store) return;
+    if (!isDevToolsStore(userStore)) return;
+
     const addToHistoryStack = (
       nextSnapshot: AtomsSnapshot,
       displayValues: SnapshotHistory['displayValues'],
@@ -73,8 +77,8 @@ export default function useSyncSnapshotHistory() {
       const values: AtomsValues = new Map();
       const displayValues: SnapshotHistory['displayValues'] = {};
       const dependents: AtomsDependents = new Map();
-      for (const atom of userStore.dev_get_mounted_atoms?.() || []) {
-        const atomState = userStore.dev_get_atom_state?.(atom);
+      for (const atom of userStore.getMountedAtoms() || []) {
+        const atomState = userStore.getAtomState(atom);
         if (atomState) {
           if ('v' in atomState) {
             values.set(atom, atomState.v);
@@ -106,7 +110,7 @@ export default function useSyncSnapshotHistory() {
             }
           }
         }
-        const mounted = userStore.dev_get_mounted?.(atom);
+        const mounted = userStore.getMountedAtomState(atom);
         if (mounted) {
           dependents.set(atom, mounted.t);
         }
@@ -114,16 +118,11 @@ export default function useSyncSnapshotHistory() {
       addToHistoryStack({ values, dependents }, displayValues);
     };
     const cb = (
-      type?: Parameters<Parameters<typeof userStore.dev_subscribe_store>[0]>[0],
+      action: Parameters<Parameters<typeof userStore.subscribeStore>[0]>[0],
     ) => {
-      const normalizedType = typeof type === 'string' ? type : type?.type;
-      const isState =
-        normalizedType === 'write' ||
-        normalizedType === 'async-write' ||
-        // @ts-expect-error 'state' type is deprecated but we still support it for now
-        normalizedType === 'state';
+      const isWrite = action.type === 'set' || action.type === 'async-get';
       if (
-        isState &&
+        isWrite &&
         shouldRecordSnapshotHistory &&
         !store.get(isTimeTravelingAtom)
       ) {
@@ -131,7 +130,7 @@ export default function useSyncSnapshotHistory() {
       }
     };
 
-    const unsub = userStore.dev_subscribe_store?.(cb, 2);
+    const unsub = userStore.subscribeStore(cb);
     return unsub;
   }, [
     store,

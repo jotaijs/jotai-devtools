@@ -1,6 +1,7 @@
 import React from 'react';
 import { MantineProvider } from '@mantine/core';
 import { Meta, StoryObj } from '@storybook/react';
+import { getDefaultStore } from 'jotai/experimental';
 import { Provider } from 'jotai/react';
 import { DevTools, DevToolsProps, useAtomsDevtools } from '../../../';
 import { Playground } from './Playground';
@@ -30,6 +31,9 @@ type CustomStorybookProps = DevToolsProps & {
 
 type Story = StoryObj<CustomStorybookProps>;
 
+const ReduxDevTools = () => {
+  useAtomsDevtools('playground');
+};
 export const Default: Story = {
   render: ({ ...args }) => {
     const nextOptions = {
@@ -50,8 +54,9 @@ export const Default: Story = {
           cursorType: 'pointer',
         }}
       >
-        <Provider>
+        <Provider store={getDefaultStore()}>
           <DevTools {...props} />
+          <ReduxDevTools />
           <Playground />
         </Provider>
       </MantineProvider>

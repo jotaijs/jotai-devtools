@@ -1,17 +1,20 @@
-import { useStore } from 'jotai/react';
 import { Options } from 'src/types';
-import { useUserCustomStoreValue } from '../atoms/user-custom-store';
+import { useDevToolsStore } from '../../utils/hooks/useDevToolsStore';
+import { useUserStoreValue } from '../atoms/user-custom-store';
+import { isDevToolsStore } from './../../utils/internals/compose-with-devtools';
 
-export const useUserStore = () => {
-  const possibleUserStore = useUserCustomStoreValue();
+export const useUserStore = (): ReturnType<typeof useDevToolsStore> => {
+  const possibleUserStore = useUserStoreValue();
 
-  const userStore = useStore(
+  const userStore = useDevToolsStore(
     // This defaults to user's default store in a `provider-less` mode
     possibleUserStore ? { store: possibleUserStore } : undefined,
   );
 
   return userStore;
 };
+
+export { isDevToolsStore };
 
 export const useUserStoreOptions = (): Options => {
   const store = useUserStore();

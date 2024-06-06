@@ -2,19 +2,11 @@ import React, { useMemo } from 'react';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import * as stringifyModule from 'javascript-stringify';
-import { Provider, useAtomValue } from 'jotai';
-import { getDefaultStore } from 'jotai/experimental';
+import { useAtomValue } from 'jotai';
 import { atom } from 'jotai/vanilla';
 import { DevTools } from 'jotai-devtools';
 import { AnyAtom } from 'src/types';
-import { customRender as customTestRender } from '../custom-render';
-
-const customRender = (ui: React.ReactElement) =>
-  customTestRender(ui, {
-    wrapper: ({ children }) => (
-      <Provider store={getDefaultStore()}>{children}</Provider>
-    ),
-  });
+import { customRender } from '../../custom-render';
 
 const BasicAtomsWithDevTools = () => {
   // Create atoms inside the component so that they are recreated for each test
