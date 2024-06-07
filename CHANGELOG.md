@@ -1,3 +1,11 @@
+## [0.10.0](https://github.com/jotaijs/jotai-devtools/compare/v0.9.1...v0.10.0) (2024-06-07)
+
+### Features
+
+- add support for Jotai store v2
+  ([#145](https://github.com/jotaijs/jotai-devtools/issues/145))
+  ([e707a68](https://github.com/jotaijs/jotai-devtools/commit/e707a687baccb2046680979e245573219b7d1e83))
+
 ## [0.9.1](https://github.com/jotaijs/jotai-devtools/compare/v0.9.0...v0.9.1) (2024-04-24)
 
 ### Bug Fixes
