@@ -116,7 +116,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/base16": "^1.0.5",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.14.2",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
