@@ -9,7 +9,9 @@ import { SnapshotOptions, useAtomsSnapshot } from './useAtomsSnapshot';
 import { useGotoAtomsSnapshot } from './useGotoAtomsSnapshot';
 
 const atomToPrintable = (atom: AnyAtom) =>
-  atom.debugLabel ? `${atom}:${atom.debugLabel}` : `${atom}`;
+  atom.debugLabel && !String(atom).includes(':')
+    ? `${atom}:${atom.debugLabel}`
+    : `${atom}`;
 
 const getDevtoolsState = (atomsSnapshot: AtomsSnapshot) => {
   const values: Record<string, AnyAtomValue> = {};
