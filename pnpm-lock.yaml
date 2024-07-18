@@ -208,6 +208,9 @@ devDependencies:
   postcss-loader:
     specifier: ^8.1.1
     version: 8.1.1(postcss@8.4.38)(typescript@5.4.5)(webpack@5.91.0)
+  postcss-prefix-selector:
+    specifier: ^1.16.1
+    version: 1.16.1(postcss@8.4.38)
   postcss-preset-mantine:
     specifier: ^1.15.0
     version: 1.15.0(postcss@8.4.38)
@@ -11852,6 +11855,14 @@ packages:
     dependencies:
       postcss: 8.4.38
       postcss-selector-parser: 6.1.0
+    dev: true
+
+  /postcss-prefix-selector@1.16.1(postcss@8.4.38):
+    resolution: {integrity: sha512-Umxu+FvKMwlY6TyDzGFoSUnzW+NOfMBLyC1tAkIjgX+Z/qGspJeRjVC903D7mx7TuBpJlwti2ibXtWuA7fKMeQ==}
+    peerDependencies:
+      postcss: '>4 <9'
+    dependencies:
+      postcss: 8.4.38
     dev: true
 
   /postcss-preset-mantine@1.15.0(postcss@8.4.38):
