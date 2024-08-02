@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { createStore, getDefaultStore } from 'jotai/experimental';
+import { createStore, getDefaultStore } from 'jotai/vanilla';
 
 export const demoStore = getDefaultStore();
 export const DemoJotaiStoreContext =

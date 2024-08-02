@@ -1,16 +1,11 @@
 import React, { StrictMode, Suspense } from 'react';
-import type { JSXElementConstructor, ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { act, fireEvent, render, waitFor } from '@testing-library/react';
-import { createStore, getDefaultStore } from 'jotai/experimental';
-import { Provider, useAtom } from 'jotai/react';
+import { useAtom } from 'jotai/react';
 import { atom } from 'jotai/vanilla';
 import { useAtomsDevtools } from 'jotai-devtools/utils';
 
 let extensionSubscriber: ((message: any) => void) | undefined;
-
-const storeV2Wrapper: JSXElementConstructor<{ children: React.ReactNode }> = ({
-  children,
-}) => <Provider store={createStore()}>{children}</Provider>;
 
 const extension = {
   subscribe: jest.fn((f) => {
@@ -78,9 +73,6 @@ describe('useAtomsDevtools', () => {
           <Counter />
         </AtomsDevtools>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     expect(extension.init).toHaveBeenLastCalledWith(undefined);
@@ -117,9 +109,6 @@ describe('useAtomsDevtools', () => {
               <Counter />
             </AtomsDevtools>
           </StrictMode>,
-          {
-            wrapper: storeV2Wrapper,
-          },
         );
       }).not.toThrow();
 
@@ -137,9 +126,6 @@ describe('useAtomsDevtools', () => {
             <Counter />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       expect(console.warn).toHaveBeenLastCalledWith(
@@ -160,9 +146,6 @@ describe('useAtomsDevtools', () => {
             <Counter />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       expect(console.warn).not.toHaveBeenLastCalledWith(
@@ -193,9 +176,6 @@ describe('useAtomsDevtools', () => {
           <Counter />
         </AtomsDevtools>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await findByText('count: 0');
@@ -230,9 +210,6 @@ describe('useAtomsDevtools', () => {
           <Counter />
         </AtomsDevtools>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     expect(extensionConnector.disconnect).toBeCalled();
@@ -262,9 +239,6 @@ describe('useAtomsDevtools', () => {
           <Counter />
         </AtomsDevtools>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await findByText('count: 0');
@@ -351,9 +325,6 @@ describe('useAtomsDevtools', () => {
           <App />
         </AtomsDevtools>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await waitFor(() => {
@@ -464,9 +435,6 @@ describe('useAtomsDevtools', () => {
           <App />
         </AtomsDevtools>
       </StrictMode>,
-      {
-        wrapper: storeV2Wrapper,
-      },
     );
 
     await waitFor(() => {
@@ -567,9 +535,6 @@ describe('useAtomsDevtools', () => {
             <Counter />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       await findByText('count: 0');
@@ -624,9 +589,6 @@ describe('useAtomsDevtools', () => {
             <App />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       await findByText('enabled: true');
@@ -689,9 +651,6 @@ describe('useAtomsDevtools', () => {
             <Counter />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       await findByText('count: 0');
@@ -739,9 +698,6 @@ describe('useAtomsDevtools', () => {
             <Counter />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       await findByText('count: 0');
@@ -808,9 +764,6 @@ describe('useAtomsDevtools', () => {
             <Counter />
           </AtomsDevtools>
         </StrictMode>,
-        {
-          wrapper: storeV2Wrapper,
-        },
       );
 
       await findByText('count: 0');
