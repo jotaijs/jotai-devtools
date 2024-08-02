@@ -50,16 +50,16 @@ describe('DevTools - TimeTravel', () => {
   describe('Snapshot list', () => {
     it('should render time travel without any errors', () => {
       customRender(<DevTools isInitialOpen={true} />);
-      expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument(),
-        expect(screen.getByText('Time travel')).toBeInTheDocument();
+      expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument();
+      expect(screen.getByText('Time travel')).toBeInTheDocument();
 
       fireEvent.click(screen.getByText('Time travel'));
-      expect(screen.getByPlaceholderText('Search')).toBeInTheDocument(),
-        expect(
-          screen.getByText(
-            'Select a snapshot from the left panel to view the details',
-          ),
-        ).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('Search')).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          'Select a snapshot from the left panel to view the details',
+        ),
+      ).toBeInTheDocument();
       expect(screen.getByTestId('jotai-devtools-shell')).toMatchSnapshot();
     });
 
