@@ -1,17 +1,9 @@
 import React, { useMemo } from 'react';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-import { Provider, atom, useAtomValue, useSetAtom } from 'jotai';
-import { getDefaultStore } from 'jotai/experimental';
+import { atom, useAtomValue, useSetAtom } from 'jotai';
 import { DevTools, DevToolsProps } from 'jotai-devtools';
-import { customRender as customTestRender } from '../custom-render';
-
-const customRender = (ui: React.ReactElement) =>
-  customTestRender(ui, {
-    wrapper: ({ children }) => (
-      <Provider store={getDefaultStore()}>{children}</Provider>
-    ),
-  });
+import { customRender } from '../custom-render';
 
 const BasicAtomsWithDevTools = (props: DevToolsProps) => {
   // Create atoms inside the component so that they are recreated for each test
@@ -58,16 +50,16 @@ describe('DevTools - TimeTravel', () => {
   describe('Snapshot list', () => {
     it('should render time travel without any errors', () => {
       customRender(<DevTools isInitialOpen={true} />);
-      expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument(),
-        expect(screen.getByText('Time travel')).toBeInTheDocument();
+      expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument();
+      expect(screen.getByText('Time travel')).toBeInTheDocument();
 
       fireEvent.click(screen.getByText('Time travel'));
-      expect(screen.getByPlaceholderText('Search')).toBeInTheDocument(),
-        expect(
-          screen.getByText(
-            'Select a snapshot from the left panel to view the details',
-          ),
-        ).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('Search')).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          'Select a snapshot from the left panel to view the details',
+        ),
+      ).toBeInTheDocument();
       expect(screen.getByTestId('jotai-devtools-shell')).toMatchSnapshot();
     });
 
