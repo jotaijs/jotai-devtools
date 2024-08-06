@@ -9,7 +9,7 @@ import {
 } from '../../types';
 
 type DevSubscribeStoreListener = (action: {
-  type: 'get' | 'async-get' | 'set' | 'sub' | 'unsub' | 'restore';
+  type: 'async-get' | 'set' | 'sub' | 'unsub' | 'restore';
 }) => void;
 
 type DevToolsStoreMethods = {
@@ -107,7 +107,6 @@ const __composeV2StoreWithDevTools = (
       }
     });
 
-    storeListeners.forEach((l) => l({ type: 'get' }));
     return value;
   };
 
