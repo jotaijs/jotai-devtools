@@ -1,3 +1,14 @@
+## [0.10.1](https://github.com/jotaijs/jotai-devtools/compare/v0.10.0...v0.10.1) (2024-08-09)
+
+### Bug Fixes
+
+- atom toString includes debugLabel in dev mode
+  ([#156](https://github.com/jotaijs/jotai-devtools/issues/156))
+  ([609bd5a](https://github.com/jotaijs/jotai-devtools/commit/609bd5a06dce10090aac9db99a4d83cc5634b3cf))
+- react warnings on async atom read in v2 store
+  ([#160](https://github.com/jotaijs/jotai-devtools/issues/160))
+  ([b27d779](https://github.com/jotaijs/jotai-devtools/commit/b27d7793726139488a66a17cee12a569e5482ccb))
+
 ## [0.10.0](https://github.com/jotaijs/jotai-devtools/compare/v0.9.1...v0.10.0) (2024-06-07)
 
 ### Features
