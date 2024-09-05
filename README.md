@@ -30,7 +30,7 @@
 
 ## ☝️ Prerequisites
 
-- Jotai version `>=2.1.0.` (NOTE: use [v0.1.0](https://github.com/jotaijs/jotai-devtools/tree/v0.1.0) if you still use Jotai v1 )
+- Jotai version `>=2.1.0.`
 - React version `>=17.0.0`
 
 ## 📦 Setup
