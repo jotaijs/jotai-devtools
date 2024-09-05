@@ -30,7 +30,7 @@
 
 ## ☝️ Prerequisites
 
-- Jotai version `>=1.11.0` (highly recommended to use `2.x.x`)
+- Jotai version `>=2.1.0.`
 - React version `>=17.0.0`
 
 ## 📦 Setup
