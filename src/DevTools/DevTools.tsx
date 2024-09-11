@@ -127,13 +127,9 @@ const DevToolsProvider = ({ children }: React.PropsWithChildren) => {
 };
 
 export const InternalDevTools = (props: DevToolsProps): JSX.Element | null => {
-  if (__DEV__) {
-    return (
-      <DevToolsProvider>
-        <DevToolsMain {...props} />
-      </DevToolsProvider>
-    );
-  }
-
-  return <></>;
+  return (
+    <DevToolsProvider>
+      <DevToolsMain {...props} />
+    </DevToolsProvider>
+  );
 };

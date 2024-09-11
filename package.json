@@ -12,6 +12,14 @@
   "source": "./src/index.ts",
   "exports": {
     "./package.json": "./package.json",
+    "./internal__devtools": {
+      "import": {
+        "types": "./dist/internal__devtools.d.mts",
+        "default": "./dist/internal__devtools.esm.mjs"
+      },
+      "types": "./dist/internal__devtools.d.ts",
+      "default": "./dist/internal__devtools.cjs.js"
+    },
     ".": {
       "import": {
         "types": "./dist/index.d.mts",
