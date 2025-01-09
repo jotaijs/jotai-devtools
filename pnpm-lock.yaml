@@ -39,8 +39,8 @@ importers:
         specifier: ^0.18.0
         version: 0.18.0(@types/react@18.3.3)(react@18.3.1)
       react-resizable-panels:
-        specifier: 2.0.10
-        version: 2.0.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 2.1.7
+        version: 2.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@babel/core':
         specifier: ^7.26.0
@@ -250,8 +250,8 @@ importers:
         specifier: ^10.9.2
         version: 10.9.2(@swc/core@1.10.6)(@types/node@22.10.5)(typescript@5.7.3)
       tsconfig-paths-webpack-plugin:
-        specifier: ^4.1.0
-        version: 4.1.0
+        specifier: ^4.2.0
+        version: 4.2.0
       tsup:
         specifier: 8.3.5
         version: 8.3.5(@swc/core@1.10.6)(jiti@2.4.2)(postcss@8.4.49)(typescript@5.7.3)(yaml@2.6.1)
@@ -1645,8 +1645,8 @@ packages:
     peerDependencies:
       storybook: ^8.4.7
 
-  '@storybook/csf@0.1.11':
-    resolution: {integrity: sha512-dHYFQH3mA+EtnCkHXzicbLgsvzYjcDJ1JWsogbItZogkPHgSJM/Wr71uMkcvw8v9mmCyP4NpXJuu6bPoVsOnzg==}
+  '@storybook/csf@0.1.13':
+    resolution: {integrity: sha512-7xOOwCLGB3ebM87eemep89MYRFTko+D8qE7EdAAq74lgdqRR5cOUtYWJLjO2dLtP94nqoOdHJo6MdLLKzg412Q==}
 
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
@@ -5242,11 +5242,11 @@ packages:
       '@types/react':
         optional: true
 
-  react-resizable-panels@2.0.10:
-    resolution: {integrity: sha512-1cQl5rp3VDWRL04XXX92lzM1hej2Fe5x+vpjYXcldfOjKwLV5JVrt5T6q0cTB5yfp4Wh+JIdYQ9A5EnZypO1DQ==}
+  react-resizable-panels@2.1.7:
+    resolution: {integrity: sha512-JtT6gI+nURzhMYQYsx8DKkx6bSoOGFp7A3CwMrOb8y5jFHFyqwo9m68UhmXRw57fRVJksFn1TSlm3ywEQ9vMgA==}
     peerDependencies:
-      react: ^16.14.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
+      react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
 
   react-style-singleton@2.2.3:
     resolution: {integrity: sha512-b6jSvxvVnyptAiLjbkWLE/lOnR4lfTtDAl+eUC7RZy+QQWc6wRzIV2CE6xBuMmDxc2qIihtDCZD5NPOFl7fRBQ==}
@@ -5916,8 +5916,8 @@ packages:
       '@swc/wasm':
         optional: true
 
-  tsconfig-paths-webpack-plugin@4.1.0:
-    resolution: {integrity: sha512-xWFISjviPydmtmgeUAuXp4N1fky+VCtfhOkDUFIv5ea7p4wuTomI4QTrXvFBX2S4jZsmyTSrStQl+E+4w+RzxA==}
+  tsconfig-paths-webpack-plugin@4.2.0:
+    resolution: {integrity: sha512-zbem3rfRS8BgeNK50Zz5SIQgXzLafiHjOwUAvk/38/o1jHn/V5QAgVUcz884or7WYcPaH3N2CIfUc2u0ul7UcA==}
     engines: {node: '>=10.13.0'}
 
   tsconfig-paths@3.15.0:
@@ -7922,7 +7922,7 @@ snapshots:
 
   '@storybook/addon-links@8.4.7(react@18.3.1)(storybook@8.4.7(prettier@3.4.2))':
     dependencies:
-      '@storybook/csf': 0.1.11
+      '@storybook/csf': 0.1.13
       '@storybook/global': 5.0.0
       storybook: 8.4.7(prettier@3.4.2)
       ts-dedent: 2.2.0
@@ -7975,7 +7975,7 @@ snapshots:
 
   '@storybook/blocks@8.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@3.4.2))':
     dependencies:
-      '@storybook/csf': 0.1.11
+      '@storybook/csf': 0.1.13
       '@storybook/icons': 1.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       storybook: 8.4.7(prettier@3.4.2)
       ts-dedent: 2.2.0
@@ -8032,7 +8032,7 @@ snapshots:
 
   '@storybook/core@8.4.7(prettier@3.4.2)':
     dependencies:
-      '@storybook/csf': 0.1.11
+      '@storybook/csf': 0.1.13
       better-opn: 3.0.2
       browser-assert: 1.2.1
       esbuild: 0.24.2
@@ -8055,7 +8055,7 @@ snapshots:
       storybook: 8.4.7(prettier@3.4.2)
       unplugin: 1.16.1
 
-  '@storybook/csf@0.1.11':
+  '@storybook/csf@0.1.13':
     dependencies:
       type-fest: 2.19.0
 
@@ -8168,7 +8168,7 @@ snapshots:
 
   '@storybook/test@8.4.7(storybook@8.4.7(prettier@3.4.2))':
     dependencies:
-      '@storybook/csf': 0.1.11
+      '@storybook/csf': 0.1.13
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.4.7(storybook@8.4.7(prettier@3.4.2))
       '@testing-library/dom': 10.4.0
@@ -9880,7 +9880,7 @@ snapshots:
 
   eslint-plugin-storybook@0.11.2(eslint@8.57.0)(typescript@5.7.3):
     dependencies:
-      '@storybook/csf': 0.1.11
+      '@storybook/csf': 0.1.13
       '@typescript-eslint/utils': 8.19.1(eslint@8.57.0)(typescript@5.7.3)
       eslint: 8.57.0
       ts-dedent: 2.2.0
@@ -12315,7 +12315,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
 
-  react-resizable-panels@2.0.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-resizable-panels@2.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -13087,10 +13087,11 @@ snapshots:
     optionalDependencies:
       '@swc/core': 1.10.6
 
-  tsconfig-paths-webpack-plugin@4.1.0:
+  tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.18.0
+      tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
   tsconfig-paths@3.15.0:
