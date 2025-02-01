@@ -1,15 +1,11 @@
 import { useStore } from 'jotai/react';
-import type {
-  Atom,
-  WritableAtom,
-  createStore as createStoreV1,
-} from 'jotai/vanilla';
+import type { Atom, WritableAtom, createStore } from 'jotai/vanilla';
 import { INTERNAL_DevStoreRev4, INTERNAL_PrdStore } from 'jotai/vanilla/store';
 
-export type StoreV1 = ReturnType<typeof createStoreV1>;
-export type StoreV2 = INTERNAL_DevStoreRev4 & INTERNAL_PrdStore;
+export type StoreWithoutDevMethods = ReturnType<typeof createStore>;
+export type StoreWithDevMethods = INTERNAL_DevStoreRev4 & INTERNAL_PrdStore;
 
-export type Store = StoreV1 | StoreV2;
+export type Store = StoreWithoutDevMethods | StoreWithDevMethods;
 
 export type Options = Parameters<typeof useStore>[0];
 
