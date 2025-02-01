@@ -1,6 +1,9 @@
 import { useStore } from 'jotai/react';
 import type { Atom, WritableAtom, createStore } from 'jotai/vanilla';
-import { INTERNAL_DevStoreRev4, INTERNAL_PrdStore } from 'jotai/vanilla/store';
+import type {
+  INTERNAL_DevStoreRev4,
+  INTERNAL_PrdStore,
+} from 'jotai/vanilla/store';
 
 export type StoreWithoutDevMethods = ReturnType<typeof createStore>;
 export type StoreWithDevMethods = INTERNAL_DevStoreRev4 & INTERNAL_PrdStore;
