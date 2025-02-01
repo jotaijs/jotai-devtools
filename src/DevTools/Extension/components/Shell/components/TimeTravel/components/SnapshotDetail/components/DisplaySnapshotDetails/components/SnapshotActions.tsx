@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Box, Button, ButtonProps, Title } from '@mantine/core';
 import { useTimeout } from '@mantine/hooks';
 import { IconCircleCheck, IconRotate2 } from '@tabler/icons-react';
+import { flushSync } from 'react-dom';
 import { AtomsSnapshot } from '../../../../../../../../../../../types';
 import { useGotoAtomsSnapshot } from '../../../../../../../../../../../utils';
 import { useUserStoreOptions } from '../../../../../../../../../../hooks/useUserStore';
-import { useIsTimeTravelingValue } from '../../../../../atoms';
+import { useIsTimeTraveling } from '../../../../../atoms';
 
 const commonStyles: ButtonProps['styles'] = {
   section: {
@@ -30,7 +31,7 @@ type SnapshotActionsProps = {
 export const SnapshotActions = (props: SnapshotActionsProps) => {
   const [justRestored, setJustRestored] = useState(false);
   const gotoSnapshot = useGotoAtomsSnapshot(useUserStoreOptions());
-  const isTimeTraveling = useIsTimeTravelingValue();
+  const [isTimeTraveling, setIsTimeTraveling] = useIsTimeTraveling();
   const { start, clear } = useTimeout(() => setJustRestored(false), 1750);
 
   useEffect(() => {
@@ -40,7 +41,11 @@ export const SnapshotActions = (props: SnapshotActionsProps) => {
   const handleOnRestoreClick = () => {
     setJustRestored(true);
     start();
-    gotoSnapshot(props.snapshotToGoTo);
+    flushSync(() => {
+      setIsTimeTraveling(true);
+      gotoSnapshot(props.snapshotToGoTo);
+      setIsTimeTraveling(false);
+    });
   };
 
   return (
