@@ -8,14 +8,13 @@
 
 - Debug 🐞 atom values with ease
 - ⏳ Time-travel through your atoms and find bugs faster than before
-  (recommended jotai `>=2.2.0`)
 - Out-of-the-box 🔌 support for async/suspendible atoms
 - Built-in Dark mode 🌗
 - ✅ Supports custom `store`
 - ✅ Works with provider-less mode
 - ✅ Works with Next.js
 - ✅ Supports custom `nonce` for CSP
-- ✅ Hides private atoms with ability to configure (requires Jotai `>=2.0.3`)
+- ✅ Hides private atoms with ability to configure
 - ✅ Tree-shakable and built for non-production environments
 - ✅ Parses all the JavaScript values with JSON Tree view
 - ✅ Diff checking with additions and deletion highlights
@@ -30,7 +29,7 @@
 
 ## ☝️ Prerequisites
 
-- Jotai version `>=2.1.0.`
+- Jotai version `>=2.9.0`
 - React version `>=17.0.0`
 
 ## 📦 Setup
