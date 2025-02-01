@@ -1932,7 +1932,6 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
           data-pointer="true"
           data-size="xs"
           data-variant="default"
-          data-with-right-section="true"
           style="--input-height: var(--input-height-xs); --input-fz: var(--mantine-font-size-xs); --input-right-section-pointer-events: none;"
         >
           <input
@@ -2601,7 +2600,6 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
           data-pointer="true"
           data-size="xs"
           data-variant="default"
-          data-with-right-section="true"
           style="--input-height: var(--input-height-xs); --input-fz: var(--mantine-font-size-xs); --input-right-section-pointer-events: none;"
         >
           <input

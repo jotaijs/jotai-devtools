@@ -113,7 +113,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
-    "@testing-library/user-event": "^14.5.2",
+    "@testing-library/user-event": "14.5.2",
     "@types/base16": "^1.0.5",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.5",
@@ -159,7 +159,7 @@
     "style-loader": "^4.0.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
-    "tsup": "8.3.5",
+    "tsup": "8.3.6",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1"
   },
@@ -167,9 +167,9 @@
     "react": ">=17.0.0"
   },
   "dependencies": {
-    "@mantine/code-highlight": "^7.15.3",
-    "@mantine/core": "^7.15.3",
-    "@mantine/hooks": "^7.15.3",
+    "@mantine/code-highlight": "^7.16.2",
+    "@mantine/core": "^7.16.2",
+    "@mantine/hooks": "^7.16.2",
     "@redux-devtools/extension": "^3.3.0",
     "clsx": "^2.1.1",
     "javascript-stringify": "^2.1.0",
