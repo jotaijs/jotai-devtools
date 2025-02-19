@@ -1,3 +1,23 @@
+# Changelog
+
+## 0.11.0 (2025-02-19)
+
+- fix: drop support for jotai store v1 (#173)
+  ([5c19880](https://github.com/jotaijs/jotai-devtools/commit/5c19880)), closes
+  [#173](https://github.com/jotaijs/jotai-devtools/issues/173)
+- fix: guard restore action with isTimeTravelling atom (#174)
+  ([8a2d303](https://github.com/jotaijs/jotai-devtools/commit/8a2d303)), closes
+  [#174](https://github.com/jotaijs/jotai-devtools/issues/174)
+- test(TimeTravel): async atom snapshot history (#170)
+  ([efd498b](https://github.com/jotaijs/jotai-devtools/commit/efd498b)), closes
+  [#170](https://github.com/jotaijs/jotai-devtools/issues/170)
+- chore: update dependencies (#172)
+  ([32dec78](https://github.com/jotaijs/jotai-devtools/commit/32dec78)), closes
+  [#172](https://github.com/jotaijs/jotai-devtools/issues/172)
+- docs: fix readme. (#162)
+  ([12adbab](https://github.com/jotaijs/jotai-devtools/commit/12adbab)), closes
+  [#162](https://github.com/jotaijs/jotai-devtools/issues/162)
+
 ## [0.10.1](https://github.com/jotaijs/jotai-devtools/compare/v0.10.0...v0.10.1) (2024-08-09)
 
 ### Bug Fixes
@@ -278,8 +298,6 @@
 - **utils:** types for /utils entry point
   ([#18](https://github.com/jotai-labs/jotai-devtools/issues/18))
   ([743d984](https://github.com/jotai-labs/jotai-devtools/commit/743d984bcb78e8c6eeaecd2e9f15f3cba3215c45))
-
-# Changelog
 
 ## [0.2.0-Alpha.0](https://github.com/jotai-labs/jotai-devtools/compare/v0.1.0...v0.2.0-Alpha.0) (2023-01-14)
 
