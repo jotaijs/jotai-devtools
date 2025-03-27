@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@mantine/code-highlight':
     specifier: ^7.16.2
@@ -194,11 +190,11 @@ devDependencies:
     specifier: ^2.2.2
     version: 2.2.2(jest@29.7.0)
   jotai:
-    specifier: ^2.11.3
-    version: 2.11.3(@types/react@18.3.3)(react@18.3.1)
+    specifier: https://pkg.pr.new/jotai@3023
+    version: '@pkg.pr.new/jotai@3023(@types/react@18.3.3)(react@18.3.1)'
   jotai-tanstack-query:
     specifier: ^0.7.2
-    version: 0.7.2(@tanstack/query-core@4.36.1)(jotai@2.11.3)
+    version: 0.7.2(@tanstack/query-core@4.36.1)(jotai@2.12.2)
   lint-staged:
     specifier: ^15.3.0
     version: 15.4.3
@@ -8259,30 +8255,14 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-tanstack-query@0.7.2(@tanstack/query-core@4.36.1)(jotai@2.11.3):
+  /jotai-tanstack-query@0.7.2(@tanstack/query-core@4.36.1)(jotai@2.12.2):
     resolution: {integrity: sha512-acwJJf4HKgs4c0mtgRJEvdL7jqQnKcT0ARvs33weGysLpQ8L1S3SqPPoMeHuLDz6vREcocsVFRZ5RsB7rJJHZQ==}
     peerDependencies:
       '@tanstack/query-core': '*'
       jotai: '>=1.11.0'
     dependencies:
       '@tanstack/query-core': 4.36.1
-      jotai: 2.11.3(@types/react@18.3.3)(react@18.3.1)
-    dev: true
-
-  /jotai@2.11.3(@types/react@18.3.3)(react@18.3.1):
-    resolution: {integrity: sha512-B/PsewAQ0UOS5e2+TTWegUPQ3SCLPCjPY24LYUjfn2EorGlluTA2dFjVLgF1+xHLjK9Jit3y5mKHyMG3Xq/GZg==}
-    engines: {node: '>=12.20.0'}
-    peerDependencies:
-      '@types/react': '>=17.0.0'
-      react: '>=17.0.0'
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      react:
-        optional: true
-    dependencies:
-      '@types/react': 18.3.3
-      react: 18.3.1
+      jotai: '@pkg.pr.new/jotai@3023(@types/react@18.3.3)(react@18.3.1)'
     dev: true
 
   /joycon@3.1.1:
@@ -12435,3 +12415,26 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
+
+  '@pkg.pr.new/jotai@3023(@types/react@18.3.3)(react@18.3.1)':
+    resolution: {tarball: https://pkg.pr.new/jotai@3023}
+    id: '@pkg.pr.new/jotai@3023'
+    name: jotai
+    version: 2.12.2
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=17.0.0'
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': 18.3.3
+      react: 18.3.1
+    dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

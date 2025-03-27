@@ -1,8 +1,14 @@
-import { Atom } from 'jotai';
+import { Atom, WritableAtom } from 'jotai';
+import { INTERNAL_overrideCreateStore } from 'jotai/vanilla';
+import {
+  INTERNAL_buildStoreRev1 as INTERNAL_buildStore,
+  INTERNAL_initializeStoreHooks,
+} from 'jotai/vanilla/internals';
 import {
   AnyAtom,
   AnyAtomError,
   AnyAtomValue,
+  DevStore,
   Store,
   StoreWithDevMethods,
 } from '../../types';
@@ -33,17 +39,13 @@ type DevToolsStoreMethods = {
 
 type WithDevToolsStore<S extends Store> = S & DevToolsStoreMethods;
 
-const isDevStore = (store: Store | undefined): store is StoreWithDevMethods => {
-  return store ? 'dev4_get_internal_weak_map' in store : false;
-};
-
 export const isDevToolsStore = (
   store: Store | WithDevToolsStore<Store>,
 ): store is WithDevToolsStore<Store> => {
   return 'subscribeStore' in store;
 };
 
-const __composeDevTools = (
+const __composeWithDevTools = (
   store: StoreWithDevMethods,
 ): WithDevToolsStore<StoreWithDevMethods> => {
   const { sub, set, get } = store;
@@ -120,11 +122,11 @@ const __composeDevTools = (
   };
 
   (store as WithDevToolsStore<typeof store>).getMountedAtoms = () => {
-    return store.dev4_get_mounted_atoms();
+    return store.get_mounted_atoms();
   };
 
   (store as WithDevToolsStore<typeof store>).getAtomState = (atom) => {
-    const aState = store.dev4_get_internal_weak_map().get(atom);
+    const aState = store.get_internal_weak_map().get(atom);
 
     if (aState) {
       return { v: aState.v, e: aState.e, d: new Set(aState.d.keys()) };
@@ -134,12 +136,12 @@ const __composeDevTools = (
   };
 
   (store as WithDevToolsStore<typeof store>).getMountedAtomState = (atom) => {
-    const aState = store.dev4_get_internal_weak_map().get(atom);
+    const aState = store.get_internal_weak_map().get(atom);
 
-    if (aState && aState.m) {
+    if (aState && 'm' in aState) {
       return {
-        l: aState.m.l,
-        t: aState.m.t,
+        l: (aState.m as any).l,
+        t: (aState.m as any).t,
       };
     }
 
@@ -147,12 +149,84 @@ const __composeDevTools = (
   };
 
   (store as WithDevToolsStore<typeof store>).restoreAtoms = (values) => {
-    store.dev4_restore_atoms(values);
+    store.restore_atoms(values);
     storeListeners.forEach((l) => l({ type: 'restore' }));
   };
 
   return store as typeof store & DevToolsStoreMethods;
 };
+
+const createDevStore = (): StoreWithDevMethods => {
+  let inRestoreAtom = 0;
+  const storeHooks = INTERNAL_initializeStoreHooks({});
+  const atomStateMap = new WeakMap();
+  const mountedAtoms = new WeakMap();
+  const store = INTERNAL_buildStore(
+    atomStateMap,
+    mountedAtoms,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    storeHooks,
+    undefined,
+    (atom, get, set, ...args) => {
+      if (inRestoreAtom) {
+        return set(atom, ...(args as any));
+      }
+      return atom.write(get, set, ...(args as any));
+    },
+  );
+  const debugMountedAtoms = new Set<Atom<unknown>>();
+  storeHooks.m.add(undefined, (atom) => {
+    debugMountedAtoms.add(atom);
+    const atomState = atomStateMap.get(atom);
+    // For DevStoreRev4 compatibility
+    (atomState as any).m = mountedAtoms.get(atom);
+  });
+  storeHooks.u.add(undefined, (atom) => {
+    debugMountedAtoms.delete(atom);
+    const atomState = atomStateMap.get(atom);
+    // For DevStoreRev4 compatibility
+    delete (atomState as any).m;
+  });
+  const devStore: DevStore = {
+    // store dev methods (these are tentative and subject to change without notice)
+    get_internal_weak_map: () => atomStateMap,
+    get_mounted_atoms: () => debugMountedAtoms,
+    restore_atoms: (values) => {
+      const restoreAtom: WritableAtom<null, [], void> = {
+        read: () => null,
+        write: (_get, set) => {
+          ++inRestoreAtom;
+          try {
+            for (const [atom, value] of values) {
+              if ('init' in atom) {
+                set(atom as never, value);
+              }
+            }
+          } finally {
+            --inRestoreAtom;
+          }
+        },
+      };
+      store.set(restoreAtom);
+    },
+  };
+
+  return {
+    ...store,
+    ...devStore,
+  };
+};
+
+const isDevStore = (store: Store): store is StoreWithDevMethods => {
+  return 'get_internal_weak_map' in store;
+};
+
+INTERNAL_overrideCreateStore((prev) => {
+  return createDevStore;
+});
 
 export const composeWithDevTools = (
   store: Store,
@@ -163,7 +237,7 @@ export const composeWithDevTools = (
   }
 
   if (isDevStore(store)) {
-    return __composeDevTools(store);
+    return __composeWithDevTools(store);
   }
 
   return store;
