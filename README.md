@@ -8,14 +8,13 @@
 
 - Debug 🐞 atom values with ease
 - ⏳ Time-travel through your atoms and find bugs faster than before
-- Out-of-the-box 🔌 support for async/suspendible atoms
+- Out-of-the-box 🔌 support for async/suspendable atoms
 - Built-in Dark mode 🌗
 - ✅ Supports custom `store`
 - ✅ Works with provider-less mode
 - ✅ Works with Next.js
 - ✅ Supports custom `nonce` for CSP
 - ✅ Hides private atoms with ability to configure
-- ✅ Tree-shakable and built for non-production environments
 - ✅ Parses all the JavaScript values with JSON Tree view
 - ✅ Diff checking with additions and deletion highlights
 
@@ -29,7 +28,7 @@
 
 ## ☝️ Prerequisites
 
-- Jotai version `>=2.9.0`
+- Jotai version `>=v2.12.3`
 - React version `>=17.0.0`
 
 ## 📦 Setup
@@ -124,7 +123,6 @@ type DevToolsProps = {
 
 ```tsx
 import { DevTools } from 'jotai-devtools';
-// Note that this may get included in your production builds. Please import it conditionally if you want to avoid that
 import 'jotai-devtools/styles.css';
 
 const App = () => {
@@ -142,7 +140,6 @@ const App = () => {
 ```tsx
 import { createStore } from 'jotai';
 import { DevTools } from 'jotai-devtools';
-// Note that this may get included in your production builds. Please import it conditionally if you want to avoid that
 import 'jotai-devtools/styles.css';
 
 const customStore = createStore();
