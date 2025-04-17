@@ -1,12 +1,20 @@
 import { useStore } from 'jotai/react';
 import type { Atom, WritableAtom, createStore } from 'jotai/vanilla';
 import type {
-  INTERNAL_DevStoreRev4,
-  INTERNAL_PrdStore,
-} from 'jotai/vanilla/store';
+  INTERNAL_AtomState,
+  INTERNAL_Store,
+} from 'jotai/vanilla/internals';
+
+export type DevStore = {
+  get_internal_weak_map: () => {
+    get: (atom: Atom<unknown>) => INTERNAL_AtomState | undefined;
+  };
+  get_mounted_atoms: () => Set<Atom<unknown>>;
+  restore_atoms: (values: Iterable<readonly [Atom<unknown>, unknown]>) => void;
+};
 
 export type StoreWithoutDevMethods = ReturnType<typeof createStore>;
-export type StoreWithDevMethods = INTERNAL_DevStoreRev4 & INTERNAL_PrdStore;
+export type StoreWithDevMethods = INTERNAL_Store & DevStore;
 
 export type Store = StoreWithoutDevMethods | StoreWithDevMethods;
 
