@@ -1,5 +1,11 @@
 import React, { useMemo } from 'react';
-import { act, render, screen, waitFor } from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import * as stringifyModule from 'javascript-stringify';
 import { Provider, useAtomValue } from 'jotai';
@@ -170,12 +176,8 @@ describe('DevTools - AtomViewer', () => {
       it('should search for atoms correctly', async () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
 
-        await act(async () => {
-          await userEvent.type(
-            screen.getByLabelText('Search'),
-            'doubleCountAtom',
-          );
-        });
+        const searchInput = screen.getByLabelText('Search');
+        fireEvent.change(searchInput, { target: { value: 'doubleCountAtom' } });
 
         expect(
           screen.queryByTestId('atom-list-no-atoms-found-message'),
@@ -188,9 +190,8 @@ describe('DevTools - AtomViewer', () => {
       it('should display an error if no atoms are found', async () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
 
-        await act(async () => {
-          await userEvent.type(screen.getByLabelText('Search'), 'abc 123');
-        });
+        const searchInput = screen.getByLabelText('Search');
+        fireEvent.change(searchInput, { target: { value: 'abc 123' } });
         expect(
           screen.getByTestId('atom-list-no-atoms-found-message'),
         ).toHaveTextContent('No Atoms found!');
