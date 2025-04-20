@@ -96,7 +96,7 @@
     "@chromatic-com/storybook": "^3",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@release-it/conventional-changelog": "^10.0.0",
+    "@release-it/conventional-changelog": "^10.0.1",
     "@storybook/addon-a11y": "^8.6.12",
     "@storybook/addon-actions": "^8.6.12",
     "@storybook/addon-essentials": "^8.6.12",
@@ -133,7 +133,7 @@
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^28.10.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.12.0",
@@ -160,7 +160,7 @@
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "tsup": "8.4.0",
     "typescript": "^5.8.3",
-    "webpack": "^5.99.5"
+    "webpack": "^5.99.6"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
@@ -178,7 +178,7 @@
     "react-base16-styling": "^0.9.1",
     "react-error-boundary": "^5.0.0",
     "react-json-tree": "^0.18.0",
-    "react-resizable-panels": "2.0.10"
+    "react-resizable-panels": "2.1.7"
   },
   "packageManager": "pnpm@8.5.1+sha512.5ba7a52fb370c346bf302202933a646f15ba7fdf5342e5f80ee2680e35a9dfd5f4f0f283904a60e1c823ddde84b606000dc7505a5fde33c35d94b255137460a4"
 }
