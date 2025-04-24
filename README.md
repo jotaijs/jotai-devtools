@@ -122,9 +122,8 @@ type DevToolsProps = {
 ### Provider-less
 
 ```tsx
-import { DevTools } from 'jotai-devtools';
+import { DevTools } from './JotaiDevTools';
 import 'jotai-devtools/styles.css';
-
 const App = () => {
   return (
     <>
@@ -139,6 +138,7 @@ const App = () => {
 
 ```tsx
 import { createStore } from 'jotai';
+
 import { DevTools } from 'jotai-devtools';
 import 'jotai-devtools/styles.css';
 
@@ -152,6 +152,73 @@ const App = () => {
     </Provider>
   );
 };
+```
+
+## Tree-shaking
+
+Jotai DevTools is currently only available in development mode. We're changing
+this in the future to allow it to be used in production as well.
+
+Therefore, we recommend wrapping the DevTools in a conditional statement and
+tree-shake it out in production to avoid any accidental usage in production.
+
+### Vite
+
+```tsx
+import { DevTools } from 'jotai-devtools';
+import css from 'jotai-devtools/styles.css?inline';
+
+const JotaiDevTools = () =>
+  process.env.NODE_ENV !== 'production' ? (
+    <>
+      <style>{css}</style>
+      <DevTools />
+    </>
+  ) : null;
+
+const App = () => {
+  return (
+    <>
+      <JotaiDevTools />
+      {/* your app */}
+    </>
+  );
+};
+```
+
+### NextJS
+
+Create a `DevTools.tsx` file in your project and export the `DevTools`
+component.
+
+```tsx
+import 'jotai-devtools/styles.css';
+export { DevTools } from 'jotai-devtools';
+```
+
+Then, in your app, import the `DevTools` component conditionally.
+
+```tsx
+import dynamic from "next/dynamic";
+import type { ComponentType } from "react";
+import type { DevToolsProps } from "jotai-devtools";
+
+let DevTools: ComponentType<DevToolsProps> | null = null;
+
+if (process.env.NODE_ENV !== "production") {
+  DevTools = dynamic(
+    () => import("./DevTools").then((mod) => ({ default: mod.DevTools })),
+    { ssr: false }
+  );
+}
+
+const App = () => {
+  return (
+    <>
+      {DevTools && <DevTools />}
+      {/* your app */}
+    </>
+  );
 ```
 
 ## Hooks
