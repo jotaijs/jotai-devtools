@@ -9,7 +9,6 @@ import {
   splitAtom,
   unwrap,
 } from 'jotai/vanilla/utils';
-import { atomsWithQuery } from 'jotai-tanstack-query';
 import { ErrorBoundary } from 'react-error-boundary';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -67,20 +66,6 @@ splitAsyncAtom.debugLabel = 'splitAsyncAtom';
 
 const idAtom = atom(1);
 idAtom.debugLabel = 'idAtom';
-
-const [userAtom] = atomsWithQuery((get) => ({
-  queryKey: ['users', get(idAtom)],
-  queryFn: async ({ queryKey: [, id] }) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-    return res.json();
-  },
-}));
-userAtom.debugLabel = 'userAtom';
-
-const UserData = () => {
-  const [data] = useAtom(userAtom);
-  return <div>{JSON.stringify(data)}</div>;
-};
 
 class CircularClass {
   circular: any;

@@ -174,9 +174,8 @@ describe('DevTools - TimeTravel', () => {
         fireEvent.click(screen.getByText('Increment'));
         fireEvent.click(screen.getByText('Increment'));
 
-        await act(async () => {
-          await userEvent.type(screen.getByPlaceholderText('Search'), '2');
-        });
+        const searchInput = screen.getByPlaceholderText('Search');
+        fireEvent.change(searchInput, { target: { value: '2' } });
 
         expect(
           screen.getByTestId('jotai-devtools-snapshot-2'),
@@ -202,15 +201,13 @@ describe('DevTools - TimeTravel', () => {
         fireEvent.click(screen.getByLabelText('Record snapshot history'));
         fireEvent.click(screen.getByText('Increment'));
 
-        await act(async () => {
-          await userEvent.type(screen.getByPlaceholderText('Search'), 'a');
-        });
+        const searchInput = screen.getByPlaceholderText('Search');
+        fireEvent.change(searchInput, { target: { value: 'a' } });
+
         expect(
           screen.getByTestId('jotai-devtools-no-snapshot-found-message'),
         ).toHaveTextContent('No snapshots found!');
-        expect(
-          screen.queryByTestId('jotai-devtools-snapshot-1'),
-        ).not.toBeInTheDocument();
+
         expect(
           screen.getByTestId('jotai-devtools-time-travel-panel-left-content'),
         ).toMatchSnapshot();

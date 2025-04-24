@@ -35,12 +35,15 @@ const config: StorybookConfig = {
       },
     },
     '@storybook/addon-webpack5-compiler-babel',
+    '@chromatic-com/storybook',
   ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
   },
-  docs: {},
+  docs: {
+    autodocs: true,
+  },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
