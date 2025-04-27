@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.12.0 (2025-04-27)
+
+- fix: re-add dev only export + add warning + docs around tree shaking (#186)
+  ([9835e66](https://github.com/jotaijs/jotai-devtools/commit/9835e66)), closes
+  [#186](https://github.com/jotaijs/jotai-devtools/issues/186)
+- chore: update dependencies (#185)
+  ([9982bf2](https://github.com/jotaijs/jotai-devtools/commit/9982bf2)), closes
+  [#185](https://github.com/jotaijs/jotai-devtools/issues/185)
+- refactor: drop support for dev\_\* methods (#180)
+  ([2ab02e2](https://github.com/jotaijs/jotai-devtools/commit/2ab02e2)), closes
+  [#180](https://github.com/jotaijs/jotai-devtools/issues/180)
+
 ## 0.11.0 (2025-02-19)
 
 - fix: drop support for jotai store v1 (#173)
