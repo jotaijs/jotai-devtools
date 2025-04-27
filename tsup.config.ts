@@ -19,6 +19,8 @@ const baseConfig: Options = {
   // Outputs `dist/index.js` and `dist/utils.js`
   entry: {
     index: 'src/index.ts',
+    // Workaround to generate seperate chunks for DevTools so we could export a null component for production builds
+    internal__devtools: 'src/DevTools/index.ts',
     utils: 'src/utils/index.ts',
   },
   loader: {
