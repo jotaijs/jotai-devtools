@@ -22,9 +22,6 @@ dependencies:
   javascript-stringify:
     specifier: ^2.1.0
     version: 2.1.0
-  jotai:
-    specifier: ^2.12.3
-    version: 2.12.3(@types/react@18.3.3)(react@18.3.1)
   jsondiffpatch:
     specifier: ^0.5.0
     version: 0.5.0
@@ -198,9 +195,12 @@ devDependencies:
   jest-watch-typeahead:
     specifier: ^2.2.2
     version: 2.2.2(jest@29.7.0)
+  jotai:
+    specifier: ^2.12.5
+    version: 2.12.5(@types/react@18.3.3)(react@18.3.1)
   jotai-tanstack-query:
     specifier: ^0.9.0
-    version: 0.9.0(@tanstack/query-core@4.36.1)(jotai@2.12.3)
+    version: 0.9.0(@tanstack/query-core@4.36.1)(jotai@2.12.5)
   lint-staged:
     specifier: ^15.5.1
     version: 15.5.1
@@ -8298,18 +8298,18 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-tanstack-query@0.9.0(@tanstack/query-core@4.36.1)(jotai@2.12.3):
+  /jotai-tanstack-query@0.9.0(@tanstack/query-core@4.36.1)(jotai@2.12.5):
     resolution: {integrity: sha512-8n7/xV14+ZE63dyqngtmqs6aV1bNnQJF9bJN5Bj70USc2cMFRmsVhGGzL1cSvp5E/xXasU37czFFaZ0vavmyfA==}
     peerDependencies:
       '@tanstack/query-core': '*'
       jotai: '>=2.0.0'
     dependencies:
       '@tanstack/query-core': 4.36.1
-      jotai: 2.12.3(@types/react@18.3.3)(react@18.3.1)
+      jotai: 2.12.5(@types/react@18.3.3)(react@18.3.1)
     dev: true
 
-  /jotai@2.12.3(@types/react@18.3.3)(react@18.3.1):
-    resolution: {integrity: sha512-DpoddSkmPGXMFtdfnoIHfueFeGP643nqYUWC6REjUcME+PG2UkAtYnLbffRDw3OURI9ZUTcRWkRGLsOvxuWMCg==}
+  /jotai@2.12.5(@types/react@18.3.3)(react@18.3.1):
+    resolution: {integrity: sha512-G8m32HW3lSmcz/4mbqx0hgJIQ0ekndKWiYP7kWVKi0p6saLXdSoye+FZiOFyonnd7Q482LCzm8sMDl7Ar1NWDw==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=17.0.0'
@@ -8322,6 +8322,7 @@ packages:
     dependencies:
       '@types/react': 18.3.3
       react: 18.3.1
+    dev: true
 
   /joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
