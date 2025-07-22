@@ -1,13 +1,15 @@
 import { Atom, WritableAtom } from 'jotai';
-import { INTERNAL_overrideCreateStore } from 'jotai/vanilla';
+import { INTERNAL_overrideCreateStore, createStore } from 'jotai/vanilla';
 import {
   INTERNAL_buildStoreRev1 as INTERNAL_buildStore,
+  INTERNAL_getBuildingBlocksRev1,
   INTERNAL_initializeStoreHooks,
 } from 'jotai/vanilla/internals';
 import {
   AnyAtom,
   AnyAtomError,
   AnyAtomValue,
+  BuildingBlocks,
   DevStore,
   Store,
   StoreWithDevMethods,
@@ -156,27 +158,26 @@ const __composeWithDevTools = (
   return store as typeof store & DevToolsStoreMethods;
 };
 
-const createDevStore = (): StoreWithDevMethods => {
+const createDevStore = (
+  prevCreateStore: (() => Store) | undefined,
+): StoreWithDevMethods => {
   let inRestoreAtom = 0;
-  const storeHooks = INTERNAL_initializeStoreHooks({});
-  const atomStateMap = new WeakMap();
-  const mountedAtoms = new WeakMap();
-  const store = INTERNAL_buildStore(
-    atomStateMap,
-    mountedAtoms,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    storeHooks,
-    undefined,
-    (atom, get, set, ...args) => {
-      if (inRestoreAtom) {
-        return set(atom, ...(args as any));
-      }
-      return atom.write(get, set, ...(args as any));
-    },
-  );
+  const prevStore = prevCreateStore?.() ?? INTERNAL_buildStore();
+  const buildingBlocks = [
+    ...INTERNAL_getBuildingBlocksRev1(prevStore),
+  ] as BuildingBlocks;
+  const storeHooks = INTERNAL_initializeStoreHooks(buildingBlocks[6]);
+  const atomWrite = buildingBlocks[8];
+  buildingBlocks[8] = (atom, get, set, ...args) => {
+    if (inRestoreAtom) {
+      return set(atom, ...args);
+    }
+    return atomWrite
+      ? atomWrite(atom, get, set, ...args)
+      : atom.write(get, set, ...args);
+  };
+  const store = INTERNAL_buildStore(...buildingBlocks);
+  const [atomStateMap, mountedAtoms] = buildingBlocks;
   const debugMountedAtoms = new Set<Atom<unknown>>();
   storeHooks.m.add(undefined, (atom) => {
     debugMountedAtoms.add(atom);
@@ -222,7 +223,7 @@ const isDevStore = (store: Store): store is StoreWithDevMethods => {
 };
 
 INTERNAL_overrideCreateStore((prev) => {
-  return createDevStore;
+  return () => createDevStore(prev);
 });
 
 export const composeWithDevTools = (
