@@ -3,6 +3,7 @@ import type { Atom, WritableAtom, createStore } from 'jotai/vanilla';
 import type {
   INTERNAL_AtomState,
   INTERNAL_Store,
+  INTERNAL_getBuildingBlocksRev1,
 } from 'jotai/vanilla/internals';
 
 export type DevStore = {
@@ -17,6 +18,10 @@ export type StoreWithoutDevMethods = ReturnType<typeof createStore>;
 export type StoreWithDevMethods = INTERNAL_Store & DevStore;
 
 export type Store = StoreWithoutDevMethods | StoreWithDevMethods;
+type Mutable<T> = { -readonly [P in keyof T]: T[P] };
+export type BuildingBlocks = Mutable<
+  ReturnType<typeof INTERNAL_getBuildingBlocksRev1>
+>;
 
 export type Options = Parameters<typeof useStore>[0];
 
