@@ -214,10 +214,7 @@ const createDevStore = (): StoreWithDevMethods => {
     },
   };
 
-  return {
-    ...store,
-    ...devStore,
-  };
+  return Object.assign(store, devStore);
 };
 
 const isDevStore = (store: Store): store is StoreWithDevMethods => {
