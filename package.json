@@ -164,7 +164,7 @@
     "webpack": "^5.99.6"
   },
   "peerDependencies": {
-    "jotai": ">=2.12.3",
+    "jotai": ">=2.14.0",
     "react": ">=17.0.0"
   },
   "dependencies": {
