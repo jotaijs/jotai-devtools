@@ -28,7 +28,7 @@
 
 ## ☝️ Prerequisites
 
-- Jotai version `>=v2.12.3`
+- Jotai version `>=v2.14.0`
 - React version `>=17.0.0`
 
 ## 📦 Setup
