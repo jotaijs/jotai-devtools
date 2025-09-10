@@ -2,12 +2,10 @@ import { StorybookConfig } from '@storybook/react-webpack5';
 const webpack = require('webpack');
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
     '@storybook/addon-a11y',
-    '@storybook/addon-mdx-gfm',
     {
       name: '@storybook/addon-styling-webpack',
       options: {
@@ -36,14 +34,14 @@ const config: StorybookConfig = {
     },
     '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
+    '@storybook/addon-docs',
   ],
+
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
@@ -53,6 +51,7 @@ const config: StorybookConfig = {
       },
     },
   },
+
   core: {
     disableTelemetry: true, // 👈 Disables telemetry
     enableCrashReports: false, // 👈 Appends the crash reports to the telemetry events
