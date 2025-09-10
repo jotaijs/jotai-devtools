@@ -196,11 +196,11 @@ devDependencies:
     specifier: ^2.2.2
     version: 2.2.2(jest@29.7.0)
   jotai:
-    specifier: https://pkg.pr.new/jotai@3105
-    version: '@pkg.pr.new/jotai@3105(@babel/core@7.26.10)(@types/react@18.3.3)(react@18.3.1)'
+    specifier: ^2.14.0
+    version: 2.14.0(@babel/core@7.26.10)(@types/react@18.3.3)(react@18.3.1)
   jotai-tanstack-query:
     specifier: ^0.9.0
-    version: 0.9.0(@tanstack/query-core@4.36.1)(jotai@2.13.1)
+    version: 0.9.0(@tanstack/query-core@4.36.1)(jotai@2.14.0)
   lint-staged:
     specifier: ^15.5.1
     version: 15.5.1
@@ -8298,14 +8298,37 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-tanstack-query@0.9.0(@tanstack/query-core@4.36.1)(jotai@2.13.1):
+  /jotai-tanstack-query@0.9.0(@tanstack/query-core@4.36.1)(jotai@2.14.0):
     resolution: {integrity: sha512-8n7/xV14+ZE63dyqngtmqs6aV1bNnQJF9bJN5Bj70USc2cMFRmsVhGGzL1cSvp5E/xXasU37czFFaZ0vavmyfA==}
     peerDependencies:
       '@tanstack/query-core': '*'
       jotai: '>=2.0.0'
     dependencies:
       '@tanstack/query-core': 4.36.1
-      jotai: '@pkg.pr.new/jotai@3105(@babel/core@7.26.10)(@types/react@18.3.3)(react@18.3.1)'
+      jotai: 2.14.0(@babel/core@7.26.10)(@types/react@18.3.3)(react@18.3.1)
+    dev: true
+
+  /jotai@2.14.0(@babel/core@7.26.10)(@types/react@18.3.3)(react@18.3.1):
+    resolution: {integrity: sha512-JQkNkTnqjk1BlSUjHfXi+pGG/573bVN104gp6CymhrWDseZGDReTNniWrLhJ+zXbM6pH+82+UNJ2vwYQUkQMWQ==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@babel/core': '>=7.0.0'
+      '@babel/template': '>=7.0.0'
+      '@types/react': '>=17.0.0'
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@babel/template':
+        optional: true
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@babel/core': 7.26.10
+      '@types/react': 18.3.3
+      react: 18.3.1
     dev: true
 
   /joycon@3.1.1:
@@ -12341,32 +12364,6 @@ packages:
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
-    dev: true
-
-  '@pkg.pr.new/jotai@3105(@babel/core@7.26.10)(@types/react@18.3.3)(react@18.3.1)':
-    resolution: {tarball: https://pkg.pr.new/jotai@3105}
-    id: '@pkg.pr.new/jotai@3105'
-    name: jotai
-    version: 2.13.1
-    engines: {node: '>=12.20.0'}
-    peerDependencies:
-      '@babel/core': '>=7.0.0'
-      '@babel/template': '>=7.0.0'
-      '@types/react': '>=17.0.0'
-      react: '>=17.0.0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      '@babel/template':
-        optional: true
-      '@types/react':
-        optional: true
-      react:
-        optional: true
-    dependencies:
-      '@babel/core': 7.26.10
-      '@types/react': 18.3.3
-      react: 18.3.1
     dev: true
 
 settings:
