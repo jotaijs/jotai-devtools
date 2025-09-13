@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DevTools - TimeTravel Snapshot details diff should display highlighted diff 1`] = `
 <div
@@ -8,6 +8,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   data-testid="jotai-devtools-diff-panel"
   id="jotai-devtools-time-travel-value-tabs-panel-diff"
   role="tabpanel"
+  style="padding-top: var(--mantine-spacing-xs);"
 >
   <div
     class="internal-jotai-devtools-json-tree-wrapper"
@@ -95,6 +96,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   data-testid="jotai-devtools-diff-panel"
   id="jotai-devtools-time-travel-value-tabs-panel-diff"
   role="tabpanel"
+  style="padding-top: var(--mantine-spacing-xs);"
 >
   <div
     class="internal-jotai-devtools-json-tree-wrapper"
@@ -116,7 +118,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
               style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
             >
               <div
-                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
               >
                 ▶
               </div>
@@ -144,7 +146,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
                   style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
                 >
                   <div
-                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
                   >
                     ▶
                   </div>
@@ -172,7 +174,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
                       style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
                     >
                       <div
-                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
                       >
                         ▶
                       </div>
@@ -233,6 +235,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   data-testid="jotai-devtools-diff-panel"
   id="jotai-devtools-time-travel-value-tabs-panel-diff"
   role="tabpanel"
+  style="padding-top: var(--mantine-spacing-xs);"
 >
   <div
     class="internal-jotai-devtools-json-tree-wrapper"
@@ -254,7 +257,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
               style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
             >
               <div
-                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
               >
                 ▶
               </div>
@@ -282,7 +285,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
                   style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
                 >
                   <div
-                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
                   >
                     ▶
                   </div>
@@ -310,7 +313,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
                       style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
                     >
                       <div
-                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
                       >
                         ▶
                       </div>
@@ -390,6 +393,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
   data-testid="jotai-devtools-diff-panel"
   id="jotai-devtools-time-travel-value-tabs-panel-diff"
   role="tabpanel"
+  style="padding-top: var(--mantine-spacing-xs);"
 >
   <div
     class="internal-jotai-devtools-json-tree-wrapper"
@@ -411,7 +415,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
               style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
             >
               <div
-                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
               >
                 ▶
               </div>
@@ -439,7 +443,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
                   style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
                 >
                   <div
-                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                    style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
                   >
                     ▶
                   </div>
@@ -467,7 +471,7 @@ exports[`DevTools - TimeTravel Snapshot details diff should display highlighted 
                       style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
                     >
                       <div
-                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                        style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
                       >
                         ▶
                       </div>
@@ -596,7 +600,7 @@ exports[`DevTools - TimeTravel Snapshot details should not add another snapshot 
               style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
             >
               <div
-                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
               >
                 ▶
               </div>
@@ -690,7 +694,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
   >
     <div
       class="internal-jotai-devtools-header-content m_4081bf90"
-      style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
+      style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap; padding: var(--mantine-spacing-xs);"
     >
       <div
         class="m_4081bf90"
@@ -855,7 +859,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
   />
   <div
     class="m_4081bf90"
-    style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap;"
+    style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap; margin-top: calc(1.25rem * var(--mantine-scale));"
   >
     <svg
       class="tabler-icon tabler-icon-alert-circle "
@@ -882,7 +886,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should display an error if n
     <p
       class="jotai-devtools-focus m_b6d8b162"
       data-testid="jotai-devtools-no-snapshot-found-message"
-      style="margin-left: 0rem;"
+      style="margin-left: 0rem; font-size: var(--mantine-font-size-sm);"
     >
       No snapshots found!
     </p>
@@ -902,7 +906,7 @@ exports[`DevTools - TimeTravel Snapshot list Search should search for atoms corr
   >
     <div
       class="internal-jotai-devtools-header-content m_4081bf90"
-      style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
+      style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap; padding: var(--mantine-spacing-xs);"
     >
       <div
         class="m_4081bf90"
@@ -1120,7 +1124,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   data-testid="jotai-devtools-shell"
   data-variant="default"
   id="jotai-devtools-shell"
-  style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+  style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
 >
   <div
     class=""
@@ -1133,11 +1137,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
   >
     <div
       class="m_8bffd616 __m__-r2v1"
-      style="align-items: center; justify-content: space-between;"
+      style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
     >
       <div
         class="m_4081bf90"
-        style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
       >
         <h1
           class="m_8a5d1357"
@@ -1201,7 +1205,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         <button
           class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
           data-variant="subtle"
-          style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
           title="Minimize panel"
           type="button"
         >
@@ -1286,6 +1290,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       data-variant="default"
       id="jotai-devtools-shell-tab-time-travel"
       role="tab"
+      style="padding-right: var(--mantine-spacing-xl);"
       tabindex="0"
       type="button"
     >
@@ -1385,7 +1390,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
           >
             <div
               class="internal-jotai-devtools-header-content m_4081bf90"
-              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
+              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap; padding: var(--mantine-spacing-xs);"
             >
               <div
                 class="m_4081bf90"
@@ -1614,10 +1619,11 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
       >
         <div
           class="internal-jotai-devtools-panel-resize-handle-wrapper"
+          style="padding: calc(0.3125rem * var(--mantine-scale));"
         >
           <div
             class="internal-jotai-devtools-panel-resize-handle-content"
-            style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+            style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
           />
         </div>
       </div>
@@ -1636,7 +1642,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
         >
           <div
             class="m_6d731127"
-            style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start; height: auto;"
+            style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start; padding-bottom: var(--mantine-spacing-sm); height: auto;"
           >
             <h1
               class="m_8a5d1357"
@@ -1653,17 +1659,18 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 class="m_8a5d1357"
                 data-order="1"
                 data-size="h5"
-                style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
+                style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); margin-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 Meta
               </h1>
               <div
                 class=""
+                style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <p
                   class="jotai-devtools-focus m_b6d8b162"
                   data-testid="meta-info-label-Timestamp"
-                  style="font-weight: bold; text-transform: uppercase;"
+                  style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                 >
                   Timestamp
                 </p>
@@ -1683,7 +1690,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 class="m_8a5d1357"
                 data-order="1"
                 data-size="h5"
-                style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
+                style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); margin-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 Value
               </h1>
@@ -1806,7 +1813,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                   data-orientation="horizontal"
                   id="jotai-devtools-time-travel-value-tabs-panel-state"
                   role="tabpanel"
-                  style="display: none;"
+                  style="display: none; padding-top: var(--mantine-spacing-xs);"
                 />
                 <div
                   aria-labelledby="jotai-devtools-time-travel-value-tabs-tab-diff"
@@ -1815,6 +1822,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                   data-testid="jotai-devtools-diff-panel"
                   id="jotai-devtools-time-travel-value-tabs-panel-diff"
                   role="tabpanel"
+                  style="padding-top: var(--mantine-spacing-xs);"
                 >
                   <code
                     class="m_b183c0a2"
@@ -1832,7 +1840,7 @@ exports[`DevTools - TimeTravel Snapshot list Snapshot history with actions shoul
                 class="m_8a5d1357"
                 data-order="1"
                 data-size="h5"
-                style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
+                style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); margin-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 Actions
               </h1>
@@ -2089,7 +2097,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   data-testid="jotai-devtools-shell"
   data-variant="default"
   id="jotai-devtools-shell"
-  style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+  style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
 >
   <div
     class=""
@@ -2102,11 +2110,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
   >
     <div
       class="m_8bffd616 __m__-rd"
-      style="align-items: center; justify-content: space-between;"
+      style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
     >
       <div
         class="m_4081bf90"
-        style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
       >
         <h1
           class="m_8a5d1357"
@@ -2170,7 +2178,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
         <button
           class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
           data-variant="subtle"
-          style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
           title="Minimize panel"
           type="button"
         >
@@ -2255,6 +2263,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       data-variant="default"
       id="jotai-devtools-shell-tab-time-travel"
       role="tab"
+      style="padding-right: var(--mantine-spacing-md);"
       tabindex="0"
       type="button"
     >
@@ -2342,7 +2351,7 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
           >
             <div
               class="internal-jotai-devtools-header-content m_4081bf90"
-              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
+              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap; padding: var(--mantine-spacing-xs);"
             >
               <div
                 class="m_4081bf90"
@@ -2526,10 +2535,11 @@ exports[`DevTools - TimeTravel Snapshot list should render time travel without a
       >
         <div
           class="internal-jotai-devtools-panel-resize-handle-wrapper"
+          style="padding: calc(0.3125rem * var(--mantine-scale));"
         >
           <div
             class="internal-jotai-devtools-panel-resize-handle-content"
-            style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+            style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
           />
         </div>
       </div>

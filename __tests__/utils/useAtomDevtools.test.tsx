@@ -131,7 +131,7 @@ describe('useAtomDevtools', () => {
           <Counter />
         </StrictMode>,
       );
-      expect(consoleWarn).not.toBeCalled();
+      expect(consoleWarn).not.toHaveBeenCalled();
 
       consoleWarn.mockRestore();
     });
@@ -159,13 +159,13 @@ describe('useAtomDevtools', () => {
       </StrictMode>,
     );
 
-    expect(extension.send).toBeCalledTimes(0);
+    expect(extension.send).toHaveBeenCalledTimes(0);
     fireEvent.click(getByText('button'));
     await findByText('count: 1');
-    expect(extension.send).toBeCalledTimes(1);
+    expect(extension.send).toHaveBeenCalledTimes(1);
     fireEvent.click(getByText('button'));
     await findByText('count: 2');
-    expect(extension.send).toBeCalledTimes(2);
+    expect(extension.send).toHaveBeenCalledTimes(2);
   });
 
   describe('when it receives an message of type...', () => {
@@ -193,10 +193,10 @@ describe('useAtomDevtools', () => {
         </StrictMode>,
       );
 
-      expect(extension.send).toBeCalledTimes(0);
+      expect(extension.send).toHaveBeenCalledTimes(0);
       fireEvent.click(getByText('button'));
       await findByText('count: 1');
-      expect(extension.send).toBeCalledTimes(1);
+      expect(extension.send).toHaveBeenCalledTimes(1);
       act(() =>
         (extensionSubscriber as (message: any) => void)({
           type: 'ACTION',
@@ -204,7 +204,7 @@ describe('useAtomDevtools', () => {
         }),
       );
       await findByText('count: 0');
-      expect(extension.send).toBeCalledTimes(2);
+      expect(extension.send).toHaveBeenCalledTimes(2);
     });
 
     describe('DISPATCH and payload of type...', () => {
@@ -230,10 +230,10 @@ describe('useAtomDevtools', () => {
           </StrictMode>,
         );
 
-        expect(extension.send).toBeCalledTimes(0);
+        expect(extension.send).toHaveBeenCalledTimes(0);
         fireEvent.click(getByText('button'));
         await findByText('count: 1');
-        expect(extension.send).toBeCalledTimes(1);
+        expect(extension.send).toHaveBeenCalledTimes(1);
         fireEvent.click(getByText('button'));
         await findByText('count: 2');
         act(() =>
@@ -243,7 +243,7 @@ describe('useAtomDevtools', () => {
           }),
         );
         await findByText('count: 2');
-        expect(extension.init).toBeCalledWith(2);
+        expect(extension.init).toHaveBeenCalledWith(2);
       });
 
       it('[DEV-ONLY] dispatch & IMPORT_STATE', async () => {
@@ -271,10 +271,10 @@ describe('useAtomDevtools', () => {
         const nextLiftedState = {
           computedStates: [{ state: 5 }, { state: 6 }],
         };
-        expect(extension.send).toBeCalledTimes(0);
+        expect(extension.send).toHaveBeenCalledTimes(0);
         fireEvent.click(getByText('button'));
         await findByText('count: 1');
-        expect(extension.send).toBeCalledTimes(1);
+        expect(extension.send).toHaveBeenCalledTimes(1);
         fireEvent.click(getByText('button'));
         await findByText('count: 2');
         act(() =>
@@ -283,7 +283,7 @@ describe('useAtomDevtools', () => {
             payload: { type: 'IMPORT_STATE', nextLiftedState },
           }),
         );
-        expect(extension.init).toBeCalledWith(5);
+        expect(extension.init).toHaveBeenCalledWith(5);
         await findByText('count: 6');
       });
 
@@ -310,10 +310,10 @@ describe('useAtomDevtools', () => {
             </StrictMode>,
           );
 
-          expect(extension.send).toBeCalledTimes(0);
+          expect(extension.send).toHaveBeenCalledTimes(0);
           fireEvent.click(getByText('button'));
           await findByText('count: 1');
-          expect(extension.send).toBeCalledTimes(1);
+          expect(extension.send).toHaveBeenCalledTimes(1);
           act(() =>
             (extensionSubscriber as (message: any) => void)({
               type: 'DISPATCH',
@@ -322,12 +322,12 @@ describe('useAtomDevtools', () => {
             }),
           );
           await findByText('count: 0');
-          expect(extension.send).toBeCalledTimes(1);
+          expect(extension.send).toHaveBeenCalledTimes(1);
           fireEvent.click(getByText('button'));
           await findByText('count: 1');
           fireEvent.click(getByText('button'));
           await findByText('count: 2');
-          expect(extension.send).toBeCalledTimes(3);
+          expect(extension.send).toHaveBeenCalledTimes(3);
         });
       });
     });

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree view when user selects from the tab header 1`] = `
 <div
@@ -8,7 +8,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
   data-testid="json-tree-panel"
   id="jotai-devtools-atom-viewer-value-tabs-panel-json-tree"
   role="tabpanel"
-  style=""
+  style="padding-top: var(--mantine-spacing-xs);"
 >
   <div
     class="internal-jotai-devtools-json-tree-wrapper"
@@ -47,7 +47,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
               style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
             >
               <div
-                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
               >
                 ▶
               </div>
@@ -84,7 +84,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
   data-testid="json-tree-panel"
   id="jotai-devtools-atom-viewer-value-tabs-panel-json-tree"
   role="tabpanel"
-  style=""
+  style="padding-top: var(--mantine-spacing-xs);"
 >
   <div
     class="internal-jotai-devtools-json-tree-wrapper"
@@ -123,7 +123,7 @@ exports[`DevTools - AtomViewer Atom details JSON value should display JSON tree 
               style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
             >
               <div
-                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
+                style="color: rgb(52, 58, 64); margin-left: 0px; transition: 150ms; -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; padding-left: 0.2em;"
               >
                 ▶
               </div>
@@ -191,7 +191,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -204,11 +204,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
       >
         <div
           class="m_8bffd616 __m__-r14d"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -272,7 +272,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -357,6 +357,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -429,7 +430,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -570,10 +571,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -606,17 +608,18 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Meta
                   </p>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Debug Label"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Debug Label
                     </p>
@@ -630,11 +633,12 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                   </div>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Value type"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Value type
                     </p>
@@ -652,7 +656,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: var(--mantine-spacing-sm); font-weight: bold;"
                   >
                     Raw value
                   </p>
@@ -664,7 +668,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                   >
                     <span
                       class="jotai-devtools-focus m_b6d8b162"
-                      style="display: flex; align-items: center;"
+                      style="display: flex; align-items: center; margin-right: calc(0.3125rem * var(--mantine-scale));"
                     >
                       <svg
                         class="tabler-icon tabler-icon-alert-circle "
@@ -697,12 +701,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-top: calc(1.25rem * var(--mantine-scale)); margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Dependents
                   </p>
                   <ol
                     class="m_abbac491"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <li
                       class="m_abb6bec2"
@@ -764,7 +769,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -777,11 +782,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
       >
         <div
           class="m_8bffd616 __m__-r191"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -845,7 +850,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -930,6 +935,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -1002,7 +1008,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -1143,10 +1149,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -1179,17 +1186,18 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Meta
                   </p>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Debug Label"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Debug Label
                     </p>
@@ -1203,11 +1211,12 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                   </div>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Value type"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Value type
                     </p>
@@ -1225,7 +1234,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: var(--mantine-spacing-sm); font-weight: bold;"
                   >
                     Raw value
                   </p>
@@ -1233,6 +1242,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                     class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <button
                       class="jotai-devtools-focus jotai-devtools-active m_5caae85b m_8d3f4000 m_87cf2631"
@@ -1248,6 +1258,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
+                          style="width: calc(1.125rem * var(--mantine-scale)); height: calc(1.125rem * var(--mantine-scale));"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -1301,12 +1312,13 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-top: calc(1.25rem * var(--mantine-scale)); margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Dependents
                   </p>
                   <ol
                     class="m_abbac491"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <li
                       class="m_abb6bec2"
@@ -1368,7 +1380,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -1381,11 +1393,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
       >
         <div
           class="m_8bffd616 __m__-r1e1"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -1449,7 +1461,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -1534,6 +1546,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -1606,7 +1619,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -1747,10 +1760,11 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -1783,17 +1797,18 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Meta
                   </p>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Debug Label"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Debug Label
                     </p>
@@ -1807,11 +1822,12 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   </div>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Value type"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Value type
                     </p>
@@ -1829,7 +1845,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: var(--mantine-spacing-sm); font-weight: bold;"
                   >
                     Raw value
                   </p>
@@ -1837,6 +1853,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                     class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <button
                       class="jotai-devtools-focus jotai-devtools-active m_5caae85b m_8d3f4000 m_87cf2631"
@@ -1852,6 +1869,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
+                          style="width: calc(1.125rem * var(--mantine-scale)); height: calc(1.125rem * var(--mantine-scale));"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -1905,14 +1923,14 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-top: calc(1.25rem * var(--mantine-scale)); margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Dependents
                   </p>
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
                     data-size="sm"
-                    style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+                    style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     No dependents
                   </p>
@@ -1956,7 +1974,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -1969,11 +1987,11 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
       >
         <div
           class="m_8bffd616 __m__-rrr"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -2037,7 +2055,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -2122,6 +2140,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -2194,7 +2213,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -2223,7 +2242,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
               />
               <div
                 class="m_4081bf90"
-                style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap;"
+                style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap; margin-top: calc(1.25rem * var(--mantine-scale));"
               >
                 <svg
                   class="tabler-icon tabler-icon-alert-circle "
@@ -2250,7 +2269,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                 <p
                   class="jotai-devtools-focus m_b6d8b162"
                   data-testid="atom-list-no-atoms-found-message"
-                  style="margin-left: 0rem;"
+                  style="margin-left: 0rem; font-size: var(--mantine-font-size-sm);"
                 >
                   No Atoms found!
                 </p>
@@ -2276,10 +2295,11 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -2345,7 +2365,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -2358,11 +2378,11 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
       >
         <div
           class="m_8bffd616 __m__-ro3"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -2426,7 +2446,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -2511,6 +2531,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -2583,7 +2604,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -2677,10 +2698,11 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -2746,7 +2768,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -2759,11 +2781,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
       >
         <div
           class="m_8bffd616 __m__-rdh"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -2827,7 +2849,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -2912,6 +2934,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -2984,7 +3007,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -3125,10 +3148,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -3161,17 +3185,18 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Meta
                   </p>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Debug Label"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Debug Label
                     </p>
@@ -3185,11 +3210,12 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                   </div>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Value type"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Value type
                     </p>
@@ -3207,7 +3233,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: var(--mantine-spacing-sm); font-weight: bold;"
                   >
                     Raw value
                   </p>
@@ -3215,6 +3241,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                     class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <button
                       class="jotai-devtools-focus jotai-devtools-active m_5caae85b m_8d3f4000 m_87cf2631"
@@ -3230,6 +3257,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
+                          style="width: calc(1.125rem * var(--mantine-scale)); height: calc(1.125rem * var(--mantine-scale));"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -3283,12 +3311,13 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-top: calc(1.25rem * var(--mantine-scale)); margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Dependents
                   </p>
                   <ol
                     class="m_abbac491"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <li
                       class="m_abb6bec2"
@@ -3350,7 +3379,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -3363,11 +3392,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
       >
         <div
           class="m_8bffd616 __m__-rih"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -3431,7 +3460,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -3516,6 +3545,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -3588,7 +3618,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -3774,10 +3804,11 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -3810,17 +3841,18 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Meta
                   </p>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Debug Label"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Debug Label
                     </p>
@@ -3834,11 +3866,12 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   </div>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Value type"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Value type
                     </p>
@@ -3852,11 +3885,12 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   </div>
                   <div
                     class=""
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <p
                       class="jotai-devtools-focus m_b6d8b162"
                       data-testid="meta-info-label-Private"
-                      style="font-weight: bold; text-transform: uppercase;"
+                      style="color: var(--mantine-color-dimmed); font-size: calc(0.625rem * var(--mantine-scale)); font-weight: bold; text-transform: uppercase;"
                     >
                       Private
                     </p>
@@ -3875,7 +3909,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-bottom: var(--mantine-spacing-sm); font-weight: bold;"
                   >
                     Raw value
                   </p>
@@ -3883,6 +3917,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                     class="internal-jotai-devtools-code-syntax-highlighter m_5cb1b9c8 m_1f5e827e"
                     data-testid="atom-parsed-value"
                     dir="ltr"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <button
                       class="jotai-devtools-focus jotai-devtools-active m_5caae85b m_8d3f4000 m_87cf2631"
@@ -3898,6 +3933,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
+                          style="width: calc(1.125rem * var(--mantine-scale)); height: calc(1.125rem * var(--mantine-scale));"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -3951,12 +3987,13 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 >
                   <p
                     class="jotai-devtools-focus m_b6d8b162"
-                    style="font-weight: bold;"
+                    style="margin-top: calc(1.25rem * var(--mantine-scale)); margin-bottom: calc(0.625rem * var(--mantine-scale)); font-weight: bold;"
                   >
                     Dependents
                   </p>
                   <ol
                     class="m_abbac491"
+                    style="margin-bottom: calc(0.625rem * var(--mantine-scale));"
                   >
                     <li
                       class="m_abb6bec2"
@@ -4018,7 +4055,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -4031,11 +4068,11 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
       >
         <div
           class="m_8bffd616 __m__-r31"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -4099,7 +4136,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -4184,6 +4221,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -4256,7 +4294,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -4395,10 +4433,11 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
@@ -4464,7 +4503,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(23.125rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -4477,11 +4516,11 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
       >
         <div
           class="m_8bffd616 __m__-rd"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -4545,7 +4584,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -4630,6 +4669,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           data-variant="default"
           id="jotai-devtools-shell-tab-time-travel"
           role="tab"
+          style="padding-right: var(--mantine-spacing-md);"
           tabindex="-1"
           type="button"
         >
@@ -4702,7 +4742,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
             >
               <div
                 class="m_46b77525"
-                style="position: sticky; top: 0px;"
+                style="position: sticky; top: 0px; padding-top: calc(0.625rem * var(--mantine-scale)); padding-bottom: calc(0.625rem * var(--mantine-scale));"
               >
                 <label
                   class="m_8fdc1311"
@@ -4731,7 +4771,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
               />
               <div
                 class="m_4081bf90"
-                style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap;"
+                style="--group-gap: calc(0.375rem * var(--mantine-scale)); --group-align: center; --group-justify: center; --group-wrap: wrap; margin-top: calc(1.25rem * var(--mantine-scale));"
               >
                 <svg
                   class="tabler-icon tabler-icon-alert-circle "
@@ -4758,7 +4798,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                 <p
                   class="jotai-devtools-focus m_b6d8b162"
                   data-testid="atom-list-no-atoms-found-message"
-                  style="margin-left: 0rem;"
+                  style="margin-left: 0rem; font-size: var(--mantine-font-size-sm);"
                 >
                   No Atoms found!
                 </p>
@@ -4784,10 +4824,11 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
           >
             <div
               class="internal-jotai-devtools-panel-resize-handle-wrapper"
+              style="padding: calc(0.3125rem * var(--mantine-scale));"
             >
               <div
                 class="internal-jotai-devtools-panel-resize-handle-content"
-                style="border-radius: 2rem; vertical-align: middle; height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
+                style="border-radius: 2rem; vertical-align: middle; margin: calc(0.3125rem * var(--mantine-scale)); background: var(--mantine-color-gray-3); width: calc(0.3125rem * var(--mantine-scale)); height: 20%; min-height: calc(3.125rem * var(--mantine-scale)); max-height: calc(6.25rem * var(--mantine-scale));"
               />
             </div>
           </div>
