@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.13.0 (2025-09-13)
+
+- chore: update dependencies (#204)
+  ([79b8a84](https://github.com/jotaijs/jotai-devtools/commit/79b8a84)), closes
+  [#204](https://github.com/jotaijs/jotai-devtools/issues/204)
+- refactor: support INTERNAL_buildStoreRev2 + drop support for older version
+  (#201) ([0dcf91b](https://github.com/jotaijs/jotai-devtools/commit/0dcf91b)),
+  closes [#201](https://github.com/jotaijs/jotai-devtools/issues/201)
+- fix: building blocks are included on devStore (#198)
+  ([3ca38db](https://github.com/jotaijs/jotai-devtools/commit/3ca38db)), closes
+  [#198](https://github.com/jotaijs/jotai-devtools/issues/198)
+- fix: remove direct dependency to jotai (#190)
+  ([5a44e7f](https://github.com/jotaijs/jotai-devtools/commit/5a44e7f)), closes
+  [#190](https://github.com/jotaijs/jotai-devtools/issues/190)
+
 ## 0.12.0 (2025-04-27)
 
 - fix: re-add dev only export + add warning + docs around tree shaking (#186)
