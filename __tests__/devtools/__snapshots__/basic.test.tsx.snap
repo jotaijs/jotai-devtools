@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DevTools - basic Error boundary should display an error boundary with message if stack is not present 1`] = `
 <div>
@@ -21,7 +21,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(12.5rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -34,11 +34,11 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
       >
         <div
           class="m_8bffd616 __m__-rct"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -102,7 +102,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -143,11 +143,11 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           <p
             class="jotai-devtools-focus m_b6d8b162"
             data-size="md"
-            style="--text-fz: var(--mantine-font-size-md); --text-lh: var(--mantine-line-height-md); display: flex; align-items: center; font-weight: 500;"
+            style="--text-fz: var(--mantine-font-size-md); --text-lh: var(--mantine-line-height-md); display: flex; align-items: center; margin-bottom: calc(0.3125rem * var(--mantine-scale)); color: var(--mantine-color-red-8); font-weight: 500;"
           >
             <p
               class="jotai-devtools-focus m_b6d8b162"
-              style="display: flex; align-items: center;"
+              style="display: flex; align-items: center; margin-right: calc(0.3125rem * var(--mantine-scale));"
             >
               <svg
                 class="tabler-icon tabler-icon-alert-circle "
@@ -177,7 +177,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
           <p
             class="jotai-devtools-focus m_b6d8b162"
             data-size="sm"
-            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); margin-bottom: var(--mantine-spacing-sm); color: var(--mantine-color-red-8);"
           >
             If you believe this to be a bug, please file an issue on
              
@@ -186,7 +186,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
               data-underline="hover"
               href="https://github.com/jotaijs/jotai-devtools/issues"
               rel="noreferrer noopener"
-              style="text-decoration: underline;"
+              style="color: var(--mantine-color-red-8); text-decoration: underline;"
               target="_blank"
             >
               Jotai DevTool's GitHub repo
@@ -212,6 +212,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
+                  style="width: calc(1.125rem * var(--mantine-scale)); height: calc(1.125rem * var(--mantine-scale));"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -296,7 +297,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
       data-testid="jotai-devtools-shell"
       data-variant="default"
       id="jotai-devtools-shell"
-      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); max-height: 90%;"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-dark-filled); height: calc(12.5rem * var(--mantine-scale)); max-height: 90%;"
     >
       <div
         class=""
@@ -309,11 +310,11 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
       >
         <div
           class="m_8bffd616 __m__-r61"
-          style="align-items: center; justify-content: space-between;"
+          style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
             class="m_4081bf90"
-            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+            style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap; margin-right: calc(0.625rem * var(--mantine-scale));"
           >
             <h1
               class="m_8a5d1357"
@@ -377,7 +378,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             <button
               class="jotai-devtools-focus jotai-devtools-active m_8d3f4000 m_87cf2631"
               data-variant="subtle"
-              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              style="--ai-radius: var(--mantine-radius-md); --ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent; margin-left: calc(0.625rem * var(--mantine-scale));"
               title="Minimize panel"
               type="button"
             >
@@ -418,11 +419,11 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           <p
             class="jotai-devtools-focus m_b6d8b162"
             data-size="md"
-            style="--text-fz: var(--mantine-font-size-md); --text-lh: var(--mantine-line-height-md); display: flex; align-items: center; font-weight: 500;"
+            style="--text-fz: var(--mantine-font-size-md); --text-lh: var(--mantine-line-height-md); display: flex; align-items: center; margin-bottom: calc(0.3125rem * var(--mantine-scale)); color: var(--mantine-color-red-8); font-weight: 500;"
           >
             <p
               class="jotai-devtools-focus m_b6d8b162"
-              style="display: flex; align-items: center;"
+              style="display: flex; align-items: center; margin-right: calc(0.3125rem * var(--mantine-scale));"
             >
               <svg
                 class="tabler-icon tabler-icon-alert-circle "
@@ -452,7 +453,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
           <p
             class="jotai-devtools-focus m_b6d8b162"
             data-size="sm"
-            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); margin-bottom: var(--mantine-spacing-sm); color: var(--mantine-color-red-8);"
           >
             If you believe this to be a bug, please file an issue on
              
@@ -461,7 +462,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
               data-underline="hover"
               href="https://github.com/jotaijs/jotai-devtools/issues"
               rel="noreferrer noopener"
-              style="text-decoration: underline;"
+              style="color: var(--mantine-color-red-8); text-decoration: underline;"
               target="_blank"
             >
               Jotai DevTool's GitHub repo
@@ -487,6 +488,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
+                  style="width: calc(1.125rem * var(--mantine-scale)); height: calc(1.125rem * var(--mantine-scale));"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >

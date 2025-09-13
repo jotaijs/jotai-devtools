@@ -37,12 +37,13 @@ describe('DevTools - basic', () => {
 
   it('should respect the position prop', async () => {
     customRender(<DevTools position="top-right" />);
-    expect(screen.getByTitle('Open Jotai Devtools')).toHaveStyle({
-      top: '0.2rem',
-      right: '0.2rem',
-      bottom: 'unset',
-      left: 'unset',
-    });
+    const button = screen.getByTitle('Open Jotai Devtools');
+    const style = button.getAttribute('style');
+
+    expect(style).toContain('top: 0.2rem');
+    expect(style).toContain('right: 0.2rem');
+    expect(style).toContain('left: unset');
+    expect(style).toContain('bottom: unset');
   });
 
   it('should resize the devtools upon dragging the resize bar', async () => {
