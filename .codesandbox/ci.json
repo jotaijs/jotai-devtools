@@ -1,5 +1,5 @@
 {
   "buildCommand": "build",
   "sandboxes": ["new", "react-typescript-react-ts"],
-  "node": "lts/*"
+  "node": "22"
 }
