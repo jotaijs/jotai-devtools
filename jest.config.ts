@@ -30,10 +30,7 @@ const config: Config = {
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testMatch: ['<rootDir>/__tests__/**/*.(test).{ts,tsx}'],
-  watchPlugins: [
-    require.resolve('jest-watch-typeahead/filename'),
-    require.resolve('jest-watch-typeahead/testname'),
-  ],
+  watchPlugins: ['jest-watch-typeahead/filename'],
   moduleNameMapper: {
     '^jotai-devtools$': '<rootDir>/src/index.ts',
     '^jotai-devtools/(.*)$': '<rootDir>/src/$1.ts',
