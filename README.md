@@ -14,7 +14,7 @@
 - ✅ Works with provider-less mode
 - ✅ Works with Next.js
 - ✅ Supports custom `nonce` for CSP
-- ✅ Hides private atoms with ability to configure
+- ✅ Hides private atoms with the ability to configure
 - ✅ Parses all the JavaScript values with JSON Tree view
 - ✅ Diff checking with additions and deletion highlights
 
@@ -51,7 +51,7 @@ Enhance your development experience with the UI based Jotai DevTool
 
 ### Babel plugin setup - (Optional but highly recommended)
 
-Use Jotai babel plugins for optimal debugging experience. Find the complete
+Use Jotai babel plugins for an optimal debugging experience. Find the complete
 guide on [jotai.org](https://jotai.org/docs/tools/babel)
 
 Eg.
@@ -100,12 +100,12 @@ type DevToolsProps = {
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   // Custom nonce to allowlist jotai-devtools specific inline styles via CSP
   nonce?: string;
-  // We recommend keeping these options static. i.e. set it only once. Avoid connecting it to re-renderable state
+  // We recommend keeping these options static. i.e. set it only once. Avoid connecting it to a re-renderable state
   options?: {
     // Private atoms are used internally in atoms like `atomWithStorage` or `atomWithLocation`, etc. to manage state.
     // Defaults to `false`
     shouldShowPrivateAtoms?: boolean;
-    // Expands the JSON tree view on initial render on Atom Viewer tab, Timeline tab, etc.
+    // Expands the JSON tree view on initial render on the Atom Viewer tab, Timeline tab, etc.
     // Defaults to `false`
     shouldExpandJsonTreeViewInitially?: boolean;
     // The interval (in milliseconds) between each step of the time travel playback.
@@ -242,7 +242,7 @@ import {
 ### Migrate ƒrom @emotion/react to native CSS
 
 With the latest release, Jotai DevTools no longer depends on `@emotion/react`
-and is replaced it with native CSS.
+and is replaced with native CSS.
 
 1. Remove `@emotion/react` from your dependencies
 
