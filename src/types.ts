@@ -2,6 +2,7 @@ import { useStore } from 'jotai/react';
 import type { Atom, WritableAtom, createStore } from 'jotai/vanilla';
 import type {
   INTERNAL_AtomState,
+  INTERNAL_MountedMap,
   INTERNAL_Store,
 } from 'jotai/vanilla/internals';
 
@@ -10,6 +11,7 @@ export type DevStore = {
     get: (atom: Atom<unknown>) => INTERNAL_AtomState | undefined;
   };
   get_mounted_atoms: () => Set<Atom<unknown>>;
+  get_mounted_map: () => Pick<INTERNAL_MountedMap, 'get'>;
   restore_atoms: (values: Iterable<readonly [Atom<unknown>, unknown]>) => void;
 };
 

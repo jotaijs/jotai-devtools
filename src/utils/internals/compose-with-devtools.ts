@@ -136,12 +136,12 @@ const __composeWithDevTools = (
   };
 
   (store as WithDevToolsStore<typeof store>).getMountedAtomState = (atom) => {
-    const aState = store.get_internal_weak_map().get(atom);
+    const mounted = store.get_mounted_map().get(atom);
 
-    if (aState && 'm' in aState) {
+    if (mounted) {
       return {
-        l: (aState.m as any).l,
-        t: (aState.m as any).t,
+        l: mounted.l,
+        t: mounted.t,
       };
     }
 
@@ -180,20 +180,15 @@ const createDevStore = (): StoreWithDevMethods => {
   const debugMountedAtoms = new Set<Atom<unknown>>();
   storeHooks.m.add(undefined, (atom) => {
     debugMountedAtoms.add(atom);
-    const atomState = atomStateMap.get(atom);
-    // For DevStoreRev4 compatibility
-    (atomState as any).m = mountedAtoms.get(atom);
   });
   storeHooks.u.add(undefined, (atom) => {
     debugMountedAtoms.delete(atom);
-    const atomState = atomStateMap.get(atom);
-    // For DevStoreRev4 compatibility
-    delete (atomState as any).m;
   });
   const devStore: DevStore = {
     // store dev methods (these are tentative and subject to change without notice)
     get_internal_weak_map: () => atomStateMap,
     get_mounted_atoms: () => debugMountedAtoms,
+    get_mounted_map: () => mountedAtoms,
     restore_atoms: (values) => {
       const restoreAtom: WritableAtom<null, [], void> = {
         read: () => null,
