@@ -32,14 +32,10 @@ export const Default: Story = {
   },
   argTypes: {
     store: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
     options: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
   },
 };

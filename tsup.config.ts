@@ -32,7 +32,8 @@ const baseConfig: Options = {
   minify: false,
   splitting: true,
   tsconfig: './tsconfig.build.json',
-  dts: true,
+  // tsup injects `baseUrl: "."` for DTS when `paths` exist (rollup.js); TS 6 deprecates that until tsup updates.
+  dts: { compilerOptions: { ignoreDeprecations: '6.0' } },
   external: ['jotai', 'react', 'react-dom'],
   noExternal: [
     '@tabler/icons-react',
