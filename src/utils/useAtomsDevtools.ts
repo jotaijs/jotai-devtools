@@ -46,7 +46,7 @@ export function useAtomsDevtools(
 
   const isTimeTraveling = useRef(false);
   const isRecording = useRef(true);
-  const devtools = useRef<Connection>();
+  const devtools = useRef<Connection | undefined>(undefined);
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
 
@@ -63,7 +63,11 @@ export function useAtomsDevtools(
       return snapshot;
     };
 
-    devtools.current = createReduxConnection(extension, name);
+    const connection = createReduxConnection(extension, name);
+    if (!connection) {
+      return;
+    }
+    devtools.current = connection;
 
     const devtoolsUnsubscribe = devtools.current?.subscribe((message) => {
       switch (message.type) {
