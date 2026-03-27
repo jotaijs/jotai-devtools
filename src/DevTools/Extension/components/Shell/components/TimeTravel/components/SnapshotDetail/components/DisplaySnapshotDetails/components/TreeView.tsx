@@ -60,7 +60,7 @@ const valueRenderer = (
     }
   }
 
-  return <>{valueAsString}</>;
+  return <>{valueAsString as ReactNode}</>;
 };
 
 // Copied by Redux DevTools

@@ -10,17 +10,13 @@ export default {
   title: 'DevtoolsPlayground',
   argTypes: {
     store: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
     options: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
   },
-} as Meta;
+} as Meta<typeof DevTools>;
 
 type CustomStorybookProps = DevToolsProps & {
   'options.shouldShowPrivateAtoms': boolean;
@@ -70,14 +66,10 @@ export const Default: Story = {
   },
   argTypes: {
     store: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
     options: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
   },
 };

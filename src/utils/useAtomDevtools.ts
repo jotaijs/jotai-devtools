@@ -24,7 +24,7 @@ export function useAtomDevtools<Value, Result>(
 
   const lastValue = useRef(value);
   const isTimeTraveling = useRef(false);
-  const devtools = useRef<Connection>();
+  const devtools = useRef<Connection | undefined>(undefined);
 
   const atomName = name || anAtom.debugLabel || anAtom.toString();
 
@@ -43,7 +43,11 @@ export function useAtomDevtools<Value, Result>(
       );
     };
 
-    devtools.current = createReduxConnection(extension, atomName);
+    const connection = createReduxConnection(extension, atomName);
+    if (!connection) {
+      return;
+    }
+    devtools.current = connection;
 
     const unsubscribe = devtools.current?.subscribe((message) => {
       if (message.type === 'ACTION' && message.payload) {

@@ -258,7 +258,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -336,10 +336,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -381,16 +381,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display an error wh
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -836,7 +836,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -914,10 +914,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -959,16 +959,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display atom detail
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -1447,7 +1447,7 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -1525,10 +1525,10 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -1570,16 +1570,16 @@ exports[`DevTools - AtomViewer Atom details Raw value should display the depende
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -2041,7 +2041,7 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -2119,10 +2119,10 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -2164,16 +2164,16 @@ exports[`DevTools - AtomViewer List of atoms Search should display an error if n
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -2432,7 +2432,7 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -2510,10 +2510,10 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -2555,16 +2555,16 @@ exports[`DevTools - AtomViewer List of atoms Search should search for atoms corr
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -2835,7 +2835,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -2913,10 +2913,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -2958,16 +2958,16 @@ exports[`DevTools - AtomViewer List of atoms private atoms should hide private a
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -3446,7 +3446,7 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -3524,10 +3524,10 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -3569,16 +3569,16 @@ exports[`DevTools - AtomViewer List of atoms private atoms should mark private a
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -4122,7 +4122,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -4200,10 +4200,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -4245,16 +4245,16 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer with corr
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>
@@ -4570,7 +4570,7 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"
                   />
                   <path
                     d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
@@ -4648,10 +4648,10 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
               <path
-                d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                d="M4 16a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -2"
               />
             </svg>
           </span>
@@ -4693,16 +4693,16 @@ exports[`DevTools - AtomViewer List of atoms should render atom viewer without a
                 d="M4 16l6 -7l5 5l5 -6"
               />
               <path
-                d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
               <path
-                d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
               />
             </svg>
           </span>

@@ -8,17 +8,13 @@ export default {
   title: 'DevtoolsProviderLess',
   argTypes: {
     store: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
     options: {
-      control: {
-        type: false,
-      },
+      control: false,
     },
   },
-} as Meta;
+} as Meta<typeof DevTools>;
 
 const Template: StoryFn<DevToolsProps> = (args) => (
   <>

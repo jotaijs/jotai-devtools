@@ -1,4 +1,7 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
+import { createRequire } from 'node:module';
 import { StorybookConfig } from '@storybook/react-webpack5';
+const require = createRequire(import.meta.url);
 const webpack = require('webpack');
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
