@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.13.1](https://github.com/jotaijs/jotai-devtools/compare/v0.13.0...v0.13.1) (2026-03-27)
+
+### Bug Fixes
+
+- compatibility with jotai store epoch changes (atomState.m)
+  ([#214](https://github.com/jotaijs/jotai-devtools/issues/214))
+  ([f289b88](https://github.com/jotaijs/jotai-devtools/commit/f289b88c41b746332c383b2e877fb226fbe5a87a))
+- grammar issue in readme.md
+  ([#210](https://github.com/jotaijs/jotai-devtools/issues/210))
+  ([baa0df7](https://github.com/jotaijs/jotai-devtools/commit/baa0df74b8f3b28d4545b9520713182b9ee41650))
+
 ## 0.13.0 (2025-09-13)
 
 - chore: update dependencies (#204)
