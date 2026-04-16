@@ -173,7 +173,7 @@
     "jsondiffpatch": "^0.5.0",
     "react-base16-styling": "^0.9.1",
     "react-error-boundary": "^5.0.0",
-    "react-json-tree": "^0.18.0",
+    "react-json-tree": "^0.20.0",
     "react-resizable-panels": "2.1.7"
   },
   "packageManager": "pnpm@10.17.1"
