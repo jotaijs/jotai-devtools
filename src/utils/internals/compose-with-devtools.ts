@@ -1,8 +1,8 @@
 import { Atom, WritableAtom } from 'jotai';
 import { INTERNAL_overrideCreateStore } from 'jotai/vanilla';
 import {
-  INTERNAL_buildStoreRev2 as INTERNAL_buildStore,
-  INTERNAL_initializeStoreHooksRev2 as INTERNAL_initializeStoreHooks,
+  INTERNAL_buildStoreRev3 as INTERNAL_buildStore,
+  INTERNAL_initializeStoreHooksRev3 as INTERNAL_initializeStoreHooks,
 } from 'jotai/vanilla/internals';
 import {
   AnyAtom,
@@ -170,7 +170,7 @@ const createDevStore = (): StoreWithDevMethods => {
     undefined,
     storeHooks,
     undefined,
-    (_store, atom, get, set, ...args) => {
+    (_buildingBlocks, _store, atom, get, set, ...args) => {
       if (inRestoreAtom) {
         return set(atom, ...(args as any));
       }
