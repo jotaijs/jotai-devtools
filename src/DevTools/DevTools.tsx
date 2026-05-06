@@ -126,7 +126,7 @@ const DevToolsProvider = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-export const InternalDevTools = (props: DevToolsProps): JSX.Element | null => {
+export const InternalDevTools = (props: DevToolsProps): React.ReactNode => {
   if (__DEV__) {
     console.warn(
       "[jotai-devtools]: automatic tree-shaking in development mode is being deprecated. Make sure to tree-shake it out in your applications if you don't want it in production.\n\nFor more information, see https://github.com/jotaijs/jotai-devtools",
