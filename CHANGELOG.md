@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.14.0](https://github.com/jotaijs/jotai-devtools/compare/v0.13.1...v0.14.0) (2026-05-08)
+
+### Bug Fixes
+
+- update InternalDevTools return type to React.ReactNode
+  ([#216](https://github.com/jotaijs/jotai-devtools/issues/216))
+  ([263441f](https://github.com/jotaijs/jotai-devtools/commit/263441f57ada77cc28ef7435e7adf9eb43f7339b))
+
+### Refactors
+
+- support INTERNAL_buildStoreRev3 + drop support for older version
+  ([#218](https://github.com/jotaijs/jotai-devtools/issues/218))
+  ([26f0662](https://github.com/jotaijs/jotai-devtools/commit/26f066268d1ba1e6586363d25e59d5b8343cace4))
+
 ## [0.13.1](https://github.com/jotaijs/jotai-devtools/compare/v0.13.0...v0.13.1) (2026-03-27)
 
 ### Bug Fixes
