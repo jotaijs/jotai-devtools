@@ -1,9 +1,10 @@
-import { Atom, WritableAtom } from 'jotai';
-import { INTERNAL_overrideCreateStore } from 'jotai/vanilla';
 import {
-  INTERNAL_buildStoreRev3 as INTERNAL_buildStore,
-  INTERNAL_initializeStoreHooksRev3 as INTERNAL_initializeStoreHooks,
-} from 'jotai/vanilla/internals';
+  Atom,
+  INTERNAL_buildStoreRev4 as INTERNAL_buildStore,
+  INTERNAL_initializeStoreHooksRev4 as INTERNAL_initializeStoreHooks,
+  INTERNAL_overrideCreateStore,
+  WritableAtom,
+} from 'jotai/vanilla';
 import {
   AnyAtom,
   AnyAtomError,
@@ -161,22 +162,17 @@ const createDevStore = (): StoreWithDevMethods => {
   const storeHooks = INTERNAL_initializeStoreHooks({});
   const atomStateMap = new WeakMap();
   const mountedAtoms = new WeakMap();
-  const store = INTERNAL_buildStore(
-    atomStateMap,
-    mountedAtoms,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    storeHooks,
-    undefined,
-    (_buildingBlocks, _store, atom, get, set, ...args) => {
+  const store = INTERNAL_buildStore({
+    a: atomStateMap,
+    m: mountedAtoms,
+    h: storeHooks,
+    W: (_buildingBlocks, _store, atom, get, set, ...args) => {
       if (inRestoreAtom) {
         return set(atom, ...(args as any));
       }
       return atom.write(get, set, ...(args as any));
     },
-  );
+  });
   const debugMountedAtoms = new Set<Atom<unknown>>();
   storeHooks.m.add(undefined, (atom) => {
     debugMountedAtoms.add(atom);

@@ -8,8 +8,7 @@ import {
 } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import * as stringifyModule from 'javascript-stringify';
-import { Provider, useAtomValue } from 'jotai';
-import { atom } from 'jotai/vanilla';
+import { Provider, atom, useAtomValue } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { AnyAtom } from 'src/types';
 import { customRender } from '../custom-render';

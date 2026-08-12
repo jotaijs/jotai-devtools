@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Title } from '@mantine/core';
-import { atom, useAtom } from 'jotai';
 import {
+  atom,
   atomWithDefault,
   atomWithObservable,
-  loadable,
   splitAtom,
   unwrap,
-} from 'jotai/vanilla/utils';
+  useAtom,
+} from 'jotai';
 import { ErrorBoundary } from 'react-error-boundary';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -37,9 +37,6 @@ const asyncAtom = atom(async (get) => {
 });
 
 asyncAtom.debugLabel = 'asyncAtom';
-
-const loadableAtom = loadable(asyncAtom);
-loadableAtom.debugLabel = 'loadableAtom';
 
 const someRandomArray = [
   {

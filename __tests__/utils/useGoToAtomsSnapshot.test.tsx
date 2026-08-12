@@ -6,8 +6,7 @@ import React, {
   useRef,
 } from 'react';
 import { fireEvent, render, waitFor } from '@testing-library/react';
-import { Provider, useAtom } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { Provider, atom, useAtom } from 'jotai';
 import type { Atom } from 'jotai/vanilla';
 import { useAtomsSnapshot, useGotoAtomsSnapshot } from 'jotai-devtools/utils';
 

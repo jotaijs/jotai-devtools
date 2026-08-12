@@ -1,8 +1,7 @@
 import React, { StrictMode, Suspense } from 'react';
 import type { ReactElement } from 'react';
 import { act, fireEvent, render, waitFor } from '@testing-library/react';
-import { useAtom } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { atom, useAtom } from 'jotai';
 import { useAtomsDevtools } from 'jotai-devtools/utils';
 
 let extensionSubscriber: ((message: any) => void) | undefined;

@@ -1,5 +1,4 @@
-import { useAtom } from 'jotai/react';
-import { atomWithStorage } from 'jotai/vanilla/utils';
+import { atomWithStorage, useAtom } from 'jotai/react';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
 import { generateLocalStorageKey } from './../../../../../../../utils/generate-local-storage-key';
 

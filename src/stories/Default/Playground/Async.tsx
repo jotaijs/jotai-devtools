@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Button, Flex, Text, Title } from '@mantine/core';
-import { useAtom, useAtomValue } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { atom, useAtom, useAtomValue } from 'jotai';
 
 const RESPONSE_DELAY = 1000;
 const delayedPromise = (data: any) =>
