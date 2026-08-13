@@ -1,10 +1,12 @@
 import {
   Atom,
-  INTERNAL_buildStoreRev4 as INTERNAL_buildStore,
-  INTERNAL_initializeStoreHooksRev4 as INTERNAL_initializeStoreHooks,
   INTERNAL_overrideCreateStore,
   WritableAtom,
 } from 'jotai/vanilla';
+import {
+  INTERNAL_buildStoreRev4 as INTERNAL_buildStore,
+  INTERNAL_initializeStoreHooksRev4 as INTERNAL_initializeStoreHooks,
+} from 'jotai/vanilla/internals';
 import {
   AnyAtom,
   AnyAtomError,

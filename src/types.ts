@@ -1,12 +1,10 @@
 import { useStore } from 'jotai/react';
+import type { Atom, WritableAtom, createStore } from 'jotai/vanilla';
 import type {
-  Atom,
   INTERNAL_AtomState,
   INTERNAL_MountedMap,
   INTERNAL_Store,
-  WritableAtom,
-  createStore,
-} from 'jotai/vanilla';
+} from 'jotai/vanilla/internals';
 
 export type DevStore = {
   get_internal_weak_map: () => {

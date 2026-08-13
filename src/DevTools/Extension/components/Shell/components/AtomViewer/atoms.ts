@@ -1,4 +1,5 @@
-import { atom, atomWithDefault } from 'jotai/vanilla';
+import { atom } from 'jotai/vanilla';
+import { atomWithDefault } from 'jotai/vanilla/utils';
 import { AnyAtom, ValuesAtomTuple } from 'src/types';
 import { valuesAtom } from '../../../../../atoms/values-atom';
 import { filterAtomsByString } from './utils/filter-atoms-by-string';

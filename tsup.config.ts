@@ -1,12 +1,6 @@
 import { replace } from 'esbuild-plugin-replace';
 import { Options, defineConfig } from 'tsup';
 
-const defaultOutExtension: Options['outExtension'] = ({ format }) => {
-  return {
-    js: `.${format}.js`,
-  };
-};
-
 const defaultEsBuildPlugins: Options['esbuildPlugins'] = [
   replace({
     // FIXME - Should filter it by `include` instead of `exclude`. This doesn't seem to be working /^.*\.js$/,
@@ -41,16 +35,10 @@ const baseConfig: Options = {
     '@mantine/code-highlight/styles.css',
   ],
   platform: 'node',
-  outExtension: defaultOutExtension,
   esbuildPlugins: defaultEsBuildPlugins,
   // // TSUP does not appear to be respecting tsconfig's jsx property
   // // See - https://github.com/egoist/tsup/issues/792
   inject: ['./react-shim.js'],
-};
-
-const cjsConfig: Options = {
-  ...baseConfig,
-  format: ['cjs'],
 };
 
 const mjsOutExtension: Options['outExtension'] = ({ format }) => {
@@ -65,4 +53,4 @@ const mjsConfig: Options = {
   outExtension: mjsOutExtension,
 };
 
-export default defineConfig([cjsConfig, mjsConfig]);
+export default defineConfig(mjsConfig);

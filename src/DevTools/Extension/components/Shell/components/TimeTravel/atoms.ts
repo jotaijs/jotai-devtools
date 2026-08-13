@@ -1,14 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useInterval } from '@mantine/hooks';
-import {
-  atom,
-  atomWithDefault,
-  atomWithStorage,
-  useAtom,
-  useAtomValue,
-  useSetAtom,
-} from 'jotai';
-import type { ExtractAtomArgs } from 'jotai/vanilla';
+import { useAtom, useAtomValue, useSetAtom } from 'jotai/react';
+import { type ExtractAtomArgs, atom } from 'jotai/vanilla';
+import { atomWithDefault, atomWithStorage } from 'jotai/vanilla/utils';
 import { AtomsSnapshot } from '../../../../../../types';
 import { useGotoAtomsSnapshot } from '../../../../../../utils';
 import { useDevToolsOptionsValue } from '../../../../../atoms/devtools-options';
