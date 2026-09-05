@@ -143,7 +143,7 @@
     "webpack": "^5.106.2"
   },
   "peerDependencies": {
-    "jotai": ">=3.0.0",
+    "jotai": ">=3.0.0-alpha.1",
     "react": ">=17.0.0"
   },
   "dependencies": {
