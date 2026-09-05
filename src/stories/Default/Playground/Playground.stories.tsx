@@ -2,7 +2,7 @@ import React from 'react';
 import { MantineProvider } from '@mantine/core';
 import { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Provider } from 'jotai/react';
-import { DevTools, DevToolsProps, useAtomsDevtools } from '../../../';
+import { DevTools, DevToolsProps, useAtomsDevtools } from '../../../index';
 import { Playground } from './Playground';
 
 export default {
