@@ -40,7 +40,7 @@
     "build": "tsup",
     "prerelease": "pnpm install --frozen-lockfile && pnpm run lint && pnpm run test && pnpm run build",
     "release": "pnpm prerelease && release-it",
-    "release:next": "pnpm run release --preRelease=next",
+    "release:alpha": "pnpm run release --preRelease=alpha",
     "release:minor": "pnpm run release minor",
     "release:patch": "pnpm run release patch",
     "storybook": "storybook dev -p 6006",
