@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import { useAtom } from 'jotai/react';
-import { ExtractAtomValue, atom } from 'jotai/vanilla';
+import { atom, useAtom } from 'jotai';
+import type { ExtractAtomValue } from 'jotai/vanilla';
 import {
   filteredSnapshotHistoryAtom,
   selectedSnapshotIdAtom,

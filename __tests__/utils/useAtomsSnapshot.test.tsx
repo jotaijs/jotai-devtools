@@ -1,7 +1,6 @@
 import React, { StrictMode, useState } from 'react';
 import { act, fireEvent, render, waitFor } from '@testing-library/react';
-import { Provider, useAtom, useAtomValue } from 'jotai/react';
-import { atom, createStore } from 'jotai/vanilla';
+import { Provider, atom, createStore, useAtom, useAtomValue } from 'jotai';
 import { useAtomsSnapshot } from 'jotai-devtools/utils';
 
 describe('useAtomsSnapshot', () => {

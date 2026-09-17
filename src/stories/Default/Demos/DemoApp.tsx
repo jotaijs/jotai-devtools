@@ -7,7 +7,7 @@ import {
   Title,
   useComputedColorScheme,
 } from '@mantine/core';
-import { DevTools, DevToolsProps } from '../../../';
+import { DevTools, DevToolsProps } from '../../../index';
 import { Async } from './Async';
 import { Counter } from './Counter';
 import { DemoJotaiStoreContext, demoStore } from './demo-store';

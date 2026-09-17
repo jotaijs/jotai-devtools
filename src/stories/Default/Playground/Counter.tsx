@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Box, Button, Code, Title } from '@mantine/core';
 import { useTimeout } from '@mantine/hooks';
-import { useAtom, useAtomValue } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { atom, useAtom, useAtomValue } from 'jotai';
 
 const countAtom = atom(0);
 countAtom.debugLabel = 'countAtom';

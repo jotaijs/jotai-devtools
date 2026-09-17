@@ -1,5 +1,4 @@
-import { useAtomValue } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { atom, useAtomValue } from 'jotai';
 import { useDevtoolsJotaiStoreOptions } from '../../../../../../../internal-jotai-store';
 import {
   SnapshotHistory,

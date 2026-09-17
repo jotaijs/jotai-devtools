@@ -84,7 +84,13 @@ export function useAtomsSnapshot({
                 /* NOTE: This just removes private atoms from the dependents list,
                   instead of hiding them from the dependency chain and showing
                   the nested dependents of the private atoms. */
-                (dependent) => !dependent.debugPrivate,
+                (dependent: unknown) => {
+                  if (dependent instanceof Object) {
+                    return !(dependent as { debugPrivate?: boolean })
+                      .debugPrivate;
+                  }
+                  return true;
+                },
               ),
             );
           }

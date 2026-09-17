@@ -27,7 +27,9 @@ const config: Config = {
       },
     ],
   },
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
+  transformIgnorePatterns: [
+    '[/\\\\]node_modules[/\\\\](?!.*(jotai|@swc)/).+\\.(js|jsx)$',
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testMatch: ['<rootDir>/__tests__/**/*.(test).{ts,tsx}'],
   watchPlugins: ['jest-watch-typeahead/filename'],

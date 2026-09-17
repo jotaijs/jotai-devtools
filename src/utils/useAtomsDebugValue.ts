@@ -10,7 +10,7 @@ import type { Atom } from 'jotai/vanilla';
 import { Store } from '../types';
 import { isDevToolsStore, useDevToolsStore } from './hooks/useDevToolsStore';
 
-const atomToPrintable = (atom: Atom<unknown>) =>
+const atomToPrintable = (atom: Atom<unknown>): string =>
   atom.debugLabel || atom.toString();
 
 const stateToPrintable = ([store, atoms]: [Store, Atom<unknown>[]]) =>
@@ -28,7 +28,9 @@ const stateToPrintable = ([store, atoms]: [Store, Atom<unknown>[]]) =>
           {
             ...('e' in atomState && { error: atomState.e }),
             ...('v' in atomState && { value: atomState.v }),
-            dependents: Array.from(dependents).map(atomToPrintable),
+            dependents: Array.from(dependents as Set<Atom<unknown>>).map(
+              (dependentAtom: Atom<unknown>) => atomToPrintable(dependentAtom),
+            ),
           },
         ],
       ];

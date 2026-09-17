@@ -1,5 +1,4 @@
-import { useAtom, useAtomValue } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { atom, useAtom, useAtomValue } from 'jotai';
 import { ValuesAtomTuple } from 'src/types';
 import { useDevtoolsJotaiStoreOptions } from '../internal-jotai-store';
 

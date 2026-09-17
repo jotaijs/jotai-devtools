@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, Button, Code, Divider, Title } from '@mantine/core';
-import { useAtom, useAtomValue } from 'jotai/react';
-import { atom } from 'jotai/vanilla';
+import { atom, useAtom, useAtomValue } from 'jotai';
 import { demoStoreOptions } from './demo-store';
 
 const countAtom = atom(1);

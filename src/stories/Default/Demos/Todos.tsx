@@ -13,8 +13,7 @@ import {
   Title,
 } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
-import { useAtom, useSetAtom } from 'jotai/react';
-import { PrimitiveAtom, atom } from 'jotai/vanilla';
+import { PrimitiveAtom, atom, useAtom, useSetAtom } from 'jotai';
 import { demoStoreOptions } from './demo-store';
 
 type Todo = {

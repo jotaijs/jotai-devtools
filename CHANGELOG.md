@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.15.0-alpha.0](https://github.com/jotaijs/jotai-devtools/compare/v0.14.0...v0.15.0-alpha.0) (2026-09-05)
+
+### Features
+
+- add jotai v3 support
+  ([e958cc6](https://github.com/jotaijs/jotai-devtools/commit/e958cc64d58b7f5625b0947a587eb23be03b1484))
+
+### Refactors
+
+- drop support for cjs
+  ([24ede29](https://github.com/jotaijs/jotai-devtools/commit/24ede29c5d37db377e32dc66d270861d3e9cebde))
+- update peer dependencies
+  ([56a64c2](https://github.com/jotaijs/jotai-devtools/commit/56a64c27a004c8c02a038bd30547f4a4d14b1795))
+- update peer dependencies
+  ([9ce6473](https://github.com/jotaijs/jotai-devtools/commit/9ce6473c98e9d7b05b1c10c3afb8ec625ca98306))
+- update peer dependencies
+  ([7380648](https://github.com/jotaijs/jotai-devtools/commit/738064823a0449cf455d0a64a2d7dd69d2f2f60e))
+- update release script to alpha
+  ([58ff8d8](https://github.com/jotaijs/jotai-devtools/commit/58ff8d86074072dfb20f02ee09ec362d271507fe))
+
 ## [0.14.0](https://github.com/jotaijs/jotai-devtools/compare/v0.13.1...v0.14.0) (2026-05-08)
 
 ### Bug Fixes
