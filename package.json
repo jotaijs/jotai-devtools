@@ -120,15 +120,15 @@
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
     "jest-watch-typeahead": "^3.0.1",
-    "jotai": "3.0.0-alpha.1",
-    "jotai-tanstack-query": "^0.9.0",
+    "jotai": "^3.0.0",
+    "jotai-tanstack-query": "^0.11.0",
     "lint-staged": "^17.0.2",
     "postcss": "^8.5.14",
     "postcss-loader": "^8.2.1",
     "postcss-preset-mantine": "^1.18.0",
     "prettier": "^3.8.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "redux": "^5.0.1",
     "release-it": "^19.2.4",
     "resize-observer-polyfill": "^1.5.1",
@@ -140,10 +140,10 @@
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "tsup": "8.5.1",
     "typescript": "^6.0.3",
-    "webpack": "^5.106.2"
+    "webpack": "^5.111.0"
   },
   "peerDependencies": {
-    "jotai": ">=3.0.0-alpha.1",
+    "jotai": ">=3.0.0",
     "react": ">=18.0.0"
   },
   "dependencies": {
