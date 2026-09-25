@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Title } from '@mantine/core';
+import { atom, useAtom } from 'jotai';
 import {
-  atom,
   atomWithDefault,
   atomWithObservable,
   splitAtom,
   unwrap,
-  useAtom,
-} from 'jotai';
+} from 'jotai/utils';
 import { ErrorBoundary } from 'react-error-boundary';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -27,7 +26,7 @@ const counterSubject = interval(1000).pipe(map((i) => `#${i}`));
 const counterAtom = atomWithObservable(() => counterSubject);
 counterAtom.debugLabel = 'counterAtom';
 
-const asyncAtom = atom(async (get) => {
+const asyncAtom = atom(async () => {
   return new Promise((resolve) => {
     const timer = window.setTimeout(() => {
       clearTimeout(timer);
