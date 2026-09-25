@@ -33,7 +33,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
         style="position: sticky; top: 0px; z-index: 1; width: 100%;"
       >
         <div
-          class="m_8bffd616 __m__-rct"
+          class="m_8bffd616 __m__-_r_6b_"
           style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
@@ -62,7 +62,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
             </div>
           </div>
           <div
-            class="m_8bffd616 __m__-rd7"
+            class="m_8bffd616 __m__-_r_6g_"
             style="align-items: center;"
           >
             <button
@@ -131,7 +131,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with m
         </div>
       </div>
       <div
-        class="m_8bffd616 __m__-rif"
+        class="m_8bffd616 __m__-_r_91_"
         data-testid="jotai-devtools-error-boundary"
         role="alert"
         style="overflow: scroll; align-items: center; justify-content: center; height: 90%;"
@@ -309,7 +309,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
         style="position: sticky; top: 0px; z-index: 1; width: 100%;"
       >
         <div
-          class="m_8bffd616 __m__-r61"
+          class="m_8bffd616 __m__-_r_30_"
           style="align-items: center; justify-content: space-between; padding: calc(0.625rem * var(--mantine-scale));"
         >
           <div
@@ -338,7 +338,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
             </div>
           </div>
           <div
-            class="m_8bffd616 __m__-r6b"
+            class="m_8bffd616 __m__-_r_35_"
             style="align-items: center;"
           >
             <button
@@ -407,7 +407,7 @@ exports[`DevTools - basic Error boundary should display an error boundary with s
         </div>
       </div>
       <div
-        class="m_8bffd616 __m__-rbj"
+        class="m_8bffd616 __m__-_r_5m_"
         data-testid="jotai-devtools-error-boundary"
         role="alert"
         style="overflow: scroll; align-items: center; justify-content: center; height: 90%;"

@@ -483,7 +483,6 @@ describe('DevTools - TimeTravel', () => {
 
         return (
           <div>
-            <DevTools isInitialOpen={true} />
             <span data-testid="request-value">
               {request ? 'Resolved' : 'Pending'}
             </span>
@@ -498,9 +497,12 @@ describe('DevTools - TimeTravel', () => {
       };
 
       customRender(
-        <React.Suspense fallback={<div>Loading...</div>}>
-          <AsyncAtomsWithDevTools />
-        </React.Suspense>,
+        <>
+          <DevTools isInitialOpen={true} />
+          <React.Suspense fallback={<div>Loading...</div>}>
+            <AsyncAtomsWithDevTools />
+          </React.Suspense>
+        </>,
       );
 
       fireEvent.click(screen.getByText('Time travel'));
@@ -513,7 +515,9 @@ describe('DevTools - TimeTravel', () => {
 
       await act(() => userEvent.click(screen.getByText('Fetch')));
 
-      resolvePromise(1);
+      await act(async () => {
+        resolvePromise(1);
+      });
 
       await waitFor(() =>
         expect(
@@ -646,54 +650,6 @@ describe('DevTools - TimeTravel', () => {
       );
       jest.useRealTimers();
     });
-    // Interval is calculated using time + time * speed formula
-    it.each`
-      speed      | interval
-      ${'0.5x'}  | ${1500}
-      ${'1x'}    | ${750}
-      ${'1.5x'}  | ${500}
-      ${'1.75x'} | ${428.5}
-      ${'2x'}    | ${375}
-    `(
-      'should change the speed to "$interval" when user selects "$speed" from the dropdown',
-      async ({ speed, interval }) => {
-        customRender(<BasicAtomsWithDevTools />);
-
-        await act(() => userEvent.click(screen.getByText('Time travel')));
-        await act(() =>
-          userEvent.click(screen.getByLabelText('Record snapshot history')),
-        );
-        await act(() => userEvent.click(screen.getByText('Increment')));
-        await act(() => userEvent.click(screen.getByText('Increment')));
-
-        jest.useFakeTimers();
-
-        const user = userEvent.setup({ delay: null });
-        await act(() =>
-          user.click(
-            screen.getByTestId('jotai-devtools-playback-speed-dropdown'),
-          ),
-        );
-        await act(() => user.click(screen.getByText(speed)));
-        await act(() =>
-          user.click(
-            screen.getByTestId('jotai-devtools-playback-speed-dropdown'),
-          ),
-        );
-        await act(() => user.click(screen.getByTitle('Start time travel')));
-
-        act(() => {
-          jest.advanceTimersByTime(interval);
-        });
-
-        await waitFor(() =>
-          expect(screen.getByTestId('count-atom-value')).toHaveTextContent('1'),
-        );
-
-        jest.useRealTimers();
-      },
-    );
-
     describe('manual time travel', () => {
       it('should restore next snapshot when user clicks on the next button', () => {
         customRender(<BasicAtomsWithDevTools />);

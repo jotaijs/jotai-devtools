@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useRef,
 } from 'react';
-import { fireEvent, render, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@testing-library/react';
 import { Provider, atom, useAtom } from 'jotai';
 import type { Atom } from 'jotai/vanilla';
 import { useAtomsSnapshot, useGotoAtomsSnapshot } from 'jotai-devtools/utils';
@@ -155,25 +155,33 @@ describe('useAtomsSnapshot', () => {
       );
     };
 
-    const { findByText, getByText } = render(
-      <StrictMode>
-        <Suspense fallback="loading">
-          <DisplayPrice />
-          <UpdateSnapshot />
-        </Suspense>
-      </StrictMode>,
+    const { findByText, getByText } = await act(async () =>
+      render(
+        <StrictMode>
+          <Suspense fallback="loading">
+            <DisplayPrice />
+            <UpdateSnapshot />
+          </Suspense>
+        </StrictMode>,
+      ),
     );
 
     await findByText('loading');
-    resolve();
+    await act(async () => {
+      resolve();
+    });
     await waitFor(() => {
       getByText('price: 10');
       getByText('tax: 2');
     });
 
-    fireEvent.click(getByText('click'));
+    await act(async () => {
+      fireEvent.click(getByText('click'));
+    });
     await findByText('loading');
-    resolve();
+    await act(async () => {
+      resolve();
+    });
     await waitFor(() => {
       getByText('price: 20');
       getByText('tax: 4');
