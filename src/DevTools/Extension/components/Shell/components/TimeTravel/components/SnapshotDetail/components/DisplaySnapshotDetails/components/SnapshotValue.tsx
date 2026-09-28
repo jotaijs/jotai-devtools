@@ -10,7 +10,7 @@ type SnapshotValueProps = {
   state: SelectedSnapshotDetail;
 };
 
-export const SnapshotValue = (props: SnapshotValueProps): JSX.Element => {
+export const SnapshotValue = (props: SnapshotValueProps) => {
   const [snapshotValueViewer, setSnapshotValueViewer] =
     useSnapshotValueViewer();
 

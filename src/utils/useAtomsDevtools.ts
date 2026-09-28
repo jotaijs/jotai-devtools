@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { AnyAtom, AnyAtomValue, AtomsSnapshot } from '../types';
+import { isEqualAtomsSnapshot } from './internals/isEqualAtomsSnapshot';
 import {
   Connection,
   createReduxConnection,
@@ -49,6 +50,7 @@ export function useAtomsDevtools(
   const devtools = useRef<Connection | undefined>(undefined);
 
   const snapshots = useRef<AtomsSnapshot[]>([]);
+  const lastSentSnapshot = useRef<AtomsSnapshot | undefined>(undefined);
 
   useEffect(() => {
     if (!extension) {
@@ -80,11 +82,13 @@ export function useAtomsDevtools(
             case 'COMMIT':
               devtools.current?.init(getDevtoolsState(getSnapshotAt()));
               snapshots.current = [];
+              lastSentSnapshot.current = undefined;
               break;
 
             case 'JUMP_TO_ACTION':
             case 'JUMP_TO_STATE':
               isTimeTraveling.current = true;
+              lastSentSnapshot.current = undefined;
               goToSnapshot(getSnapshotAt(message.payload.actionId - 1));
               break;
 
@@ -113,7 +117,15 @@ export function useAtomsDevtools(
     if (isTimeTraveling.current) {
       isTimeTraveling.current = false;
     } else if (isRecording.current) {
+      const previousSnapshot = lastSentSnapshot.current;
+      if (
+        previousSnapshot &&
+        isEqualAtomsSnapshot(previousSnapshot, atomsSnapshot)
+      ) {
+        return;
+      }
       snapshots.current.push(atomsSnapshot);
+      lastSentSnapshot.current = atomsSnapshot;
       devtools.current.send(
         {
           type: `${snapshots.current.length}`,

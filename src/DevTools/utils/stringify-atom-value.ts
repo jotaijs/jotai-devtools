@@ -35,7 +35,7 @@ export const stringifyAtomValue = (
     }
 
     return result;
-  } catch (e) {
+  } catch {
     return ErrorSymbol;
   }
 };

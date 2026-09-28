@@ -11,11 +11,7 @@ type AtomMetaDetailsProps = {
 };
 
 export const AtomMetaDetails = React.memo(
-  ({
-    debugLabel,
-    atomValueType,
-    isAtomPrivate,
-  }: AtomMetaDetailsProps): JSX.Element => {
+  ({ debugLabel, atomValueType, isAtomPrivate }: AtomMetaDetailsProps) => {
     const privateColor = useThemeMode('red.1', 'red.7');
 
     return (

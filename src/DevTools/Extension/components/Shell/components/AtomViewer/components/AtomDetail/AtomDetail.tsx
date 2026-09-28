@@ -24,7 +24,7 @@ const loadingOverlayOverlayProps: OverlayProps = {
   backgroundOpacity: 0,
 };
 
-export const AtomDetail = React.memo((): JSX.Element => {
+export const AtomDetail = React.memo(() => {
   const selectedAtomData = useAtomValue(
     selectedAtomAtom,
     useDevtoolsJotaiStoreOptions(),

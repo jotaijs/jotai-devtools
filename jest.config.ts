@@ -3,6 +3,7 @@ import type { Config } from 'jest';
 const config: Config = {
   rootDir: '.',
   testEnvironment: 'jsdom',
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transform: {
     '^.+\\.(t|j)sx?$': [
       '@swc/jest',
@@ -24,12 +25,12 @@ const config: Config = {
             'jotai-devtools/utils': ['./src/utils'],
           },
         },
+        module: {
+          type: 'es6',
+        },
       },
     ],
   },
-  transformIgnorePatterns: [
-    '[/\\\\]node_modules[/\\\\](?!.*(jotai|@swc)/).+\\.(js|jsx)$',
-  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testMatch: ['<rootDir>/__tests__/**/*.(test).{ts,tsx}'],
   watchPlugins: ['jest-watch-typeahead/filename'],

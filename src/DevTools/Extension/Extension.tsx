@@ -14,11 +14,7 @@ import './ShellTriggerButton.css';
 
 type ShellTriggerButtonProps = {
   position?:
-    | 'top-right'
-    | 'top-left'
-    | 'bottom-right'
-    | 'bottom-left'
-    | undefined;
+    'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | undefined;
 };
 
 const ShellTriggerButton = React.forwardRef<
@@ -71,7 +67,7 @@ export const Extension = ({
   isInitialOpen = false,
   store,
   position,
-}: ExtensionProps): JSX.Element => {
+}: ExtensionProps) => {
   const [isShellOpen, setIsShellOpen] = useAtom(
     isShellOpenAtom,
     useDevtoolsJotaiStoreOptions(),

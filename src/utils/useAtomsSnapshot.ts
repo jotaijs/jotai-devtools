@@ -6,24 +6,10 @@ import type {
   Options,
 } from '../types';
 import { isDevToolsStore, useDevToolsStore } from './hooks/useDevToolsStore';
-
-const isEqualAtomsValues = (left: AtomsValues, right: AtomsValues) =>
-  left.size === right.size &&
-  Array.from(left).every(([left, v]) => Object.is(right.get(left), v));
-
-const isEqualAtomsDependents = (
-  left: AtomsDependents,
-  right: AtomsDependents,
-) =>
-  left.size === right.size &&
-  Array.from(left).every(([a, dLeft]) => {
-    const dRight = right.get(a);
-    return (
-      dRight &&
-      dLeft.size === dRight.size &&
-      Array.from(dLeft).every((d) => dRight.has(d))
-    );
-  });
+import {
+  isEqualAtomsDependents,
+  isEqualAtomsValues,
+} from './internals/isEqualAtomsSnapshot';
 
 export type SnapshotOptions = Options & {
   /**
