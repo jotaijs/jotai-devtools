@@ -17,8 +17,8 @@ importers:
         specifier: 7.17.4
         version: 7.17.4(react@19.3.0)
       '@redux-devtools/extension':
-        specifier: ^3.3.0
-        version: 3.3.0(redux@5.0.1)
+        specifier: ^4.0.0
+        version: 4.0.0(redux@5.0.1)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -26,11 +26,11 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       jsondiffpatch:
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.7.6
+        version: 0.7.6
       react-base16-styling:
-        specifier: ^0.9.1
-        version: 0.9.1
+        specifier: ^0.10.0
+        version: 0.10.0
       react-error-boundary:
         specifier: ^5.0.0
         version: 5.0.0(react@19.3.0)
@@ -1555,6 +1555,12 @@ packages:
         integrity: sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==,
       }
     engines: { node: '>=18' }
+
+  '@dmsnell/diff-match-patch@1.1.0':
+    resolution:
+      {
+        integrity: sha512-yejLPmM5pjsGvxS9gXablUSbInW7H976c/FJ4iQxWIm7/38xBySRemTPDe34lhg1gVLbJntX0+sH0jYfU+PN9A==,
+      }
 
   '@emnapi/core@1.10.0':
     resolution:
@@ -3306,10 +3312,10 @@ packages:
       }
     engines: { node: ^14.18.0 || >=16.0.0 }
 
-  '@redux-devtools/extension@3.3.0':
+  '@redux-devtools/extension@4.0.0':
     resolution:
       {
-        integrity: sha512-X34S/rC8S/M1BIrkYD1mJ5f8vlH0BDqxXrs96cvxSBo4FhMdbhU+GUGsmNYov1xjSyLMHgo8NYrUG8bNX7525g==,
+        integrity: sha512-pLIzgo5MvqdDLe5D1pzHLgmr8THra/DOyRf5MvOEPZnKKDn6RhFbNSS5oXZ3Cal0cpx08kx7sR6zD8QgoXEnZA==,
       }
     peerDependencies:
       redux: ^3.1.0 || ^4.0.0 || ^5.0.0
@@ -4105,6 +4111,12 @@ packages:
     resolution:
       {
         integrity: sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==,
+      }
+
+  '@types/lodash@4.17.25':
+    resolution:
+      {
+        integrity: sha512-+K1NIO8I+F9/wNulfVvu23QYd0Pe9/OCqRrim4NoYIf1VoEDL90Ve4ClzpyqBLc7NpGGWRvYNCKZ1BE/Jpf8dQ==,
       }
 
   '@types/mdx@2.0.13':
@@ -5299,13 +5311,6 @@ packages:
       }
     engines: { node: '>=18' }
 
-  chalk@3.0.0:
-    resolution:
-      {
-        integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==,
-      }
-    engines: { node: '>=8' }
-
   chalk@4.1.2:
     resolution:
       {
@@ -5503,6 +5508,13 @@ packages:
       {
         integrity: sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==,
       }
+
+  color@4.2.3:
+    resolution:
+      {
+        integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==,
+      }
+    engines: { node: '>=12.5.0' }
 
   colorette@2.0.20:
     resolution:
@@ -5963,12 +5975,6 @@ packages:
     resolution:
       {
         integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==,
-      }
-
-  diff-match-patch@1.0.5:
-    resolution:
-      {
-        integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==,
       }
 
   diff@4.0.2:
@@ -7099,12 +7105,6 @@ packages:
       }
     engines: { node: '>= 4' }
 
-  immutable@4.3.7:
-    resolution:
-      {
-        integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==,
-      }
-
   import-fresh@3.3.1:
     resolution:
       {
@@ -7974,12 +7974,12 @@ packages:
         integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==,
       }
 
-  jsondiffpatch@0.5.0:
+  jsondiffpatch@0.7.6:
     resolution:
       {
-        integrity: sha512-Quz3MvAwHxVYNXsOByL7xI5EB2WYOeFswqaHIA3qOK3isRWTxiplBEocmmru6XmxDB2L7jDNYtYA4FyimoAFEw==,
+        integrity: sha512-zE9+AXFq+MkTolDor2Cw1nJzLC0aleqPkYf52Kb4Kn4mJcka/gFHpGI2JBVEJCfWOvBl0OoxZS+wuLdislQcqg==,
       }
-    engines: { node: '>=8.17.0' }
+    engines: { node: ^18.0.0 || >=20.0.0 }
     hasBin: true
 
   jsonfile@6.2.0:
@@ -8056,6 +8056,12 @@ packages:
         integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==,
       }
     engines: { node: '>=10' }
+
+  lodash-es@4.18.1:
+    resolution:
+      {
+        integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==,
+      }
 
   lodash.capitalize@4.2.1:
     resolution:
@@ -9193,6 +9199,12 @@ packages:
     resolution:
       {
         integrity: sha512-ufjkNVzbRHKcCOmTahZkmVsyc3W+MSk3jY03m+a7tGHkIsdVMG9l10/3HvFbWkkKzY5VFp3pkRsIo/UYgmFL7Q==,
+      }
+
+  react-base16-styling@0.10.0:
+    resolution:
+      {
+        integrity: sha512-H1k2eFB6M45OaiRru3PBXkuCcn2qNmx+gzLb4a9IPMR7tMH8oBRXU5jGbPDYG1Hz+82d88ED0vjR8BmqU3pQdg==,
       }
 
   react-base16-styling@0.9.1:
@@ -11971,6 +11983,8 @@ snapshots:
 
   '@csstools/css-tokenizer@3.0.4': {}
 
+  '@dmsnell/diff-match-patch@1.1.0': {}
+
   '@emnapi/core@1.10.0':
     dependencies:
       '@emnapi/wasi-threads': 1.2.1
@@ -12980,10 +12994,8 @@ snapshots:
 
   '@pkgr/core@0.3.6': {}
 
-  '@redux-devtools/extension@3.3.0(redux@5.0.1)':
+  '@redux-devtools/extension@4.0.0(redux@5.0.1)':
     dependencies:
-      '@babel/runtime': 7.28.4
-      immutable: 4.3.7
       redux: 5.0.1
 
   '@release-it/conventional-changelog@12.0.2(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.2)(release-it@21.0.3(@types/node@25.6.0))':
@@ -13502,6 +13514,8 @@ snapshots:
   '@types/json5@0.0.29': {}
 
   '@types/lodash@4.17.20': {}
+
+  '@types/lodash@4.17.25': {}
 
   '@types/mdx@2.0.13': {}
 
@@ -14266,11 +14280,6 @@ snapshots:
       loupe: 3.2.1
       pathval: 2.0.1
 
-  chalk@3.0.0:
-    dependencies:
-      ansi-styles: 4.3.0
-      supports-color: 7.2.0
-
   chalk@4.1.2:
     dependencies:
       ansi-styles: 4.3.0
@@ -14356,6 +14365,11 @@ snapshots:
   color@3.2.1:
     dependencies:
       color-convert: 1.9.3
+      color-string: 1.9.1
+
+  color@4.2.3:
+    dependencies:
+      color-convert: 2.0.1
       color-string: 1.9.1
 
   colorette@2.0.20: {}
@@ -14605,8 +14619,6 @@ snapshots:
   detect-newline@3.1.0: {}
 
   detect-node-es@1.1.0: {}
-
-  diff-match-patch@1.0.5: {}
 
   diff@4.0.2: {}
 
@@ -15460,8 +15472,6 @@ snapshots:
 
   ignore@7.0.9: {}
 
-  immutable@4.3.7: {}
-
   import-fresh@3.3.1:
     dependencies:
       parent-module: 1.0.1
@@ -16198,10 +16208,9 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  jsondiffpatch@0.5.0:
+  jsondiffpatch@0.7.6:
     dependencies:
-      chalk: 3.0.0
-      diff-match-patch: 1.0.5
+      '@dmsnell/diff-match-patch': 1.1.0
 
   jsonfile@6.2.0:
     dependencies:
@@ -16248,6 +16257,8 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
+
+  lodash-es@4.18.1: {}
 
   lodash.capitalize@4.2.1: {}
 
@@ -16889,6 +16900,13 @@ snapshots:
     dependencies:
       defu: 6.1.7
       destr: 2.0.5
+
+  react-base16-styling@0.10.0:
+    dependencies:
+      '@types/lodash': 4.17.25
+      color: 4.2.3
+      csstype: 3.2.3
+      lodash-es: 4.18.1
 
   react-base16-styling@0.9.1:
     dependencies:
