@@ -1,6 +1,7 @@
 {
   "name": "jotai-devtools",
   "version": "0.15.0-alpha.0",
+  "type": "module",
   "description": "A powerful toolkit to enhance your development experience with Jotai",
   "author": {
     "name": "Arjun Vegda",
@@ -31,7 +32,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "TZ=UTC jest",
+    "test": "TZ=UTC node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "test:watch": "pnpm run test --watch",
     "test:coverage": "pnpm run test --coverage",
     "test:ci": "pnpm run test:coverage --maxWorkers=1",

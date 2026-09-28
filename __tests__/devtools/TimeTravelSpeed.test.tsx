@@ -1,13 +1,14 @@
 import React, { useMemo } from 'react';
+import { jest } from '@jest/globals';
 import { act, fireEvent, screen } from '@testing-library/react';
 import { atom, useAtomValue, useSetAtom } from 'jotai';
-import { DevTools } from 'jotai-devtools';
 import { customRender } from '../custom-render';
 
 // Mantine's popover does not settle in jsdom after opening. Keep the Select
 // onChange contract while testing our playback behavior with a native control.
-jest.mock('@mantine/core', () => ({
-  ...jest.requireActual('@mantine/core'),
+const mantineCore = await import('@mantine/core');
+jest.unstable_mockModule('@mantine/core', () => ({
+  ...mantineCore,
   Select: ({ data, value, onChange, ...props }: any) => (
     <select
       data-testid={props['data-testid']}
@@ -22,6 +23,7 @@ jest.mock('@mantine/core', () => ({
     </select>
   ),
 }));
+const { DevTools } = await import('jotai-devtools');
 
 const BasicAtomsWithDevTools = () => {
   const countAtom = useMemo(() => atom(0), []);

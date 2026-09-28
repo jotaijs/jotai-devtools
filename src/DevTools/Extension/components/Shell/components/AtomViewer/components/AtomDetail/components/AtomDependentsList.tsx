@@ -8,9 +8,7 @@ type AtomDependentsListProps = {
   atom: AnyAtom;
 };
 
-export const AtomDependentsList = ({
-  atom,
-}: AtomDependentsListProps): JSX.Element => {
+export const AtomDependentsList = ({ atom }: AtomDependentsListProps) => {
   const { dependents } = useAtomsSnapshots();
 
   const depsForAtom = React.useMemo(() => {

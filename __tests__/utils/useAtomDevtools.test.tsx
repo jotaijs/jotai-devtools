@@ -1,4 +1,5 @@
 import React, { StrictMode, Suspense } from 'react';
+import { jest } from '@jest/globals';
 import { act, fireEvent, render } from '@testing-library/react';
 import { atom, useAtom } from 'jotai';
 import { useAtomDevtools } from 'jotai-devtools/utils';

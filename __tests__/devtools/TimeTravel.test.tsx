@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { jest } from '@jest/globals';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import { atom, useAtom, useAtomValue, useSetAtom } from 'jotai';
@@ -113,22 +114,16 @@ describe('DevTools - TimeTravel', () => {
       it('should display next snapshot when user clicks on the next button', async () => {
         customRender(<BasicAtomsWithDevTools />);
 
-        await act(() => userEvent.click(screen.getByText('Time travel')));
-        await act(() =>
-          userEvent.click(screen.getByLabelText('Record snapshot history')),
-        );
-        await act(() => userEvent.click(screen.getByText('Increment')));
-        await act(() => userEvent.click(screen.getByText('Increment')));
-        await act(() => userEvent.click(screen.getByText('Increment')));
-        await act(() => userEvent.click(screen.getByText('Increment')));
+        await userEvent.click(screen.getByText('Time travel'));
+        await userEvent.click(screen.getByLabelText('Record snapshot history'));
+        await userEvent.click(screen.getByText('Increment'));
+        await userEvent.click(screen.getByText('Increment'));
+        await userEvent.click(screen.getByText('Increment'));
+        await userEvent.click(screen.getByText('Increment'));
 
-        await act(() =>
-          userEvent.click(screen.getByTestId('jotai-devtools-snapshot-1')),
-        );
+        await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-1'));
 
-        await act(() =>
-          userEvent.click(screen.getByTitle('Select next snapshot')),
-        );
+        await userEvent.click(screen.getByTitle('Select next snapshot'));
 
         expect(screen.getByText('Snapshot 2')).toBeInTheDocument();
       });
@@ -513,7 +508,7 @@ describe('DevTools - TimeTravel', () => {
         screen.getAllByTestId(/jotai-devtools-snapshot-[0-9]/),
       ).toHaveLength(1);
 
-      await act(() => userEvent.click(screen.getByText('Fetch')));
+      await userEvent.click(screen.getByText('Fetch'));
 
       await act(async () => {
         resolvePromise(1);
@@ -529,9 +524,7 @@ describe('DevTools - TimeTravel', () => {
         screen.getAllByTestId('json-tree-view-container'),
       ).toMatchSnapshot();
 
-      await act(() =>
-        userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2')),
-      );
+      await userEvent.click(screen.getByTestId('jotai-devtools-snapshot-2'));
 
       expect(
         screen.getAllByTestId('json-tree-view-container'),
@@ -622,16 +615,14 @@ describe('DevTools - TimeTravel', () => {
         />,
       );
 
-      await act(() => userEvent.click(screen.getByText('Time travel')));
-      await act(() =>
-        userEvent.click(screen.getByLabelText('Record snapshot history')),
-      );
-      await act(() => userEvent.click(screen.getByText('Increment')));
-      await act(() => userEvent.click(screen.getByText('Increment')));
+      await userEvent.click(screen.getByText('Time travel'));
+      await userEvent.click(screen.getByLabelText('Record snapshot history'));
+      await userEvent.click(screen.getByText('Increment'));
+      await userEvent.click(screen.getByText('Increment'));
       jest.useFakeTimers();
 
       const user = userEvent.setup({ delay: null });
-      await act(() => user.click(screen.getByTitle('Start time travel')));
+      await user.click(screen.getByTitle('Start time travel'));
 
       act(() => {
         jest.advanceTimersByTime(timeTravelPlaybackInterval);

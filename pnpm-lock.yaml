@@ -7981,7 +7981,6 @@ packages:
       }
     engines: { node: '>=8.17.0' }
     hasBin: true
-    bundledDependencies: []
 
   jsonfile@6.2.0:
     resolution:

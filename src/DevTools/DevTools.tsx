@@ -71,7 +71,7 @@ const DevToolsMain = ({
   position = 'bottom-left',
   nonce = '',
   options,
-}: DevToolsProps): JSX.Element => {
+}: DevToolsProps) => {
   const setDevToolsOptions = useSetDevToolsOptions();
 
   React.useEffect(() => {
@@ -113,7 +113,7 @@ const DevToolsMain = ({
 };
 
 const DevToolsProvider = ({ children }: React.PropsWithChildren) => {
-  const internalStoreRef = React.useRef<Store>();
+  const internalStoreRef = React.useRef<Store | undefined>(undefined);
 
   if (!internalStoreRef.current) {
     internalStoreRef.current = createStore();

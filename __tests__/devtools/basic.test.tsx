@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { jest } from '@jest/globals';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import { atom, useAtom } from 'jotai';
@@ -14,7 +15,7 @@ describe('DevTools - basic', () => {
   it('should open the devtools upon clicking the button', async () => {
     customRender(<DevTools />);
     const foundButton = screen.getByTitle('Open Jotai Devtools');
-    userEvent.click(foundButton);
+    await userEvent.click(foundButton);
 
     await waitFor(() =>
       expect(screen.getByText('👻 Jōtai DevTools')).toBeInTheDocument(),
