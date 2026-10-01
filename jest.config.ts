@@ -28,7 +28,7 @@ const config: Config = {
     ],
   },
   transformIgnorePatterns: [
-    '[/\\\\]node_modules[/\\\\](?!.*(jotai|@swc)/).+\\.(js|jsx)$',
+    '[/\\\\]node_modules[/\\\\](?!.*(jotai|@swc|jsondiffpatch)/).+\\.(js|jsx)$',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testMatch: ['<rootDir>/__tests__/**/*.(test).{ts,tsx}'],
