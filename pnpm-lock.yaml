@@ -180,11 +180,11 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(jest@30.5.1(@types/node@25.6.0)(esbuild-register@3.6.0(esbuild@0.28.2))(ts-node@10.9.2(@swc/core@1.15.33)(@types/node@25.6.0)(typescript@6.0.3)))
       jotai:
-        specifier: ^3.0.0
-        version: 3.0.0(@types/react@19.3.0)(react@19.3.0)
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@19.3.0)(react@19.3.0)
       jotai-tanstack-query:
         specifier: ^0.11.0
-        version: 0.11.0(@tanstack/query-core@5.95.2)(jotai@3.0.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)
+        version: 0.11.0(@tanstack/query-core@5.95.2)(jotai@3.0.1(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)
       lint-staged:
         specifier: ^17.5.1
         version: 17.5.1
@@ -7811,10 +7811,10 @@ packages:
       react:
         optional: true
 
-  jotai@3.0.0:
+  jotai@3.0.1:
     resolution:
       {
-        integrity: sha512-KxhbmsJUp/tmrv6aZgO+nzB3H9K8C0xmk5i3aGkwy/EANg73DVBkggv3zVHaAi5PlNlQgTgP4uiVepo+JC+wSA==,
+        integrity: sha512-6tS7wY9otdiNp26Wqb/1ds3OuVJVoV+tJlN4hpLrYmfFf/t9bauVt+zKBNSpS5qSl5h6GieVQ+OknVraZX+udQ==,
       }
     engines: { node: '>=22.12.0' }
     peerDependencies:
@@ -16073,14 +16073,14 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jotai-tanstack-query@0.11.0(@tanstack/query-core@5.95.2)(jotai@3.0.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0):
+  jotai-tanstack-query@0.11.0(@tanstack/query-core@5.95.2)(jotai@3.0.1(@types/react@19.3.0)(react@19.3.0))(react@19.3.0):
     dependencies:
       '@tanstack/query-core': 5.95.2
-      jotai: 3.0.0(@types/react@19.3.0)(react@19.3.0)
+      jotai: 3.0.1(@types/react@19.3.0)(react@19.3.0)
     optionalDependencies:
       react: 19.3.0
 
-  jotai@3.0.0(@types/react@19.3.0)(react@19.3.0):
+  jotai@3.0.1(@types/react@19.3.0)(react@19.3.0):
     optionalDependencies:
       '@types/react': 19.3.0
       react: 19.3.0

@@ -120,7 +120,7 @@
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
     "jest-watch-typeahead": "^3.0.1",
-    "jotai": "^3.0.0",
+    "jotai": "^3.0.1",
     "jotai-tanstack-query": "^0.11.0",
     "lint-staged": "^17.5.1",
     "postcss": "^8.5.28",
