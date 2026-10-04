@@ -155,8 +155,8 @@
     "javascript-stringify": "^2.1.0",
     "jsondiffpatch": "^0.7.6",
     "react-base16-styling": "^0.10.0",
-    "react-error-boundary": "^5.0.0",
-    "react-json-tree": "^0.18.0",
+    "react-error-boundary": "^6.1.6",
+    "react-json-tree": "^0.20.0",
     "react-resizable-panels": "2.1.7"
   },
   "packageManager": "pnpm@10.17.1"
