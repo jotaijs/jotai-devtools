@@ -1,14 +1,8 @@
 import React, { useMemo } from 'react';
-import {
-  act,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from '@testing-library/react';
+import { jest } from '@jest/globals';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-import * as stringifyModule from 'javascript-stringify';
-import { Provider, atom, useAtomValue } from 'jotai';
+import { atom, useAtomValue } from 'jotai';
 import { DevTools } from 'jotai-devtools';
 import { AnyAtom } from 'src/types';
 import { customRender } from '../custom-render';
@@ -112,9 +106,7 @@ describe('DevTools - AtomViewer', () => {
       it('should hide private atoms from dependents list when shouldShowPrivateAtoms is marked as false', async () => {
         const { container } = customRender(<PrivateAtomsWithDevTools />);
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('countAtom'));
-        });
+        await userEvent.click(screen.getByText('countAtom'));
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();
         expect(screen.getByText('Meta')).toBeInTheDocument();
@@ -145,9 +137,7 @@ describe('DevTools - AtomViewer', () => {
           <PrivateAtomsWithDevTools shouldShowPrivateAtoms />,
         );
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('privateAtom'));
-        });
+        await userEvent.click(screen.getByText('privateAtom'));
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();
         expect(screen.getByText('Meta')).toBeInTheDocument();
@@ -240,16 +230,12 @@ describe('DevTools - AtomViewer', () => {
         };
 
         customRender(<TestComponent />);
-        await act(async () => {
-          await userEvent.click(screen.getByText('doubleCountAtom'));
-        });
+        await userEvent.click(screen.getByText('doubleCountAtom'));
         expect(
           screen.getByTestId('meta-info-value-doubleCountAtom'),
         ).toBeInTheDocument();
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('Toggle'));
-        });
+        await userEvent.click(screen.getByText('Toggle'));
 
         expect(screen.queryByText('Atom Details')).not.toBeInTheDocument();
         expect(
@@ -271,17 +257,30 @@ describe('DevTools - AtomViewer', () => {
   describe('Atom details', () => {
     describe('Raw value', () => {
       it('should display an error when we are not able to parse the value', async () => {
-        const stringifySpy = jest
-          .spyOn(stringifyModule, 'stringify')
-          .mockImplementation(() => {
+        const value = {};
+        Object.defineProperty(value, 'unreadable', {
+          enumerable: true,
+          get: () => {
             throw new Error('some-error');
-          });
-
-        const { container } = customRender(<BasicAtomsWithDevTools />);
-
-        await act(async () => {
-          await userEvent.click(screen.getByText('countAtom'));
+          },
         });
+        const UnserializableAtomWithDevTools = () => {
+          const valueAtom = useMemo(() => atom(value), []);
+          valueAtom.debugLabel = 'valueAtom';
+          const dependentAtom = useMemo(
+            () => atom((get) => get(valueAtom)),
+            [valueAtom],
+          );
+          dependentAtom.debugLabel = 'dependentAtom';
+
+          useAtomValue(valueAtom);
+          useAtomValue(dependentAtom);
+          return <DevTools isInitialOpen={true} />;
+        };
+
+        customRender(<UnserializableAtomWithDevTools />);
+
+        await userEvent.click(screen.getByText('valueAtom'));
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();
         expect(screen.getByText('Meta')).toBeInTheDocument();
@@ -292,16 +291,12 @@ describe('DevTools - AtomViewer', () => {
           screen.getByText('Failed to parse the value of the atom'),
         ).toBeInTheDocument();
         expect(screen.getByText('Dependents')).toBeInTheDocument();
-        expect(container).toMatchSnapshot();
-        stringifySpy.mockRestore();
       });
 
       it('should display atom details when an atom is selected', async () => {
         const { container } = customRender(<BasicAtomsWithDevTools />);
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('countAtom'));
-        });
+        await userEvent.click(screen.getByText('countAtom'));
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();
         expect(screen.getByText('Meta')).toBeInTheDocument();
@@ -325,9 +320,7 @@ describe('DevTools - AtomViewer', () => {
       it('should display the dependents of the atom correctly', async () => {
         const { container } = render(<BasicAtomsWithDevTools />);
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('doubleCountAtom'));
-        });
+        await userEvent.click(screen.getByText('doubleCountAtom'));
 
         expect(screen.getByText('Atom Details')).toBeInTheDocument();
 
@@ -367,9 +360,7 @@ describe('DevTools - AtomViewer', () => {
 
             customRender(<AtomRenderer atom={valueAtom} />);
 
-            await act(async () => {
-              await userEvent.click(screen.getByText('valueAtom'));
-            });
+            await userEvent.click(screen.getByText('valueAtom'));
 
             expect(screen.getByTestId('atom-parsed-value')).toHaveTextContent(
               expected,
@@ -411,9 +402,7 @@ describe('DevTools - AtomViewer', () => {
 
         customRender(<ObjectAtomsWithDevTools />);
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('objectAtom'));
-        });
+        await userEvent.click(screen.getByText('objectAtom'));
 
         expect(screen.getByText('Raw value')).toBeInTheDocument();
         expect(screen.getByText('Tree view')).toBeInTheDocument();
@@ -430,15 +419,11 @@ describe('DevTools - AtomViewer', () => {
           return <DevTools isInitialOpen={true} />;
         };
         customRender(<ObjectAtomsWithDevTools />);
-        await act(async () => {
-          await userEvent.click(screen.getByText('objectAtom'));
-        });
+        await userEvent.click(screen.getByText('objectAtom'));
 
         expect(screen.getByTestId('json-tree-panel')).not.toBeVisible();
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('Tree view'));
-        });
+        await userEvent.click(screen.getByText('Tree view'));
 
         expect(screen.getByTestId('json-tree-panel')).toBeVisible();
         expect(screen.getByTestId('json-tree-panel')).toMatchSnapshot();
@@ -469,15 +454,11 @@ describe('DevTools - AtomViewer', () => {
         };
 
         customRender(<ObjectAtomsWithDevTools />);
-        await act(async () => {
-          await userEvent.click(screen.getByText('objectAtom'));
-        });
+        await userEvent.click(screen.getByText('objectAtom'));
 
         expect(screen.getByTestId('json-tree-panel')).not.toBeVisible();
 
-        await act(async () => {
-          await userEvent.click(screen.getByText('Tree view'));
-        });
+        await userEvent.click(screen.getByText('Tree view'));
 
         expect(screen.getByTestId('json-tree-panel')).toMatchSnapshot();
         expect(screen.getByTestId('json-tree-panel')).toHaveTextContent(

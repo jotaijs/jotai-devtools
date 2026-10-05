@@ -22,9 +22,7 @@ const supportedTreeValueTypes: ReturnType<typeof getTypeOfAtomValue>[] = [
   'atom',
 ];
 
-export const AtomValue = ({
-  atomValue,
-}: AtomParseRawValueValueProps): JSX.Element => {
+export const AtomValue = ({ atomValue }: AtomParseRawValueValueProps) => {
   const [atomValueViewer, setSelectedValueViewer] = useAtomValueViewer();
   const parsedValue = stringifyAtomValue(atomValue);
 

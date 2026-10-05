@@ -22,7 +22,7 @@ const loadingOverlayOverlayProps: OverlayProps = {
   backgroundOpacity: 0,
 };
 
-export const SnapshotDetail = React.memo((): JSX.Element => {
+export const SnapshotDetail = React.memo(() => {
   const selectedSnapshotDetail = useSelectedSnapshotDetailValue();
 
   const loaderProps: LoaderProps = {

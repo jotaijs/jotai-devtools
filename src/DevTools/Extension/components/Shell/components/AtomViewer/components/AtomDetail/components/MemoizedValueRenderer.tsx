@@ -6,7 +6,7 @@ type MemoizedValueRendererProps = {
 };
 
 export const MemoizedValueRenderer = React.memo(
-  ({ value }: MemoizedValueRendererProps): JSX.Element => {
+  ({ value }: MemoizedValueRendererProps) => {
     return (
       <CodeSyntaxHighlighter
         language="javascript"

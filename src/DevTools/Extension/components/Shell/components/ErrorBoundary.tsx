@@ -13,13 +13,25 @@ const textStyles: MantineStyleProp = {
   alignItems: 'center',
 };
 
-const ErrorFallback = ({ error }: FallbackProps) => {
-  if (Error?.stackTraceLimit) {
-    Error.stackTraceLimit = 5;
+const normalizeError = (value: unknown): Error => {
+  try {
+    if (value instanceof Error) {
+      return value;
+    }
+  } catch {
+    // Fall through in case an unusual object throws during the check.
   }
 
-  Error?.captureStackTrace?.(error);
+  try {
+    return new Error(String(value));
+  } catch {
+    return new Error('Unknown error');
+  }
+};
 
+const ErrorFallback = ({ error }: FallbackProps) => {
+  const normalizedError = normalizeError(error);
+  const errorDetails = normalizedError.stack ?? normalizedError.message;
   const themedRedColor = useThemeMode('red.8', 'red.5');
 
   return (
@@ -53,7 +65,7 @@ const ErrorFallback = ({ error }: FallbackProps) => {
           with a minimal reproduction and the following error
         </Text>
         <CodeSyntaxHighlighter language="javascript">
-          {error.stack?.toString() || error.message}
+          {errorDetails}
         </CodeSyntaxHighlighter>
       </Box>
     </Flex>

@@ -1,9 +1,7 @@
 {
-  "**/*.{ts,tsx,js,jsx}": [
-    "eslint --quiet --fix",
+  "**/*.{ts,tsx,js,jsx}": ["prettier --write", "eslint --quiet --fix"],
+  "**/*.{css,md,yml,yaml,json,babelrc,eslintrc,prettierrc}": [
     "prettier --write"
   ],
-  "**/*.{md,yml,json,babelrc,eslintrc,prettierrc}": [
-    "prettier --write"
-  ]
+  ".lintstagedrc": ["prettier --write"]
 }
