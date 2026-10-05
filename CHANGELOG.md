@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.15.0](https://github.com/jotaijs/jotai-devtools/compare/v0.14.0...v0.15.0) (2026-10-05)
+
+### Features
+
+- add jotai v3 support
+  ([#222](https://github.com/jotaijs/jotai-devtools/issues/222))
+  ([9208b45](https://github.com/jotaijs/jotai-devtools/commit/9208b45732ef18091205ceba30ccecc58036fc0a))
+
+### Bug Fixes
+
+- migrate to ESM and update dependencies
+  ([#223](https://github.com/jotaijs/jotai-devtools/issues/223))
+  ([bb2511e](https://github.com/jotaijs/jotai-devtools/commit/bb2511eab7dceaec774ae8509d859fdd023b68ed))
+
 ## [0.15.0-alpha.0](https://github.com/jotaijs/jotai-devtools/compare/v0.14.0...v0.15.0-alpha.0) (2026-09-05)
 
 ### Features
