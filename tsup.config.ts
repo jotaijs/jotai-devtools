@@ -41,16 +41,9 @@ const baseConfig: Options = {
   inject: ['./react-shim.js'],
 };
 
-const mjsOutExtension: Options['outExtension'] = ({ format }) => {
-  return {
-    js: `.${format}.mjs`,
-  };
-};
-
-const mjsConfig: Options = {
+const esmConfig: Options = {
   ...baseConfig,
   format: ['esm'],
-  outExtension: mjsOutExtension,
 };
 
-export default defineConfig(mjsConfig);
+export default defineConfig(esmConfig);
