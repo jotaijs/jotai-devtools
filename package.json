@@ -15,16 +15,16 @@
     "./package.json": "./package.json",
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.esm.mjs"
+      "default": "./dist/index.js"
     },
     "./styles.css": "./dist/index.css",
     "./utils": {
       "types": "./dist/utils.d.ts",
-      "default": "./dist/utils.esm.mjs"
+      "default": "./dist/utils.js"
     }
   },
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.esm.mjs",
+  "main": "./dist/index.js",
   "files": [
     "dist",
     "package.json"
