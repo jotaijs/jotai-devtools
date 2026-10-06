@@ -14,16 +14,16 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.mts",
+      "types": "./dist/index.d.ts",
       "default": "./dist/index.esm.mjs"
     },
     "./styles.css": "./dist/index.css",
     "./utils": {
-      "types": "./dist/utils.d.mts",
+      "types": "./dist/utils.d.ts",
       "default": "./dist/utils.esm.mjs"
     }
   },
-  "types": "./dist/index.d.mts",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.esm.mjs",
   "files": [
     "dist",
