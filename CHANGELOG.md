@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.15.1](https://github.com/jotaijs/jotai-devtools/compare/v0.15.0...v0.15.1) (2026-10-06)
+
+- emit .js instead of .mjs build output
+  ([#227](https://github.com/jotaijs/jotai-devtools/issues/227))
+  ([8e9f79e](https://github.com/jotaijs/jotai-devtools/commit/8e9f79eccac47e92bb6f66f748a809c104e8a585))
+
+### Bug Fixes
+
+- point types at the .d.ts files tsup emits
+  ([#226](https://github.com/jotaijs/jotai-devtools/issues/226))
+  ([ed64631](https://github.com/jotaijs/jotai-devtools/commit/ed6463140dda000efcacb0188f5baea5242f9db2))
+
 ## [0.15.0](https://github.com/jotaijs/jotai-devtools/compare/v0.14.0...v0.15.0) (2026-10-05)
 
 ### Features
